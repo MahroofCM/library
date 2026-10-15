@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Evolve Your Brain · Chapter 4">
+<meta property="og:description" content="Short animated lessons in English and Malayalam on how a thought becomes chemistry, and how to rewire the habit of being yourself.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/evolve/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/evolve/ch04/">
+<meta name="twitter:card" content="summary_large_image">
+<title>Our Three Brains and More · Evolve Your Brain</title>
+<meta name="description" content="An animated, narrated lesson on Chapter 4 of Evolve Your Brain: the brainstem and cerebellum, the limbic system, the neocortex and its frontal lobe, and why the three-brains picture is only a map. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('evolve:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('evolve:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'നമ്മുടെ മൂന്ന് തലച്ചോറുകളും അതിലേറെയും · Evolve Your Brain';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/evolve.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/evolve/ch04/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Our Three Brains and More', kicker: 'UNIT 2 · CHAPTER 4', sub: 'A guided tour of the organ you are using right now',
+  credit: 'A study of Evolve Your Brain by Joe Dispenza',
+  b_intro: 'Title', b_big: 'An expensive organ', b_fold: 'The folded sheet', b_three: 'Three layers', b_stem: 'The brainstem',
+  b_cereb: 'The cerebellum', b_limbic: 'The limbic system', b_parts: 'Inside the limbic system', b_alarm: 'The fast alarm',
+  b_mem: 'Memories as webs', b_neo: 'The neocortex', b_lobes: 'Four lobes', b_map: 'The body map', b_front: 'The frontal lobe',
+  b_myth: 'A map, not the territory', b_fair: 'Science check', b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  leena: 'Leena', ravi: 'Ravi',
+  weight: 'body weight', energy: 'energy at rest', kg: '≈ 1.4 kg', pct2: '2%', pct20: '20%', whatFor: 'So what is it all for?',
+  oneAppliance: 'one appliance, a fifth of the bill',
+  sheet: 'the cortex: a thin sheet', pageSize: 'about one newspaper page', tooWide: 'too wide for the skull', folded: 'folded to fit',
+  hidden: 'about ⅔ hidden in the folds', walnut: 'hence the walnut look', skull: 'skull',
+  maclean: 'Paul MacLean · 1960s', stemN: 'brainstem & cerebellum', stemD: 'alive and balanced', limbN: 'limbic system',
+  limbD: 'feelings and body chemistry', neoN: 'neocortex', neoD: 'thinking', handyMap: 'a handy map… with a question mark',
+  nightBus: 'night bus to Bengaluru', heartbeat: 'heartbeat', breathing: 'breathing', alertness: 'alertness', brainstem: 'brainstem',
+  asleep: 'asleep', awake: 'awake', dawn: 'dawn', noOne: 'no one steering',
+  cerebellum: 'cerebellum', week1: 'week 1', week6: 'week 6', fullAttn: 'every second: full attention', todo1: '9:00 meeting', todo2: 'call Amma',
+  todo3: 'buy milk', autopilot: 'balance on autopilot', overHalf: 'over half of all brain neurons', wholeBrain: 'all brain neurons',
+  deepCentre: 'deep in the centre', outside: 'outside', inside: 'inside', heldSteady: 'held steady', sugar: 'blood sugar', thirst: 'thirst',
+  hormones: 'hormones', limbic: 'limbic system', thermostat: 'the body’s thermostat',
+  nameNote: 'On names: the book says “midbrain”. Anatomists use that word for part of the brainstem. Here: limbic system.',
+  thal: 'thalamus', thalD: 'relay station for the senses', hypo: 'hypothalamus', hypoD: 'runs the body’s chemistry', pit: 'pituitary',
+  pitD: 'master gland: signals the other glands', hip: 'hippocampus', hipD: 'files new memories', amy: 'amygdala', amyD: 'the alarm',
+  smellOwn: 'smell takes its own road',
+  dusk: 'dusk', fastR: 'fast, rough', slowR: 'slow, detailed', cortex: 'cortex', onlyHose: 'only the garden hose',
+  wrongGuess: 'a wrong guess costs less than a late one',
+  wedding: 'a cousin’s wedding', people: 'people', place: 'the hall', gold: 'gold', month: 'the month', event: 'what happened',
+  may: 'MAY', jasmine: 'jasmine', oneThread: 'one thread pulls the whole web',
+  thin: 'a few millimetres', twoCoins: '≈ two coins', billions: 'billions of neurons', left: 'left', right: 'right', front: 'front',
+  opposite: 'each half: the opposite side', callosum: 'corpus callosum', fourLobes: 'four lobes in each half',
+  occ: 'occipital', occD: 'sight', tem: 'temporal', temD: 'sound, language, memory', par: 'parietal', parD: 'touch, body in space',
+  fro: 'frontal', froD: 'newest; largest in humans',
+  bodyMap: 'the body map', notScale: 'not drawn to scale', mapSpace: 'space on the map', lips: 'lips & tongue', fingertips: 'fingertips',
+  back: 'whole back', feelNotSize: 'Space follows feeling, not size.',
+  elevenPm: '11:00 pm', fiveMin: 'Just five minutes…', notice: 'notice', pauseW: 'pause', choose: 'choose', job1: 'planning', job2: 'focus',
+  job3: 'choosing', job4: 'holding back an impulse', frontalLobe: 'frontal lobe',
+  threePic: 'the three brains picture', reptile: 'reptile', mammal: 'mammal', human: 'human', noLonger: 'not how the brain works',
+  m1: 'Evolution did not stack new parts on old ones.', m2: 'Reptiles and birds have their own versions of the “new” parts.',
+  m3: 'The old parts kept changing too.', network: 'one network', talk: 'talk all the time', woven: 'feeling and thinking, woven together',
+  keepMap: 'A map for learning, not a literal description.',
+  frontalN: 'frontal', parietalN: 'parietal', occipitalN: 'occipital', temporalN: 'temporal', amygdalaN: 'amygdala', hippoN: 'hippocampus',
+  thalN: 'thalamus', hypoN: 'hypothalamus', stemN2: 'brainstem', cerebN: 'cerebellum',
+  sciCheck: 'Science check',
+  sci1: 'Well established: the brainstem keeps you alive, the cerebellum coordinates, the limbic system shapes feeling and memory, the cortex thinks and plans.',
+  sci2: 'Myth: we use only a small fraction of the brain. Scans show we use all of it, just not all at once.',
+  sci3: 'Not settled: a sudden, mysterious leap in brain size. Our ancestors’ brains grew over about two million years.',
+  w1: 'Brainstem and cerebellum: alive, awake, coordinated.',
+  w2: 'Limbic system: steadies the body and sounds the alarm.',
+  w3: 'Neocortex: senses and remembers; the frontal lobe plans and chooses.',
+  w4: 'Three layers is a useful map; the brain works as one connected whole.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'നമ്മുടെ മൂന്ന് തലച്ചോറുകളും അതിലേറെയും', kicker: 'യൂണിറ്റ് 2 · അധ്യായം 4', sub: 'ഇപ്പോൾ നിങ്ങൾ ഉപയോഗിക്കുന്ന അവയവത്തിലൂടെ ഒരു യാത്ര',
+  credit: 'ജോ ഡിസ്പെൻസയുടെ Evolve Your Brain എന്ന പുസ്തകത്തിന്റെ പഠനം',
+  b_intro: 'തലക്കെട്ട്', b_big: 'ചെലവേറിയ ഒരു അവയവം', b_fold: 'മടക്കിയ ഷീറ്റ്', b_three: 'മൂന്ന് പാളികൾ', b_stem: 'ബ്രെയിൻസ്റ്റെം',
+  b_cereb: 'സെറിബെല്ലം', b_limbic: 'ലിംബിക് സിസ്റ്റം', b_parts: 'ലിംബിക് സിസ്റ്റത്തിനുള്ളിൽ', b_alarm: 'വേഗതയേറിയ അലാറം',
+  b_mem: 'വലകളായി ഓർമ്മകൾ', b_neo: 'നിയോകോർട്ടെക്സ്', b_lobes: 'നാല് ലോബുകൾ', b_map: 'ശരീരത്തിന്റെ മാപ്പ്', b_front: 'ഫ്രോണ്ടൽ ലോബ്',
+  b_myth: 'മാപ്പ്, യാഥാർത്ഥ്യമല്ല', b_fair: 'ശാസ്ത്രീയ പരിശോധന', b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  leena: 'ലീന', ravi: 'രവി',
+  weight: 'ശരീരഭാരം', energy: 'വിശ്രമത്തിലെ ഊർജ്ജം', kg: '≈ 1.4 കിലോ', pct2: '2%', pct20: '20%', whatFor: 'അപ്പോൾ ഇതെല്ലാം എന്തിന്?',
+  oneAppliance: 'ഒരു ഉപകരണം, ബില്ലിന്റെ അഞ്ചിലൊന്ന്',
+  sheet: 'കോർട്ടെക്സ്: ഒരു നേർത്ത ഷീറ്റ്', pageSize: 'ഏകദേശം ഒരു പത്രത്താൾ', tooWide: 'തലയോട്ടിക്ക് വളരെ വീതി', folded: 'ഒതുങ്ങാൻ മടക്കി',
+  hidden: 'ഏകദേശം ⅔ മടക്കുകൾക്കുള്ളിൽ', walnut: 'അതുകൊണ്ടാണ് വാൾനട്ട് രൂപം', skull: 'തലയോട്ടി',
+  maclean: 'പോൾ മക്ലീൻ · 1960-കൾ', stemN: 'ബ്രെയിൻസ്റ്റെം & സെറിബെല്ലം', stemD: 'ജീവനും ബാലൻസും', limbN: 'ലിംബിക് സിസ്റ്റം',
+  limbD: 'വികാരങ്ങളും ശരീര രസതന്ത്രവും', neoN: 'നിയോകോർട്ടെക്സ്', neoD: 'ചിന്ത', handyMap: 'നല്ലൊരു മാപ്പ്… ഒരു ചോദ്യചിഹ്നത്തോടെ',
+  nightBus: 'ബാംഗ്ലൂരിലേക്കുള്ള രാത്രി ബസ്', heartbeat: 'ഹൃദയമിടിപ്പ്', breathing: 'ശ്വാസം', alertness: 'ഉണർവ്', brainstem: 'ബ്രെയിൻസ്റ്റെം',
+  asleep: 'ഉറക്കം', awake: 'ഉണർവ്', dawn: 'പുലർച്ചെ', noOne: 'ആരും നിയന്ത്രിക്കുന്നില്ല',
+  cerebellum: 'സെറിബെല്ലം', week1: 'ആഴ്ച 1', week6: 'ആഴ്ച 6', fullAttn: 'ഓരോ നിമിഷവും: മുഴുവൻ ശ്രദ്ധ', todo1: '9:00 മീറ്റിംഗ്', todo2: 'അമ്മയെ വിളിക്കണം',
+  todo3: 'പാൽ വാങ്ങണം', autopilot: 'ബാലൻസ് ഓട്ടോപൈലറ്റിൽ', overHalf: 'തലച്ചോറിലെ ന്യൂറോണുകളിൽ പകുതിയിലേറെ', wholeBrain: 'തലച്ചോറിലെ എല്ലാ ന്യൂറോണുകളും',
+  deepCentre: 'നടുവിൽ, ആഴത്തിൽ', outside: 'പുറത്ത്', inside: 'ഉള്ളിൽ', heldSteady: 'സ്ഥിരമായി', sugar: 'രക്തത്തിലെ പഞ്ചസാര', thirst: 'ദാഹം',
+  hormones: 'ഹോർമോണുകൾ', limbic: 'ലിംബിക് സിസ്റ്റം', thermostat: 'ശരീരത്തിന്റെ തെർമോസ്റ്റാറ്റ്',
+  nameNote: 'പേരിനെ കുറിച്ച്: പുസ്തകം “മിഡ്ബ്രെയിൻ” എന്ന് പറയുന്നു. ശരീരശാസ്ത്രത്തിൽ അത് ബ്രെയിൻസ്റ്റെമിന്റെ ഭാഗമാണ്. ഇവിടെ: ലിംബിക് സിസ്റ്റം.',
+  thal: 'തലാമസ്', thalD: 'ഇന്ദ്രിയങ്ങളുടെ റിലേ സ്റ്റേഷൻ', hypo: 'ഹൈപ്പോതലാമസ്', hypoD: 'ശരീരത്തിലെ രസതന്ത്രം നിയന്ത്രിക്കുന്നു', pit: 'പിറ്റ്യൂട്ടറി',
+  pitD: 'മാസ്റ്റർ ഗ്രന്ഥി: മറ്റ് ഗ്രന്ഥികൾക്ക് സന്ദേശം', hip: 'ഹിപ്പോകാമ്പസ്', hipD: 'പുതിയ ഓർമ്മകൾ ഫയൽ ചെയ്യുന്നു', amy: 'അമിഗ്ഡല', amyD: 'അലാറം',
+  smellOwn: 'മണത്തിന് സ്വന്തം വഴി',
+  dusk: 'സന്ധ്യ', fastR: 'വേഗം, ഏകദേശം', slowR: 'പതുക്കെ, വിശദമായി', cortex: 'കോർട്ടെക്സ്', onlyHose: 'വെറുമൊരു ഗാർഡൻ ഹോസ്',
+  wrongGuess: 'വൈകുന്നതിനേക്കാൾ നല്ലത് തെറ്റായ ഊഹം',
+  wedding: 'കസിന്റെ കല്യാണം', people: 'ആളുകൾ', place: 'ഓഡിറ്റോറിയം', gold: 'സ്വർണ്ണം', month: 'ആ മാസം', event: 'നടന്ന കാര്യങ്ങൾ',
+  may: 'മേയ്', jasmine: 'മുല്ലപ്പൂ', oneThread: 'ഒരു നൂൽ വലിച്ചാൽ വല മുഴുവൻ',
+  thin: 'കുറച്ച് മില്ലിമീറ്റർ', twoCoins: '≈ രണ്ട് നാണയങ്ങൾ', billions: 'കോടിക്കണക്കിന് ന്യൂറോണുകൾ', left: 'ഇടത്', right: 'വലത്', front: 'മുൻഭാഗം',
+  opposite: 'ഓരോ പകുതിയും: എതിർവശം', callosum: 'കോർപ്പസ് കലോസം', fourLobes: 'ഓരോ പകുതിയിലും നാല് ലോബുകൾ',
+  occ: 'ഓക്സിപിറ്റൽ', occD: 'കാഴ്ച', tem: 'ടെമ്പറൽ', temD: 'ശബ്ദം, ഭാഷ, ഓർമ്മ', par: 'പരൈറ്റൽ', parD: 'സ്പർശം, ശരീരത്തിന്റെ സ്ഥാനം',
+  fro: 'ഫ്രോണ്ടൽ', froD: 'ഏറ്റവും പുതിയത്; മനുഷ്യരിൽ ഏറ്റവും വലുത്',
+  bodyMap: 'ശരീരത്തിന്റെ മാപ്പ്', notScale: 'അളവ് അനുസരിച്ചല്ല', mapSpace: 'മാപ്പിലെ സ്ഥലം', lips: 'ചുണ്ടും നാക്കും', fingertips: 'വിരൽത്തുമ്പുകൾ',
+  back: 'മുതുക് മുഴുവൻ', feelNotSize: 'സ്ഥലം അനുഭവത്തിനനുസരിച്ചാണ്, വലിപ്പത്തിനല്ല.',
+  elevenPm: 'രാത്രി 11:00', fiveMin: 'ഒരു അഞ്ച് മിനിറ്റ് മാത്രം…', notice: 'ശ്രദ്ധിക്കുക', pauseW: 'നിർത്തുക', choose: 'തിരഞ്ഞെടുക്കുക', job1: 'പ്ലാൻ ചെയ്യൽ', job2: 'ശ്രദ്ധ',
+  job3: 'തിരഞ്ഞെടുക്കൽ', job4: 'തോന്നലിനെ പിടിച്ചുനിർത്തൽ', frontalLobe: 'ഫ്രോണ്ടൽ ലോബ്',
+  threePic: 'മൂന്ന് തലച്ചോർ എന്ന ചിത്രം', reptile: 'ഉരഗം', mammal: 'സസ്തനി', human: 'മനുഷ്യൻ', noLonger: 'തലച്ചോർ ഇങ്ങനെയല്ല പ്രവർത്തിക്കുന്നത്',
+  m1: 'പരിണാമം പഴയതിന് മേലെ പുതിയത് അടുക്കിവെച്ചില്ല.', m2: '“പുതിയ” ഭാഗങ്ങളുടെ സ്വന്തം രൂപങ്ങൾ ഉരഗങ്ങൾക്കും പക്ഷികൾക്കും ഉണ്ട്.',
+  m3: 'പഴയ ഭാഗങ്ങളും മാറിക്കൊണ്ടേയിരുന്നു.', network: 'ഒരൊറ്റ നെറ്റ്‌വർക്ക്', talk: 'എപ്പോഴും സംസാരിക്കുന്നു', woven: 'വികാരവും ചിന്തയും ഇഴചേർന്ന്',
+  keepMap: 'പഠിക്കാനുള്ള ഒരു മാപ്പ്, അക്ഷരാർത്ഥ വിവരണമല്ല.',
+  frontalN: 'ഫ്രോണ്ടൽ', parietalN: 'പരൈറ്റൽ', occipitalN: 'ഓക്സിപിറ്റൽ', temporalN: 'ടെമ്പറൽ', amygdalaN: 'അമിഗ്ഡല', hippoN: 'ഹിപ്പോകാമ്പസ്',
+  thalN: 'തലാമസ്', hypoN: 'ഹൈപ്പോതലാമസ്', stemN2: 'ബ്രെയിൻസ്റ്റെം', cerebN: 'സെറിബെല്ലം',
+  sciCheck: 'ശാസ്ത്രീയ പരിശോധന',
+  sci1: 'ഉറപ്പുള്ളത്: ബ്രെയിൻസ്റ്റെം ജീവൻ നിലനിർത്തുന്നു, സെറിബെല്ലം ഏകോപിപ്പിക്കുന്നു, ലിംബിക് സിസ്റ്റം വികാരവും ഓർമ്മയും രൂപപ്പെടുത്തുന്നു, കോർട്ടെക്സ് ചിന്തിക്കുന്നു, പ്ലാൻ ചെയ്യുന്നു.',
+  sci2: 'മിഥ്യ: തലച്ചോറിന്റെ ചെറിയൊരു ഭാഗം മാത്രമേ നാം ഉപയോഗിക്കുന്നുള്ളൂ. നാം അത് മുഴുവനും ഉപയോഗിക്കുന്നു, ഒരേ സമയത്ത് എല്ലാം അല്ലെന്ന് മാത്രം.',
+  sci3: 'ഉറപ്പില്ലാത്തത്: തലച്ചോറിന്റെ വലിപ്പത്തിൽ പെട്ടെന്നുള്ള നിഗൂഢ കുതിപ്പ്. പൂർവ്വികരുടെ തലച്ചോർ വളർന്നത് ഏകദേശം ഇരുപത് ലക്ഷം വർഷം കൊണ്ടാണ്.',
+  w1: 'ബ്രെയിൻസ്റ്റെമും സെറിബെല്ലവും: ജീവൻ, ഉണർവ്, ഏകോപനം.',
+  w2: 'ലിംബിക് സിസ്റ്റം: ശരീരത്തെ സ്ഥിരമാക്കുന്നു, അലാറം മുഴക്കുന്നു.',
+  w3: 'നിയോകോർട്ടെക്സ്: അനുഭവിക്കുന്നു, ഓർക്കുന്നു; ഫ്രോണ്ടൽ ലോബ് പ്ലാൻ ചെയ്യുന്നു, തിരഞ്ഞെടുക്കുന്നു.',
+  w4: 'മൂന്ന് പാളികൾ നല്ലൊരു മാപ്പാണ്; തലച്ചോർ ബന്ധിപ്പിക്കപ്പെട്ട ഒരൊറ്റ സംവിധാനമാണ്.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 4, title: L('title'), minutes: LANG === 'ml' ? 15 : 11, language: LANG, next: '../ch05/index.html' };
+
+/* ---------- chapter helpers ---------- */
+// path() with an 'opacity' attribute: the engine's put() would overwrite it, so it goes into the state instead.
+function pth(parent, d, attrs = {}, o = {}) {
+  if (attrs.opacity !== undefined) { const { opacity, ...rest } = attrs; return path(parent, d, rest, { o: opacity, ...o }); }
+  return path(parent, d, attrs, o);
+}
+// The three layers in one colour each, used all through the chapter.
+const LC = { stem: EV.sad, limb: EV.love, neo: EV.gold };
+// Label that fades in at t (beat clock).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .5); return e; };
+// A new picture later in a beat, faded in on the beat clock.
+function c4Later(t) { const q = panel(t); put(q, { o: 0 }); tw(q, { o: 1 }, t, .4); return q; }
+let c4N = 0;
+// ids follow the engine's camera-clip pattern (cam + number), so replay checks treat them like camera ids
+const c4Id = () => 'cam' + (900000 + (++c4N));
+function clipTo(g, d) {
+  const id = c4Id('clip');
+  mk('path', { d }, mk('clipPath', { id }, mk('defs', {}, g)));
+  const c = G(g); c.setAttribute('clip-path', `url(#${id})`);
+  return c;
+}
+// Point in a brain group's own coordinates, on screen.
+const at_ = (g, x, y) => { const s = st(g); return [s.x + x * s.s, s.y + y * s.s]; };
+
+// The three-layer brain, seen from the middle (front to the left).
+// g._neo (outer cortex), g._limb (limbic ring around the core), g._stem (brainstem + cerebellum); each has ._hi, a glow fill.
+const STEM_D = 'M18 30C28 90 38 160 46 228H82C76 160 74 96 72 30Z';
+const CEREB_D = 'M86 102C100 140 168 142 186 98C176 74 126 70 86 102Z';
+const LIMB_D = 'M-92 62C-128 0 -86 -82 0 -88C84 -94 126 -34 104 40';
+function c4Layers(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  g._neo = G(g);
+  pth(g._neo, BRAIN_D, { fill: '#11181c', stroke: LC.neo, 'stroke-width': 3.2 });
+  const inner = clipTo(g._neo, BRAIN_D);
+  g._neo._hi = pth(inner, BRAIN_D, { fill: 'none', stroke: LC.neo, 'stroke-width': 46, opacity: 0 });
+  BRAIN_GYRI.forEach(d => pth(g._neo, d, { stroke: LC.neo, 'stroke-width': 2, opacity: .3 }));
+  g._limb = G(g);
+  g._limb._hi = pth(g._limb, LIMB_D, { stroke: LC.limb, 'stroke-width': 30, opacity: .16 });
+  pth(g._limb, LIMB_D, { stroke: LC.limb, 'stroke-width': 3, opacity: .9 });
+  mk('ellipse', { cx: 22, cy: -8, rx: 34, ry: 24, fill: '#1c1820', stroke: LC.limb, 'stroke-width': 2.5 }, g._limb);
+  g._stem = G(g);
+  g._stem._hi = G(g._stem, { o: .18 });
+  pth(g._stem._hi, STEM_D, { fill: LC.stem }); pth(g._stem._hi, CEREB_D, { fill: LC.stem });
+  pth(g._stem, STEM_D, { fill: 'none', stroke: LC.stem, 'stroke-width': 3 });
+  pth(g._stem, CEREB_D, { fill: 'none', stroke: LC.stem, 'stroke-width': 3 });
+  pth(g._stem, 'M104 104C130 112 156 110 176 96M98 116C126 126 154 124 172 110', { stroke: LC.stem, 'stroke-width': 1.5, opacity: .5 });
+  return g;
+}
+// Light one layer of c4Layers: its glow comes up and the outline brightens.
+function lightLayer(L_, t, on = .55, d = .6) {
+  if (L_._hi.tagName === 'g') tw(L_._hi, { o: on }, t, d); else tw(L_._hi, { o: on }, t, d);
+}
+// Lobe regions in evBrain coordinates (side view, front to the left).
+const LOBES = {
+  fro: 'M-260 -260H-2L-28 -60L-120 18L-150 70L-260 90Z',
+  par: 'M-2 -260H150L134 -46L62 -22L-28 -60Z',
+  occ: 'M150 -260H280V170H124L134 -46Z',
+  tem: 'M-150 70L-120 18L-28 -60L62 -22L134 -46L124 170H-170Z',
+};
+const LOBE_C = { fro: EV.gold, par: EV.calm, occ: EV.fear, tem: EV.surprise };
+const LOBE_CENTRE = { fro: [-130, -60], par: [70, -130], occ: [178, -36], tem: [10, 50] };
+// Side view brain with four lobe overlays (each starts hidden), g._lobes[k].
+function c4Lobes(p, { x = 0, y = 0, s = 1, o = 1, op = .42 } = {}) {
+  const g = evBrain(p, { x, y, s, o });
+  put(g._hypo, { o: 0 });
+  const c = clipTo(g, BRAIN_D);
+  g.insertBefore(c, g._gyri[0]);
+  g._lobes = {};
+  for (const k in LOBES) { g._lobes[k] = G(c, { o: 0 }); pth(g._lobes[k], LOBES[k], { fill: LOBE_C[k], opacity: op }); }
+  pth(c, 'M-2 -200C-12 -140 -22 -100 -28 -60M-150 70C-110 30 -60 -40 -28 -60C10 -40 60 -30 134 -46', { stroke: EV.bg, 'stroke-width': 4, opacity: .7 });
+  return g;
+}
+// Science-check row: ok ✓, 'no' ✗, or unsure (dashed).
+function c4Row(pg, y, kind, k, t, x0 = 200) {
+  const g = G(pg, { x: x0 + 40, y, o: 0 });
+  if (kind === 'ok') { mk('circle', { cx: 0, cy: 0, r: 30, fill: EV.calm, opacity: .2 }, g); pth(g, 'M-13 1L-3 11L15 -11', { stroke: EV.calm, 'stroke-width': 5 }); }
+  else if (kind === 'no') { mk('circle', { cx: 0, cy: 0, r: 30, fill: EV.anger, opacity: .16 }, g); pth(g, 'M-10 -10L10 10M10 -10L-10 10', { stroke: EV.anger, 'stroke-width': 5 }); }
+  else { mk('circle', { cx: 0, cy: 0, r: 30, fill: 'none', stroke: EV.gold, 'stroke-width': 3, 'stroke-dasharray': '6 7' }, g); pth(g, 'M-12 0H12', { stroke: EV.gold, 'stroke-width': 5 }); }
+  const tx = evPara(g, L(k), { x: 70, y: -8, size: 34, maxW: 1080, anchor: 'start', fill: EV.ink });
+  put(tx, { y: -tx._h / 2 + 22 });
+  tw(g, { o: 1, x: x0 }, t, .6, out);
+  return g;
+}
+// Closed eyes for a puppet (fade P.closed in and P.eyes out to sleep).
+function c4Eyes(P) {
+  P.closed = put(pth(P.head, 'M-17 -52Q-12 -47 -7 -52M7 -52Q12 -47 17 -52', { stroke: '#1a0f0a', 'stroke-width': 3 }), { o: 0 });
+  return P;
+}
+// A phone in the puppet's right hand.
+function c4Phone(P) {
+  const g = G(P.armR._lo, { x: 0, y: 86 });
+  mk('rect', { x: -15, y: -24, width: 30, height: 48, rx: 6, fill: '#1d2428', stroke: EV.gold, 'stroke-width': 2 }, g);
+  g._scr = put(mk('rect', { x: -11, y: -19, width: 22, height: 36, rx: 3, fill: '#bfe3f0' }, g), { o: 0 });
+  return g;
+}
+// Front view of a scooter with its rider (legs hidden behind the leg shield). Base at the ground.
+function c4Ride(p, { x = 0, y = 0, s = 1, kind = 'f' } = {}) {
+  const g = G(p, { x, y, s });
+  mk('ellipse', { cx: 0, cy: 4, rx: 70, ry: 10, fill: '#000', opacity: .5 }, g);
+  const P = evPerson(g, { kind, x: 0, y: -24 });
+  put(P.legL, { o: 0 }); put(P.legR, { o: 0 }); put(P.g.firstChild, { o: 0 });
+  const sc = G(g);
+  mk('ellipse', { cx: 0, cy: -24, rx: 17, ry: 30, fill: '#15191b', stroke: '#4a4438', 'stroke-width': 3 }, sc);
+  pth(sc, 'M-26 -48Q0 -66 26 -48V-38H-26Z', { fill: '#5a2622' });
+  pth(sc, 'M-60 -168Q-74 -100 -46 -44H46Q74 -100 60 -168Q0 -180 -60 -168Z', { fill: '#7a2f2a', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .5 });
+  pth(sc, 'M-40 -150Q0 -160 40 -150', { stroke: '#a24a3e', 'stroke-width': 3 });
+  pth(sc, 'M-70 -196L-96 -248M70 -196L96 -248', { stroke: '#3a3324', 'stroke-width': 4 });
+  mk('ellipse', { cx: -100, cy: -256, rx: 14, ry: 10, fill: '#1d2428', stroke: EV.dim, 'stroke-width': 2 }, sc);
+  mk('ellipse', { cx: 100, cy: -256, rx: 14, ry: 10, fill: '#1d2428', stroke: EV.dim, 'stroke-width': 2 }, sc);
+  pth(sc, 'M-96 -192H96', { stroke: '#2a2520', 'stroke-width': 8 });
+  pth(sc, 'M-50 -206H50L40 -170H-40Z', { fill: '#8a3a32', stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .5 });
+  evGlow(sc, 0, -188, 46, 'Warm', .8);
+  mk('circle', { cx: 0, cy: -188, r: 13, fill: '#ffe2a0' }, sc);
+  // hands on the grips
+  evArm(P, -1, -14, 6, 0, .01); evArm(P, 1, 14, -6, 0, .01);
+  g._P = P;
+  return g;
+}
+// Small icons for the lobes and the memory web.
+function c4Icon(p, kind, x, y, c = EV.ink, s = 1) {
+  const g = G(p, { x, y, s });
+  const st_ = { stroke: c, 'stroke-width': 3 };
+  if (kind === 'eye') { pth(g, 'M-26 0Q0 -22 26 0Q0 22 -26 0Z', st_); mk('circle', { cx: 0, cy: 0, r: 8, fill: c }, g); }
+  if (kind === 'ear') { pth(g, 'M-8 18C-20 18 -18 4 -12 -4C-20 -24 4 -32 12 -18C20 -4 6 2 4 10C2 20 -2 22 -8 18Z', st_); pth(g, 'M-2 -6Q6 -10 6 -2', st_); }
+  if (kind === 'hand') { pth(g, 'M-14 20V-2L-20 -14M-14 -2V-24M-5 -2V-28M4 -2V-25M13 4V-18M-14 20H12Q18 8 13 4', st_); }
+  if (kind === 'target') { mk('circle', { cx: 0, cy: 0, r: 20, fill: 'none', ...st_ }, g); mk('circle', { cx: 0, cy: 0, r: 10, fill: 'none', ...st_ }, g); mk('circle', { cx: 0, cy: 0, r: 3.5, fill: c }, g); }
+  if (kind === 'people') { mk('circle', { cx: -12, cy: -10, r: 9, fill: c }, g); mk('circle', { cx: 12, cy: -12, r: 10, fill: c }, g); pth(g, 'M-26 18Q-12 -4 2 18M-2 18Q12 -6 28 18', st_); }
+  if (kind === 'hall') { pth(g, 'M-30 -4L0 -26L30 -4M-24 -4V22H24V-4M-8 22V8H8V22', st_); }
+  if (kind === 'gold') { pth(g, 'M-26 -16Q0 30 26 -16', { stroke: EV.joy, 'stroke-width': 4 }); mk('circle', { cx: 0, cy: 8, r: 7, fill: EV.joy }, g); [-14, 14].forEach(dx => mk('circle', { cx: dx, cy: 2, r: 4, fill: EV.joy }, g)); }
+  if (kind === 'cal') { mk('rect', { x: -24, y: -22, width: 48, height: 46, rx: 6, fill: 'none', ...st_ }, g); pth(g, 'M-24 -8H24M-12 -28V-16M12 -28V-16', st_); }
+  if (kind === 'notes') { pth(g, 'M-14 16V-18L16 -24V10', st_); mk('circle', { cx: -20, cy: 16, r: 7, fill: c }, g); mk('circle', { cx: 10, cy: 10, r: 7, fill: c }, g); }
+  return g;
+}
+// Jasmine flower.
+function c4Jasmine(p, x, y, s = 1) {
+  const g = G(p, { x, y, s });
+  for (let i = 0; i < 5; i++) { const a = i * 72; mk('ellipse', { cx: 0, cy: -20, rx: 10, ry: 20, fill: '#f6f1e2', transform: `rotate(${a})` }, g); }
+  mk('circle', { cx: 0, cy: 0, r: 7, fill: '#e8d68a' }, g);
+  return g;
+}
+// Scrolling trace inside [x0, x0 + w] at y: f(u) gives the height at phase u (seconds).
+function c4Trace(p, x0, y, w, f, color, D, speed = 1) {
+  const e = pth(p, '', { stroke: color, 'stroke-width': 3 });
+  clockRun(t => {
+    let d = '';
+    for (let i = 0; i <= 110; i++) { const u = i / 110; d += (i ? 'L' : 'M') + (x0 + u * w).toFixed(1) + ' ' + (y - f(t * speed - (1 - u) * 3)).toFixed(1); }
+    e.setAttribute('d', d);
+  }, D);
+  return e;
+}
+const ecg = rate => u => { const ph = ((u * rate) % 1 + 1) % 1; return ph < .06 ? Math.sin(ph / .06 * Math.PI) * 10 : ph < .12 ? 0 : ph < .15 ? -(ph - .12) / .03 * 14 : ph < .19 ? (ph - .15) / .04 * 60 - 14 : ph < .23 ? 46 - (ph - .19) / .04 * 66 : ph < .26 ? -20 + (ph - .23) / .03 * 20 : ph < .38 ? Math.sin((ph - .26) / .12 * Math.PI) * 14 : 0; };
+// Homunculus parts: a small body whose lips, hands and back can be resized.
+function c4Homunculus(p, { x = 0, y = 0, s = 1 } = {}) {
+  const g = G(p, { x, y, s });
+  const skin = EV.skinM;
+  g._torso = G(g, { y: 40 });
+  mk('ellipse', { cx: 0, cy: 0, rx: 56, ry: 86, fill: skin, opacity: .9 }, g._torso);
+  pth(g, 'M-24 120L-36 250M24 120L36 250', { stroke: skin, 'stroke-width': 22 });
+  mk('ellipse', { cx: -42, cy: 256, rx: 22, ry: 10, fill: skin }, g); mk('ellipse', { cx: 42, cy: 256, rx: 22, ry: 10, fill: skin }, g);
+  pth(g, 'M-50 -20L-130 60M50 -20L130 60', { stroke: skin, 'stroke-width': 16 });
+  g._hands = [-1, 1].map(sd => {
+    const h = G(g, { x: sd * 136, y: 68 });
+    mk('circle', { cx: 0, cy: 0, r: 16, fill: skin }, h);
+    [-50, -20, 10, 40].forEach(a => pth(h, `M0 0L${Math.sin((a * sd) * Math.PI / 180) * 30} ${Math.cos(a * Math.PI / 180) * 30 + 4}`, { stroke: skin, 'stroke-width': 8 }));
+    pth(h, `M0 0L${-sd * 26} -14`, { stroke: skin, 'stroke-width': 9 });
+    return h;
+  });
+  g._head = G(g, { y: -96 });
+  mk('ellipse', { cx: 0, cy: 0, rx: 52, ry: 60, fill: skin }, g._head);
+  pth(g._head, 'M-50 -10Q-52 -64 0 -64Q52 -64 50 -10Q40 -44 0 -46Q-40 -44 -50 -10Z', { fill: EV.hair });
+  mk('ellipse', { cx: -16, cy: -6, rx: 4, ry: 5, fill: '#1a0f0a' }, g._head); mk('ellipse', { cx: 16, cy: -6, rx: 4, ry: 5, fill: '#1a0f0a' }, g._head);
+  g._lips = G(g._head, { y: 30 });
+  mk('ellipse', { cx: 0, cy: 0, rx: 16, ry: 7, fill: '#c0574a' }, g._lips);
+  pth(g._lips, 'M-16 0H16', { stroke: '#6a2a22', 'stroke-width': 2 });
+  return g;
+}
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    evGlow(g, 800, 540, 300, 'Gold', .35);
+    const br = c4Layers(g, { x: 800, y: 545, s: .82 });
+    put(br._limb, { o: 0 }); put(br._stem, { o: 0 });
+    tw(br._stem, { o: 1 }, .5, .7); lightLayer(br._stem, .5, .5);
+    tw(br._limb, { o: 1 }, 1.2, .7); lightLayer(br._limb, 1.2, .45);
+    lightLayer(br._neo, 1.9, .35, .8);
+    // a signal rising through the three layers, over and over
+    const rise = pth(g, 'M855 730C850 650 830 560 800 500C770 440 720 420 690 410', { stroke: 'none' });
+    evFlow(rise, 5, EV.goldHi, 1.2, D - 1.2, { speed: .3, r: 6, parent: g });
+    evText(g, L('kicker'), { x: 800, y: 150, size: 26, fill: EV.gold, weight: 500, ls: '6' });
+    evText(g, L('title'), { x: 800, y: 250, size: 88, font: SERIF, weight: 600, maxW: 1360 });
+    tw(g, { o: 1 }, .15, 1.1, out);
+    const sub = evText(scene, L('sub'), { x: 800, y: 800, size: 36, fill: EV.dim, o: 0, maxW: 1200, font: SERIF, italic: true });
+    put(sub, { y: 818 }); tw(sub, { y: 800, o: 1 }, m('sub'), .8, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 862, size: 24, fill: '#6f6a5c', o: 0 });
+    show(cr, m('sub') + .8, .8);
+    tw(g, { o: 0 }, D - .7, .6); hide(sub, D - .7, .6); hide(cr, D - .7, .6);
+  }],
+
+  ['big', 'b_big', (m, D) => {
+    const p = panel(0);
+    const bd = evBody(p, { x: 380, y: 500, s: 1.25, o: 0 });
+    tw(bd, { o: 1 }, .1, .6);
+    // the brain as a small glowing shape in the head
+    const hb = G(p, { x: 380, y: 250, s: .17, o: 0 });
+    pth(hb, BRAIN_D, { fill: LC.neo, opacity: .9 });
+    tw(hb, { o: 1 }, .4, .6);
+    lab(p, 'kg', 520, 200, .9, { size: 30, fill: EV.gold, anchor: 'start' });
+    const hg = evGlow(p, 380, 250, 90, 'Gold', 0);
+    tw(hg, { o: 1 }, m('energy'), .8);
+    clockRun(t => { if (t > m('energy')) put(hg, { s: 1 + .12 * Math.sin((t - m('energy')) * 4) }); }, D);
+    // two 10×10 grids: 2 of 100 squares for weight, 20 of 100 for energy
+    const grid = (x0, key, n, t, big) => {
+      const g = G(p, { x: x0, y: 250, o: 0 });
+      const cells = [];
+      for (let i = 0; i < 100; i++) {
+        const cx = (i % 10) * 34, cy = Math.floor(i / 10) * 34;
+        cells.push(mk('rect', { x: cx, y: cy, width: 28, height: 28, rx: 5, fill: '#1a2125', stroke: '#2c3436', 'stroke-width': 1.5 }, g));
+      }
+      evText(g, L(key), { x: 167, y: -26, size: 30, fill: EV.dim, maxW: 340 });
+      const num = evText(g, L(big), { x: 167, y: 420, size: 64, font: SERIF, weight: 600, fill: EV.gold, o: 0 });
+      tw(g, { o: 1 }, t - .5, .5);
+      for (let i = 0; i < n; i++) { const c = cells[99 - i]; tw(c, { c_fill: EV.gold }, t + i * .06, .25); }
+      show(num, t + .3, .5);
+      return { g, cells };
+    };
+    grid(760, 'weight', 2, m('weight'), 'pct2');
+    const E_ = grid(1160, 'energy', 20, m('energy'), 'pct20');
+    // the bill: one appliance eating a fifth
+    for (let i = 0; i < 20; i++) pulse(E_.cells[99 - i], m('why') + .2 + (i % 10) * .05, 1.15);
+    lab(p, 'oneAppliance', 1327, 740, m('why') + .3, { size: 26, fill: EV.dim, italic: true, maxW: 520 });
+    const wf = lab(p, 'whatFor', 1060, 840, m('why') + 4.5, { size: 44, font: SERIF, italic: true, fill: EV.ink, maxW: 900 });
+    pulse(wf, m('why') + 5.5, 1.08);
+  }],
+
+  ['fold', 'b_fold', (m, D) => {
+    const p = panel(0);
+    // the newspaper sheet, left
+    const np = G(p, { x: 360, y: 330, o: 0 });
+    const sh = G(np);
+    mk('rect', { x: -230, y: -150, width: 460, height: 300, rx: 4, fill: '#d9d0bb' }, sh);
+    mk('rect', { x: -200, y: -126, width: 400, height: 34, fill: '#4a4438' }, sh);
+    for (let i = 0; i < 9; i++) pth(sh, `M${i % 2 ? 10 : -200} ${-66 + i * 22}H${i % 2 ? 200 : -10}`, { stroke: '#8a8270', 'stroke-width': 7 });
+    mk('rect', { x: -200, y: -66, width: 180, height: 110, fill: '#9a907a' }, sh);
+    tw(np, { o: 1 }, m('sheet') - .3, .5);
+    lab(p, 'pageSize', 360, 530, m('sheet') + 2.4, { size: 28, fill: EV.dim, italic: true, maxW: 500 });
+    // crumple: the sheet shrinks and twists into a ball
+    const ball = G(p, { x: 360, y: 330, o: 0, s: .4 });
+    pth(ball, 'M-90 -40L-50 -95L20 -88L80 -60L96 10L60 80L-10 96L-80 64L-100 4Z', { fill: '#cfc5ae', stroke: '#8a8270', 'stroke-width': 3 });
+    pth(ball, 'M-50 -95L-10 -20L60 80M-100 4L-10 -20L80 -60M20 -88L-10 -20L-80 64', { stroke: '#8a8270', 'stroke-width': 3 });
+    tw(sh, { s: .25, r: 40, o: 0 }, m('crumple'), 1.2, io);
+    tw(ball, { o: 1, s: 1 }, m('crumple') + .4, 1, back);
+    // the same idea as a cross-section: a long line folding into the skull, right
+    const CX = 1130, CY = 470, L0 = 760, N = 9;
+    const skull = pth(p, `M${CX - 268} ${CY + 120}C${CX - 280} ${CY - 205} ${CX + 280} ${CY - 205} ${CX + 268} ${CY + 120}`, { stroke: EV.dim, 'stroke-width': 3, 'stroke-dasharray': '10 8' }, { d: 0 });
+    draw(skull, m('sheet') + .8, .9);
+    lab(p, 'skull', CX, CY - 150, m('sheet') + 1.2, { size: 26, fill: EV.dim });
+    const ln = pth(p, '', { stroke: LC.neo, 'stroke-width': 5 });
+    // q = 0: a flat line too wide for the skull; q = 1: the same line folded deep under the dome
+    const shape = q => {
+      let d = '';
+      for (let i = 0; i <= 240; i++) {
+        const u = i / 240, fx = CX + (u - .5) * L0, fy = CY + 40;
+        const a = Math.PI * (1.08 - 1.16 * u), R = 196 - 34 * (.5 - .5 * Math.cos(u * N * 2 * Math.PI)) * 2;
+        const dx = CX + Math.cos(a) * R * 1.12, dy = CY + 90 - Math.sin(a) * R;
+        d += (i ? 'L' : 'M') + (fx + (dx - fx) * q).toFixed(1) + ' ' + (fy + (dy - fy) * q).toFixed(1);
+      }
+      return d;
+    };
+    put(ln, { o: 0 }); tw(ln, { o: 1 }, m('sheet'), .5);
+    ln.setAttribute('d', shape(0));
+    prog(q => ln.setAttribute('d', shape(q)), m('crumple'), 2.4, io);
+    const tw_ = lab(p, 'tooWide', CX, CY + 110, m('sheet') + 1.6, { size: 28, fill: EV.anger, italic: true, maxW: 520 });
+    hide(tw_, m('crumple'), .4);
+    lab(p, 'folded', CX, CY + 190, m('crumple') + 2.2, { size: 28, fill: EV.ink, italic: true, maxW: 520 });
+    lab(p, 'sheet', CX, 150, m('sheet') + .2, { size: 32, fill: EV.gold, maxW: 600 });
+    // two thirds hidden: a pie under the ball
+    const pie = G(p, { x: 360, y: 640, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 70, fill: '#1a2125', stroke: LC.neo, 'stroke-width': 2 }, pie);
+    const wedge = pth(pie, '', { fill: LC.neo, opacity: .75 });
+    tw(pie, { o: 1 }, m('hidden'), .5);
+    prog(q => { const a = q * 240 * Math.PI / 180, x = Math.sin(a) * 70, y = -Math.cos(a) * 70; wedge.setAttribute('d', `M0 0V-70A70 70 0 ${a > Math.PI ? 1 : 0} 1 ${x.toFixed(1)} ${y.toFixed(1)}Z`); }, m('hidden') + .3, 1.4, out);
+    tw(ball, { y: 300, s: .8 }, m('hidden'), .6);
+    lab(p, 'hidden', 360, 760, m('hidden') + 1, { size: 30, fill: EV.gold, maxW: 600 });
+    // folds deepen once more, then the walnut
+    const wal = lab(p, 'walnut', CX, 840, m('hidden') + 4.5, { size: 30, fill: EV.dim, italic: true, font: SERIF, maxW: 600 });
+    pulse(ln, m('hidden') + 4.5, 1.06);
+  }],
+
+  ['three', 'b_three', (m, D) => {
+    const p = panel(0);
+    const br = c4Layers(p, { x: 620, y: 470, s: 1.45, o: 0 });
+    tw(br, { o: 1 }, .1, .6);
+    [br._stem, br._limb, br._neo].forEach(L_ => put(L_, { o: .3 }));
+    lab(p, 'maclean', 120, 120, .4, { size: 30, fill: EV.dim, anchor: 'start', italic: true });
+    const row = (L_, nk, dk, c, y, t, [ax, ay]) => {
+      tw(L_, { o: 1 }, t, .5); lightLayer(L_, t, .55);
+      pulse(L_, t + .2, 1.03);
+      const [sx, sy] = at_(br, ax, ay);
+      const ld = pth(p, `M${sx} ${sy}L1030 ${y - 10}`, { stroke: c, 'stroke-width': 2, opacity: .7 }, { d: 0 });
+      draw(ld, t + .2, .5);
+      evDot(p, sx, sy, 6, c);
+      lab(p, nk, 1050, y, t + .5, { size: 38, fill: c, weight: 600, anchor: 'start', maxW: 500 });
+      lab(p, dk, 1050, y + 42, t + .9, { size: 28, fill: EV.dim, anchor: 'start', maxW: 500 });
+    };
+    row(br._stem, 'stemN', 'stemD', LC.stem, 660, m('stem'), [60, 170]);
+    row(br._limb, 'limbN', 'limbD', LC.limb, 450, m('limbic'), [100, 30]);
+    row(br._neo, 'neoN', 'neoD', LC.neo, 250, m('neo'), [150, -150]);
+    // the question mark beside the map
+    const q = G(p, { x: 1100, y: 800, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 30, fill: 'none', stroke: EV.gold, 'stroke-width': 3, 'stroke-dasharray': '6 7' }, q);
+    evText(q, '?', { x: 0, y: 12, size: 36, fill: EV.gold, weight: 600 });
+    evText(q, L('handyMap'), { x: 50, y: 10, size: 28, fill: EV.ink, anchor: 'start', italic: true, maxW: 420 });
+    tw(q, { o: 1 }, m('map') + 2.5, .6); pulse(q, m('map') + 3.2, 1.08);
+  }],
+
+  ['stem', 'b_stem', (m, D) => {
+    const p = panel(0);
+    // bus window at night, streetlights sliding past
+    const win = G(p);
+    mk('rect', { x: 100, y: 150, width: 860, height: 440, rx: 30, fill: '#0b1720' }, win);
+    const dawn = put(mk('rect', { x: 100, y: 150, width: 860, height: 440, rx: 30, fill: '#6b4a3a' }, win), { o: 0 });
+    const lit = clipTo(win, 'M130 150H930Q960 150 960 180V560Q960 590 930 590H130Q100 590 100 560V180Q100 150 130 150Z');
+    const lights = Array.from({ length: 6 }, (_, i) => { const g = G(lit, { y: 260 }); pth(g, 'M0 0V300', { stroke: '#2a3236', 'stroke-width': 8 }); evGlow(g, 0, 0, 60, 'Warm', .8); mk('circle', { cx: 0, cy: 0, r: 8, fill: '#ffe2a0' }, g); return g; });
+    const hills = pth(lit, 'M100 520Q240 470 380 510T680 500T960 510V590H100Z', { fill: '#0e1418' });
+    // distance travelled: steady speed, then the bus brakes to a stop after the wake mark
+    const dist = t => { const w = m('wake') + 1.8, dt = Math.min(Math.max(0, t - w), 1.875); return 300 * Math.min(t, w) + 300 * dt - 80 * dt * dt; };
+    clockRun(t => lights.forEach((g, i) => put(g, { x: 1060 - ((dist(t) + i * 180) % 1080) })), D);
+    pth(p, 'M100 590H960', { stroke: '#2a3236', 'stroke-width': 14 });
+    mk('rect', { x: 100, y: 150, width: 860, height: 440, rx: 30, fill: 'none', stroke: '#2b3632', 'stroke-width': 10 }, p);
+    lab(p, 'nightBus', 530, 120, .3, { size: 28, fill: EV.dim, italic: true, maxW: 700 });
+    // Ravi asleep, head against the window
+    const rav = c4Eyes(evPerson(p, { kind: 'm', x: 560, y: 910, s: 1.1 }));
+    put(rav.eyes, { o: 0 }); put(rav.closed, { o: 1 }); evMood(rav, 'calm', 0, .01);
+    put(rav.head, { r: -14 }); put(rav.torso, { r: -3 });
+    evArm(rav, -1, 6, -10, 0, .01); evArm(rav, 1, -6, 10, 0, .01);
+    clockRun(t => put(rav.torso, { y: -178 - (t < m('wake') ? Math.sin(t * 1.4) * 2.5 : 0) }), D);
+    // seat back in front of him
+    pth(p, 'M300 720Q300 690 330 690H790Q820 690 820 720V900H300Z', { fill: '#3a2f2a', stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .3 });
+    const zz = ['z', 'z', 'Z'].map((s_, i) => evText(p, s_, { x: 0, y: 0, size: 30 + i * 6, fill: EV.dim, o: 0, font: SERIF, italic: true }));
+    clockRun(t => zz.forEach((z, i) => { const u = ((t * .35 + i / 3) % 1); put(z, { x: 640 + u * 60 + i * 10, y: 470 - u * 120, o: t > m('wake') ? 0 : Math.sin(u * Math.PI) * .8 }); }), D);
+    lab(p, 'noOne', 560, 800, m('sleep') + 2.5, { size: 30, fill: EV.ink, italic: true, maxW: 460 });
+    // right column: brain with the brainstem lit, then the readouts
+    const br = c4Layers(p, { x: 1270, y: 210, s: .48, o: 0 });
+    tw(br, { o: 1 }, m('heart') - .6, .5); put(br._neo, { o: .35 }); put(br._limb, { o: .35 });
+    lightLayer(br._stem, m('heart') - .3, .7);
+    lab(p, 'brainstem', 1430, 330, m('heart') - .2, { size: 28, fill: LC.stem, anchor: 'start', maxW: 160 });
+    const hr = G(p, { o: 0 }); tw(hr, { o: 1 }, m('heart'), .5);
+    evText(hr, L('heartbeat'), { x: 1040, y: 420, size: 28, fill: EV.anger, anchor: 'start', maxW: 440 });
+    c4Trace(hr, 1040, 500, 460, ecg(1.0), EV.anger, D, 1);
+    const bt = G(p, { o: 0 }); tw(bt, { o: 1 }, m('breath'), .5);
+    evText(bt, L('breathing'), { x: 1040, y: 580, size: 28, fill: EV.fear, anchor: 'start', maxW: 440 });
+    c4Trace(bt, 1040, 640, 460, u => Math.sin(u * 2 * Math.PI / 4.5) * 22, EV.fear, D, 1);
+    // alertness: low while asleep, up at dawn
+    const al = G(p, { x: 1040, y: 760, o: 0 }); tw(al, { o: 1 }, m('wake') - .4, .4);
+    evText(al, L('alertness'), { x: 0, y: -24, size: 28, fill: EV.gold, anchor: 'start', maxW: 440 });
+    mk('rect', { x: 0, y: 0, width: 460, height: 30, rx: 15, fill: 'none', stroke: EV.dim, 'stroke-width': 2 }, al);
+    const af = mk('rect', { x: 4, y: 4, width: 50, height: 22, rx: 11, fill: EV.gold }, al);
+    evText(al, L('asleep'), { x: 0, y: 70, size: 24, fill: EV.dim, anchor: 'start' });
+    evText(al, L('awake'), { x: 460, y: 70, size: 24, fill: EV.dim, anchor: 'end' });
+    prog(q => af.setAttribute('width', 50 + 400 * q), m('wake') + 2, 1.6, out);
+    // dawn and the brake
+    tw(dawn, { o: .55 }, m('wake') + 1, 2.5);
+    prog(q => put(rav.g, { x: 560 + Math.sin(q * Math.PI * 3) * (1 - q) * 18 }), m('wake') + 1.8, 1, lin);
+    tw(rav.head, { r: 0 }, m('wake') + 2.2, .6); tw(rav.torso, { r: 0 }, m('wake') + 2.2, .6);
+    tw(rav.closed, { o: 0 }, m('wake') + 2.4, .2); tw(rav.eyes, { o: 1 }, m('wake') + 2.4, .2);
+    evMood(rav, 'ask', m('wake') + 2.6);
+    lab(p, 'dawn', 860, 210, m('wake') + 1.6, { size: 28, fill: EV.joy, italic: true });
+  }],
+
+  ['cereb', 'b_cereb', (m, D) => {
+    const p = panel(0);
+    // the road, rushing toward us
+    mk('rect', { x: 0, y: 420, width: 1600, height: 480, fill: '#0c1114' }, p);
+    pth(p, 'M500 420L80 900M700 420L1040 900', { stroke: EV.gold, 'stroke-width': 2, opacity: .3 });
+    const dash = Array.from({ length: 6 }, () => mk('rect', { x: -5, y: -20, width: 10, height: 40, fill: '#5b5650' }, G(p)));
+    clockRun(t => dash.forEach((d, i) => { const u = ((t * .45 + i / 6) % 1), k = u * u; put(d.parentNode, { x: 600 - k * 40, y: 430 + k * 470, s: .3 + k * 1.4 }); }), D);
+    // Leena on her scooter: wobbly, then smooth
+    const R = c4Ride(p, { x: 560, y: 860 });
+    const lee = R._P; evBreathe(lee, D);
+    evMood(lee, 'tense', m('wobble'));
+    const amp = t => t < m('wobble') ? 0 : t < m('practice') ? 7 * Math.min(1, (t - m('wobble')) / .6) : 7 * Math.max(0, 1 - (t - m('practice')) / 3);
+    clockRun(t => put(R, { r: amp(t) * Math.sin(t * 5.2) + amp(t) * .4 * Math.sin(t * 9.1) }), D);
+    const wk = evText(p, L('week1'), { x: 200, y: 140, size: 40, font: SERIF, weight: 600, fill: EV.gold, o: 0 });
+    show(wk, m('wobble') + .2);
+    prog(q => { wk.textContent = q > .5 ? L('week6') : L('week1'); }, m('practice') + .4, .2, lin);
+    pulse(wk, m('practice') + .5, 1.15);
+    const fa = lab(p, 'fullAttn', 200, 190, m('wobble') + 1.4, { size: 26, fill: EV.anger, italic: true, maxW: 360 });
+    hide(fa, m('practice') + .4, .4);
+    // what she thinks about now
+    evMood(lee, 'smile', m('auto'));
+    const th = evThought(p, { x: 640, y: 430, w: 400, h: 200, dx: 150 });
+    tw(th, { o: 1 }, m('auto') + .2, .5, out);
+    ['todo1', 'todo2', 'todo3'].forEach((k, i) => {
+      const r = G(th._in, { x: -110, y: -46 + i * 46, o: 0 });
+      mk('rect', { x: -12, y: -14, width: 24, height: 24, rx: 4, fill: 'none', stroke: EV.gold, 'stroke-width': 2 }, r);
+      evText(r, L(k), { x: 24, y: 8, size: 26, anchor: 'start', fill: EV.ink, maxW: 230 });
+      tw(r, { o: 1 }, m('auto') + .8 + i * .5, .4);
+    });
+    lab(p, 'autopilot', 200, 190, m('auto') + 2.5, { size: 26, fill: EV.calm, italic: true, maxW: 360 });
+    // the cerebellum, right
+    const br = c4Layers(p, { x: 1270, y: 300, s: .8, o: 0 });
+    tw(br, { o: 1 }, .3, .6); put(br._neo, { o: .35 }); put(br._limb, { o: .35 });
+    lightLayer(br._stem, m('wobble') - .5, .45);
+    const [cx_, cy_] = at_(br, 136, 108);
+    const cl = pth(p, `M${cx_ + 30} ${cy_ + 20}L${cx_ + 70} ${cy_ + 90}`, { stroke: LC.stem, 'stroke-width': 2 }, { d: 0 }); draw(cl, .9, .4);
+    lab(p, 'cerebellum', cx_ + 70, cy_ + 124, 1, { size: 30, fill: LC.stem, weight: 600, maxW: 300 });
+    // crowded: dots packed inside it
+    const dots = Array.from({ length: 28 }, (_, i) => evDot(p, cx_ + (Math.sin(i * 7.3) * 34), cy_ + Math.cos(i * 3.1) * 10 - 4, 3.5, '#bcd0f4', 0));
+    dots.forEach((d, i) => tw(d, { o: 1 }, m('neurons') + i * .03, .2));
+    // share of all brain neurons
+    const bar = G(p, { x: 1060, y: 690, o: 0 });
+    evText(bar, L('wholeBrain'), { x: 0, y: -22, size: 24, fill: EV.dim, anchor: 'start', maxW: 420 });
+    mk('rect', { x: 0, y: 0, width: 420, height: 36, rx: 8, fill: '#1a2125', stroke: EV.dim, 'stroke-width': 1.5 }, bar);
+    const bf = mk('rect', { x: 0, y: 0, width: 0, height: 36, rx: 8, fill: LC.stem }, bar);
+    tw(bar, { o: 1 }, m('neurons') + .4, .4);
+    prog(q => bf.setAttribute('width', 330 * q), m('neurons') + .8, 1.4, out);
+    pth(bar, 'M210 -6V44', { stroke: EV.ink, 'stroke-width': 2, 'stroke-dasharray': '4 4' });
+    lab(bar, 'overHalf', 0, 84, m('neurons') + 2, { size: 26, fill: LC.stem, anchor: 'start', maxW: 440 });
+  }],
+
+  ['q1', 'b_cereb', (m, D) => {
+    const p = panel(0);
+    mk('rect', { x: 0, y: 360, width: 1600, height: 540, fill: '#0c1114' }, p);
+    const R = c4Ride(p, { x: 560, y: 640, s: .78 });
+    evMood(R._P, 'smile', 0, .01); evBreathe(R._P, D);
+    const th = evThought(p, { x: 620, y: 300, w: 300, h: 150, dx: 140 });
+    put(th, { o: 1 });
+    evText(th._in, L('todo1'), { x: 0, y: 8, size: 28, fill: EV.ink, maxW: 240 });
+    const br = c4Layers(p, { x: 1180, y: 330, s: .7 });
+    [br._stem, br._limb, br._neo].forEach(L_ => put(L_, { o: .6 }));
+    evText(p, '?', { x: 1180, y: 260, size: 80, font: SERIF, fill: EV.gold, weight: 600 });
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-balance', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 0, L('q1y'), [null, L('q1nb'), L('q1nc')]),
+  }], done) }],
+
+  ['limbic', 'b_limbic', (m, D) => {
+    const p = panel(0);
+    // the brain, limbic ring lit
+    const br = c4Layers(p, { x: 1300, y: 330, s: .85, o: 0 });
+    tw(br, { o: 1 }, .1, .6); put(br._neo, { o: .3 }); put(br._stem, { o: .4 });
+    lightLayer(br._limb, m('deep'), .6); pulse(br._limb, m('deep') + .3, 1.06);
+    lab(p, 'limbic', 1300, 610, m('deep') + .3, { size: 32, fill: LC.limb, weight: 600, maxW: 420 });
+    lab(p, 'deepCentre', 1300, 650, m('deep') + .8, { size: 26, fill: EV.dim, italic: true, maxW: 420 });
+    // outside: a Dubai afternoon
+    const out_ = G(p, { o: 0 });
+    mk('rect', { x: 90, y: 150, width: 380, height: 420, rx: 20, fill: '#2a1f17', stroke: '#4a3a2c', 'stroke-width': 6 }, out_);
+    evGlow(out_, 360, 250, 110, 'Warm', 1); mk('circle', { cx: 360, cy: 250, r: 34, fill: '#ffd27a' }, out_);
+    pth(out_, 'M90 570V470H150V400H190V330H215V250L225 220L235 250V330H260V430H320V380H370V470H470V570Z', { fill: '#140f0c' });
+    evText(out_, L('outside'), { x: 280, y: 130, size: 26, fill: EV.dim, maxW: 360 });
+    const t46 = evText(out_, '46°C', { x: 280, y: 650, size: 64, font: SERIF, weight: 600, fill: EV.surprise });
+    tw(out_, { o: 1 }, m('thermo') - .3, .6);
+    const heatW = Array.from({ length: 3 }, (_, i) => pth(out_, `M${150 + i * 110} 420q12 -14 0 -28t0 -28`, { stroke: EV.surprise, 'stroke-width': 3, opacity: .6 }));
+    clockRun(t => heatW.forEach((h, i) => put(h, { y: -((t * 30 + i * 20) % 60) })), D);
+    // inside: the body held at 37
+    const bd = evBody(p, { x: 760, y: 480, s: 1, o: 0 });
+    tw(bd, { o: 1 }, m('thermo') + .4, .6);
+    lab(p, 'inside', 760, 200, m('thermo') + .6, { size: 26, fill: EV.dim });
+    const t37 = evText(p, '37°C', { x: 760, y: 756, size: 64, font: SERIF, weight: 600, fill: EV.calm, o: 0 });
+    show(t37, m('steady'), .5);
+    lab(p, 'heldSteady', 760, 796, m('steady') + .5, { size: 26, fill: EV.calm, italic: true });
+    for (let k = 0; k < 4; k++) pulse(t37, m('steady') + 1 + k * 1.6, 1.06);
+    tw(bd._glow, { o: .5 }, m('steady'), .8);
+    // the thermostat: a dashed line from the brain's ring to the body
+    const th = pth(p, 'M1180 360C1040 360 960 330 880 330', { stroke: LC.limb, 'stroke-width': 3, 'stroke-dasharray': '8 8' }, { d: 0 });
+    draw(th, m('thermo') + 1.2, .8);
+    lab(p, 'thermostat', 1020, 300, m('thermo') + 1.6, { size: 26, fill: LC.limb, italic: true, maxW: 300 });
+    // the other steady things
+    [['sugar', 960, 440], ['thirst', 960, 510], ['hormones', 960, 580]].forEach(([k, x, y], i) => {
+      const c = G(p, { x, y, o: 0 });
+      mk('circle', { cx: 0, cy: -8, r: 9, fill: EV.calm }, c);
+      evText(c, L(k), { x: 22, y: 2, size: 28, anchor: 'start', fill: EV.ink, maxW: 240 });
+      tw(c, { o: 1, x: x + 0 }, m('steady') + 2.5 + i * .6, .4);
+    });
+    // feelings take shape in the ring
+    [[EV.joy, 0], [EV.fear, 2.1], [EV.anger, 4.2]].forEach(([c, ph]) => {
+      const d = evDot(p, 0, 0, 10, c, 0);
+      clockRun(t => { const a = ph + t * .8; put(d, { x: 1300 + Math.cos(a) * 80, y: 330 - 10 + Math.sin(a) * 52, o: t > m('feel') ? .95 : 0 }); }, D);
+    });
+    // on names
+    const nn = evPara(p, L('nameNote'), { x: 800, y: 870, size: 26, maxW: 1400, fill: EV.dim, italic: true, o: 0 });
+    put(nn, { y: 880 - nn._h + 26 * .9 });
+    show(nn, Math.max(m('feel') + 3, D - 11), .6);
+  }],
+
+  ['parts', 'b_parts', (m, D) => {
+    const p = panel(0);
+    const br = c4Layers(p, { x: 520, y: 470, s: 1.6, o: 0 });
+    tw(br, { o: 1 }, .1, .6); put(br._neo, { o: .45 }); put(br._limb, { o: .3 }); put(br._stem, { o: .4 });
+    // the members, in brain coordinates
+    const S_ = {};
+    const part = (k, c, draw_) => { const g = G(br, { o: 0 }); draw_(g, c); S_[k] = g; return g; };
+    part('thal', EV.fear, (g, c) => mk('ellipse', { cx: 22, cy: -10, rx: 30, ry: 20, fill: c, opacity: .8 }, g));
+    part('hypo', EV.anger, (g, c) => mk('ellipse', { cx: -20, cy: 28, rx: 16, ry: 12, fill: c, opacity: .85 }, g));
+    part('pit', EV.surprise, (g, c) => { pth(g, 'M-24 38L-34 58', { stroke: c, 'stroke-width': 4 }); mk('circle', { cx: -36, cy: 66, r: 9, fill: c }, g); });
+    part('hip', EV.calm, (g, c) => pth(g, 'M8 80C40 96 96 78 112 34C116 22 110 14 102 18', { stroke: c, 'stroke-width': 10 }));
+    part('amy', EV.joy, (g, c) => mk('ellipse', { cx: -2, cy: 80, rx: 13, ry: 9, fill: c, transform: 'rotate(-20 -2 80)' }, g));
+    const rows = [['thal', 'thalD', 'thal', EV.fear, [22, -10]], ['hypo', 'hypoD', 'hypo', EV.anger, [-20, 28]], ['pit', 'pitD', 'pit', EV.surprise, [-36, 66]],
+      ['hip', 'hipD', 'hip', EV.calm, [96, 60]], ['amy', 'amyD', 'amy', EV.joy, [-2, 80]]];
+    rows.forEach(([nk, dk, mk_, c, pt], i) => {
+      const y = 190 + i * 132, t = m(mk_);
+      tw(S_[nk], { o: 1 }, t - .1, .4); pulse(S_[nk], t + .2, 1.25);
+      const [sx, sy] = at_(br, pt[0], pt[1]);
+      const ld = pth(p, `M${sx} ${sy}C${sx + 200} ${sy} ${860} ${y - 10} 1000 ${y - 10}`, { stroke: c, 'stroke-width': 2, opacity: .65 }, { d: 0 });
+      draw(ld, t, .6);
+      lab(p, nk, 1020, y, t + .3, { size: 36, fill: c, weight: 600, anchor: 'start', maxW: 520 });
+      lab(p, dk, 1020, y + 40, t + .7, { size: 26, fill: EV.dim, anchor: 'start', maxW: 540 });
+      if (i < rows.length - 1) tw(ld, { o: .3 }, m(rows[i + 1][2]), .5);
+    });
+    // the relay: signals up the stem, through the thalamus, out to the cortex
+    const [ax, ay] = at_(br, 60, 220), [bx, by] = at_(br, 22, -10), [cx, cy] = at_(br, -60, -150), [dx, dy] = at_(br, 120, -140);
+    const r1 = pth(p, `M${ax} ${ay}C${ax} ${ay - 150} ${bx} ${by + 80} ${bx} ${by}C${bx} ${by - 60} ${cx + 40} ${cy + 30} ${cx} ${cy}`, { stroke: 'none' });
+    const r2 = pth(p, `M${ax} ${ay}C${ax} ${ay - 150} ${bx} ${by + 80} ${bx} ${by}C${bx + 40} ${by - 60} ${dx - 30} ${dy + 40} ${dx} ${dy}`, { stroke: 'none' });
+    evFlow(r1, 4, EV.fear, m('thal') + .5, m('hypo') - m('thal'), { speed: .45, r: 6, parent: p });
+    evFlow(r2, 4, EV.fear, m('thal') + .8, m('hypo') - m('thal') - .3, { speed: .45, r: 6, parent: p });
+    lab(p, 'smellOwn', 300, 140, m('thal') + 4.5, { size: 26, fill: EV.dim, italic: true, maxW: 420 });
+    // hypothalamus → pituitary → out to the glands
+    const [px, py] = at_(br, -36, 66);
+    const g1 = pth(p, `M${px} ${py}C${px - 60} ${py + 120} ${px - 160} ${py + 200} ${px - 230} ${py + 230}`, { stroke: EV.surprise, 'stroke-width': 2, opacity: .4 }, { d: 0 });
+    draw(g1, m('pit') + .6, .8);
+    evFlow(g1, 4, EV.surprise, m('pit') + .8, D - m('pit') - .8, { speed: .35, r: 6, parent: p });
+  }],
+
+  ['alarm', 'b_alarm', (m, D) => {
+    const p = panel(0);
+    const cam = camera(p, D, {});
+    const W = cam.world;
+    mk('rect', { x: -400, y: -200, width: 2400, height: 900, fill: 'url(#evSky)' }, W);
+    const dusk = put(mk('rect', { x: -400, y: -200, width: 2400, height: 900, fill: '#3a2433' }, W), { o: .35 });
+    mk('rect', { x: -400, y: 700, width: 2400, height: 400, fill: '#0d1510' }, W);
+    pth(W, 'M-400 700H2000', { stroke: EV.calm, 'stroke-width': 1.5, opacity: .3 });
+    // bushes and a path
+    [[140, 690, 90], [1350, 690, 120], [1500, 700, 80]].forEach(([x, y, r]) => pth(W, `M${x - r} ${y}Q${x - r} ${y - r} ${x} ${y - r}Q${x + r} ${y - r} ${x + r} ${y}Z`, { fill: '#142018' }));
+    mk('rect', { x: -400, y: 740, width: 2400, height: 50, fill: '#1a1a17' }, W);
+    // the coiled shape on the path
+    const hose = G(W, { x: 1000, y: 765 });
+    pth(hose, 'M-90 6C-60 -16 40 -18 60 0C80 18 10 26 -20 14C-50 2 -10 -8 20 -2M60 0Q110 -8 150 -4', { stroke: '#3f5a3e', 'stroke-width': 11 });
+    const lee = evPerson(W, { kind: 'f', x: 300, y: 760 });
+    evBreathe(lee, D);
+    evWalk(lee, 300, 720, .2, m('jump') - .3);
+    evMood(lee, 'calm', 0, .01);
+    lab(p, 'dusk', 116, 200, .5, { size: 28, fill: EV.dim, italic: true, anchor: 'start' });
+    // the jump
+    tw(lee.g, { x: 560, y: 740 }, m('jump'), .35, out); tw(lee.g, { y: 760 }, m('jump') + .35, .3, io);
+    evMood(lee, 'hurt', m('jump'));
+    evArm(lee, -1, 60, 70, m('jump'), .25, back); evArm(lee, 1, -60, -70, m('jump'), .25, back);
+    cam.to({ x: 780, y: 520, z: 1.25 }, m('jump') - .2, .6);
+    cam.shake(6, m('jump'), .6);
+    const fear = Array.from({ length: 10 }, (_, i) => evDot(W, 0, 0, 5, EV.fear, 0));
+    prog(q => { const t = q * D; fear.forEach((d, i) => { const u = ((t * .5 + i / 10) % 1); put(d, { x: 560 + Math.sin(i * 12.9) * 60, y: 380 - u * 160, o: t > m('jump') && t < m('hose') + 1 ? Math.sin(u * Math.PI) * .8 : 0 }); }); }, 0, D, lin);
+    // heart readout, screen space
+    const hr = G(p, { x: 150, y: 120, o: 0 });
+    pth(hr, 'M0 6C-14 -14 -34 0 -20 16L0 34L20 16C34 0 14 -14 0 6Z', { fill: EV.anger });
+    const bpm = evText(hr, '', { x: 44, y: 30, size: 40, font: SERIF, weight: 600, fill: EV.ink, anchor: 'start' });
+    tw(hr, { o: 1 }, m('shape') + .3, .4);
+    const rate = t => t < m('jump') ? 72 : t < m('hose') + .8 ? 72 + 56 * Math.min(1, (t - m('jump')) / 1.2) : 128 - 44 * Math.min(1, (t - m('hose') - .8) / 3);
+    clockRun(t => { bpm.textContent = Math.round(rate(t)) + ' bpm'; put(hr, { s: 1 + .08 * Math.max(0, Math.sin(t * rate(t) / 60 * 2 * Math.PI)) }); }, D);
+    // two roads, inset top right
+    const ins = G(p, { o: 0 });
+    mk('rect', { x: 1000, y: 90, width: 540, height: 400, rx: 20, fill: '#0e1518', stroke: EV.line, 'stroke-width': 2, opacity: .96 }, ins);
+    tw(ins, { o: 1 }, m('fast') - .4, .5);
+    const node = (x, y, c, k, dy = 50, dx = 0) => { const g = G(ins, { x, y }); evGlow(g, 0, 0, 44, 'Gold', 0); mk('circle', { cx: 0, cy: 0, r: 18, fill: c }, g); evText(g, L(k), { x: dx, y: dy, size: 26, fill: c, maxW: 200, anchor: dx ? 'start' : 'middle' }); return g; };
+    const nT = node(1100, 300, EV.fear, 'thal'), nA = node(1430, 380, EV.joy, 'amy'), nC = node(1300, 160, EV.gold, 'cortex', -32, 0);
+    const fastP = pth(ins, 'M1118 306L1412 374', { stroke: EV.anger, 'stroke-width': 4 }, { d: 0 });
+    draw(fastP, m('fast'), .35);
+    evFlow(fastP, 3, EV.anger, m('fast'), D - m('fast'), { speed: 1.2, r: 7, parent: ins });
+    lab(ins, 'fastR', 1250, 400, m('fast') + .3, { size: 26, fill: EV.anger, maxW: 220 });
+    pulse(nA, m('fast') + .4, 1.4);
+    const slowP = pth(ins, 'M1110 284C1150 180 1220 160 1282 160M1318 168C1380 200 1420 280 1430 360', { stroke: EV.gold, 'stroke-width': 3, 'stroke-dasharray': '8 6' }, { d: 0 });
+    draw(slowP, m('slow'), 1.6);
+    evFlow(slowP, 3, EV.goldHi, m('slow') + .3, D - m('slow') - .3, { speed: .18, r: 6, parent: ins });
+    lab(ins, 'slowR', 1016, 134, m('slow') + .6, { size: 26, fill: EV.gold, maxW: 190, anchor: 'start' });
+    tw(nC.firstChild, { o: 1 }, m('hose'), .5); pulse(nC, m('hose'), 1.3);
+    // only a hose
+    cam.to({ x: 860, y: 540, z: 1.1 }, m('hose') - .2, 1.2);
+    evMood(lee, 'smile', m('hose') + .9); evArm(lee, -1, 8, -20, m('hose') + .6, .5); evArm(lee, 1, -8, 20, m('hose') + .6, .5);
+    const oh = G(W, { x: 1010, y: 668, o: 0 });
+    evText(oh, L('onlyHose'), { x: 0, y: 0, size: 32, fill: EV.calm, italic: true, font: SERIF, maxW: 380 });
+    tw(oh, { o: 1 }, m('hose') + .5, .5);
+    const wg = lab(p, 'wrongGuess', 520, 860, m('hose') + 6, { size: 30, fill: EV.ink, italic: true, font: SERIF, maxW: 820 });
+  }],
+
+  ['memory', 'b_mem', (m, D) => {
+    const p = panel(0);
+    const C = [800, 470];
+    const core = G(p, { x: C[0], y: C[1], o: 0 });
+    evGlow(core, 0, 0, 120, 'Gold', .5);
+    mk('circle', { cx: 0, cy: 0, r: 64, fill: '#141b1f', stroke: EV.gold, 'stroke-width': 3 }, core);
+    evPara(core, L('wedding'), { x: 0, y: -4, size: 26, maxW: 120, fill: EV.gold, weight: 600 });
+    tw(core, { o: 1, s: 1 }, m('new'), .6, back); put(core, { s: .6 });
+    const items = [['people', 'people', 800, 190], ['place', 'hall', 1220, 360], ['gold', 'gold', 1140, 720], ['month', 'cal', 460, 720], ['event', 'notes', 380, 360]];
+    const nodes = items.map(([k, ic, x, y], i) => {
+      const ln = pth(p, `M${C[0]} ${C[1]}L${x} ${y}`, { stroke: EV.gold, 'stroke-width': 2.5, opacity: .55 }, { d: 0 });
+      p.insertBefore(ln, p.firstChild);
+      draw(ln, m('links') + i * .7, .5);
+      const g = G(p, { x, y, o: 0 });
+      mk('circle', { cx: 0, cy: 0, r: 46, fill: '#141b1f', stroke: EV.gold, 'stroke-width': 2 }, g);
+      c4Icon(g, ic, 0, 2, EV.ink);
+      if (k === 'month') evText(g, L('may'), { x: 0, y: 18, size: 14, fill: EV.ink, weight: 600 });
+      evText(g, L(k), { x: 0, y: 82, size: 28, fill: EV.ink, maxW: 240 });
+      tw(g, { o: 1 }, m('links') + .3 + i * .7, .4);
+      return { g, ln };
+    });
+    // years later: it all goes dim
+    nodes.forEach(n => { tw(n.g, { o: .22 }, m('smell'), .8); tw(n.ln, { o: .12 }, m('smell'), .8); });
+    tw(core, { o: .25 }, m('smell'), .8);
+    const jas = G(p, { x: 170, y: 560, o: 0 });
+    c4Jasmine(jas, 0, 0, 1.1);
+    evText(jas, L('jasmine'), { x: 0, y: 66, size: 28, fill: EV.ink });
+    tw(jas, { o: 1 }, m('smell') + .2, .6);
+    const sc = [0, 1, 2].map(i => pth(p, `M${200 + i * 40} 520q14 -16 0 -30t0 -30`, { stroke: '#f6f1e2', 'stroke-width': 2.5, opacity: 0 }));
+    clockRun(t => sc.forEach((s, i) => put(s, { y: -((t * 26 + i * 18) % 40), o: t > m('smell') + .4 ? .55 : 0 })), D);
+    // one thread pulls the whole web
+    const th = pth(p, `M220 540C300 640 380 690 414 704`, { stroke: '#f6f1e2', 'stroke-width': 3 }, { d: 0 });
+    draw(th, m('flood') - .3, .5);
+    tw(nodes[3].g, { o: 1 }, m('flood'), .3); pulse(nodes[3].g, m('flood'), 1.2);
+    tw(nodes[3].ln, { o: .8 }, m('flood') + .2, .3);
+    tw(core, { o: 1 }, m('flood') + .4, .3); pulse(core, m('flood') + .4, 1.15);
+    [0, 1, 2, 4].forEach((j, i) => { tw(nodes[j].ln, { o: .8 }, m('flood') + .6 + i * .15, .25); tw(nodes[j].g, { o: 1 }, m('flood') + .7 + i * .15, .25); pulse(nodes[j].g, m('flood') + .7 + i * .15, 1.15); });
+    lab(p, 'oneThread', 800, 860, m('flood') + 2, { size: 34, fill: EV.gold, italic: true, font: SERIF, maxW: 1000 });
+  }],
+
+  ['q2', 'b_mem', (m, D) => {
+    const p = panel(0);
+    const br = c4Layers(p, { x: 700, y: 190, s: .62 });
+    lightLayer(br._stem, 0, .55, .01); lightLayer(br._limb, 0, .5, .01); lightLayer(br._neo, 0, .3, .01);
+    evText(p, L('colS'), { x: 900, y: 300, size: 30, fill: LC.stem, weight: 600, anchor: 'start', maxW: 420 });
+    evText(p, L('colL'), { x: 900, y: 200, size: 30, fill: LC.limb, weight: 600, anchor: 'start', maxW: 420 });
+    evText(p, L('colN'), { x: 900, y: 100, size: 30, fill: LC.neo, weight: 600, anchor: 'start', maxW: 420 });
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-layers', prompt: [L('q2p')],
+    build: grid([
+      { parts: [L('q2r1')], ans: ['s'], why: L('q2w1') },
+      { parts: [L('q2r2')], ans: ['l'], why: L('q2w2') },
+      { parts: [L('q2r3')], ans: ['n'], why: L('q2w3') },
+      { parts: [L('q2r4')], ans: ['l'], why: L('q2w4') },
+    ], [['s', L('colS'), LC.stem, 'S'], ['l', L('colL'), LC.limb, 'L'], ['n', L('colN'), LC.neo, 'N']], { multi: false, text: true }),
+  }], done) }],
+
+  ['neo', 'b_neo', (m, D) => {
+    const p = panel(0);
+    // top view: two halves, front at the top
+    const tv = G(p, { x: 480, y: 470, o: 0 });
+    const half = sd => {
+      const g = G(tv);
+      g._shape = pth(g, `M${sd * 10} -230C${sd * 90} -232 ${sd * 210} -170 ${sd * 210} -10C${sd * 210} 140 ${sd * 130} 230 ${sd * 10} 230Z`, { fill: '#11181c', stroke: LC.neo, 'stroke-width': 3 });
+      for (let k = 0; k < 5; k++) pth(g, `M${sd * 30} ${-180 + k * 85}C${sd * 80} ${-200 + k * 85} ${sd * 120} ${-150 + k * 85} ${sd * 180} ${-170 + k * 85}`, { stroke: LC.neo, 'stroke-width': 2, opacity: .3 });
+      return g;
+    };
+    const hl = half(-1), hr = half(1);
+    tw(tv, { o: 1 }, .1, .6);
+    lab(tv, 'front', 0, -256, .6, { size: 24, fill: EV.dim, italic: true });
+    // a few millimetres: the magnified edge
+    const lens = G(p, { x: 1180, y: 330, o: 0 });
+    const lc = clipTo(lens, 'M-190 0A190 190 0 1 0 190 0A190 190 0 1 0 -190 0Z');
+    mk('rect', { x: -200, y: -200, width: 400, height: 400, fill: '#0e1418' }, lc);
+    pth(lc, 'M-200 -60Q-100 -90 0 -60T200 -60V40Q100 10 0 40T-200 40Z', { fill: '#2a2618' });
+    for (let i = 0; i < 36; i++) evDot(lc, -180 + (i * 47) % 360, -50 + ((i * 29) % 80), 4, EV.goldHi, .8);
+    pth(lc, 'M-200 -60Q-100 -90 0 -60T200 -60', { stroke: LC.neo, 'stroke-width': 2 });
+    mk('circle', { cx: 0, cy: 0, r: 190, fill: 'none', stroke: EV.dim, 'stroke-width': 3 }, lens);
+    tw(lens, { o: 1 }, m('thin'), .6);
+    const lk = pth(p, 'M690 300L990 320', { stroke: EV.dim, 'stroke-width': 2, 'stroke-dasharray': '6 6' }, { d: 0 }); draw(lk, m('thin') + .2, .5);
+    lab(p, 'thin', 1180, 570, m('thin') + .8, { size: 30, fill: LC.neo, weight: 600, maxW: 420 });
+    lab(p, 'twoCoins', 1180, 612, m('thin') + 1.6, { size: 26, fill: EV.dim, maxW: 420 });
+    lab(p, 'billions', 1180, 110, m('thin') + 3, { size: 26, fill: EV.goldHi, italic: true, maxW: 420 });
+    // two halves, each running the opposite side
+    tw(hl, { x: -14 }, m('halves'), .6); tw(hr, { x: 14 }, m('halves'), .6);
+    lab(tv, 'left', -110, 0, m('halves') + .3, { size: 30, fill: EV.ink, maxW: 160 });
+    lab(tv, 'right', 110, 0, m('halves') + .3, { size: 30, fill: EV.ink, maxW: 160 });
+    const xs = pth(p, 'M400 712L548 800M560 712L412 800', { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 });
+    draw(xs, m('halves') + 1.5, .7);
+    [[380, 820, -1], [580, 820, 1]].forEach(([x, y, sd], i) => {
+      const h = G(p, { x, y, o: 0, s: 1.1 }), mir = G(h);
+      if (sd < 0) mir.setAttribute('transform', 'scale(-1 1)');
+      c4Icon(mir, 'hand', 0, 0, EV.ink);
+      tw(h, { o: 1 }, m('halves') + 2 + i * .2, .4);
+    });
+    lab(p, 'opposite', 480, 884, m('halves') + 2.4, { size: 26, fill: EV.dim, italic: true, maxW: 520 });
+    // the bridge
+    const cc = G(tv, { o: 0 });
+    mk('rect', { x: -26, y: -70, width: 52, height: 140, rx: 20, fill: LC.neo, opacity: .5 }, cc);
+    tw(cc, { o: 1 }, m('bridge'), .5);
+    const fl = pth(tv, 'M-120 -20C-40 -40 40 -40 120 -20', { stroke: 'none' }), fr = pth(tv, 'M120 20C40 40 -40 40 -120 20', { stroke: 'none' });
+    evFlow(fl, 4, EV.goldHi, m('bridge') + .3, D - m('bridge') - .3, { speed: .4, r: 6, parent: tv });
+    evFlow(fr, 4, EV.goldHi, m('bridge') + .5, D - m('bridge') - .5, { speed: .4, r: 6, parent: tv });
+    lab(p, 'callosum', 760, 470, m('bridge') + .5, { size: 30, fill: LC.neo, weight: 600, anchor: 'start', maxW: 300 });
+    // four lobes
+    const fl4 = G(p, { x: 1180, y: 760, o: 0 });
+    ['fro', 'par', 'tem', 'occ'].forEach((k, i) => evDot(fl4, (i - 1.5) * 60, 0, 16, LOBE_C[k]));
+    evText(fl4, L('fourLobes'), { x: 0, y: 60, size: 28, fill: EV.ink, maxW: 520 });
+    tw(fl4, { o: 1 }, m('lobes'), .5);
+  }],
+
+  ['lobes', 'b_lobes', (m, D) => {
+    const p = panel(0);
+    const br = c4Lobes(p, { x: 800, y: 450, s: 1.5, o: 0, op: .62 });
+    tw(br, { o: 1 }, .05, .4);
+    const spot = { occ: [1270, 470, 'eye', 'start'], tem: [560, 790, 'ear', 'end'], par: [1270, 170, 'hand', 'start'], fro: [330, 300, 'target', 'end'] };
+    const order = ['occ', 'tem', 'par', 'fro'];
+    order.forEach((k, i) => {
+      const t = m(k), [lx, ly, ic, an] = spot[k], c = LOBE_C[k];
+      tw(br._lobes[k], { o: 1 }, t, .5); pulse(br._lobes[k], t + .2, 1.04);
+      const [sx, sy] = at_(br, ...LOBE_CENTRE[k]);
+      const ix = an === 'start' ? lx - 50 : lx + 50;
+      const ld = pth(p, `M${sx} ${sy}L${ix} ${ly - 10}`, { stroke: c, 'stroke-width': 2, opacity: .7 }, { d: 0 });
+      draw(ld, t + .2, .4); evDot(p, sx, sy, 6, c);
+      const icg = c4Icon(p, ic, ix, ly - 12, c); put(icg, { o: 0 }); tw(icg, { o: 1 }, t + .4, .4);
+      const ox = an === 'start' ? 20 : -20;
+      lab(p, k, lx + ox + (an === 'start' ? 10 : -10), ly - 8, t + .4, { size: 38, fill: c, weight: 600, anchor: an, maxW: 300 });
+      const dsc = evPara(p, L(k + 'D'), { x: lx + (an === 'start' ? 30 : -30), y: ly + 34, size: 26, fill: EV.dim, anchor: an, maxW: 290, o: 0 }); show(dsc, t + .8);
+      if (k !== 'fro') tw(br._lobes[k], { o: .45 }, m('fro'), .6);
+    });
+    const gl = evGlow(p, ...at_(br, -130, -60), 220, 'Gold', 0);
+    p.insertBefore(gl, p.firstChild); tw(gl, { o: .8 }, m('fro') + .3, .8);
+    for (let k = 0; k < 3; k++) pulse(br._lobes.fro, m('fro') + 1.5 + k * 1.4, 1.03);
+  }],
+
+  ['map', 'b_map', (m, D) => {
+    const p = panel(0);
+    // the strip on the parietal lobe
+    const br = c4Lobes(p, { x: 330, y: 270, s: .8, o: 0 });
+    tw(br, { o: 1 }, .1, .5); put(br._lobes.par, { o: .4 });
+    const strip = pth(br, 'M10 -186C2 -120 -16 -50 -48 30', { stroke: EV.calm, 'stroke-width': 22, opacity: .85 }, { d: 0 });
+    draw(strip, m('strip') - .4, .9);
+    lab(p, 'bodyMap', 330, 480, m('strip'), { size: 30, fill: EV.calm, weight: 600, maxW: 420 });
+    // the little figure: drawn to scale first, then to the map
+    const H = c4Homunculus(p, { x: 1100, y: 470, s: 1.15 });
+    put(H, { o: 0 }); tw(H, { o: 1 }, m('strip') + .5, .6);
+    const ns = lab(p, 'notScale', 1100, 120, m('size'), { size: 34, fill: EV.gold, italic: true, font: SERIF, maxW: 700 });
+    tw(H._head, { s: 1.25 }, m('lips'), .8, back); tw(H._lips, { s: 3 }, m('lips') + .2, .9, back);
+    H._hands.forEach(h => tw(h, { s: 2.8 }, m('hands') + .1, .9, back));
+    tw(H._torso, { s: .7 }, m('back') + .1, .8);
+    // space on the map, as bars
+    const bars = [['lips', EV.anger, 380, 'lips'], ['fingertips', EV.surprise, 330, 'hands'], ['back', EV.dim, 36, 'back']];
+    lab(p, 'mapSpace', 120, 580, m('lips') - .4, { size: 26, fill: EV.dim, anchor: 'start', italic: true, maxW: 500 });
+    bars.forEach(([k, c, w, mk_], i) => {
+      const y = 640 + i * 80;
+      lab(p, k, 120, y, m(mk_), { size: 26, fill: EV.ink, anchor: 'start', maxW: 240 });
+      const r = mk('rect', { x: 380, y: y - 24, width: 0, height: 28, rx: 6, fill: c }, p);
+      prog(q => r.setAttribute('width', w * q), m(mk_) + .2, 1, out);
+    });
+    lab(p, 'feelNotSize', 1100, 860, m('back') + 2.5, { size: 34, fill: EV.ink, italic: true, font: SERIF, maxW: 820 });
+  }],
+
+  ['frontal', 'b_front', (m, D) => {
+    const p = panel(0);
+    const RG = G(p, { x: -260 });
+    const room = evRoom(RG, { door: false, o: .8 });
+    const rav = evPerson(p, { kind: 'm', x: 520, y: 700 });
+    evBreathe(rav, D); evMood(rav, 'calm', 0, .01);
+    const ph = c4Phone(rav);
+    evArm(rav, -1, 6, -10, 0, .01); evArm(rav, 1, -30, -120, 0, .01);
+    const clk = G(p, { x: 170, y: 120, o: 0 });
+    evText(clk, L('elevenPm'), { x: 0, y: 0, size: 40, font: SERIF, weight: 600, fill: EV.gold, anchor: 'start' });
+    tw(clk, { o: 1 }, m('late') - .2, .5);
+    // the buzz and the old habit
+    tw(ph._scr, { o: 1 }, m('ping'), .2);
+    prog(q => put(ph, { x: Math.sin(q * Math.PI * 14) * 4 * (1 - q) }), m('ping'), 1, lin);
+    const bz = evBubble(p, L('fiveMin'), { x: 380, y: 300, w: 400, size: 32, tail: 'right', edge: EV.surprise, italic: true });
+    pop(bz, m('ping') + .4);
+    evMood(rav, 'ask', m('ping') + .3);
+    // the frontal lobe steps in
+    const br = c4Lobes(p, { x: 1280, y: 250, s: .62, o: 0, op: .7 });
+    tw(br, { o: 1 }, m('pause') - .4, .5);
+    tw(br._lobes.fro, { o: 1 }, m('pause'), .6); pulse(br._lobes.fro, m('pause') + .6, 1.06);
+    lab(p, 'frontalLobe', 1280, 430, m('pause') + .3, { size: 30, fill: EV.gold, weight: 600, maxW: 420 });
+    ['notice', 'pauseW', 'choose'].forEach((k, i) => lab(p, k, 1125 + i * 160, 490, m('pause') + 1.5 + i * 1.2, { size: 26, fill: EV.ink, italic: true, maxW: 134 }));
+    tw(bz, { o: .3 }, m('pause') + 2, .6);
+    // he chooses: phone down, light off
+    hide(bz, m('choose') - .2, .4);
+    evArm(rav, 1, -8, 14, m('choose'), .8);
+    tw(ph._scr, { o: 0 }, m('choose') + .6, .3);
+    tw(room._lamp._glow, { o: .1 }, m('choose') + 1.4, 1);
+    evMood(rav, 'smile', m('choose') + 1);
+    const night = put(mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: '#000' }, p), { o: 0 });
+    p.insertBefore(night, br);
+    tw(night, { o: .35 }, m('choose') + 1.4, 1);
+    // the frontal lobe's jobs
+    ['job1', 'job2', 'job3', 'job4'].forEach((k, i) => {
+      const g = G(p, { x: 1110, y: 590 + i * 64, o: 0 });
+      evDot(g, 0, -8, 7, EV.gold);
+      evText(g, L(k), { x: 22, y: 2, size: 30, fill: EV.ink, anchor: 'start', maxW: 420 });
+      tw(g, { o: 1, x: 1100 }, m('plan') + i * 1, .5, out);
+    });
+  }],
+
+  ['q3', 'b_front', (m, D) => {
+    const p = panel(0);
+    const room = evRoom(p, { door: false, o: .5 });
+    put(room._lamp._glow, { o: .1 });
+    const rav = evPerson(p, { kind: 'm', x: 560, y: 640, s: .85 });
+    evMood(rav, 'smile', 0, .01); evBreathe(rav, D);
+    c4Phone(rav); evArm(rav, -1, 6, -10, 0, .01); evArm(rav, 1, -8, 14, 0, .01);
+    const b = evBubble(p, L('fiveMin'), { x: 900, y: 280, w: 380, size: 30, tail: 'left', edge: EV.surprise, italic: true });
+    put(b, { o: .35, s: .9 });
+    pth(p, 'M720 160L1080 290', { stroke: EV.anger, 'stroke-width': 4, opacity: .6 });
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-frontal', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 1, L('q3y'), [L('q3na'), null, L('q3nc')]),
+  }], done) }],
+
+  ['myth', 'b_myth', (m, D) => {
+    const p = panel(0);
+    lab(p, 'threePic', 480, 96, m('tiffin') - .2, { size: 34, fill: EV.dim, italic: true, font: SERIF, maxW: 700 });
+    // the tiffin carrier
+    const tf = G(p, { x: 480, y: 560, o: 0 });
+    pth(tf, 'M-120 -300V-380Q-120 -410 -90 -410H90Q120 -410 120 -380V-300', { stroke: '#a9a59a', 'stroke-width': 8 });
+    pth(tf, 'M-170 -290V250M170 -290V250', { stroke: '#a9a59a', 'stroke-width': 6 });
+    const tins = [['reptile', LC.stem, 160], ['mammal', LC.limb, 20], ['human', LC.neo, -120]].map(([k, c, y], i) => {
+      const g = G(tf, { y });
+      mk('rect', { x: -150, y: -60, width: 300, height: 120, rx: 22, fill: '#2a2f31', stroke: '#c9c5ba', 'stroke-width': 3 }, g);
+      pth(g, 'M-150 -40H150', { stroke: '#c9c5ba', 'stroke-width': 2, opacity: .5 });
+      mk('rect', { x: -150, y: -60, width: 300, height: 120, rx: 22, fill: c, opacity: .22 }, g);
+      evText(g, L(k), { x: 0, y: 16, size: 34, fill: c, weight: 600, maxW: 260 });
+      return g;
+    });
+    tw(tf, { o: 1 }, m('tiffin'), .6);
+    tins.forEach((g, i) => { put(g, { y: st(g).y - 60, o: 0 }); tw(g, { y: [160, 20, -120][i], o: 1 }, m('tiffin') + .5 + i * .6, .5, out); });
+    // not how it works
+    const no = G(p, { x: 480, y: 330, o: 0, r: -10 });
+    mk('rect', { x: -230, y: -44, width: 460, height: 88, rx: 12, fill: 'none', stroke: EV.anger, 'stroke-width': 5 }, no);
+    evText(no, L('noLonger'), { x: 0, y: 12, size: 32, fill: EV.anger, weight: 600, maxW: 420 });
+    tw(no, { o: .95, s: 1 }, m('but') + .2, .4, back); put(no, { s: 1.3 });
+    tw(tf, { o: .35 }, m('but') + .2, .6);
+    ['m1', 'm2', 'm3'].forEach((k, i) => {
+      const g = G(p, { x: 900, y: 300 + i * 150, o: 0 });
+      evDot(g, 0, -8, 8, EV.dim);
+      evPara(g, L(k), { x: 30, y: 0, size: 32, maxW: 600, anchor: 'start', fill: EV.ink });
+      tw(g, { o: 1, x: 880 }, m('but') + 2 + i * 3.2, .6, out);
+    });
+    // the network
+    const q = c4Later(m('web'));
+    const NB = G(q, { x: 760, y: 440, s: 1.55 });
+    pth(NB, BRAIN_D, { fill: '#0f1518', stroke: EV.gold, 'stroke-width': 1.6, opacity: .7 });
+    pth(NB, STEM_D, { fill: '#0f1518', stroke: LC.stem, 'stroke-width': 1.4, opacity: .6 });
+    pth(NB, CEREB_D, { fill: '#0f1518', stroke: LC.stem, 'stroke-width': 1.4, opacity: .6 });
+    const N_ = { fro: [-140, -60, EV.gold, 'frontalN'], par: [60, -130, EV.calm, 'parietalN'], occ: [170, -40, EV.fear, 'occipitalN'], tem: [-40, 50, EV.surprise, 'temporalN'],
+      amy: [-10, 76, EV.joy, 'amygdalaN'], hip: [80, 44, EV.calm, 'hippoN'], thal: [22, -10, EV.fear, 'thalN'], hypo: [-40, 22, EV.anger, 'hypoN'], stem: [58, 170, LC.stem, 'stemN2'], cer: [140, 110, LC.stem, 'cerebN'] };
+    const E_ = [['fro', 'amy'], ['fro', 'thal'], ['fro', 'par'], ['par', 'occ'], ['occ', 'tem'], ['tem', 'amy'], ['amy', 'hip'], ['hip', 'thal'], ['thal', 'par'], ['thal', 'occ'], ['hypo', 'amy'], ['hypo', 'stem'], ['stem', 'cer'], ['cer', 'fro'], ['thal', 'stem'], ['tem', 'hip'], ['fro', 'hypo'], ['cer', 'par']];
+    E_.forEach(([a, b], i) => {
+      const A = N_[a], B = N_[b], big = (a === 'fro' && b === 'amy');
+      const e = pth(NB, `M${A[0]} ${A[1]}Q${(A[0] + B[0]) / 2 + (i % 2 ? 20 : -20)} ${(A[1] + B[1]) / 2 - 20} ${B[0]} ${B[1]}`, { stroke: big ? EV.goldHi : EV.gold, 'stroke-width': big ? 3 : 1.4, opacity: big ? .9 : .5 }, { d: 0 });
+      draw(e, m('web') + .4 + i * .08, .5);
+      evFlow(e, big ? 3 : 1, big ? EV.goldHi : EV.ink, m('web') + 1 + (i % 5) * .2, D - m('web') - 1, { speed: big ? .5 : .3 + (i % 3) * .08, r: big ? 3.5 : 2.4, parent: NB });
+    });
+    for (const k in N_) {
+      const [x, y, c, nk] = N_[k];
+      const d = evDot(NB, x, y, 7, c, 0); tw(d, { o: 1 }, m('web') + .3, .4);
+      clockRun(t => { if (t > m('web')) put(d, { s: 1 + .25 * Math.max(0, Math.sin(t * 3 + x)) }); }, D);
+    }
+    // names next to the two that talk
+    const [fx, fy] = at_(NB, -140, -60), [ax_, ay_] = at_(NB, -10, 76);
+    lab(q, 'frontalN', fx - 20, fy - 26, m('web') + 2.5, { size: 28, fill: EV.gold, weight: 600, maxW: 260 });
+    lab(q, 'amygdalaN', ax_ - 60, ay_ + 46, m('web') + 2.5, { size: 28, fill: EV.joy, weight: 600, maxW: 260 });
+    lab(q, 'talk', fx - 60, (fy + ay_) / 2 + 20, m('web') + 3.4, { size: 28, fill: EV.goldHi, italic: true, maxW: 300, anchor: 'end' });
+    lab(q, 'network', 760, 105, m('web') + 1, { size: 36, fill: EV.ink, font: SERIF, weight: 600, maxW: 700 });
+    lab(q, 'woven', 1380, 620, m('web') + 6, { size: 28, fill: EV.dim, italic: true, maxW: 400 });
+    const km = lab(q, 'keepMap', 800, 856, m('keep'), { size: 36, fill: EV.gold, italic: true, font: SERIF, maxW: 1300 });
+  }],
+
+  ['fair', 'b_fair', (m, D) => {
+    const p = panel(0);
+    const sg = G(p, { o: 0 });
+    evText(sg, L('sciCheck'), { x: 800, y: 160, size: 64, font: SERIF, weight: 600, fill: EV.gold });
+    tw(sg, { o: 1 }, .1, .5);
+    c4Row(sg, 330, 'ok', 'sci1', m('c1'));
+    c4Row(sg, 540, 'no', 'sci2', m('c2'));
+    c4Row(sg, 730, 'unsure', 'sci3', m('c3'));
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    const tt = evText(p, L('b_wrap'), { x: 200, y: 150, size: 54, font: SERIF, weight: 600, fill: EV.gold, anchor: 'start', o: 0 });
+    show(tt, .2, .6);
+    const cols = [LC.stem, LC.limb, LC.neo, EV.calm];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -16, y: 290 + i * 150, o: 0 });
+      mk('circle', { cx: 230, cy: -12, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 3 }, g);
+      T(g, String(i + 1), { x: 230, y: -1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 290, y: 0, size: 36, maxW: 1100, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Leena rides to work without thinking about her balance. Which part is doing most of that work?',
+  q1a: 'The cerebellum', q1b: 'The frontal lobe', q1c: 'The hypothalamus',
+  q1y: 'Practised movements and balance are handed to the cerebellum, which frees her attention for the day ahead.',
+  q1nb: 'The frontal lobe is busy with her plans. Balance runs without it once the skill is learned.',
+  q1nc: 'The hypothalamus runs the body’s chemistry, like temperature and hunger, not balance.',
+  colS: 'brainstem', colL: 'limbic system', colN: 'neocortex',
+  q2p: 'Sort each job into the layer that mainly handles it.',
+  q2r1: 'Keeps your heart beating while you sleep on the bus.', q2r2: 'Holds your body near 37 °C on a 46 °C afternoon.',
+  q2r3: 'Plans what you will say in tomorrow’s meeting.', q2r4: 'Makes you jump back from a “snake” before you think.',
+  q2w1: 'Heartbeat and breathing are brainstem jobs. They run all night without you.', q2w2: 'The hypothalamus, in the limbic system, is the body’s thermostat.',
+  q2w3: 'Planning ahead is neocortex work, especially the frontal lobe.', q2w4: 'The amygdala’s fast alarm fires before the cortex has looked.',
+  q3p: 'Which region helped Ravi notice the urge, pause, and put the phone down?',
+  q3a: 'The brainstem', q3b: 'The frontal lobe', q3c: 'The occipital lobe',
+  q3y: 'Holding a goal in mind, noticing an urge and stopping it are frontal lobe jobs.',
+  q3na: 'The brainstem kept him breathing and awake, but it doesn’t weigh choices.', q3nc: 'The occipital lobe let him see the screen. Choosing is done further forward.',
+  p1p: 'Asked to speak at a family function, Leena’s mind goes blank and her heart pounds, even though she knows her speech. What is the best explanation?',
+  p1a: 'Her alarm system (amygdala and body chemistry) fired before her thinking cortex could take charge.',
+  p1b: 'Her brainstem stopped working for a moment.', p1c: 'She simply has a weak memory.',
+  p1y: 'The fast alarm treats a crowd like a threat. The heart races and the planning cortex gets crowded out for a moment.',
+  p1nb: 'If the brainstem stopped, she would stop breathing. It was working hard: that pounding heart is its job.',
+  p1nc: 'She knows the speech. Fear blocked her access to it for a moment; the memory itself is fine.',
+  p2p: 'Why does the brain’s body map give the lips and fingertips so much space?',
+  p2a: 'They are the biggest parts of the body.', p2b: 'They are packed with touch receptors, so we feel more with them.', p2c: 'They are used for speaking and writing only.',
+  p2y: 'Space on the map follows sensitivity, not size. More receptors, more map.',
+  p2na: 'The back is far bigger, yet it gets a thin strip on the map.', p2nc: 'The map is about feeling. Many receptors, many neurons, whatever the use.',
+  p3p: 'A client says, “It’s my lizard brain. I can’t help reacting.” What is the most helpful reply?',
+  p3a: 'Agree: the old brain is in charge, so there is nothing to be done.', p3b: 'Tell them the reaction isn’t real, because lizard brains don’t exist.',
+  p3c: 'The alarm reacts fast, but the frontal lobe can learn to notice the urge and pause. That is a skill they can practise.',
+  p3y: 'Fast reactions are real, and so is the brain’s ability to pause and choose. Practice strengthens it.',
+  p3na: 'The regions work together. The frontal lobe can shape how we respond, especially with practice.',
+  p3nb: 'The reaction is real. Only the “separate lizard brain” idea is a simplification.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'The brainstem helps control breathing and heart rate.',
+  p4r2: 'The brain is three separate brains stacked in evolutionary order, each with a mind of its own.',
+  p4r3: 'The brain is about 2% of body weight but uses about 20% of the body’s energy at rest.',
+  p4r4: 'Most people use only about 10% of their brain.',
+  p4w1: 'True. Breathing and heart-rate centres sit in the brainstem.',
+  p4w2: 'False. That is the old triune model, a simplification. Regions evolved together and work as one network.',
+  p4w3: 'True. This is a well-measured figure for adults at rest.',
+  p4w4: 'False. Scans show activity across the whole brain, just not all at once.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'ബാലൻസിനെ കുറിച്ച് ചിന്തിക്കാതെയാണ് ലീന ജോലിക്ക് സ്കൂട്ടർ ഓടിക്കുന്നത്. ആ ജോലിയുടെ കൂടുതലും ചെയ്യുന്നത് ഏത് ഭാഗം?',
+  q1a: 'സെറിബെല്ലം', q1b: 'ഫ്രോണ്ടൽ ലോബ്', q1c: 'ഹൈപ്പോതലാമസ്',
+  q1y: 'പരിശീലിച്ച ചലനങ്ങളും ബാലൻസും സെറിബെല്ലം ഏറ്റെടുക്കുന്നു. അങ്ങനെ അവളുടെ ശ്രദ്ധ ആ ദിവസത്തെ പ്ലാനിന് ഒഴിവാകുന്നു.',
+  q1nb: 'ഫ്രോണ്ടൽ ലോബ് അവളുടെ പ്ലാനുകളുടെ തിരക്കിലാണ്. കഴിവ് പഠിച്ചുകഴിഞ്ഞാൽ ബാലൻസ് അതില്ലാതെ നടക്കും.',
+  q1nc: 'ഹൈപ്പോതലാമസ് ശരീര താപനില, വിശപ്പ് പോലുള്ള രസതന്ത്രമാണ് നോക്കുന്നത്, ബാലൻസല്ല.',
+  colS: 'ബ്രെയിൻസ്റ്റെം', colL: 'ലിംബിക് സിസ്റ്റം', colN: 'നിയോകോർട്ടെക്സ്',
+  q2p: 'ഓരോ ജോലിയും, അത് പ്രധാനമായും ചെയ്യുന്ന പാളിയിലേക്ക് തരംതിരിക്കൂ.',
+  q2r1: 'ബസ്സിൽ ഉറങ്ങുമ്പോൾ ഹൃദയം മിടിപ്പിച്ചുകൊണ്ടിരിക്കുന്നു.', q2r2: '46 °C ഉച്ചയ്ക്ക് ശരീരത്തെ 37 °C-ന് അടുത്ത് നിർത്തുന്നു.',
+  q2r3: 'നാളത്തെ മീറ്റിംഗിൽ എന്ത് പറയണമെന്ന് പ്ലാൻ ചെയ്യുന്നു.', q2r4: 'ചിന്തിക്കുന്നതിന് മുൻപേ ഒരു “പാമ്പിൽ” നിന്ന് പിന്നോട്ട് ചാടിക്കുന്നു.',
+  q2w1: 'ഹൃദയമിടിപ്പും ശ്വാസവും ബ്രെയിൻസ്റ്റെമിന്റെ ജോലിയാണ്. രാത്രി മുഴുവൻ അവ നിങ്ങളില്ലാതെ നടക്കുന്നു.', q2w2: 'ലിംബിക് സിസ്റ്റത്തിലെ ഹൈപ്പോതലാമസ് ആണ് ശരീരത്തിന്റെ തെർമോസ്റ്റാറ്റ്.',
+  q2w3: 'മുൻകൂട്ടി പ്ലാൻ ചെയ്യുന്നത് നിയോകോർട്ടെക്സിന്റെ, പ്രത്യേകിച്ച് ഫ്രോണ്ടൽ ലോബിന്റെ ജോലിയാണ്.', q2w4: 'കോർട്ടെക്സ് നോക്കുന്നതിന് മുൻപേ അമിഗ്ഡലയുടെ വേഗതയേറിയ അലാറം മുഴങ്ങുന്നു.',
+  q3p: 'ആ തോന്നൽ ശ്രദ്ധിക്കാനും, നിർത്താനും, ഫോൺ താഴെ വെക്കാനും രവിയെ സഹായിച്ചത് ഏത് ഭാഗം?',
+  q3a: 'ബ്രെയിൻസ്റ്റെം', q3b: 'ഫ്രോണ്ടൽ ലോബ്', q3c: 'ഓക്സിപിറ്റൽ ലോബ്',
+  q3y: 'ലക്ഷ്യം മനസ്സിൽ പിടിച്ചുനിർത്തുക, തോന്നൽ ശ്രദ്ധിക്കുക, അതിനെ നിർത്തുക: ഇവ ഫ്രോണ്ടൽ ലോബിന്റെ ജോലികളാണ്.',
+  q3na: 'ബ്രെയിൻസ്റ്റെം അവനെ ശ്വസിപ്പിച്ചും ഉണർത്തിയും നിർത്തി. പക്ഷേ തീരുമാനങ്ങൾ എടുക്കുന്നത് അതല്ല.', q3nc: 'ഓക്സിപിറ്റൽ ലോബ് സ്ക്രീൻ കാണാൻ സഹായിച്ചു. തിരഞ്ഞെടുക്കുന്നത് കുറച്ചുകൂടി മുന്നിലുള്ള ഭാഗമാണ്.',
+  p1p: 'ഒരു കുടുംബ ചടങ്ങിൽ സംസാരിക്കാൻ ആവശ്യപ്പെട്ടപ്പോൾ, പ്രസംഗം അറിയാമായിരുന്നിട്ടും ലീനയുടെ മനസ്സ് ശൂന്യമാകുന്നു, ഹൃദയം ഇടിക്കുന്നു. ഏറ്റവും നല്ല വിശദീകരണം ഏത്?',
+  p1a: 'ചിന്തിക്കുന്ന കോർട്ടെക്സ് നിയന്ത്രണം ഏറ്റെടുക്കുന്നതിന് മുൻപേ അവളുടെ അലാറം (അമിഗ്ഡലയും ശരീര രസതന്ത്രവും) മുഴങ്ങി.',
+  p1b: 'ഒരു നിമിഷത്തേക്ക് അവളുടെ ബ്രെയിൻസ്റ്റെം പ്രവർത്തനം നിർത്തി.', p1c: 'അവൾക്ക് ഓർമ്മശക്തി കുറവാണ്.',
+  p1y: 'വേഗതയേറിയ അലാറം ആൾക്കൂട്ടത്തെ ഒരു അപകടമായി കാണുന്നു. ഹൃദയം കുതിക്കുന്നു, പ്ലാൻ ചെയ്യുന്ന കോർട്ടെക്സ് ഒരു നിമിഷം പിന്നിലാകുന്നു.',
+  p1nb: 'ബ്രെയിൻസ്റ്റെം നിന്നാൽ ശ്വാസം നിൽക്കും. അത് കഠിനമായി പ്രവർത്തിക്കുകയായിരുന്നു: ആ ഇടിക്കുന്ന ഹൃദയം അതിന്റെ ജോലിയാണ്.',
+  p1nc: 'അവൾക്ക് പ്രസംഗം അറിയാം. ഭയം ഒരു നിമിഷം അതിലേക്കുള്ള വഴി അടച്ചു; ഓർമ്മയ്ക്ക് കുഴപ്പമില്ല.',
+  p2p: 'തലച്ചോറിലെ ശരീര മാപ്പിൽ ചുണ്ടുകൾക്കും വിരൽത്തുമ്പുകൾക്കും ഇത്ര സ്ഥലം കിട്ടുന്നത് എന്തുകൊണ്ട്?',
+  p2a: 'അവയാണ് ശരീരത്തിലെ ഏറ്റവും വലിയ ഭാഗങ്ങൾ.', p2b: 'അവയിൽ സ്പർശം അറിയുന്ന റിസപ്റ്ററുകൾ നിറഞ്ഞിരിക്കുന്നു, അതുകൊണ്ട് അവ കൂടുതൽ അനുഭവിക്കുന്നു.', p2c: 'അവ സംസാരിക്കാനും എഴുതാനും മാത്രം ഉപയോഗിക്കുന്നു.',
+  p2y: 'മാപ്പിലെ സ്ഥലം വലിപ്പമല്ല, സംവേദനക്ഷമതയാണ് തീരുമാനിക്കുന്നത്. കൂടുതൽ റിസപ്റ്ററുകൾ, കൂടുതൽ മാപ്പ്.',
+  p2na: 'മുതുക് വളരെ വലുതാണ്, എന്നിട്ടും മാപ്പിൽ ഒരു ചെറിയ കഷണം മാത്രം.', p2nc: 'മാപ്പ് അനുഭവത്തെ കുറിച്ചാണ്. കൂടുതൽ റിസപ്റ്ററുകൾ, കൂടുതൽ ന്യൂറോണുകൾ.',
+  p3p: 'ഒരു ക്ലയന്റ് പറയുന്നു, “ഇത് എന്റെ ഉരഗ തലച്ചോറാണ്. എനിക്ക് പ്രതികരിക്കാതിരിക്കാൻ പറ്റില്ല.” ഏറ്റവും സഹായകരമായ മറുപടി ഏത്?',
+  p3a: 'സമ്മതിക്കുക: പഴയ തലച്ചോറാണ് നിയന്ത്രിക്കുന്നത്, ഒന്നും ചെയ്യാനില്ല.', p3b: 'ഉരഗ തലച്ചോർ ഇല്ലാത്തതുകൊണ്ട് ആ പ്രതികരണം യഥാർത്ഥമല്ല എന്ന് പറയുക.',
+  p3c: 'അലാറം വേഗത്തിൽ പ്രതികരിക്കും, പക്ഷേ ആ തോന്നൽ ശ്രദ്ധിച്ച് നിർത്താൻ ഫ്രോണ്ടൽ ലോബിന് പഠിക്കാം. പരിശീലിക്കാവുന്ന ഒരു കഴിവാണത്.',
+  p3y: 'വേഗതയേറിയ പ്രതികരണങ്ങൾ യഥാർത്ഥമാണ്; നിർത്തി തിരഞ്ഞെടുക്കാനുള്ള കഴിവും. പരിശീലനം അതിനെ ശക്തമാക്കുന്നു.',
+  p3na: 'ഭാഗങ്ങൾ ഒരുമിച്ചാണ് പ്രവർത്തിക്കുന്നത്. നാം എങ്ങനെ പ്രതികരിക്കുന്നു എന്നതിനെ ഫ്രോണ്ടൽ ലോബിന് മാറ്റാം, പ്രത്യേകിച്ച് പരിശീലനത്തോടെ.',
+  p3nb: 'പ്രതികരണം യഥാർത്ഥമാണ്. “വേറിട്ട ഉരഗ തലച്ചോർ” എന്ന ആശയം മാത്രമാണ് ലളിതവൽക്കരണം.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'ശ്വാസവും ഹൃദയമിടിപ്പും നിയന്ത്രിക്കാൻ ബ്രെയിൻസ്റ്റെം സഹായിക്കുന്നു.',
+  p4r2: 'പരിണാമ ക്രമത്തിൽ അടുക്കിവെച്ച, ഓരോന്നിനും സ്വന്തം മനസ്സുള്ള, വേറിട്ട മൂന്ന് തലച്ചോറുകളാണ് നമ്മുടേത്.',
+  p4r3: 'ശരീരഭാരത്തിന്റെ ഏകദേശം 2% മാത്രമുള്ള തലച്ചോർ, വിശ്രമത്തിൽ ശരീര ഊർജ്ജത്തിന്റെ ഏകദേശം 20% ഉപയോഗിക്കുന്നു.',
+  p4r4: 'മിക്ക ആളുകളും തലച്ചോറിന്റെ ഏകദേശം 10% മാത്രമേ ഉപയോഗിക്കുന്നുള്ളൂ.',
+  p4w1: 'ശരി. ശ്വാസത്തിന്റെയും ഹൃദയമിടിപ്പിന്റെയും കേന്ദ്രങ്ങൾ ബ്രെയിൻസ്റ്റെമിലാണ്.',
+  p4w2: 'തെറ്റ്. അത് പഴയ ട്രൈയൂൺ മാതൃകയാണ്, ഒരു ലളിതവൽക്കരണം. ഭാഗങ്ങൾ ഒരുമിച്ച് പരിണമിച്ചു, ഒരൊറ്റ നെറ്റ്‌വർക്കായി പ്രവർത്തിക്കുന്നു.',
+  p4w3: 'ശരി. വിശ്രമിക്കുന്ന മുതിർന്നവരിൽ നന്നായി അളന്നിട്ടുള്ള കണക്കാണിത്.',
+  p4w4: 'തെറ്റ്. തലച്ചോറിന്റെ എല്ലാ ഭാഗത്തും പ്രവർത്തനം ഉണ്ടെന്ന് സ്കാനുകൾ കാണിക്കുന്നു, ഒരേ സമയത്ത് എല്ലാം അല്ലെന്ന് മാത്രം.',
+});
+const PRACTICE = [
+  { id: 'p-freeze', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 0, L('p1y'), [null, L('p1nb'), L('p1nc')]) },
+  { id: 'p-map', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 1, L('p2y'), [L('p2na'), null, L('p2nc')]) },
+  { id: 'p-lizard', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 2, L('p3y'), [L('p3na'), L('p3nb'), null]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['t'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['f'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('evolve:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>

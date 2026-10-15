@@ -1,0 +1,1248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Evolve Your Brain · Chapter 3">
+<meta property="og:description" content="Short animated lessons in English and Malayalam on how a thought becomes chemistry, and how to rewire the habit of being yourself.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/evolve/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/evolve/ch03/">
+<meta name="twitter:card" content="summary_large_image">
+<title>Neurons and the Nervous System · Evolve Your Brain</title>
+<meta name="description" content="An animated, narrated lesson on Chapter 3 of Evolve Your Brain: a neuron, a synapse, a signal, the glia that help, and how networks form. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('evolve:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('evolve:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'ന്യൂറോണുകളും നാഡീവ്യവസ്ഥയും · Evolve Your Brain';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/evolve.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/evolve/ch03/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Neurons and the Nervous System', kicker: 'UNIT 2 · CHAPTER 3', sub: 'How one cell sends a message, and how billions become you',
+  credit: 'A study of Evolve Your Brain by Joe Dispenza',
+  b_intro: 'Title', b_morning: 'Morning messages', b_count: 'How many?', b_tree: 'Parts of a neuron', b_types: 'Kinds of neurons',
+  b_charge: 'Electricity from salt', b_thresh: 'All or none', b_travel: 'Down the axon', b_syn: 'Across the gap', b_go: 'Go and stop',
+  b_net: 'Networks', b_glia: 'The glia', b_reach: 'Reaching for tea', b_sys: 'The nervous system', b_auto: 'Autopilot',
+  b_check: 'Science check', b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  ravi: 'Ravi', leena: 'Leena', smell: 'coffee', getUp: 'Time to get up.', inSens: 'in: sensory', outMotor: 'out: motor', neuron: 'the neuron',
+  ctSuffix: '', neurons: 'neurons in your brain', older: 'older books: 100 billion', perSec: 'one a second: 2,700+ years',
+  gliaRow: 'glial cells: about one for one', waterRow: 'about 75% water',
+  dendrites: 'dendrites', listen: 'listen', spines: 'spines: where connections land', cellBody: 'cell body', dnaInside: 'nucleus with DNA',
+  axon: 'axon', oneCable: 'one long cable', terminals: 'terminals', speak: 'speak', earsVoice: 'many ears · one voice · many outlets',
+  sensory: 'sensory', sensoryD: 'news in', inter: 'interneurons', interD: 'in between, the majority', motor: 'motor', motorD: 'orders out',
+  metre: 'about 1 metre, one cell', spineToToe: 'spine to big toe',
+  outside: 'outside', inside: 'inside', sodium: 'sodium', potassium: 'potassium', restV: 'resting: inside negative', gatesOpen: 'gates open',
+  flipped: 'inside flips positive', resetL: 'reset, ready again', slowMo: 'slowed down: the real spike lasts about 1 ms', mv: 'charge',
+  thresholdL: 'threshold', fades: 'fades', fires: 'fires!', allNone: 'all or none', samePeak: 'same size, every time',
+  gentle: 'gentle push', strong: 'strong push', moreOften: 'more often, not bigger',
+  bare: 'bare fibre', bareSpeed: 'about 1 m/s', myelinL: 'myelin', myelinSpeed: '100+ m/s', train: 'bullet train', walk: 'a slow walk',
+  synapseL: 'synapse', thinGap: 'thousands of times thinner than a hair', ntL: 'neurotransmitters', receptorsL: 'receptors',
+  electric: 'electric', chemical: 'chemical', electric2: 'electric',
+  glutamate: 'glutamate', goL: 'go', gaba: 'GABA', stopL: 'brake', seizure: 'too little brake: circuits run wild', vote: 'adds them up', firesL: 'fires',
+  quiet: 'stays quiet',
+  divergence: 'divergence', divD: 'one to many', convergence: 'convergence', convD: 'many to one', forward: 'forward',
+  useChanges: 'links strengthen or weaken with use', firstNets: 'first nerve nets', moreWired: 'more neurons, more ways: learn and plan',
+  oligo: 'myelin makers', astro: 'astrocyte', astroD: 'feeds, tidies', micro: 'microglia', microD: 'cleans, prunes', vessel: 'blood vessel',
+  teamwork: 'teamwork',
+  r1: 'eyes → visual area', r2: 'recognise: glass, tea, mine', r3: 'frontal lobe: hold the goal', r4: 'motor cortex: send the command',
+  r5: 'cerebellum: smooth it', r6: 'parietal lobe: feel the warmth', underSec: 'all in under a second',
+  cnsL: 'Central: brain + spinal cord', trunk: 'the trunk line', pnsL: 'Peripheral: nerves to the body', cranialL: '12 pairs from the brain',
+  spinalL: '31 pairs from the spinal cord', reflexL: 'Reflex: the cord answers first', hot: 'hot!',
+  autoT: 'Autonomic nervous system', autoD: 'heart · gut · temperature, without asking you',
+  sympT: 'Sympathetic', sympS: 'fight or flight', s1: 'heart faster', s2: 'breath quicker', s3: 'digestion on hold',
+  paraT: 'Parasympathetic', paraS: 'rest and digest', p1: 'heart slower', p2: 'gut busy', p3: 'rest and repair',
+  between: 'move between both', breathL: 'slow, long out-breath', late: 'late!',
+  sciCheck: 'Science check',
+  c1: 'Established: all-or-none firing, chemical synapses, glia as working partners.',
+  c2: 'Simplified in the book: movement starts in the frontal motor strip, not the parietal lobe; autopilot is run mainly by the hypothalamus and brainstem.',
+  c3: 'The author’s model: one frequency per chemical, and thoughts alone setting your brain chemistry.',
+  also: 'Thoughts matter. So do sleep, food, hormones and health.',
+  w1: 'A neuron listens with dendrites, decides, and speaks down one axon.',
+  w2: 'Electric along the cell, chemical across the gap, all or none.',
+  w3: 'Go and stop signals add up; networks, helped by glia, change with use.',
+  w4: 'The nervous system links brain and body, partly by choice, partly on autopilot.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'ന്യൂറോണുകളും നാഡീവ്യവസ്ഥയും', kicker: 'യൂണിറ്റ് 2 · അധ്യായം 3', sub: 'ഒരു കോശം എങ്ങനെ സന്ദേശം അയയ്ക്കുന്നു, കോടിക്കണക്കിന് കോശങ്ങൾ എങ്ങനെ നിങ്ങളാകുന്നു',
+  credit: 'ജോ ഡിസ്പെൻസയുടെ Evolve Your Brain എന്ന പുസ്തകത്തിന്റെ പഠനം',
+  b_intro: 'തലക്കെട്ട്', b_morning: 'രാവിലത്തെ സന്ദേശങ്ങൾ', b_count: 'എത്ര എണ്ണം?', b_tree: 'ന്യൂറോണിന്റെ ഭാഗങ്ങൾ', b_types: 'ന്യൂറോണുകളുടെ തരങ്ങൾ',
+  b_charge: 'ഉപ്പിൽ നിന്ന് വൈദ്യുതി', b_thresh: 'ഓൾ ഓർ നൺ', b_travel: 'ആക്സോണിലൂടെ', b_syn: 'വിടവിനു കുറുകെ', b_go: 'പോകൂ, നിൽക്കൂ',
+  b_net: 'ശൃംഖലകൾ', b_glia: 'ഗ്ലിയ', b_reach: 'ചായ എടുക്കുമ്പോൾ', b_sys: 'നാഡീവ്യവസ്ഥ', b_auto: 'ഓട്ടോപൈലറ്റ്',
+  b_check: 'ശാസ്ത്രീയ പരിശോധന', b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  ravi: 'രവി', leena: 'ലീന', smell: 'കാപ്പി', getUp: 'എഴുന്നേൽക്കാം.', inSens: 'അകത്തേക്ക്: സെൻസറി', outMotor: 'പുറത്തേക്ക്: മോട്ടോർ', neuron: 'ന്യൂറോൺ',
+  ctSuffix: ' കോടി', neurons: 'നിങ്ങളുടെ തലച്ചോറിലെ ന്യൂറോണുകൾ', older: 'പഴയ പുസ്തകങ്ങൾ: 10,000 കോടി', perSec: 'സെക്കൻഡിൽ ഒന്ന്: 2,700+ വർഷം',
+  gliaRow: 'ഗ്ലിയൽ കോശങ്ങൾ: ഏകദേശം ഒന്നിന് ഒന്ന്', waterRow: 'ഏകദേശം 75% വെള്ളം',
+  dendrites: 'ഡെൻഡ്രൈറ്റുകൾ', listen: 'കേൾക്കുന്നു', spines: 'സ്പൈനുകൾ: ബന്ധങ്ങൾ വന്നുചേരുന്നിടം', cellBody: 'കോശശരീരം', dnaInside: 'ന്യൂക്ലിയസ്, ഡി എൻ എ',
+  axon: 'ആക്സോൺ', oneCable: 'ഒരു നീണ്ട കേബിൾ', terminals: 'ടെർമിനലുകൾ', speak: 'പറയുന്നു', earsVoice: 'പല ചെവികൾ · ഒരു ശബ്ദം · പല വഴികൾ',
+  sensory: 'സെൻസറി', sensoryD: 'വാർത്ത അകത്തേക്ക്', inter: 'ഇന്റർന്യൂറോണുകൾ', interD: 'ഇടയിൽ, ഭൂരിഭാഗവും', motor: 'മോട്ടോർ', motorD: 'ഉത്തരവ് പുറത്തേക്ക്',
+  metre: 'ഏകദേശം 1 മീറ്റർ, ഒരു കോശം', spineToToe: 'നട്ടെല്ല് മുതൽ പെരുവിരൽ വരെ',
+  outside: 'പുറത്ത്', inside: 'അകത്ത്', sodium: 'സോഡിയം', potassium: 'പൊട്ടാസ്യം', restV: 'വിശ്രമം: അകം നെഗറ്റീവ്', gatesOpen: 'വാതിലുകൾ തുറക്കുന്നു',
+  flipped: 'അകം പോസിറ്റീവ് ആകുന്നു', resetL: 'പഴയ നിലയിലേക്ക്, വീണ്ടും തയ്യാർ', slowMo: 'പതുക്കെയാക്കിയത്: യഥാർത്ഥ സ്പൈക്ക് ഏകദേശം 1 മില്ലിസെക്കൻഡ്', mv: 'ചാർജ്',
+  thresholdL: 'ത്രെഷോൾഡ്', fades: 'മായുന്നു', fires: 'ഫയർ!', allNone: 'ഓൾ ഓർ നൺ', samePeak: 'എപ്പോഴും ഒരേ വലിപ്പം',
+  gentle: 'ചെറിയ തള്ളൽ', strong: 'ശക്തമായ തള്ളൽ', moreOften: 'വലുതല്ല, കൂടുതൽ തവണ',
+  bare: 'ആവരണമില്ലാത്ത നാര്', bareSpeed: 'ഏകദേശം 1 മീ/സെ', myelinL: 'മയലിൻ', myelinSpeed: '100+ മീ/സെ', train: 'ബുള്ളറ്റ് ട്രെയിൻ', walk: 'പതുക്കെയുള്ള നടത്തം',
+  synapseL: 'സിനാപ്സ്', thinGap: 'മുടിയിഴയേക്കാൾ ആയിരക്കണക്കിന് മടങ്ങ് നേർത്തത്', ntL: 'ന്യൂറോട്രാൻസ്മിറ്ററുകൾ', receptorsL: 'റിസപ്റ്ററുകൾ',
+  electric: 'വൈദ്യുതി', chemical: 'രാസവസ്തു', electric2: 'വൈദ്യുതി',
+  glutamate: 'ഗ്ലൂട്ടമേറ്റ്', goL: 'പോകൂ', gaba: 'ഗാബ', stopL: 'ബ്രേക്ക്', seizure: 'ബ്രേക്ക് കുറഞ്ഞാൽ: നിയന്ത്രണം വിടും', vote: 'എല്ലാം കൂട്ടിനോക്കുന്നു', firesL: 'ഫയർ',
+  quiet: 'നിശബ്ദം',
+  divergence: 'ഡൈവർജൻസ്', divD: 'ഒന്നിൽ നിന്ന് പലതിലേക്ക്', convergence: 'കൺവർജൻസ്', convD: 'പലതിൽ നിന്ന് ഒന്നിലേക്ക്', forward: 'ഫോർവേഡ്',
+  useChanges: 'ഉപയോഗത്തിനനുസരിച്ച് ബന്ധങ്ങൾ ശക്തമാകും, ദുർബലമാകും', firstNets: 'ആദ്യത്തെ നാഡീവലകൾ', moreWired: 'കൂടുതൽ ന്യൂറോണുകൾ, കൂടുതൽ ബന്ധങ്ങൾ: പഠനം, പദ്ധതി',
+  oligo: 'മയലിൻ നിർമ്മാതാക്കൾ', astro: 'ആസ്ട്രോസൈറ്റ്', astroD: 'ഭക്ഷണം, വൃത്തിയാക്കൽ', micro: 'മൈക്രോഗ്ലിയ', microD: 'ശുചീകരണം, വെട്ടിമാറ്റൽ', vessel: 'രക്തക്കുഴൽ',
+  teamwork: 'ടീം വർക്ക്',
+  r1: 'കണ്ണ് → കാഴ്ചയുടെ ഭാഗം', r2: 'തിരിച്ചറിയുന്നു: ഗ്ലാസ്, ചായ, എന്റേത്', r3: 'ഫ്രണ്ടൽ ലോബ്: ലക്ഷ്യം മനസ്സിൽ', r4: 'മോട്ടോർ കോർട്ടക്സ്: ഉത്തരവ് അയയ്ക്കുന്നു',
+  r5: 'സെറിബെല്ലം: ചലനം സുഗമമാക്കുന്നു', r6: 'പരൈറ്റൽ ലോബ്: ചൂട് അറിയുന്നു', underSec: 'എല്ലാം ഒരു സെക്കൻഡിനുള്ളിൽ',
+  cnsL: 'കേന്ദ്രം: തലച്ചോർ + സുഷുമ്നാനാഡി', trunk: 'പ്രധാന ട്രങ്ക് ലൈൻ', pnsL: 'പെരിഫറൽ: ശരീരത്തിലേക്കുള്ള നാഡികൾ', cranialL: 'തലച്ചോറിൽ നിന്ന് 12 ജോഡി',
+  spinalL: 'സുഷുമ്നാനാഡിയിൽ നിന്ന് 31 ജോഡി', reflexL: 'റിഫ്ലെക്സ്: സുഷുമ്നാനാഡി ആദ്യം പ്രതികരിക്കുന്നു', hot: 'ചൂട്!',
+  autoT: 'ഓട്ടോണമിക് നാഡീവ്യവസ്ഥ', autoD: 'ഹൃദയം · ദഹനം · ശരീരതാപം, ചോദിക്കാതെ തന്നെ',
+  sympT: 'സിംപതറ്റിക്', sympS: 'പോരാടുക, അല്ലെങ്കിൽ ഓടുക', s1: 'ഹൃദയമിടിപ്പ് കൂടുന്നു', s2: 'ശ്വാസം വേഗത്തിൽ', s3: 'ദഹനം നിർത്തിവെക്കുന്നു',
+  paraT: 'പാരാസിംപതറ്റിക്', paraS: 'വിശ്രമിക്കുക, ദഹിപ്പിക്കുക', p1: 'ഹൃദയം പതുക്കെ', p2: 'വയർ തിരക്കിൽ', p3: 'വിശ്രമം, കേടുപാട് തീർക്കൽ',
+  between: 'രണ്ടിനുമിടയിൽ മാറിമാറി', breathL: 'പതുക്കെ, നീളത്തിൽ പുറത്തേക്ക്', late: 'വൈകി!',
+  sciCheck: 'ശാസ്ത്രീയ പരിശോധന',
+  c1: 'തെളിയിക്കപ്പെട്ടത്: ഓൾ ഓർ നൺ ഫയറിംഗ്, രാസ സിനാപ്സുകൾ, ഒപ്പം പ്രവർത്തിക്കുന്ന ഗ്ലിയ.',
+  c2: 'പുസ്തകത്തിൽ ലളിതമാക്കിയത്: ചലനം തുടങ്ങുന്നത് ഫ്രണ്ടൽ ലോബിലെ മോട്ടോർ ഭാഗത്താണ്, പരൈറ്റൽ ലോബിലല്ല; ഓട്ടോപൈലറ്റ് പ്രധാനമായും ഹൈപ്പോതലാമസും ബ്രെയിൻസ്റ്റെമും.',
+  c3: 'ഗ്രന്ഥകാരന്റെ മാതൃക: ഓരോ രാസവസ്തുവിനും ഒരു ഫ്രീക്വൻസി, ചിന്തകൾ മാത്രം രസതന്ത്രം തീരുമാനിക്കുന്നു എന്നത്.',
+  also: 'ചിന്തകൾ പ്രധാനമാണ്. ഉറക്കം, ഭക്ഷണം, ഹോർമോണുകൾ, ആരോഗ്യം എന്നിവയും.',
+  w1: 'ന്യൂറോൺ ഡെൻഡ്രൈറ്റുകൾ കൊണ്ട് കേൾക്കുന്നു, തീരുമാനിക്കുന്നു, ഒരു ആക്സോണിലൂടെ പറയുന്നു.',
+  w2: 'കോശത്തിലൂടെ വൈദ്യുതി, വിടവിനു കുറുകെ രാസവസ്തു, ഓൾ ഓർ നൺ.',
+  w3: 'പോകൂ, നിൽക്കൂ സിഗ്നലുകൾ കൂട്ടിനോക്കുന്നു; ഗ്ലിയയുടെ സഹായത്തോടെ ശൃംഖലകൾ മാറുന്നു.',
+  w4: 'നാഡീവ്യവസ്ഥ തലച്ചോറിനെയും ശരീരത്തെയും ബന്ധിപ്പിക്കുന്നു, ഭാഗികമായി ഇഷ്ടപ്രകാരം, ഭാഗികമായി ഓട്ടോപൈലറ്റിൽ.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 3, title: L('title'), minutes: LANG === 'ml' ? 16 : 12, language: LANG, next: '../ch04/index.html' };
+
+/* ---------- chapter helpers ---------- */
+// Label that fades in at t (beat clock).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .5); return e; };
+// Wrapped label (for lines that run long in Malayalam), fading in at t.
+const labP = (p, key, x, y, t, o = {}) => { const e = evPara(p, L(key), { x, y, o: 0, ...o }); show(e, t, .5); return e; };
+// A second picture inside the same beat, faded in at t (its contents stay hidden until then).
+function n3Later(t) { const q = panel(t); put(q, { o: 0 }); tw(q, { o: 1 }, t, .4); return q; }
+// Small deterministic random numbers, so replays draw the same picture.
+function n3Rand(seed) { let s = seed * 9301 + 49297; return () => { s = (s * 9301 + 49297) % 233280; return s / 233280; }; }
+const n3Lerp = (a, b, q) => a + (b - a) * q;
+// A neuron lying on its side: dendrites to the left of the cell body at (0,0), the axon running right to x = len.
+// hide: parts start hidden (dendrite and axon paths undrawn, body and terminals transparent).
+function n3Neuron(p, { x = 0, y = 0, s = 1, o = 1, len = 600, color = EV.gold, seed = 3, hide = false, reach = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  const rnd = n3Rand(seed), hid = hide ? { d: 0 } : {};
+  g._dend = G(g); g._spines = G(g, { o: hide ? 0 : 1 });
+  g._leaves = []; g._dpaths = [];
+  const grow = (pts, ang, L_, w, depth) => {
+    const [x0, y0] = pts[pts.length - 1];
+    const a = (ang + (rnd() - .5) * 14) * Math.PI / 180;
+    const x1 = x0 + Math.cos(a) * L_, y1 = y0 + Math.sin(a) * L_;
+    const mx = (x0 + x1) / 2 + (rnd() - .5) * L_ * .25, my = (y0 + y1) / 2 + (rnd() - .5) * L_ * .25;
+    g._dpaths.push(path(g._dend, `M${x0.toFixed(1)} ${y0.toFixed(1)}Q${mx.toFixed(1)} ${my.toFixed(1)} ${x1.toFixed(1)} ${y1.toFixed(1)}`, { stroke: color, 'stroke-width': w }, hid));
+    const np = pts.concat([[mx, my], [x1, y1]]);
+    if (depth <= 1) for (let k = 1; k <= 3; k++) {
+      const u = k / 4, sx = (1 - u) ** 2 * x0 + 2 * (1 - u) * u * mx + u * u * x1, sy = (1 - u) ** 2 * y0 + 2 * (1 - u) * u * my + u * u * y1;
+      const side = k % 2 ? 1 : -1;
+      evDot(g._spines, sx - Math.sin(a) * 6 * side, sy + Math.cos(a) * 6 * side, 3.4, EV.goldHi);
+    }
+    if (depth > 0) { grow(np, ang - 24, L_ * .68, w * .62, depth - 1); grow(np, ang + 24, L_ * .68, w * .62, depth - 1); }
+    else g._leaves.push(np);
+  };
+  [150, 178, 206, 124, 232].forEach(a => grow([[Math.cos(a * Math.PI / 180) * 40, Math.sin(a * Math.PI / 180) * 40]], a, 118 * reach, 7, 2));
+  g._axon = path(g, `M44 0C${len * .3} -26 ${len * .62} 26 ${len} 0`, { stroke: color, 'stroke-width': 6 }, hid);
+  g._body = G(g, { o: hide ? 0 : 1 });
+  path(g._body, 'M-44 -6C-46 -34 -18 -50 8 -46C32 -42 54 -22 50 0C54 22 32 42 8 46C-18 50 -46 34 -44 6Z', { fill: '#141c20', stroke: color, 'stroke-width': 3.5 });
+  g._nuc = G(g._body, { x: 2, y: 0 });
+  mk('circle', { cx: 0, cy: 0, r: 17, fill: '#2b2a36', stroke: EV.shame, 'stroke-width': 2 }, g._nuc);
+  g._termG = G(g, { o: hide ? 0 : 1 });
+  g._bout = [-40, -14, 14, 40].map(a => {
+    const r_ = a * Math.PI / 180, bx = len + Math.cos(r_) * 84, by = Math.sin(r_) * 84;
+    path(g._termG, `M${len} 0Q${len + 40} ${by * .3} ${bx.toFixed(1)} ${by.toFixed(1)}`, { stroke: color, 'stroke-width': 4 });
+    mk('circle', { cx: bx, cy: by, r: 10, fill: '#141c20', stroke: color, 'stroke-width': 3 }, g._termG);
+    return [bx, by];
+  });
+  return g;
+}
+// Hidden paths from each dendrite tip to the cell body, for messages flowing in.
+function n3Inflow(N, n = 6) {
+  return N._leaves.filter((_, i) => i % Math.ceil(N._leaves.length / n) === 0).map(pts => {
+    const r = pts.slice().reverse().concat([[0, 0]]);
+    return path(N, 'M' + r.map(([a, b]) => a.toFixed(1) + ' ' + b.toFixed(1)).join('L'), { stroke: 'none' });
+  });
+}
+// A glowing pulse running down the axon, repeating every `every` seconds (or once).
+function n3Spark(N, t0, dur, { every = 2.4, travel = 1.2, color = EV.goldHi, r = 10, once = false } = {}) {
+  const ax = N._axon, L_ = ax.getTotalLength();
+  const sp = G(N, { o: 0 }); evGlow(sp, 0, 0, r * 3.4, 'Gold', 1); evDot(sp, 0, 0, r, color);
+  prog(q => {
+    const t = q * dur, k = once ? t : t % every;
+    if (k > travel) return put(sp, { x: 0, y: 0, o: 0 });
+    const pt = ax.getPointAtLength(k / travel * L_);
+    put(sp, { x: pt.x, y: pt.y, o: Math.min(1, k * 8, (travel - k) * 8) });
+  }, t0, dur, lin);
+  return sp;
+}
+function headAt(p, e, color, t) {
+  const n = e.getTotalLength(), a = e.getPointAtLength(n), b = e.getPointAtLength(n - 6);
+  const h = evHead(p, a.x, a.y, Math.atan2(a.y - b.y, a.x - b.x) * 180 / Math.PI, color);
+  put(h, { o: 0 }); show(h, t, .25);
+  return h;
+}
+// An ion: a small coloured disc with its charge.
+function n3Ion(p, color, sign, x, y, r = 15) {
+  const g = G(p, { x, y });
+  mk('circle', { cx: 0, cy: 0, r, fill: color, opacity: .9 }, g);
+  T(g, sign, { x: 0, y: r * .42, size: r * 1.3, fill: EV.bg, weight: 700, anchor: 'middle', font: SANS });
+  return g;
+}
+const n3HeartD = 'M0 30C-50 -5 -40 -45 -14 -40C-5 -38 0 -30 0 -24C0 -30 5 -38 14 -40C40 -45 50 -5 0 30Z';
+// Regular beats of a group (scale pulses) every `period` seconds between t0 and t1.
+function n3Beat(e, t0, t1, period, k = 1.25) { const b = st(e).s; for (let t = t0; t < t1 - .3; t += period) { tw(e, { s: b * k }, t, .12, out); tw(e, { s: b }, t + .12, Math.min(.3, period * .6)); } }
+// Brain region centres (evBrain coordinates, frontal lobe to the left).
+const N3REG = { vis: [180, -40], know: [30, 52], plan: [-150, -70], move: [-26, -120], smooth: [136, 106], feel: [84, -118] };
+// The tea scene: Leena by a table, a brain diagram with numbered regions. Returns its parts.
+function n3TeaScene(p, D) {
+  const P = {};
+  mk('rect', { x: 0, y: 780, width: 1600, height: 120, fill: '#0c1114' }, p);
+  path(p, 'M0 780H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+  const tb = G(p, { x: 560, y: 780 });
+  path(tb, 'M-130 -180H130', { stroke: '#4a3d2c', 'stroke-width': 10 });
+  path(tb, 'M-110 -180V0M110 -180V0', { stroke: '#4a3d2c', 'stroke-width': 8 });
+  P.glass = G(p, { x: 548, y: 598 });
+  path(P.glass, 'M-24 -66L-18 0H18L24 -66Z', { fill: '#3a2516', stroke: EV.goldHi, 'stroke-width': 2.5 });
+  path(P.glass, 'M-23 -50L-19 0H19L23 -50Z', { fill: '#b77a3e', opacity: .9 });
+  P.steam = [0, 1, 2].map(i => path(p, `M${536 + i * 12} 520q-8 -14 0 -28q8 -14 0 -28`, { stroke: EV.dim, 'stroke-width': 2.5, opacity: .5 }));
+  prog(q => { const t = q * D; P.steam.forEach((s, i) => put(s, { y: -((t * 14 + i * 9) % 26), o: .25 + .3 * Math.sin(t * 2 + i) ** 2 })); }, 0, D, lin);
+  P.lee = evPerson(p, { kind: 'f', x: 330, y: 780, s: .95 });
+  evMood(P.lee, 'calm', 0, .01); evArm(P.lee, -1, 6, -10, 0, .01); evArm(P.lee, 1, -6, 10, 0, .01);
+  evBreathe(P.lee, D);
+  P.br = evBrain(p, { x: 1130, y: 380, s: 1.28 });
+  P.glow = {}; P.num = {};
+  const cols = { vis: EV.fear, know: EV.shame, plan: EV.gold, move: EV.calm, smooth: EV.joy, feel: EV.love };
+  const gk = { vis: 'fear', know: 'shame', plan: 'Gold', move: 'calm', smooth: 'joy', feel: 'love' };
+  Object.keys(N3REG).forEach((k, i) => {
+    const [rx, ry] = N3REG[k];
+    P.glow[k] = evGlow(P.br, rx, ry, k === 'move' ? 70 : 78, gk[k], 0);
+    const n = G(P.br, { x: rx, y: ry, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 19, fill: EV.bg, stroke: cols[k], 'stroke-width': 3 }, n);
+    T(n, String(i + 1), { x: 0, y: 8, size: 22, fill: cols[k], weight: 600, anchor: 'middle', font: SANS });
+    P.num[k] = n;
+  });
+  P.strip = path(P.br, 'M-40 -176C-34 -120 -24 -60 -14 0', { stroke: EV.calm, 'stroke-width': 14, opacity: .55 }, { d: 0 });
+  P.cols = cols;
+  return P;
+}
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    evGlow(g, 800, 500, 320, 'Gold', .35);
+    const N = n3Neuron(g, { x: 470, y: 520, s: .72, len: 860, seed: 5, o: .7 });
+    n3Spark(N, .6, D, { every: 2.2, travel: 1.3 });
+    n3Inflow(N, 5).forEach((pp, i) => evFlow(pp, 2, EV.goldHi, .2, D, { speed: .5, r: 5, parent: N }));
+    evText(g, L('kicker'), { x: 800, y: 190, size: 26, fill: EV.gold, weight: 500, ls: '6' });
+    evText(g, L('title'), { x: 800, y: 300, size: 88, font: SERIF, weight: 600, maxW: 1380 });
+    tw(g, { o: 1 }, .15, 1.1, out);
+    const sub = evText(scene, L('sub'), { x: 800, y: 740, size: 38, fill: EV.dim, o: 0, maxW: 1300, font: SERIF, italic: true });
+    put(sub, { y: 760 }); tw(sub, { y: 740, o: 1 }, m('sub'), .8, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 820, size: 26, fill: '#6f6a5c', o: 0 });
+    show(cr, m('sub') + .8, .8);
+    tw(g, { o: 0 }, D - .7, .6); hide(sub, D - .7, .6); hide(cr, D - .7, .6);
+  }],
+
+  ['morning', 'b_morning', (m, D) => {
+    const p = panel(0);
+    mk('rect', { x: 0, y: 760, width: 1600, height: 140, fill: '#0c1114' }, p);
+    path(p, 'M0 760H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+    // window at dawn
+    const w = G(p, { x: 1150, y: 110 });
+    mk('rect', { x: 0, y: 0, width: 250, height: 230, rx: 6, fill: '#142430', stroke: '#2b3632', 'stroke-width': 6 }, w);
+    const sun = evGlow(w, 125, 200, 110, 'Warm', .4);
+    tw(sun, { y: 170, o: .8 }, 0, D, lin);
+    path(w, 'M125 0V230M0 115H250', { stroke: '#2b3632', 'stroke-width': 5 });
+    // counter and coffee
+    const ct = G(p, { x: 1250, y: 760 });
+    path(ct, 'M-230 -170H230V0H-230Z', { fill: '#2a2320' });
+    path(ct, 'M-240 -170H240', { stroke: EV.gold, 'stroke-width': 2, opacity: .5 });
+    const cup = G(p, { x: 1250, y: 590 });
+    path(cup, 'M-30 -50H30V-10Q30 0 20 0H-20Q-30 0 -30 -10Z', { fill: '#e9e2d0' });
+    path(cup, 'M30 -40Q50 -36 46 -22Q42 -12 30 -14', { stroke: '#e9e2d0', 'stroke-width': 6 });
+    const steam = [0, 1, 2].map(i => path(p, `M${1236 + i * 14} 530q-10 -16 0 -32q10 -16 0 -32`, { stroke: EV.dim, 'stroke-width': 3, opacity: .5 }));
+    prog(q => { const t = q * D; steam.forEach((s, i) => put(s, { y: -((t * 16 + i * 10) % 30), o: .3 + .35 * Math.sin(t * 2 + i) ** 2 })); }, 0, D, lin);
+    // Ravi, sleepy, then awake
+    const rav = evPerson(p, { kind: 'm', x: 470, y: 760 });
+    evMood(rav, 'worried', 0, .01); evArm(rav, -1, 6, -8, 0, .01); evArm(rav, 1, -6, 8, 0, .01);
+    evBreathe(rav, D, 1.6, .45);
+    lab(p, 'ravi', 470, 820, .4, { size: 28, fill: EV.dim });
+    // the smell drifts to him
+    const sm = path(p, 'M1220 520C1050 360 760 290 520 390', { stroke: 'none' });
+    evFlow(sm, 10, EV.joy, m('smell') - .2, D - m('smell'), { speed: .3, r: 6, parent: p });
+    lab(p, 'smell', 1050, 330, m('smell') + .3, { size: 30, fill: EV.joy, italic: true, font: SERIF });
+    // the brain above him and the message in
+    const br = evBrain(p, { x: 470, y: 165, s: .42, o: 0 });
+    tw(br, { o: 1 }, m('in') - .4, .5);
+    const inP = path(p, 'M505 395C575 360 585 290 535 255', { stroke: EV.fear, 'stroke-width': 3, opacity: .55 }, { d: 0 });
+    draw(inP, m('in'), .6); headAt(p, inP, EV.fear, m('in') + .55);
+    evFlow(inP, 5, EV.fear, m('in'), D - m('in'), { speed: .7, r: 6, parent: p });
+    const inL = lab(p, 'inSens', 605, 320, m('in') + .4, { size: 30, fill: EV.fear, anchor: 'start', maxW: 320 });
+    evFire(br, m('in') + .6, 1.2);
+    // decision
+    evMood(rav, 'smile', m('decide'));
+    const bub = evBubble(p, L('getUp'), { x: 760, y: 200, w: 380, size: 34, tail: 'left' });
+    pop(bub, m('decide') + .2);
+    // the message out, down the spine to arms and legs
+    const o1 = path(p, 'M478 250C525 300 520 370 478 425L470 600L452 735', { stroke: EV.calm, 'stroke-width': 3, opacity: .4 }, { d: 0 });
+    const o2 = path(p, 'M470 450C495 470 512 470 515 520L520 600', { stroke: EV.calm, 'stroke-width': 3, opacity: .55 }, { d: 0 });
+    draw(o1, m('out'), 1); draw(o2, m('out') + .4, .7);
+    evFlow(o1, 7, EV.calm, m('out'), D - m('out'), { speed: .45, r: 6, parent: p });
+    evFlow(o2, 3, EV.calm, m('out') + .4, D - m('out') - .4, { speed: .6, r: 6, parent: p });
+    const outL = lab(p, 'outMotor', 605, 560, m('out') + .5, { size: 30, fill: EV.calm, anchor: 'start', maxW: 380 });
+    tw(inL, { o: .35 }, m('neuron') - .3, .4); hide(outL, m('neuron') - .3, .4);
+    evArm(rav, -1, 140, 20, m('out') + .4, .8); evArm(rav, 1, -140, -20, m('out') + .4, .8);
+    evArm(rav, -1, 8, -10, m('out') + 2.4, .8); evArm(rav, 1, -8, 10, m('out') + 2.4, .8);
+    hide(bub, m('neuron') - .3, .4);
+    // the cell that carried it all
+    const ng = G(p, { o: 0 });
+    const N = n3Neuron(ng, { x: 780, y: 560, s: .4, len: 560, seed: 9 });
+    n3Spark(N, m('neuron'), D - m('neuron'), { every: 1.6, travel: 1 });
+    evText(ng, L('neuron'), { x: 900, y: 690, size: 48, font: SERIF, weight: 600, fill: EV.gold, maxW: 420 });
+    tw(ng, { o: 1 }, m('neuron'), .6);
+  }],
+
+  ['count', 'b_count', (m, D) => {
+    const p = panel(0);
+    const br = evBrain(p, { x: 430, y: 470, s: 1.12, o: 0 });
+    tw(br, { o: 1 }, .1, .6);
+    // water fill, clipped to the brain outline (under the dots)
+    const wg = G(br); br.insertBefore(wg, br._netG);
+    mk('path', { d: BRAIN_D }, mk('clipPath', { id: 'n3BrClip' }, mk('defs', {}, wg)));
+    const wf = G(wg); wf.setAttribute('clip-path', 'url(#n3BrClip)');
+    const wr = mk('rect', { x: -230, y: 130, width: 470, height: 0, fill: EV.fear, opacity: .28 }, wf);
+    const surf = path(wf, 'M-230 0Q-170 -8 -115 0T0 0T115 0T230 0', { stroke: EV.fear, 'stroke-width': 3, opacity: 0 });
+    prog(q => { const top = 122 - q * 237; wr.setAttribute('y', top); wr.setAttribute('height', 130 - top); put(surf, { y: top, o: q > .02 ? .7 : 0 }); }, m('water'), 2.2, out);
+    // dots inside the outline: neurons, then about as many glia
+    const rnd = n3Rand(11), ptsN = [], ptsG = [];
+    while (ptsN.length + ptsG.length < 260) {
+      const x = -200 + rnd() * 410, y = -186 + rnd() * 300;
+      if (br._shape.isPointInFill(new DOMPoint(x, y))) (ptsN.length <= ptsG.length ? ptsN : ptsG).push([x, y]);
+    }
+    const dg = G(br);
+    ptsN.forEach(([x, y], i) => { const d = evDot(dg, x, y, 4.4, EV.goldHi, 0); tw(d, { o: .9 }, m('n') + (i / ptsN.length) * 2.4, .2); });
+    ptsG.forEach(([x, y], i) => { const d = evDot(dg, x, y, 4.4, EV.calm, 0); tw(d, { o: .85 }, m('glia') + (i / ptsG.length) * 2.4, .2); });
+    evFire(br, m('n') + .2, 1.6);
+    // the numbers
+    const big = ML ? 8600 : 86e9;
+    const ct = evText(p, '0', { x: 1150, y: 250, size: 92, font: SERIF, weight: 600, fill: EV.gold, o: 0, maxW: 760 });
+    tw(ct, { o: 1 }, m('n') - .1, .3);
+    prog(q => { ct.textContent = Math.round(q * big).toLocaleString(ML ? 'en-IN' : 'en') + L('ctSuffix'); }, m('n'), 2.4, out);
+    lab(p, 'neurons', 1150, 310, m('n') + .4, { size: 32, fill: EV.ink, maxW: 700 });
+    const old = lab(p, 'older', 1150, 362, m('n') + 2.6, { size: 28, fill: EV.dim, italic: true, maxW: 700 });
+    const row = (y, t, drawIcon, key, color) => {
+      const g = G(p, { x: 0, y, o: 0 });
+      const ic = G(g, { x: 850, y: -10 }); drawIcon(ic);
+      evText(g, L(key), { x: 910, y: 0, size: 32, fill: color, anchor: 'start', maxW: 640 });
+      put(g, { x: 30 }); tw(g, { o: 1, x: 0 }, t, .5, out);
+      return ic;
+    };
+    const clk = row(490, m('sec'), ic => { mk('circle', { cx: 0, cy: 0, r: 30, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2.5 }, ic); }, 'perSec', EV.ink);
+    const hand = path(clk, 'M0 0V-22', { stroke: EV.goldHi, 'stroke-width': 4 });
+    prog(q => put(hand, { r: q * 360 * 12 }), m('sec'), D - m('sec'), lin);
+    row(610, m('glia'), ic => { evDot(ic, -10, 0, 9, EV.calm); evDot(ic, 10, -8, 9, EV.calm); evDot(ic, 6, 12, 9, EV.goldHi); }, 'gliaRow', EV.calm);
+    row(730, m('water'), ic => { path(ic, 'M0 -28C14 -8 22 4 22 14A22 22 0 0 1 -22 14C-22 4 -14 -8 0 -28Z', { fill: EV.fear, opacity: .85 }); }, 'waterRow', EV.fear);
+  }],
+
+  ['tree', 'b_tree', (m, D) => {
+    const p = panel(0);
+    const cam = camera(p, D, {});
+    const W = cam.world;
+    const N = n3Neuron(W, { x: 560, y: 470, s: 1.05, len: 700, seed: 7, hide: true });
+    // the outline sketch appears at once, faint, so the frame is never empty
+    const ghost = n3Neuron(W, { x: 560, y: 470, s: 1.05, len: 700, seed: 7, color: '#3d3b35', o: 0 });
+    tw(ghost, { o: 1 }, .1, .6); tw(ghost, { o: 0 }, m('term') + 1, .6);
+    N._dpaths.forEach((e, i) => draw(e, m('dend') + (i % 15) * .06, .7));
+    const ui = G(p);
+    lab(ui, 'dendrites', 240, 190, m('dend') + .3, { size: 38, fill: EV.gold, weight: 600, font: SERIF });
+    lab(ui, 'listen', 240, 232, m('dend') + .8, { size: 28, fill: EV.dim, italic: true });
+    // zoom on spines
+    tw(N._spines, { o: 1 }, m('spine') - .3, .5);
+    cam.to({ x: 330, y: 390, z: 2.4 }, m('spine') - .2, 1.3);
+    const sp = lab(ui, 'spines', 800, 120, m('spine') + .9, { size: 34, fill: EV.goldHi, maxW: 1200 });
+    N._spines.childNodes.forEach((d, i) => { if (i % 3 === 0) pulse(d, m('spine') + 1.2 + (i % 9) * .1, 1.8); });
+    cam.to({ x: 800, y: 450, z: 1 }, m('body') - .6, 1.2);
+    hide(sp, m('body') - .6, .4);
+    // body, nucleus
+    tw(N._body, { o: 1 }, m('body'), .5);
+    pulse(N._nuc, m('body') + 1.4, 1.5);
+    const fl = n3Inflow(N, 6);
+    fl.forEach(pp => evFlow(pp, 2, EV.goldHi, m('body') - .2, D - m('body') + .2, { speed: .55, r: 5, parent: N }));
+    lab(ui, 'cellBody', 625, 580, m('body') + .3, { size: 32, fill: EV.ink, anchor: 'start', maxW: 330 });
+    lab(ui, 'dnaInside', 625, 622, m('body') + 1.4, { size: 26, fill: EV.shame, anchor: 'start', maxW: 330 });
+    // axon
+    draw(N._axon, m('axon'), 1.2);
+    lab(ui, 'axon', 960, 400, m('axon') + .5, { size: 38, fill: EV.gold, weight: 600, font: SERIF });
+    lab(ui, 'oneCable', 960, 440, m('axon') + 1, { size: 28, fill: EV.dim, italic: true });
+    // terminals
+    tw(N._termG, { o: 1 }, m('term'), .5);
+    lab(ui, 'terminals', 1370, 300, m('term') + .3, { size: 38, fill: EV.gold, weight: 600, font: SERIF, maxW: 400 });
+    lab(ui, 'speak', 1370, 340, m('term') + .8, { size: 28, fill: EV.dim, italic: true });
+    n3Spark(N, m('term') + .2, D - m('term') - .2, { every: 2, travel: 1 });
+    lab(ui, 'earsVoice', 800, 840, m('sum'), { size: 34, fill: EV.ink, font: SERIF, italic: true, maxW: 1300 });
+  }],
+
+  ['types', 'b_types', (m, D) => {
+    const p = panel(0);
+    const cols = [[300, 'sensory', 'sensoryD', EV.fear, 'sens', 1], [800, 'inter', 'interD', EV.gold, 'inter', 0], [1300, 'motor', 'motorD', EV.calm, 'motor', 1]];
+    const parts = cols.map(([x, k, kd, c, mk_, dir], i) => {
+      const g = G(p, { o: 0 });
+      const N = n3Neuron(g, { x: x - (i === 1 ? 70 : 150), y: 330, s: i === 1 ? .36 : .42, len: i === 1 ? 260 : 560, seed: 20 + i, color: c });
+      n3Spark(N, m(mk_) + .3, D - m(mk_) - .3, { every: 1.6, travel: .9, r: 12 });
+      evText(g, L(k), { x, y: 500, size: 40, fill: c, weight: 600, font: SERIF, maxW: 420 });
+      evText(g, L(kd), { x, y: 548, size: 28, fill: EV.dim, maxW: 420 });
+      put(g, { y: 20 }); tw(g, { o: 1, y: 0 }, m(mk_), .6, out);
+      return g;
+    });
+    // arrows: in from the world, out to the muscle
+    const a1 = path(p, 'M80 330H130', { stroke: EV.fear, 'stroke-width': 4 }, { d: 0 }); draw(a1, m('sens') + .5, .4);
+    const h1 = evHead(p, 136, 330, 0, EV.fear); put(h1, { o: 0 }); show(h1, m('sens') + .8, .2);
+    // the long one: spine to big toe
+    const q2 = n3Later(m('long'));
+    parts.forEach(g => tw(g, { o: 0 }, m('long'), .4));
+    const bd = evBody(q2, { x: 640, y: 480, s: 1.4 });
+    const ax = path(q2, 'M640 540C640 600 690 640 700 720L712 790', { stroke: EV.calm, 'stroke-width': 6 }, { d: 0 });
+    draw(ax, m('long') + .8, 1.6);
+    const cb = evDot(q2, 640, 540, 14, EV.calm, 0); show(cb, m('long') + .5, .3);
+    lab(q2, 'spineToToe', 1080, 560, m('long') + 1.2, { size: 34, fill: EV.ink, maxW: 700 });
+    lab(q2, 'metre', 1080, 620, m('long') + 2.2, { size: 40, fill: EV.calm, weight: 600, font: SERIF, maxW: 700 });
+    const sp = G(q2, { o: 0 }); evGlow(sp, 0, 0, 30, 'calm', 1); evDot(sp, 0, 0, 9, '#e9fff1');
+    prog(q => { const t = q * D, k = (t % 2.2) / 1.4; if (t < m('long') + 2.6 || k > 1) return put(sp, { x: 0, y: 0, o: 0 }); const pt = ax.getPointAtLength(k * ax.getTotalLength()); put(sp, { x: pt.x, y: pt.y, o: 1 }); }, 0, D, lin);
+    put(bd, { o: 0 }); tw(bd, { o: 1 }, m('long') + .1, .5);
+  }],
+
+  ['q1', 'b_tree', (m, D) => {
+    const p = panel(0);
+    const N = n3Neuron(p, { x: 520, y: 330, s: .85, len: 760, seed: 7 });
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+    n3Spark(N, .5, D + 30, { every: 2.4, travel: 1.2 });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-listen', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 1, L('q1y'), [L('q1na'), null, L('q1nc')]),
+  }], done) }],
+
+  ['charge', 'b_charge', (m, D) => {
+    const p = panel(0);
+    const Y = 380;
+    // the membrane: a double line with three gates
+    const mem = G(p, { o: 0 });
+    const gx = [450, 800, 1150];
+    const seg = [[120, 420], [480, 770], [830, 1120], [1180, 1480]];
+    seg.forEach(([a, b]) => { mk('rect', { x: a, y: Y - 22, width: b - a, height: 44, rx: 10, fill: '#1b2226', stroke: EV.gold, 'stroke-width': 2.5 }, mem); });
+    const gates = gx.map(x => {
+      const gl = G(mem, { x: x - 10, y: Y }), gr = G(mem, { x: x + 10, y: Y });
+      mk('rect', { x: -12, y: -26, width: 24, height: 52, rx: 6, fill: EV.goldLo, stroke: EV.goldHi, 'stroke-width': 2 }, gl);
+      mk('rect', { x: -12, y: -26, width: 24, height: 52, rx: 6, fill: EV.goldLo, stroke: EV.goldHi, 'stroke-width': 2 }, gr);
+      return [gl, gr, x];
+    });
+    tw(mem, { o: 1 }, .1, .5);
+    // inside tint: cool when negative, warm when positive
+    const tint = mk('rect', { x: 0, y: Y + 22, width: 1600, height: 220, fill: EV.shame, opacity: 0 }, p);
+    p.insertBefore(tint, mem);
+    tw(tint, { a_opacity: .12 }, m('rest'), .6);
+    tw(tint, { c_fill: EV.anger, a_opacity: .16 }, m('flip') + .2, .4);
+    tw(tint, { c_fill: EV.shame, a_opacity: .12 }, m('reset') + .4, 1);
+    lab(p, 'outside', 120, Y - 230, .3, { size: 28, fill: EV.dim, anchor: 'start', italic: true });
+    lab(p, 'inside', 120, Y + 230, .3, { size: 28, fill: EV.dim, anchor: 'start', italic: true });
+    // legend
+    const lg = G(p, { x: 1110, y: 72, o: 0 });
+    n3Ion(lg, EV.joy, '+', 0, -10); evText(lg, L('sodium'), { x: 30, y: 0, size: 28, anchor: 'start', fill: EV.joy });
+    n3Ion(lg, EV.calm, '+', 0, 40); evText(lg, L('potassium'), { x: 30, y: 50, size: 28, anchor: 'start', fill: EV.calm });
+    tw(lg, { o: 1 }, m('rest') + .4, .5);
+    // ions: sodium mostly outside, potassium inside, negative charges inside
+    const rnd = n3Rand(4);
+    const na = Array.from({ length: 16 }, (_, i) => ({ x: 170 + i * 82 + rnd() * 30, y: Y - 100 - rnd() * 100 }));
+    const k_ = Array.from({ length: 12 }, (_, i) => ({ x: 200 + i * 108 + rnd() * 30, y: Y + 88 + rnd() * 105 }));
+    const ng = Array.from({ length: 10 }, (_, i) => ({ x: 240 + i * 125 + rnd() * 30, y: Y + 88 + rnd() * 115 }));
+    const naE = na.map(o => n3Ion(p, EV.joy, '+', o.x, o.y));
+    const kE = k_.map(o => n3Ion(p, EV.calm, '+', o.x, o.y));
+    const ngE = ng.map(o => n3Ion(p, EV.shame, '−', o.x, o.y, 12));
+    [...naE, ...kE, ...ngE].forEach((e, i) => { put(e, { o: 0 }); tw(e, { o: 1 }, m('rest') - .3 + (i % 12) * .06, .4); });
+    // which ions cross: the sodium ions nearest each gate go in; some potassium goes out
+    const nearest = (arr, x, n) => arr.map((o, i) => [Math.abs(o.x - x), i]).sort((a, b) => a[0] - b[0]).slice(0, n).map(a => a[1]);
+    const naIn = gx.flatMap(x => nearest(na, x, 2)), kOut = gx.flatMap(x => nearest(k_, x, 1));
+    const tf = m('flip'), tr = m('reset');
+    prog(q => {
+      const t = q * D;
+      na.forEach((o, i) => {
+        const j = naIn.indexOf(i), jig = Math.sin(t * 1.3 + i) * 5;
+        if (j < 0) return put(naE[i], { x: o.x + jig, y: o.y + Math.cos(t * 1.1 + i) * 5 });
+        const gxx = gx[Math.floor(j / 2)] + (j % 2 ? 14 : -14);
+        const u = Math.max(0, Math.min(1, (t - tf - (j % 2) * .25) / .9)), back_ = Math.max(0, Math.min(1, (t - tr - 1.4 - j * .1) / 1.4));
+        const yIn = Y + 50, xIn = gxx + (j % 2 ? 56 : -56);
+        let x = n3Lerp(o.x, gxx, Math.min(1, u * 2)), y = u < .5 ? n3Lerp(o.y, Y - 40, u * 2) : n3Lerp(Y - 40, yIn, (u - .5) * 2);
+        if (u >= 1) { x = n3Lerp(xIn, o.x, soft(back_)); y = n3Lerp(yIn, o.y, soft(back_)); if (u >= .5 && back_ === 0) x = xIn; }
+        else if (u > .5) x = n3Lerp(gxx, xIn, (u - .5) * 2);
+        put(naE[i], { x: x + (u === 0 || back_ === 1 ? jig : 0), y });
+      });
+      k_.forEach((o, i) => {
+        const j = kOut.indexOf(i), jig = Math.sin(t * 1.2 + i * 2) * 5;
+        if (j < 0) return put(kE[i], { x: o.x + jig, y: o.y });
+        const u = Math.max(0, Math.min(1, (t - tr - j * .2) / 1)), x = n3Lerp(o.x, gx[j], Math.min(1, u * 2)), y = u < .5 ? n3Lerp(o.y, Y + 40, u * 2) : n3Lerp(Y + 40, Y - 56, (u - .5) * 2);
+        put(kE[i], { x: x + (u === 0 ? jig : 0), y });
+      });
+    }, 0, D, lin);
+    // gates open and close
+    gates.forEach(([gl, gr], i) => {
+      tw(gl, { x: st(gl).x - 18 }, m('gate') + i * .15, .4, back); tw(gr, { x: st(gr).x + 18 }, m('gate') + i * .15, .4, back);
+      tw(gl, { x: st(gl).x }, tr + .8, .5); tw(gr, { x: st(gr).x }, tr + .8, .5);
+    });
+    const go_ = lab(p, 'gatesOpen', 800, Y - 250, m('gate') + .3, { size: 32, fill: EV.goldHi, maxW: 560 }); hide(go_, tr + .8, .4);
+    // the voltage trace
+    const X0 = 340, X1 = 1240, YB = 790, t0 = m('rest'), t1 = D - .2;
+    const vy = t => { if (t < tf) return 0; if (t < tf + .5) return soft((t - tf) / .5); if (t < tr) return 1; if (t < tr + 1) return 1 - 1.15 * soft((t - tr) / 1); if (t < tr + 2) return -.15 + .15 * soft((t - tr - 1)); return 0; };
+    const tg = G(p, { o: 0 });
+    path(tg, `M${X0} ${YB}H${X1}`, { stroke: EV.dim, 'stroke-width': 1.5, opacity: .5, 'stroke-dasharray': '6 8' });
+    evText(tg, L('mv'), { x: X0 - 20, y: YB + 10, size: 26, anchor: 'end', fill: EV.dim });
+    const tr_ = path(tg, '', { stroke: EV.goldHi, 'stroke-width': 4 });
+    tw(tg, { o: 1 }, m('rest') + .2, .4);
+    prog(q => {
+      const t = t0 + q * (t1 - t0); let d = '';
+      for (let u = t0; u <= t; u += .05) d += (d ? 'L' : 'M') + (X0 + (u - t0) / (t1 - t0) * (X1 - X0)).toFixed(1) + ' ' + (YB - vy(u) * 110).toFixed(1);
+      tr_.setAttribute('d', d || `M${X0} ${YB}`);
+    }, t0, t1 - t0, lin);
+    const rl = lab(p, 'restV', 600, YB + 60, m('rest') + .8, { size: 28, fill: EV.shame, maxW: 520 });
+    hide(rl, tf, .3);
+    const fl = lab(p, 'flipped', 600, YB + 60, tf + .5, { size: 30, fill: EV.anger, weight: 600, maxW: 520 });
+    hide(fl, tr, .3);
+    lab(p, 'resetL', 600, YB + 60, tr + .4, { size: 30, fill: EV.calm, maxW: 520 });
+    labP(p, 'slowMo', 1480, ML ? 842 : 860, tf + 1.2, { size: 26, fill: '#6f6a5c', italic: true, anchor: 'end', maxW: 600, lh: 1.25 });
+  }],
+
+  ['threshold', 'b_thresh', (m, D) => {
+    const p = panel(0);
+    const X0 = 140, X1 = 1000, YR = 560, YT = 400, YP = 170;
+    const t0 = m('small') - .8, t1 = m('often') - .2;
+    const xs = t => X0 + (t - t0) / (t1 - t0) * (X1 - X0);
+    // inputs: two lone nudges, two together, then one strong push
+    const ins = [[m('small'), 120], [m('small2'), 120], [m('thresh'), 150], [m('thresh') + .35, 150], [m('same') - .2, 260]];
+    const psp = (t, ti, a) => t < ti ? 0 : a * (1 - Math.exp(-(t - ti) / .12)) * Math.exp(-(t - ti) / .9);
+    const sub_ = t => ins.reduce((s, [ti, a]) => s + psp(t, ti, a), 0);
+    // spike times: first crossing after each input group, found by scanning
+    const spikes = [];
+    for (let t = t0, last = -9; t < t1; t += .01) if (YR - sub_(t) <= YT && t - last > 1.5) { spikes.push(t); last = t; }
+    const yAt = t => {
+      for (const s of spikes) if (t >= s && t < s + 1.2) {
+        const u = (t - s) / 1.2;
+        return u < .15 ? n3Lerp(YT, YP, u / .15) : u < .45 ? n3Lerp(YP, YR + 40, (u - .15) / .3) : n3Lerp(YR + 40, YR, (u - .45) / .55);
+      }
+      for (const s of spikes) if (t >= s + 1.2 && t < s + 3) return YR;
+      return YR - Math.min(sub_(t), YR - YT + 4);
+    };
+    const ax = G(p, { o: 0 });
+    path(ax, `M${X0} ${YR}H${X1}`, { stroke: EV.dim, 'stroke-width': 1.5, opacity: .45 });
+    path(ax, `M${X0} ${YT}H${X1 + 20}`, { stroke: EV.anger, 'stroke-width': 2.5, 'stroke-dasharray': '10 10' });
+    tw(ax, { o: 1 }, .1, .5);
+    const thl = lab(p, 'thresholdL', X0, YT - 20, m('thresh') - .4, { size: 30, fill: EV.anger, anchor: 'start' });
+    const tl = path(p, '', { stroke: EV.goldHi, 'stroke-width': 4.5 });
+    prog(q => {
+      const t = t0 + q * (t1 - t0); let d = '';
+      for (let u = t0; u <= t + 1e-6; u += .025) d += (d ? 'L' : 'M') + xs(u).toFixed(1) + ' ' + yAt(u).toFixed(1);
+      tl.setAttribute('d', d);
+    }, t0, t1 - t0, lin);
+    // input arrows under the axis
+    ins.forEach(([ti, a], i) => {
+      const x = xs(ti), h = a / 3;
+      const ar = path(p, `M${x} ${YR + 110}V${YR + 110 - h}`, { stroke: i === 4 ? EV.joy : EV.ink, 'stroke-width': i === 4 ? 7 : 4 }, { d: 0 });
+      draw(ar, ti - .15, .2);
+      const hd = evHead(p, x, YR + 106 - h, -90, i === 4 ? EV.joy : EV.ink); put(hd, { o: 0 }); show(hd, ti, .15);
+    });
+    lab(p, 'fades', xs(m('small')) + 70, YR - 70, m('small') + .8, { size: 28, fill: EV.dim, italic: true });
+    spikes.forEach((s, i) => { const f = lab(p, i ? 'samePeak' : 'fires', xs(s) + (i ? 0 : 60), YP - 26, s + .2, { size: 30, fill: EV.goldHi, weight: 600, maxW: 360 }); });
+    // the pressure cooker: whistles on each spike, always the same
+    const ck = G(p, { x: 1300, y: 470, o: 0 });
+    path(ck, 'M-120 -60H120V60Q120 110 70 110H-70Q-120 110 -120 60Z', { fill: '#2a3036', stroke: EV.gold, 'stroke-width': 3 });
+    path(ck, 'M-130 -60H130', { stroke: EV.gold, 'stroke-width': 6 });
+    path(ck, 'M-60 -60V-84H60V-60', { fill: '#2a3036', stroke: EV.gold, 'stroke-width': 3 });
+    path(ck, 'M120 -40H220', { stroke: '#4a3d2c', 'stroke-width': 14 });
+    const wh = G(ck, { x: 0, y: -84 });
+    mk('rect', { x: -10, y: -40, width: 20, height: 40, rx: 4, fill: EV.dim }, wh);
+    const puff = G(ck, { x: 0, y: -140, o: 0 });
+    [[-30, -10, 26], [0, -40, 34], [34, -14, 28], [8, 10, 22]].forEach(([x, y, r]) => mk('circle', { cx: x, cy: y, r, fill: '#e9e2d0', opacity: .7 }, puff));
+    tw(ck, { o: 1 }, m('cooker') - .3, .5);
+    const fire_ = mk('path', { d: 'M-60 140Q-40 120 -20 140T20 140T60 140', fill: 'none', stroke: EV.anger, 'stroke-width': 4 }, ck);
+    prog(q => { const t = q * D; put(fire_, { y: Math.sin(t * 9) * 3 }); }, 0, D, lin);
+    [m('cooker') + 1.6, ...spikes.filter(s => s > m('cooker'))].forEach(s => {
+      tw(wh, { y: -96 }, s, .1); tw(wh, { y: -84 }, s + .9, .2);
+      tw(puff, { o: 1, s: 1.15, y: -160 }, s, .25, out); tw(puff, { o: 0, s: 1.4, y: -200 }, s + .5, .7);
+      put(puff, { s: .7 });
+    });
+    lab(p, 'allNone', 1300, 210, m('same'), { size: 48, fill: EV.gold, weight: 600, font: SERIF, maxW: 520 });
+    // rate, not size
+    const rg = G(p, { o: 0 });
+    const strip = (y, n, key) => {
+      evText(rg, L(key), { x: 120, y: y + 12, size: 28, fill: EV.ink, anchor: 'start', maxW: 300 });
+      path(rg, `M450 ${y}H1450`, { stroke: EV.dim, 'stroke-width': 1.5, opacity: .4 });
+      for (let i = 0; i < n; i++) { const x = 480 + i * (940 / n); path(rg, `M${x} ${y}L${x + 8} ${y - 44}L${x + 16} ${y + 8}L${x + 22} ${y}`, { stroke: EV.goldHi, 'stroke-width': 3 }); }
+    };
+    strip(785, 3, 'gentle'); strip(865, 9, 'strong');
+    tw(rg, { o: 1 }, m('often'), .6);
+    tw(ax, { o: .35 }, m('often'), .5); tw(tl, { o: .35 }, m('often'), .5); hide(thl, m('often'), .4);
+    lab(p, 'moreOften', 1300, 700, m('often') + .8, { size: 30, fill: EV.joy, italic: true, maxW: 520 });
+  }],
+
+  ['travel', 'b_travel', (m, D) => {
+    const p = panel(0);
+    // stadium crowd doing the wave
+    const crowd = Array.from({ length: 26 }, (_, i) => {
+      const g = G(p, { x: 150 + i * 52, y: 210 });
+      evDot(g, 0, -34, 13, ['#8f8775', '#a98f62', '#7c8b8f'][i % 3]);
+      path(g, 'M0 -20V14M-14 -6L0 -16L14 -6', { stroke: '#8f8775', 'stroke-width': 5 });
+      put(g, { o: 0 }); tw(g, { o: 1 }, .1 + i * .01, .4);
+      return g;
+    });
+    // the bare axon and its pulse, matched to the crowd
+    const A = path(p, 'M120 360H1480', { stroke: EV.gold, 'stroke-width': 8 }, { d: 0 }); draw(A, .1, .8);
+    const pulseX = t => 120 + ((t - m('wave') + .2) * 220) % 1500;
+    const gl = G(p, { o: 0 }); evGlow(gl, 0, 0, 44, 'Gold', 1); evDot(gl, 0, 0, 12, EV.goldHi);
+    prog(q => {
+      const t = q * D, on = t > m('wave') - .2 && t < m('myelin');
+      const x = pulseX(t);
+      put(gl, { x, y: 360, o: on && x < 1480 ? 1 : 0 });
+      crowd.forEach((g, i) => { const dx = (150 + i * 52) - x, k = on ? Math.exp(-dx * dx / 3000) : 0; put(g, { y: 210 - 34 * k, s: 1 + .12 * k }); });
+    }, 0, D, lin);
+    lab(p, 'bare', 120, 430, m('speed') - .2, { size: 30, fill: EV.ink, anchor: 'start' });
+    const sl = lab(p, 'bareSpeed', 1480, 430, m('speed'), { size: 32, fill: EV.gold, weight: 600, anchor: 'end' });
+    lab(p, 'walk', 1480, 472, m('speed') + .7, { size: 26, fill: EV.dim, italic: true, anchor: 'end' });
+    // myelinated axon below
+    const Y2 = 640;
+    const my = G(p, { o: 0 });
+    path(my, `M120 ${Y2}H1480`, { stroke: EV.gold, 'stroke-width': 8 });
+    const nodes = [];
+    for (let x = 140; x < 1440; x += 150) { mk('rect', { x, y: Y2 - 22, width: 128, height: 44, rx: 22, fill: '#e9e2d0', opacity: .85, stroke: EV.calm, 'stroke-width': 2 }, my); nodes.push(x + 139); }
+    tw(my, { o: 1 }, m('myelin'), .7);
+    crowd.forEach(g => tw(g, { o: .25 }, m('myelin'), .5)); tw(A, { o: .35 }, m('myelin'), .5);
+    lab(p, 'myelinL', 120, Y2 - 50, m('myelin') + .4, { size: 32, fill: EV.calm, anchor: 'start', weight: 600 });
+    // the signal leaps node to node
+    const jp = G(p, { o: 0 }); evGlow(jp, 0, 0, 40, 'calm', 1); evDot(jp, 0, 0, 12, '#e9fff1');
+    const arcs = G(p);
+    prog(q => {
+      const t = q * D - m('jump'); if (t < 0) return put(jp, { x: 0, y: 0, o: 0 });
+      const per = 1.6, k = (t % per) / per, f = k * nodes.length, i = Math.floor(f), u = f - i;
+      const xa = i ? nodes[i - 1] : 120, xb = nodes[Math.min(i, nodes.length - 1)];
+      put(jp, { x: n3Lerp(xa, xb, u), y: Y2 - Math.sin(u * Math.PI) * 50, o: 1 });
+    }, 0, D, lin);
+    lab(p, 'myelinSpeed', 1480, Y2 - 50, m('jump') + .3, { size: 34, fill: EV.calm, weight: 600, anchor: 'end' });
+    // the bullet train, left behind
+    const tr = G(p, { x: -300, y: 820, o: 0 });
+    path(tr, 'M-160 0V-40Q-160 -56 -140 -56H60Q130 -56 170 -10L180 0Z', { fill: '#cfd6d8', stroke: EV.gold, 'stroke-width': 2 });
+    path(tr, 'M-140 -42H40', { stroke: '#2b3a44', 'stroke-width': 12 });
+    evText(tr, L('train'), { x: 0, y: 40, size: 26, fill: EV.dim });
+    tw(tr, { o: 1 }, m('jump') + 2.2, .3);
+    tw(tr, { x: 1900 }, m('jump') + 2.2, Math.max(2, D - m('jump') - 2.4), lin);
+  }],
+
+  ['synapse', 'b_syn', (m, D) => {
+    const p = panel(0);
+    const CY = 430;
+    // the receiving side: a dendrite's edge, receptors facing the gap
+    const post = evCell(p, { x: 790 + 1000, y: CY, r: 1000, n: 7, a0: 168, a1: 192, nucleus: false, o: 0 });
+    tw(post, { o: 1 }, .1, .5);
+    // the sending terminal
+    const pre = G(p, { o: 0 });
+    path(pre, `M0 ${CY - 40}H360C520 ${CY - 230} 740 ${CY - 200} 740 ${CY}C740 ${CY + 200} 520 ${CY + 230} 360 ${CY + 40}H0Z`, { fill: '#141c20', stroke: EV.gold, 'stroke-width': 3.5 });
+    tw(pre, { o: 1 }, .1, .5);
+    const ves = [[560, CY - 110], [620, CY - 30], [640, CY + 70], [520, CY + 20], [470, CY - 60], [540, CY + 120]].map(([x, y], i) => {
+      const g = G(p, { x, y, o: 0 });
+      mk('circle', { cx: 0, cy: 0, r: 30, fill: '#1d2428', stroke: EV.joy, 'stroke-width': 2.5 }, g);
+      for (let k = 0; k < 5; k++) evDot(g, Math.cos(k * 1.3) * 14, Math.sin(k * 1.3) * 14, 5, EV.joy);
+      tw(g, { o: 1 }, m('ves') + i * .12, .4);
+      return g;
+    });
+    lab(p, 'ntL', 470, CY + 300, m('ves') + .6, { size: 30, fill: EV.joy });
+    // the gap
+    const gp = G(p, { o: 0 });
+    const band = mk('rect', { x: 744, y: CY - 190, width: 44, height: 380, rx: 18, fill: EV.gold, opacity: .16 }, gp);
+    path(gp, `M766 ${CY - 196}L742 ${CY - 250}`, { stroke: EV.gold, 'stroke-width': 2 });
+    evText(gp, L('synapseL'), { x: 735, y: CY - 262, size: 40, fill: EV.gold, weight: 600, font: SERIF, anchor: 'end' });
+    evText(gp, L('thinGap'), { x: 735, y: CY - 316, size: 28, fill: EV.dim, italic: true, maxW: 640, anchor: 'end' });
+    tw(gp, { o: 1 }, m('gap'), .5); tw(band, { a_opacity: .38 }, m('gap') + .6, .3); tw(band, { a_opacity: .16 }, m('gap') + 1, .6);
+    lab(p, 'receptorsL', 1180, CY + 300, m('dock') + .5, { size: 30, fill: EV.gold });
+    // the electric signal arrives along the axon
+    const sp = G(p, { o: 0 }); evGlow(sp, 0, 0, 50, 'Gold', 1); evDot(sp, 0, 0, 13, EV.goldHi);
+    prog(q => { const t = q * D, u = (t - (m('burst') - 1)) / 1; put(sp, { x: n3Lerp(0, 600, Math.max(0, Math.min(1, u))), y: CY, o: u > 0 && u < 1.2 ? Math.min(1, (1.2 - u) * 5) : 0 }); }, 0, D, lin);
+    // vesicles fuse, molecules spill and dock
+    const fuse = [1, 2, 0];
+    fuse.forEach((vi, j) => { const v = ves[vi]; tw(v, { x: 712, y: CY - 50 + j * 50 }, m('burst') + j * .2, .5, io); tw(v, { s: .3, o: 0 }, m('burst') + .5 + j * .2, .35); });
+    const rec = post._rec;
+    const mols = Array.from({ length: 14 }, (_, i) => {
+      const d = evDot(p, 0, 0, 7, EV.joy, 0), r = rec[i % rec.length], ry = CY + Math.sin(r.a * Math.PI / 180) * 1000 * 1 + 0;
+      const tx = 790 + 1000 + Math.cos(r.a * Math.PI / 180) * 1018, ty = CY + Math.sin(r.a * Math.PI / 180) * 1018;
+      const sx = 735, sy = CY - 50 + (i % 3) * 50, t0 = m('burst') + .55 + (i % 3) * .2, dock = i < rec.length;
+      prog(q => {
+        const t = q * D, u = (t - t0) / Math.max(.6, m('dock') + .4 + i * .05 - t0);
+        if (u < 0) return put(d, { x: 0, y: 0, o: 0 });
+        const k = Math.min(1, u), wob = Math.sin(t * 5 + i) * 8 * (1 - k);
+        const ex = dock ? tx : 760 + (i % 4) * 4, ey = dock ? ty : sy + Math.sin(i) * 120;
+        put(d, { x: n3Lerp(sx, ex, k) + wob, y: n3Lerp(sy, ey, k) + wob * .6, o: dock || k < 1 ? 1 : .5 });
+      }, 0, D, lin);
+      return d;
+    });
+    rec.forEach((r, i) => { tw(r.cup, { c_stroke: '#ffffff' }, m('dock') + .4 + i * .05, .12); tw(r.cup, { c_stroke: EV.gold }, m('dock') + .6 + i * .05, .4); });
+    // and the next cell fires
+    const sp2 = G(p, { o: 0 }); evGlow(sp2, 0, 0, 50, 'calm', 1); evDot(sp2, 0, 0, 13, '#e9fff1');
+    prog(q => { const t = q * D, u = (t - m('again') - .1) / 1.2; put(sp2, { x: n3Lerp(830, 1560, Math.max(0, Math.min(1, u))), y: CY, o: u > 0 && u < 1 ? 1 : 0 }); }, 0, D, lin);
+    const glo = evGlow(p, 900, CY, 180, 'calm', 0); tw(glo, { o: .7 }, m('again'), .4); tw(glo, { o: 0 }, m('again') + 1.2, .8);
+    const ee = [['electric', 300, EV.goldHi], ['chemical', 800, EV.joy], ['electric2', 1300, EV.calm]];
+    const eb = mk('rect', { x: 180, y: 780, width: 1240, height: 76, rx: 38, fill: EV.bg, opacity: 0 }, p); tw(eb, { a_opacity: .88 }, m('again') + 1.2, .4);
+    ee.forEach(([k, x, c], i) => lab(p, k, x, 830, m('again') + 1.4 + i * .9, { size: 40, fill: c, weight: 600, font: SERIF }));
+    [550, 1050].forEach((x, i) => { const a = lab(p, null, x, 828, m('again') + 1.9 + i * .9, { size: 40, fill: EV.dim }); a.textContent = '→'; });
+  }],
+
+  ['gostop', 'b_go', (m, D) => {
+    const p = panel(0);
+    const SX = 820, SY = 450;
+    // the receiving neuron
+    const soma = G(p, { x: SX, y: SY, o: 0 });
+    path(soma, 'M-70 -10C-72 -52 -28 -78 12 -72C50 -66 84 -34 78 0C84 34 50 66 12 72C-28 78 -72 52 -70 10Z', { fill: '#141c20', stroke: EV.gold, 'stroke-width': 4 });
+    mk('circle', { cx: 4, cy: 0, r: 24, fill: '#2b2a36', stroke: EV.shame, 'stroke-width': 2 }, soma);
+    const axn = path(p, `M${SX + 78} ${SY}C1000 ${SY - 20} 1100 ${SY + 20} 1180 ${SY}`, { stroke: EV.gold, 'stroke-width': 6 });
+    put(axn, { o: 0 });
+    tw(soma, { o: 1 }, .1, .5); tw(axn, { o: 1 }, .2, .5);
+    // the tally meter
+    const MX = 1370, MT = 230, MB = 670, MTH = 340;
+    const mt = G(p, { o: 0 });
+    mk('rect', { x: MX - 26, y: MT, width: 52, height: MB - MT, rx: 14, fill: 'none', stroke: EV.dim, 'stroke-width': 2 }, mt);
+    path(mt, `M${MX - 50} ${MTH}H${MX + 50}`, { stroke: EV.anger, 'stroke-width': 3, 'stroke-dasharray': '8 8' });
+    evText(mt, L('thresholdL'), { x: MX - 46, y: MTH - 12, size: 26, fill: EV.anger, anchor: 'end', maxW: 200 });
+    const lvl = mk('rect', { x: MX - 20, y: MB - 4, width: 40, height: 0, rx: 10, fill: EV.gold }, mt);
+    tw(mt, { o: 1 }, .3, .5);
+    // inputs from the left
+    const lines = Array.from({ length: 10 }, (_, i) => {
+      const y = 190 + i * 58, go = i % 3 !== 1;
+      const e = path(p, `M360 ${y}C520 ${y} 640 ${SY + (y - SY) * .3} ${SX - 66} ${SY + (y - SY) * .12}`, { stroke: go ? EV.calm : EV.anger, 'stroke-width': 3, opacity: .55 }, { d: 0 });
+      return { e, go, y };
+    });
+    const tg = G(p, { x: 220, y: 260, o: 0 }); evText(tg, L('glutamate'), { x: 0, y: 0, size: 38, fill: EV.calm, weight: 600, font: SERIF, maxW: 300 }); evText(tg, L('goL'), { x: 0, y: 44, size: 30, fill: EV.ink, maxW: 300 });
+    const sg = G(p, { x: 220, y: 640, o: 0 }); evText(sg, L('gaba'), { x: 0, y: 0, size: 38, fill: EV.anger, weight: 600, font: SERIF, maxW: 300 }); evText(sg, L('stopL'), { x: 0, y: 44, size: 30, fill: EV.ink, maxW: 300 });
+    tw(tg, { o: 1 }, m('glu'), .5); tw(sg, { o: 1 }, m('gaba'), .5);
+    const goL = lines.filter(l => l.go), stL = lines.filter(l => !l.go);
+    draw(goL[0].e, m('glu') + .2, .6); evFlow(goL[0].e, 4, EV.calm, m('glu') + .4, D - m('glu'), { speed: .5, r: 7, parent: p });
+    draw(stL[0].e, m('gaba') + .2, .6); evFlow(stL[0].e, 4, EV.anger, m('gaba') + .4, D - m('gaba'), { speed: .5, r: 7, parent: p });
+    lines.forEach((l, i) => { if (l !== goL[0] && l !== stL[0]) { draw(l.e, m('sum') + i * .1, .5); evFlow(l.e, 3, l.go ? EV.calm : EV.anger, m('sum') + .3 + i * .1, D - m('sum'), { speed: .45 + (i % 3) * .08, r: 6, parent: p }); } });
+    lab(p, 'seizure', 60, 760, m('gaba') + 3, { size: 26, fill: EV.dim, italic: true, anchor: 'start', maxW: 420 });
+    lab(p, 'vote', SX, SY + 140, m('sum') + .6, { size: 30, fill: EV.ink, maxW: 420 });
+    // the level: up with go, down with stop, jiggling with the vote, then over the line
+    const level = t => {
+      let v = 0;
+      if (t > m('glu') + .8) v += .35 * soft(Math.min(1, (t - m('glu') - .8) / 1.2));
+      if (t > m('gaba') + .8) v -= .25 * soft(Math.min(1, (t - m('gaba') - .8) / 1.2));
+      if (t > m('sum') + .8 && t < m('fire')) v += .1 * Math.sin((t - m('sum')) * 4) + .1;
+      if (t >= m('fire')) v = .2 + .72 * soft(Math.min(1, (t - m('fire')) / 1.2));
+      return Math.max(0, v);
+    };
+    const fired = m('fire') + 1.2;
+    prog(q => { const t = q * D, h = level(t) * (MB - MT - 8); lvl.setAttribute('height', h); lvl.setAttribute('y', MB - 4 - h); lvl.setAttribute('fill', t > fired ? EV.goldHi : EV.gold); }, 0, D, lin);
+    // fire: a pulse down the axon
+    const sp = G(p, { o: 0 }); evGlow(sp, 0, 0, 46, 'Gold', 1); evDot(sp, 0, 0, 12, EV.goldHi);
+    prog(q => { const t = q * D - fired; if (t < 0) return put(sp, { x: 0, y: 0, o: 0 }); const k = (t % 1.4) / .9; const pt = axn.getPointAtLength(Math.min(1, k) * axn.getTotalLength()); put(sp, { x: pt.x, y: pt.y, o: k < 1 ? 1 : 0 }); }, 0, D, lin);
+    pulse(soma, fired, 1.12);
+    lab(p, 'firesL', 1180, SY - 40, fired + .2, { size: 40, fill: EV.goldHi, weight: 600, font: SERIF });
+  }],
+
+  ['q2', 'b_go', (m, D) => {
+    const p = panel(0);
+    const SX = 800, SY = 300;
+    const soma = G(p, { x: SX, y: SY });
+    path(soma, 'M-60 -10C-62 -46 -24 -66 10 -62C44 -56 72 -30 66 0C72 30 44 56 10 62C-24 66 -62 46 -60 10Z', { fill: '#141c20', stroke: EV.gold, 'stroke-width': 4 });
+    for (let i = 0; i < 8; i++) {
+      const y = 120 + i * 52, go = i % 3 !== 1;
+      const e = path(p, `M420 ${y}C560 ${y} 640 ${SY + (y - SY) * .3} ${SX - 58} ${SY + (y - SY) * .12}`, { stroke: go ? EV.calm : EV.anger, 'stroke-width': 3, opacity: .55 });
+      evFlow(e, 3, go ? EV.calm : EV.anger, .2, D + 40, { speed: .4, r: 6, parent: p });
+    }
+    evText(p, L('goL'), { x: 330, y: 200, size: 38, fill: EV.calm, weight: 600 });
+    evText(p, L('stopL'), { x: 330, y: 470, size: 38, fill: EV.anger, weight: 600 });
+    path(p, `M${SX + 66} ${SY}H1150`, { stroke: EV.gold, 'stroke-width': 6 });
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-gostop', prompt: [L('q2p')],
+    build: grid([
+      { parts: [L('q2r1')], ans: ['go'], why: L('q2w1') },
+      { parts: [L('q2r2')], ans: ['stop'], why: L('q2w2') },
+      { parts: [L('q2r3')], ans: ['go'], why: L('q2w3') },
+      { parts: [L('q2r4')], ans: ['stop'], why: L('q2w4') },
+    ], [['go', L('goL'), EV.calm, 'G'], ['stop', L('stopL'), EV.anger, 'S']], { multi: false, text: true }),
+  }], done) }],
+
+  ['networks', 'b_net', (m, D) => {
+    const p = panel(0);
+    // divergence: one to many
+    const dv = G(p);
+    const src = [300, 450];
+    const fan = Array.from({ length: 11 }, (_, i) => [680, 150 + i * 60]);
+    const s0 = G(dv, { x: src[0], y: src[1] }); evGlow(s0, 0, 0, 70, 'Gold', .6); evDot(s0, 0, 0, 20, EV.goldHi);
+    const fl = fan.map(([x, y], i) => {
+      const e = path(dv, `M${src[0]} ${src[1]}C450 ${src[1]} 520 ${y} ${x} ${y}`, { stroke: EV.gold, 'stroke-width': 2.5, opacity: .6 }, { d: 0 });
+      draw(e, m('div') + i * .06, .6);
+      const n = evDot(dv, x, y, 10, EV.gold, 0); tw(n, { o: 1 }, m('div') + .4 + i * .06, .3);
+      evFlow(e, 2, EV.goldHi, m('div') + .6, D - m('div'), { speed: .45, r: 5, parent: dv });
+      return e;
+    });
+    // a phone forwarding, beside the source
+    const ph = G(dv, { x: 300, y: 300, o: 0 });
+    mk('rect', { x: -30, y: -52, width: 60, height: 104, rx: 10, fill: '#1d2428', stroke: EV.gold, 'stroke-width': 2.5 }, ph);
+    path(ph, 'M-12 -6H8L2 -14M8 -6L2 2', { stroke: EV.calm, 'stroke-width': 4 });
+    tw(ph, { o: 1 }, m('div') + 2, .4); pulse(ph, m('div') + 2.6, 1.2);
+    put(s0, { o: 0 }); tw(s0, { o: 1 }, .1, .5);
+    lab(dv, 'divergence', 300, 590, m('div') + .4, { size: 38, fill: EV.gold, weight: 600, font: SERIF });
+    lab(dv, 'divD', 300, 634, m('div') + .9, { size: 28, fill: EV.dim, italic: true });
+    // convergence: many to one
+    const cv = G(p);
+    const dst = [1300, 450];
+    const ins = Array.from({ length: 11 }, (_, i) => [920, 150 + i * 60]);
+    const d0 = G(cv, { x: dst[0], y: dst[1], o: 0 }); evGlow(d0, 0, 0, 70, 'calm', .6); evDot(d0, 0, 0, 20, '#e9fff1');
+    ins.forEach(([x, y], i) => {
+      const n = evDot(cv, x, y, 10, EV.calm, 0); tw(n, { o: 1 }, m('conv') + i * .06, .3);
+      const e = path(cv, `M${x} ${y}C1080 ${y} 1150 ${dst[1]} ${dst[0]} ${dst[1]}`, { stroke: EV.calm, 'stroke-width': 2.5, opacity: .6 }, { d: 0 });
+      draw(e, m('conv') + .3 + i * .06, .6);
+      evFlow(e, 2, '#e9fff1', m('conv') + .6, D - m('conv'), { speed: .45, r: 5, parent: cv });
+    });
+    tw(d0, { o: 1 }, m('conv') + .9, .4); pulse(d0, m('conv') + 2, 1.3);
+    lab(cv, 'convergence', 1300, 590, m('conv') + .4, { size: 38, fill: EV.calm, weight: 600, font: SERIF });
+    lab(cv, 'convD', 1300, 634, m('conv') + .9, { size: 28, fill: EV.dim, italic: true });
+    // the web: links that strengthen and weaken with use
+    const q2 = n3Later(m('web'));
+    tw(dv, { o: 0 }, m('web'), .4); tw(cv, { o: 0 }, m('web'), .4);
+    const rnd = n3Rand(31), C = [1000, 470];
+    const nodes = Array.from({ length: 40 }, (_, i) => { const a = i * 2.39996, r = 50 + Math.sqrt(i / 40) * 330; return [C[0] + Math.cos(a) * r * 1.25, C[1] + Math.sin(a) * r * .9]; });
+    const bout = G(q2, { x: C[0], y: C[1], o: 0, s: 1.75 });
+    path(bout, BRAIN_D, { stroke: EV.gold, 'stroke-width': 2, opacity: .4 });
+    const edges = [];
+    nodes.forEach((a, i) => nodes.forEach((b, j) => {
+      if (j <= i) return;
+      const d = Math.hypot(a[0] - b[0], a[1] - b[1]);
+      if (d < 150) edges.push({ i, j, e: path(q2, `M${a[0].toFixed(1)} ${a[1].toFixed(1)}L${b[0].toFixed(1)} ${b[1].toFixed(1)}`, { stroke: EV.goldHi, 'stroke-width': 2 }, { d: 0 }), ph: rnd() * 6, f: .6 + rnd() });
+    }));
+    const nd = nodes.map(([x, y], i) => evDot(q2, x, y, 7, EV.goldHi, 0));
+    const early = i => i < 18, tm = i => early(i) ? .1 + i * .04 : m('more') - m('web') + (i - 18) * .05;
+    nd.forEach((n, i) => tw(n, { o: 1 }, m('web') + tm(i), .3));
+    edges.forEach(E => draw(E.e, m('web') + Math.max(tm(E.i), tm(E.j)) + .2, .5));
+    prog(q => { const t = q * D; edges.forEach(E => E.e.setAttribute('stroke-width', (1.2 + 2.8 * (.5 + .5 * Math.sin(t * E.f + E.ph))).toFixed(2))); }, m('web'), D - m('web'), lin);
+    lab(q2, 'useChanges', 900, 105, m('web') + .4, { size: 30, fill: EV.ink, italic: true, maxW: 860 });
+    // a jellyfish's simple nerve net
+    const jf = G(q2, { x: 250, y: 380, o: 0 });
+    path(jf, 'M-110 0C-110 -90 110 -90 110 0Q80 -14 55 0Q28 -14 0 0Q-28 -14 -55 0Q-80 -14 -110 0Z', { fill: '#1f2a3a', stroke: EV.fear, 'stroke-width': 3 });
+    const net = path(jf, 'M-80 -14L-40 -50L0 -62L40 -50L80 -14M-40 -50L-30 -8M40 -50L30 -8M0 -62L0 -6M-80 -14L-30 -8L30 -8L80 -14', { stroke: EV.fear, 'stroke-width': 2, opacity: .8 }, { d: 0 });
+    const tent = [-80, -40, 0, 40, 80].map((x, i) => path(jf, `M${x} 0q-12 40 0 80q12 40 0 80`, { stroke: EV.fear, 'stroke-width': 2.5, opacity: .7 }));
+    prog(q => { const t = q * D; put(jf, { y: 380 + Math.sin(t * 1.3) * 14 }); tent.forEach((e, i) => put(e, { r: Math.sin(t * 1.6 + i) * 6 })); }, 0, D, lin);
+    tw(jf, { o: 1 }, m('jelly'), .5); draw(net, m('jelly') + .4, 1);
+    lab(q2, 'firstNets', 250, 640, m('jelly') + .5, { size: 30, fill: EV.fear, maxW: 380 });
+    const arr = path(q2, 'M400 380C480 340 520 340 580 380', { stroke: EV.ink, 'stroke-width': 3 }, { d: 0 }); draw(arr, m('more'), .5); headAt(q2, arr, EV.ink, m('more') + .45);
+    tw(bout, { o: 1 }, m('more') + .4, 1);
+    lab(q2, 'moreWired', C[0], 860, m('more') + .8, { size: 30, fill: EV.gold, maxW: 1000 });
+  }],
+
+  ['glia', 'b_glia', (m, D) => {
+    const p = panel(0);
+    // a blood vessel along the top
+    const ves = G(p, { o: 0 });
+    path(ves, 'M0 120C300 100 600 140 900 118C1200 96 1400 128 1600 112', { stroke: '#7a2c2c', 'stroke-width': 46 });
+    path(ves, 'M0 120C300 100 600 140 900 118C1200 96 1400 128 1600 112', { stroke: '#a63e3e', 'stroke-width': 30 });
+    evText(ves, L('vessel'), { x: 160, y: 70, size: 26, fill: EV.dim, anchor: 'start' });
+    tw(ves, { o: 1 }, .1, .5);
+    const N = n3Neuron(p, { x: 420, y: 500, s: .9, len: 900, seed: 13, o: 0 });
+    tw(N, { o: 1 }, .1, .6);
+    n3Spark(N, .8, D, { every: 2.6, travel: 1.4 });
+    // myelin makers: a cell above the axon whose arms wrap segments
+    const ol = G(p, { o: 0 });
+    const OX = 980, OY = 300;
+    const segX = [700, 860, 1020, 1180];
+    segX.forEach(x => { path(ol, `M${OX} ${OY + 20}Q${(OX + x) / 2} ${OY + 60} ${x + 60} 480`, { stroke: EV.calm, 'stroke-width': 3, opacity: .6 }); });
+    mk('circle', { cx: OX, cy: OY, r: 30, fill: '#1c2c24', stroke: EV.calm, 'stroke-width': 3 }, ol);
+    const sheaths = segX.map((x, i) => {
+      const s = mk('rect', { x: 0, y: -18, width: 120, height: 36, rx: 18, fill: '#e9e2d0', opacity: .85, stroke: EV.calm, 'stroke-width': 2 }, p);
+      const ax = N._axon, L_ = ax.getTotalLength();
+      // place each sheath on the axon (axon in neuron space: x 44..900, scaled .9 from 420)
+      const pt = ax.getPointAtLength(L_ * (.38 + i * .16));
+      put(s, { x: 420 + pt.x * .9 - 60, y: 500 + pt.y * .9, o: 0 });
+      tw(s, { o: 1 }, m('myel') + .5 + i * .25, .4);
+      return s;
+    });
+    tw(ol, { o: 1 }, m('myel'), .5);
+    lab(p, 'oligo', OX, OY - 50, m('myel') + .3, { size: 30, fill: EV.calm, maxW: 420 });
+    // astrocyte: a star between vessel and synapses
+    const as = G(p, { x: 600, y: 270, o: 0 });
+    for (let k = 0; k < 9; k++) { const a = k * 40 * Math.PI / 180, r = 70 + (k % 3) * 18; path(as, `M0 0Q${Math.cos(a + .4) * r * .5} ${Math.sin(a + .4) * r * .5} ${Math.cos(a) * r} ${Math.sin(a) * r}`, { stroke: EV.joy, 'stroke-width': 5 }); }
+    path(as, 'M0 0C10 -60 20 -100 30 -130', { stroke: EV.joy, 'stroke-width': 6 });
+    mk('circle', { cx: 0, cy: 0, r: 22, fill: '#2a2618', stroke: EV.joy, 'stroke-width': 3 }, as);
+    tw(as, { o: 1 }, m('astro'), .5);
+    const feed = path(p, 'M630 135C620 180 610 220 600 270C585 330 520 410 455 470', { stroke: 'none' });
+    evFlow(feed, 5, EV.joy, m('astro') + .5, D - m('astro'), { speed: .4, r: 6, parent: p });
+    lab(p, 'astro', 470, 220, m('astro') + .3, { size: 32, fill: EV.joy, weight: 600, anchor: 'end', maxW: 320 });
+    lab(p, 'astroD', 470, 260, m('astro') + .8, { size: 28, fill: EV.dim, anchor: 'end', maxW: 320 });
+    // microglia: a roaming cleaner that eats debris and snips a faint link
+    const deb = [[980, 720], [1100, 760], [1230, 700], [1350, 740]].map(([x, y]) => { const d = evDot(p, x, y, 7, '#6f6a5c', 0); tw(d, { o: 1 }, m('micro') - .2, .3); return d; });
+    const weak = path(p, 'M1390 520C1400 600 1380 660 1420 720', { stroke: EV.gold, 'stroke-width': 2, opacity: .35, 'stroke-dasharray': '6 6' });
+    const mg = G(p, { x: 900, y: 760, o: 0 });
+    for (let k = 0; k < 7; k++) { const a = k * 51 * Math.PI / 180; path(mg, `M0 0L${Math.cos(a) * 40} ${Math.sin(a) * 34}L${Math.cos(a + .3) * 52} ${Math.sin(a + .3) * 44}`, { stroke: EV.love, 'stroke-width': 3 }); }
+    mk('ellipse', { cx: 0, cy: 0, rx: 26, ry: 20, fill: '#2a1a20', stroke: EV.love, 'stroke-width': 3 }, mg);
+    tw(mg, { o: 1 }, m('micro'), .4);
+    const mx = t => 900 + Math.max(0, t - m('micro')) * 110;
+    prog(q => { const t = q * D; const x = Math.min(1400, mx(t)); put(mg, { x, y: 760 + Math.sin(t * 3) * 10 - Math.max(0, x - 1350) * .8, r: Math.sin(t * 2) * 8 }); }, 0, D, lin);
+    deb.forEach((d, i) => { const x = [980, 1100, 1230, 1350][i]; tw(d, { o: 0, s: .3 }, m('micro') + (x - 900) / 110, .3); });
+    tw(weak, { o: 0 }, m('micro') + 4.6, .5);
+    lab(p, 'micro', 1050, 630, m('micro') + .3, { size: 32, fill: EV.love, weight: 600, maxW: 360 });
+    lab(p, 'microD', 1050, 668, m('micro') + .8, { size: 28, fill: EV.dim, maxW: 360 });
+    // teamwork
+    const tg = evGlow(p, 800, 470, 600, 'Gold', 0); p.insertBefore(tg, p.firstChild); tw(tg, { o: .6 }, m('team'), 1);
+    lab(p, 'teamwork', 620, 700, m('team') + .4, { size: 52, fill: EV.gold, weight: 600, font: SERIF });
+  }],
+
+  ['reach', 'b_reach', (m, D) => {
+    const p = panel(0);
+    const P = n3TeaScene(p, D);
+    put(P.br, { o: 0 }); tw(P.br, { o: 1 }, .1, .6);
+    const steps = [['vis', 'see', 'r1'], ['know', 'know', 'r2'], ['plan', 'plan', 'r3'], ['move', 'move', 'r4'], ['smooth', 'smooth', 'r5'], ['feel', 'feel', 'r6']];
+    const caps = steps.map(([k, mk_, rk], i) => {
+      const t = m(mk_);
+      tw(P.glow[k], { o: 1 }, t, .5); tw(P.glow[k], { o: .35 }, (i < 5 ? m(steps[i + 1][1]) : D) - .1, .6);
+      tw(P.num[k], { o: 1 }, t + .1, .4); pulse(P.num[k], t + .4, 1.3);
+      const c = evText(p, L(rk), { x: 1130, y: 852, size: 38, fill: P.cols[k], weight: 600, o: 0, maxW: 880 });
+      show(c, t + .1, .3); if (i < 5) hide(c, m(steps[i + 1][1]) - .1, .25);
+      return c;
+    });
+    draw(P.strip, m('move') + .1, .7);
+    // sight lines from the glass to her eyes
+    const eye = path(p, 'M520 540L360 445', { stroke: EV.fear, 'stroke-width': 2.5, 'stroke-dasharray': '8 8', opacity: .8 }, { d: 0 });
+    draw(eye, m('see') - .1, .5); tw(eye, { o: 0 }, m('know'), .5);
+    // the reach
+    evMood(P.lee, 'smile', m('know') + .3);
+    evArm(P.lee, 1, -72, -12, m('move') + .3, 1.1);
+    tw(P.glass, { y: 590, x: 552 }, m('feel') - .2, .6);
+    const wm = evGlow(p, 535, 540, 60, 'Warm', 0); tw(wm, { o: .9 }, m('feel'), .5);
+    tw(caps[5], { o: 0 }, m('none') - .1, .3);
+    lab(p, 'underSec', 1130, 852, m('none') + .1, { size: 38, fill: EV.gold, font: SERIF, italic: true, maxW: 880 });
+    Object.values(P.glow).forEach(g => tw(g, { o: .8 }, m('none') + .3, .5));
+  }],
+
+  ['q3', 'b_reach', (m, D) => {
+    const p = panel(0);
+    const P = n3TeaScene(p, D);
+    evArm(P.lee, 1, -72, -12, 0, .01); put(P.glass, { x: 552, y: 590 });
+    Object.values(P.num).forEach(n => put(n, { o: 1 }));
+    put(P.strip, { d: 1 });
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+    put(P.br, { y: 300, s: 1.05 });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-cerebellum', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 1, L('q3y'), [L('q3na'), null, L('q3nc')]),
+  }], done) }],
+
+  ['system', 'b_sys', (m, D) => {
+    const p = panel(0);
+    const BX = 520;
+    const bd = evBody(p, { x: BX, y: 500, s: 1.45, o: 0 });
+    tw(bd, { o: 1 }, .1, .6);
+    const br = evBrain(p, { x: BX, y: 196, s: .16, stem: false, o: 0 });
+    const cord = path(p, `M${BX} 225V560`, { stroke: EV.gold, 'stroke-width': 7 }, { d: 0 });
+    tw(br, { o: 1 }, .3, .5); draw(cord, .4, .9);
+    const cg = evGlow(p, BX, 380, 200, 'Gold', 0); p.insertBefore(cg, bd); tw(cg, { o: .8 }, m('cns'), .6);
+    const rows = [];
+    const row = (key, y, t, c, w = 580) => { const e = lab(p, key, 900, y, t, { size: 32, fill: c, anchor: 'start', maxW: w }); rows.push(e); return e; };
+    row('cnsL', 200, m('cns') + .2, EV.gold);
+    // traffic up and down the cord
+    const up = path(p, `M${BX + 8} 560V230`, { stroke: 'none' }), dn = path(p, `M${BX - 8} 230V560`, { stroke: 'none' });
+    evFlow(up, 4, EV.fear, m('cord'), D - m('cord'), { speed: .5, r: 6, parent: p });
+    evFlow(dn, 4, EV.calm, m('cord'), D - m('cord'), { speed: .5, r: 6, parent: p });
+    row('trunk', 248, m('cord') + .3, EV.dim);
+    // peripheral nerves
+    const nerves = [
+      `M${BX} 310C${BX - 50} 300 ${BX - 110} 330 ${BX - 125} 380L${BX - 142} 505`, `M${BX} 310C${BX + 50} 300 ${BX + 110} 330 ${BX + 125} 380L${BX + 142} 505`,
+      `M${BX} 560C${BX - 20} 600 ${BX - 35} 640 ${BX - 42} 700L${BX - 58} 810`, `M${BX} 560C${BX + 20} 600 ${BX + 35} 640 ${BX + 42} 700L${BX + 58} 810`,
+      `M${BX} 380L${BX - 50} 410`, `M${BX} 380L${BX + 50} 410`, `M${BX} 450L${BX - 45} 480`, `M${BX} 450L${BX + 45} 480`,
+    ].map((d, i) => { const e = path(p, d, { stroke: EV.calm, 'stroke-width': 3.5 }, { d: 0 }); draw(e, m('pns') + (i % 4) * .15, .9); return e; });
+    row('pnsL', 340, m('pns') + .3, EV.calm);
+    // cranial nerves: short lines from the brain to the face
+    const cr = [[-24, 16, -40, 34], [24, 16, 40, 34], [-12, 22, -16, 46], [12, 22, 16, 46]].map(([a, b, c, d], i) => { const e = path(p, `M${BX + a} ${196 + b}L${BX + c} ${196 + d}`, { stroke: EV.shame, 'stroke-width': 3 }, { d: 0 }); draw(e, m('cranial') + i * .15, .4); return e; });
+    const crg = evGlow(p, BX, 210, 70, 'shame', 0); tw(crg, { o: 1 }, m('cranial'), .4); tw(crg, { o: .3 }, m('spinal'), .5);
+    row('cranialL', 430, m('cranial') + .2, EV.shame);
+    // spinal pairs along the cord
+    for (let i = 0; i < 11; i++) { const y = 290 + i * 25; const e = path(p, `M${BX - 6} ${y}L${BX - 26} ${y + 8}M${BX + 6} ${y}L${BX + 26} ${y + 8}`, { stroke: EV.calm, 'stroke-width': 3 }, { d: 0 }); draw(e, m('spinal') + i * .08, .3); }
+    row('spinalL', 520, m('spinal') + .2, EV.calm);
+    // reflex: hand on a hot pan
+    const tw_ = G(p, { x: BX + 210, y: 540, o: 0 });
+    mk('ellipse', { cx: 0, cy: 0, rx: 60, ry: 18, fill: '#2a2a2a', stroke: EV.dim, 'stroke-width': 2 }, tw_);
+    path(tw_, 'M60 0H130', { stroke: '#4a3d2c', 'stroke-width': 10 });
+    const hv = [0, 1, 2].map(i => path(tw_, `M${-24 + i * 24} -28q-6 -10 0 -20q6 -10 0 -20`, { stroke: EV.anger, 'stroke-width': 3 }));
+    prog(q => { const t = q * D; hv.forEach((e, i) => put(e, { y: -((t * 18 + i * 8) % 20) })); }, 0, D, lin);
+    tw(tw_, { o: 1 }, m('reflex') - .3, .4);
+    const hot = lab(p, 'hot', BX + 290, 470, m('reflex') + .4, { size: 30, fill: EV.anger, weight: 600 });
+    const hand = evGlow(p, BX + 142, 510, 40, 'anger', 0); tw(hand, { o: 1 }, m('reflex') + .3, .3);
+    const arc = path(p, `M${BX + 142} 505L${BX + 125} 380C${BX + 110} 330 ${BX + 50} 300 ${BX + 6} 310`, { stroke: 'none' });
+    const arcB = path(p, `M${BX + 6} 318C${BX + 50} 308 ${BX + 104} 336 ${BX + 118} 384L${BX + 134} 505`, { stroke: 'none' });
+    const d1 = evDot(p, 0, 0, 10, EV.fear, 0), d2 = evDot(p, 0, 0, 10, EV.calm, 0);
+    prog(q => {
+      const t = q * D - m('reflex') - .6, L1 = arc.getTotalLength(), L2 = arcB.getTotalLength();
+      const u1 = Math.max(0, Math.min(1, t / .8)), u2 = Math.max(0, Math.min(1, (t - .8) / .8));
+      const a = arc.getPointAtLength(u1 * L1), b = arcB.getPointAtLength(u2 * L2);
+      put(d1, { x: a.x, y: a.y, o: t > 0 && u1 < 1 ? 1 : 0 }); put(d2, { x: b.x, y: b.y, o: u2 > 0 && u2 < 1 ? 1 : 0 });
+    }, 0, D, lin);
+    tw(tw_, { x: BX + 270 }, m('reflex') + 2.3, .3, out); tw(hand, { o: 0 }, m('reflex') + 2.4, .5);
+    labP(p, 'reflexL', 900, 680, m('reflex') + 2.2, { size: 32, fill: EV.fear, anchor: 'start', maxW: 600, weight: 500 });
+    hide(hot, m('reflex') + 2.4, .4);
+  }],
+
+  ['auto', 'b_auto', (m, D) => {
+    const p = panel(0);
+    // opening: the autopilot keeps the heart beating
+    const op = G(p, { o: 0 });
+    const hh = G(op, { x: 800, y: 420, s: 3.2 }); path(hh, n3HeartD, { fill: EV.anger, opacity: .85 });
+    n3Beat(hh, .3, m('symp'), .9, 1.12);
+    evText(op, L('autoT'), { x: 800, y: 200, size: 56, font: SERIF, weight: 600, fill: EV.gold, maxW: 1300 });
+    evText(op, L('autoD'), { x: 800, y: 650, size: 32, fill: EV.ink, maxW: 1200 });
+    tw(op, { o: 1 }, .1, .6); tw(op, { o: 0 }, m('symp') - .2, .4);
+    // left: Ravi in traffic
+    const L_ = G(p, { o: 0 });
+    evText(L_, L('sympT'), { x: 400, y: 120, size: 46, font: SERIF, weight: 600, fill: EV.anger, maxW: 700 });
+    evText(L_, L('sympS'), { x: 400, y: 168, size: 30, fill: EV.ink, italic: true, maxW: 700 });
+    const rv = evPerson(L_, { kind: 'm', x: 300, y: 820, s: .82 });
+    evMood(rv, 'tense', 0, .01); evArm(rv, -1, -30, -40, 0, .01); evArm(rv, 1, 30, 40, 0, .01);
+    prog(q => { const t = q * D; put(rv.head, { y: -132 + Math.sin(t * 9) * 1.5 }); }, 0, D, lin);
+    const car = G(L_, { x: 300, y: 760 });
+    path(car, 'M-200 60V-20Q-200 -50 -170 -56L-120 -60L-90 -110H90L130 -60L180 -54Q210 -50 210 -20V60Z', { fill: '#1d262b', stroke: EV.gold, 'stroke-width': 2.5, opacity: .95 });
+    path(car, 'M-80 -100H80L110 -62H-110Z', { fill: '#0d1418', opacity: .6 });
+    mk('circle', { cx: -120, cy: 60, r: 28, fill: '#0a0e10', stroke: EV.dim, 'stroke-width': 3 }, car);
+    mk('circle', { cx: 130, cy: 60, r: 28, fill: '#0a0e10', stroke: EV.dim, 'stroke-width': 3 }, car);
+    const tl = [560].map((x, i) => { const g = G(L_, { x, y: 740 }); mk('rect', { x: -36, y: -20, width: 72, height: 30, rx: 8, fill: '#1d262b' }, g); const l = evDot(g, -20, -5, 7, EV.anger); const r = evDot(g, 20, -5, 7, EV.anger); return [l, r]; });
+    prog(q => { const t = q * D; tl.forEach(([a, b], i) => { const o = .4 + .6 * (Math.sin(t * 4 + i) > 0 ? 1 : 0); put(a, { o }); put(b, { o }); }); }, 0, D, lin);
+    const lt = G(L_, { x: 640, y: 560 }); evText(lt, L('late'), { x: 0, y: 0, size: 34, fill: EV.anger, weight: 600, maxW: 220 });
+    const h1 = G(L_, { x: 312, y: 625, s: .42 }); path(h1, n3HeartD, { fill: EV.anger });
+    ['s1', 's2', 's3'].forEach((k, i) => evText(L_, '· ' + L(k), { x: 400, y: 240 + i * 46, size: 30, fill: EV.ink, maxW: 600 }));
+    tw(L_, { o: 1 }, m('symp'), .5);
+    n3Beat(h1, m('symp') + .3, D, .42, 1.35);
+    // right: after Sunday lunch
+    const R_ = G(p, { o: 0 });
+    evText(R_, L('paraT'), { x: 1200, y: 120, size: 46, font: SERIF, weight: 600, fill: EV.calm, maxW: 700 });
+    evText(R_, L('paraS'), { x: 1200, y: 168, size: 30, fill: EV.ink, italic: true, maxW: 700 });
+    const rv2 = evPerson(R_, { kind: 'm', x: 1060, y: 820, s: .82 });
+    evMood(rv2, 'smile', 0, .01); evArm(rv2, -1, 20, -90, 0, .01); evArm(rv2, 1, -20, 90, 0, .01);
+    evBreathe(rv2, D, 1.4, .3);
+    const tb = G(R_, { x: 1340, y: 820 });
+    path(tb, 'M-140 -150H140M-120 -150V0M120 -150V0', { stroke: '#4a3d2c', 'stroke-width': 8 });
+    path(tb, 'M-120 -156C-60 -190 60 -190 120 -156Z', { fill: '#3c7a46', stroke: '#5fa36a', 'stroke-width': 2 });
+    mk('ellipse', { cx: -20, cy: -168, rx: 40, ry: 10, fill: '#efe6d2', opacity: .5 }, tb);
+    const h2 = G(R_, { x: 1072, y: 625, s: .42 }); path(h2, n3HeartD, { fill: EV.calm });
+    ['p1', 'p2', 'p3'].forEach((k, i) => evText(R_, '· ' + L(k), { x: 1200, y: 240 + i * 46, size: 30, fill: EV.ink, maxW: 600 }));
+    tw(R_, { o: 1 }, m('para'), .5);
+    n3Beat(h2, m('para') + .3, D, 1.2, 1.15);
+    // divider becomes a two-way arrow
+    const dv = path(p, 'M800 120V860', { stroke: EV.faint, 'stroke-width': 2 }); put(dv, { o: 0 }); tw(dv, { o: 1 }, m('symp') + .2, .5);
+    const bal = G(p, { x: 800, y: 470, o: 0 });
+    path(bal, 'M-110 0H110', { stroke: EV.gold, 'stroke-width': 4 }); evHead(bal, 112, 0, 0, EV.gold); evHead(bal, -112, 0, 180, EV.gold);
+    mk('rect', { x: -150, y: 18, width: 300, height: 46, rx: 10, fill: EV.bg }, bal);
+    evText(bal, L('between'), { x: 0, y: 50, size: 28, fill: EV.gold, maxW: 290 });
+    tw(bal, { o: 1 }, m('balance'), .5);
+    // the breath: a short in, a long out
+    const bg_ = G(p, { x: 800, y: 690, o: 0 });
+    mk('rect', { x: -180, y: -80, width: 360, height: 190, rx: 16, fill: EV.bg, stroke: EV.calm, 'stroke-width': 2 }, bg_);
+    const bw = path(bg_, 'M-150 40L-110 -40C-60 -40 0 40 150 40', { stroke: EV.calm, 'stroke-width': 4 }, { d: 0 });
+    evText(bg_, L('breathL'), { x: 0, y: 92, size: 26, fill: EV.ink, maxW: 340 });
+    tw(bg_, { o: 1 }, m('breath'), .5); draw(bw, m('breath') + .3, 2.4);
+  }],
+
+  ['check', 'b_check', (m, D) => {
+    const p = panel(0);
+    const sg = G(p, { o: 0 });
+    evText(sg, L('sciCheck'), { x: 800, y: 150, size: 64, font: SERIF, weight: 600, fill: EV.gold });
+    tw(sg, { o: 1 }, .1, .5);
+    const row = (y, kind, k, t) => {
+      const g = G(sg, { x: 260, y, o: 0 });
+      if (kind === 'ok') { mk('circle', { cx: 0, cy: 0, r: 30, fill: EV.calm, opacity: .2 }, g); path(g, 'M-13 1L-3 11L15 -11', { stroke: EV.calm, 'stroke-width': 5 }); }
+      else if (kind === 'sim') { mk('circle', { cx: 0, cy: 0, r: 30, fill: 'none', stroke: EV.gold, 'stroke-width': 3 }, g); path(g, 'M-14 2Q-7 -8 0 0T14 -2', { stroke: EV.gold, 'stroke-width': 5 }); }
+      else { mk('circle', { cx: 0, cy: 0, r: 30, fill: 'none', stroke: EV.shame, 'stroke-width': 3, 'stroke-dasharray': '6 7' }, g); path(g, 'M-12 0H12', { stroke: EV.shame, 'stroke-width': 5 }); }
+      const tx = evPara(g, L(k), { x: 70, y: -8, size: 34, maxW: 1080, anchor: 'start', fill: EV.ink });
+      put(tx, { y: -tx._h / 2 + 22 });
+      put(g, { x: 290 }); tw(g, { o: 1, x: 260 }, t, .6, out);
+      return g;
+    };
+    row(300, 'ok', 'c1', m('c1'));
+    row(470, 'sim', 'c2', m('c2'));
+    row(640, 'model', 'c3', m('c3'));
+    lab(p, 'also', 800, 820, m('also'), { size: 36, fill: EV.gold, font: SERIF, italic: true, maxW: 1300 });
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    const tt = evText(p, L('b_wrap'), { x: 200, y: 150, size: 54, font: SERIF, weight: 600, fill: EV.gold, anchor: 'start', o: 0 });
+    show(tt, .2, .6);
+    const cols = [EV.gold, EV.joy, EV.calm, EV.fear];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -16, y: 290 + i * 150, o: 0 });
+      mk('circle', { cx: 230, cy: -12, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 3 }, g);
+      T(g, String(i + 1), { x: 230, y: -1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 290, y: 0, size: 36, maxW: 1100, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Which part of the neuron does the listening, collecting messages from other cells?',
+  q1a: 'The axon', q1b: 'The dendrites', q1c: 'The terminals',
+  q1y: 'Right. Dendrites, with their spines, gather incoming messages and pass them to the cell body.',
+  q1na: 'The axon is the one long cable that carries the neuron’s own signal out.',
+  q1nc: 'Terminals are the speakers at the far end: they pass the message on to the next cell.',
+  q2p: 'Go or stop? Sort each statement.',
+  q2r1: 'Glutamate docks on the receiving neuron.', q2r2: 'GABA docks on the receiving neuron.',
+  q2r3: 'Many inputs at once add up past the threshold.', q2r4: 'Keeps circuits from running wild, as in a seizure.',
+  q2w1: 'Glutamate is the brain’s main go signal: it pushes the next cell toward firing.',
+  q2w2: 'GABA is the main brake: it pushes the next cell away from firing.',
+  q2w3: 'Enough go inputs together tip the vote, and the neuron fires.',
+  q2w4: 'That is the brake’s job. Too little GABA activity can let circuits fire out of control.',
+  q3p: 'Leena reaches for her tea without knocking it over. Which part keeps the reach smooth and accurate?',
+  q3a: 'The visual area', q3b: 'The cerebellum', q3c: 'The frontal lobe',
+  q3y: 'Yes. The cerebellum fine-tunes movement, timing and force, so the hand lands where it should.',
+  q3na: 'The visual area makes the image, but it does not steer the arm.',
+  q3nc: 'The frontal lobe holds the goal and its motor strip sends the command; the smoothing is the cerebellum’s work.',
+  p1p: 'Arun brushes a hot dosa pan and his hand jerks back before he feels any pain. Why so fast?',
+  p1a: 'A reflex: the spinal cord sends the command back to the arm without waiting for the brain.',
+  p1b: 'His brain thought it over and decided to move.', p1c: 'Pain signals are the fastest signals in the body.',
+  p1y: 'Right. The loop runs from the hand to the spinal cord and straight back, so the hand moves before the brain registers pain.',
+  p1nb: 'Thinking it over takes far longer. The reflex skips the brain for the first move.',
+  p1nc: 'Many pain fibres are actually slow. The speed comes from the short route through the cord.',
+  p2p: 'Three weak go signals reach a neuron at the same moment. None could make it fire alone. What can happen?',
+  p2a: 'The neuron fires three small signals.',
+  p2b: 'They add up; if the total crosses the threshold, the neuron fires one full-size signal.',
+  p2c: 'Weak signals are always ignored.',
+  p2y: 'Inputs are summed. Cross the threshold and the output is all or none: full size.',
+  p2na: 'There are no small spikes. A neuron fires a full signal or none at all.',
+  p2nc: 'Weak inputs count. Together they can reach the threshold.',
+  p3p: 'Ravi is stuck in traffic, heart pounding, already late. Which branch is in charge, and what can he do right now?',
+  p3a: 'Parasympathetic. He should eat something.',
+  p3b: 'Neither. His heart speeds up only when he chooses.',
+  p3c: 'Sympathetic. Slow breathing with long out-breaths can nudge him toward the resting side.',
+  p3y: 'Fight or flight is in charge. The breath is one of the few autopilot levers he can reach on purpose.',
+  p3na: 'Rest and digest is the opposite state. A pounding heart means the sympathetic branch.',
+  p3nb: 'Heart rate is set by the autonomic system, not by choice, though breathing can influence it.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'Once a neuron fires, the signal is full size: all or none.',
+  p4r2: 'Each neurotransmitter is released by its own electrical frequency, so thoughts pick chemicals by frequency.',
+  p4r3: 'Glia are just glue that holds neurons in place.',
+  p4r4: 'Movement commands start in the motor cortex, at the back of the frontal lobe.',
+  p4w1: 'True. This is one of the best established facts about neurons.',
+  p4w2: 'False. This is the author’s simplification. Firing rate does affect what is released, but there is no one-frequency-per-chemical code.',
+  p4w3: 'False. Glia make myelin, feed and tidy around synapses, and clean up and prune.',
+  p4w4: 'True. The book credits the parietal lobe here; the parietal lobe mainly handles touch and body position.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'ന്യൂറോണിന്റെ ഏത് ഭാഗമാണ് മറ്റ് കോശങ്ങളിൽ നിന്നുള്ള സന്ദേശങ്ങൾ കേൾക്കുന്നത്?',
+  q1a: 'ആക്സോൺ', q1b: 'ഡെൻഡ്രൈറ്റുകൾ', q1c: 'ടെർമിനലുകൾ',
+  q1y: 'ശരി. സ്പൈനുകളുള്ള ഡെൻഡ്രൈറ്റുകൾ സന്ദേശങ്ങൾ ശേഖരിച്ച് കോശശരീരത്തിലേക്ക് കൈമാറുന്നു.',
+  q1na: 'ആക്സോൺ ന്യൂറോണിന്റെ സ്വന്തം സിഗ്നൽ പുറത്തേക്ക് കൊണ്ടുപോകുന്ന നീണ്ട കേബിളാണ്.',
+  q1nc: 'ടെർമിനലുകൾ അറ്റത്തുള്ള സംസാരിക്കുന്നവരാണ്: അവ സന്ദേശം അടുത്ത കോശത്തിലേക്ക് കൈമാറുന്നു.',
+  q2p: 'പോകൂ, അല്ലെങ്കിൽ ബ്രേക്ക്? ഓരോ വാക്യവും തരംതിരിക്കൂ.',
+  q2r1: 'ഗ്ലൂട്ടമേറ്റ് സ്വീകരിക്കുന്ന ന്യൂറോണിൽ ചേരുന്നു.', q2r2: 'ഗാബ സ്വീകരിക്കുന്ന ന്യൂറോണിൽ ചേരുന്നു.',
+  q2r3: 'ഒരേ സമയം വരുന്ന പല ഇൻപുട്ടുകൾ കൂടിച്ചേർന്ന് ത്രെഷോൾഡ് കടക്കുന്നു.', q2r4: 'അപസ്മാരത്തിലെ പോലെ സർക്യൂട്ടുകൾ നിയന്ത്രണം വിടാതെ നോക്കുന്നു.',
+  q2w1: 'ഗ്ലൂട്ടമേറ്റ് തലച്ചോറിലെ പ്രധാന പോകൂ സിഗ്നലാണ്: അത് അടുത്ത കോശത്തെ ഫയറിംഗിലേക്ക് തള്ളുന്നു.',
+  q2w2: 'ഗാബ പ്രധാന ബ്രേക്കാണ്: അത് അടുത്ത കോശത്തെ ഫയറിംഗിൽ നിന്ന് പിന്നോട്ട് വലിക്കുന്നു.',
+  q2w3: 'ആവശ്യത്തിന് പോകൂ ഇൻപുട്ടുകൾ ഒന്നിച്ചാൽ വോട്ട് ജയിക്കുന്നു, ന്യൂറോൺ ഫയർ ചെയ്യുന്നു.',
+  q2w4: 'അതാണ് ബ്രേക്കിന്റെ ജോലി. ഗാബ കുറഞ്ഞാൽ സർക്യൂട്ടുകൾ നിയന്ത്രണമില്ലാതെ ഫയർ ചെയ്യാം.',
+  q3p: 'ചായ തട്ടിമറിക്കാതെ ലീന ഗ്ലാസ് എടുക്കുന്നു. കൈനീട്ടൽ സുഗമവും കൃത്യവുമാക്കുന്നത് ഏത് ഭാഗമാണ്?',
+  q3a: 'കാഴ്ചയുടെ ഭാഗം', q3b: 'സെറിബെല്ലം', q3c: 'ഫ്രണ്ടൽ ലോബ്',
+  q3y: 'അതെ. സെറിബെല്ലം ചലനത്തിന്റെ സമയവും ശക്തിയും ക്രമീകരിക്കുന്നു, കൈ കൃത്യസ്ഥലത്ത് എത്തുന്നു.',
+  q3na: 'കാഴ്ചയുടെ ഭാഗം ചിത്രം ഉണ്ടാക്കുന്നു, പക്ഷേ കൈയെ നയിക്കുന്നില്ല.',
+  q3nc: 'ഫ്രണ്ടൽ ലോബ് ലക്ഷ്യം പിടിച്ചുനിർത്തുന്നു, മോട്ടോർ ഭാഗം ഉത്തരവ് അയയ്ക്കുന്നു; സുഗമമാക്കുന്നത് സെറിബെല്ലമാണ്.',
+  p1p: 'ചൂടുള്ള ദോശക്കല്ലിൽ കൈ തട്ടിയ അരുൺ, വേദന അറിയുന്നതിന് മുൻപേ കൈ വലിക്കുന്നു. എന്തുകൊണ്ട് ഇത്ര വേഗം?',
+  p1a: 'റിഫ്ലെക്സ്: തലച്ചോറിനായി കാത്തുനിൽക്കാതെ സുഷുമ്നാനാഡി കൈയിലേക്ക് ഉത്തരവ് തിരിച്ചയയ്ക്കുന്നു.',
+  p1b: 'അവന്റെ തലച്ചോർ ആലോചിച്ച് തീരുമാനിച്ചു.', p1c: 'ശരീരത്തിലെ ഏറ്റവും വേഗമുള്ള സിഗ്നലുകൾ വേദനയുടേതാണ്.',
+  p1y: 'ശരി. കൈയിൽ നിന്ന് സുഷുമ്നാനാഡിയിലേക്കും നേരെ തിരിച്ചും; തലച്ചോർ വേദന അറിയുന്നതിന് മുൻപേ കൈ നീങ്ങുന്നു.',
+  p1nb: 'ആലോചിക്കാൻ ഇതിലും വളരെ സമയം വേണം. ആദ്യ ചലനത്തിന് റിഫ്ലെക്സ് തലച്ചോറിനെ ഒഴിവാക്കുന്നു.',
+  p1nc: 'പല വേദന നാരുകളും യഥാർത്ഥത്തിൽ പതുക്കെയാണ്. വേഗം വരുന്നത് ചെറിയ വഴിയിൽ നിന്നാണ്.',
+  p2p: 'മൂന്ന് ദുർബലമായ പോകൂ സിഗ്നലുകൾ ഒരേ സമയം ഒരു ന്യൂറോണിൽ എത്തുന്നു. ഒറ്റയ്ക്ക് ഒന്നിനും ഫയർ ചെയ്യിക്കാനാവില്ല. എന്ത് സംഭവിക്കാം?',
+  p2a: 'ന്യൂറോൺ മൂന്ന് ചെറിയ സിഗ്നലുകൾ ഫയർ ചെയ്യുന്നു.',
+  p2b: 'അവ കൂടിച്ചേരുന്നു; ആകെ ത്രെഷോൾഡ് കടന്നാൽ ന്യൂറോൺ ഒരു പൂർണ്ണ സിഗ്നൽ ഫയർ ചെയ്യുന്നു.',
+  p2c: 'ദുർബലമായ സിഗ്നലുകൾ എപ്പോഴും അവഗണിക്കപ്പെടുന്നു.',
+  p2y: 'ഇൻപുട്ടുകൾ കൂട്ടിനോക്കപ്പെടുന്നു. ത്രെഷോൾഡ് കടന്നാൽ ഫലം ഓൾ ഓർ നൺ: പൂർണ്ണ വലിപ്പം.',
+  p2na: 'ചെറിയ സ്പൈക്കുകൾ ഇല്ല. ന്യൂറോൺ പൂർണ്ണ സിഗ്നൽ ഫയർ ചെയ്യും, അല്ലെങ്കിൽ ഒന്നുമില്ല.',
+  p2nc: 'ദുർബലമായ ഇൻപുട്ടുകളും കണക്കിലുണ്ട്. ഒന്നിച്ചാൽ അവയ്ക്ക് ത്രെഷോൾഡ് എത്താം.',
+  p3p: 'രവി ട്രാഫിക്കിൽ കുടുങ്ങി, ഹൃദയം ഇടിക്കുന്നു, ഇതിനകം വൈകി. ഏത് ശാഖയാണ് ഭരിക്കുന്നത്, ഇപ്പോൾ അവന് എന്ത് ചെയ്യാം?',
+  p3a: 'പാരാസിംപതറ്റിക്. അവൻ എന്തെങ്കിലും കഴിക്കണം.',
+  p3b: 'രണ്ടുമല്ല. അവൻ തീരുമാനിക്കുമ്പോൾ മാത്രമേ ഹൃദയമിടിപ്പ് കൂടൂ.',
+  p3c: 'സിംപതറ്റിക്. നീണ്ട ശ്വാസം പുറത്തുവിട്ടുള്ള പതുക്കെയുള്ള ശ്വസനം അവനെ വിശ്രമത്തിന്റെ ഭാഗത്തേക്ക് നീക്കാം.',
+  p3y: 'പോരാടുക അല്ലെങ്കിൽ ഓടുക എന്ന അവസ്ഥയാണ് ഇപ്പോൾ. ബോധപൂർവ്വം തൊടാവുന്ന ചുരുക്കം ഓട്ടോപൈലറ്റ് ലിവറുകളിൽ ഒന്നാണ് ശ്വാസം.',
+  p3na: 'വിശ്രമിക്കുക, ദഹിപ്പിക്കുക എന്നത് എതിർ അവസ്ഥയാണ്. ഇടിക്കുന്ന ഹൃദയം സിംപതറ്റിക് ശാഖയുടേതാണ്.',
+  p3nb: 'ഹൃദയമിടിപ്പ് നിശ്ചയിക്കുന്നത് ഓട്ടോണമിക് സംവിധാനമാണ്, തീരുമാനമല്ല; എങ്കിലും ശ്വസനത്തിന് അതിനെ സ്വാധീനിക്കാം.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'ഒരു ന്യൂറോൺ ഫയർ ചെയ്താൽ സിഗ്നൽ പൂർണ്ണ വലിപ്പമാണ്: ഓൾ ഓർ നൺ.',
+  p4r2: 'ഓരോ ന്യൂറോട്രാൻസ്മിറ്ററും അതിന്റേതായ വൈദ്യുത ഫ്രീക്വൻസിയിൽ പുറത്തുവരുന്നു, അതിനാൽ ചിന്തകൾ ഫ്രീക്വൻസി വഴി രാസവസ്തു തിരഞ്ഞെടുക്കുന്നു.',
+  p4r3: 'ഗ്ലിയ ന്യൂറോണുകളെ ഒട്ടിച്ചുനിർത്തുന്ന വെറും പശയാണ്.',
+  p4r4: 'ചലനത്തിനുള്ള ഉത്തരവ് തുടങ്ങുന്നത് ഫ്രണ്ടൽ ലോബിന്റെ പിൻഭാഗത്തെ മോട്ടോർ കോർട്ടക്സിലാണ്.',
+  p4w1: 'ശരി. ന്യൂറോണുകളെ കുറിച്ച് ഏറ്റവും ഉറപ്പുള്ള വസ്തുതകളിൽ ഒന്നാണിത്.',
+  p4w2: 'തെറ്റ്. ഇത് ഗ്രന്ഥകാരന്റെ ലളിതവൽക്കരണമാണ്. ഫയറിംഗ് നിരക്ക് പുറത്തുവരുന്നതിനെ ബാധിക്കും, പക്ഷേ ഒരു രാസവസ്തുവിന് ഒരു ഫ്രീക്വൻസി എന്ന കോഡ് ഇല്ല.',
+  p4w3: 'തെറ്റ്. ഗ്ലിയ മയലിൻ ഉണ്ടാക്കുന്നു, സിനാപ്സുകൾക്ക് ചുറ്റും ഭക്ഷണം നൽകി വൃത്തിയാക്കുന്നു, മാലിന്യം നീക്കി ബന്ധങ്ങൾ വെട്ടിമാറ്റുന്നു.',
+  p4w4: 'ശരി. പുസ്തകം ഇവിടെ പരൈറ്റൽ ലോബിനെയാണ് പറയുന്നത്; പരൈറ്റൽ ലോബ് പ്രധാനമായും സ്പർശവും ശരീരസ്ഥാനവുമാണ് കൈകാര്യം ചെയ്യുന്നത്.',
+});
+const PRACTICE = [
+  { id: 'p-reflex', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 0, L('p1y'), [null, L('p1nb'), L('p1nc')]) },
+  { id: 'p-sum', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 1, L('p2y'), [L('p2na'), null, L('p2nc')]) },
+  { id: 'p-traffic', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 2, L('p3y'), [L('p3na'), L('p3nb'), null]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['f'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['t'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('evolve:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+// 500 is evText's default weight: load it too, or Malayalam labels are measured in a fallback font and overflow maxW.
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '500 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '500 30px "Noto Serif Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>

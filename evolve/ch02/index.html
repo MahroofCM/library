@@ -1,0 +1,1158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Evolve Your Brain · Chapter 2">
+<meta property="og:description" content="Short animated lessons in English and Malayalam on how a thought becomes chemistry, and how to rewire the habit of being yourself.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/evolve/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/evolve/ch02/">
+<meta name="twitter:card" content="summary_large_image">
+<title>On the Back of a Giant · Evolve Your Brain</title>
+<meta name="description" content="An animated, narrated lesson on Chapter 2 of Evolve Your Brain: how thoughts and expectations change the body, what the placebo effect can and cannot do, and how to tell a recovery story from evidence. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('evolve:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('evolve:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'ഒരു ഭീമന്റെ പുറത്ത് · Evolve Your Brain';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/evolve.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/evolve/ch02/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'On the Back of a Giant', kicker: 'UNIT 1 · CHAPTER 2', sub: 'What the mind can do for the body, and how to tell a story from evidence',
+  credit: 'A study of Evolve Your Brain by Joe Dispenza',
+  b_intro: 'Title', b_stage: 'Mind over matter', b_stories: 'Recovery stories', b_pillars: 'Four shared beliefs', b_giant: 'The giant',
+  b_loop: 'Thoughts reach the body', b_placebo: 'The placebo effect', b_limits: 'Where placebo stops', b_anec: 'Anecdote or evidence',
+  b_safety: 'With treatment, not instead', b_auto: 'Autopilot thoughts', b_piano: 'Practice in the mind', b_plastic: 'The changing brain',
+  b_attn: 'Attention', b_mind: 'What is the mind?', b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  festival: 'School youth festival', cant: 'I can’t…', whisper: 'Leena! You can!', mom: 'mind over matter', howFar: 'How far does it go?',
+  interviews: 'years of interviews', remission: 'Spontaneous remission', rare: 'it happens · it is rare', common: 'What did they have in common?',
+  four: 'Four shared beliefs',
+  pl1: 'An inner intelligence runs the body and can heal it', pl2: 'Thoughts are real and change the body',
+  pl3: 'You can reinvent yourself', pl4: 'Focus so deep that body, place and time fade', toTest: 'to be tested',
+  beatsDay: 'heartbeats a day', cellsSec: 'millions of cells replaced every second', autoJobs: 'digesting · cleaning · defending',
+  ride: 'riding on the back of a giant', sciCheck: 'Science check', ftl: 'signals faster than light', nerve: 'nerve signals: up to about 120 m/s',
+  manager: 'Manager', msg: 'Can we talk on Monday morning?', hr: 'heart rate', bpm: 'beats per minute', onlyThought: 'nothing happened: only a thought',
+  thought: 'thought', feeling: 'feeling', more9: 'the full loop: chapter 9',
+  headache: 'headache', sugar: 'sugar pill', expects: 'she expects relief', pain: 'pain', min20: '20 minutes later',
+  endorphins: 'endorphins', blocker: 'endorphin blocker', relief: 'relief fades', biology: 'biology, not imagination',
+  leaflet: 'Possible side effects', se1: 'headache', se2: 'dizziness', se3: 'nausea', se4: 'tiredness', se5: 'skin rash', nocebo: 'Nocebo effect',
+  helps: 'often eases', rarely: 'rarely changes', painB: 'pain', nausea: 'nausea', tired: 'tiredness', mood: 'low mood',
+  tumour: 'tumour size', infection: 'infection', bone: 'broken bone', illus: 'bar heights are illustrative',
+  medicine: 'medicine', placebo: 'placebo', mustBeat: 'every medicine must beat this', improved: 'improvement',
+  sameIll: 'same illness · all hopeful', recovered: 'recovered', notHeard: 'not around to be interviewed', heard: 'the only stories heard',
+  proves: '“Mindset heals!”', survivor: 'Survivorship bias', fiveNot: 'five stories are not proof', fair: 'A fair comparison',
+  didPractice: 'did the practice', didNot: 'did not', compare: 'compare the groups, followed over time',
+  withT: 'with treatment', insteadT: 'instead of treatment', tablets: 'tablets', calmP: 'daily calm practice', doctor: 'tell the doctor',
+  readings: 'his readings', weeks: 'weeks', adjust: 'doctor adjusts the dose', both: 'the benefit of both',
+  learner: 'learning: every move takes effort', autop: 'autopilot', at1: 'I’m always late', at2: 'Nobody listens to me', at3: 'I’m bad at this',
+  noticed: 'noticed', notFact: 'A thought is not a fact.',
+  study: '1995 · five-finger piano exercise', played: 'played', imagined: 'imagined', none: 'no practice', hours: '2 hours a day · 5 days',
+  bigC: 'clear change', nearC: 'nearly as much', noC: 'no change', bestPlay: 'still played best', fingerArea: 'finger area',
+  fireWire: 'Fire together, wire together', rep: 'repetition ×{n}',
+  grey: 'grey matter', months: 'month', practising: 'juggling', stopped: 'stopped', useIt: 'use it or lose it',
+  weakArm: 'weak arm', reps: 'practice ×{n}', newRoute: 'new route', damage: 'damaged area', vary: 'results vary from person to person',
+  overstated: 'claims of full recovery for most patients go beyond the studies',
+  twoHours: '2 hours later', frontal: 'frontal lobe', turnDown: 'the rest turned down', skill: 'Attention is a skill.',
+  mindIs: 'Mind = the brain in action', consc: 'consciousness', qfield: 'quantum field', univ: 'universal intelligence',
+  sc1: 'Mind as the brain in action: mainstream neuroscience.',
+  sc2: 'A quantum field and a universal intelligence: the author’s beliefs, not shown by science.',
+  w1: 'Your body runs a giant’s worth of work without your help.',
+  w2: 'Thoughts and expectations change the body; placebo shows how, and where it stops.',
+  w3: 'Recovery stories inspire, but only fair comparisons show cause.',
+  w4: 'Rehearsal and attention reshape the brain. Use them with treatment, not instead.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'ഒരു ഭീമന്റെ പുറത്ത്', kicker: 'യൂണിറ്റ് 1 · അധ്യായം 2', sub: 'മനസ്സിന് ശരീരത്തിനായി എന്ത് ചെയ്യാനാകും, കഥയും തെളിവും എങ്ങനെ വേർതിരിക്കാം',
+  credit: 'ജോ ഡിസ്പെൻസയുടെ Evolve Your Brain എന്ന പുസ്തകത്തിന്റെ പഠനം',
+  b_intro: 'തലക്കെട്ട്', b_stage: 'മൈൻഡ് ഓവർ മാറ്റർ', b_stories: 'സുഖപ്പെടലിന്റെ കഥകൾ', b_pillars: 'പൊതുവായ നാല് വിശ്വാസങ്ങൾ', b_giant: 'ഭീമൻ',
+  b_loop: 'ചിന്ത ശരീരത്തിലെത്തുന്നു', b_placebo: 'പ്ലാസിബോ ഇഫക്ട്', b_limits: 'പ്ലാസിബോയുടെ പരിധി', b_anec: 'അനുഭവകഥയോ തെളിവോ',
+  b_safety: 'ചികിത്സയോടൊപ്പം, പകരമല്ല', b_auto: 'ഓട്ടോപൈലറ്റ് ചിന്തകൾ', b_piano: 'മനസ്സിലെ പരിശീലനം', b_plastic: 'മാറുന്ന തലച്ചോർ',
+  b_attn: 'ശ്രദ്ധ', b_mind: 'എന്താണ് മനസ്സ്?', b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  festival: 'സ്കൂൾ കലോത്സവം', cant: 'എനിക്ക് പറ്റില്ല…', whisper: 'ലീനാ! നിനക്ക് പറ്റും!', mom: 'മൈൻഡ് ഓവർ മാറ്റർ', howFar: 'അത് എത്ര ദൂരം പോകും?',
+  interviews: 'വർഷങ്ങളുടെ അഭിമുഖങ്ങൾ', remission: 'സ്പോണ്ടേനിയസ് റെമിഷൻ', rare: 'സംഭവിക്കാറുണ്ട് · വളരെ അപൂർവ്വം', common: 'ഇവർക്കെല്ലാം പൊതുവായി എന്തായിരുന്നു?',
+  four: 'പൊതുവായ നാല് വിശ്വാസങ്ങൾ',
+  pl1: 'ഉള്ളിലെ ഒരു ബുദ്ധി ശരീരത്തെ നടത്തുന്നു, സുഖപ്പെടുത്തുന്നു', pl2: 'ചിന്തകൾ യഥാർത്ഥമാണ്, അവ ശരീരത്തെ മാറ്റുന്നു',
+  pl3: 'നിങ്ങൾക്ക് സ്വയം പുതുക്കിപ്പണിയാം', pl4: 'ശരീരവും സ്ഥലവും സമയവും മറക്കുന്നത്ര ആഴമുള്ള ശ്രദ്ധ', toTest: 'പരിശോധിക്കാനുണ്ട്',
+  beatsDay: 'ഒരു ദിവസത്തെ ഹൃദയമിടിപ്പുകൾ', cellsSec: 'ഓരോ സെക്കൻഡിലും ദശലക്ഷക്കണക്കിന് പുതിയ കോശങ്ങൾ', autoJobs: 'ദഹനം · ശുദ്ധീകരണം · പ്രതിരോധം',
+  ride: 'ഒരു ഭീമന്റെ പുറത്തുള്ള യാത്ര', sciCheck: 'ശാസ്ത്രീയ പരിശോധന', ftl: 'പ്രകാശത്തേക്കാൾ വേഗമുള്ള സന്ദേശങ്ങൾ', nerve: 'നാഡീ സന്ദേശം: സെക്കൻഡിൽ ~120 മീറ്റർ',
+  manager: 'മാനേജർ', msg: 'തിങ്കളാഴ്ച രാവിലെ ഒന്ന് സംസാരിക്കാമോ?', hr: 'ഹൃദയമിടിപ്പ്', bpm: 'മിനിറ്റിൽ', onlyThought: 'ഒന്നും സംഭവിച്ചില്ല: ഒരു ചിന്ത മാത്രം',
+  thought: 'ചിന്ത', feeling: 'വികാരം', more9: 'മുഴുവൻ ചക്രം: അധ്യായം 9',
+  headache: 'തലവേദന', sugar: 'പഞ്ചസാര ഗുളിക', expects: 'അവൾ ആശ്വാസം പ്രതീക്ഷിക്കുന്നു', pain: 'വേദന', min20: '20 മിനിറ്റിന് ശേഷം',
+  endorphins: 'എൻഡോർഫിനുകൾ', blocker: 'എൻഡോർഫിൻ തടയുന്ന മരുന്ന്', relief: 'ആശ്വാസം കുറയുന്നു', biology: 'ജീവശാസ്ത്രം, തോന്നലല്ല',
+  leaflet: 'സാധ്യമായ പാർശ്വഫലങ്ങൾ', se1: 'തലവേദന', se2: 'തലകറക്കം', se3: 'ഓക്കാനം', se4: 'ക്ഷീണം', se5: 'ചൊറിച്ചിൽ', nocebo: 'നോസിബോ ഇഫക്ട്',
+  helps: 'പലപ്പോഴും കുറയ്ക്കുന്നു', rarely: 'അപൂർവ്വമായേ മാറ്റുന്നുള്ളൂ', painB: 'വേദന', nausea: 'ഓക്കാനം', tired: 'ക്ഷീണം', mood: 'മനസ്സിന്റെ തളർച്ച',
+  tumour: 'ട്യൂമറിന്റെ വലിപ്പം', infection: 'അണുബാധ', bone: 'ഒടിഞ്ഞ എല്ല്', illus: 'ബാറുകളുടെ ഉയരം ഏകദേശം മാത്രം',
+  medicine: 'മരുന്ന്', placebo: 'പ്ലാസിബോ', mustBeat: 'ഓരോ മരുന്നും ഇതിനെ മറികടക്കണം', improved: 'മെച്ചം',
+  sameIll: 'ഒരേ രോഗം · എല്ലാവർക്കും പ്രതീക്ഷ', recovered: 'സുഖപ്പെട്ടവർ', notHeard: 'ഇന്റർവ്യൂ ചെയ്യാൻ ഇല്ലാത്തവർ', heard: 'കേൾക്കുന്നത് ഈ കഥകൾ മാത്രം',
+  proves: '“മനോഭാവം രോഗം മാറ്റും!”', survivor: 'സർവൈവർഷിപ്പ് ബയസ്', fiveNot: 'അഞ്ച് കഥകൾ തെളിവല്ല', fair: 'ന്യായമായ താരതമ്യം',
+  didPractice: 'പരിശീലിച്ചവർ', didNot: 'പരിശീലിക്കാത്തവർ', compare: 'രണ്ട് കൂട്ടത്തെയും കുറേക്കാലം പിന്തുടർന്ന് താരതമ്യം ചെയ്യുക',
+  withT: 'ചികിത്സയോടൊപ്പം', insteadT: 'ചികിത്സയ്ക്ക് പകരം', tablets: 'ഗുളികകൾ', calmP: 'ദിവസവും ശാന്തമായ പരിശീലനം', doctor: 'ഡോക്ടറോട് പറയുക',
+  readings: 'ബി പി റീഡിംഗ്', weeks: 'ആഴ്ചകൾ', adjust: 'ഡോക്ടർ ഡോസ് മാറ്റുന്നു', both: 'രണ്ടിന്റെയും ഗുണം',
+  learner: 'പഠിക്കുമ്പോൾ: ഓരോ നീക്കത്തിനും ശ്രദ്ധ', autop: 'ഓട്ടോപൈലറ്റ്', at1: 'ഞാൻ എപ്പോഴും വൈകും', at2: 'ആരും എന്നെ കേൾക്കില്ല', at3: 'എനിക്ക് ഇതൊന്നും പറ്റില്ല',
+  noticed: 'ശ്രദ്ധിച്ചു', notFact: 'ഒരു ചിന്ത ഒരു വസ്തുതയല്ല.',
+  study: '1995 · അഞ്ച് വിരൽ പിയാനോ അഭ്യാസം', played: 'വായിച്ചവർ', imagined: 'സങ്കൽപ്പിച്ചവർ', none: 'പരിശീലനമില്ല', hours: 'ദിവസം 2 മണിക്കൂർ · 5 ദിവസം',
+  bigC: 'വ്യക്തമായ മാറ്റം', nearC: 'ഏകദേശം അത്രതന്നെ', noC: 'മാറ്റമില്ല', bestPlay: 'ഏറ്റവും നന്നായി വായിച്ചു', fingerArea: 'വിരലുകളുടെ ഭാഗം',
+  fireWire: 'ഒരുമിച്ച് ഉണരുന്നവ, ഒരുമിച്ച് ബന്ധിക്കുന്നു', rep: 'ആവർത്തനം ×{n}',
+  grey: 'ഗ്രേ മാറ്റർ', months: 'മാസം', practising: 'ജഗ്ലിംഗ്', stopped: 'നിർത്തി', useIt: 'ഉപയോഗിച്ചില്ലെങ്കിൽ നഷ്ടപ്പെടും',
+  weakArm: 'ദുർബലമായ കൈ', reps: 'പരിശീലനം ×{n}', newRoute: 'പുതിയ വഴി', damage: 'കേടുപറ്റിയ ഭാഗം', vary: 'ഫലം ഓരോരുത്തരിലും വ്യത്യസ്തം',
+  overstated: 'മിക്കവരും പൂർണ്ണമായി സുഖപ്പെടും എന്ന അവകാശവാദം പഠനങ്ങൾക്ക് അപ്പുറമാണ്',
+  twoHours: '2 മണിക്കൂറിന് ശേഷം', frontal: 'ഫ്രണ്ടൽ ലോബ്', turnDown: 'ബാക്കിയുള്ളവ ശാന്തമാകുന്നു', skill: 'ശ്രദ്ധ ഒരു കഴിവാണ്.',
+  mindIs: 'മനസ്സ് = പ്രവർത്തിക്കുന്ന തലച്ചോർ', consc: 'ബോധം', qfield: 'ക്വാണ്ടം ഫീൽഡ്', univ: 'പ്രപഞ്ചബുദ്ധി',
+  sc1: 'മനസ്സ് തലച്ചോറിന്റെ പ്രവർത്തനമാണ്: മുഖ്യധാരാ ന്യൂറോസയൻസ്.',
+  sc2: 'ക്വാണ്ടം ഫീൽഡും പ്രപഞ്ചബുദ്ധിയും: ഗ്രന്ഥകാരന്റെ വിശ്വാസങ്ങൾ, ശാസ്ത്രം തെളിയിച്ചിട്ടില്ല.',
+  w1: 'നിങ്ങളുടെ സഹായമില്ലാതെ ശരീരം ഒരു ഭീമന്റെ ജോലി ചെയ്യുന്നു.',
+  w2: 'ചിന്തകളും പ്രതീക്ഷകളും ശരീരത്തെ മാറ്റുന്നു; എങ്ങനെയെന്നും എവിടെ നിൽക്കുമെന്നും പ്ലാസിബോ കാണിക്കുന്നു.',
+  w3: 'സുഖപ്പെടലിന്റെ കഥകൾ പ്രചോദനമാണ്; കാരണം കാണിക്കുന്നത് ന്യായമായ താരതമ്യം മാത്രം.',
+  w4: 'മനസ്സിലെ പരിശീലനവും ശ്രദ്ധയും തലച്ചോറിനെ മാറ്റുന്നു. ചികിത്സയോടൊപ്പം, പകരമല്ല.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 2, title: L('title'), minutes: LANG === 'ml' ? 14 : 10, language: LANG, next: '../ch03/index.html' };
+const fmt = (k, n) => L(k).replace('{n}', n);
+const fmtN = n => n.toLocaleString(ML ? 'en-IN' : 'en');
+
+/* ---------- chapter helpers ---------- */
+// Label that fades in at t (beat clock).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .5); return e; };
+// Rising particles of a colour from a point, for a duration.
+function heat(p, x, y, color, t0, dur, n = 14, spread = 70, h = 220) {
+  const ds = Array.from({ length: n }, () => evDot(p, x, y, 5, color, 0));
+  prog(q => {
+    const t = q * dur;
+    ds.forEach((d, i) => {
+      const u = ((t * .45 + i / n) % 1), sx = Math.sin(i * 12.9898) * spread;
+      put(d, { x: x + sx + Math.sin((t + i) * 2) * 8, y: y - u * h, o: Math.min(1, t * 1.5) * Math.sin(u * Math.PI) * .9 });
+    });
+  }, t0, dur, lin);
+}
+function headAt(p, e, color, t) {
+  const n = e.getTotalLength(), a = e.getPointAtLength(n), b = e.getPointAtLength(n - 6);
+  const h = evHead(p, a.x, a.y, Math.atan2(a.y - b.y, a.x - b.x) * 180 / Math.PI, color);
+  put(h, { o: 0 }); show(h, t, .25);
+  return h;
+}
+// The giant: a temple elephant in gold line, side view facing right, feet on (0,0). About 400 x 290 at s = 1.
+function c2Elephant(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('ellipse', { cx: 0, cy: 4, rx: 200, ry: 14, fill: '#000', opacity: .45 }, g);
+  const leg = (lx, far) => {
+    const L_ = G(g, { x: lx, y: -130 });
+    path(L_, 'M-22 0V122Q-22 130 -14 130H14Q22 130 22 122V0Z', { fill: far ? '#0b1013' : '#11181c', stroke: EV.gold, 'stroke-width': 2.5, 'stroke-opacity': far ? .4 : .9 });
+    path(L_, 'M-18 120H18', { stroke: EV.gold, 'stroke-width': 2, opacity: .45 });
+    return L_;
+  };
+  g._legs = [leg(-95, true), leg(70, true), leg(-135, false), leg(30, false)];
+  g._tail = G(g, { x: -176, y: -175 });
+  path(g._tail, 'M0 0C-22 22 -18 60 -28 86', { stroke: EV.gold, 'stroke-width': 3 });
+  path(g, 'M-178 -150C-188 -232 -110 -272 -10 -270C80 -268 140 -242 160 -192C170 -150 160 -112 122 -100H-150C-172 -110 -180 -128 -178 -150Z', { fill: '#11181c', stroke: EV.gold, 'stroke-width': 3.2 });
+  path(g, 'M-120 -240C-60 -262 40 -262 100 -236', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .35 });
+  // a festival cloth on its back
+  path(g, 'M-90 -258C-40 -268 20 -268 60 -258L52 -170Q-20 -150 -82 -170Z', { fill: '#3b2420', stroke: EV.gold, 'stroke-width': 2, opacity: .9 });
+  path(g, 'M-84 -186Q-20 -166 54 -186', { stroke: EV.gold, 'stroke-width': 2, opacity: .7 });
+  g._head = G(g, { x: 150, y: -200 });
+  const H = g._head;
+  mk('circle', { cx: 30, cy: 0, r: 68, fill: '#11181c', stroke: EV.gold, 'stroke-width': 3.2 }, H);
+  path(H, 'M-6 -52C-62 -44 -64 48 -8 62C18 40 24 -30 -6 -52Z', { fill: '#162026', stroke: EV.gold, 'stroke-width': 2.5 });
+  g._trunk = G(H, { x: 74, y: 28 });
+  path(g._trunk, 'M-20 0C-12 60 -8 110 -16 150Q-6 170 12 158C10 110 16 60 20 -6Z', { fill: '#11181c', stroke: EV.gold, 'stroke-width': 3 });
+  [40, 70, 100, 128].forEach(yy => path(g._trunk, `M-14 ${yy}Q0 ${yy + 5} 14 ${yy}`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .4 }));
+  path(H, 'M66 46Q92 66 116 54', { stroke: EV.ink, 'stroke-width': 7, 'stroke-linecap': 'round' });
+  evDot(H, 58, -14, 5, EV.ink);
+  return g;
+}
+// Walk in place (or across): legs swing, trunk sways, the body bobs. x0..x1 between t0 and t0 + dur.
+function c2Walk(E, x0, x1, t0, dur, rate = 3, y0) {
+  const base = y0 ?? st(E).y;
+  prog(q => {
+    const t = q * dur, ph = t * rate;
+    put(E, { x: x0 + (x1 - x0) * q, y: base - Math.abs(Math.sin(ph)) * 3 });
+    E._legs.forEach((L_, i) => put(L_, { r: Math.sin(ph + (i % 2 ? Math.PI : 0) + (i > 1 ? Math.PI / 2 : 0)) * 9 }));
+    put(E._trunk, { r: Math.sin(ph * .5) * 9 });
+    put(E._tail, { r: Math.sin(ph * .8) * 12 });
+    put(E._head, { r: Math.sin(ph) * 1.5 });
+  }, t0, dur, lin);
+}
+const HEART = 'M0 16C-28 -4 -24 -26 -11 -26C-4 -26 0 -20 0 -15C0 -20 4 -26 11 -26C24 -26 28 -4 0 16Z';
+// Grey hair for older characters.
+function c2Grey(P) { P.head.querySelectorAll('path, circle').forEach(e => { if (e.getAttribute('fill') === EV.hair) e.setAttribute('fill', '#cfc8b8'); }); return P; }
+// Small keyboard, centred on (0,0).
+function c2Keys(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -120, y: -36, width: 240, height: 72, rx: 8, fill: '#e9e2d0', stroke: EV.gold, 'stroke-width': 2.5 }, g);
+  g._keys = [];
+  for (let i = 0; i < 10; i++) g._keys.push(mk('rect', { x: -116 + i * 23.2, y: -32, width: 22, height: 64, rx: 3, fill: '#efe6d2', stroke: '#8a826e', 'stroke-width': 1.2 }, g));
+  [0, 1, 3, 4, 5, 7, 8].forEach(i => mk('rect', { x: -116 + i * 23.2 + 15, y: -32, width: 14, height: 38, rx: 2, fill: '#1a1a1a' }, g));
+  return g;
+}
+// A pill capsule.
+function c2Pill(p, { x = 0, y = 0, s = 1, o = 1, r = 0 } = {}) {
+  const g = G(p, { x, y, s, o, r });
+  mk('rect', { x: -24, y: -10, width: 48, height: 20, rx: 10, fill: '#f4efe2' }, g);
+  mk('rect', { x: 0, y: -10, width: 24, height: 20, rx: 10, fill: '#cfe7d7' }, g);
+  mk('rect', { x: -2, y: -10, width: 8, height: 20, fill: '#cfe7d7' }, g);
+  return g;
+}
+// A small person icon (crowds).
+function c2Icon(p, x, y, color, o = 1) {
+  const g = G(p, { x, y, o });
+  mk('circle', { cx: 0, cy: -11, r: 8, fill: color }, g);
+  path(g, 'M-12 14Q-12 -1 0 -1Q12 -1 12 14Z', { fill: color });
+  return g;
+}
+// Science-check row: a tick (established) or a dashed dash (the author's model), text to the right.
+function c2Row(pg, y, ok, k, t, x0 = 230) {
+  const g = G(pg, { x: x0 + 40, y, o: 0 });
+  if (ok) { mk('circle', { cx: 0, cy: 0, r: 30, fill: EV.calm, opacity: .2 }, g); path(g, 'M-13 1L-3 11L15 -11', { stroke: EV.calm, 'stroke-width': 5 }); }
+  else { mk('circle', { cx: 0, cy: 0, r: 30, fill: 'none', stroke: EV.gold, 'stroke-width': 3, 'stroke-dasharray': '6 7' }, g); path(g, 'M-12 0H12', { stroke: EV.gold, 'stroke-width': 5 }); }
+  const tx = evPara(g, L(k), { x: 70, y: -8, size: 36, maxW: 1060, anchor: 'start', fill: EV.ink });
+  put(tx, { y: -tx._h / 2 + 22 });
+  tw(g, { o: 1, x: x0 }, t, .6, out);
+  return g;
+}
+
+// Positions shared by the anecdote beat and its quick check.
+const CROWD = Array.from({ length: 100 }, (_, i) => ({ x: 270 + (i % 10) * 50, y: 230 + Math.floor(i / 10) * 48 }));
+const LUCKY = [13, 37, 58, 72, 96];
+
+// Three piano columns, used by the beat and its quick check.
+function c2PianoCols(p, inst) {
+  const cols = [[330, 'played', 1, 'bigC'], [800, 'imagined', .85, 'nearC'], [1270, 'none', .08, 'noC']];
+  return cols.map(([x, k, gain, res]) => {
+    const g = G(p, { x, o: inst ? 1 : 0 });
+    evText(g, L(k), { x: 0, y: 140, size: 40, fill: EV.gold, weight: 600, font: SERIF, maxW: 400 });
+    const br = evBrain(g, { x: 0, y: 590, s: .55, stem: false });
+    const gl = evGlow(br, 10, -120, 70, 'Gold', 0); put(gl, { s: .2 });
+    g._gl = gl; g._gain = gain; g._br = br;
+    const rl = evText(g, L(res), { x: 0, y: 720, size: 30, fill: gain > .5 ? EV.goldHi : EV.dim, o: inst ? 1 : 0, maxW: 400 });
+    g._res = rl;
+    if (inst) put(gl, { s: .2 + gain * 1.1, o: gain > .5 ? 1 : .3 });
+    return g;
+  });
+}
+
+// A second picture inside a beat: hidden until its moment, then faded in over the old one.
+function c2Later(t) { const q = panel(t); put(q, { o: 0 }); tw(q, { o: 1 }, t, .4); return q; }
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    evGlow(g, 800, 700, 340, 'Gold', .3);
+    path(g, 'M180 800H1420', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .3 });
+    const E = c2Elephant(g, { x: 640, y: 800, s: .82 });
+    const rider = evPerson(E, { kind: 'm', x: -20, y: -205, s: .34 });
+    evMood(rider, 'smile', 0, .01); evBreathe(rider, D, 1.5, 1.2);
+    c2Walk(E, 640, 960, 0, D, 2.6, 800);
+    evText(g, L('kicker'), { x: 800, y: 140, size: 26, fill: EV.gold, weight: 500, ls: '6' });
+    evText(g, L('title'), { x: 800, y: 245, size: 92, font: SERIF, weight: 600, maxW: 1360 });
+    tw(g, { o: 1 }, .15, 1.1, out);
+    const sub = evText(scene, L('sub'), { x: 800, y: 330, size: 38, fill: EV.dim, o: 0, maxW: 1300, font: SERIF, italic: true });
+    put(sub, { y: 350 }); tw(sub, { y: 330, o: 1 }, m('sub'), .8, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 400, size: 26, fill: '#6f6a5c', o: 0 });
+    show(cr, m('sub') + .8, .8);
+    tw(g, { o: 0 }, D - .7, .6); hide(sub, D - .7, .6); hide(cr, D - .7, .6);
+  }],
+
+  ['stage', 'b_stage', (m, D) => {
+    const p = panel(0);
+    const cam = camera(p, D, {});
+    const W = cam.world;
+    // hall: back wall, stage, curtains, a banner
+    mk('rect', { x: -300, y: -200, width: 2200, height: 1300, fill: '#0a0f12' }, W);
+    mk('rect', { x: 330, y: 560, width: 1200, height: 60, fill: '#2a2018', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .5 }, W);
+    path(W, 'M330 560H1530', { stroke: EV.gold, 'stroke-width': 3, opacity: .7 });
+    const spot = evGlow(W, 1120, 420, 260, 'Warm', 0);
+    const curtain = (x, dir) => {
+      const c = G(W, { x });
+      path(c, `M0 60V560H${dir * 150}Q${dir * 120} 300 ${dir * 140} 60Z`, { fill: '#5a1f24', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .5 });
+      [40, 80, 115].forEach(k => path(c, `M${dir * k} 70Q${dir * (k - 14)} 300 ${dir * k} 556`, { stroke: '#3c1418', 'stroke-width': 4 }));
+      return c;
+    };
+    curtain(330, 1); curtain(1530, -1);
+    mk('rect', { x: 330, y: 40, width: 1200, height: 60, fill: '#5a1f24' }, W);
+    const ban = G(W, { x: 680, y: 150 });
+    mk('rect', { x: -260, y: -36, width: 520, height: 60, rx: 6, fill: '#151d21', stroke: EV.gold, 'stroke-width': 2 }, ban);
+    evText(ban, L('festival'), { x: 0, y: 6, size: 30, fill: EV.gold, weight: 600, maxW: 480 });
+    // the mic
+    const mic = G(W, { x: 1200, y: 560 });
+    path(mic, 'M0 0V-210M-30 0H30', { stroke: '#6b6255', 'stroke-width': 5 });
+    mk('rect', { x: -9, y: -246, width: 18, height: 34, rx: 9, fill: '#2b2b2b', stroke: EV.gold, 'stroke-width': 1.5 }, mic);
+    // Leena, ten, in the wings
+    const lee = evPerson(W, { kind: 'f', x: 420, y: 560, s: .74 });
+    evMood(lee, 'worried', 0, .01); evArm(lee, -1, 10, -20, 0, .01); evArm(lee, 1, -10, 20, 0, .01);
+    evBreathe(lee, D, 1.5, 2.2);
+    const lx = t => t < m('leap') ? 420 + Math.sin(t * 38) * (t > m('edge') ? 1.6 : 0) : 420;
+    prog(q => { const t = q * D; if (t < m('leap')) put(lee.g, { x: lx(t) }); }, 0, D, lin);
+    heat(W, 420, 330, EV.fear, m('edge'), m('leap') - m('edge') + .6, 10, 40, 160);
+    const cant = evText(W, L('cant'), { x: 420, y: 240, size: 34, fill: EV.fear, italic: true, font: SERIF, o: 0 });
+    show(cant, m('edge') + 1.6, .5); hide(cant, m('leap'), .4);
+    // the audience, front row
+    const crowd = G(W);
+    for (let i = 0; i < 9; i++) {
+      const hx = 360 + i * 140, f = G(crowd, { x: hx, y: 860 });
+      path(f, 'M-60 60Q-60 0 0 0Q60 0 60 60Z', { fill: '#141b1f', stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .3 });
+      mk('circle', { cx: 0, cy: -36, r: 32, fill: '#141b1f', stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .3 }, f);
+      if (i === 1 || i === 2) { const rim = mk('circle', { cx: 0, cy: -36, r: 34, fill: 'none', stroke: EV.joy, 'stroke-width': 3 }, f); put(rim, { o: 0 }); show(rim, m('cheer'), .4); }
+    }
+    const wh = lab(W, 'whisper', 560, 730, m('cheer') + .3, { size: 32, fill: EV.joy, italic: true, font: SERIF });
+    hide(wh, m('glow'), .5);
+    // she walks out and sings
+    cam.to({ x: 520, y: 420, z: 1.22 }, m('edge') - .3, 1.6);
+    evMood(lee, 'tense', m('leap') - .2);
+    evWalk(lee, 420, 1120, m('leap'), m('leap') + 3, 46);
+    cam.to({ x: 900, y: 430, z: 1.08 }, m('leap'), 2.4);
+    tw(spot, { o: 1 }, m('leap') + 1.6, 1);
+    evMood(lee, 'smile', m('glow'));
+    evArm(lee, -1, -30, -40, m('glow') + .2, .7); evArm(lee, 1, 30, 40, m('glow') + .2, .7);
+    const notes = Array.from({ length: 7 }, (_, i) => evText(W, i % 2 ? '♪' : '♫', { x: 900, y: 300, size: 44, fill: EV.joy, o: 0 }));
+    prog(q => {
+      const t = q * D - m('glow');
+      notes.forEach((n, i) => {
+        const u = ((t * .35 + i / 7) % 1 + 1) % 1;
+        put(n, { x: 1140 + Math.sin(i * 2.1 + t) * 70 + u * 100, y: 300 - u * 210, o: t < 0 ? 0 : Math.min(1, t) * Math.sin(u * Math.PI) });
+      });
+    }, 0, D, lin);
+    
+    // the phrase
+    cam.to({ x: 800, y: 450, z: 1 }, m('mom') - .3, 1.2);
+    const mo = evText(p, L('mom'), { x: 740, y: 340, size: 66, font: SERIF, weight: 600, fill: EV.gold, o: 0, maxW: 500 });
+    tw(mo, { o: 1 }, m('mom') + .4, .7);
+    lab(p, 'howFar', 730, 410, m('mom') + 2.4, { size: 36, fill: EV.ink, italic: true, font: SERIF, maxW: 560 });
+    tw(spot, { o: .5 }, m('mom'), .6);
+  }],
+
+  ['stories', 'b_stories', (m, D) => {
+    const p = panel(0);
+    const tt = evText(p, L('remission'), { x: 800, y: 160, size: 64, font: SERIF, weight: 600, fill: EV.gold, o: 0, maxW: 1300 });
+    // a stack of case files spreads into an arc
+    const N = 8, cards = [];
+    for (let i = 0; i < N; i++) {
+      const c = G(p, { x: 800, y: 560, o: 0, r: (i - 3.5) * 2 });
+      mk('rect', { x: -95, y: -65, width: 190, height: 130, rx: 10, fill: '#151d21', stroke: EV.gold, 'stroke-width': 2 }, c);
+      c2Icon(c, -50, -10, i % 3 === 0 ? EV.calm : '#8f8775');
+      [[-22, -26, 90], [-22, -2, 70], [-22, 22, 80], [-70, 44, 140]].forEach(([x, y, w]) => mk('rect', { x, y, width: w, height: 7, rx: 3, fill: '#3a3a33' }, c));
+      cards.push(c);
+    }
+    const arcX = i => 800 + (i - 3.5) * 158, arcY = i => 470 + Math.pow(i - 3.5, 2) * 9;
+    cards.forEach((c, i) => {
+      tw(c, { o: 1 }, .2 + i * .05, .3);
+      tw(c, { x: arcX(i), y: arcY(i), r: (i - 3.5) * 4 }, m('files') + .2 + i * .18, .8, out);
+    });
+    const yrs = lab(p, 'interviews', 800, 700, m('files') + 1.5, { size: 30, fill: EV.dim, italic: true });
+    tw(tt, { o: 1 }, m('term'), .6);
+    const rc = G(p, { x: 800, y: 240, o: 0 });
+    const rt = evText(rc, L('rare'), { x: 0, y: 10, size: 32, fill: EV.calm, weight: 500, maxW: 900 });
+    tw(rc, { o: 1 }, m('rare'), .5);
+    // the question: files gather round a gold question mark
+    hide(yrs, m('ask'), .4);
+    cards.forEach((c, i) => tw(c, { x: 800 + Math.cos(i / N * Math.PI * 2) * 330, y: 530 + Math.sin(i / N * Math.PI * 2) * 170, r: 0, s: .8 }, m('ask') + i * .06, 1, io));
+    const qm = evText(p, '?', { x: 800, y: 575, size: 150, font: SERIF, weight: 600, fill: EV.gold, o: 0 });
+    const qg = evGlow(p, 800, 530, 150, 'Gold', 0);
+    tw(qg, { o: .9 }, m('ask') + .8, .6); tw(qm, { o: 1 }, m('ask') + .8, .6); pulse(qm, m('ask') + 1.6, 1.15);
+    lab(p, 'common', 800, 800, m('ask') + .6, { size: 40, fill: EV.ink, italic: true, font: SERIF, maxW: 1300 });
+  }],
+
+  ['pillars', 'b_pillars', (m, D) => {
+    const p = panel(0);
+    lab(p, 'four', 800, 140, .2, { size: 54, fill: EV.gold, font: SERIF, weight: 600, maxW: 1300 });
+    const xs = [240, 613, 987, 1360], keys = ['p1', 'p2', 'p3', 'p4'];
+    const cards = xs.map((x, i) => {
+      const g = G(p, { x, y: 470, o: 0 });
+      mk('rect', { x: -165, y: -260, width: 330, height: 500, rx: 16, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .7 }, g);
+      mk('circle', { cx: 0, cy: -210, r: 28, fill: 'none', stroke: EV.gold, 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: 0, y: -199, size: 30, fill: EV.gold, weight: 600, anchor: 'middle', font: SANS });
+      const ic = G(g, { y: -70 });
+      if (i === 0) {
+        const E = c2Elephant(ic, { x: -10, y: 70, s: .34 }); c2Walk(E, -10, -10, 0, D, 3, 70);
+      } else if (i === 1) {
+        const br = evBrain(ic, { x: -50, y: -20, s: .3, stem: false });
+        const ar = path(ic, 'M10 -10C40 -10 50 10 60 30', { stroke: EV.gold, 'stroke-width': 3 }, { d: 0 });
+        draw(ar, m('p2') + .4, .6);
+        const ht = put(path(ic, HEART, { fill: EV.anger }), { x: 82, y: 50, s: 1.1 });
+        for (let k = 0; k < 8; k++) pulse(ht, m('p2') + .8 + k * .7, 1.25);
+        evFire(br, m('p2') + .1, 1);
+      } else if (i === 2) {
+        const a = evPerson(ic, { kind: 'f', x: -55, y: 70, s: .3, o: .35 });
+        const b = evPerson(ic, { kind: 'f', x: 55, y: 70, s: .3 });
+        evMood(b, 'smile', 0, .01);
+        const ar = path(ic, 'M-20 10H20', { stroke: EV.gold, 'stroke-width': 3 }, { d: 0 }); draw(ar, m('p3') + .3, .4);
+        evGlow(ic, 55, 10, 70, 'Gold', .6);
+      } else {
+        const ck = G(ic, { y: 0 });
+        mk('circle', { cx: 0, cy: 0, r: 56, fill: '#141b1f', stroke: EV.gold, 'stroke-width': 2.5 }, ck);
+        const hm = path(ck, 'M0 0V-40', { stroke: EV.ink, 'stroke-width': 4 }), hh = path(ck, 'M0 0V-26', { stroke: EV.ink, 'stroke-width': 5 });
+        prog(q => { const t = q * D; put(hm, { r: t * 260 }); put(hh, { r: t * 22 }); }, 0, D, lin);
+        tw(ck, { o: .35 }, m('p4') + 1.2, 2);
+      }
+      const tx = evPara(g, L(['pl1', 'pl2', 'pl3', 'pl4'][i]), { x: 0, y: 70, size: 30, maxW: 290, fill: EV.ink });
+      put(g, { y: 500 }); tw(g, { o: 1, y: 470 }, m(keys[i]), .6, out);
+      return g;
+    });
+    // each belief gets a 'to be tested' tag
+    cards.forEach((g, i) => {
+      const tg = G(p, { x: xs[i], y: 790, o: 0 });
+      mk('rect', { x: -130, y: -28, width: 260, height: 50, rx: 25, fill: 'none', stroke: EV.gold, 'stroke-width': 2, 'stroke-dasharray': '7 7' }, tg);
+      evText(tg, L('toTest'), { x: 0, y: 7, size: 26, fill: EV.gold, maxW: 230 });
+      tw(tg, { o: 1 }, m('hold') + .3 + i * .25, .4);
+    });
+  }],
+
+  ['giant', 'b_giant', (m, D) => {
+    const p = panel(0);
+    // ground scrolling under a walking elephant
+    const ground = G(p);
+    path(ground, 'M40 770H760', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .35 });
+    const dashes = Array.from({ length: 8 }, (_, i) => path(ground, 'M0 790H40', { stroke: EV.gold, 'stroke-width': 2, opacity: .25 }));
+    prog(q => { const t = q * D; dashes.forEach((d, i) => put(d, { x: 60 + ((i * 100 - t * 70) % 800 + 800) % 700 })); }, 0, D, lin);
+    const E = c2Elephant(p, { x: 400, y: 770, s: 1.02, o: 0 });
+    tw(E, { o: 1 }, .1, .6);
+    const rider = evPerson(E, { kind: 'm', x: -20, y: -205, s: .34 });
+    evMood(rider, 'calm', 0, .01); evBreathe(rider, D, 1.5, 1.1);
+    c2Walk(E, 400, 400, 0, D, 2.6, 770);
+    // the facts, each beside its icon
+    const row = (y, t) => { const g = G(p, { x: 900, y, o: 0 }); tw(g, { o: 1 }, t, .5); return g; };
+    const r1 = row(220, m('heart') - .2);
+    const ht = put(path(r1, HEART, { fill: EV.anger }), { x: 40, y: 0, s: 1.6 });
+    for (let k = 0; k < Math.floor((D - m('heart')) / .8); k++) pulse(ht, m('heart') + k * .8, 1.2);
+    const num = evText(r1, '0', { x: 110, y: 6, size: 56, fill: EV.ink, weight: 600, font: SERIF, anchor: 'start' });
+    prog(q => { num.textContent = fmtN(Math.round(q * 100) * 1000); }, m('heart'), 2.2, out);
+    evText(r1, L('beatsDay'), { x: 110, y: 50, size: 28, fill: EV.dim, anchor: 'start', maxW: 560 });
+    const r2 = row(390, m('cells') - .2);
+    const cl = Array.from({ length: 7 }, (_, i) => mk('circle', { cx: 40 + Math.cos(i * 0.9) * (i ? 26 : 0), cy: Math.sin(i * 0.9) * (i ? 26 : 0), r: 13, fill: EV.calm, opacity: .8 }, r2));
+    prog(q => { const t = q * D; cl.forEach((c, i) => put(c, { s: .5 + .5 * Math.abs(Math.sin(t * 1.4 + i * 1.7)) })); }, 0, D, lin);
+    evPara(r2, L('cellsSec'), { x: 110, y: -2, size: 30, fill: EV.ink, anchor: 'start', maxW: 560 });
+    const r3 = row(560, m('gut') - .2);
+    // gut, kidney, shield
+    path(r3, 'M14 -26C40 -30 50 -10 34 0C18 10 46 24 30 32C16 40 6 26 14 16', { stroke: '#d9a65a', 'stroke-width': 6 });
+    path(r3, 'M78 -22C62 -22 58 0 66 12C74 26 92 22 92 8C92 -4 96 -22 78 -22Z', { fill: '#7a3b34', stroke: EV.gold, 'stroke-width': 1.5 });
+    path(r3, 'M130 -26L152 -18V2Q152 22 130 32Q108 22 108 2V-18Z', { fill: 'none', stroke: EV.calm, 'stroke-width': 3 });
+    evText(r3, L('autoJobs'), { x: 180, y: 10, size: 30, fill: EV.ink, anchor: 'start', maxW: 480 });
+    // the phrase
+    const rd = lab(p, 'ride', 400, 300, m('ride') + .2, { size: 40, fill: EV.gold, italic: true, font: SERIF, maxW: 700 });
+    const rg = evGlow(p, 400, 600, 300, 'Gold', 0); p.insertBefore(rg, p.firstChild); tw(rg, { o: .6 }, m('ride'), 1);
+    // science check: stretched numbers
+    const sc = G(p, { x: 900, y: 700, o: 0 });
+    evText(sc, L('sciCheck'), { x: 0, y: 0, size: 30, fill: EV.gold, weight: 600, anchor: 'start' });
+    const ftl = evText(sc, L('ftl'), { x: 0, y: 52, size: 30, fill: EV.dim, anchor: 'start', maxW: 600 });
+    const sl = path(sc, `M-6 42H${Math.min(600, evW(L('ftl'), ML ? 26.4 : 30)) + 6}`, { stroke: EV.anger, 'stroke-width': 4 }, { d: 0 });
+    const nv = evText(sc, L('nerve'), { x: 0, y: 104, size: 30, fill: EV.calm, anchor: 'start', o: 0, maxW: 660 });
+    tw(sc, { o: 1 }, m('fair') + 1, .5); draw(sl, m('fair') + 2.6, .5); show(nv, m('fair') + 3.2, .5);
+  }],
+
+  ['loop', 'b_loop', (m, D) => {
+    const p = panel(0);
+    mk('rect', { x: 0, y: 720, width: 1600, height: 180, fill: '#0c1114' }, p);
+    path(p, 'M0 720H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+    const win = G(p, { x: 120, y: 170 });
+    mk('rect', { x: 0, y: 0, width: 220, height: 280, rx: 6, fill: '#0b1720', stroke: '#2b3632', 'stroke-width': 6 }, win);
+    path(win, 'M110 0V280M0 140H220', { stroke: '#2b3632', 'stroke-width': 5 });
+    [[30, 220, 30, 60], [80, 200, 22, 80], [150, 180, 36, 100]].forEach(([x, y, w, h]) => mk('rect', { x, y: y - h + 60, width: w, height: h, fill: '#14212a' }, win));
+    const rav = evPerson(p, { kind: 'm', x: 470, y: 720 });
+    evBreathe(rav, D, 1.2, 1);
+    evArm(rav, 1, 10, 130, 0, .01); evArm(rav, -1, -6, -10, 0, .01);
+    put(rav.head, { r: 8 });
+    const ph = G(rav.armR._lo, { x: 0, y: 84, r: -140 });
+    mk('rect', { x: -16, y: -26, width: 32, height: 52, rx: 6, fill: '#1d2428', stroke: EV.gold, 'stroke-width': 2 }, ph);
+    const scr = mk('rect', { x: -12, y: -21, width: 24, height: 40, rx: 3, fill: '#bfe3ff' }, ph); put(scr, { o: .15 });
+    tw(scr, { o: .9 }, m('msg') - .3, .3);
+    // the message
+    const b = evBubble(p, L('msg'), { x: 700, y: 300, w: 520, size: 34, tail: 'left' });
+    pop(b, m('msg') + 1.6);
+    lab(p, 'manager', 700 - 230, 300 - b._h - 50, m('msg') + 1.8, { size: 26, fill: EV.dim, anchor: 'start' });
+    // body reacts
+    evMood(rav, 'worried', m('gut') - .2); evMood(rav, 'tense', m('gut') + 1.4);
+    const knot = path(p, 'M450 520C430 500 470 486 480 506C490 526 450 536 446 512C442 494 474 494 470 512', { stroke: EV.fear, 'stroke-width': 4 }, { d: 0 });
+    draw(knot, m('gut') + .1, .8);
+    const kg = evGlow(p, 462, 510, 70, 'fear', 0); tw(kg, { o: .9 }, m('gut'), .8);
+    const ht = put(path(p, HEART, { fill: EV.anger }), { x: 492, y: 418, s: .7, o: 0 });
+    tw(ht, { o: 1 }, m('gut') + .4, .3);
+    for (let k = 0, t = m('gut') + .5; t < D; k++, t += Math.max(.42, .9 - k * .05)) pulse(ht, t, 1.3);
+    const hrG = G(p, { x: 1250, y: 170, o: 0 });
+    evText(hrG, L('hr'), { x: 0, y: 0, size: 28, fill: EV.dim });
+    const hrN = evText(hrG, '72', { x: 0, y: 76, size: 72, fill: EV.ink, weight: 600, font: SERIF });
+    evText(hrG, L('bpm'), { x: 0, y: 116, size: 26, fill: EV.dim });
+    tw(hrG, { o: 1 }, m('msg') + .5, .5);
+    prog(q => { hrN.textContent = String(Math.round(72 + 30 * q)); hrN.setAttribute('fill', q > .5 ? EV.anger : EV.ink); }, m('gut') + .3, 3, out);
+    lab(p, 'onlyThought', 1250, 340, m('gut') + 2.6, { size: 28, fill: EV.ink, italic: true, maxW: 560 });
+    // the loop, small: thought <-> feeling
+    const C = { x: 1250, y: 560 }, R = 100;
+    const lg = G(p, { o: 0 });
+    const ring = path(lg, `M${C.x} ${C.y - R}A${R} ${R} 0 1 1 ${C.x - .1} ${C.y - R}Z`, { stroke: EV.gold, 'stroke-width': 3, opacity: .55 });
+    evDot(lg, C.x, C.y - R, 14, EV.gold); evDot(lg, C.x, C.y + R, 14, EV.fear);
+    evText(lg, L('thought'), { x: C.x, y: C.y - R - 28, size: 30, fill: EV.gold });
+    evText(lg, L('feeling'), { x: C.x, y: C.y + R + 50, size: 30, fill: EV.fear });
+    tw(lg, { o: 1 }, m('loop'), .6);
+    evFlow(ring, 4, EV.goldHi, m('loop') + .3, D - m('loop') - .3, { speed: .3, r: 7, parent: p });
+    lab(p, 'more9', 1250, 830, m('ch9') + .2, { size: 28, fill: EV.dim, italic: true });
+  }],
+
+  ['q1', 'b_loop', (m, D) => {
+    const p = panel(0);
+    const rav = evPerson(p, { kind: 'm', x: 420, y: 640, s: .85 });
+    evMood(rav, 'tense', 0, .01); evBreathe(rav, D, 1.2, 1.4);
+    evArm(rav, 1, 10, 130, 0, .01);
+    const ph = G(rav.armR._lo, { x: 0, y: 84, r: -140 });
+    mk('rect', { x: -16, y: -26, width: 32, height: 52, rx: 6, fill: '#1d2428', stroke: EV.gold, 'stroke-width': 2 }, ph);
+    mk('rect', { x: -12, y: -21, width: 24, height: 40, rx: 3, fill: '#bfe3ff', opacity: .9 }, ph);
+    const b = evBubble(p, L('msg'), { x: 720, y: 280, w: 520, size: 34, tail: 'left' }); pop(b, .2);
+    const hrG = G(p, { x: 1250, y: 200, o: 0 });
+    evText(hrG, L('hr'), { x: 0, y: 0, size: 28, fill: EV.dim });
+    evText(hrG, '102', { x: 0, y: 76, size: 72, fill: EV.anger, weight: 600, font: SERIF });
+    tw(hrG, { o: 1 }, .3, .5);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-thought', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 0, L('q1y'), [null, L('q1nb'), L('q1nc')]),
+  }], done) }],
+
+  ['placebo', 'b_placebo', (m, D) => {
+    const p = panel(0);
+    const lee = evPerson(p, { kind: 'f', x: 380, y: 760 });
+    evMood(lee, 'hurt', 0, .01); evArm(lee, -1, 8, -20, 0, .01); evArm(lee, 1, -8, 20, 0, .01);
+    evBreathe(lee, D);
+    // headache: jagged lines round her head
+    const ache = G(p, { o: 0 });
+    [[-1, 0], [1, 0]].forEach(([s]) => path(ache, `M${380 + s * 60} 300L${380 + s * 80} 286L${380 + s * 74} 316L${380 + s * 96} 302`, { stroke: EV.anger, 'stroke-width': 4 }));
+    tw(ache, { o: 1 }, .3, .4);
+    prog(q => { const t = q * D; put(ache, { s: 1 + .03 * Math.sin(t * 9) }); }, 0, D, lin);
+    lab(p, 'headache', 380, 225, .4, { size: 28, fill: EV.anger });
+    // the pill
+    const pill = c2Pill(p, { x: 560, y: 520, s: 1.4, o: 0, r: -20 });
+    tw(pill, { o: 1 }, m('pill') + .2, .4);
+    const sg = lab(p, 'sugar', 560, 580, m('pill') + 2.6, { size: 28, fill: EV.joy, italic: true });
+    evArm(lee, 1, 20, 140, m('pill') + 3.2, .6);
+    tw(pill, { x: 392, y: 330, s: .6 }, m('pill') + 3.4, .8, io); hide(pill, m('pill') + 4.1, .3);
+    hide(sg, m('pill') + 3.6, .4);
+    evArm(lee, 1, -8, 20, m('pill') + 4.3, .6);
+    lab(p, 'expects', 1100, 110, m('pill') + 1, { size: 32, fill: EV.ink, italic: true, font: SERIF, maxW: 800 });
+    // brain and pain meter
+    const br = evBrain(p, { x: 1100, y: 330, s: .8, o: 0 });
+    tw(br, { o: 1 }, m('pill') + .6, .6);
+    const mt = G(p, { x: 1100, y: 700, o: 0 });
+    evText(mt, L('pain'), { x: -240, y: 10, size: 30, fill: EV.anger, anchor: 'end' });
+    mk('rect', { x: -220, y: -22, width: 440, height: 44, rx: 22, fill: 'none', stroke: EV.dim, 'stroke-width': 2 }, mt);
+    const fill = mk('rect', { x: -216, y: -18, width: 350, height: 36, rx: 18, fill: EV.anger }, mt);
+    tw(mt, { o: 1 }, m('pill') + .8, .5);
+    const lvl = v => fill.setAttribute('width', 432 * v);
+    prog(q => lvl(.81 - .55 * q), m('ease') + .3, 2.2, io);
+    tw(ache, { o: .15 }, m('ease') + .8, 1.4); evMood(lee, 'calm', m('ease') + 1);
+    const tm = lab(p, 'min20', 1100, 790, m('ease'), { size: 28, fill: EV.dim, italic: true });
+    hide(tm, m('why') - .2, .4);
+    // endorphins flow from the brain to the meter
+    evFire(br, m('why'), 1.3, EV.calm);
+    const fl = path(p, 'M1140 470C1160 540 1120 600 1100 660', { stroke: 'none' });
+    const dots = evFlow(fl, 6, EV.calm, m('why') + .5, D - m('why') - .5, { speed: .5, r: 7, parent: p });
+    const en = lab(p, 'endorphins', 1300, 560, m('why') + 1.8, { size: 30, fill: EV.calm, anchor: 'start' });
+    // block them: relief fades
+    const bl = G(p, { x: 1128, y: 575, o: 0 });
+    mk('rect', { x: -60, y: -12, width: 120, height: 24, rx: 6, fill: '#3a3a3a', stroke: EV.dim, 'stroke-width': 2 }, bl);
+    tw(bl, { o: 1, s: 1 }, m('block'), .4);
+    lab(p, 'blocker', 1000, 580, m('block') + .4, { size: 28, fill: EV.dim, anchor: 'end' });
+    prog(q => { if (q > 0) dots.forEach((d, i) => { const s_ = st(d); if (s_.y > 575) put(d, { o: 0 }); }); }, m('block') + .6, D - m('block') - .6, lin);
+    prog(q => lvl(.26 + .38 * q), m('block') + 1, 1.6, io);
+    tw(ache, { o: .6 }, m('block') + 1, 1.2); evMood(lee, 'hurt', m('block') + 1.2);
+    lab(p, 'biology', 1100, 800, m('block') + 3.2, { size: 32, fill: EV.gold, italic: true, font: SERIF });
+    // nocebo: a new picture
+    const q2 = c2Later(m('nocebo'));
+    const l2 = evPerson(q2, { kind: 'f', x: 380, y: 760 });
+    evMood(l2, 'calm', 0, .01); evArm(l2, -1, -6, 40, 0, .01); evArm(l2, 1, 6, -40, 0, .01);
+    prog(q => { const t = q * D; put(l2.head, { y: -132 + Math.sin(t * 6) * .8 }); }, 0, D, lin);
+    const lf = G(q2, { x: 1020, y: 470 });
+    mk('rect', { x: -260, y: -300, width: 520, height: 560, rx: 8, fill: '#e9e2d0' }, lf);
+    T(lf, L('leaflet'), { x: -220, y: -230, size: ML ? 28 : 34, fill: '#1a1a1a', weight: 600, font: SANS });
+    ['se1', 'se2', 'se3', 'se4', 'se5'].forEach((k, i) => {
+      const t = T(lf, '• ' + L(k), { x: -220, y: -150 + i * 64, size: ML ? 28 : 32, fill: '#333', font: SANS, o: 0 });
+      show(t, m('nocebo') + .6 + i * .45, .3);
+    });
+    put(lf, { y: 500, o: 0 }); tw(lf, { y: 470, o: 1 }, m('nocebo') + .1, .5);
+    evMood(l2, 'worried', m('nocebo') + 2.6);
+    const nz = evGlow(q2, 380, 500, 90, 'calm', 0); tw(nz, { o: .7 }, m('nocebo') + 3, 1);
+    const nb = evText(q2, L('nocebo'), { x: 1020, y: 830, size: 48, fill: EV.gold, font: SERIF, weight: 600, o: 0 });
+    tw(nb, { o: 1 }, m('nocebo') + 4, .6);
+  }],
+
+  ['limits', 'b_limits', (m, D) => {
+    const p = panel(0);
+    const base = 620;
+    path(p, `M140 ${base}H1480`, { stroke: EV.dim, 'stroke-width': 2 });
+    const hdr = (k, x, c, t) => lab(p, k, x, 200, t, { size: 34, fill: c, weight: 600, maxW: 620 });
+    hdr('helps', 470, EV.calm, m('strong') - .2);
+    hdr('rarely', 1160, EV.dim, m('weak') - .2);
+    const bar = (x, h, c, k, t) => {
+      const r = mk('rect', { x: x - 55, y: base, width: 110, height: 0, rx: 6, fill: c }, p);
+      prog(q => { r.setAttribute('y', base - h * q); r.setAttribute('height', h * q); }, t, .8, out);
+      const tx = evPara(p, L(k), { x, y: base + 44, size: 28, maxW: 160, fill: EV.ink, o: 0 }); show(tx, t + .2, .4);
+      return r;
+    };
+    [['painB', 250], ['nausea', 220], ['tired', 190], ['mood', 200]].forEach(([k, h], i) => bar(230 + i * 160, h, EV.calm, k, m('strong') + .5 + i * .45));
+    [['tumour', 10], ['infection', 10], ['bone', 10]].forEach(([k, h], i) => bar(1000 + i * 160, h, '#5b5650', k, m('weak') + .1 + i * .5));
+    lab(p, 'illus', 800, 820, m('weak') + 1.5, { size: 26, fill: EV.dim, italic: true });
+    // a fair trial: medicine must beat placebo
+    const q2 = c2Later(m('trial'));
+    const tb = 720, cols = [[560, 'placebo', 210, EV.calm], [1040, 'medicine', 360, EV.gold]];
+    path(q2, `M300 ${tb}H1300`, { stroke: EV.dim, 'stroke-width': 2 });
+    cols.forEach(([x, k, h, c], i) => {
+      const g = G(q2, { x, y: 0 });
+      for (let j = 0; j < 12; j++) c2Icon(g, -110 + (j % 6) * 44, 190 + Math.floor(j / 6) * 52, '#8f8775');
+      evText(g, L(k), { x: 0, y: 140, size: 36, fill: c, weight: 600 });
+      const r = mk('rect', { x: -70, y: tb, width: 140, height: 0, rx: 6, fill: c }, g);
+      prog(q => { r.setAttribute('y', tb - h * q); r.setAttribute('height', h * q); }, m('trial') + .6 + i * .6, .9, out);
+      put(g, { o: 0 }); tw(g, { o: 1 }, m('trial') + .1 + i * .3, .4);
+    });
+    evText(q2, L('improved'), { x: 300, y: tb + 44, size: 26, fill: EV.dim, anchor: 'start' });
+    const dl = path(q2, `M300 ${tb - 210}H1300`, { stroke: EV.calm, 'stroke-width': 3, 'stroke-dasharray': '12 10' }, { d: 0 });
+    draw(dl, m('trial') + 2, .8);
+    const mb = evPara(q2, L('mustBeat'), { x: 800, y: tb - 270, size: 30, maxW: 300, fill: EV.calm, italic: true, o: 0 }); put(mb, { y: tb - 222 - mb._h }); show(mb, m('trial') + 2.6, .5);
+  }],
+
+  ['anecdote', 'b_anec', (m, D) => {
+    const p = panel(0);
+    lab(p, 'sameIll', 495, 150, m('hundred') + .2, { size: 30, fill: EV.dim, italic: true, maxW: 600 });
+    const ppl = CROWD.map((c, i) => { const g = c2Icon(p, c.x, c.y, '#8f8775', 0); tw(g, { o: 1 }, m('hundred') + .1 + Math.floor(i / 10) * .12, .3); return g; });
+    const gold = LUCKY.map(i => ppl[i]);
+    LUCKY.forEach((i, k) => {
+      const g = ppl[i];
+      const glow = evGlow(p, CROWD[i].x, CROWD[i].y, 36, 'Gold', 0); p.insertBefore(glow, p.firstChild);
+      tw(glow, { o: 1 }, m('some') + k * .25, .4);
+      g.querySelectorAll('circle, path').forEach(e => tw(e, { c_fill: EV.gold }, m('some') + k * .25, .4));
+      tw(glow, { o: 0 }, m('ask'), .4);
+    });
+    const rc = lab(p, 'recovered', 495, 760, m('some') + 1, { size: 30, fill: EV.gold });
+    ppl.forEach((g, i) => { if (!LUCKY.includes(i)) tw(g, { o: .22 }, m('silent') + (i % 7) * .08, .6); });
+    hide(rc, m('silent'), .3);
+    lab(p, 'notHeard', 495, 760, m('silent') + .6, { size: 30, fill: EV.dim, italic: true, maxW: 640 });
+    // only the survivors are heard
+    gold.forEach((g, k) => tw(g, { x: 1000 + k * 90, y: 330, s: 1.5 }, m('ask') + k * .12, .9, io));
+    const mic = G(p, { x: 1180, y: 430, o: 0 });
+    path(mic, 'M0 0V60M-26 60H26', { stroke: '#6b6255', 'stroke-width': 4 });
+    mk('rect', { x: -12, y: -40, width: 24, height: 44, rx: 12, fill: '#2b2b2b', stroke: EV.gold, 'stroke-width': 2 }, mic);
+    tw(mic, { o: 1 }, m('ask') + .8, .4);
+    lab(p, 'heard', 1180, 240, m('ask') + .7, { size: 30, fill: EV.gold, maxW: 560 });
+    lab(p, 'proves', 1180, 570, m('ask') + 2, { size: 36, fill: EV.joy, italic: true, font: SERIF, maxW: 560 });
+    const sb = lab(p, 'survivor', 1180, 680, m('bias'), { size: 54, fill: EV.gold, weight: 600, font: SERIF, maxW: 600 });
+    pulse(sb, m('bias') + .6, 1.1);
+    lab(p, 'fiveNot', 1180, 740, m('bias') + 5, { size: 30, fill: EV.ink, italic: true, maxW: 560 });
+    // a fair comparison
+    const q2 = c2Later(m('test'));
+    lab(q2, 'fair', 800, 130, m('test') + .2, { size: 54, fill: EV.gold, font: SERIF, weight: 600 });
+    [[470, 'didPractice', [3, 11, 22]], [1130, 'didNot', [6, 17, 27]]].forEach(([cx, k, hits], j) => {
+      const g = G(q2, { o: 0 });
+      mk('rect', { x: cx - 230, y: 220, width: 460, height: 390, rx: 16, fill: 'none', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .5 }, g);
+      for (let i = 0; i < 30; i++) c2Icon(g, cx - 180 + (i % 6) * 72, 290 + Math.floor(i / 6) * 70, hits.includes(i) ? EV.gold : '#8f8775');
+      evText(g, L(k), { x: cx, y: 670, size: 32, fill: EV.ink, weight: 600, maxW: 440 });
+      tw(g, { o: 1 }, m('test') + .6 + j * .5, .5);
+    });
+    const vs = evText(q2, '?', { x: 800, y: 440, size: 80, fill: EV.gold, font: SERIF, weight: 600, o: 0 });
+    show(vs, m('test') + 2, .5);
+    lab(q2, 'compare', 800, 780, m('test') + 3, { size: 32, fill: EV.dim, italic: true, maxW: 1300 });
+  }],
+
+  ['q2', 'b_anec', (m, D) => {
+    const p = panel(0);
+    const g = G(p, { x: 470, y: -45, s: .7, o: 0 });
+    CROWD.forEach((c, i) => c2Icon(g, c.x, c.y, LUCKY.includes(i) ? EV.gold : '#8f8775', LUCKY.includes(i) ? 1 : .3));
+    tw(g, { o: 1 }, .1, .5);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-evidence', prompt: [L('q2p')],
+    build: grid([
+      { parts: [L('q2r1')], ans: ['a'], why: L('q2w1') },
+      { parts: [L('q2r2')], ans: ['e'], why: L('q2w2') },
+      { parts: [L('q2r3')], ans: ['a'], why: L('q2w3') },
+      { parts: [L('q2r4')], ans: ['e'], why: L('q2w4') },
+    ], [['a', L('q2anec'), EV.surprise, 'A'], ['e', L('q2evid'), EV.calm, 'E']], { multi: false, text: true }),
+  }], done) }],
+
+  ['safety', 'b_safety', (m, D) => {
+    const p = panel(0);
+    mk('rect', { x: 0, y: 760, width: 1600, height: 140, fill: '#0c1114' }, p);
+    const dad = c2Grey(evPerson(p, { kind: 'm', x: 330, y: 760 }));
+    evMood(dad, 'calm', 0, .01); evBreathe(dad, D, 1.1, .8);
+    evArm(dad, -1, -4, -8, 0, .01); evArm(dad, 1, 4, 8, 0, .01);
+    // with, not instead
+    const w = G(p, { x: 760, y: 170, o: 0 });
+    put(path(w, 'M-13 1L-3 11L15 -11', { stroke: EV.calm, 'stroke-width': 5 }), { x: 0, y: -10 });
+    evText(w, L('withT'), { x: 40, y: 0, size: 44, fill: EV.calm, weight: 600, anchor: 'start', maxW: 700 });
+    tw(w, { o: 1 }, m('meds') + .2, .5);
+    const ins = G(p, { x: 760, y: 250, o: 0 });
+    put(path(ins, 'M-12 -12L12 12M12 -12L-12 12', { stroke: EV.anger, 'stroke-width': 5 }), { y: -10 });
+    const it = evText(ins, L('insteadT'), { x: 40, y: 0, size: 40, fill: EV.dim, anchor: 'start', maxW: 700 });
+    const iw = Math.min(700, evW(L('insteadT'), ML ? 35.2 : 40));
+    const sl = path(ins, `M34 -12H${44 + iw}`, { stroke: EV.anger, 'stroke-width': 4 }, { d: 0 });
+    tw(ins, { o: 1 }, m('meds') + 1.6, .5); draw(sl, m('meds') + 2.4, .5);
+    // his plan: tablets + calm practice + doctor
+    const plan = G(p, { x: 0, y: 450 });
+    const it1 = G(plan, { x: 820, o: 0 });
+    mk('rect', { x: -60, y: -40, width: 120, height: 80, rx: 12, fill: '#1d2428', stroke: EV.gold, 'stroke-width': 2 }, it1);
+    [-30, 0, 30].forEach(x => c2Pill(it1, { x, y: 0, s: .55, r: 90 }));
+    const it2 = G(plan, { x: 1080, o: 0 });
+    const br1 = mk('circle', { cx: 0, cy: 0, r: 34, fill: 'none', stroke: EV.calm, 'stroke-width': 4 }, it2);
+    prog(q => { const t = q * D; put(br1, { s: 1 + .3 * Math.sin(t * 1.4) }); }, 0, D, lin);
+    evGlow(it2, 0, 0, 60, 'calm', .6);
+    const it3 = G(plan, { x: 1340, o: 0 });
+    mk('rect', { x: -40, y: -50, width: 80, height: 100, rx: 8, fill: '#e9e2d0' }, it3);
+    path(it3, 'M-24 -20H24M-24 0H24M-24 20H10', { stroke: '#555', 'stroke-width': 3 });
+    mk('rect', { x: -18, y: -58, width: 36, height: 14, rx: 4, fill: EV.goldLo }, it3);
+    ['+', '+'].forEach((s, i) => { const t = evText(plan, s, { x: 950 + i * 260, y: 14, size: 48, fill: EV.gold, o: 0 }); show(t, m('dad') + 1 + i * 1.4, .3); });
+    [[it1, 'tablets'], [it2, 'calmP'], [it3, 'doctor']].forEach(([g, k], i) => {
+      evPara(g, L(k), { x: 0, y: 90, size: 28, maxW: 220, fill: EV.ink });
+      tw(g, { o: 1 }, m('dad') + .6 + i * 1.4, .5);
+    });
+    // his readings over the weeks
+    const ch = G(p, { x: 820, y: 640, o: 0 });
+    path(ch, 'M0 0V200H560', { stroke: EV.dim, 'stroke-width': 2 });
+    const pts = [[40, 40], [130, 52], [220, 70], [310, 92], [400, 108], [490, 120]];
+    const ln = path(ch, 'M' + pts.map(q => q.join(' ')).join('L'), { stroke: EV.calm, 'stroke-width': 3 }, { d: 0 });
+    const dd = pts.map(([x, y]) => evDot(ch, x, y, 7, EV.calm, 0));
+    evText(ch, L('weeks'), { x: 560, y: 236, size: 26, fill: EV.dim, anchor: 'end' });
+    evText(ch, L('readings'), { x: 16, y: -14, size: 26, fill: EV.dim, anchor: 'start' });
+    tw(ch, { o: 1 }, m('review') - .2, .4);
+    draw(ln, m('review') + .2, 1.6); dd.forEach((d, i) => show(d, m('review') + .2 + i * .27, .2));
+    const adj = G(p, { x: 1400, y: 690, o: 0 });
+    evText(adj, L('adjust'), { x: 0, y: 0, size: 28, fill: EV.gold, anchor: 'end', maxW: 560 });
+    tw(adj, { o: 1 }, m('review') + 2, .5);
+    evMood(dad, 'smile', m('safe'));
+    const dg = evGlow(p, 330, 470, 180, 'calm', 0); p.insertBefore(dg, p.firstChild); tw(dg, { o: .7 }, m('safe'), 1);
+    lab(p, 'both', 330, 830, m('safe') + .4, { size: 32, fill: EV.calm, italic: true, font: SERIF });
+  }],
+
+  ['autopilot', 'b_auto', (m, D) => {
+    const p = panel(0);
+    // skyline, road, car
+    const sky = G(p);
+    const tow = [[0, 120, 60], [80, 200, 50], [150, 150, 70], [240, 300, 40], [300, 180, 60], [380, 240, 46], [450, 130, 80], [550, 210, 52]];
+    const sk = G(sky);
+    for (let k = 0; k < 3; k++) tow.forEach(([x, h, w]) => mk('rect', { x: k * 640 + x, y: 560 - h, width: w, height: h, fill: '#0f171c' }, sk));
+    for (let k = 0; k < 3; k++) path(sk, `M${k * 640 + 255} 260L${k * 640 + 260} 200L${k * 640 + 265} 260Z`, { fill: '#0f171c' });
+    prog(q => { put(sk, { x: -((q * D * 14) % 640) }); }, 0, D, lin);
+    mk('rect', { x: 0, y: 560, width: 1600, height: 340, fill: '#0b0f12' }, p);
+    path(p, 'M0 600H1600M0 820H1600', { stroke: EV.gold, 'stroke-width': 2, opacity: .35 });
+    const dz = Array.from({ length: 9 }, () => path(p, 'M0 710H70', { stroke: '#e9e2d0', 'stroke-width': 5, opacity: .45 }));
+    prog(q => { const t = q * D; dz.forEach((d, i) => put(d, { x: ((i * 200 - t * 420) % 1800 + 1800) % 1800 - 100 })); }, 0, D, lin);
+    const car = G(p, { x: 420, y: 740 });
+    path(car, 'M-150 10V-30Q-150 -44 -136 -46L-90 -52L-50 -96H70L120 -50L150 -44Q164 -40 164 -24V10Z', { fill: '#1d2a33', stroke: EV.gold, 'stroke-width': 2.5 });
+    path(car, 'M-38 -88H20V-54H-72Z', { fill: '#2c3e48' }); path(car, 'M30 -88H64L102 -54H30Z', { fill: '#2c3e48' });
+    mk('circle', { cx: 0, cy: -72, r: 14, fill: EV.skinM }, car);
+    const wheels = [-90, 100].map(x => { const w = G(car, { x, y: 12 }); mk('circle', { cx: 0, cy: 0, r: 28, fill: '#111', stroke: EV.dim, 'stroke-width': 3 }, w); path(w, 'M-20 0H20M0 -20V20', { stroke: EV.dim, 'stroke-width': 3 }); return w; });
+    prog(q => { const t = q * D; wheels.forEach(w => put(w, { r: t * 500 })); put(car, { y: 740 + Math.sin(t * 9) * 1.5 }); }, 0, D, lin);
+    const lp = G(car, { x: -160, y: -20 });
+    mk('rect', { x: -18, y: -18, width: 36, height: 36, rx: 3, fill: '#f4efe2' }, lp);
+    T(lp, 'L', { x: 0, y: 12, size: 30, fill: '#c0392b', weight: 700, anchor: 'middle', font: SANS });
+    const lr = lab(p, 'learner', 420, 520, m('drive') + .6, { size: 30, fill: EV.ink, italic: true, maxW: 700 });
+    hide(lp, m('auto') - .2, .4); hide(lr, m('auto') - .2, .4);
+    const ap = G(p, { x: 420, y: 520, o: 0 });
+    mk('rect', { x: -120, y: -30, width: 240, height: 48, rx: 24, fill: '#151d21', stroke: EV.dim, 'stroke-width': 2 }, ap);
+    evText(ap, L('autop'), { x: 0, y: 3, size: 28, fill: EV.dim, maxW: 210 });
+    tw(ap, { o: 1 }, m('auto'), .5);
+    // automatic thoughts drift above
+    const th = [['at1', 760, 430], ['at2', 1060, 330], ['at3', 1300, 470]].map(([k, x, y], i) => {
+      const g = G(p, { x, y, o: 0 });
+      const t = evText(g, L(k), { x: 0, y: 0, size: 32, fill: EV.ink, italic: true, font: SERIF, maxW: 420 });
+      prog(q => { const tt = q * D; put(g, { y: y + Math.sin(tt * .9 + i * 2) * 8 }); }, 0, D, lin);
+      tw(g, { o: .75 }, m('auto') + .4 + i * .6, .6);
+      return g;
+    });
+    // one is caught
+    const fr = G(p, { x: 1300, y: 460, o: 0 });
+    const fw = Math.min(420, evW(L('at3'), ML ? 28.2 : 32, SERIF)) + 60;
+    mk('rect', { x: -fw / 2, y: -46, width: fw, height: 70, rx: 12, fill: 'none', stroke: EV.gold, 'stroke-width': 3, 'stroke-dasharray': '10 8' }, fr);
+    evText(fr, L('noticed'), { x: -fw / 2, y: -60, size: 26, fill: EV.gold, anchor: 'start' });
+    tw(fr, { o: 1 }, m('notice') + .6, .5);
+    tw(th[0], { o: .3 }, m('notice') + .4, .5); tw(th[1], { o: .3 }, m('notice') + .4, .5);
+    tw(th[2], { o: 1 }, m('notice') + .4, .4);
+    const nf = lab(p, 'notFact', 800, 170, m('fact') + .6, { size: 56, fill: EV.gold, font: SERIF, weight: 600, maxW: 1300 });
+    const ck = path(p, 'M1250 400L1290 440L1270 460L1320 500', { stroke: EV.anger, 'stroke-width': 4 }, { d: 0 });
+    draw(ck, m('fact') + 1.4, .5); tw(th[2], { o: .35 }, m('fact') + 1.8, .6);
+  }],
+
+  ['piano', 'b_piano', (m, D) => {
+    const p = panel(0);
+    const st_ = lab(p, 'study', 800, 70, m('study') + .2, { size: 30, fill: EV.dim, italic: true, maxW: 1200 });
+    const cols = c2PianoCols(p, false);
+    const mk_ = ['played', 'imagined', 'none'];
+    cols.forEach((g, i) => { tw(g, { o: .3 }, m('study') + 1 + i * .3, .6); tw(g, { o: 1 }, m(mk_[i]), .6); });
+    // played: a keyboard with hands that press keys
+    const k1 = c2Keys(cols[0], { x: 0, y: 290 });
+    const hands = [-50, 40].map(x => { const h = G(cols[0], { x, y: 255 }); mk('ellipse', { cx: 0, cy: 0, rx: 34, ry: 18, fill: EV.skinM }, h); return h; });
+    prog(q => {
+      const t = q * D - m('played');
+      hands.forEach((h, i) => put(h, { y: 255 + (t > 0 ? Math.abs(Math.sin(t * 5 + i)) * -10 : 0) }));
+      k1._keys.forEach((k, i) => k.setAttribute('fill', t > 0 && Math.floor(t * 5) % 10 === (i * 3) % 10 ? EV.goldHi : '#efe6d2'));
+    }, 0, D, lin);
+    lab(cols[0], 'hours', 0, 430, m('played') + 1, { size: 26, fill: EV.dim, maxW: 400 });
+    // imagined: a head and a keyboard in its thought cloud
+    const hd = G(cols[1], { x: -130, y: 360 });
+    mk('circle', { cx: 0, cy: -30, r: 34, fill: EV.skinF }, hd);
+    path(hd, 'M-36 -40Q-38 -76 0 -76Q38 -76 36 -40Q30 -60 0 -62Q-30 -60 -36 -40Z', { fill: EV.hair });
+    path(hd, 'M-46 40Q-46 10 0 10Q46 10 46 40Z', { fill: '#2b7c78' });
+    const clg = G(cols[1], { x: -70, y: 330, s: .6 });
+    const cl = evThought(clg, { x: 0, y: 0, w: 300, h: 140, dx: 160 });
+    tw(cl, { o: 1 }, m('imagined') + .4, .5);
+    const k2 = c2Keys(cl._in, { s: .8 });
+    prog(q => { const t = q * D - m('imagined'); k2._keys.forEach((k, i) => k.setAttribute('fill', t > .8 && Math.floor(t * 5) % 10 === (i * 3) % 10 ? EV.goldHi : '#efe6d2')); }, 0, D, lin);
+    lab(cols[1], 'hours', 0, 430, m('imagined') + 1.2, { size: 26, fill: EV.dim, maxW: 400 });
+    // none: a dim keyboard
+    c2Keys(cols[2], { x: 0, y: 290, o: .25 });
+    // results: the finger area grows
+    cols.forEach((g, i) => {
+      tw(g._gl, { s: .2 + g._gain * 1.1, o: g._gain > .5 ? 1 : .3 }, m('result') + i * .4, 1.2, out);
+      if (g._gain > .5) evFire(g._br, m('result') + i * .4, 1.2);
+      show(g._res, m('result') + .8 + i * .4, .5);
+    });
+    lab(cols[1], 'fingerArea', 125, 545, m('result') + 1.2, { size: 26, fill: EV.gold, anchor: 'start' });
+    lab(cols[0], 'bestPlay', 0, 790, m('result') + 4.6, { size: 28, fill: EV.calm, italic: true, maxW: 400 });
+    // the rule: fire together, wire together
+    const q2 = c2Later(m('wire'));
+    lab(q2, 'fireWire', 800, 190, m('wire') + .3, { size: 60, fill: EV.gold, font: SERIF, weight: 600, maxW: 1300 });
+    const nA = G(q2, { x: 480, y: 500 }), nB = G(q2, { x: 1120, y: 500 });
+    [nA, nB].forEach((n, j) => {
+      for (let k = 0; k < 7; k++) { const a = (k / 7) * Math.PI * 2 + j; path(n, `M0 0L${Math.cos(a) * 110} ${Math.sin(a) * 90}`, { stroke: EV.gold, 'stroke-width': 3, opacity: .6 }); }
+      mk('circle', { cx: 0, cy: 0, r: 46, fill: '#141c20', stroke: EV.gold, 'stroke-width': 3 }, n);
+    });
+    const link = path(q2, 'M526 500C700 440 900 560 1074 500', { stroke: EV.goldHi, 'stroke-width': 3 });
+    prog(q => { link.setAttribute('stroke-width', 3 + 15 * q); }, m('wire') + 1, D - m('wire') - 1.2, io);
+    const spark = evDot(q2, 526, 500, 10, '#fff3cf', 0);
+    const ctr = evText(q2, '', { x: 800, y: 720, size: 34, fill: EV.dim });
+    prog(q => {
+      const t = q * (D - m('wire')), n = Math.floor(t / .55), u = (t / .55) % 1, pt = link.getPointAtLength(u * link.getTotalLength());
+      put(spark, { x: pt.x, y: pt.y, o: Math.sin(u * Math.PI) });
+      ctr.textContent = fmt('rep', Math.max(1, n + 1));
+    }, m('wire'), D - m('wire'), lin);
+  }],
+
+  ['plastic', 'b_plastic', (m, D) => {
+    const p = panel(0);
+    mk('rect', { x: 0, y: 760, width: 800, height: 140, fill: '#0c1114' }, p);
+    const lee = evPerson(p, { kind: 'f', x: 400, y: 760, s: .95 });
+    evMood(lee, 'smile', 0, .01); evBreathe(lee, D);
+    evArm(lee, -1, -16, -120, 0, .01); evArm(lee, 1, 16, 120, 0, .01);
+    // three balls on a looping path until she stops
+    const cols_ = [EV.joy, EV.calm, EV.fear];
+    const balls = cols_.map(c => evDot(p, 400, 480, 15, c, 0));
+    const tS = m('stop');
+    prog(q => {
+      const t = q * D;
+      balls.forEach((b, i) => {
+        if (t < m('juggle') - .3) return put(b, { o: 0 });
+        if (t < tS) { const ph = t * 3.2 + i * 2.094; put(b, { x: 400 + Math.cos(ph) * 70, y: 470 - Math.abs(Math.sin(ph)) * 230, o: 1 }); return; }
+        const ph0 = tS * 3.2 + i * 2.094, x0 = 400 + Math.cos(ph0) * 70, y0 = 470 - Math.abs(Math.sin(ph0)) * 230, u = Math.min(1, (t - tS) / .8);
+        put(b, { x: x0 + (i - 1) * 90 * u, y: y0 + (750 - y0) * u * u, o: 1 });
+      });
+    }, 0, D, lin);
+    lab(p, 'practising', 400, 840, m('juggle'), { size: 30, fill: EV.dim });
+    evMood(lee, 'calm', tS);
+    evArm(lee, -1, -4, -10, tS + .2, .6); evArm(lee, 1, 4, 10, tS + .2, .6);
+    // her brain and its grey matter
+    const br = evBrain(p, { x: 1150, y: 380, s: .95, o: 0 });
+    tw(br, { o: 1 }, m('juggle') - .4, .5);
+    const gm = evGlow(br, 120, -50, 80, 'Gold', 0); put(gm, { s: .3 });
+    const gml = lab(p, 'grey', 1400, 210, m('juggle') + 1.6, { size: 28, fill: EV.gold });
+    // calendar: months fill, then stop
+    const cal = G(p, { x: 1150, y: 700, o: 0 });
+    const cells = [];
+    for (let i = 0; i < 6; i++) {
+      const c = mk('rect', { x: -330 + i * 110, y: -26, width: 100, height: 52, rx: 8, fill: '#151d21', stroke: EV.dim, 'stroke-width': 1.5 }, cal);
+      evText(cal, String(i + 1), { x: -280 + i * 110, y: 10, size: 28, fill: EV.ink });
+      cells.push(c);
+    }
+    evText(cal, L('months'), { x: -340, y: 10, size: 28, fill: EV.dim, anchor: 'end' });
+    tw(cal, { o: 1 }, m('juggle') + .4, .5);
+    cells.forEach((c, i) => { if (i < 3) tw(c, { c_fill: EV.goldLo }, m('juggle') + 1 + i * .7, .3); });
+    tw(gm, { o: 1, s: 1 }, m('juggle') + 1, 2.2, out);
+    cells.forEach((c, i) => { if (i >= 3) tw(c, { c_fill: '#2a2a2a' }, tS + .5 + (i - 3) * .6, .3); });
+    lab(p, 'stopped', 1315, 770, tS + .5, { size: 28, fill: EV.dim, italic: true });
+    tw(gm, { o: .5, s: .4 }, tS + .6, 2, io);
+    lab(p, 'useIt', 1150, 110, tS + 1.6, { size: 40, fill: EV.ink, italic: true, font: SERIF });
+    // stroke recovery: practice reroutes control
+    const q2 = c2Later(m('stroke'));
+    mk('rect', { x: 0, y: 760, width: 800, height: 140, fill: '#0c1114' }, q2);
+    const dad = c2Grey(evPerson(q2, { kind: 'm', x: 400, y: 760 }));
+    evMood(dad, 'tense', 0, .01); evBreathe(dad, D, 1, .8);
+    evArm(dad, -1, -4, -6, 0, .01);
+    const per = 1.6, t0s = m('stroke') + 1;
+    prog(q => {
+      const t = q * D - t0s;
+      if (t < 0) { put(dad.armR, { r: 4 }); put(dad.armR._lo, { r: 6 }); return; }
+      const n = Math.floor(t / per), u = (t % per) / per, amp = Math.min(1, .25 + n * .12);
+      put(dad.armR, { r: 4 - Math.sin(u * Math.PI) * 90 * amp }); put(dad.armR._lo, { r: 6 - Math.sin(u * Math.PI) * 30 * amp });
+    }, 0, D, lin);
+    lab(q2, 'weakArm', 560, 520, m('stroke') + .4, { size: 28, fill: EV.dim, anchor: 'start' });
+    const rc = evText(q2, '', { x: 400, y: 840, size: 30, fill: EV.gold });
+    prog(q => { const t = q * D - t0s; rc.textContent = t < 0 ? '' : fmt('reps', Math.floor(t / per) + 1); }, 0, D, lin);
+    const b2 = evBrain(q2, { x: 1150, y: 360, s: .95 });
+    const les = path(b2, 'M-20 -120C0 -140 30 -130 34 -108C40 -84 10 -76 -8 -86C-26 -94 -36 -108 -20 -120Z', { fill: '#3a2226', stroke: EV.anger, 'stroke-width': 2 });
+    lab(q2, 'damage', 1150, 150, m('stroke') + .6, { size: 26, fill: EV.anger });
+    const oldR = path(b2, 'M-140 -40C-100 -80 -60 -100 -24 -104', { stroke: EV.dim, 'stroke-width': 4, 'stroke-dasharray': '8 8' });
+    const newR = path(b2, 'M-140 -40C-110 -10 -20 -40 40 -40C90 -40 110 -90 70 -120', { stroke: EV.goldHi, 'stroke-width': 5 }, { d: 0 });
+    draw(newR, m('stroke') + 2, 3.5);
+    lab(q2, 'newRoute', 1150, 560, m('stroke') + 3, { size: 30, fill: EV.goldHi });
+    const nt = G(q2, { x: 1150, y: 690, o: 0 });
+    evText(nt, L('vary'), { x: 0, y: 0, size: 30, fill: EV.ink, maxW: 760 });
+    evPara(nt, L('overstated'), { x: 0, y: 50, size: 28, fill: EV.dim, maxW: 760, italic: true });
+    tw(nt, { o: 1 }, m('honest'), .6);
+  }],
+
+  ['q3', 'b_piano', (m, D) => {
+    const p = panel(0);
+    const g = G(p, { x: 200, y: 0, s: .75 });
+    c2PianoCols(g, true);
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-piano', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 0, L('q3y'), [null, L('q3nb'), L('q3nc')]),
+  }], done) }],
+
+  ['attention', 'b_attn', (m, D) => {
+    const p = panel(0);
+    mk('rect', { x: 0, y: 760, width: 1600, height: 140, fill: '#0c1114' }, p);
+    path(p, 'M0 760H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+    // window with traffic, and a television
+    const win = G(p, { x: 60, y: 160 });
+    mk('rect', { x: 0, y: 0, width: 220, height: 240, rx: 6, fill: '#0b1720', stroke: '#2b3632', 'stroke-width': 6 }, win);
+    path(win, 'M110 0V240', { stroke: '#2b3632', 'stroke-width': 5 });
+    const tv = G(p, { x: 1060, y: 600 });
+    mk('rect', { x: -110, y: -75, width: 220, height: 150, rx: 8, fill: '#151d21', stroke: EV.dim, 'stroke-width': 3 }, tv);
+    path(tv, 'M-30 75L-50 160M30 75L50 160', { stroke: EV.dim, 'stroke-width': 3 });
+    const tvS = mk('rect', { x: -96, y: -62, width: 192, height: 124, rx: 4, fill: '#5fb3cf' }, tv); put(tvS, { o: .3 });
+    // noise rings from both
+    const rings = [];
+    [[280, 280], [1180, 560]].forEach(([x, y]) => { for (let k = 0; k < 3; k++) rings.push({ e: path(p, 'M0 -30A30 30 0 0 1 0 30', { stroke: EV.surprise, 'stroke-width': 3 }), x, y, k }); });
+    const noise = t => t < m('paint') + 1 ? 1 : Math.max(.08, 1 - (t - m('paint') - 1) / 3);
+    prog(q => {
+      const t = q * D;
+      rings.forEach(r => { const u = ((t * .8 + r.k / 3) % 1); put(r.e, { x: r.x + u * 50, y: r.y, s: 1 + u * 1.2, o: (1 - u) * .8 * noise(t) }); });
+      put(tvS, { o: .3 * noise(t) + .05 });
+    }, 0, D, lin);
+    // Leena at the easel
+    const lee = evPerson(p, { kind: 'f', x: 420, y: 760 });
+    evMood(lee, 'calm', 0, .01); evBreathe(lee, D, 1, .7);
+    evArm(lee, -1, 4, -10, 0, .01);
+    prog(q => { const t = q * D; put(lee.armR, { r: -70 + Math.sin(t * 2.2) * 10 }); put(lee.armR._lo, { r: -30 + Math.sin(t * 2.2 + 1) * 14 }); }, 0, D, lin);
+    const easel = G(p, { x: 700, y: 760 });
+    path(easel, 'M-90 0L-20 -460M90 0L20 -460M0 -460V0', { stroke: '#4a3d2c', 'stroke-width': 7 });
+    const cv = G(easel, { y: -320 });
+    mk('rect', { x: -150, y: -120, width: 300, height: 230, fill: '#e9e2d0', stroke: '#4a3d2c', 'stroke-width': 5 }, cv);
+    const sun = mk('circle', { cx: 50, cy: -40, r: 0, fill: '#e8a95a' }, cv);
+    prog(q => sun.setAttribute('r', 34 * q), m('paint') + .3, 1.4, out);
+    const sea = path(cv, 'M-140 30Q-100 16 -60 30T20 30T100 30T140 30', { stroke: '#2b7c78', 'stroke-width': 6 }, { d: 0 });
+    const sea2 = path(cv, 'M-140 66Q-100 52 -60 66T20 66T100 66T140 66', { stroke: '#2b7c78', 'stroke-width': 6 }, { d: 0 });
+    draw(sea, m('paint') + 1.4, 1.4); draw(sea2, m('paint') + 2.6, 1.4);
+    const boat = path(cv, 'M-80 10Q-60 26 -20 26Q0 26 10 10Z M-36 10V-40L-6 6', { fill: '#3a2f27', stroke: '#3a2f27', 'stroke-width': 3 });
+    put(boat, { o: 0 }); show(boat, m('time') - .5, .8);
+    const spot = evGlow(p, 620, 450, 260, 'Warm', 0); p.insertBefore(spot, p.firstChild); tw(spot, { o: .8 }, m('paint') + 1, 2);
+    // the clock jumps two hours
+    const ck = G(p, { x: 1440, y: 150, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 50, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2.5 }, ck);
+    const hm = path(ck, 'M0 0V-36', { stroke: EV.ink, 'stroke-width': 4 }), hh = path(ck, 'M0 0V-24', { stroke: EV.ink, 'stroke-width': 5 });
+    put(hh, { r: 120 });
+    tw(ck, { o: 1 }, .4, .5);
+    tw(hm, { r: 720 }, m('time'), 1.6, io); tw(hh, { r: 180 }, m('time'), 1.6, io);
+    lab(p, 'twoHours', 1440, 250, m('time') + 1.2, { size: 28, fill: EV.dim, italic: true });
+    // frontal lobe: attention picks one thing and turns down the rest
+    tw(tv, { o: .25 }, m('frontal') - .2, .5);
+    const br = evBrain(p, { x: 1180, y: 420, s: .75, o: 0 });
+    tw(br, { o: 1 }, m('frontal'), .6);
+    br._gyri.forEach(g => tw(g, { o: .12 }, m('frontal') + 1.4, .8));
+    const fg = evGlow(br, -130, -50, 110, 'Gold', 0); tw(fg, { o: 1 }, m('frontal') + .5, .8);
+    lab(p, 'frontal', 1000, 300, m('frontal') + .8, { size: 30, fill: EV.gold, anchor: 'end' });
+    lab(p, 'turnDown', 1262, 600, m('frontal') + 2.6, { size: 28, fill: EV.dim, maxW: 290, anchor: 'start' });
+    lab(p, 'skill', 800, 860, m('skill') + 3.5, { size: 44, fill: EV.gold, font: SERIF, italic: true, weight: 600 });
+  }],
+
+  ['mind', 'b_mind', (m, D) => {
+    const p = panel(0);
+    const br = evBrain(p, { x: 800, y: 440, s: 1.25, o: 0 });
+    tw(br, { o: 1 }, .1, .6);
+    for (let k = 0; m('brain') + k * 2.2 < D; k++) evFire(br, m('brain') + k * 2.2, 1.4, k % 2 ? EV.calm : undefined);
+    lab(p, 'mindIs', 800, 140, m('brain') + 1.4, { size: 54, fill: EV.gold, font: SERIF, weight: 600, maxW: 1300 });
+    // the author's extra layer, dashed
+    const halo = G(p, { o: 0 });
+    [330, 380].forEach((r, i) => {
+      const c = mk('ellipse', { cx: 800, cy: 440, rx: r, ry: r * .72, fill: 'none', stroke: EV.shame, 'stroke-width': 2.5, 'stroke-dasharray': '10 12' }, halo);
+      prog(q => c.setAttribute('stroke-dashoffset', String(-q * D * 20 * (i ? -1 : 1))), 0, D, lin);
+    });
+    tw(halo, { o: .9 }, m('more') + .2, 1);
+    [['consc', 260, 300], ['qfield', 1340, 300], ['univ', 800, 820]].forEach(([k, x, y], i) => lab(p, k, x, y, m('more') + 1.2 + i * .8, { size: 34, fill: EV.shame, italic: true, font: SERIF, maxW: 440 }));
+    const sc = c2Later(m('check'));
+    const sg = G(sc, { o: 0 });
+    evText(sg, L('sciCheck'), { x: 800, y: 210, size: 64, font: SERIF, weight: 600, fill: EV.gold });
+    tw(sg, { o: 1 }, m('check') + .1, .4);
+    c2Row(sg, 420, true, 'sc1', m('check') + 1.6);
+    c2Row(sg, 620, false, 'sc2', m('check') + 5);
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    const tt = evText(p, L('b_wrap'), { x: 200, y: 150, size: 54, font: SERIF, weight: 600, fill: EV.gold, anchor: 'start', o: 0 });
+    show(tt, .2, .6);
+    const cols = [EV.gold, EV.calm, EV.surprise, EV.fear];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -16, y: 290 + i * 150, o: 0 });
+      mk('circle', { cx: 230, cy: -12, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 3 }, g);
+      T(g, String(i + 1), { x: 230, y: -1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 290, y: 0, size: 36, maxW: 1100, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Nothing had happened yet. What made Ravi’s heart race?',
+  q1a: 'His own thought about what Monday might bring.', q1b: 'A real danger in the room.', q1c: 'The light from his phone screen.',
+  q1y: 'Right. A thought made the chemistry, and the body answered as if the meeting were already happening.',
+  q1nb: 'He was safe on his sofa. The only trigger was the meaning he gave the message.',
+  q1nc: 'Screens don’t raise heart rate like that. The worry about Monday did.',
+  q2p: 'Sort each one: anecdote, or evidence?', q2anec: 'anecdote', q2evid: 'evidence',
+  q2r1: 'My aunt says cutting out sugar cured her diabetes.',
+  q2r2: 'Patients split at random: the breathing group’s blood pressure fell more.',
+  q2r3: 'A healer’s website shows fifty thank-you letters.',
+  q2r4: 'A pill beat an identical sugar pill, and nobody knew who got which.',
+  q2w1: 'One person’s story, with no comparison. It may be true for her, but it can’t show cause.',
+  q2w2: 'Random groups make the comparison fair, so the difference points to the practice.',
+  q2w3: 'Chosen successes. The people it didn’t help don’t write letters.',
+  q2w4: 'A blinded, placebo-controlled test: the gold standard.',
+  q3p: 'What did the 1995 piano study find?',
+  q3a: 'Imagined practice changed the brain’s finger area almost as much as real practice.',
+  q3b: 'Imagined practice made people play better than real practice.', q3c: 'Only children’s brains changed.',
+  q3y: 'Yes. Rehearsing in the mind fired the same circuits. Real practice still gave the best playing.',
+  q3nb: 'Real practice still gave the best performance. Mental rehearsal helps; it doesn’t replace doing.',
+  q3nc: 'The volunteers were adults. Adult brains keep changing with practice.',
+  p1p: 'A friend says: “My uncle beat cancer with positive thinking alone, so you can skip chemo.” What is the best reply?',
+  p1a: 'One story can’t show what caused his recovery. Keep the treatment, and use mind practices alongside it.',
+  p1b: 'If it worked for him, it will work for you.', p1c: 'Mindset makes no difference to health at all.',
+  p1y: 'A single survivor’s story can’t tell us why he recovered. Mind work belongs beside treatment, not in place of it.',
+  p1nb: 'That is survivorship bias: we only hear from those it seemed to work for.',
+  p1nc: 'Too far the other way. Expectation and stress really do affect the body; they just don’t replace treatment.',
+  p2p: 'Which of these does the placebo effect change most reliably?',
+  p2a: 'The size of a tumour.', p2b: 'How much pain someone feels.', p2c: 'How fast a broken bone knits.',
+  p2y: 'Pain is measured by the brain itself, which is exactly where expectation acts.',
+  p2na: 'Tumours rarely shrink from expectation alone. That needs real treatment.', p2nc: 'Bones heal at their own pace. Placebo may ease the pain, not the fracture.',
+  p3p: 'Ravi can rehearse his big presentation in front of people only once a week. What does this chapter suggest?',
+  p3a: 'Think positive on the morning of the talk.', p3b: 'Nothing: adult brains are fixed.',
+  p3c: 'Rehearse the talk vividly in his mind every day, as well as the real run-throughs.',
+  p3y: 'Mental rehearsal fires the same circuits as doing, so daily imagined practice builds on the real sessions.',
+  p3na: 'A last-minute mood boost is not rehearsal. Repetition is what wires circuits.', p3nb: 'Adult brains keep changing; that is plasticity.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'Expecting relief can make the brain release its own painkillers.',
+  p4r2: 'Collecting enough success stories proves what caused the recoveries.',
+  p4r3: 'Imagined practice can change the brain’s movement areas.',
+  p4r4: 'Healing through a quantum field is established science.',
+  p4w1: 'True. Placebo pain relief partly runs on the brain’s own endorphins.',
+  p4w2: 'False. Without the people who didn’t recover, stories can’t show cause. That is survivorship bias.',
+  p4w3: 'True. The 1995 piano study is one of several showing this.',
+  p4w4: 'False. That is the author’s belief. Science has not shown it.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'ഒന്നും സംഭവിച്ചിരുന്നില്ല. രവിയുടെ ഹൃദയമിടിപ്പ് കൂട്ടിയത് എന്താണ്?',
+  q1a: 'തിങ്കളാഴ്ച എന്ത് സംഭവിക്കും എന്ന അവന്റെ തന്നെ ചിന്ത.', q1b: 'മുറിയിലെ ഒരു യഥാർത്ഥ അപകടം.', q1c: 'ഫോൺ സ്ക്രീനിന്റെ വെളിച്ചം.',
+  q1y: 'ശരി. ഒരു ചിന്ത രസതന്ത്രം ഉണ്ടാക്കി; മീറ്റിംഗ് ഇപ്പോൾ നടക്കുന്നതുപോലെ ശരീരം പ്രതികരിച്ചു.',
+  q1nb: 'അവൻ സോഫയിൽ സുരക്ഷിതനായിരുന്നു. ആ മെസേജിന് അവൻ നൽകിയ അർത്ഥമാണ് കാരണം.',
+  q1nc: 'സ്ക്രീൻ ഇങ്ങനെ ഹൃദയമിടിപ്പ് കൂട്ടില്ല. തിങ്കളാഴ്ചയെ കുറിച്ചുള്ള ആശങ്കയാണ് അത് ചെയ്തത്.',
+  q2p: 'ഓരോന്നും തരംതിരിക്കൂ: അനുഭവകഥയോ, തെളിവോ?', q2anec: 'അനുഭവകഥ', q2evid: 'തെളിവ്',
+  q2r1: 'പഞ്ചസാര നിർത്തിയപ്പോൾ പ്രമേഹം മാറി എന്ന് എന്റെ അമ്മായി പറയുന്നു.',
+  q2r2: 'രോഗികളെ ക്രമരഹിതമായി രണ്ടായി തിരിച്ചു: ശ്വസന പരിശീലനം ചെയ്തവരുടെ ബി പി കൂടുതൽ കുറഞ്ഞു.',
+  q2r3: 'ഒരു ചികിത്സകന്റെ വെബ്സൈറ്റിൽ അൻപത് നന്ദി കത്തുകൾ.',
+  q2r4: 'ഒരു ഗുളിക അതേപോലെയുള്ള പഞ്ചസാര ഗുളികയെ മറികടന്നു; ആർക്ക് ഏതാണ് കിട്ടിയതെന്ന് ആർക്കും അറിയില്ലായിരുന്നു.',
+  q2w1: 'താരതമ്യമില്ലാത്ത ഒരാളുടെ കഥ. അവർക്ക് സത്യമായിരിക്കാം, പക്ഷേ കാരണം കാണിക്കില്ല.',
+  q2w2: 'ക്രമരഹിതമായ കൂട്ടങ്ങൾ താരതമ്യം ന്യായമാക്കുന്നു; വ്യത്യാസം പരിശീലനത്തിലേക്ക് ചൂണ്ടുന്നു.',
+  q2w3: 'തിരഞ്ഞെടുത്ത വിജയങ്ങൾ. ഫലിക്കാത്തവർ കത്തെഴുതാറില്ല.',
+  q2w4: 'ആർക്കും അറിയാത്ത, പ്ലാസിബോയുമായുള്ള താരതമ്യം: ഏറ്റവും നല്ല തെളിവ്.',
+  q3p: '1995 ലെ പിയാനോ പഠനം എന്താണ് കണ്ടെത്തിയത്?',
+  q3a: 'സങ്കൽപ്പിച്ചുള്ള പരിശീലനം, ശരിക്കുള്ള പരിശീലനത്തിന് ഏകദേശം തുല്യമായി തലച്ചോറിലെ വിരലുകളുടെ ഭാഗം മാറ്റി.',
+  q3b: 'സങ്കൽപ്പിച്ചവർ ശരിക്കും പരിശീലിച്ചവരേക്കാൾ നന്നായി വായിച്ചു.', q3c: 'കുട്ടികളുടെ തലച്ചോർ മാത്രം മാറി.',
+  q3y: 'അതെ. മനസ്സിലെ പരിശീലനം അതേ സർക്യൂട്ടുകളെ ഉണർത്തി. എങ്കിലും ഏറ്റവും നന്നായി വായിച്ചത് ശരിക്കും പരിശീലിച്ചവരാണ്.',
+  q3nb: 'ശരിക്കുള്ള പരിശീലനം തന്നെയാണ് മികച്ച പ്രകടനം നൽകിയത്. മനസ്സിലെ പരിശീലനം സഹായിക്കും, പകരമാകില്ല.',
+  q3nc: 'പങ്കെടുത്തവർ മുതിർന്നവരായിരുന്നു. മുതിർന്നവരുടെ തലച്ചോറും പരിശീലനത്തോടെ മാറും.',
+  p1p: 'ഒരു സുഹൃത്ത് പറയുന്നു: “എന്റെ അമ്മാവൻ പോസിറ്റീവ് ചിന്ത കൊണ്ട് മാത്രം കാൻസർ മാറ്റി, അതുകൊണ്ട് നിനക്ക് കീമോ വേണ്ട.” ഏറ്റവും നല്ല മറുപടി ഏത്?',
+  p1a: 'ഒരു കഥയ്ക്ക് അദ്ദേഹം എന്തുകൊണ്ട് സുഖപ്പെട്ടു എന്ന് കാണിക്കാനാകില്ല. ചികിത്സ തുടരുക, മനസ്സിന്റെ പരിശീലനങ്ങൾ ഒപ്പം ചെയ്യുക.',
+  p1b: 'അദ്ദേഹത്തിന് ഫലിച്ചെങ്കിൽ നിനക്കും ഫലിക്കും.', p1c: 'മനോഭാവത്തിന് ആരോഗ്യത്തിൽ ഒരു സ്വാധീനവുമില്ല.',
+  p1y: 'രക്ഷപ്പെട്ട ഒരാളുടെ കഥ കാരണം പറയുന്നില്ല. മനസ്സിന്റെ പരിശീലനം ചികിത്സയോടൊപ്പമാണ്, പകരമല്ല.',
+  p1nb: 'ഇതാണ് സർവൈവർഷിപ്പ് ബയസ്: ഫലിച്ചതായി തോന്നിയവരെ കുറിച്ച് മാത്രമേ നാം കേൾക്കുന്നുള്ളൂ.',
+  p1nc: 'മറ്റേ അറ്റത്തേക്ക് പോയി. പ്രതീക്ഷയും സ്ട്രെസും ശരീരത്തെ ശരിക്കും ബാധിക്കും; ചികിത്സയ്ക്ക് പകരമാകില്ലെന്ന് മാത്രം.',
+  p2p: 'ഇവയിൽ ഏതിനെയാണ് പ്ലാസിബോ ഏറ്റവും ഉറപ്പായി മാറ്റുന്നത്?',
+  p2a: 'ഒരു ട്യൂമറിന്റെ വലിപ്പം.', p2b: 'ഒരാൾക്ക് അനുഭവപ്പെടുന്ന വേദന.', p2c: 'ഒടിഞ്ഞ എല്ല് കൂടുന്ന വേഗം.',
+  p2y: 'വേദന അളക്കുന്നത് തലച്ചോർ തന്നെയാണ്; പ്രതീക്ഷ പ്രവർത്തിക്കുന്നതും അവിടെയാണ്.',
+  p2na: 'പ്രതീക്ഷ കൊണ്ട് മാത്രം ട്യൂമർ ചുരുങ്ങുന്നത് അപൂർവ്വം. അതിന് ശരിയായ ചികിത്സ വേണം.', p2nc: 'എല്ല് സ്വന്തം വേഗത്തിലേ കൂടൂ. പ്ലാസിബോ വേദന കുറച്ചേക്കാം, ഒടിവ് മാറ്റില്ല.',
+  p3p: 'തന്റെ പ്രധാന പ്രസന്റേഷൻ ആളുകളുടെ മുന്നിൽ പരിശീലിക്കാൻ രവിക്ക് ആഴ്ചയിൽ ഒരിക്കലേ കഴിയൂ. ഈ അധ്യായം എന്ത് നിർദ്ദേശിക്കുന്നു?',
+  p3a: 'പ്രസന്റേഷൻ ദിവസം രാവിലെ പോസിറ്റീവായി ചിന്തിക്കുക.', p3b: 'ഒന്നുമില്ല: മുതിർന്നവരുടെ തലച്ചോർ മാറില്ല.',
+  p3c: 'ശരിക്കുള്ള പരിശീലനത്തിന് പുറമെ, എല്ലാ ദിവസവും മനസ്സിൽ വ്യക്തമായി പ്രസന്റേഷൻ പരിശീലിക്കുക.',
+  p3y: 'മനസ്സിലെ പരിശീലനം ചെയ്യുന്നതിന്റെ അതേ സർക്യൂട്ടുകളെ ഉണർത്തുന്നു; ദിവസവും ചെയ്യുന്നത് ശരിക്കുള്ള സെഷനുകളെ ശക്തമാക്കും.',
+  p3na: 'അവസാന നിമിഷത്തെ മൂഡ് പരിശീലനമല്ല. ആവർത്തനമാണ് സർക്യൂട്ടുകൾ ഉണ്ടാക്കുന്നത്.', p3nb: 'മുതിർന്നവരുടെ തലച്ചോറും മാറും; അതാണ് പ്ലാസ്റ്റിസിറ്റി.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'ആശ്വാസം പ്രതീക്ഷിക്കുമ്പോൾ തലച്ചോർ സ്വന്തം വേദനസംഹാരികൾ പുറത്തുവിടാം.',
+  p4r2: 'ആവശ്യത്തിന് വിജയകഥകൾ ശേഖരിച്ചാൽ സുഖപ്പെടലിന്റെ കാരണം തെളിയും.',
+  p4r3: 'സങ്കൽപ്പിച്ചുള്ള പരിശീലനം തലച്ചോറിലെ ചലനത്തിന്റെ ഭാഗങ്ങളെ മാറ്റാം.',
+  p4r4: 'ക്വാണ്ടം ഫീൽഡ് വഴിയുള്ള സുഖപ്പെടൽ സ്ഥാപിതമായ ശാസ്ത്രമാണ്.',
+  p4w1: 'ശരി. പ്ലാസിബോ വേദനാശമനം ഭാഗികമായി തലച്ചോറിന്റെ സ്വന്തം എൻഡോർഫിനുകളിലൂടെയാണ്.',
+  p4w2: 'തെറ്റ്. സുഖപ്പെടാത്തവരെ കൂടി നോക്കാതെ കഥകൾ കാരണം കാണിക്കില്ല. അതാണ് സർവൈവർഷിപ്പ് ബയസ്.',
+  p4w3: 'ശരി. 1995 ലെ പിയാനോ പഠനം ഇത് കാണിക്കുന്ന പലതിൽ ഒന്നാണ്.',
+  p4w4: 'തെറ്റ്. അത് ഗ്രന്ഥകാരന്റെ വിശ്വാസമാണ്. ശാസ്ത്രം അത് തെളിയിച്ചിട്ടില്ല.',
+});
+const PRACTICE = [
+  { id: 'p-story', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 0, L('p1y'), [null, L('p1nb'), L('p1nc')]) },
+  { id: 'p-placebo', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 1, L('p2y'), [L('p2na'), null, L('p2nc')]) },
+  { id: 'p-rehearse', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 2, L('p3y'), [L('p3na'), L('p3nb'), null]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['t'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['f'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('evolve:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Evolve Your Brain</title>
+<meta name="description" content="Animated, narrated lessons on the ideas of Joe Dispenza's Evolve Your Brain, in English and Malayalam: how thoughts become chemistry, and how to rewire the habit of being yourself.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Evolve Your Brain · animated study book">
+<meta property="og:description" content="Short animated lessons in English and Malayalam on how a thought becomes chemistry, and how to rewire the habit of being yourself.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/evolve/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/evolve/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080c0f'/%3E%3Cpath d='M32 32C26 22 14 22 14 32S26 42 32 32 44 22 50 32 38 42 32 32Z' fill='none' stroke='%23c9a84c' stroke-width='3.5'/%3E%3C/svg%3E">
+<script>
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('evolve:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('evolve:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+})();
+</script>
+<link rel="stylesheet" href="lib/units.css">
+<link rel="stylesheet" href="lib/contents.css">
+<script src="lib/units.js"></script>
+<script src="lib/contents.js"></script>
+<script src="unit-art.js"></script>
+<link rel="expect" href="#ch12" blocking="render">
+<style>
+@font-face { font-family: "Cormorant Garamond"; src: url("lib/fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Cormorant Garamond"; src: url("lib/fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Cormorant Garamond"; src: url("lib/fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("lib/fonts/outfit-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("lib/fonts/outfit-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("lib/fonts/outfit-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Noto Sans Malayalam"; src: url("lib/fonts/noto-sans-malayalam-malayalam-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Noto Sans Malayalam"; src: url("lib/fonts/noto-sans-malayalam-malayalam-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Noto Serif Malayalam"; src: url("lib/fonts/noto-serif-malayalam-malayalam-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+:root {
+  --page: #05080a; --board: #080c0f; --panel: #10171b; --edge: #2a2b26;
+  --chalk: #efe6d2; --dim: #9d9686; --faint: #4d4a42; --task: #c9a84c; --quiz: #c9a84c; --good: #7cc79d;
+  --ui: "Outfit", "Noto Sans Malayalam", "Avenir Next", Arial, sans-serif;
+  --book: "Cormorant Garamond", "Noto Serif Malayalam", Georgia, serif;
+  --top-bg: rgba(8, 12, 15, .9); --top-line: #1f211d; --lift: rgba(0, 0, 0, .5);
+  color-scheme: dark;
+}
+:root:lang(ml) { --ui: "Noto Sans Malayalam", "Outfit", sans-serif; --book: "Noto Serif Malayalam", "Cormorant Garamond", serif; }
+#cover { background: radial-gradient(60% 55% at 50% 42%, rgba(201, 168, 76, .09), rgba(0, 0, 0, 0) 70%), #080c0f; }
+#cover h1 { font-weight: 600; letter-spacing: -.01em; }
+#cover h1 i { color: var(--task); font-weight: 500; }
+#cover .kicker { letter-spacing: .22em; }
+:root:lang(ml) #cover .kicker, :root:lang(ml) .unit h2 .label, :root:lang(ml) .meta { letter-spacing: 0; }
+#cover .lede { max-width: 34em; }
+.chalk span { color: rgba(201, 168, 76, .2); font-family: var(--book); font-style: italic; }
+.loopmark { display: block; margin: 0 auto 18px; width: min(280px, 60vw); overflow: visible; }
+.loopmark path { fill: none; stroke: #c9a84c; stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1;
+  animation: lm-draw 2.4s cubic-bezier(.16, 1, .3, 1) .2s forwards; }
+.loopmark circle { fill: #e2694f; offset-path: path('M140 60C160 28 214 28 214 60S160 92 140 60C120 28 66 28 66 60S120 92 140 60Z'); offset-distance: 0%;
+  opacity: 0; animation: lm-ride 9s linear 1.6s infinite, lm-in .6s ease-out 1.6s forwards; }
+@keyframes lm-draw { to { stroke-dashoffset: 0; } }
+@keyframes lm-ride { to { offset-distance: 100%; } }
+@keyframes lm-in { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .loopmark path { animation: none; stroke-dashoffset: 0; } .loopmark circle { animation: none; opacity: 1; } }
+.langsw { display: inline-flex; gap: 2px; padding: 4px; border-radius: 999px; border: 1px solid #2c2b25; background: rgba(16, 22, 25, .8); margin-top: 22px; }
+.langsw button { border: 0; background: transparent; color: var(--dim); font: 500 15px var(--ui); padding: 7px 16px; border-radius: 999px; cursor: pointer;
+  transition: background-color 180ms cubic-bezier(.16, 1, .3, 1), color 180ms, transform 140ms cubic-bezier(.16, 1, .3, 1); }
+.langsw button[aria-pressed="true"] { background: #c9a84c; color: #120f06; font-weight: 600; }
+.langsw button:active { transform: scale(.96); }
+.langsw .ml { font-family: "Noto Sans Malayalam", sans-serif; }
+.credit { color: var(--faint); font-size: 13px; margin-top: 26px; max-width: 34em; line-height: 1.5; }
+</style>
+</head>
+<body>
+<section id="cover">
+  <div class="chalk" aria-hidden="true">
+    <span style="left:7%;top:13%;--d:1.6">thought → chemistry → feeling</span>
+    <span style="right:8%;top:17%;--d:1.9">fire together, wire together</span>
+    <span style="left:5%;bottom:20%;--d:2.2">the habit of being yourself</span>
+    <span style="right:6%;bottom:15%;--d:2.5">make up your mind</span>
+  </div>
+  <svg class="loopmark" viewBox="40 10 200 100" aria-hidden="true"><path pathLength="1" d="M140 60C160 28 214 28 214 60S160 92 140 60C120 28 66 28 66 60S120 92 140 60Z"/><circle r="5"/></svg>
+  <svg class="mascot draw" id="guide" width="0" height="0" hidden></svg>
+  <p class="kicker" id="kick">The Young Maker Universe · an animated study book</p>
+  <h1 id="ttl">Evolve <i>Your</i> Brain</h1>
+  <p class="lede" id="lede">Short animated lessons on how a thought becomes chemistry, why we crave the feelings that hurt us, and how to rewire the habit of being yourself. Narrated in English and Malayalam.</p>
+  <div class="acts">
+    <a class="btn go" href="#contents" data-t="open">Open the book<svg viewBox="0 0 16 16"><path d="M6 2.5 11.5 8 6 13.5 4.6 12.1 8.7 8 4.6 3.9z"/></svg></a>
+    <a class="btn quiet" id="resume" hidden></a>
+  </div>
+  <div class="langsw" role="group" aria-label="Language"><button data-l="en">English</button><button class="ml" data-l="ml">മലയാളം</button></div>
+  <p class="meta" id="meta"></p>
+  <p class="credit" id="credit">An independent study of <i>Evolve Your Brain: The Science of Changing Your Mind</i> by Joe Dispenza (2007). Explanations, examples and pictures are original.</p>
+</section>
+
+<main id="contents">
+  <header class="top">
+    <a class="home" href="#book" aria-label="Back to the cover" data-t-label="toCover"><svg class="mascot" id="guideSmall" width="0" height="0" hidden></svg><strong>Evolve <i>Your</i> Brain</strong></a>
+    <span class="prog" id="prog"></span>
+  </header>
+  <div id="units"></div>
+</main>
+
+<script>
+const ML = document.documentElement.lang === 'ml';
+if (ML) {
+  document.title = 'Evolve Your Brain · മലയാളം';
+  document.getElementById('kick').textContent = 'ദി യംഗ് മേക്കർ യൂണിവേഴ്സ് · ആനിമേറ്റഡ് പഠന പുസ്തകം';
+  document.getElementById('lede').textContent = 'ഒരു ചിന്ത എങ്ങനെ രസതന്ത്രമാകുന്നു, നമ്മെ വേദനിപ്പിക്കുന്ന വികാരങ്ങളെ നാം എന്തിന് കൊതിക്കുന്നു, നമ്മുടെ ശീലങ്ങളെ എങ്ങനെ മാറ്റിയെഴുതാം എന്നതിനെ കുറിച്ചുള്ള ചെറിയ ആനിമേറ്റഡ് പാഠങ്ങൾ. ഇംഗ്ലീഷിലും മലയാളത്തിലും.';
+  document.getElementById('credit').textContent = 'ജോ ഡിസ്പെൻസയുടെ Evolve Your Brain (2007) എന്ന പുസ്തകത്തിന്റെ സ്വതന്ത്ര പഠനം. വിശദീകരണങ്ങളും ഉദാഹരണങ്ങളും ചിത്രങ്ങളും മൗലികമാണ്.';
+}
+document.querySelectorAll('.langsw button').forEach(b => {
+  b.setAttribute('aria-pressed', String((b.dataset.l === 'ml') === ML));
+  b.onclick = () => { try { localStorage.setItem('evolve:lang', b.dataset.l); } catch (e) {} location.href = location.pathname + '?lang=' + b.dataset.l + location.hash; };
+});
+const C = (en, ml, me, mm) => [ML ? ml : en, ML ? mm : me];
+Contents.book({
+  start: { unit: 1, chapter: 1 },
+  units: [
+    [ML ? 'മാറ്റം തുടങ്ങുന്നിടം' : 'Where change begins', [
+      C('Beginnings', 'തുടക്കം', 8, 11),
+      C('On the Back of a Giant', 'ഒരു ഭീമന്റെ പുറത്ത്', 10, 14)]],
+    [ML ? 'ജീവനുള്ള തലച്ചോർ' : 'The living brain', [
+      C('Neurons and the Nervous System', 'ന്യൂറോണുകളും നാഡീവ്യവസ്ഥയും', 12, 16),
+      C('Our Three Brains and More', 'നമ്മുടെ മൂന്ന് തലച്ചോറുകളും അതിലേറെയും', 11, 15),
+      C('Wired by Nature, Changeable by Nurture', 'പ്രകൃതി വയർ ചെയ്തത്, വളർത്തൽ മാറ്റിയെടുക്കുന്നത്', 10, 13)]],
+    [ML ? 'മനസ്സിന്റെയും ശരീരത്തിന്റെയും ശീലങ്ങൾ' : 'Habits of mind and body', [
+      C('Neuroplasticity', 'ന്യൂറോപ്ലാസ്റ്റിസിറ്റി', 10, 13),
+      C('Putting Knowledge and Experience into Practice', 'അറിവും അനുഭവവും പ്രയോഗത്തിലേക്ക്', 12, 16),
+      C('The Chemistry of Survival', 'അതിജീവനത്തിന്റെ രസതന്ത്രം', 10, 14),
+      C('The Chemistry of Emotional Addiction', 'വികാരങ്ങളോടുള്ള അടിമത്തത്തിന്റെ രസതന്ത്രം', 10, 13)]],
+    [ML ? 'നിയന്ത്രണം കൈയിലെടുക്കാൻ' : 'Taking control', [
+      C('Taking Control: The Frontal Lobe', 'നിയന്ത്രണം ഏറ്റെടുക്കാം: ഫ്രോണ്ടൽ ലോബ്', 11, 15),
+      C('The Art and Science of Mental Rehearsal', 'മനസ്സിലെ റിഹേഴ്സലിന്റെ കലയും ശാസ്ത്രവും', 10, 14),
+      C('Evolving Your Being', 'പുതിയ ഞാനായി മാറാം', 11, 14)]],
+  ],
+  hues: ['#c9a84c', '#d9b86a', '#c9a84c', '#d9b86a'],
+});
+</script>
+</body>
+</html>
