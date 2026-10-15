@@ -1,0 +1,1255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Evolve Your Brain · Chapter 12">
+<meta property="og:description" content="Short animated lessons in English and Malayalam on how a thought becomes chemistry, and how to rewire the habit of being yourself.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/evolve/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/evolve/ch12/">
+<meta name="twitter:card" content="summary_large_image">
+<title>Evolving Your Being · Evolve Your Brain</title>
+<meta name="description" content="An animated, narrated lesson on Chapter 12 of Evolve Your Brain: from mental rehearsal to living it, explicit and implicit memory, knowledge, instruction and feedback, and why consistency over time makes a new self. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('evolve:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('evolve:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'പുതിയ ഞാനായി മാറാം · Evolve Your Brain';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/evolve.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/evolve/ch12/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Evolving Your Being', kicker: 'UNIT 4 · CHAPTER 12', sub: 'From rehearsing a new self to living it',
+  credit: 'A study of Evolve Your Brain by Joe Dispenza',
+  b_intro: 'Title', b_nets: 'The nets hero', b_mem: 'Two kinds of memory', b_hand: 'A skill moves house', b_tdb: 'Thinking, doing, being',
+  b_ladder: 'Four steps of skill', b_steps: 'Knowledge, instruction, feedback', b_test: 'The real test', b_match: 'Outside and inside',
+  b_fb: 'Where feedback comes from', b_prime: 'Priming', b_kit: 'We see what we are wired to see', b_time: 'It takes time',
+  b_home: 'Months later', b_epi: 'A closing word on quantum claims', b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  rehearsed: 'rehearsed', lived: 'lived',
+  nets6: '6 pm · nets', netsHero: 'the nets hero', matchDay: 'match day', out: 'OUT', runs: 'runs',
+  pracLab: 'Practice: preparation', fieldLab: 'The field: where it becomes yours', liveLine: 'Into your body. Into an ordinary Tuesday.',
+  knowThat: 'Knowing that', explicit: 'explicit memory · you can say it', knowHow: 'Knowing how', implicit: 'implicit memory · your body does it',
+  birthday: 'my birthday', heartPumps: 'the heart pumps blood', sayIt: 'I can say it out loud',
+  scooter: 'riding a scooter', typing: 'typing', dosa: 'folding a dosa',
+  pinQ: 'PIN?', enterPin: 'ENTER PIN', bodyKnows: 'The body remembers what words forget.',
+  newHeld: 'new: the front of the brain holds it', hippo: 'hippocampus · the save button', deepRun: 'practised: deeper circuits run it',
+  sciCheck: 'Science check', authorSays: 'Author: the cerebellum is the seat of the subconscious.',
+  research: 'Research: skills and habits use several systems, especially the basal ganglia; the cerebellum fine-tunes movement.',
+  amnesia: 'People who cannot form new memories still improve at a new skill,', noLesson: 'without remembering a single lesson.',
+  day: 'day {n}', skill: 'skill',
+  thinking: 'Thinking', doing: 'Doing', being: 'Being', knowledgeW: 'knowledge', experienceW: 'experience', wisdomW: 'wisdom',
+  shukran: 'shukran = thank you', teaPlease: 'Chai, min fadlak!', heartRaces: 'heart racing, and it works', noTranslate: 'no translating in her head',
+  leena: 'Leena', ravi: 'Ravi', iAm: 'I am.',
+  ladderHead: 'From unskilled to skilled', st1: 'don’t know what I don’t know', st2: 'I know I can’t, yet', st3: 'I can, with effort', st4: 'it runs by itself',
+  quitHere: 'most people quit here', modelNote: 'a teaching model, not a lab finding',
+  knowledge: 'Knowledge', instruction: 'Instruction', feedback: 'Feedback',
+  kCap: 'read about the anger loop', iCap: 'asked his calm uncle', fCap: 'every real moment',
+  rainy: 'monsoon afternoon', jawTight: 'jaw clenched', night: '11:40 pm', headache: 'headache', howDid: 'How did he really do?',
+  outside: 'Outside', behaviour: 'behaviour', inside: 'Inside', feelingW: 'feeling', goal: 'goal',
+  doingDef: 'Doing: the outside changes.', beingDef: 'Being: the inside matches too.',
+  replay: 'replaying it, without blame', tomorrow: 'Tomorrow’s rehearsal', r1: 'breathe', r2: 'smile', r3: 'reach for the towels',
+  r4: 'let the shoulders drop', r5: 'see the funny side',
+  fromPeople: 'From people', calmer: 'You seem calmer lately.', fromChart: 'From a chart', fromBody: 'From your body', noGasp: 'stairs, no gasping',
+  fromScreen: 'From a screen: neurofeedback', yourBrain: 'your brain, live', modest: 'helps some · modest gains, not miracles',
+  quickFb: 'Quick feedback, faster learning.',
+  honk: 'HONK!', c1: 'Nobody respects me.', c2: 'The boss ignored my idea.', c3: 'My brother never calls.', grey: 'The whole day turns grey.',
+  priming: 'Priming: one cue wakes a whole web of memories', whiteCar: 'Buy a white car… see white cars everywhere',
+  selfPrime: 'Prime yourself before the world does.', g1: 'tea with Leena', g2: 'the boys’ laughter', g3: 'a kind colleague', g4: 'rain on the window',
+  onlyV: 'only vertical stripes', onlyH: 'only horizontal stripes', hKitten: 'raised on horizontal stripes', legsGone: 'chair legs: not there for it',
+  tuned: 'its visual brain: tuned to one kind of line', weSee: 'We tend to see what our brain was trained to look for.',
+  onceDone: 'Once and done', autoAxis: 'how automatic it feels', daysAxis: 'days', avg: '≈ 66 days on average', rangeL: '18 to 254 days',
+  missed: 'a missed day', comeBack: 'What mattered: coming back.', genesHead: 'Science check',
+  genesNo: 'Mastered skills and attitudes passed on through genes: no good evidence.', example: 'What children inherit: our example.',
+  plumber: 'Did the plumber call?', oldCall: 'the call she forgot', answer: 'Yes, Thursday. Tea?', notActing: 'Not acting. Being.',
+  quantum: 'The epilogue: quantum physics', claim: 'The author: our minds shape reality, the way observing particles seems to change them.',
+  measure: 'observing = measuring with instruments', noMove: 'No evidence that thoughts move matter.',
+  choices: 'A changed person makes different choices', newLife: 'a different life', evolving: 'That is evolving your being.',
+  w1: 'Rehearsal prepares you; living it, again and again, makes it yours.',
+  w2: 'Knowledge becomes experience, and repeated experience becomes who you are.',
+  w3: 'Use feedback from people, charts and your body, until the inside matches the outside.',
+  w4: 'Be consistent, not perfect. Come back after every slip.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'പുതിയ ഞാനായി മാറാം', kicker: 'യൂണിറ്റ് 4 · അധ്യായം 12', sub: 'റിഹേഴ്സ് ചെയ്ത പുതിയ നിങ്ങളെ ജീവിച്ചു കാണിക്കാം',
+  credit: 'ജോ ഡിസ്പെൻസയുടെ Evolve Your Brain എന്ന പുസ്തകത്തിന്റെ പഠനം',
+  b_intro: 'തലക്കെട്ട്', b_nets: 'നെറ്റ്സ് ഹീറോ', b_mem: 'രണ്ടുതരം ഓർമ്മ', b_hand: 'കഴിവ് വീട് മാറുന്നു', b_tdb: 'ചിന്ത, ചെയ്യൽ, ആയിത്തീരൽ',
+  b_ladder: 'കഴിവിന്റെ നാല് പടികൾ', b_steps: 'അറിവ്, നിർദ്ദേശം, ഫീഡ്ബാക്ക്', b_test: 'യഥാർത്ഥ പരീക്ഷ', b_match: 'പുറവും ഉള്ളും',
+  b_fb: 'ഫീഡ്ബാക്ക് എവിടെ നിന്ന്', b_prime: 'പ്രൈമിംഗ്', b_kit: 'പരിശീലിപ്പിച്ചതേ നാം കാണൂ', b_time: 'സമയം വേണം',
+  b_home: 'മാസങ്ങൾക്കു ശേഷം', b_epi: 'ക്വാണ്ടം അവകാശവാദങ്ങളെ കുറിച്ച്', b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  rehearsed: 'റിഹേഴ്സ് ചെയ്തത്', lived: 'ജീവിച്ചത്',
+  nets6: 'വൈകീട്ട് 6 · നെറ്റ്സ്', netsHero: 'നെറ്റ്സ് ഹീറോ', matchDay: 'മാച്ച് ദിവസം', out: 'ഔട്ട്', runs: 'റൺസ്',
+  pracLab: 'പ്രാക്ടീസ്: തയ്യാറെടുപ്പ്', fieldLab: 'കളിക്കളം: ഇവിടെയാണ് അത് നിങ്ങളുടേതാകുന്നത്', liveLine: 'ശരീരത്തിലേക്ക്. ഒരു സാധാരണ ചൊവ്വാഴ്ചയിലേക്ക്.',
+  knowThat: 'എന്താണെന്ന് അറിയൽ', explicit: 'എക്സ്പ്ലിസിറ്റ് മെമ്മറി · പറയാൻ കഴിയും', knowHow: 'എങ്ങനെയെന്ന് അറിയൽ', implicit: 'ഇംപ്ലിസിറ്റ് മെമ്മറി · ശരീരം ചെയ്യും',
+  birthday: 'എന്റെ ജന്മദിനം', heartPumps: 'ഹൃദയം രക്തം പമ്പ് ചെയ്യുന്നു', sayIt: 'ഉറക്കെ പറയാൻ കഴിയും',
+  scooter: 'സ്കൂട്ടർ ഓടിക്കൽ', typing: 'ടൈപ്പിംഗ്', dosa: 'ദോശ മടക്കൽ',
+  pinQ: 'പിൻ?', enterPin: 'ENTER PIN', bodyKnows: 'വാക്കുകൾ മറക്കുന്നത് ശരീരം ഓർക്കുന്നു.',
+  newHeld: 'പുതിയത്: തലച്ചോറിന്റെ മുൻഭാഗം പിടിച്ചുനിർത്തുന്നു', hippo: 'ഹിപ്പോകാമ്പസ് · സേവ് ബട്ടൺ', deepRun: 'പരിശീലിച്ചത്: ആഴത്തിലെ സർക്യൂട്ടുകൾ ഓടിക്കുന്നു',
+  sciCheck: 'ശാസ്ത്രീയ പരിശോധന', authorSays: 'ഗ്രന്ഥകാരൻ: സെറിബെല്ലമാണ് ഉപബോധമനസ്സിന്റെ ഇരിപ്പിടം.',
+  research: 'ഗവേഷണം: കഴിവുകളും ശീലങ്ങളും പല സംവിധാനങ്ങൾ ഉപയോഗിക്കുന്നു, പ്രത്യേകിച്ച് ബേസൽ ഗാംഗ്ലിയ; സെറിബെല്ലം ചലനം മിനുക്കുന്നു.',
+  amnesia: 'പുതിയ ഓർമ്മകൾ ഉണ്ടാക്കാൻ കഴിയാത്തവരും പുതിയ കഴിവിൽ മെച്ചപ്പെടുന്നു,', noLesson: 'ഒരു ക്ലാസ് പോലും ഓർമ്മയില്ലാതെ.',
+  day: 'ദിവസം {n}', skill: 'കഴിവ്',
+  thinking: 'ചിന്തിക്കൽ', doing: 'ചെയ്യൽ', being: 'ആയിത്തീരൽ', knowledgeW: 'അറിവ്', experienceW: 'അനുഭവം', wisdomW: 'ജ്ഞാനം',
+  shukran: 'ശുക്റൻ = നന്ദി', teaPlease: 'ചായ്, മിൻ ഫദ്‌ലക്!', heartRaces: 'നെഞ്ചിടിപ്പ്, പക്ഷേ ശരിയായി', noTranslate: 'മനസ്സിൽ തർജ്ജമയില്ല',
+  leena: 'ലീന', ravi: 'രവി', iAm: 'ഞാൻ ഇതാണ്.',
+  ladderHead: 'അറിയാത്തതിൽ നിന്ന് കഴിവിലേക്ക്', st1: 'അറിയില്ലെന്ന് പോലും അറിയില്ല', st2: 'ഇപ്പോൾ പറ്റില്ലെന്ന് അറിയാം', st3: 'ശ്രദ്ധിച്ചാൽ പറ്റും', st4: 'തനിയെ നടക്കുന്നു',
+  quitHere: 'മിക്കവരും ഇവിടെ ഉപേക്ഷിക്കുന്നു', modelNote: 'ഒരു പഠന മാതൃക, ലാബ് കണ്ടെത്തലല്ല',
+  knowledge: 'അറിവ്', instruction: 'നിർദ്ദേശം', feedback: 'ഫീഡ്ബാക്ക്',
+  kCap: 'ദേഷ്യത്തിന്റെ ചക്രത്തെ കുറിച്ച് വായിച്ചു', iCap: 'ശാന്തനായ അമ്മാവനോട് ചോദിച്ചു', fCap: 'ഓരോ യഥാർത്ഥ നിമിഷവും',
+  rainy: 'മഴക്കാല ഉച്ചനേരം', jawTight: 'താടിയെല്ല് മുറുകി', night: 'രാത്രി 11:40', headache: 'തലവേദന', howDid: 'അവൻ ശരിക്കും എങ്ങനെ ചെയ്തു?',
+  outside: 'പുറം', behaviour: 'പെരുമാറ്റം', inside: 'ഉള്ള്', feelingW: 'വികാരം', goal: 'ലക്ഷ്യം',
+  doingDef: 'ചെയ്യൽ: പുറം മാറുന്നു.', beingDef: 'ആയിത്തീരൽ: ഉള്ളും ഒപ്പം എത്തുന്നു.',
+  replay: 'കുറ്റപ്പെടുത്താതെ വീണ്ടും ഓടിക്കുന്നു', tomorrow: 'നാളത്തെ റിഹേഴ്സൽ', r1: 'ശ്വാസമെടുക്കുക', r2: 'ചിരിക്കുക', r3: 'ടവ്വൽ എടുക്കുക',
+  r4: 'തോളുകൾ അയച്ചിടുക', r5: 'തമാശ കാണുക',
+  fromPeople: 'മറ്റുള്ളവരിൽ നിന്ന്', calmer: 'ഈയിടെയായി നീ കൂടുതൽ ശാന്തനാണല്ലോ.', fromChart: 'ഒരു ചാർട്ടിൽ നിന്ന്', fromBody: 'ശരീരത്തിൽ നിന്ന്', noGasp: 'പടികൾ, കിതപ്പില്ല',
+  fromScreen: 'സ്ക്രീനിൽ നിന്ന്: ന്യൂറോഫീഡ്ബാക്ക്', yourBrain: 'നിങ്ങളുടെ തലച്ചോർ, തത്സമയം', modest: 'ചിലരെ സഹായിക്കുന്നു · ചെറിയ നേട്ടം, അത്ഭുതമല്ല',
+  quickFb: 'പെട്ടെന്നുള്ള ഫീഡ്ബാക്ക്, വേഗത്തിലുള്ള പഠനം.',
+  honk: 'പീ പീ!', c1: 'ആരും എന്നെ മാനിക്കുന്നില്ല.', c2: 'ബോസ് എന്റെ ആശയം അവഗണിച്ചു.', c3: 'അനിയൻ ഒരിക്കലും വിളിക്കില്ല.', grey: 'ദിവസം മുഴുവൻ ചാരനിറം.',
+  priming: 'പ്രൈമിംഗ്: ഒരു സൂചന ഓർമ്മകളുടെ വല ഉണർത്തുന്നു', whiteCar: 'വെള്ള കാർ വാങ്ങൂ… എവിടെയും വെള്ള കാറുകൾ',
+  selfPrime: 'ലോകത്തിനു മുൻപേ സ്വയം പ്രൈം ചെയ്യൂ.', g1: 'ലീനയോടൊപ്പം ചായ', g2: 'കുട്ടികളുടെ ചിരി', g3: 'ഒരു നല്ല സഹപ്രവർത്തകൻ', g4: 'ജനലിലെ മഴ',
+  onlyV: 'കുത്തനെയുള്ള വരകൾ മാത്രം', onlyH: 'വിലങ്ങനെയുള്ള വരകൾ മാത്രം', hKitten: 'വിലങ്ങൻ വരകളിൽ വളർന്നത്', legsGone: 'കസേരക്കാലുകൾ: അതിന് കാണാനില്ല',
+  tuned: 'അതിന്റെ കാഴ്ചത്തലച്ചോർ: ഒരുതരം വരയ്ക്ക് മാത്രം', weSee: 'നോക്കാൻ പരിശീലിപ്പിച്ചതാണ് നമ്മുടെ തലച്ചോർ കാണുന്നത്.',
+  onceDone: 'ഒരിക്കൽ ചെയ്താൽ മതിയോ', autoAxis: 'എത്ര തനിയെ നടക്കുന്നു', daysAxis: 'ദിവസങ്ങൾ', avg: '≈ ശരാശരി 66 ദിവസം', rangeL: '18 മുതൽ 254 ദിവസം വരെ',
+  missed: 'മുടങ്ങിയ ദിവസം', comeBack: 'പ്രധാനം: തിരിച്ചുവരവ്.', genesHead: 'ശാസ്ത്രീയ പരിശോധന',
+  genesNo: 'നേടിയ കഴിവുകളും മനോഭാവങ്ങളും ജീനുകളിലൂടെ പകരുന്നു: നല്ല തെളിവില്ല.', example: 'മക്കൾക്ക് കിട്ടുന്നത്: നമ്മുടെ മാതൃക.',
+  plumber: 'പ്ലംബർ വിളിച്ചോ?', oldCall: 'അവൾ മറന്ന ആ കോൾ', answer: 'ഉവ്വ്, വ്യാഴാഴ്ച. ചായ വേണോ?', notActing: 'അഭിനയമല്ല. ഇതാണ് അവർ.',
+  quantum: 'ഉപസംഹാരം: ക്വാണ്ടം ഫിസിക്സ്', claim: 'ഗ്രന്ഥകാരൻ: കണങ്ങളെ നിരീക്ഷിക്കുമ്പോൾ അവ മാറുന്നതുപോലെ, മനസ്സ് യാഥാർത്ഥ്യത്തെ രൂപപ്പെടുത്തുന്നു.',
+  measure: 'നിരീക്ഷണം = ഉപകരണം കൊണ്ട് അളക്കൽ', noMove: 'ചിന്തകൾ വസ്തുക്കളെ ചലിപ്പിക്കുന്നു എന്നതിന് തെളിവില്ല.',
+  choices: 'മാറിയ ഒരാൾ വ്യത്യസ്ത തീരുമാനങ്ങൾ എടുക്കുന്നു', newLife: 'ഒരു പുതിയ ജീവിതം', evolving: 'അതാണ് പുതിയ ഒരാളായി മാറൽ.',
+  w1: 'റിഹേഴ്സൽ തയ്യാറാക്കുന്നു; വീണ്ടും വീണ്ടും ജീവിക്കുമ്പോഴാണ് അത് നിങ്ങളുടേതാകുന്നത്.',
+  w2: 'അറിവ് അനുഭവമാകുന്നു; ആവർത്തിക്കുന്ന അനുഭവം നിങ്ങൾ തന്നെയാകുന്നു.',
+  w3: 'മറ്റുള്ളവർ, ചാർട്ട്, സ്വന്തം ശരീരം: ഉള്ളും പുറവും ഒന്നാകുന്നതുവരെ ഫീഡ്ബാക്ക് എടുക്കൂ.',
+  w4: 'പൂർണ്ണത വേണ്ട, സ്ഥിരത മതി. ഓരോ വീഴ്ചയ്ക്കു ശേഷവും തിരിച്ചുവരൂ.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 12, title: L('title'), minutes: LANG === 'ml' ? 14 : 11, language: LANG };
+const fmt = (k, n) => L(k).replace('{n}', n);
+
+/* ---------- chapter colours ---------- */
+const C12K = '#6fa8d6', C12D = EV.surprise, C12B = EV.calm;   // knowledge / thinking, experience / doing, wisdom / being
+
+/* ---------- chapter helpers ---------- */
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .5); return e; };
+const labP = (p, key, x, y, t, o = {}) => { const e = evPara(p, L(key), { x, y, o: 0, ...o }); show(e, t, .5); return e; };
+// path() with an opacity kept in the state (put() would overwrite the attribute).
+function pth(parent, d, attrs = {}, o = {}) {
+  if (attrs.opacity !== undefined) { const { opacity, ...rest } = attrs; return path(parent, d, rest, { o: opacity, ...o }); }
+  return path(parent, d, attrs, o);
+}
+// A new picture later in a beat, faded in on the beat clock.
+function c12Later(t) { const q = panel(t); put(q, { o: 0 }); tw(q, { o: 1 }, t, .4); return q; }
+const c12R = i => { const s = Math.sin(i * 12.9898 + 7.3) * 43758.5453; return s - Math.floor(s); };
+const c12E = q => q < 0 ? 0 : q > 1 ? 1 : q * q * (3 - 2 * q);
+// Seated puppet (legs folded, torso lowered) with hidden closed-eye lids.
+function c12Sit(P) {
+  put(P.legL, { o: 0 }); put(P.legR, { o: 0 });
+  put(P.torso, { y: -120 });
+  const C = P.C, g = G(P.g);
+  P.g.insertBefore(g, P.torso);
+  mk('rect', { x: -44, y: -136, width: 88, height: 74, rx: 16, fill: C.bottom }, g);
+  [-1, 1].forEach(s => {
+    mk('rect', { x: s * 20 - 13, y: -74, width: 26, height: 72, rx: 8, fill: C.bottom }, g);
+    mk('ellipse', { cx: s * 22, cy: -2, rx: 18, ry: 7, fill: '#1a1714' }, g);
+  });
+  P.lids = G(P.head, { o: 0 });
+  for (const ex of [-12, 12]) path(P.lids, `M${ex - 6} -52Q${ex} -47 ${ex + 6} -52`, { stroke: '#1a0f0a', 'stroke-width': 3 });
+  return P;
+}
+function c12Close(P, t) { tw(P.eyes, { o: 0 }, t, .2); tw(P.lids, { o: 1 }, t, .2); }
+function c12Seat(p, x, y, wide = false) {
+  const g = G(p, { x, y });
+  const w = wide ? 210 : 90;
+  path(g, `M${-w + 20} -300Q${-w + 20} -320 ${-w + 40} -320H${w - 40}Q${w - 20} -320 ${w - 20} -300V-120H${-w + 20}Z`, { fill: '#2a2320' });
+  path(g, `M${-w} -140Q${-w} -156 ${-w + 16} -156H${w - 16}Q${w} -156 ${w} -140V-70H${-w}Z`, { fill: '#3a2f2a' });
+  path(g, `M${-w + 14} -70V0M${w - 14} -70V0`, { stroke: '#3a2f2a', 'stroke-width': 10 });
+  return g;
+}
+function c12Floor(p, y = 760) {
+  mk('rect', { x: -400, y, width: 2400, height: 400, fill: '#0c1114' }, p);
+  pth(p, `M-400 ${y}H2000`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+}
+// A doorway at (x, floor y) with monsoon rain falling outside, driven by the beat clock.
+function c12Door(p, x, y, D) {
+  const door = G(p, { x, y });
+  mk('rect', { x: -110, y: -470, width: 220, height: 470, fill: '#0d1a22' }, door);
+  const rain = Array.from({ length: 14 }, () => pth(door, 'M0 0l-8 30', { stroke: EV.fear, 'stroke-width': 2, opacity: .6 }));
+  prog(q => { const t = q * D; rain.forEach((r, i) => { const u = ((t * 1.3 + c12R(i)) % 1); put(r, { x: -95 + c12R(i + 7) * 190, y: -460 + u * 440 }); }); }, 0, D, lin);
+  pth(door, 'M-110 -470H110V0M-110 -470V0', { stroke: '#2b3632', 'stroke-width': 8 });
+  return door;
+}
+// Muddy footprints from x0 leftwards, appearing one by one from t0.
+function c12Mud(p, x0, y, n, t0, step = .22) {
+  for (let i = 0; i < n; i++) {
+    const s = mk('ellipse', { cx: 0, cy: 0, rx: 14, ry: 6, fill: '#5a4430' }, p);
+    put(s, { x: x0 - i * 48, y: y + 10 + (i % 2) * 12, o: 0 }); tw(s, { o: .9 }, t0 + i * step, .2);
+  }
+}
+// A towel held in the right hand (hidden until shown).
+const c12Towel = P => put(mk('rect', { x: -14, y: 64, width: 30, height: 38, rx: 4, fill: '#e9e1cf' }, P.armR._lo), { o: 0 });
+// Rounded chip with one line of text.
+function c12Chip(p, str, x, y, { w = 360, size = 28, color = EV.gold, fill = EV.ink, o = 0, bg = '#151d21' } = {}) {
+  const g = G(p, { x, y, o });
+  g._r = mk('rect', { x: -w / 2, y: -34, width: w, height: 64, rx: 32, fill: bg, stroke: color, 'stroke-width': 2 }, g);
+  g._t = evText(g, str, { x: 0, y: 9, size, fill, maxW: w - 34 });
+  return g;
+}
+// Small icons, drawn around (0,0).
+function c12Icon(p, kind, x, y, c = EV.gold) {
+  const g = G(p, { x, y });
+  const s = { stroke: c, 'stroke-width': 3, fill: 'none' };
+  if (kind === 'cake') { mk('rect', { x: -30, y: -6, width: 60, height: 34, rx: 6, fill: '#1d1a16', ...s }, g); pth(g, 'M-30 8Q-15 0 0 8T30 8', s); pth(g, 'M0 -6V-24', s); evDot(g, 0, -30, 6, EV.surprise); }
+  if (kind === 'heart') path(g, 'M0 26C-40 0 -36 -30 -16 -30C-6 -30 0 -22 0 -16C0 -22 6 -30 16 -30C36 -30 40 0 0 26Z', { fill: EV.love, opacity: .9 });
+  if (kind === 'say') { path(g, 'M-32 -26H32Q40 -26 40 -18V8Q40 16 32 16H-8L-24 30V16H-32Q-40 16 -40 8V-18Q-40 -26 -32 -26Z', s); pth(g, 'M-22 -6H22', s); }
+  if (kind === 'scooter') { mk('circle', { cx: -28, cy: 18, r: 12, ...s }, g); mk('circle', { cx: 30, cy: 18, r: 12, ...s }, g); pth(g, 'M-28 18H8L22 -22H34M22 -22L30 18M-36 2H6', s); }
+  if (kind === 'keys') { mk('rect', { x: -40, y: -20, width: 80, height: 44, rx: 6, ...s }, g); for (let i = 0; i < 6; i++) mk('rect', { x: -32 + (i % 3) * 24, y: -12 + Math.floor(i / 3) * 16, width: 16, height: 10, rx: 2, fill: c, opacity: .6 }, g); }
+  if (kind === 'dosa') { path(g, 'M-40 18Q-36 -30 30 -24Q46 -20 40 18Z', { fill: '#c98a3c', stroke: '#e8b765', 'stroke-width': 2.5 }); pth(g, 'M-26 6Q0 -14 30 -8', { stroke: '#7a4a1c', 'stroke-width': 2 }); }
+  if (kind === 'book') { pth(g, 'M0 -22Q-20 -30 -40 -22V26Q-20 18 0 26Q20 18 40 26V-22Q20 -30 0 -22V26', s); }
+  if (kind === 'gauge') { pth(g, 'M-36 14A36 36 0 0 1 36 14', s); pth(g, 'M0 14L20 -14', { stroke: EV.goldHi, 'stroke-width': 4 }); evDot(g, 0, 14, 5, EV.goldHi); }
+  return g;
+}
+// A side-view car with a small driver's head; ._mouth: { smile, frown }.
+function c12CarSide(p, color, { x = 0, y = 0, driver = true } = {}) {
+  const g = G(p, { x, y });
+  path(g, 'M-150 -20Q-150 -50 -120 -55L-70 -60L-40 -100Q-30 -110 -10 -110H60Q80 -110 95 -95L125 -60L150 -55Q170 -50 170 -25V-10H-150Z', { fill: color, stroke: EV.ink, 'stroke-width': 1.5, 'stroke-opacity': .4 });
+  path(g, 'M-34 -98H56Q68 -98 78 -86L102 -62H-56Z', { fill: '#0b1013' });
+  if (driver) {
+    const h = G(g, { x: 30, y: -76 });
+    mk('ellipse', { cx: 0, cy: 0, rx: 16, ry: 19, fill: EV.skinM }, h);
+    path(h, 'M-16 -4Q-17 -22 0 -22Q17 -22 16 -4Q12 -14 0 -14Q-12 -14 -16 -4Z', { fill: EV.hair });
+    evDot(h, 7, -1, 2.4, '#1a0f0a');
+    g._mouth = { smile: path(h, 'M2 9Q8 13 13 8', { stroke: '#3a1c14', 'stroke-width': 2.4 }), frown: put(path(h, 'M2 11Q8 6 13 11', { stroke: '#3a1c14', 'stroke-width': 2.4 }), { o: 0 }) };
+    g._flush = put(mk('ellipse', { cx: 4, cy: 4, rx: 13, ry: 7, fill: EV.anger }, h), { o: 0 });
+  }
+  path(g, 'M-150 -10H170V-2H-150Z', { fill: '#1a1f22' });
+  g._wheels = [-90, 110].map(wx => { const w = G(g, { x: wx, y: 0 }); mk('circle', { cx: 0, cy: 0, r: 26, fill: '#141414', stroke: '#3a3a3a', 'stroke-width': 4 }, w); pth(w, 'M-14 0H14M0 -14V14', { stroke: '#5b5650', 'stroke-width': 3 }); return w; });
+  return g;
+}
+// Top-down car, nose to +x.
+function c12CarTop(p, color) {
+  const g = G(p);
+  mk('rect', { x: -40, y: -20, width: 80, height: 40, rx: 9, fill: color, stroke: EV.ink, 'stroke-width': 1.5, 'stroke-opacity': .4 }, g);
+  mk('rect', { x: 8, y: -15, width: 14, height: 30, rx: 3, fill: '#0b1013', opacity: .8 }, g);
+  mk('rect', { x: -30, y: -14, width: 10, height: 28, rx: 3, fill: '#0b1013', opacity: .6 }, g);
+  return g;
+}
+// A kitten seen from the side, facing +x; ._legs for walking.
+function c12Cat(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  const col = '#c9a27a';
+  pth(g, 'M-46 -52Q-80 -70 -70 -110', { stroke: col, 'stroke-width': 8 });
+  g._legs = [-30, -14, 20, 34].map(lx => { const l = G(g, { x: lx, y: -36 }); pth(l, 'M0 0V34', { stroke: col, 'stroke-width': 8 }); return l; });
+  mk('ellipse', { cx: 0, cy: -50, rx: 52, ry: 24, fill: col }, g);
+  const h = G(g, { x: 56, y: -74 });
+  mk('circle', { cx: 0, cy: 0, r: 23, fill: col }, h);
+  path(h, 'M-16 -14L-12 -36L0 -20ZM16 -14L12 -36L2 -20Z', { fill: col });
+  evDot(h, 10, -4, 3.4, '#1a120d');
+  pth(h, 'M18 6H34M18 10L32 16', { stroke: '#efe6d2', 'stroke-width': 1.2, opacity: .6 });
+  return g;
+}
+const c12CatWalk = (C, t0, dur) => prog(q => { const t = q * dur, a = Math.sin(t * 9) * 22 * (q < 1 ? 1 : 0); C._legs.forEach((l, i) => put(l, { r: i % 2 ? a : -a })); }, t0, dur, lin);
+// Automaticity curve from the habit study: about 95 % of the plateau by day 66.
+const c12Auto = d => 1 - Math.exp(-d * Math.log(20) / 66);
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    evGlow(g, 800, 520, 340, 'Gold', .35);
+    pth(g, 'M380 520H800', { stroke: EV.goldLo, 'stroke-width': 3, 'stroke-dasharray': '10 12' });
+    const sol = path(g, 'M800 520H1220', { stroke: EV.gold, 'stroke-width': 4 }, { d: 0 });
+    draw(sol, .5, 1.8);
+    evText(g, L('rehearsed'), { x: 590, y: 572, size: 28, fill: EV.dim, maxW: 380, italic: true });
+    evText(g, L('lived'), { x: 1010, y: 572, size: 28, fill: EV.gold, maxW: 380, italic: true });
+    const dot = evDot(g, 380, 520, 11, EV.goldHi, 0);
+    const halo = evGlow(g, 380, 520, 46, 'Gold', 0);
+    prog(q => { const t = q * D, u = (t * .14) % 1, x = 380 + u * 840, k = Math.min(1, t * 1.2) * Math.min(1, (1 - u) * 8);
+      put(dot, { x, o: k * (u < .5 ? .45 : 1) }); put(halo, { x, o: u < .5 ? 0 : k * .9 }); }, 0, D, lin);
+    evText(g, L('kicker'), { x: 800, y: 190, size: 26, fill: EV.gold, weight: 500, ls: '6' });
+    evText(g, L('title'), { x: 800, y: 330, size: 92, font: SERIF, weight: 600, maxW: 1360 });
+    tw(g, { o: 1 }, .15, 1.1, out);
+    const sub = evText(scene, L('sub'), { x: 800, y: 680, size: 38, fill: EV.dim, o: 0, maxW: 1200, font: SERIF, italic: true });
+    put(sub, { y: 700 }); tw(sub, { y: 680, o: 1 }, m('sub'), .8, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 780, size: 26, fill: '#6f6a5c', o: 0, maxW: 1200 });
+    show(cr, m('sub') + .8, .8);
+    tw(g, { o: 0 }, D - .7, .6); hide(sub, D - .7, .6); hide(cr, D - .7, .6);
+  }],
+
+  ['nets', 'b_nets', (m, D) => {
+    const p = panel(0);
+    const cam = camera(p, D, { x: 800, y: 450, z: 1 });
+    const W = cam.world;
+    mk('rect', { x: -1800, y: -800, width: 7000, height: 2600, fill: EV.bg }, W);
+    mk('rect', { x: -1800, y: 740, width: 7000, height: 800, fill: '#0d1612' }, W);
+    pth(W, 'M-1800 740H5200', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+    // the practice nets, evening light
+    evGlow(W, 560, 300, 320, 'Warm', .35);
+    pth(W, 'M260 740V260H900V740', { stroke: '#5b5650', 'stroke-width': 5 });
+    let mesh = '';
+    for (let i = 1; i < 16; i++) mesh += `M${260 + i * 40} 262V740`;
+    for (let j = 1; j < 12; j++) mesh += `M262 ${260 + j * 40}H898`;
+    pth(W, mesh, { stroke: '#5b5650', 'stroke-width': 1.2, opacity: .35 });
+    mk('rect', { x: 300, y: 740, width: 1000, height: 16, fill: '#2a2a1e' }, W);
+    const bat = (P) => { const b = mk('rect', { x: -7, y: 66, width: 14, height: 120, rx: 5, fill: '#d9c08a' }, P.armR._lo); return b; };
+    const hero = evPerson(W, { kind: 'm', x: 520, y: 740 });
+    bat(hero); evBreathe(hero, D); evMood(hero, 'smile', 0, .01);
+    evArm(hero, 1, 120, -30, 0, .01);
+    // balls: each one pitched, struck, gone over the ground; pure function of time
+    const balls = [], hits = [];
+    for (let k = 0; ; k++) { const tk = 1.1 + k * 2.4; if (tk + 1.2 > m('match') - .3) break; hits.push(tk); }
+    const ball = evDot(W, 1250, 620, 9, '#e9e1cf', 0);
+    prog(q => {
+      const t = q * D; let s = { x: 1250, y: 620, o: 0 };
+      for (const tk of hits) {
+        if (t >= tk - .7 && t < tk) { const u = (t - tk + .7) / .7; s = { x: 1250 - 640 * u, y: 640 - 30 * u + Math.sin(u * Math.PI) * -40, o: 1 }; }
+        if (t >= tk && t < tk + 1.3) { const u = (t - tk) / 1.3; s = { x: 610 + 1000 * u, y: 600 - 900 * u + 520 * u * u, o: 1 - u * .3 }; }
+      }
+      put(ball, s);
+    }, 0, D, lin);
+    hits.forEach(tk => { evArm(hero, 1, -70, -10, tk - .12, .22, out); evArm(hero, 1, 120, -30, tk + .7, .8); });
+    const ui = G(p);
+    const l6 = lab(ui, 'nets6', 80, 110, .3, { size: 34, fill: EV.gold, anchor: 'start', maxW: 600 });
+    const lh = lab(ui, 'netsHero', 520, 830, .6, { size: 30, fill: EV.dim, maxW: 400 });
+    hide(l6, m('match') - .2, .4); hide(lh, m('match') - .2, .4);
+    // match day: stands, floodlights, scoreboard
+    const st_ = G(W);
+    for (let i = 0; i < 140; i++) evDot(st_, 1700 + (i % 35) * 46 + (Math.floor(i / 35) % 2) * 23, 380 + Math.floor(i / 35) * 44, 9, [EV.anger, C12K, EV.joy, EV.calm, EV.shame][i % 5], .45);
+    pth(st_, 'M1660 560H3330', { stroke: '#2b3632', 'stroke-width': 6 });
+    [1760, 3240].forEach(x => { pth(st_, `M${x} 560V120`, { stroke: '#3a3324', 'stroke-width': 8 }); evGlow(st_, x, 120, 120, 'Warm', .7); mk('rect', { x: x - 34, y: 96, width: 68, height: 30, rx: 4, fill: '#e8dcb5' }, st_); });
+    const sb = G(W, { x: 2900, y: 240 });
+    mk('rect', { x: -130, y: -70, width: 260, height: 150, rx: 10, fill: '#0e1418', stroke: EV.gold, 'stroke-width': 3 }, sb);
+    evText(sb, '2', { x: -50, y: 46, size: 110, fill: EV.ink, font: SERIF, weight: 600 });
+    evText(sb, L('runs'), { x: 50, y: 30, size: 52, fill: EV.dim, maxW: 140 });
+    mk('rect', { x: 2240, y: 740, width: 600, height: 16, fill: '#2a2a1e' }, W);
+    const stumps = G(W, { x: 2330, y: 740 });
+    pth(stumps, 'M-14 0V-96M0 0V-96M14 0V-96', { stroke: '#e9e1cf', 'stroke-width': 5 });
+    const bails = [-8, 8].map(bx => put(mk('rect', { x: -9, y: -3, width: 18, height: 6, rx: 2, fill: '#e9e1cf' }, stumps), { x: bx, y: -98 }));
+    const hero2 = evPerson(W, { kind: 'm', x: 2440, y: 740 });
+    bat(hero2); evBreathe(hero2, D); evArm(hero2, 1, 40, -20, 0, .01); evMood(hero2, 'tense', 0, .01);
+    const tb = m('match') + 2;
+    const b2 = evDot(W, 3000, 640, 9, '#e9e1cf', 0);
+    prog(q => { const t = q * D, u = (t - (tb - .7)) / .7; put(b2, u < 0 || u > 1.6 ? { x: 3000, y: 640, o: 0 } : { x: 3000 - 670 * Math.min(1, u) - (u > 1 ? 60 * (u - 1) : 0), y: 640 + (u > 1 ? 40 * (u - 1) : 0), o: 1 }); }, 0, D, lin);
+    evArm(hero2, 1, -40, -10, tb - .2, .3);
+    tw(bails[0], { x: -70, y: -170, r: -200 }, tb, .7, out); tw(bails[1], { x: 60, y: -190, r: 220 }, tb, .7, out);
+    tw(bails[0], { y: -10 }, tb + .7, .4, lin); tw(bails[1], { y: -10 }, tb + .7, .4, lin);
+    evMood(hero2, 'sad', tb + .4); evArm(hero2, 1, 10, 0, tb + .6, .6);
+    const outT = evText(W, L('out'), { x: 2440, y: 300, size: 64, fill: EV.anger, weight: 600, font: SERIF, o: 0, maxW: 300 });
+    pop(outT, tb + .5); put(outT, { s: .6, o: 0 });
+    cam.to({ x: 2520 }, m('match') - .2, 1.6);
+    const md = lab(ui, 'matchDay', 80, 110, m('match') + 1, { size: 34, fill: EV.gold, anchor: 'start', maxW: 600 });
+    hide(md, m('field') - .2, .4);
+    // pull back: both places at once
+    cam.to({ x: 1450, y: 450, z: .5 }, m('field'), 1.8);
+    hide(outT, m('field'), .5);
+    lab(ui, 'pracLab', 370, 240, m('field') + 1, { size: 32, fill: EV.dim, maxW: 520 });
+    lab(ui, 'fieldLab', 1250, 240, m('live') - .2, { size: 32, fill: EV.gold, maxW: 560 });
+    const arc = path(ui, 'M560 330Q830 250 1100 330', { stroke: EV.gold, 'stroke-width': 4 }, { d: 0 });
+    draw(arc, m('live'), 1);
+    const ah = evHead(ui, 1104, 332, 16, EV.gold); put(ah, { o: 0 }); show(ah, m('live') + .9, .2);
+    const ll = evText(ui, L('liveLine'), { x: 800, y: 820, size: 42, fill: EV.ink, font: SERIF, italic: true, o: 0, maxW: 1300 });
+    show(ll, m('live') + 1.6, .7);
+  }],
+
+  ['memories', 'b_mem', (m, D) => {
+    const p = panel(0);
+    pth(p, 'M800 120V640', { stroke: EV.line, 'stroke-width': 2 });
+    const col = (cx, head, sub, color, items, mark) => {
+      const g = G(p, { o: 0 });
+      evText(g, L(head), { x: cx, y: 140, size: 52, font: SERIF, weight: 600, fill: color, maxW: 640 });
+      evText(g, L(sub), { x: cx, y: 196, size: 28, fill: EV.dim, maxW: 640 });
+      tw(g, { o: 1 }, m(mark) - .3, .5);
+      items.forEach(([icon, key], i) => {
+        const it = G(p, { x: cx - 230, y: 320 + i * 120, o: 0 });
+        c12Icon(it, icon, 0, 0, color);
+        evText(it, L(key), { x: 70, y: 10, size: 32, anchor: 'start', fill: EV.ink, maxW: 440 });
+        put(it, { x: cx - 250 }); tw(it, { o: 1, x: cx - 230 }, m(mark) + 1.4 + i * 1.3, .5, out);
+      });
+      return g;
+    };
+    col(400, 'knowThat', 'explicit', C12K, [['cake', 'birthday'], ['heart', 'heartPumps'], ['say', 'sayIt']], 'know');
+    col(1200, 'knowHow', 'implicit', C12B, [['scooter', 'scooter'], ['keys', 'typing'], ['dosa', 'dosa']], 'how');
+    // the ATM: words fail, fingers remember
+    const q = c12Later(m('pin'));
+    mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: EV.bg }, q);
+    c12Floor(q, 780);
+    const atm = G(q, { x: 880, y: 780 });
+    mk('rect', { x: -150, y: -620, width: 300, height: 620, rx: 14, fill: '#141b1f', stroke: EV.gold, 'stroke-width': 2.5 }, atm);
+    mk('rect', { x: -110, y: -580, width: 220, height: 130, rx: 8, fill: '#0b1720', stroke: '#2b3632', 'stroke-width': 3 }, atm);
+    evText(atm, L('enterPin'), { x: 0, y: -538, size: 26, fill: C12K, weight: 600, maxW: 190 });
+    const pinDots = [0, 1, 2, 3].map(i => evDot(atm, -54 + i * 36, -486, 9, EV.goldHi, 0));
+    const ok = evText(atm, '✓', { x: 0, y: -470, size: 40, fill: C12B, o: 0 });
+    const keys = [];
+    for (let i = 0; i < 12; i++) {
+      const kx = -66 + (i % 3) * 66, ky = -400 + Math.floor(i / 3) * 62;
+      keys.push(mk('rect', { x: kx - 26, y: ky - 22, width: 52, height: 44, rx: 7, fill: '#1d2428', stroke: '#5b5650', 'stroke-width': 2 }, atm));
+      T(atm, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '*', '0', '#'][i], { x: kx, y: ky + 9, size: 26, fill: EV.dim, anchor: 'middle', font: SANS });
+    }
+    const rav = evPerson(q, { kind: 'm', x: 520, y: 780 });
+    evBreathe(rav, D); evMood(rav, 'worried', m('pin') + .6);
+    const th = evThought(q, { x: 470, y: 330, w: 300, h: 150, dx: -130 });
+    tw(th, { o: 1 }, m('pin') + .5, .5, out);
+    evText(th._in, L('pinQ'), { x: 0, y: 12, size: 44, fill: EV.ink, weight: 600, maxW: 220 });
+    const seq = [6, 1, 9, 3], t0 = m('pin') + 2.2;
+    evArm(rav, 1, -100, -14, t0 - .7, .6);
+    seq.forEach((k, i) => {
+      const tk = t0 + i * .55;
+      tw(keys[k], { c_fill: '#7d6a35' }, tk, .1); tw(keys[k], { c_fill: '#1d2428' }, tk + .25, .2);
+      tw(pinDots[i], { o: 1 }, tk + .05, .1);
+      tw(rav.armR._lo, { r: -24 + (i % 2) * 14 }, tk - .15, .15);
+    });
+    tw(th, { o: 0 }, t0 + 1.6, .4);
+    evMood(rav, 'smile', t0 + 2.2);
+    pinDots.forEach(d => tw(d, { o: 0 }, t0 + 2.3, .2)); tw(ok, { o: 1 }, t0 + 2.4, .3);
+    const hg = evGlow(q, 760, 470, 110, 'calm', 0); tw(hg, { o: .8 }, m('body'), .6);
+    labP(q, 'bodyKnows', 1300, 420, m('body') + .3, { size: 38, maxW: 440, font: SERIF, italic: true, fill: C12B });
+  }],
+
+  ['handoff', 'b_hand', (m, D) => {
+    const p = panel(0);
+    const B = evBrain(p, { x: 500, y: 460, s: 1.35, o: 0 });
+    tw(B, { o: 1 }, .1, .6);
+    const fr = evGlow(B, -140, -50, 95, 'Gold', 0);
+    tw(fr, { o: 1 }, m('front'), .6); pulse(fr, m('front') + .6, 1.15);
+    const lf = lab(p, 'newHeld', 400, 150, m('front') + .3, { size: 30, fill: EV.gold, maxW: 640 });
+    // the hippocampus: a save button filing memories outward
+    const hp = G(B, { x: 30, y: 40, o: 0 });
+    path(hp, 'M-30 0Q-30 -26 -4 -24Q20 -22 22 0Q24 20 6 22Q-8 22 -8 10', { stroke: C12K, 'stroke-width': 5 });
+    tw(hp, { o: 1 }, m('save'), .4); pulse(hp, m('save') + .5, 1.3);
+    [[-70, -120], [70, -110], [150, -40]].forEach(([x, y], i) => {
+      const ln = pth(B, `M30 40Q${(30 + x) / 2} ${(40 + y) / 2 + 30} ${x} ${y}`, { stroke: C12K, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+      draw(ln, m('save') + .6 + i * .3, .6);
+      const sp = evGlow(B, x, y, 34, 'Gold', 0); tw(sp, { o: .9 }, m('save') + 1.1 + i * .3, .4);
+    });
+    lab(p, 'hippo', 500, 860, m('save') + .2, { size: 30, fill: C12K, maxW: 640 });
+    // practice: the work moves deeper
+    tw(fr, { o: 0 }, m('deep'), 1);
+    hide(lf, m('deep'), .4);
+    const bg = evGlow(B, 0, 10, 70, 'calm', 0), cb = evGlow(B, 136, 104, 60, 'calm', 0);
+    tw(bg, { o: 1 }, m('deep') + .3, .8); tw(cb, { o: 1 }, m('deep') + .7, .8);
+    prog(q => { const t = q * D, k = t < m('deep') + 1.5 ? 0 : .75 + .25 * Math.sin((t - m('deep')) * 3); put(bg, { s: k ? 1 + .06 * Math.sin((t - m('deep')) * 3) : 1 }); }, 0, D, lin);
+    lab(p, 'deepRun', 400, 150, m('deep') + .4, { size: 30, fill: C12B, maxW: 640 });
+    // science check card
+    const c1 = G(p, { x: 1210, y: 150, o: 0 });
+    evText(c1, L('sciCheck'), { x: 0, y: 0, size: 34, fill: EV.gold, weight: 600, font: SERIF, maxW: 600 });
+    const a = evPara(c1, L('authorSays'), { x: 0, y: 60, size: 28, maxW: 620, fill: EV.dim });
+    const strike = pth(c1, `M-300 ${50 + a._h / 2 - 20}H300`, { stroke: EV.anger, 'stroke-width': 3 }, { d: 0 });
+    const r = evPara(c1, L('research'), { x: 0, y: 80 + a._h, size: 28, maxW: 620, fill: EV.ink, o: 0 });
+    tw(c1, { o: 1 }, m('note'), .5);
+    draw(strike, m('note') + 3.2, .6); show(r, m('note') + 3.6, .6);
+    // amnesia and a new skill
+    const c2 = G(p, { x: 1210, y: 150 + 80 + a._h + r._h + 200, o: 0 });
+    pth(c2, 'M-220 150H220M-220 150V0', { stroke: EV.dim, 'stroke-width': 2 });
+    const curve = path(c2, 'M-220 130C-120 110 -60 60 0 40S140 10 220 4', { stroke: C12B, 'stroke-width': 4 }, { d: 0 });
+    evText(c2, L('skill'), { x: -230, y: -12, size: 26, fill: EV.dim, anchor: 'start', maxW: 200 });
+    [0, 1, 2].forEach(i => evText(c2, fmt('day', i + 1), { x: -160 + i * 160, y: 186, size: 26, fill: EV.dim, maxW: 150 }));
+    const am = evPara(c2, L('amnesia'), { x: 0, y: -120, size: 28, maxW: 640, fill: EV.ink });
+    const nl = evText(c2, L('noLesson'), { x: 0, y: 242, size: 30, fill: EV.gold, italic: true, font: SERIF, maxW: 640, o: 0 });
+    tw(c2, { o: 1 }, m('hm'), .5); draw(curve, m('hm') + 1.6, 2); show(nl, m('hm') + 4, .6);
+  }],
+
+  ['q1', 'b_mem', (m, D) => {
+    const p = panel(0);
+    pth(p, 'M800 100V560', { stroke: EV.line, 'stroke-width': 2 });
+    evText(p, L('knowThat'), { x: 400, y: 170, size: 50, font: SERIF, weight: 600, fill: C12K, maxW: 640 });
+    evText(p, L('knowHow'), { x: 1200, y: 170, size: 50, font: SERIF, weight: 600, fill: C12B, maxW: 640 });
+    [['cake', 260], ['heart', 400], ['say', 540]].forEach(([k, x]) => c12Icon(p, k, x, 360, C12K));
+    [['scooter', 1060], ['keys', 1200], ['dosa', 1340]].forEach(([k, x]) => c12Icon(p, k, x, 360, C12B));
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-implicit', prompt: [L('q1p')],
+    build: choice([[L('q1b')], [L('q1a')], [L('q1c')]], 1, L('q1y'), [L('q1nb'), null, L('q1nc')]),
+  }], done) }],
+
+  ['tdb', 'b_tdb', (m, D) => {
+    const p = panel(0);
+    const cols = [[290, 'thinking', 'knowledgeW', C12K, 'think'], [800, 'doing', 'experienceW', C12D, 'do'], [1310, 'being', 'wisdomW', C12B, 'be']];
+    const G3 = cols.map(([x, h, s, c, mark]) => {
+      const g = G(p, { o: 0 });
+      evText(g, L(h), { x, y: 120, size: 50, font: SERIF, weight: 600, fill: c, maxW: 440 });
+      evText(g, L(s), { x, y: 168, size: 28, fill: EV.dim, maxW: 440 });
+      pth(g, `M${x - 200} 760H${x + 200}`, { stroke: c, 'stroke-width': 2, opacity: .4 });
+      tw(g, { o: 1 }, mark === 'think' ? .3 : m(mark) - .2, .5);
+      return g;
+    });
+    // thinking: the app
+    const L1 = evPerson(G3[0], { kind: 'f', x: 230, y: 760, s: .62 });
+    evArm(L1, 1, -40, -60, 0, .01); evBreathe(L1, D);
+    const ph = G(G3[0], { x: 320, y: 560 });
+    mk('rect', { x: -26, y: -46, width: 52, height: 92, rx: 9, fill: '#1d2428', stroke: C12K, 'stroke-width': 2.5 }, ph);
+    const card = c12Chip(G3[0], L('shukran'), 290, 300, { w: 400, color: C12K });
+    tw(card, { o: 1 }, m('think') + 3, .5);
+    pth(G3[0], 'M320 500V340', { stroke: C12K, 'stroke-width': 2, 'stroke-dasharray': '5 6', opacity: .6 });
+    // doing: the cafeteria counter
+    mk('rect', { x: 860, y: 610, width: 190, height: 150, fill: '#2a2320', stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .4 }, G3[1]);
+    const cup = G(G3[1], { x: 930, y: 600 }); path(cup, 'M-16 -26H16L12 0H-12Z', { fill: '#e9e1cf' });
+    const L2 = evPerson(G3[1], { kind: 'f', x: 740, y: 760, s: .62 });
+    evBreathe(L2, D, 1.6, 1.4); evMood(L2, 'worried', 0, .01);
+    const bub = evBubble(G3[1], L('teaPlease'), { x: 790, y: 420, w: 380, size: 32, tail: 'left', edge: C12D, italic: true });
+    pop(bub, m('do') + 2.6);
+    const hb = evDot(G3[1], 740, 640, 9, EV.anger, 0);
+    prog(q => { const t = q * D - m('do') - 3.2; put(hb, { o: t < 0 ? 0 : 1, s: 1 + .5 * Math.max(0, Math.sin(t * 9)) }); }, 0, D, lin);
+    evMood(L2, 'smile', m('do') + 5.5); tw(cup, { x: 880 }, m('do') + 5.2, .6);
+    lab(G3[1], 'heartRaces', 800, 815, m('do') + 4, { size: 28, fill: C12D, maxW: 440 });
+    // being: easy conversation
+    const L3 = evPerson(G3[2], { kind: 'f', x: 1220, y: 760, s: .62 });
+    const cs = evPerson(G3[2], { kind: 'm', x: 1420, y: 760, s: .6 });
+    evMood(L3, 'smile', 0, .01); evMood(cs, 'smile', 0, .01); evBreathe(L3, D); evBreathe(cs, D, 1.2, .7);
+    const talk = [0, 1, 2, 3].map(i => {
+      const b = G(G3[2], { x: i % 2 ? 1400 : 1240, y: 430 - (i % 2) * 20, o: 0 });
+      mk('rect', { x: -60, y: -30, width: 120, height: 56, rx: 22, fill: '#151d21', stroke: C12B, 'stroke-width': 2 }, b);
+      [-24, 0, 24].forEach(dx => evDot(b, dx, -2, 5, C12B));
+      return b;
+    });
+    prog(q => { const t = q * D - m('be') - 1; talk.forEach((b, i) => { const u = t - i * .9; put(b, { o: u < 0 ? 0 : Math.min(1, u * 3) * (u > 2.6 ? Math.max(0, 1 - (u - 2.6) * 2) : 1), y: (430 - (i % 2) * 20) - Math.max(0, u) * 14 }); }); }, 0, D, lin);
+    lab(G3[2], 'noTranslate', 1310, 815, m('be') + 3, { size: 28, fill: C12B, maxW: 440 });
+    // arrows
+    [[480, 600], [990, 1110]].forEach(([a, b], i) => {
+      const ar = path(p, `M${a} 300H${b}`, { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 });
+      draw(ar, m(i ? 'be' : 'do') - .2, .5);
+      const h_ = evHead(p, b + 6, 300, 0, EV.dim); put(h_, { o: 0 }); show(h_, m(i ? 'be' : 'do') + .3, .2);
+    });
+    const ia = evText(p, L('iAm'), { x: 1310, y: 270, size: 64, font: SERIF, weight: 600, fill: EV.gold, o: 0, maxW: 420 });
+    const ig = evGlow(p, 1310, 250, 160, 'Gold', 0);
+    tw(ig, { o: .7 }, m('iam'), .6); show(ia, m('iam') + .2, .6); pulse(ia, m('iam') + .9, 1.12);
+  }],
+
+  ['ladder', 'b_ladder', (m, D) => {
+    const p = panel(0);
+    lab(p, 'ladderHead', 800, 96, .2, { size: 40, font: SERIF, weight: 600, fill: EV.gold, maxW: 900 });
+    const X = i => 200 + 300 * i, Y = i => 760 - 130 * i;
+    let d = `M${X(0)} 900V${Y(0)}`;
+    for (let i = 0; i < 4; i++) d += `H${X(i + 1)}` + (i < 3 ? `V${Y(i + 1)}` : '');
+    d += 'V900Z';
+    const sh = path(p, d, { fill: '#121a1e', stroke: EV.gold, 'stroke-width': 2.5 });
+    put(sh, { o: 0 }); tw(sh, { o: 1 }, .1, .6);
+    const keys = ['st1', 'st2', 'st3', 'st4'], marks = ['s1', 's2', 's3', 's4'];
+    const cols = [EV.dim, C12K, C12D, C12B];
+    keys.forEach((k, i) => {
+      const g = G(p, { o: 0 });
+      mk('circle', { cx: X(i) + 34, cy: Y(i) + 40, r: 20, fill: 'none', stroke: cols[i], 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: X(i) + 34, y: Y(i) + 49, size: 26, fill: cols[i], anchor: 'middle', font: SANS, weight: 600 });
+      evPara(g, L(k), { x: X(i) + 165, y: Y(i) + 44, size: 26, maxW: 210, fill: EV.ink });
+      tw(g, { o: 1 }, m(marks[i]), .5);
+    });
+    // Leena climbs; effort glows on her forehead in the middle steps
+    const P = evPerson(p, { kind: 'f', x: X(0) + 150, y: Y(0), s: .55 });
+    evBreathe(P, D);
+    const ef = evGlow(P.head, 0, -60, 70, 'Gold', 0);
+    const hop = (i, t) => {
+      prog(q => { put(P.g, { x: X(i - 1) + 150 + 300 * q, y: Y(i - 1) - 130 * q - Math.sin(q * Math.PI) * 60 }); }, t, .8, io);
+      evArm(P, -1, 30, 20, t, .3); evArm(P, -1, 0, 0, t + .5, .3);
+    };
+    hop(1, m('s2') + .2); hop(2, m('s3') + .2); hop(3, m('s4') + .2);
+    evMood(P, 'worried', m('s2') + .8); evMood(P, 'tense', m('s3') + .8); evMood(P, 'smile', m('s4') + .9);
+    tw(ef, { o: .6 }, m('s2') + .8, .5); tw(ef, { o: 1 }, m('s3') + .8, .5); tw(ef, { o: 0 }, m('s4') + .8, .8);
+    // the ones who turn back
+    const gh = evPerson(p, { kind: 'm', x: X(2) + 150, y: Y(2), s: .55, o: 0 });
+    evMood(gh, 'sad', 0, .01);
+    tw(gh.g, { o: .45 }, m('quit'), .4);
+    prog(q => { put(gh.g, { x: X(2) + 150 - 300 * q, y: Y(2) + 130 * q - Math.sin(q * Math.PI) * 40 }); }, m('quit') + .8, 1, io);
+    tw(gh.g, { o: 0 }, m('quit') + 2, .8);
+    const qh = lab(p, 'quitHere', 790, 360, m('quit') + .3, { size: 30, fill: EV.anger, italic: true, maxW: 420 });
+    hide(qh, m('model') - .2, .4);
+    lab(p, 'modelNote', 800, 150, m('model') + .2, { size: 28, fill: EV.dim, italic: true, maxW: 900 });
+  }],
+
+  ['steps', 'b_steps', (m, D) => {
+    const p = panel(0);
+    const rav = evPerson(p, { kind: 'm', x: 260, y: 800, s: .95 });
+    evBreathe(rav, D); evMood(rav, 'calm', 0, .01);
+    lab(p, 'ravi', 260, 850, .3, { size: 28, fill: EV.dim });
+    const cx = 1000, cy = 505, R = 265;
+    const nodes = [[-90, 'knowledge', 'kCap', C12K, 'knowledge', 'book'], [30, 'feedback', 'fCap', C12B, 'feedback', 'gauge'], [150, 'instruction', 'iCap', C12D, 'instruction', null]];
+    const pos = nodes.map(([a]) => [cx + Math.cos(a * Math.PI / 180) * R, cy + Math.sin(a * Math.PI / 180) * R]);
+    nodes.forEach(([a, k, cap, c, mark, icon], i) => {
+      const [x, y] = pos[i];
+      const g = G(p, { x, y, o: 0, s: .6 });
+      evGlow(g, 0, 0, 100, 'Gold', .25);
+      mk('circle', { cx: 0, cy: 0, r: 64, fill: '#131b1f', stroke: c, 'stroke-width': 3 }, g);
+      if (icon) c12Icon(g, icon, 0, 0, c);
+      else { const a1 = evPerson(g, { kind: 'm', x: -18, y: 40, s: .2 }), a2 = evPerson(g, { kind: 'm', x: 20, y: 40, s: .22 }); evMood(a2, 'smile', 0, .01); }
+      tw(g, { o: 1, s: 1 }, m(mark), .5, back);
+      const top = i === 0;
+      const side = top ? 0 : x > cx ? 1 : -1, lx = top ? x : x + side * 84, an = top ? 'middle' : side > 0 ? 'start' : 'end';
+      const t1 = evText(p, L(k), { x: lx, y: top ? y - 122 : y - 4, size: 36, fill: c, weight: 600, font: SERIF, anchor: an, o: 0, maxW: 300 });
+      show(t1, m(mark) + .2, .4);
+      const t2 = top ? evText(p, L(cap), { x: lx, y: y - 80, size: 28, fill: EV.dim, o: 0, maxW: 560 }) : evPara(p, L(cap), { x: lx, y: y + 38, size: 28, fill: EV.dim, anchor: an, o: 0, maxW: 250, lh: 1.25 });
+      show(t2, m(mark) + 1, .5);
+    });
+    // Ravi gestures to each one in turn
+    evArm(rav, 1, -50, -40, m('knowledge') + .2, .5); evArm(rav, 1, -20, -10, m('instruction') + .2, .5); evArm(rav, 1, -70, -30, m('feedback') + .2, .5);
+    evMood(rav, 'ask', m('instruction') + .3); evMood(rav, 'smile', m('cycle') + .5);
+    // the circle: arcs and a travelling light
+    const order = [0, 1, 2];
+    const arcs = order.map((i, k) => {
+      const a0 = nodes[i][0] + 20, a1 = nodes[(i + 1) % 3][0] - 20 + (i === 2 ? 360 : 0);
+      let d = '';
+      for (let s = 0; s <= 24; s++) { const a = (a0 + (a1 - a0) * s / 24) * Math.PI / 180; d += (s ? 'L' : 'M') + (cx + Math.cos(a) * R).toFixed(1) + ' ' + (cy + Math.sin(a) * R).toFixed(1); }
+      const e = path(p, d, { stroke: EV.gold, 'stroke-width': 3 }, { d: 0 });
+      draw(e, m('cycle') + k * .4, .6);
+      headAt12(p, e, EV.gold, m('cycle') + k * .4 + .55);
+      return e;
+    });
+    const ring = pth(p, `M${cx} ${cy - R}A${R} ${R} 0 1 1 ${cx - .01} ${cy - R}`, { stroke: 'none' });
+    evFlow(ring, 3, EV.goldHi, m('cycle') + 1.4, D - m('cycle') - 1.4, { speed: .22, r: 8, parent: p });
+  }],
+
+  ['testdrive', 'b_test', (m, D) => {
+    const p = panel(0);
+    const cam = camera(p, D, { x: 800, y: 450, z: 1 });
+    const W = cam.world;
+    mk('rect', { x: -400, y: -200, width: 2400, height: 1300, fill: EV.bg }, W);
+    c12Floor(W, 760);
+    c12Door(W, 1400, 760, D);
+    c12Seat(W, 260, 760, true);
+    const R = evPerson(W, { kind: 'm', x: 620, y: 760 });
+    evBreathe(R, D);
+    const towel = c12Towel(R);
+    const jaw = G(R.head, { o: 0 });
+    pth(jaw, 'M-32 -44Q-30 -28 -20 -20M32 -44Q30 -28 20 -20', { stroke: EV.anger, 'stroke-width': 3.5 });
+    const kA = evPerson(W, { kind: 'm', x: 1400, y: 760, s: .55 }), kB = evPerson(W, { kind: 'm', x: 1440, y: 760, s: .5 });
+    evMood(kA, 'smile', 0, .01); evMood(kB, 'smile', 0, .01);
+    const run0 = m('rain') + .3;
+    evWalk(kA, 1400, 980, run0, run0 + 2, 40); evWalk(kB, 1440, 1140, run0 + .3, run0 + 2.3, 40);
+    c12Mud(W, 1360, 760, 9, run0 + .2);
+    const ui = G(p);
+    const rn = lab(ui, 'rainy', 1200, 110, .4, { size: 32, fill: C12K, italic: true, maxW: 500 });
+    evMood(R, 'tense', run0 + 1.4, .3);
+    evMood(R, 'smile', m('towel') + 1);
+    evArm(R, 1, -80, -10, m('towel') + 2.4, .6); tw(towel, { o: 1 }, m('towel') + 2.6, .3);
+    // the close-up: the jaw tells the truth
+    hide(rn, m('jaw') - .3, .4);
+    cam.to({ x: 640, y: 400, z: 2.3 }, m('jaw') - .2, 1.6);
+    tw(jaw, { o: 1 }, m('jaw') + 1.6, .4);
+    prog(q => { const t = q * D - m('jaw') - 1.8; put(jaw, { s: t < 0 ? 1 : 1 + .06 * Math.abs(Math.sin(t * 5)) }); }, 0, D, lin);
+    tw(R.flush, { o: .35 }, m('jaw') + 1.8, .8);
+    lab(ui, 'jawTight', 1180, 330, m('jaw') + 2, { size: 40, fill: EV.anger, font: SERIF, italic: true, maxW: 520 });
+    // bedtime: the headache
+    const q = c12Later(m('head'));
+    mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: '#05080a' }, q);
+    c12Floor(q, 760);
+    evGlow(q, 1250, 220, 200, 'Warm', .2);
+    c12Seat(q, 620, 760, true);
+    const R2 = c12Sit(evPerson(q, { kind: 'm', x: 620, y: 760 }));
+    evMood(R2, 'hurt', m('head') + .2, .01); evBreathe(R2, D, 1.6, 1.2);
+    evArm(R2, -1, 140, 113, m('head') + .6, .7);
+    const zz = G(q, { x: 620, y: 760 - 120 - 178 - 132 + 30 });
+    const bolts = [-1, 1].map(s => pth(zz, `M${s * 46} -70l${s * 22} -12l${-s * 10} 18l${s * 24} -10`, { stroke: EV.anger, 'stroke-width': 4 }, { d: 0 }));
+    bolts.forEach((b, i) => draw(b, m('head') + 1 + i * .2, .3));
+    prog(qq => { const t = qq * D - m('head') - 1.4; bolts.forEach((b, i) => put(b, { o: t < 0 ? 1 : .5 + .5 * Math.abs(Math.sin(t * 4 + i)) })); }, 0, D, lin);
+    const clk = evText(q, L('night'), { x: 1250, y: 230, size: 44, fill: EV.dim, weight: 600, o: 0, maxW: 400 });
+    show(clk, m('head') + .3, .5);
+    lab(q, 'headache', 620, 830, m('head') + 1, { size: 30, fill: EV.anger, maxW: 400 });
+    const hq = evText(q, L('howDid'), { x: 1150, y: 520, size: 50, font: SERIF, italic: true, fill: EV.ink, o: 0, maxW: 720 });
+    show(hq, m('how'), .7);
+  }],
+
+  ['match', 'b_match', (m, D) => {
+    const p = panel(0);
+    const meter = (x, key, sub, col, lvl, mark) => {
+      const g = G(p, { x, y: 0, o: 0 });
+      mk('rect', { x: -60, y: 220, width: 120, height: 420, rx: 18, fill: '#11181c', stroke: EV.dim, 'stroke-width': 2 }, g);
+      const f = mk('rect', { x: -52, y: 632, width: 104, height: 0, rx: 12, fill: col }, g);
+      tw(f, { a_y: 632 - 404 * lvl, a_height: 404 * lvl }, m(mark) + .4, 1.2, out);
+      evText(g, L(key), { x: 0, y: 700, size: 40, font: SERIF, weight: 600, fill: EV.ink, maxW: 300 });
+      evText(g, L(sub), { x: 0, y: 742, size: 28, fill: EV.dim, maxW: 300 });
+      tw(g, { o: 1 }, mark === 'outside' ? .3 : .6, .5);
+      return g;
+    };
+    meter(340, 'outside', 'behaviour', C12D, .85, 'outside');
+    const inG = meter(680, 'inside', 'feelingW', EV.anger, .25, 'inside');
+    const ht = evGlow(inG, 0, 560, 90, 'anger', 0); tw(ht, { o: .7 }, m('inside') + 1.4, .6);
+    const tgt = pth(inG, 'M-80 285H80', { stroke: C12B, 'stroke-width': 3, 'stroke-dasharray': '8 8', opacity: 0 });
+    tw(tgt, { o: 1 }, m('being') + 2.4, .5);
+    lab(inG, 'goal', 104, 292, m('being') + 2.6, { size: 26, fill: C12B, anchor: 'start', maxW: 140 });
+    const d1 = evText(p, L('doingDef'), { x: 920, y: 330, size: 38, fill: C12D, anchor: 'start', o: 0, maxW: 620, font: SERIF, weight: 600 });
+    const d2 = evText(p, L('beingDef'), { x: 920, y: 430, size: 38, fill: C12B, anchor: 'start', o: 0, maxW: 620, font: SERIF, weight: 600 });
+    show(d1, m('being'), .5); show(d2, m('being') + 2.2, .5);
+    // night review, then a new piece for tomorrow
+    const q = c12Later(m('review'));
+    mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: EV.bg }, q);
+    c12Floor(q, 780);
+    evGlow(q, 300, 300, 260, 'Warm', .3);
+    c12Seat(q, 320, 780);
+    const R = c12Sit(evPerson(q, { kind: 'm', x: 320, y: 780 }));
+    evMood(R, 'calm', 0, .01); c12Close(R, m('review') + .6); evBreathe(R, D, 1.2, .5);
+    const th = evThought(q, { x: 380, y: 430, w: 440, h: 220, dx: 160 });
+    tw(th, { o: 1 }, m('review') + .6, .5, out);
+    const sc = G(th._in, { y: 30 });
+    pth(sc, 'M-150 50H150', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .4 });
+    const mr = evPerson(sc, { kind: 'm', x: -60, y: 50, s: .28 }); evMood(mr, 'smile', 0, .01);
+    const b1 = evPerson(sc, { kind: 'm', x: 60, y: 50, s: .16 }), b2 = evPerson(sc, { kind: 'm', x: 100, y: 50, s: .15 });
+    prog(qq => { const t = qq * D - m('review') - 1; [b1, b2].forEach((b, i) => put(b.g, { x: 60 + i * 40 + Math.sin(t * 2 + i) * 8 })); }, 0, D, lin);
+    lab(q, 'replay', 520, 860, m('review') + 1, { size: 28, fill: EV.dim, italic: true, maxW: 700 });
+    const list = G(q, { x: 1180, y: 200, o: 0 });
+    mk('rect', { x: -260, y: -70, width: 520, height: 560, rx: 20, fill: '#121a1e', stroke: EV.gold, 'stroke-width': 2 }, list);
+    evText(list, L('tomorrow'), { x: 0, y: -10, size: 34, fill: EV.gold, weight: 600, font: SERIF, maxW: 470 });
+    tw(list, { o: 1 }, m('review') + 2.2, .5);
+    ['r1', 'r2', 'r3', 'r4', 'r5'].forEach((k, i) => {
+      const fresh = i > 2, g = G(list, { x: 0, y: 70 + i * 86, o: fresh ? 0 : 1 });
+      evDot(g, -200, -8, 8, fresh ? EV.gold : EV.dim);
+      evText(g, L(k), { x: -176, y: 2, size: 30, anchor: 'start', fill: fresh ? EV.goldHi : EV.ink, maxW: 400 });
+      if (fresh) { put(g, { x: 40 }); tw(g, { o: 1, x: 0 }, m('add') + 1.6 + (i - 3) * 1.8, .6, out); }
+    });
+  }],
+
+  ['q2', 'b_match', (m, D) => {
+    const p = panel(0);
+    [[560, 'outside', C12D, .85], [1040, 'inside', EV.anger, .25]].forEach(([x, k, c, lv]) => {
+      mk('rect', { x: x - 44, y: 110, width: 88, height: 330, rx: 14, fill: '#11181c', stroke: EV.dim, 'stroke-width': 2 }, p);
+      mk('rect', { x: x - 38, y: 434 - 318 * lv, width: 76, height: 318 * lv, rx: 10, fill: c }, p);
+      evText(p, L(k), { x: x + (x < 800 ? -90 : 90), y: 290, size: 34, font: SERIF, weight: 600, fill: EV.ink, anchor: x < 800 ? 'end' : 'start', maxW: 300 });
+    });
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-dobe', prompt: [L('q2p')],
+    build: grid([
+      { parts: [L('q2r1')], ans: ['do'], why: L('q2w1') },
+      { parts: [L('q2r2')], ans: ['do'], why: L('q2w2') },
+      { parts: [L('q2r3')], ans: ['be'], why: L('q2w3') },
+      { parts: [L('q2r4')], ans: ['be'], why: L('q2w4') },
+    ], [['do', L('doing'), C12D, 'D'], ['be', L('being'), C12B, 'B']], { multi: false, text: true }),
+  }], done) }],
+
+  ['feedback', 'b_fb', (m, D) => {
+    const p = panel(0);
+    const all = G(p);
+    pth(all, 'M800 70V820M60 460H1540', { stroke: EV.line, 'stroke-width': 2 });
+    // people
+    const q1 = G(all, { o: 0 });
+    evText(q1, L('fromPeople'), { x: 90, y: 110, size: 34, fill: EV.gold, weight: 600, anchor: 'start', font: SERIF, maxW: 640 });
+    const col = evPerson(q1, { kind: 'f', x: 200, y: 430, s: .48 }); evMood(col, 'smile', 0, .01); evBreathe(col, D);
+    const bb = evBubble(q1, L('calmer'), { x: 470, y: 330, w: 430, size: 30, tail: 'left', edge: C12B });
+    tw(q1, { o: 1 }, m('people') - .2, .4); pop(bb, m('people') + .8);
+    // chart
+    const q2 = G(all, { o: 0 });
+    evText(q2, L('fromChart'), { x: 860, y: 110, size: 34, fill: EV.gold, weight: 600, anchor: 'start', font: SERIF, maxW: 640 });
+    const ticks = [];
+    for (let i = 0; i < 21; i++) {
+      const x = 900 + (i % 7) * 82, y = 180 + Math.floor(i / 7) * 82;
+      mk('rect', { x, y, width: 66, height: 66, rx: 8, fill: '#121a1e', stroke: EV.dim, 'stroke-width': 1.5 }, q2);
+      ticks.push(put(T(q2, '✓', { x: x + 33, y: y + 46, size: 38, fill: C12B, anchor: 'middle', font: SANS }), { o: 0 }));
+    }
+    tw(q2, { o: 1 }, m('chart') - .2, .4);
+    ticks.forEach((t, i) => tw(t, { o: 1 }, m('chart') + .6 + i * .16, .15));
+    // body
+    const q3 = G(all, { o: 0 });
+    evText(q3, L('fromBody'), { x: 90, y: 520, size: 34, fill: EV.gold, weight: 600, anchor: 'start', font: SERIF, maxW: 640 });
+    let sd = 'M140 800';
+    for (let i = 0; i < 5; i++) sd += `H${220 + i * 100}V${756 - i * 44}`;
+    sd += 'H700';
+    pth(q3, sd, { stroke: EV.gold, 'stroke-width': 3, opacity: .7 });
+    const cl = evPerson(q3, { kind: 'm', x: 180, y: 800, s: .3 }); evMood(cl, 'smile', 0, .01);
+    prog(qq => {
+      const t = qq * D - m('body') - .5, u = Math.max(0, Math.min(5, t / .6)), k = Math.floor(u), f = u - k;
+      const x = 180 + (k + c12E(f)) * 100 + (u >= 5 ? 30 : 0), y = 800 - (k + c12E(f)) * 44 - Math.sin(f * Math.PI) * (k < 5 ? 14 : 0);
+      put(cl.g, { x, y: Math.max(800 - 5 * 44, y) });
+    }, 0, D, lin);
+    lab(q3, 'noGasp', 470, 860, m('body') + 2, { size: 28, fill: C12B, maxW: 500 });
+    tw(q3, { o: 1 }, m('body') - .2, .4);
+    // screen: neurofeedback
+    const q4 = G(all, { o: 0 });
+    evText(q4, L('fromScreen'), { x: 860, y: 520, size: 34, fill: EV.gold, weight: 600, anchor: 'start', font: SERIF, maxW: 640 });
+    mk('rect', { x: 880, y: 570, width: 460, height: 210, rx: 12, fill: '#0b1720', stroke: '#2b3632', 'stroke-width': 4 }, q4);
+    const wave = path(q4, '', { stroke: C12K, 'stroke-width': 3 });
+    const bar = mk('rect', { x: 1380, y: 770, width: 44, height: 0, rx: 6, fill: C12B }, q4);
+    mk('rect', { x: 1380, y: 580, width: 44, height: 190, rx: 6, fill: 'none', stroke: EV.dim, 'stroke-width': 1.5 }, q4);
+    pth(q4, 'M1372 620H1432', { stroke: EV.gold, 'stroke-width': 3 });
+    prog(qq => {
+      const t = qq * D, k = Math.max(0, Math.min(1, (t - m('screen') - .5) / 5));
+      let d = '';
+      for (let i = 0; i <= 60; i++) { const x = 900 + i * 7, ph = i * (.9 - .55 * k) + t * 6; d += (i ? 'L' : 'M') + x + ' ' + (675 + Math.sin(ph) * (40 - 22 * k) + Math.sin(ph * 2.3) * 12 * (1 - k)).toFixed(1); }
+      wave.setAttribute('d', d);
+      bar.setAttribute('y', 770 - 150 * k); bar.setAttribute('height', 150 * k);
+    }, 0, D, lin);
+    lab(q4, 'yourBrain', 1110, 820, m('screen') + .8, { size: 26, fill: EV.dim, maxW: 440 });
+    tw(q4, { o: 1 }, m('screen') - .2, .4);
+    const mc = c12Chip(p, L('modest'), 1150, 870, { w: 640, size: 26, color: EV.anger, fill: EV.ink });
+    tw(mc, { o: 1 }, m('fair') + 4, .5);
+    // the clearest feedback is quick
+    tw(all, { o: .15 }, m('fast') - .2, .5); hide(mc, m('fast') - .2, .4);
+    const sw = G(p, { x: 800, y: 420, o: 0 });
+    evGlow(sw, 0, 0, 200, 'Gold', .5);
+    mk('circle', { cx: 0, cy: 0, r: 110, fill: '#121a1e', stroke: EV.gold, 'stroke-width': 5 }, sw);
+    mk('rect', { x: -18, y: -140, width: 36, height: 22, rx: 5, fill: EV.gold }, sw);
+    const hand = G(sw); pth(hand, 'M0 0V-86', { stroke: EV.goldHi, 'stroke-width': 6 }); evDot(sw, 0, 0, 9, EV.goldHi);
+    prog(qq => put(hand, { r: qq * 720 }), m('fast'), D - m('fast'), lin);
+    tw(sw, { o: 1 }, m('fast'), .5);
+    const qf = evText(p, L('quickFb'), { x: 800, y: 640, size: 48, font: SERIF, italic: true, fill: EV.ink, o: 0, maxW: 1300 });
+    show(qf, m('fast') + .6, .6);
+  }],
+
+  ['priming', 'b_prime', (m, D) => {
+    const p = panel(0);
+    const sky = mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: '#0b1218' }, p);
+    const grey = put(mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: '#3a3d40' }, p), { o: 0 });
+    mk('rect', { x: 0, y: 640, width: 1600, height: 260, fill: '#15191c' }, p);
+    pth(p, 'M0 640H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .3 });
+    const dashes = Array.from({ length: 10 }, () => mk('rect', { x: 0, y: 760, width: 90, height: 10, rx: 4, fill: '#9d9686', opacity: .5 }, p));
+    const lamps = Array.from({ length: 4 }, () => { const g = G(p); pth(g, 'M0 0V-300', { stroke: '#3a3324', 'stroke-width': 6 }); evGlow(g, 0, -300, 60, 'Warm', .5); return g; });
+    prog(q => { const t = q * D; dashes.forEach((d, i) => put(d, { x: ((i * 180 - t * 420) % 1800 + 1800) % 1800 - 100 })); lamps.forEach((l, i) => put(l, { x: ((i * 460 - t * 300) % 1840 + 1840) % 1840 - 120, y: 640 })); }, 0, D, lin);
+    const car = c12CarSide(p, '#2b7c78', { x: 900, y: 690 });
+    const back_ = c12CarSide(p, '#8a3a2c', { x: 320, y: 700, driver: false });
+    prog(q => { const t = q * D; [car, back_].forEach(c => c._wheels.forEach(w => put(w, { r: t * 600 }))); put(car, { y: 690 + Math.sin(t * 7) * 1.5 }); put(back_, { x: 320 + Math.sin(t * .8) * 20 }); }, 0, D, lin);
+    // the horn
+    const hk = G(p, { x: 520, y: 600, o: 0 });
+    [0, 1, 2].forEach(i => pth(hk, `M${20 + i * 22} -40Q${36 + i * 26} 0 ${20 + i * 22} 40`, { stroke: EV.anger, 'stroke-width': 4 }));
+    evText(hk, L('honk'), { x: 70, y: -70, size: 40, fill: EV.anger, weight: 600, maxW: 260 });
+    tw(hk, { o: 1 }, m('horn') + 2.4, .15); tw(hk, { o: 0 }, m('horn') + 3.6, .4);
+    tw(car._mouth.smile, { o: 0 }, m('horn') + 2.8, .2); tw(car._mouth.frown, { o: 1 }, m('horn') + 2.8, .2); tw(car._flush, { o: .5 }, m('horn') + 3, .6);
+    // the chain
+    const ch = [['c1', 330, 150], ['c2', 800, 230], ['c3', 1270, 150], ['grey', 800, 360]];
+    let prev = null;
+    const links = G(p);
+    ch.forEach(([k, x, y], i) => {
+      const t = m('chain') + 1.6 + i * 1.5;
+      if (prev) { const l = pth(links, `M${prev[0]} ${prev[1]}L${x} ${y}`, { stroke: EV.dim, 'stroke-width': 2.5 }, { d: 0 }); draw(l, t - .4, .4); }
+      const c = c12Chip(p, L(k), x, y, { w: 440, size: 28, color: i === 3 ? EV.dim : EV.anger });
+      put(c, { s: .7 }); pop(c, t);
+      prev = [x, y];
+    });
+    tw(grey, { o: .45 }, m('chain') + 5.2, 1.6);
+    lab(p, 'priming', 800, 860, m('prime') + .2, { size: 32, fill: EV.gold, maxW: 1400 });
+    // white cars everywhere
+    const q = c12Later(m('car'));
+    mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: EV.bg }, q);
+    mk('rect', { x: 0, y: 260, width: 1600, height: 440, fill: '#15191c' }, q);
+    pth(q, 'M0 370H1600M0 480H1600M0 590H1600', { stroke: '#9d9686', 'stroke-width': 3, 'stroke-dasharray': '50 40', opacity: .35 });
+    const cols = ['#e9e1cf', '#8a3a2c', '#2b7c78', '#e9e1cf', '#5b5650', '#e9e1cf', '#2b4a7c', '#e9e1cf', '#7d6a35', '#e9e1cf', '#8a3a2c', '#e9e1cf'];
+    const cars = cols.map((c, i) => {
+      const g = c12CarTop(q, c);
+      const isW = c === '#e9e1cf';
+      const ring = isW ? mk('circle', { cx: 0, cy: 0, r: 56, fill: 'none', stroke: EV.gold, 'stroke-width': 3 }, g) : null;
+      if (ring) { put(ring, { o: 0 }); tw(ring, { o: 1 }, m('car') + 1.4 + (i % 4) * .3, .4); }
+      return g;
+    });
+    prog(qq => { const t = qq * D; cars.forEach((g, i) => { const lane = i % 4, sp = 160 + lane * 40; put(g, { x: ((i * 300 + t * sp) % 1900 + 1900) % 1900 - 150, y: 315 + lane * 110 }); }); }, 0, D, lin);
+    lab(q, 'whiteCar', 800, 160, m('car') + .3, { size: 40, fill: EV.ink, font: SERIF, italic: true, maxW: 1300 });
+    // priming yourself first
+    const s = c12Later(m('self'));
+    mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: EV.bg }, s);
+    c12Floor(s, 780);
+    evGlow(s, 340, 300, 280, 'Warm', .45);
+    c12Seat(s, 340, 780);
+    const R = c12Sit(evPerson(s, { kind: 'm', x: 340, y: 780 }));
+    evMood(R, 'smile', 0, .01); c12Close(R, m('self') + .5); evBreathe(R, D, 1.2, .5);
+    [['g1', 900, 330], ['g2', 1300, 420], ['g3', 900, 540], ['g4', 1300, 650]].forEach(([k, x, y], i) => {
+      const c = c12Chip(s, L(k), x, y, { w: 360, size: 28, color: EV.gold });
+      const rg = evGlow(s, x, y, 150, 'Gold', 0);
+      s.insertBefore(rg, c);
+      tw(c, { o: 1 }, m('self') + 1.4 + i * 1, .5); tw(rg, { o: .6 }, m('self') + 1.6 + i * 1, .5);
+    });
+    lab(s, 'selfPrime', 1000, 170, m('self') + .8, { size: 40, fill: EV.gold, font: SERIF, italic: true, maxW: 1000 });
+  }],
+
+  ['kittens', 'b_kit', (m, D) => {
+    const p = panel(0);
+    const drum = (cx, vertical, key) => {
+      const g = G(p, { x: cx, y: 470, o: 0 });
+      mk('rect', { x: -230, y: -260, width: 460, height: 500, rx: 30, fill: '#11181c', stroke: EV.gold, 'stroke-width': 2.5 }, g);
+      let d = '';
+      if (vertical) for (let i = 1; i < 12; i++) d += `M${-230 + i * 38} -255V235`;
+      else for (let i = 1; i < 13; i++) d += `M-226 ${-260 + i * 38}H226`;
+      pth(g, d, { stroke: EV.ink, 'stroke-width': 9, opacity: .55 });
+      const cat = c12Cat(g, { x: -20, y: 230, s: 1.1 });
+      prog(q => { const t = q * D; put(cat, { x: -20 + Math.sin(t * .7 + cx) * 60 }); }, 0, D, lin);
+      c12CatWalk(cat, .3, D - .3);
+      evText(p, L(key), { x: cx, y: 790, size: 32, fill: EV.ink, maxW: 520, o: 0 });
+      show(p.lastChild, m('stripes') + 1.2, .5);
+      tw(g, { o: 1 }, m('stripes') + (vertical ? 0 : .9), .5);
+      return g;
+    };
+    drum(450, true, 'onlyV'); drum(1150, false, 'onlyH');
+    lab(p, '1970', 800, 120, m('stripes') + .2, { size: 44, fill: EV.gold, font: SERIF, weight: 600 });
+    // the chair it cannot see
+    const q = c12Later(m('chair'));
+    mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: EV.bg }, q);
+    c12Floor(q, 760);
+    const chair = G(q, { x: 980, y: 760 });
+    const legs = pth(chair, 'M0 0V-170M150 0V-170M140 -170V-400', { stroke: '#8a6a44', 'stroke-width': 14 });
+    mk('rect', { x: -14, y: -184, width: 170, height: 20, rx: 4, fill: '#8a6a44' }, chair);
+    tw(legs, { o: .35 }, m('chair') + 3.4, .6);
+    const cat = c12Cat(q, { x: 420, y: 760, s: 1.1 });
+    const hitT = m('chair') + 2.4;
+    prog(qq => { const t = qq * D, u = c12E((t - m('chair') - .4) / 2); const bounce = t > hitT ? -Math.sin(Math.min(1, (t - hitT) / .5) * Math.PI) * 30 : 0; put(cat, { x: 420 + (980 - 420 - 92) * u + bounce }); }, 0, D, lin);
+    c12CatWalk(cat, m('chair') + .4, 2);
+    const star = G(q, { x: 970, y: 670, o: 0, s: .6 });
+    path(star, 'M0 -26L7 -8L26 -8L11 4L17 23L0 12L-17 23L-11 4L-26 -8L-7 -8Z', { fill: EV.joy });
+    tw(star, { o: 1, s: 1 }, hitT, .25, back); tw(star, { o: 0 }, hitT + 1, .4);
+    lab(q, 'hKitten', 520, 840, m('chair') + .4, { size: 30, fill: EV.dim, maxW: 520 });
+    lab(q, 'legsGone', 1100, 240, hitT + .8, { size: 32, fill: EV.ink, font: SERIF, italic: true, maxW: 560 });
+    // tuning inset
+    const ins = G(q, { x: 320, y: 280, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 130, fill: '#121a1e', stroke: EV.gold, 'stroke-width': 2.5 }, ins);
+    [0, 30, 60, 90, 120, 150].forEach(a => { const l = pth(ins, 'M-80 0H80', { stroke: a === 0 ? C12B : EV.faint, 'stroke-width': a === 0 ? 8 : 5 }); put(l, { r: a }); });
+    tw(ins, { o: 1 }, m('wired'), .5);
+    labP(q, 'tuned', 320, 460, m('wired') + .4, { size: 28, fill: C12B, maxW: 440 });
+    const ws = evText(q, L('weSee'), { x: 800, y: 100, size: 40, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 1400 });
+    show(ws, m('us') + 2.4, .7);
+  }],
+
+  ['time', 'b_time', (m, D) => {
+    const p = panel(0);
+    const once = G(p, { x: 800, y: 420, o: 0 });
+    evText(once, L('onceDone'), { x: 0, y: 0, size: 64, font: SERIF, weight: 600, fill: EV.ink, maxW: 900 });
+    const x_ = pth(once, 'M-300 -50L300 20', { stroke: EV.anger, 'stroke-width': 6 }, { d: 0 });
+    tw(once, { o: 1 }, m('once'), .4); draw(x_, m('once') + 1.4, .5); tw(once, { o: 0 }, m('study') - .2, .4);
+    // the habit curve
+    const X = d => 160 + d * 2.6, Y = a => 640 - a * 380;
+    const ch = G(p, { o: 0 });
+    pth(ch, `M${X(0)} ${Y(0)}H${X(265)}M${X(0)} ${Y(0)}V${Y(1.05)}`, { stroke: EV.dim, 'stroke-width': 2 });
+    evText(ch, L('autoAxis'), { x: X(0), y: Y(1.05) - 24, size: 26, fill: EV.dim, anchor: 'start', maxW: 420 });
+    evText(ch, L('daysAxis'), { x: X(265), y: Y(0) + 40, size: 26, fill: EV.dim, anchor: 'end', maxW: 200 });
+    let cd = '';
+    for (let d = 0; d <= 260; d += 4) cd += (d ? 'L' : 'M') + X(d).toFixed(1) + ' ' + Y(c12Auto(d)).toFixed(1);
+    const cv = path(ch, cd, { stroke: C12B, 'stroke-width': 4 }, { d: 0 });
+    tw(ch, { o: 1 }, m('study'), .4); draw(cv, m('study') + .6, 4, lin);
+    const mk66 = G(ch, { o: 0 });
+    pth(mk66, `M${X(66)} ${Y(0)}V${Y(c12Auto(66))}`, { stroke: EV.gold, 'stroke-width': 2.5, 'stroke-dasharray': '6 6' });
+    evDot(mk66, X(66), Y(c12Auto(66)), 9, EV.gold);
+    evText(mk66, L('avg'), { x: X(66) + 20, y: Y(c12Auto(66)) + 56, size: 30, fill: EV.gold, anchor: 'start', weight: 600, maxW: 420 });
+    tw(mk66, { o: 1 }, m('study') + 4.6, .5);
+    const rg = G(ch, { o: 0 });
+    mk('rect', { x: X(18), y: Y(0) + 70, width: X(254) - X(18), height: 16, rx: 8, fill: C12B, opacity: .5 }, rg);
+    evText(rg, '18', { x: X(18), y: Y(0) + 120, size: 28, fill: EV.ink });
+    evText(rg, '254', { x: X(254), y: Y(0) + 120, size: 28, fill: EV.ink });
+    evText(rg, L('rangeL'), { x: (X(18) + X(254)) / 2, y: Y(0) + 160, size: 28, fill: EV.dim, maxW: 520 });
+    tw(rg, { o: 1 }, m('range'), .5);
+    // the calendar, with one day missed
+    const cal = G(p, { x: 1060, y: 170, o: 0 });
+    const cells = [];
+    for (let i = 0; i < 42; i++) {
+      const x = (i % 7) * 66, y = Math.floor(i / 7) * 66;
+      mk('rect', { x, y, width: 56, height: 56, rx: 7, fill: '#121a1e', stroke: EV.line, 'stroke-width': 1.5 }, cal);
+      const miss = i === 17;
+      cells.push(put(T(cal, miss ? '✗' : '✓', { x: x + 28, y: y + 40, size: 32, fill: miss ? EV.dim : C12B, anchor: 'middle', font: SANS }), { o: 0 }));
+    }
+    tw(cal, { o: 1 }, m('study') + .2, .4);
+    const t0 = m('study') + .6, span = Math.max(4, m('back') + 2 - t0);
+    cells.forEach((c, i) => tw(c, { o: 1 }, t0 + span * i / 42, .15));
+    const mr = mk('rect', { x: 3 * 66 - 6, y: 2 * 66 - 6, width: 68, height: 68, rx: 10, fill: 'none', stroke: EV.gold, 'stroke-width': 3 }, cal);
+    put(mr, { o: 0 }); tw(mr, { o: 1 }, m('miss'), .3);
+    lab(cal, 'missed', 228, 440, m('miss') + .2, { size: 28, fill: EV.dim, maxW: 440 });
+    const cb = evText(p, L('comeBack'), { x: 1290, y: 680, size: 40, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 560 });
+    show(cb, m('back'), .6);
+    // science check: genes
+    const q = c12Later(m('genes'));
+    mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: EV.bg }, q);
+    lab(q, 'genesHead', 800, 110, m('genes') + .2, { size: 40, fill: EV.gold, font: SERIF, weight: 600, maxW: 900 });
+    const dn = evDNA(q, { x: 420, y: 430, w: 520, amp: 30, turns: 4, o: 0 });
+    tw(dn, { o: 1 }, m('genes') + .4, .6);
+    const xx = pth(q, 'M260 330L580 530M580 330L260 530', { stroke: EV.anger, 'stroke-width': 7 }, { d: 0 });
+    draw(xx, m('genes') + 4.6, .5);
+    labP(q, 'genesNo', 420, 640, m('genes') + 4.4, { size: 30, maxW: 560, fill: EV.ink });
+    c12Floor(q, 760);
+    const fa = evPerson(q, { kind: 'm', x: 1080, y: 760 }), so = evPerson(q, { kind: 'm', x: 1300, y: 760, s: .55 });
+    put(fa.g, { o: 0 }); put(so.g, { o: 0 });
+    tw(fa.g, { o: 1 }, m('genes') + 6, .5); tw(so.g, { o: 1 }, m('genes') + 6.3, .5);
+    evBreathe(fa, D); evBreathe(so, D, 1, 1.1);
+    evMood(fa, 'smile', m('genes') + 6.8); evMood(so, 'smile', m('genes') + 7.6);
+    evArm(fa, 1, -60, -20, m('genes') + 7, .5); evArm(so, 1, -60, -20, m('genes') + 7.8, .5);
+    lab(q, 'example', 1190, 840, m('genes') + 7, { size: 32, fill: C12B, font: SERIF, italic: true, maxW: 640 });
+  }],
+
+  ['q3', 'b_time', (m, D) => {
+    const p = panel(0);
+    const cal = G(p, { x: 570, y: 120 });
+    for (let i = 0; i < 21; i++) {
+      const x = (i % 7) * 66, y = Math.floor(i / 7) * 66, miss = i === 15 || i === 16;
+      mk('rect', { x, y, width: 56, height: 56, rx: 7, fill: '#121a1e', stroke: miss ? EV.gold : EV.line, 'stroke-width': miss ? 3 : 1.5 }, cal);
+      if (i < 17) T(cal, miss ? '✗' : '✓', { x: x + 28, y: y + 40, size: 32, fill: miss ? EV.dim : C12B, anchor: 'middle', font: SANS });
+    }
+    evText(p, '?', { x: 570 + 3 * 66 + 28, y: 120 + 2 * 66 + 44, size: 40, fill: EV.gold });
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-slip', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 0, L('q3y'), [null, L('q3nb'), L('q3nc')]),
+  }], done) }],
+
+  ['home', 'b_home', (m, D) => {
+    const p = panel(0);
+    const cam = camera(p, D, { x: 800, y: 450, z: 1 });
+    const W = cam.world;
+    mk('rect', { x: -400, y: -200, width: 2400, height: 1300, fill: EV.bg }, W);
+    c12Floor(W, 760);
+    evGlow(W, 700, 260, 260, 'Warm', .4);
+    c12Door(W, 1420, 760, D);
+    const Lee = evPerson(W, { kind: 'f', x: 300, y: 760 });
+    const R = evPerson(W, { kind: 'm', x: 760, y: 760 });
+    evBreathe(Lee, D); evBreathe(R, D, 1.2, .8);
+    evMood(Lee, 'calm', 0, .01); evMood(R, 'calm', 0, .01);
+    const kA = evPerson(W, { kind: 'm', x: 1420, y: 760, s: .55 }), kB = evPerson(W, { kind: 'm', x: 1460, y: 760, s: .5 });
+    evMood(kA, 'smile', 0, .01); evMood(kB, 'smile', 0, .01);
+    const run0 = m('rain') + .3;
+    evWalk(kA, 1420, 1080, run0, run0 + 2, 40); evWalk(kB, 1460, 1230, run0 + .3, run0 + 2.3, 40);
+    c12Mud(W, 1380, 760, 8, run0 + .2);
+    // he laughs first, and throws a towel
+    evMood(R, 'smile', m('laugh') - .1, .2);
+    const sh = G(R.torso);
+    prog(q => { const t = q * D - m('laugh'); put(R.torso, { y: -178 + (t > 0 && t < 1.6 ? Math.abs(Math.sin(t * 12)) * -4 : 0) }); }, 0, D, lin);
+    const tz = m('laugh') + 1.2;
+    evArm(R, 1, 60, -20, tz - .5, .4); evArm(R, 1, -110, -10, tz, .25, out); evArm(R, 1, -10, 0, tz + .8, .5);
+    const tow = mk('rect', { x: -18, y: -14, width: 36, height: 28, rx: 5, fill: '#e9e1cf' }, W);
+    prog(q => { const t = q * D, u = (t - tz) / 1.1; put(tow, u < 0 ? { x: 860, y: 520, r: 0, o: 0 } : u > 1 ? { x: 1080, y: 560, r: 0, o: 1 } : { x: 860 + 220 * u, y: 520 - Math.sin(u * Math.PI) * 180 + 40 * u, r: u * 360, o: 1 }); }, 0, D, lin);
+    evArm(kA, 1, -120, -20, tz + 1, .3);
+    // the old question
+    cam.to({ x: 560, y: 430, z: 1.15 }, m('ask') - .4, 1.4);
+    const bq = evBubble(W, L('plumber'), { x: 820, y: 330, w: 420, size: 32, tail: 'left' });
+    pop(bq, m('ask') + .5); hide(bq, m('flash') + .2, .4);
+    evArm(R, -1, 30, 30, m('ask'), .5);
+    const th = evThought(W, { x: 280, y: 360, w: 420, h: 170, dx: -20 });
+    tw(th, { o: .9 }, m('flash') + .2, .4);
+    const ph = G(th._in, { x: -120, y: 0 });
+    mk('rect', { x: -22, y: -40, width: 44, height: 80, rx: 8, fill: '#1d2428', stroke: EV.anger, 'stroke-width': 2.5 }, ph);
+    evText(th._in, L('oldCall'), { x: 45, y: 10, size: 26, fill: EV.anger, maxW: 230, italic: true });
+    prog(q => { const t = q * D - m('flash') - .4; put(ph, { o: t < 0 ? 1 : .55 + .45 * Math.abs(Math.cos(t * 7)) }); }, 0, D, lin);
+    evMood(Lee, 'tense', m('flash') + .5, .3);
+    const ring = mk('circle', { cx: 0, cy: 0, r: 70, fill: 'none', stroke: EV.gold, 'stroke-width': 4 }, W);
+    put(ring, { x: 300, y: 760 - 178 - 132 - 54, o: 0, s: .6 });
+    tw(ring, { o: 1, s: 1 }, m('notice'), .5, out);
+    tw(th, { o: 0 }, m('notice') + 1.2, .8); tw(ring, { o: 0 }, m('answer') + .4, .6);
+    evMood(Lee, 'smile', m('answer') - .3);
+    const ba = evBubble(W, L('answer'), { x: 380, y: 300, w: 400, size: 32, tail: 'left', edge: C12B });
+    pop(ba, m('answer'));
+    // being
+    cam.to({ x: 800, y: 450, z: 1 }, m('being'), 1.4);
+    hide(ba, m('being') + .4, .5);
+    const gl1 = evGlow(W, 300, 520, 160, 'calm', 0), gl2 = evGlow(W, 760, 520, 160, 'calm', 0);
+    W.insertBefore(gl1, Lee.g); W.insertBefore(gl2, Lee.g);
+    tw(gl1, { o: .7 }, m('being') + .6, .8); tw(gl2, { o: .7 }, m('being') + .8, .8);
+    const na = evText(p, L('notActing'), { x: 800, y: 130, size: 54, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 1200 });
+    show(na, m('being') + 1, .7);
+  }],
+
+  ['epilogue', 'b_epi', (m, D) => {
+    const p = panel(0);
+    lab(p, 'quantum', 800, 100, .2, { size: 40, fill: EV.gold, font: SERIF, weight: 600, maxW: 1200 });
+    const src = G(p, { x: 180, y: 380 });
+    mk('rect', { x: -50, y: -40, width: 100, height: 80, rx: 10, fill: '#141b1f', stroke: EV.gold, 'stroke-width': 2.5 }, src);
+    pth(p, 'M940 230V530', { stroke: EV.dim, 'stroke-width': 6 });
+    const wave = path(p, '', { stroke: C12K, 'stroke-width': 3 });
+    const part = evDot(p, 0, 380, 12, EV.goldHi, 0);
+    const det = G(p, { x: 600, y: 230, o: 0 });
+    mk('rect', { x: -70, y: -50, width: 140, height: 90, rx: 10, fill: '#141b1f', stroke: EV.goldHi, 'stroke-width': 2.5 }, det);
+    pth(det, 'M-40 16A40 40 0 0 1 40 16', { stroke: EV.dim, 'stroke-width': 3 });
+    const ndl = G(det, { y: 16 }); pth(ndl, 'M0 0V-34', { stroke: EV.goldHi, 'stroke-width': 3 });
+    const tm = m('check') + 3;
+    prog(q => {
+      const t = q * D, k = Math.max(0, Math.min(1, (t - tm) / .6));
+      let d = '';
+      for (let i = 0; i <= 70; i++) { const x = 240 + i * 10; d += (i ? 'L' : 'M') + x + ' ' + (380 + Math.sin(i * .5 - t * 5) * 34 * (1 - k)).toFixed(1); }
+      wave.setAttribute('d', d);
+      put(wave, { o: 1 - k * .85 });
+      put(part, { x: 240 + ((t - tm) * 300 % 700 + 700) % 700, o: k });
+      put(ndl, { r: t < tm ? -50 : -50 + 100 * Math.min(1, (t - tm) / .4) - Math.sin(t * 9) * 6 });
+    }, 0, D, lin);
+    const cl = G(p, { x: 1250, y: 300, o: 0 });
+    const ct = evPara(cl, L('claim'), { x: 0, y: 0, size: 30, maxW: 560, fill: EV.ink, italic: true });
+    tw(cl, { o: 1 }, m('claim'), .6);
+    tw(det, { o: 1 }, m('check') + 2.2, .5);
+    lab(p, 'measure', 600, 600, m('check') + 3.4, { size: 32, fill: EV.goldHi, maxW: 760 });
+    const nm = evPara(p, L('noMove'), { x: 1250, y: 330 + ct._h + 40, size: 32, maxW: 560, fill: EV.anger, weight: 600, o: 0 });
+    show(nm, m('check') + 7, .6);
+    // a simpler truth: choices that branch into a life
+    const q = c12Later(m('true'));
+    mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: EV.bg }, q);
+    lab(q, 'choices', 800, 120, m('true') + 2.4, { size: 40, fill: EV.ink, font: SERIF, italic: true, maxW: 1300 });
+    const nodes = [[200, 520], [470, 430], [740, 560], [1010, 450], [1280, 520]];
+    let pd = '';
+    nodes.forEach(([x, y], i) => {
+      [-1, 1].forEach(s => {
+        if (i === nodes.length - 1) return;
+        const nx = x + 270, ny = y + s * 110;
+        const ghost = pth(q, `M${x} ${y}L${nx} ${ny}`, { stroke: EV.faint, 'stroke-width': 2.5, 'stroke-dasharray': '6 8', opacity: 0 });
+        tw(ghost, { o: 1 }, m('true') + 3 + i * 1.1, .4);
+      });
+      pd += (i ? 'L' : 'M') + x + ' ' + y;
+    });
+    const gp = path(q, pd, { stroke: EV.gold, 'stroke-width': 5 }, { d: 0 });
+    draw(gp, m('true') + 3.4, Math.max(2, m('life') - m('true') - 3), lin);
+    nodes.forEach(([x, y], i) => { const d = evDot(q, x, y, 12, EV.goldHi, 0); tw(d, { o: 1 }, m('true') + 3.2 + i * 1.1, .3); });
+    // the life it builds
+    const hm = G(q, { x: 1440, y: 520, o: 0 });
+    evGlow(hm, 0, -10, 180, 'Warm', .9);
+    path(hm, 'M-70 60V-20L0 -80L70 -20V60Z', { fill: '#2a2320', stroke: EV.gold, 'stroke-width': 3 });
+    mk('rect', { x: -20, y: 0, width: 40, height: 40, fill: '#e8b765' }, hm);
+    tw(hm, { o: 1 }, m('life') + .4, 1);
+    lab(q, 'newLife', 1440, 650, m('life') + 1, { size: 32, fill: EV.joy, font: SERIF, italic: true, maxW: 300 });
+    const ev_ = evText(q, L('evolving'), { x: 800, y: 790, size: 52, font: SERIF, weight: 600, fill: EV.gold, o: 0, maxW: 1300 });
+    show(ev_, m('life') + 2.4, .8);
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    const tt = evText(p, L('b_wrap'), { x: 200, y: 150, size: 54, font: SERIF, weight: 600, fill: EV.gold, anchor: 'start', o: 0 });
+    show(tt, .2, .6);
+    const cols = [EV.gold, C12K, C12D, C12B];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -16, y: 290 + i * 150, o: 0 });
+      mk('circle', { cx: 230, cy: -12, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 3 }, g);
+      T(g, String(i + 1), { x: 230, y: -1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 290, y: 0, size: 36, maxW: 1100, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, ...extra }));
+
+// Arrowhead at the end of a drawn path, shown at t.
+function headAt12(p, e, color, t) {
+  const n = e.getTotalLength(), a = e.getPointAtLength(n), b = e.getPointAtLength(n - 6);
+  const h = evHead(p, a.x, a.y, Math.atan2(a.y - b.y, a.x - b.x) * 180 / Math.PI, color);
+  put(h, { o: 0 }); show(h, t, .25);
+  return h;
+}
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Which one is implicit memory?',
+  q1a: 'Your hands steer the scooter through traffic while you chat with your friend.',
+  q1b: 'You tell a colleague that Thiruvananthapuram is the capital of Kerala.', q1c: 'You remember the date of your sister’s wedding.',
+  q1y: 'Right. A skill your body runs without you having to think about it, or even explain it, is implicit.',
+  q1nb: 'That is a fact you can say out loud: explicit memory.', q1nc: 'A date you can recall and declare is explicit memory.',
+  q2p: 'For each one: is it doing, or being?',
+  q2r1: 'Leena orders tea in Arabic, heart racing, checking every word.', q2r2: 'Ravi stays calm on the outside, with his jaw clenched inside.',
+  q2r3: 'Leena chats with the cashier without translating in her head.', q2r4: 'Ravi laughs at the muddy shoes before he even thinks.',
+  q2w1: 'Doing: a new experience, still effortful and conscious.', q2w2: 'Doing: the outside has changed, but the inside has not caught up.',
+  q2w3: 'Being: it has become automatic and easy.', q2w4: 'Being: no effort, and the inside matches the outside.',
+  q3p: 'Ravi missed his morning practice for two days. What should he do?',
+  q3a: 'Simply start again today. A missed day or two does not undo the progress.', q3b: 'Start his count from day one again.', q3c: 'Accept that it is not working and stop.',
+  q3y: 'Right. In the habit study, a missed day did not ruin the habit. Coming back is what counts.',
+  q3nb: 'There is no need to reset. The wiring he has built does not vanish in two days.', q3nc: 'A slip is normal. Quitting is the only thing that truly stops the change.',
+  p1p: 'A client is perfect in your role-play sessions, yet still snaps at her staff every week. What is missing?',
+  p1a: 'Living it: practising the new response in real moments, with feedback, until it becomes automatic.',
+  p1b: 'More knowledge: another book on anger.', p1c: 'Nothing: doing well in role-play means the change is complete.',
+  p1y: 'Rehearsal is the nets. The change becomes hers on the field, repeated in daily life.',
+  p1nb: 'She already knows plenty. The gap is between knowing and doing.', p1nc: 'Practice success is not the same as being it under real pressure.',
+  p2p: 'Arjun can now speak calmly in tense meetings, but only by concentrating hard the whole time. Which step of the skill ladder is he on?',
+  p2a: 'Unconsciously skilled.', p2b: 'Consciously skilled.', p2c: 'Unconsciously unskilled.',
+  p2y: 'He can do it, with effort. More repetition moves it to the fourth step, where it runs by itself.',
+  p2na: 'Not yet: it still takes all his concentration.', p2nc: 'He knows exactly what he is aiming for, so he is well past the first step.',
+  p3p: 'After a family visit, your client says, “I stayed polite the whole time, but I lay awake furious.” What is the most helpful response?',
+  p3a: 'Tell her the visit was a failure.', p3b: 'Advise her to hold the anger in more firmly next time.',
+  p3c: 'Treat it as useful feedback: the behaviour changed, the feeling has not yet. Add the inner state to tomorrow’s rehearsal.',
+  p3y: 'Outside first, inside next. Feedback shows exactly what to rehearse now.',
+  p3na: 'The behaviour did change. That is progress, and the gap is information, not failure.', p3nb: 'Holding it down is what kept her awake. The aim is for the inside to change too.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'People who cannot form new memories can still improve at a new motor skill.',
+  p4r2: 'The cerebellum alone is the seat of the subconscious mind.',
+  p4r3: 'Skills and attitudes we master are passed to our children through our genes.',
+  p4r4: 'Quantum physics shows that our thoughts change what particles do.',
+  p4r5: 'In one study, new daily habits took about two months on average to feel automatic, with wide variation.',
+  p4w1: 'True. This is a classic finding in memory research: skill learning can survive amnesia.',
+  p4w2: 'False. Habits and skills involve several systems, especially the basal ganglia; the cerebellum is one part.',
+  p4w3: 'False. There is no good evidence that learned skills or attitudes are inherited through genes.',
+  p4w4: 'False. In physics, observing means measuring with instruments. It says nothing about thoughts moving matter.',
+  p4w5: 'True. The average was about 66 days, ranging from 18 to 254.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'ഇതിൽ ഏതാണ് ഇംപ്ലിസിറ്റ് മെമ്മറി?',
+  q1a: 'കൂട്ടുകാരനോട് സംസാരിച്ചുകൊണ്ടിരിക്കെ നിങ്ങളുടെ കൈകൾ ട്രാഫിക്കിലൂടെ സ്കൂട്ടർ ഓടിക്കുന്നു.',
+  q1b: 'കേരളത്തിന്റെ തലസ്ഥാനം തിരുവനന്തപുരമാണെന്ന് നിങ്ങൾ ഒരു സഹപ്രവർത്തകനോട് പറയുന്നു.', q1c: 'അനിയത്തിയുടെ കല്യാണ തീയതി നിങ്ങൾ ഓർക്കുന്നു.',
+  q1y: 'ശരി. ചിന്തിക്കാതെ, വിശദീകരിക്കാൻ പോലും പറ്റാതെ ശരീരം ചെയ്യുന്ന കഴിവാണ് ഇംപ്ലിസിറ്റ്.',
+  q1nb: 'ഇത് ഉറക്കെ പറയാൻ കഴിയുന്ന ഒരു വസ്തുതയാണ്: എക്സ്പ്ലിസിറ്റ് മെമ്മറി.', q1nc: 'ഓർത്തു പറയാൻ കഴിയുന്ന തീയതി എക്സ്പ്ലിസിറ്റ് മെമ്മറിയാണ്.',
+  q2p: 'ഓരോന്നും: ചെയ്യലാണോ, ആയിത്തീരലാണോ?',
+  q2r1: 'നെഞ്ചിടിപ്പോടെ, ഓരോ വാക്കും ശ്രദ്ധിച്ച്, ലീന അറബിയിൽ ചായ ഓർഡർ ചെയ്യുന്നു.', q2r2: 'രവി പുറമേ ശാന്തനാണ്, ഉള്ളിൽ താടിയെല്ല് മുറുകിയിരിക്കുന്നു.',
+  q2r3: 'മനസ്സിൽ തർജ്ജമ ചെയ്യാതെ ലീന കാഷ്യറുമായി സംസാരിക്കുന്നു.', q2r4: 'ചിന്തിക്കുന്നതിനു മുൻപേ രവി ചെളി പുരണ്ട ഷൂസ് കണ്ട് ചിരിക്കുന്നു.',
+  q2w1: 'ചെയ്യൽ: പുതിയ അനുഭവം, ഇപ്പോഴും ശ്രമവും ശ്രദ്ധയും വേണം.', q2w2: 'ചെയ്യൽ: പുറം മാറി, പക്ഷേ ഉള്ള് ഇതുവരെ ഒപ്പമെത്തിയില്ല.',
+  q2w3: 'ആയിത്തീരൽ: ഇത് തനിയെയും എളുപ്പത്തിലും നടക്കുന്നു.', q2w4: 'ആയിത്തീരൽ: ശ്രമമില്ല, ഉള്ളും പുറവും ഒന്ന്.',
+  q3p: 'രണ്ട് ദിവസം രവിക്ക് രാവിലത്തെ പരിശീലനം മുടങ്ങി. ഇനി എന്ത് ചെയ്യണം?',
+  q3a: 'ഇന്ന് വീണ്ടും തുടങ്ങുക. ഒന്നോ രണ്ടോ ദിവസം മുടങ്ങിയാൽ പുരോഗതി ഇല്ലാതാകില്ല.', q3b: 'ഒന്നാം ദിവസം മുതൽ എണ്ണം വീണ്ടും തുടങ്ങുക.', q3c: 'ഇത് ഫലിക്കുന്നില്ലെന്ന് കരുതി നിർത്തുക.',
+  q3y: 'ശരി. ശീല പഠനത്തിൽ, ഒരു ദിവസം മുടങ്ങിയത് ശീലത്തെ നശിപ്പിച്ചില്ല. തിരിച്ചുവരുന്നതാണ് പ്രധാനം.',
+  q3nb: 'വീണ്ടും പൂജ്യത്തിൽ തുടങ്ങേണ്ട. പണിത വയറിംഗ് രണ്ട് ദിവസം കൊണ്ട് മാഞ്ഞുപോകില്ല.', q3nc: 'വീഴ്ച സാധാരണമാണ്. ഉപേക്ഷിക്കുന്നത് മാത്രമാണ് മാറ്റത്തെ ശരിക്കും നിർത്തുന്നത്.',
+  p1p: 'ഒരു ക്ലയന്റ് നിങ്ങളുടെ റോൾ-പ്ലേ സെഷനുകളിൽ മികച്ചതാണ്, എന്നിട്ടും എല്ലാ ആഴ്ചയും ജീവനക്കാരോട് ചൂടാകുന്നു. എന്താണ് കുറവ്?',
+  p1a: 'ജീവിച്ചു കാണിക്കൽ: തനിയെ നടക്കുന്നതുവരെ, ഫീഡ്ബാക്കോടെ, യഥാർത്ഥ നിമിഷങ്ങളിൽ പുതിയ പ്രതികരണം പരിശീലിക്കുക.',
+  p1b: 'കൂടുതൽ അറിവ്: ദേഷ്യത്തെ കുറിച്ച് ഇനിയുമൊരു പുസ്തകം.', p1c: 'ഒന്നുമില്ല: റോൾ-പ്ലേയിൽ നന്നായാൽ മാറ്റം പൂർത്തിയായി.',
+  p1y: 'റിഹേഴ്സൽ നെറ്റ്സ് ആണ്. കളിക്കളത്തിൽ, ദൈനംദിന ജീവിതത്തിൽ ആവർത്തിക്കുമ്പോഴാണ് മാറ്റം അവളുടേതാകുന്നത്.',
+  p1nb: 'അവൾക്ക് ആവശ്യത്തിന് അറിവുണ്ട്. വിടവ് അറിവിനും ചെയ്യലിനും ഇടയിലാണ്.', p1nc: 'പ്രാക്ടീസിലെ വിജയം യഥാർത്ഥ സമ്മർദ്ദത്തിൽ അങ്ങനെ ആയിരിക്കുന്നതിന് തുല്യമല്ല.',
+  p2p: 'സമ്മർദ്ദമുള്ള മീറ്റിംഗുകളിൽ അർജുന് ഇപ്പോൾ ശാന്തമായി സംസാരിക്കാം, പക്ഷേ മുഴുവൻ സമയവും കഠിനമായി ശ്രദ്ധിച്ചാൽ മാത്രം. കഴിവിന്റെ ഏണിയിൽ അവൻ ഏത് പടിയിലാണ്?',
+  p2a: 'അറിയാതെ തന്നെ കഴിവുള്ളവൻ.', p2b: 'ശ്രദ്ധിച്ചാൽ കഴിവുള്ളവൻ.', p2c: 'അറിയാതെ കഴിവില്ലാത്തവൻ.',
+  p2y: 'ശ്രമിച്ചാൽ അവന് പറ്റും. കൂടുതൽ ആവർത്തനം അതിനെ നാലാം പടിയിലേക്ക്, തനിയെ നടക്കുന്നിടത്തേക്ക്, എത്തിക്കും.',
+  p2na: 'ഇതുവരെയില്ല: ഇപ്പോഴും മുഴുവൻ ശ്രദ്ധയും വേണം.', p2nc: 'എന്താണ് ലക്ഷ്യമെന്ന് അവന് കൃത്യമായി അറിയാം, അതുകൊണ്ട് ഒന്നാം പടി കടന്നു.',
+  p3p: 'ഒരു കുടുംബ സന്ദർശനത്തിനു ശേഷം നിങ്ങളുടെ ക്ലയന്റ് പറയുന്നു, “മുഴുവൻ സമയവും ഞാൻ മര്യാദയോടെ നിന്നു, പക്ഷേ രാത്രി ദേഷ്യം കൊണ്ട് ഉറങ്ങാനായില്ല.” ഏറ്റവും സഹായകരമായ മറുപടി ഏത്?',
+  p3a: 'ആ സന്ദർശനം ഒരു പരാജയമായിരുന്നു എന്ന് പറയുക.', p3b: 'അടുത്ത തവണ ദേഷ്യം കൂടുതൽ മുറുക്കി അടക്കാൻ ഉപദേശിക്കുക.',
+  p3c: 'ഇതൊരു നല്ല ഫീഡ്ബാക്കാണ്: പെരുമാറ്റം മാറി, വികാരം ഇതുവരെ മാറിയില്ല. ഉള്ളിലെ അവസ്ഥ നാളത്തെ റിഹേഴ്സലിൽ ചേർക്കുക.',
+  p3y: 'ആദ്യം പുറം, പിന്നെ ഉള്ള്. ഇനി എന്താണ് റിഹേഴ്സ് ചെയ്യേണ്ടതെന്ന് ഫീഡ്ബാക്ക് കൃത്യമായി കാണിക്കുന്നു.',
+  p3na: 'പെരുമാറ്റം മാറി. അത് പുരോഗതിയാണ്; ബാക്കിയുള്ള വിടവ് ഒരു വിവരമാണ്, പരാജയമല്ല.', p3nb: 'അടക്കിപ്പിടിച്ചതാണ് അവളെ ഉറക്കാതിരുന്നത്. ഉള്ളും മാറണം എന്നതാണ് ലക്ഷ്യം.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'പുതിയ ഓർമ്മകൾ ഉണ്ടാക്കാൻ കഴിയാത്തവർക്കും ഒരു പുതിയ ചലന കഴിവിൽ മെച്ചപ്പെടാൻ കഴിയും.',
+  p4r2: 'സെറിബെല്ലം മാത്രമാണ് ഉപബോധമനസ്സിന്റെ ഇരിപ്പിടം.',
+  p4r3: 'നാം നേടിയെടുക്കുന്ന കഴിവുകളും മനോഭാവങ്ങളും ജീനുകളിലൂടെ മക്കളിലേക്ക് പകരുന്നു.',
+  p4r4: 'നമ്മുടെ ചിന്തകൾ കണങ്ങളുടെ പെരുമാറ്റം മാറ്റുന്നു എന്ന് ക്വാണ്ടം ഫിസിക്സ് കാണിക്കുന്നു.',
+  p4r5: 'ഒരു പഠനത്തിൽ, പുതിയ ദൈനംദിന ശീലങ്ങൾ തനിയെ നടക്കാൻ ശരാശരി രണ്ട് മാസത്തോളം എടുത്തു, ആളുകൾക്കിടയിൽ വലിയ വ്യത്യാസത്തോടെ.',
+  p4w1: 'ശരി. ഓർമ്മ ഗവേഷണത്തിലെ ഒരു പ്രശസ്ത കണ്ടെത്തൽ: അമ്നേഷ്യ ഉണ്ടായിട്ടും കഴിവുകൾ പഠിക്കാം.',
+  p4w2: 'തെറ്റ്. ശീലങ്ങളും കഴിവുകളും പല സംവിധാനങ്ങൾ ഉപയോഗിക്കുന്നു, പ്രത്യേകിച്ച് ബേസൽ ഗാംഗ്ലിയ; സെറിബെല്ലം ഒരു ഭാഗം മാത്രം.',
+  p4w3: 'തെറ്റ്. പഠിച്ച കഴിവുകളോ മനോഭാവങ്ങളോ ജീനുകളിലൂടെ പകരുന്നു എന്നതിന് നല്ല തെളിവില്ല.',
+  p4w4: 'തെറ്റ്. ഫിസിക്സിൽ നിരീക്ഷണം എന്നാൽ ഉപകരണം കൊണ്ടുള്ള അളക്കലാണ്. ചിന്തകൾ വസ്തുക്കളെ ചലിപ്പിക്കുന്നു എന്ന് അത് പറയുന്നില്ല.',
+  p4w5: 'ശരി. ശരാശരി ഏകദേശം 66 ദിവസം; 18 മുതൽ 254 ദിവസം വരെ.',
+});
+const PRACTICE = [
+  { id: 'p-field', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 0, L('p1y'), [null, L('p1nb'), L('p1nc')]) },
+  { id: 'p-ladder', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 1, L('p2y'), [L('p2na'), null, L('p2nc')]) },
+  { id: 'p-inside', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 2, L('p3y'), [L('p3na'), L('p3nb'), null]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['f'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['f'], why: L('p4w4') },
+    { parts: [L('p4r5')], ans: ['t'], why: L('p4w5') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('evolve:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '500 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '500 30px "Noto Serif Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>
