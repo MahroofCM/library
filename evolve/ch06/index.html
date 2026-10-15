@@ -1,0 +1,1192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Evolve Your Brain · Chapter 6">
+<meta property="og:description" content="Short animated lessons in English and Malayalam on how a thought becomes chemistry, and how to rewire the habit of being yourself.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/evolve/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/evolve/ch06/">
+<meta name="twitter:card" content="summary_large_image">
+<title>Neuroplasticity · Evolve Your Brain</title>
+<meta name="description" content="An animated, narrated lesson on Chapter 6 of Evolve Your Brain: neurons that fire together wire together, use it or lose it, and how knowledge and experience reshape the brain. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('evolve:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('evolve:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'ന്യൂറോപ്ലാസ്റ്റിസിറ്റി · Evolve Your Brain';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/evolve.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/evolve/ch06/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Neuroplasticity', kicker: 'UNIT 3 · CHAPTER 6', sub: 'How knowledge and experience change and evolve the brain',
+  credit: 'A study of Evolve Your Brain by Joe Dispenza',
+  b_intro: 'Title', b_fixed: 'Not hardwired', b_ravi: 'Too old to learn?', b_hebb: 'Fire together, wire together',
+  b_assoc: 'Learning by association', b_start: 'What we start with', b_path: 'A path through the grass', b_prune: 'Use it or lose it',
+  b_att: 'The power of attention', b_know: 'Knowledge', b_exp: 'Experience', b_enrich: 'Rich surroundings',
+  b_novel: 'From new to routine', b_sci: 'Science check', b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  asPC: 'the brain as a computer', factory: 'wired at the factory', by30: 'finished by about 30', wear: 'after that, only wear and tear',
+  lost: 'damaged = lost for good', living: 'living tissue', newConn: 'new connection', stronger: 'strengthened', letGo: 'let go',
+  plast: 'Neuroplasticity',
+  ravi: 'Ravi', leena: 'Leena', meera: 'Meera', tooOld: 'I’m too old. My brain is set.', birthday: 'Your brain doesn’t know your birthday.',
+  cellA: 'neuron A', cellB: 'neuron B', together: 'fired together ×{n}', aloneL: 'A fires alone… B follows',
+  rule: 'Neurons that fire together, wire together.', hebb: 'Donald Hebb, 1949',
+  startKnown: 'start from what he knows', teaQ: '“Breathe out, like blowing on hot tea.”', bikeQ: '“Kick steadily, like pedalling a bicycle.”',
+  freestyle: 'freestyle (new)', knownL: 'We use what we know to learn what we don’t.',
+  wiredBirth: 'wired before birth', babyTags: 'cry · feed · grip', father: 'his father', snap: 'How many times must I tell you!',
+  feelsMe: 'fired so often, it feels like “me”', inherited: 'inherited: a starting deposit', added: '+ every new thing you learn',
+  effortful: 'effortful', easy: 'easy', automatic: 'automatic', day: 'day {n}', synapse: 'the synapse', bdnf: 'BDNF: a growth chemical',
+  grassBack: 'stop walking: the grass grows back', poems: 'school Hindi poems · unused for 30 years', pruning: 'pruning',
+  useIt: 'used: stays strong', loseIt: 'unused: fades away', oldHabit: 'old habit',
+  email: 'work email…', focus: 'full attention', threshold: 'change happens above this line', faint: 'faint signal: little changes',
+  strongS: 'strong signal: the link grows', motions: 'Repetition without attention is just going through the motions.',
+  distracted: 'distracted', focused: 'focused',
+  video: 'video {n} of 20', fact1: 'fingertips enter first', fact2: 'turn your head to breathe', mapL: 'a map, before the visit',
+  phone: '050 714 2236', heardOnce: 'heard once, never used',
+  cold: 'cold water', chlorine: 'smell of chlorine', cheer: 'Meera cheering', slap: 'splash of his arms', secs: '{n} sec',
+  sealL: 'feeling seals the memory', twenty: 'still there in 20 years', kn: 'knowledge', ex: 'experience', wi: 'wisdom',
+  bodyKnow: 'known in the body, not just the head',
+  bare: 'bare cage', rich: 'toys, tunnels, companions', spinesL: 'dendrite spines: where connections dock', fewer: 'few spines', more: 'many more spines',
+  juggle: 'people learning to juggle', taxi: 'taxi drivers learning a city',
+  firstSwim: 'first swim: the front of the brain works hard', effort: 'effort', week: 'week {n}', lessEffort: 'same length, far less effort',
+  autoL: 'automatic circuits · attention free', top: 'seen from above', front: 'front', leftH: 'left: routine?', rightH: 'right: new?',
+  hypoTag: 'Right-to-left shift: one researcher’s hypothesis', solidTag: 'Well supported: practice makes the brain’s work smaller and more efficient',
+  sciCheck: 'Science check', wellSup: 'Well supported', lessCert: 'Less certain',
+  s1: 'Adult brains keep changing.', s2: 'Use strengthens connections; disuse weakens them.', s3: 'Emotion helps memories last.', s4: 'Rich surroundings grow connections.',
+  m1: '“We inherit about half our networks”: no solid number behind it.', m2: '“Glia outnumber neurons ten to one”: an old myth.',
+  glia: 'glia', neurons: 'neurons', ratio: 'closer to 1 : 1',
+  w1: 'Your brain keeps changing throughout life.', w2: 'Neurons that fire together wire together; we learn by linking new to known.',
+  w3: 'Repetition with attention strengthens a link; what you stop using fades.', w4: 'Knowledge draws the map; experience makes it yours.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'ന്യൂറോപ്ലാസ്റ്റിസിറ്റി', kicker: 'യൂണിറ്റ് 3 · അധ്യായം 6', sub: 'അറിവും അനുഭവവും തലച്ചോറിനെ മാറ്റി വളർത്തുന്നത് എങ്ങനെ',
+  credit: 'ജോ ഡിസ്പെൻസയുടെ Evolve Your Brain എന്ന പുസ്തകത്തിന്റെ പഠനം',
+  b_intro: 'തലക്കെട്ട്', b_fixed: 'ഉറച്ചുപോയതല്ല', b_ravi: 'പഠിക്കാൻ പ്രായം കഴിഞ്ഞോ?', b_hebb: 'ഒരുമിച്ച് ഉണരുന്നു, ഒരുമിച്ച് ചേരുന്നു',
+  b_assoc: 'ബന്ധിപ്പിച്ച് പഠിക്കൽ', b_start: 'നാം തുടങ്ങുന്നത്', b_path: 'പുല്ലിലൂടെ ഒരു വഴി', b_prune: 'ഉപയോഗിച്ചില്ലെങ്കിൽ നഷ്ടം',
+  b_att: 'ശ്രദ്ധയുടെ ശക്തി', b_know: 'അറിവ്', b_exp: 'അനുഭവം', b_enrich: 'സമ്പന്നമായ ചുറ്റുപാട്',
+  b_novel: 'പുതിയതിൽ നിന്ന് ശീലത്തിലേക്ക്', b_sci: 'ശാസ്ത്രീയ പരിശോധന', b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  asPC: 'കമ്പ്യൂട്ടർ പോലെ ഒരു തലച്ചോർ', factory: 'ഫാക്ടറിയിൽ തന്നെ വയർ ചെയ്തത്', by30: 'ഏകദേശം 30 വയസ്സോടെ പണി തീർന്നത്', wear: 'പിന്നെ തേയ്മാനം മാത്രം',
+  lost: 'കേടുപറ്റിയാൽ എന്നേക്കും നഷ്ടം', living: 'ജീവനുള്ള കോശം', newConn: 'പുതിയ ബന്ധം', stronger: 'ബലപ്പെട്ടു', letGo: 'വിട്ടുകളഞ്ഞു',
+  plast: 'ന്യൂറോപ്ലാസ്റ്റിസിറ്റി',
+  ravi: 'രവി', leena: 'ലീന', meera: 'മീര', tooOld: 'എനിക്ക് പ്രായമായി. എന്റെ തലച്ചോർ ഉറച്ചുപോയി.', birthday: 'നിന്റെ ജന്മദിനം നിന്റെ തലച്ചോറിന് അറിയില്ല.',
+  cellA: 'ന്യൂറോൺ A', cellB: 'ന്യൂറോൺ B', together: 'ഒരുമിച്ച് ഉണർന്നത് ×{n}', aloneL: 'A മാത്രം ഉണരുന്നു… B പിന്നാലെ',
+  rule: 'ഒരുമിച്ച് ഉണരുന്ന ന്യൂറോണുകൾ ഒരുമിച്ച് ചേരുന്നു.', hebb: 'ഡോണൾഡ് ഹെബ്, 1949',
+  startKnown: 'അറിയാവുന്നതിൽ നിന്ന് തുടങ്ങുക', teaQ: '“ചൂടുചായ ഊതുന്നതുപോലെ ശ്വാസം വിടൂ.”', bikeQ: '“സൈക്കിൾ ചവിട്ടുന്നതുപോലെ കാലടിക്കൂ.”',
+  freestyle: 'ഫ്രീസ്റ്റൈൽ (പുതിയത്)', knownL: 'അറിയാവുന്നതിനെ ഉപയോഗിച്ച് അറിയാത്തതിനെ നാം പഠിക്കുന്നു.',
+  wiredBirth: 'ജനനത്തിന് മുൻപേ വയർ ചെയ്തത്', babyTags: 'കരച്ചിൽ · പാൽ കുടി · പിടുത്തം', father: 'അവന്റെ അച്ഛൻ', snap: 'എത്ര തവണ പറയണം നിന്നോട്!',
+  feelsMe: 'അത്രയും തവണ ഉണർന്നതുകൊണ്ട് “ഞാൻ” എന്ന് തോന്നുന്നു', inherited: 'പാരമ്പര്യം: ഒരു തുടക്ക നിക്ഷേപം', added: '+ പഠിക്കുന്ന ഓരോ പുതിയ കാര്യവും',
+  effortful: 'പ്രയാസം', easy: 'എളുപ്പം', automatic: 'ഓട്ടോമാറ്റിക്', day: 'ദിവസം {n}', synapse: 'സിനാപ്സ്', bdnf: 'BDNF: ഒരു വളർച്ചാ രാസവസ്തു',
+  grassBack: 'നടത്തം നിർത്തി: പുല്ല് വീണ്ടും വളരുന്നു', poems: 'സ്കൂളിലെ ഹിന്ദി കവിതകൾ · 30 വർഷം ഉപയോഗിച്ചില്ല', pruning: 'പ്രൂണിംഗ്',
+  useIt: 'ഉപയോഗിച്ചത്: ബലത്തോടെ', loseIt: 'ഉപയോഗിക്കാത്തത്: മാഞ്ഞുപോകുന്നു', oldHabit: 'പഴയ ശീലം',
+  email: 'ഓഫീസ് ഇമെയിൽ…', focus: 'മുഴുവൻ ശ്രദ്ധ', threshold: 'ഈ വരയ്ക്ക് മുകളിലാണ് മാറ്റം', faint: 'മങ്ങിയ സിഗ്നൽ: മാറ്റം കുറവ്',
+  strongS: 'ശക്തമായ സിഗ്നൽ: ബന്ധം വളരുന്നു', motions: 'ശ്രദ്ധയില്ലാത്ത ആവർത്തനം വെറും ചലനങ്ങൾ മാത്രം.',
+  distracted: 'ശ്രദ്ധ മാറി', focused: 'ശ്രദ്ധയോടെ',
+  video: 'വീഡിയോ {n} / 20', fact1: 'വിരൽത്തുമ്പുകൾ ആദ്യം വെള്ളത്തിൽ', fact2: 'ശ്വസിക്കാൻ തല തിരിക്കുക', mapL: 'യാത്രയ്ക്ക് മുൻപുള്ള ഒരു മാപ്പ്',
+  phone: '050 714 2236', heardOnce: 'ഒരിക്കൽ കേട്ടു, ഉപയോഗിച്ചില്ല',
+  cold: 'തണുത്ത വെള്ളം', chlorine: 'ക്ലോറിന്റെ മണം', cheer: 'മീരയുടെ ആർപ്പുവിളി', slap: 'കൈകളുടെ ശബ്ദം', secs: '{n} സെക്കൻഡ്',
+  sealL: 'വികാരം ഓർമ്മയെ മുദ്രവയ്ക്കുന്നു', twenty: '20 വർഷം കഴിഞ്ഞാലും ഓർമ്മയിൽ', kn: 'അറിവ്', ex: 'അനുഭവം', wi: 'ജ്ഞാനം',
+  bodyKnow: 'തലയിൽ മാത്രമല്ല, ശരീരത്തിലും അറിയുന്നത്',
+  bare: 'ഒഴിഞ്ഞ കൂട്', rich: 'കളിപ്പാട്ടങ്ങൾ, തുരങ്കങ്ങൾ, കൂട്ടുകാർ', spinesL: 'ഡെൻഡ്രൈറ്റ് സ്പൈനുകൾ: ബന്ധങ്ങൾ ചേരുന്ന ഇടം', fewer: 'കുറച്ച് സ്പൈനുകൾ', more: 'വളരെ കൂടുതൽ സ്പൈനുകൾ',
+  juggle: 'ജഗ്ലിംഗ് പഠിക്കുന്നവർ', taxi: 'നഗരം പഠിക്കുന്ന ടാക്സി ഡ്രൈവർമാർ',
+  firstSwim: 'ആദ്യ നീന്തൽ: തലച്ചോറിന്റെ മുൻഭാഗം കഠിനമായി പ്രവർത്തിക്കുന്നു', effort: 'പ്രയത്നം', week: 'ആഴ്ച {n}', lessEffort: 'അതേ റൗണ്ട്, വളരെ കുറച്ച് പ്രയത്നം',
+  autoL: 'ഓട്ടോമാറ്റിക് സർക്യൂട്ടുകൾ · ശ്രദ്ധ സ്വതന്ത്രം', top: 'മുകളിൽ നിന്നുള്ള കാഴ്ച', front: 'മുൻഭാഗം', leftH: 'ഇടത്: ശീലം?', rightH: 'വലത്: പുതിയത്?',
+  hypoTag: 'വലത്തുനിന്ന് ഇടത്തേക്ക്: ഒരു ഗവേഷകന്റെ സിദ്ധാന്തം', solidTag: 'നല്ല തെളിവ്: പരിശീലനം തലച്ചോറിന്റെ ജോലി ചെറുതും കാര്യക്ഷമവുമാക്കുന്നു',
+  sciCheck: 'ശാസ്ത്രീയ പരിശോധന', wellSup: 'നല്ല തെളിവുള്ളവ', lessCert: 'ഉറപ്പില്ലാത്തവ',
+  s1: 'മുതിർന്നവരുടെ തലച്ചോറും മാറിക്കൊണ്ടിരിക്കുന്നു.', s2: 'ഉപയോഗം ബന്ധങ്ങളെ ബലപ്പെടുത്തുന്നു; ഉപയോഗിക്കാതിരുന്നാൽ ദുർബലമാകുന്നു.', s3: 'വികാരം ഓർമ്മകളെ നിലനിർത്താൻ സഹായിക്കുന്നു.', s4: 'സമ്പന്നമായ ചുറ്റുപാട് ബന്ധങ്ങൾ വളർത്തുന്നു.',
+  m1: '“നെറ്റ്‌വർക്കുകളിൽ പകുതിയോളം പാരമ്പര്യം”: ഉറച്ച കണക്കില്ല.', m2: '“ഗ്ലിയ ന്യൂറോണുകളുടെ പത്തിരട്ടി”: ഒരു പഴയ മിഥ്യ.',
+  glia: 'ഗ്ലിയ', neurons: 'ന്യൂറോണുകൾ', ratio: 'ഏകദേശം 1 : 1',
+  w1: 'ജീവിതകാലം മുഴുവൻ തലച്ചോർ മാറിക്കൊണ്ടിരിക്കുന്നു.', w2: 'ഒരുമിച്ച് ഉണരുന്നവ ഒരുമിച്ച് ചേരുന്നു; പുതിയതിനെ അറിയാവുന്നതുമായി ബന്ധിപ്പിച്ച് നാം പഠിക്കുന്നു.',
+  w3: 'ശ്രദ്ധയോടെയുള്ള ആവർത്തനം ബന്ധം ബലപ്പെടുത്തുന്നു; ഉപയോഗിക്കാത്തത് മാഞ്ഞുപോകുന്നു.', w4: 'അറിവ് മാപ്പ് വരയ്ക്കുന്നു; അനുഭവം അതിനെ നിങ്ങളുടേതാക്കുന്നു.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 6, title: L('title'), minutes: LANG === 'ml' ? 13 : 10, language: LANG, next: '../ch07/index.html' };
+const fmt = (k, n) => L(k).replace('{n}', n);
+
+/* ---------- chapter helpers ---------- */
+// Label that fades in at t (beat clock).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .5); return e; };
+// Wrapped label (for lines that run long in Malayalam), fading in at t.
+const labP = (p, key, x, y, t, o = {}) => { const e = evPara(p, L(key), { x, y, o: 0, ...o }); show(e, t, .5); return e; };
+// A second picture inside the same beat, faded in at t (its contents stay hidden until then).
+function n6Later(t) { const q = panel(t); put(q, { o: 0 }); tw(q, { o: 1 }, t, .4); return q; }
+// Small deterministic random numbers, so replays draw the same picture.
+function n6Rand(seed) { let s = seed * 9301 + 49297; return () => { s = (s * 9301 + 49297) % 233280; return s / 233280; }; }
+// Text with a dark halo so it reads over drawings and water.
+const n6Halo = e => { e.setAttribute('paint-order', 'stroke'); e.setAttribute('stroke', EV.bg); e.setAttribute('stroke-width', 9); e.setAttribute('stroke-linejoin', 'round'); return e; };
+
+// A neuron lying on its side (from ch03): dendrites left of the cell body at (0,0), the axon running right to x = len.
+function n6Neuron(p, { x = 0, y = 0, s = 1, o = 1, len = 600, color = EV.gold, seed = 3, hide = false, reach = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  const rnd = n6Rand(seed), hid = hide ? { d: 0 } : {};
+  g._dend = G(g); g._spines = G(g, { o: hide ? 0 : 1 });
+  g._leaves = []; g._dpaths = [];
+  const grow = (pts, ang, L_, w, depth) => {
+    const [x0, y0] = pts[pts.length - 1];
+    const a = (ang + (rnd() - .5) * 14) * Math.PI / 180;
+    const x1 = x0 + Math.cos(a) * L_, y1 = y0 + Math.sin(a) * L_;
+    const mx = (x0 + x1) / 2 + (rnd() - .5) * L_ * .25, my = (y0 + y1) / 2 + (rnd() - .5) * L_ * .25;
+    g._dpaths.push(path(g._dend, `M${x0.toFixed(1)} ${y0.toFixed(1)}Q${mx.toFixed(1)} ${my.toFixed(1)} ${x1.toFixed(1)} ${y1.toFixed(1)}`, { stroke: color, 'stroke-width': w }, hid));
+    const np = pts.concat([[mx, my], [x1, y1]]);
+    if (depth <= 1) for (let k = 1; k <= 3; k++) {
+      const u = k / 4, sx = (1 - u) ** 2 * x0 + 2 * (1 - u) * u * mx + u * u * x1, sy = (1 - u) ** 2 * y0 + 2 * (1 - u) * u * my + u * u * y1;
+      const side = k % 2 ? 1 : -1;
+      evDot(g._spines, sx - Math.sin(a) * 6 * side, sy + Math.cos(a) * 6 * side, 3.4, EV.goldHi);
+    }
+    if (depth > 0) { grow(np, ang - 24, L_ * .68, w * .62, depth - 1); grow(np, ang + 24, L_ * .68, w * .62, depth - 1); }
+    else g._leaves.push(np);
+  };
+  [150, 178, 206, 124, 232].forEach(a => grow([[Math.cos(a * Math.PI / 180) * 40, Math.sin(a * Math.PI / 180) * 40]], a, 118 * reach, 7, 2));
+  g._axon = path(g, `M44 0C${len * .3} -26 ${len * .62} 26 ${len} 0`, { stroke: color, 'stroke-width': 6 }, hid);
+  g._glow = evGlow(g, 0, 0, 120, 'Gold', 0);
+  g._body = G(g, { o: hide ? 0 : 1 });
+  path(g._body, 'M-44 -6C-46 -34 -18 -50 8 -46C32 -42 54 -22 50 0C54 22 32 42 8 46C-18 50 -46 34 -44 6Z', { fill: '#141c20', stroke: color, 'stroke-width': 3.5 });
+  mk('circle', { cx: 2, cy: 0, r: 17, fill: '#2b2a36', stroke: EV.shame, 'stroke-width': 2 }, g._body);
+  g._termG = G(g, { o: hide ? 0 : 1 });
+  g._bout = [-40, -14, 14, 40].map(a => {
+    const r_ = a * Math.PI / 180, bx = len + Math.cos(r_) * 84, by = Math.sin(r_) * 84;
+    path(g._termG, `M${len} 0Q${len + 40} ${by * .3} ${bx.toFixed(1)} ${by.toFixed(1)}`, { stroke: color, 'stroke-width': 4 });
+    mk('circle', { cx: bx, cy: by, r: 10, fill: '#141c20', stroke: color, 'stroke-width': 3 }, g._termG);
+    return [bx, by];
+  });
+  return g;
+}
+// One glowing pulse down a neuron's axon, from t0, taking `travel` seconds.
+function n6Spark(N, t0, travel = .8, r = 10) {
+  const ax = N._axon, L_ = ax.getTotalLength();
+  const sp = G(N, { o: 0 }); evGlow(sp, 0, 0, r * 3.4, 'Gold', 1); evDot(sp, 0, 0, r, EV.goldHi);
+  prog(q => { const pt = ax.getPointAtLength(q * L_); put(sp, { x: pt.x, y: pt.y, o: Math.min(1, q * 10, (1 - q) * 10) }); }, t0, travel, lin);
+  return sp;
+}
+// A dot that runs once along any path (in that path's parent).
+function n6Run(pathEl, t0, dur, color = EV.goldHi, r = 8) {
+  const L_ = pathEl.getTotalLength(), d = evDot(pathEl.parentNode, 0, 0, r, color, 0);
+  prog(q => { const pt = pathEl.getPointAtLength(q * L_); put(d, { x: pt.x, y: pt.y, o: Math.min(1, q * 10, (1 - q) * 10) }); }, t0, dur, lin);
+  return d;
+}
+// A small network of nodes and edges; edges: [i, j]. Returns {g, nodes, edges}.
+function n6Net(p, pts, edges, { color = EV.gold, r = 9, w = 3, o = 1, hide = true } = {}) {
+  const g = G(p, { o });
+  const E = edges.map(([i, j]) => path(g, `M${pts[i][0]} ${pts[i][1]}L${pts[j][0]} ${pts[j][1]}`, { stroke: color, 'stroke-width': w }, hide ? { d: 0 } : {}));
+  const N = pts.map(([x, y]) => { const n = G(g, { x, y, o: hide ? 0 : 1 }); mk('circle', { cx: 0, cy: 0, r, fill: EV.bg, stroke: color, 'stroke-width': 3 }, n); n._c = mk('circle', { cx: 0, cy: 0, r: r * .55, fill: color }, n); return n; });
+  return { g, nodes: N, edges: E };
+}
+function n6NetShow(net, t0, d = 1) {
+  net.nodes.forEach((n, i) => tw(n, { o: 1 }, t0 + i * d / net.nodes.length * .6, .3));
+  net.edges.forEach((e, i) => draw(e, t0 + .2 + i * d / net.edges.length * .6, .4));
+}
+function n6NetFire(net, t0, color = EV.goldHi) {
+  net.nodes.forEach((n, i) => pulse(n, t0 + (i % 4) * .12, 1.45));
+  net.edges.forEach((e, i) => { tw(e, { c_stroke: color, 'a_stroke-width': 5 }, t0 + (i % 3) * .1, .25); });
+}
+
+// The pool: deck on the left, water to the right. Call .front() after drawing swimmers to put water over them.
+function n6Pool(p, D, { edgeX = 520, deckY = 600, surf = 640, x0 = -600, x1 = 2400, y1 = 1400, sky = true } = {}) {
+  const P = { surf, edgeX };
+  if (sky) {
+    mk('rect', { x: x0, y: -400, width: x1 - x0, height: deckY + 400, fill: 'url(#evSky)' }, p);
+    evGlow(p, 1300, 560, 420, 'Warm', .35);
+    const sk = G(p);
+    [[180, 120], [260, 200], [380, 150], [470, 240], [760, 170], [860, 260], [980, 190], [1440, 230], [1530, 160], [1650, 210], [1760, 140]].forEach(([x, h], i) => {
+      mk('rect', { x, y: 560 - h, width: 70, height: h, fill: '#0e161b' }, sk);
+      for (let k = 0; k < 3; k++) if ((i + k) % 2) mk('rect', { x: x + 14 + (k % 2) * 28, y: 560 - h + 22 + k * 46, width: 12, height: 16, fill: '#e8b765', opacity: .5 }, sk);
+    });
+    path(sk, 'M1270 560V250L1286 120L1298 30L1310 120L1326 250V560Z', { fill: '#101a20', stroke: EV.gold, 'stroke-width': 1.2, 'stroke-opacity': .35 });
+    mk('rect', { x: x0, y: 560, width: x1 - x0, height: deckY - 560, fill: '#121a1e' }, p);
+  }
+  mk('rect', { x: edgeX, y: surf, width: x1 - edgeX, height: y1 - surf, fill: '#0a2129' }, p);
+  mk('rect', { x: x0, y: deckY, width: edgeX - x0, height: y1 - deckY, fill: '#1a2226' }, p);
+  path(p, `M${x0} ${deckY}H${edgeX}V${y1}`, { stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .45 });
+  P.front = () => {
+    const f = G(p);
+    mk('rect', { x: edgeX + 2, y: surf + 6, width: x1 - edgeX - 2, height: y1 - surf - 6, fill: '#0f3a46', opacity: .62 }, f);
+    const wv = [0, 1, 2].map(k => {
+      let d = ''; for (let x = edgeX + 20; x < x1 - 140; x += 120) d += `M${x} ${surf + 4 + k * 46}q30 -7 60 0t60 0`;
+      return path(f, d, { stroke: '#7fc4d1', 'stroke-width': 2, 'stroke-opacity': .35 - k * .08 });
+    });
+    prog(q => { const t = q * D; wv.forEach((w, k) => put(w, { x: (t * (22 + k * 8)) % 120 })); }, 0, D, lin);
+    return f;
+  };
+  return P;
+}
+// Front crawl: arms windmill, legs flutter, from t0 for dur.
+function n6Swim(P, t0, dur, rate = .7) {
+  prog(q => {
+    const t = q * dur, a = t * 360 * rate;
+    put(P.armL, { r: a }); put(P.armR, { r: a + 180 });
+    put(P.armL._lo, { r: 0 }); put(P.armR._lo, { r: 0 });
+    put(P.legL, { r: Math.sin(t * 9) * 12 }); put(P.legR, { r: -Math.sin(t * 9) * 12 });
+  }, t0, dur, lin);
+}
+// Tall grass: tufts sorted by depth; blades near routeY form the route that can be trampled.
+function n6Field(p, { x0 = 40, x1 = 1560, y0 = 470, y1 = 830, n = 150, seed = 6, routeY = 650, band = 34, s = 1 } = {}) {
+  const R = n6Rand(seed), bl = [];
+  for (let i = 0; i < n; i++) bl.push({ x: x0 + R() * (x1 - x0), y: y0 + R() * (y1 - y0), h: (46 + R() * 40) * s, lean: (R() - .5) * 14, c: R() < .5 ? '#4b6a43' : '#6d7f4c' });
+  for (let x = x0 + 10; x < x1; x += 34 * s) bl.push({ x, y: routeY + (R() - .5) * band * 1.4, h: (50 + R() * 30) * s, lean: (R() - .5) * 14, c: R() < .5 ? '#4b6a43' : '#6d7f4c' });
+  bl.sort((a, b) => a.y - b.y);
+  const F = { blades: bl, back: G(p) };
+  F.path = path(F.back, `M${x0} ${routeY}H${x1}`, { stroke: '#6b5a3a', 'stroke-width': 40 * s }, { o: 0 });
+  F.mid = G(p); F.front = G(p);
+  bl.forEach(b => {
+    b.g = G(b.y < routeY ? F.back : F.front, { x: b.x, y: b.y, r: b.lean });
+    const h = b.h;
+    path(b.g, `M0 0Q-4 ${-h * .5} -7 ${-h}M0 0Q2 ${-h * .6} 4 ${-h * .92}M0 0Q6 ${-h * .4} 13 ${-h * .72}`, { stroke: b.c, 'stroke-width': 4 * Math.max(.7, s) });
+    b.route = Math.abs(b.y - routeY) < band;
+  });
+  return F;
+}
+// Blades on the route lie down while a walker passes and as the path wears in. walks: [{t0, t1, xa, xb, tau}].
+function n6Trample(F, walks, wear, D) {
+  prog(q => {
+    const t = q * D, w = wear(t);
+    put(F.path, { o: w * .8 });
+    F.blades.forEach(b => {
+      if (!b.route) return;
+      let press = 0;
+      walks.forEach(k => {
+        const f = (b.x - k.xa) / (k.xb - k.xa); if (f < 0 || f > 1) return;
+        const u = t - (k.t0 + f * (k.t1 - k.t0));
+        press = Math.max(press, u < -.15 ? 0 : u < 0 ? (u + .15) / .15 : Math.exp(-u / k.tau));
+      });
+      const lie = Math.max(press, w);
+      put(b.g, { r: b.lean + (b.lean >= 0 ? 1 : -1) * 72 * lie, s: 1 - .5 * w });
+    });
+  }, 0, D, lin);
+}
+// A rat facing right (dir 1) or left (dir -1).
+function n6RatShape(p, dir, color = '#8f8676') {
+  const g = G(p), k = dir;
+  path(g, `M${-30 * k} 4Q${-58 * k} 14 ${-80 * k} -2`, { stroke: color, 'stroke-width': 3 });
+  mk('ellipse', { cx: 0, cy: 0, rx: 34, ry: 17, fill: color }, g);
+  mk('ellipse', { cx: 30 * k, cy: -4, rx: 17, ry: 11, fill: color }, g);
+  mk('circle', { cx: 24 * k, cy: -15, r: 6, fill: '#b49a8a' }, g);
+  mk('circle', { cx: 40 * k, cy: -7, r: 2.6, fill: '#111' }, g);
+  return g;
+}
+// A rat moving on a closed loop: pos(t) => [x, y].
+function n6Rat(p, pos, D, s = 1) {
+  const g = G(p, { s }); const R_ = n6RatShape(g, 1), L_ = n6RatShape(g, -1);
+  prog(q => {
+    const t = q * D, [x, y] = pos(t), [x2] = pos(t + .05), right = x2 >= x;
+    put(g, { x, y }); put(R_, { o: right ? 1 : 0 }); put(L_, { o: right ? 0 : 1 });
+  }, 0, D, lin);
+  return g;
+}
+const n6Cup = (p, x, y, s = 1) => {
+  const g = G(p, { x, y, s });
+  path(g, 'M-26 -20H26V0Q26 22 0 22Q-26 22 -26 0Z', { fill: '#2a2320', stroke: EV.goldHi, 'stroke-width': 3 });
+  path(g, 'M26 -12Q42 -12 42 0Q42 10 26 8', { stroke: EV.goldHi, 'stroke-width': 3 });
+  g._steam = [-10, 4].map(x => path(g, `M${x} -30q-8 -12 0 -24q8 -12 0 -24`, { stroke: EV.dim, 'stroke-width': 3 }));
+  return g;
+};
+const n6Bike = (p, x, y, s = 1) => {
+  const g = G(p, { x, y, s });
+  g._w = [-36, 36].map(cx => { const w = G(g, { x: cx, y: 0 }); mk('circle', { cx: 0, cy: 0, r: 22, fill: 'none', stroke: EV.goldHi, 'stroke-width': 3 }, w); path(w, 'M-22 0H22M0 -22V22', { stroke: EV.goldHi, 'stroke-width': 1.5, 'stroke-opacity': .6 }); return w; });
+  path(g, 'M-36 0L-8 -30H24L36 0M-8 -30L4 0L24 -30M4 0H-36M-12 -38H0M24 -30L20 -42H30', { stroke: EV.goldHi, 'stroke-width': 3 });
+  return g;
+};
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    evGlow(g, 800, 490, 360, 'Gold', .3);
+    // a network; one chain fires again and again and thickens as it does
+    const pts = [[220, 500], [380, 450], [540, 520], [700, 460], [860, 515], [1020, 455], [1180, 520], [1340, 465], [300, 590], [470, 400], [640, 585], [800, 405], [960, 590], [1120, 400], [1270, 590], [1420, 560]];
+    const edges = [[0, 8], [8, 2], [1, 9], [9, 3], [2, 10], [10, 4], [3, 11], [11, 5], [4, 12], [12, 6], [5, 13], [13, 7], [6, 14], [14, 15], [7, 15], [0, 9], [11, 13]];
+    const net = n6Net(g, pts, edges, { color: EV.gold, r: 7, w: 2 });
+    net.edges.forEach(e => e.setAttribute('stroke-opacity', .45));
+    n6NetShow(net, .3, 1.6);
+    const chain = path(g, 'M220 500C300 470 320 450 380 450S480 520 540 520S640 460 700 460S800 515 860 515S960 455 1020 455S1120 520 1180 520S1280 465 1340 465', { stroke: EV.goldHi, 'stroke-width': 1.5 }, { d: 0 });
+    draw(chain, .8, 1.4);
+    const passes = [];
+    for (let t = 1.6; t < D - 1; t += 1.7) passes.push(t);
+    passes.forEach((t, i) => { n6Run(chain, t, 1.3, EV.goldHi, 7); tw(chain, { 'a_stroke-width': Math.min(9, 2 + i * 1.6) }, t + 1.1, .4); });
+    evText(g, L('kicker'), { x: 800, y: 190, size: 26, fill: EV.gold, weight: 500, ls: '6' });
+    evText(g, L('title'), { x: 800, y: 320, size: 96, font: SERIF, weight: 600, maxW: 1360 });
+    tw(g, { o: 1 }, .15, 1.1, out);
+    const sub = evText(scene, L('sub'), { x: 800, y: 720, size: 40, fill: EV.dim, o: 0, maxW: 1300, font: SERIF, italic: true });
+    put(sub, { y: 740 }); tw(sub, { y: 720, o: 1 }, m('sub'), .8, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 800, size: 26, fill: '#6f6a5c', o: 0 });
+    show(cr, m('sub') + .8, .8);
+    tw(g, { o: 0 }, D - .7, .6); hide(sub, D - .7, .6); hide(cr, D - .7, .6);
+  }],
+
+  ['fixed', 'b_fixed', (m, D) => {
+    const p = panel(0);
+    const old = G(p);
+    // the old picture: a chip with fixed traces
+    const chip = G(old, { x: 440, y: 470, o: 0 });
+    for (let k = -2; k <= 2; k++) {
+      const v = k * 56;
+      path(chip, `M${v} -170V-205M${v} 170V205M-170 ${v}H-205M170 ${v}H205`, { stroke: EV.gold, 'stroke-width': 6, 'stroke-opacity': .7 });
+    }
+    mk('rect', { x: -170, y: -170, width: 340, height: 340, rx: 18, fill: '#11181c', stroke: EV.gold, 'stroke-width': 3 }, chip);
+    mk('rect', { x: -52, y: -52, width: 104, height: 104, rx: 8, fill: '#1a2226', stroke: EV.gold, 'stroke-width': 2.5 }, chip);
+    const traces = ['M-140 -120H-80V-60H-52', 'M-140 -20H-100V20H-52', 'M-140 120H-60V52', 'M140 -120H60V-52', 'M52 0H100V-60H140', 'M52 30H90V120H140', 'M-20 52V140', 'M20 -52V-140']
+      .map(d => path(chip, d, { stroke: EV.goldHi, 'stroke-width': 3.5 }, { d: 0 }));
+    tw(chip, { o: 1 }, .2, .6);
+    traces.forEach((e, i) => draw(e, .5 + i * .12, .5));
+    lab(old, 'asPC', 440, 200, .7, { size: 32, fill: EV.dim, italic: true, font: SERIF, maxW: 560 });
+    const ls = [['factory', 360, m('chip')], ['by30', 440, m('chip') + 1.5], ['wear', 520, m('chip') + 3]].map(([k, y, t]) =>
+      lab(old, k, 760, y, t, { size: 36, anchor: 'start', maxW: 760 }));
+    traces.forEach((e, i) => pulse(e, m('chip') + .2 + i * .08, 1.06));
+    // damage
+    const crack = path(chip, 'M-120 -170L-70 -90L-110 -30L-40 30L-80 90L-20 170', { stroke: EV.anger, 'stroke-width': 5 }, { d: 0 });
+    draw(crack, m('crack'), .5);
+    traces.slice(0, 4).forEach((e, i) => tw(e, { c_stroke: '#3d3b35' }, m('crack') + .4 + i * .1, .3));
+    const lo = lab(old, 'lost', 760, 610, m('crack') + .5, { size: 36, anchor: 'start', fill: EV.anger, maxW: 760 });
+    // wrong: strike the claims, clear the picture
+    ls.concat([lo]).forEach((e, i) => {
+      const w = Math.min(760, e.getComputedTextLength ? e.getComputedTextLength() : 500);
+      const y = +e.getAttribute('y') - 12;
+      draw(path(old, `M750 ${y}H${770 + w}`, { stroke: EV.anger, 'stroke-width': 4 }, { d: 0 }), m('grow') + i * .15, .35);
+    });
+    tw(old, { o: 0 }, m('grow') + 1.2, .6);
+    // the living neuron grows in
+    const N = n6Neuron(p, { x: 640, y: 480, s: 1.05, len: 520, hide: true, seed: 11 });
+    const tg = m('grow') + 1.4;
+    N._dpaths.forEach((e, i) => draw(e, tg + (i % 7) * .12 + Math.floor(i / 7) * .08, .5));
+    tw(N._body, { o: 1 }, tg, .5); draw(N._axon, tg + .5, .8); tw(N._termG, { o: 1 }, tg + 1.2, .4);
+    tw(N._glow, { o: .6 }, m('alive'), .8);
+    lab(p, 'living', 820, 380, m('alive') + .2, { size: 30, fill: EV.gold, italic: true, font: SERIF });
+    tw(N._spines, { o: 1 }, m('alive') + .4, .6);
+    // new branch, a strengthened branch, a branch let go
+    const nb = path(N, `M520 0Q600 -60 610 -190`, { stroke: EV.calm, 'stroke-width': 5 }, { d: 0 });
+    draw(nb, m('alive') + 1.4, .8);
+    const nbB = G(N, { x: 610, y: -196, o: 0 }); mk('circle', { cx: 0, cy: 0, r: 11, fill: '#141c20', stroke: EV.calm, 'stroke-width': 3 }, nbB);
+    tw(nbB, { o: 1 }, m('alive') + 2.1, .3);
+    lab(p, 'newConn', 1290, 250, m('alive') + 1.8, { size: 30, fill: EV.calm, maxW: 340 });
+    [14, 15].forEach(i => tw(N._dpaths[i], { 'a_stroke-width': i === 14 ? 13 : 8 }, m('alive') + 2.6, .6));
+    lab(p, 'stronger', 330, 230, m('alive') + 2.8, { size: 30, fill: EV.goldHi, maxW: 300 });
+    for (let i = 21; i < 28; i++) tw(N._dpaths[i], { o: .12 }, m('alive') + 3.6, .9);
+    lab(p, 'letGo', 520, 790, m('alive') + 3.8, { size: 30, fill: EV.dim, maxW: 300 });
+    for (let t = m('alive') + .6; t < D - .9; t += 2.2) n6Spark(N, t, 1);
+    const nm = evText(p, L('plast'), { x: 800, y: 140, size: 76, font: SERIF, weight: 600, fill: EV.gold, o: 0, maxW: 1200 });
+    put(nm, { y: 160 }); tw(nm, { y: 140, o: 1 }, m('name'), .7, out);
+  }],
+
+  ['ravi', 'b_ravi', (m, D) => {
+    const p = panel(0);
+    const cam = camera(p, D, { x: 800, y: 450, z: 1 });
+    const W = cam.world;
+    const pool = n6Pool(W, D, { edgeX: 600, deckY: 640, surf: 676 });
+    const mee = evPerson(W, { kind: 'f', x: 1180, y: 860, s: .48 });
+    evMood(mee, 'smile', 0, .01);
+    prog(q => { const t = q * D; put(mee.armL, { r: 150 + Math.sin(t * 5) * 30 }); put(mee.armR, { r: -150 - Math.cos(t * 5) * 30 }); put(mee.g, { y: 860 + Math.sin(t * 2.4) * 5 }); }, 0, D, lin);
+    const rav = evPerson(W, { kind: 'm', x: 560, y: 640 + 178 * .85, s: .85 });
+    rav.g.firstChild.setAttribute('opacity', 0);
+    put(rav.legL, { r: -62 }); put(rav.legR, { r: -70 });
+    evArm(rav, -1, 22, -10, 0, .01); evArm(rav, 1, -22, 10, 0, .01);
+    evMood(rav, 'calm', 0, .01); evBreathe(rav, D);
+    const lee = evPerson(W, { kind: 'f', x: 250, y: 640, s: .85 });
+    evMood(lee, 'calm', 0, .01); evArm(lee, -1, 8, -20, 0, .01); evArm(lee, 1, -8, 20, 0, .01); evBreathe(lee, D, 1.2, .8);
+    pool.front();
+    // splashes round Meera
+    const drops = Array.from({ length: 10 }, (_, i) => evDot(W, 1180, 670, 4 + (i % 3), '#9fd6e0', 0));
+    prog(q => { const t = q * D; drops.forEach((d, i) => { const u = (t * .9 + i / 10) % 1, a = (i * 37 % 180 - 90) * Math.PI / 180; put(d, { x: 1180 + Math.sin(a) * 110 * u, y: 676 - Math.cos(a) * 120 * u + 160 * u * u, o: Math.sin(u * Math.PI) * .9 }); }); }, 0, D, lin);
+    lab(W, 'leena', 250, 700, .5, { size: 28, fill: EV.dim }); lab(W, 'ravi', 470, 700, .7, { size: 28, fill: EV.dim });
+    lab(W, 'meera', 1180, 600, m('pool'), { size: 28, fill: EV.dim });
+    const b1 = evBubble(W, L('tooOld'), { x: 790, y: 410, w: 500, size: 32, tail: 'left' });
+    pop(b1, m('old')); evMood(rav, 'worried', m('old') - .2);
+    const b2 = evBubble(W, L('birthday'), { x: 470, y: 270, w: 520, size: 32, tail: 'left', edge: EV.calm });
+    pop(b2, m('leena')); evMood(lee, 'smile', m('leena') - .1);
+    evArm(lee, 1, -60, -40, m('leena'), .5, back);
+    tw(lee.g, { y: 632 }, m('leena') + .2, .15); tw(lee.g, { y: 640 }, m('leena') + .35, .2);
+    // inside Ravi's head
+    hide(b1, m('watch') - .2, .4); hide(b2, m('watch') - .2, .4);
+    evMood(rav, 'smile', m('watch') + .4);
+    cam.to({ x: 620, y: 420, z: 1.7 }, m('watch'), 1.6);
+    const xr = G(W, { x: 560, y: 442, o: 0 });
+    evGlow(xr, 0, 0, 70, 'Gold', .8);
+    const br = evBrain(xr, { s: .17, stem: false });
+    tw(xr, { o: 1 }, m('watch') + 1.2, .6);
+    evFire(br, m('watch') + 1.8, 1.4);
+  }],
+
+  ['hebb', 'b_hebb', (m, D) => {
+    const p = panel(0);
+    const A = n6Neuron(p, { x: 250, y: 450, s: .75, len: 420, hide: true, seed: 5 });
+    const B = n6Neuron(p, { x: 1100, y: 450, s: .75, len: 340, hide: true, seed: 8 });
+    [A, B].forEach((N, k) => {
+      const t = .2 + k * .4;
+      N._dpaths.forEach((e, i) => draw(e, t + (i % 7) * .08, .45));
+      tw(N._body, { o: 1 }, t, .4); draw(N._axon, t + .3, .6); tw(N._termG, { o: 1 }, t + .8, .3); tw(N._spines, { o: 1 }, t + .9, .3);
+    });
+    lab(p, 'cellA', 250, 730, m('two'), { size: 30, fill: EV.ink, maxW: 300 });
+    lab(p, 'cellB', 1100, 730, m('two') + .3, { size: 30, fill: EV.ink, maxW: 300 });
+    // the junction between them
+    const link = path(p, 'M640 450C720 410 800 490 880 450', { stroke: EV.goldHi, 'stroke-width': 2 }, { d: 0 });
+    draw(link, m('two') + .6, .6);
+    const fires = [m('fire')];
+    for (let k = 0; k < 5; k++) fires.push(m('again') + .2 + k * 1.05);
+    const cnt = evText(p, '', { x: 800, y: 210, size: 36, fill: EV.gold, weight: 600, maxW: 600 });
+    prog(q => {
+      const t = q * D;
+      const n = fires.filter(f => t >= f + .7).length;
+      cnt.textContent = n ? fmt('together', n) : '';
+      link.setAttribute('stroke-width', 2 + Math.min(5, n) * 2.2);
+    }, 0, D, lin);
+    fires.forEach((f, i) => {
+      n6Spark(A, f, .7); n6Spark(B, f + .02, .7, 6 + i);
+      n6Run(link, f + .7, .3, EV.goldHi, 6);
+    });
+    // A alone: the signal crosses and B follows
+    const ta = m('alone') + .2;
+    n6Spark(A, ta, .7);
+    n6Run(link, ta + .7, .35, EV.goldHi, 9);
+    const env = (t, t0, k) => t < t0 ? 0 : t < t0 + .15 ? (t - t0) / .15 * k : Math.max(0, k * (1 - (t - t0 - .15) / .75));
+    prog(q => { const t = q * D; let a = env(t, ta, .8), b = env(t, ta + 1.05, 1);
+      fires.forEach((f, i) => { a = Math.max(a, env(t, f, .8)); b = Math.max(b, env(t, f, .3 + i * .1)); });
+      put(A._glow, { o: a }); put(B._glow, { o: b }); }, 0, D, lin);
+    n6Spark(B, ta + 1.1, .7, 12);
+    const al = lab(p, 'aloneL', 760, 570, ta + .3, { size: 30, fill: EV.ink, italic: true, maxW: 360 });
+    hide(al, m('rule'), .4);
+    for (let t = m('rule') + .6; t < D - 1.2; t += 2) { n6Spark(A, t, .7); n6Run(link, t + .7, .35, EV.goldHi, 8); n6Spark(B, t + 1.05, .7, 10); }
+    const r = evText(p, L('rule'), { x: 800, y: 820, size: 46, font: SERIF, italic: true, weight: 600, fill: EV.gold, o: 0, maxW: 1400 });
+    put(r, { y: 840 }); tw(r, { y: 820, o: 1 }, m('rule') + 3, .7, out);
+    lab(p, 'hebb', 800, 870, m('rule') + .3, { size: 24, fill: EV.dim });
+  }],
+
+  ['q1', 'b_hebb', (m, D) => {
+    const p = panel(0);
+    const A = n6Neuron(p, { x: 330, y: 330, s: .6, len: 420, seed: 5 });
+    const B = n6Neuron(p, { x: 1060, y: 330, s: .6, len: 340, seed: 8 });
+    path(p, 'M632 330C720 296 800 364 884 330', { stroke: EV.goldHi, 'stroke-width': 12 });
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+    for (let t = .5; t < 60; t += 2.4) { n6Spark(A, t, .7); n6Spark(B, t + 1, .7); }
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-hebb', prompt: [L('q1p')],
+    build: choice([[L('q1b')], [L('q1a')], [L('q1c')]], 1, L('q1y'), [L('q1nb'), null, L('q1nc')]),
+  }], done) }],
+
+  ['assoc', 'b_assoc', (m, D) => {
+    const p = panel(0);
+    // the vignette: Ravi in the shallow end
+    const v = G(p);
+    const pool = n6Pool(v, D, { edgeX: 70, deckY: 520, surf: 540, x0: 70, x1: 640, y1: 770, sky: false });
+    mk('rect', { x: 70, y: 160, width: 570, height: 360, fill: '#0e161a' }, v);
+    const rav = evPerson(v, { kind: 'm', x: 360, y: 760, s: .92 });
+    evMood(rav, 'worried', 0, .01); evArm(rav, -1, 30, -20, 0, .01); evArm(rav, 1, -30, 20, 0, .01); evBreathe(rav, D);
+    pool.front();
+    mk('rect', { x: 70, y: 160, width: 570, height: 610, rx: 16, fill: 'none', stroke: EV.gold, 'stroke-width': 2.5, 'stroke-opacity': .7 }, v);
+    put(v, { o: 0 }); tw(v, { o: 1 }, .1, .5);
+    lab(p, 'startKnown', 355, 120, m('coach'), { size: 30, fill: EV.gold, italic: true, font: SERIF, maxW: 560 });
+    // breathing out: bubbles rise from his mouth
+    const bub = Array.from({ length: 7 }, (_, i) => evDot(p, 372, 480, 4 + (i % 3) * 2, '#9fd6e0', 0));
+    prog(q => { const t = q * D - m('tea') - .4; bub.forEach((d, i) => { const u = ((t * .6 + i / 7) % 1 + 1) % 1; put(d, { x: 372 + 30 * u + Math.sin(u * 12 + i) * 6, y: 448 - u * 150, o: t < 0 ? 0 : Math.sin(u * Math.PI) * .8 }); }); }, 0, D, lin);
+    evMood(rav, 'calm', m('tea')); tw(rav.m.open, { o: 1 }, m('tea') + .3, .2); tw(rav.m.calm, { o: 0 }, m('tea') + .3, .2);
+    prog(q => { const t = q * D; if (t < m('cycle')) return; put(rav.legL, { r: Math.sin(t * 7) * 14 }); put(rav.legR, { r: -Math.sin(t * 7) * 14 }); }, 0, D, lin);
+    evMood(rav, 'smile', m('known'));
+    // the known circuits
+    const cl = (cx, cy, seed) => {
+      const R = n6Rand(seed), pts = Array.from({ length: 6 }, (_, i) => { const a = i / 6 * Math.PI * 2 + R(); return [cx + Math.cos(a) * (62 + R() * 22), cy + Math.sin(a) * (48 + R() * 16)]; });
+      return n6Net(p, pts, [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 0], [0, 3], [1, 4]], { color: EV.gold, r: 8, w: 3 });
+    };
+    const tea = cl(920, 380, 3), bike = cl(1340, 380, 9);
+    const teaG = evGlow(p, 920, 380, 150, 'Gold', 0), bikeG = evGlow(p, 1340, 380, 150, 'Gold', 0);
+    p.insertBefore(teaG, p.firstChild); p.insertBefore(bikeG, p.firstChild);
+    n6NetShow(tea, m('coach') + .4, 1); n6NetShow(bike, m('coach') + .8, 1);
+    [tea, bike].forEach(n => n.g.setAttribute('opacity', 1));
+    const cup = n6Cup(p, 920, 385, .9); put(cup, { o: 0 }); tw(cup, { o: 1 }, m('tea'), .5);
+    const bk = n6Bike(p, 1340, 392, .8); put(bk, { o: 0 }); tw(bk, { o: 1 }, m('cycle'), .5);
+    prog(q => { const t = q * D; bk._w.forEach(w => put(w, { r: t * 160 })); cup._steam.forEach((s, i) => put(s, { y: -((t * 12 + i * 8) % 18) })); }, 0, D, lin);
+    labP(p, 'teaQ', 920, 160, m('tea') + .2, { size: 30, maxW: 380, italic: true, font: SERIF, fill: EV.ink });
+    labP(p, 'bikeQ', 1340, 160, m('cycle') + .2, { size: 30, maxW: 380, italic: true, font: SERIF, fill: EV.ink });
+    tw(teaG, { o: .9 }, m('light'), .5); tw(bikeG, { o: .9 }, m('light') + .3, .5);
+    n6NetFire(tea, m('light')); n6NetFire(bike, m('light') + .3);
+    n6NetFire(tea, m('light') + 1.6); n6NetFire(bike, m('light') + 1.9);
+    // the new skill, dim, then wired in
+    const nw = G(p, { x: 1130, y: 640, o: 0 });
+    const ring = mk('circle', { cx: 0, cy: 0, r: 34, fill: EV.bg, stroke: EV.dim, 'stroke-width': 3, 'stroke-dasharray': '6 6' }, nw);
+    const core = put(mk('circle', { cx: 0, cy: 0, r: 22, fill: EV.calm }, nw), { o: 0 });
+    tw(nw, { o: 1 }, m('light') + .6, .5);
+    lab(p, 'freestyle', 1130, 730, m('light') + .8, { size: 30, fill: EV.calm, maxW: 420 });
+    const l1 = path(p, 'M960 440C1000 540 1060 600 1100 620', { stroke: EV.goldHi, 'stroke-width': 4 }, { d: 0 });
+    const l2 = path(p, 'M1300 440C1260 540 1200 600 1160 620', { stroke: EV.goldHi, 'stroke-width': 4 }, { d: 0 });
+    p.insertBefore(l1, nw); p.insertBefore(l2, nw);
+    draw(l1, m('link'), .7); draw(l2, m('link') + .2, .7);
+    tw(ring, { c_stroke: EV.calm }, m('link') + .8, .3); tw(core, { o: 1 }, m('link') + .9, .4); pulse(nw, m('link') + .9, 1.4);
+    for (let t = m('link') + 1; t < D - .8; t += 1.4) { n6Run(l1, t, .7, EV.goldHi, 6); n6Run(l2, t + .3, .7, EV.goldHi, 6); }
+    const kl = evText(p, L('knownL'), { x: 800, y: 850, size: 40, font: SERIF, italic: true, fill: EV.gold, weight: 600, o: 0, maxW: 1400 });
+    tw(kl, { o: 1 }, m('known'), .7);
+  }],
+
+  ['start', 'b_start', (m, D) => {
+    const p = panel(0);
+    // the newborn and its pre-wired circuits
+    const bg = G(p, { o: 0 });
+    const baby = G(bg, { x: 330, y: 560 });
+    mk('ellipse', { cx: 30, cy: 0, rx: 105, ry: 50, fill: '#d8cdb4', stroke: EV.gold, 'stroke-width': 2 }, baby);
+    path(baby, 'M-20 -40Q30 0 -20 44M40 -48Q80 0 40 48', { stroke: '#b8ab8f', 'stroke-width': 3 });
+    mk('circle', { cx: -88, cy: -6, r: 38, fill: EV.skinF }, baby);
+    path(baby, 'M-110 -40Q-88 -56 -66 -40', { stroke: EV.hair, 'stroke-width': 6 });
+    path(baby, 'M-104 -10H-96M-82 -10H-74', { stroke: '#1a0f0a', 'stroke-width': 3 });
+    const cry = put(mk('ellipse', { cx: -89, cy: 10, rx: 6, ry: 5, fill: '#3a1c14' }, baby), { o: 0 });
+    tw(cry, { o: 1 }, m('baby') + .2, .2); tw(cry, { o: 0 }, m('baby') + 1.6, .3);
+    const cl = [-60, -20, 20].map((dx, i) => path(baby, `M${-140 + dx * .3} ${-50 - i * 6}q-12 -14 0 -26`, { stroke: EV.dim, 'stroke-width': 2.5 }, { o: 0 }));
+    cl.forEach((c, i) => { tw(c, { o: .8 }, m('baby') + .3 + i * .1, .2); tw(c, { o: 0 }, m('baby') + 1.6, .3); });
+    const pre = n6Net(bg, [[240, 330], [320, 290], [410, 320], [430, 400], [330, 410], [250, 400]], [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 0], [1, 4]], { color: EV.gold, r: 8, w: 3, hide: false });
+    tw(bg, { o: 1 }, .1, .6);
+    for (let t = .8; t < D; t += 2.2) n6NetFire(pre, t);
+    lab(bg, 'wiredBirth', 330, 230, m('baby'), { size: 30, fill: EV.gold, italic: true, font: SERIF, maxW: 520 });
+    lab(bg, 'babyTags', 330, 680, m('baby') + 1, { size: 28, fill: EV.dim, maxW: 520 });
+    // Ravi, Meera, and the shadow of his father
+    mk('rect', { x: 700, y: 800, width: 900, height: 100, fill: '#0c1114' }, p);
+    path(p, 'M700 800H1600', { stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .25 });
+    const fa = evPerson(p, { kind: 'm', x: 900, y: 800, s: .98, o: 0 });
+    const rav = evPerson(p, { kind: 'm', x: 1060, y: 800, s: .9 });
+    const mee = evPerson(p, { kind: 'f', x: 1390, y: 800, s: .5 });
+    put(rav.g, { o: 0 }); put(mee.g, { o: 0 });
+    tw(rav.g, { o: 1 }, m('parent') - .3, .5); tw(mee.g, { o: 1 }, m('parent') - .1, .5);
+    tw(fa.g, { o: .28 }, m('parent') + .6, .8);
+    [rav, fa, mee].forEach(P => { evMood(P, 'calm', 0, .01); evBreathe(P, D); });
+    const faL = lab(p, 'father', 830, 380, m('parent') + 1, { size: 26, fill: EV.dim, italic: true, maxW: 260 });
+    hide(faL, m('deposit') + .3, .6);
+    [rav, fa].forEach(P => { evMood(P, 'angry', m('shout')); evArm(P, 1, -78, -12, m('shout') + .2, .35, back); evArm(P, -1, 20, 30, m('shout') + .2, .35); });
+    evMood(mee, 'sad', m('shout') + .6);
+    const sb = evBubble(p, L('snap'), { x: 1290, y: 360, w: 460, size: 30, tail: 'left', edge: EV.anger });
+    pop(sb, m('shout') + .3);
+    tw(bg, { o: .25 }, m('shout'), .6);
+    // a well-worn circuit over his head
+    const loop = G(p, { x: 1000, y: 230, o: 0 });
+    path(loop, 'M-90 0A90 44 0 1 1 90 0A90 44 0 1 1 -90 0', { stroke: EV.anger, 'stroke-width': 7, 'stroke-opacity': .8 });
+    const ld = evDot(loop, -90, 0, 9, EV.goldHi);
+    prog(q => { const a = q * D * 4; put(ld, { x: Math.cos(a) * 90, y: Math.sin(a) * 44 }); }, 0, D, lin);
+    hide(sb, m('habit') - .2, .4);
+    tw(loop, { o: 1 }, m('habit'), .5);
+    lab(p, 'feelsMe', 1060, 160, m('habit') + .5, { size: 30, fill: EV.ink, italic: true, maxW: 780 });
+    // the starting deposit, and what learning adds
+    const bar = G(p, { x: 90, y: 500, o: 0 });
+    mk('rect', { x: 0, y: -26, width: 210, height: 52, rx: 8, fill: EV.goldLo, stroke: EV.gold, 'stroke-width': 2 }, bar);
+    evText(bar, L('inherited'), { x: 0, y: -50, size: 28, fill: EV.gold, anchor: 'start', maxW: 540 });
+    const segs = Array.from({ length: 6 }, (_, i) => put(mk('rect', { x: 216 + i * 58, y: -26, width: 52, height: 52, rx: 8, fill: EV.calm }, bar), { o: 0 }));
+    evText(bar, L('added'), { x: 0, y: 70, size: 28, fill: EV.calm, anchor: 'start', maxW: 560 });
+    tw(bg, { o: 0 }, m('deposit') - .3, .4);
+    tw(bar, { o: 1 }, m('deposit'), .5);
+    segs.forEach((s, i) => tw(s, { o: 1 }, m('deposit') + 1.8 + i * .45, .3));
+    evMood(rav, 'calm', m('deposit') + .4); evMood(mee, 'smile', m('deposit') + .8); hide(loop, m('deposit') + .4, .6);
+    evArm(rav, 1, -10, 10, m('deposit') + .3, .5); evArm(rav, -1, 10, -10, m('deposit') + .3, .5);
+    tw(fa.g, { o: 0 }, m('deposit') + .3, .8);
+  }],
+
+  ['path', 'b_path', (m, D) => {
+    const p = panel(0);
+    const F = n6Field(p, { y0: 470, y1: 860, routeY: 660, seed: 6 });
+    const wk = evPerson(F.mid, { kind: 'm', x: 60, y: 668, s: .52, o: 0 });
+    evMood(wk, 'calm', 0, .01);
+    const walks = [], wearAt = [];
+    const t1 = m('first') + .2, t1e = Math.min(m('daily') - .3, t1 + 5);
+    walks.push({ t0: t1, t1: t1e, xa: 60, xb: 1540, tau: .7 }); wearAt.push([t1e, .08]);
+    tw(wk.g, { o: 1 }, t1 - .3, .3);
+    for (let k = 0; k < 4; k++) {
+      const a = m('daily') + .3 + k * 1.35, b = a + 1.15, fwd = k % 2;
+      walks.push({ t0: a, t1: b, xa: fwd ? 60 : 1540, xb: fwd ? 1540 : 60, tau: .4 }); wearAt.push([b, [.3, .55, .78, .95][k]]);
+    }
+    walks.forEach(k => evWalk(wk, k.xa, k.xb, k.t0, k.t1, k.t1 - k.t0 < 2 ? 90 : 60));
+    tw(wk.g, { o: .9 }, m('daily'), .3);
+    const wear = t => { let w = 0; wearAt.forEach(([te, v], i) => { const prev = i ? wearAt[i - 1][1] : 0; if (t >= te) w = v; else if (t >= te - 1) w = Math.max(w, prev + (v - prev) * (t - te + 1)); }); return w; };
+    n6Trample(F, walks, wear, D);
+    // the day counter
+    const dc = evText(p, '', { x: 800, y: 420, size: 34, fill: EV.ink, weight: 600 });
+    const days = [[t1, 1], ...walks.slice(1).map((k, i) => [k.t0, [5, 12, 30, 60][i]])];
+    prog(q => { const t = q * D; let n = 0; days.forEach(([tt, d]) => { if (t >= tt) n = d; }); dc.textContent = n ? fmt('day', n) : ''; }, 0, D, lin);
+    // effortful, easy, automatic
+    const steps = [['effortful', 200, m('first') + .4, EV.anger], ['easy', 470, m('daily') + 2, EV.joy], ['automatic', 820, m('auto') + .2, EV.calm]];
+    steps.forEach(([k, x, t, c], i) => {
+      lab(p, k, x, 250, t, { size: 34, fill: c, weight: 600, maxW: 240 });
+      if (i) { const ar = path(p, `M${x - 125} 238H${x - 100}`, { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 }); draw(ar, t - .2, .3); const h = evHead(p, x - 96, 238, 0, EV.dim, .8); put(h, { o: 0 }); show(h, t, .2); }
+    });
+    // inset: the synapse thickening
+    const ins = G(p, { x: 1290, y: 250, o: 0 });
+    mk('rect', { x: -250, y: -160, width: 500, height: 320, rx: 16, fill: '#0e161a', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .6 }, ins);
+    evText(ins, L('synapse'), { x: 0, y: -118, size: 28, fill: EV.gold, maxW: 440 });
+    path(ins, 'M-230 0H-130', { stroke: EV.gold, 'stroke-width': 6 });
+    mk('circle', { cx: -95, cy: 0, r: 42, fill: '#141c20', stroke: EV.gold, 'stroke-width': 3 }, ins);
+    const spine = G(ins, { x: 70, y: 0 });
+    path(spine, 'M30 0H110', { stroke: EV.gold, 'stroke-width': 8 });
+    mk('ellipse', { cx: 0, cy: 0, rx: 32, ry: 36, fill: '#141c20', stroke: EV.gold, 'stroke-width': 3 }, spine);
+    const contact = path(ins, 'M-46 -12V12', { stroke: EV.goldHi, 'stroke-width': 4 });
+    const ves = [0, 1, 2, 3].map(i => evDot(ins, -108 + (i % 2) * 18, -14 + Math.floor(i / 2) * 26, 6, EV.goldHi, .8));
+    const bd = Array.from({ length: 8 }, (_, i) => evDot(ins, 0, 0, 6, EV.calm, 0));
+    tw(ins, { o: 1 }, m('syn') - .2, .5);
+    tw(spine, { s: 1.35, x: 80 }, m('syn') + 1.6, 2.4, out);
+    tw(contact, { 'a_stroke-width': 14, s: 1.6 }, m('syn') + 1.6, 2.4, out);
+    prog(q => { const t = q * D - m('syn') - .8; bd.forEach((d, i) => { const u = ((t * .35 + i / 8) % 1 + 1) % 1; put(d, { x: -10 + Math.cos(i * 2.3) * 110 * (1 - u), y: Math.sin(i * 2.3) * 110 * (1 - u), o: t < 0 ? 0 : Math.sin(u * Math.PI) }); }); ves.forEach((d, i) => put(d, { x: -108 + (i % 2) * 18 + ((t * 30 + i * 9) % 30) * (t > 0 ? 1 : 0) })); }, 0, D, lin);
+    evText(ins, L('bdnf'), { x: 0, y: 126, size: 26, fill: EV.calm, maxW: 460 });
+  }],
+
+  ['prune', 'b_prune', (m, D) => {
+    const p = panel(0);
+    // the path grows over
+    const fg = G(p);
+    const F = n6Field(fg, { x0: 70, x1: 730, y0: 260, y1: 430, n: 60, routeY: 350, seed: 12, s: .7, band: 24 });
+    mk('rect', { x: 60, y: 160, width: 680, height: 300, rx: 14, fill: 'none', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .45 }, fg);
+    fg.insertBefore(mk('rect', { x: 60, y: 160, width: 680, height: 300, rx: 14, fill: '#0c1214' }), fg.firstChild);
+    n6Trample(F, [], t => t < m('stop') ? 1 : Math.max(0, 1 - (t - m('stop')) / 3.4), D);
+    lab(p, 'grassBack', 400, 510, m('stop') + .3, { size: 30, fill: EV.ink, maxW: 680 });
+    // the old notebook of poems, fading
+    const nb = G(p, { x: 400, y: 700, o: 0 });
+    mk('rect', { x: -170, y: -110, width: 340, height: 200, rx: 8, fill: '#e9e2d0', opacity: .9 }, nb);
+    path(nb, 'M0 -110V90', { stroke: '#b8ab8f', 'stroke-width': 2 });
+    const R = n6Rand(4);
+    const lines = [];
+    for (let k = 0; k < 5; k++) for (const side of [-1, 1]) {
+      const x0 = side < 0 ? -150 : 20, y = -80 + k * 34;
+      let d = `M${x0} ${y}`; for (let x = x0 + 10; x < x0 + 120; x += 10) d += `L${x} ${y + (R() - .5) * 8}`;
+      lines.push(path(nb, d, { stroke: '#3a3324', 'stroke-width': 2.5 }));
+    }
+    path(nb, 'M-150 -88H130', { stroke: '#3a3324', 'stroke-width': 3 });
+    tw(nb, { o: 1 }, m('hindi') - .3, .5);
+    lines.forEach((l, i) => tw(l, { o: i % 4 === 0 ? .7 : .08 }, m('hindi') + 1.8 + i * .2, .6));
+    lab(p, 'poems', 400, 850, m('hindi') + .3, { size: 28, fill: EV.dim, maxW: 680 });
+    // the network: used links grow, unused ones are trimmed
+    const pts = [[920, 300], [1100, 220], [1290, 290], [1460, 230], [980, 470], [1180, 430], [1380, 470], [1020, 640], [1240, 620], [1450, 640]];
+    const E = [[0, 1, 1], [1, 2, 1], [2, 3, 0], [0, 4, 0], [1, 5, 1], [2, 5, 0], [2, 6, 1], [3, 6, 0], [4, 5, 0], [5, 6, 1], [4, 7, 1], [5, 8, 0], [6, 9, 1], [7, 8, 1], [8, 9, 0], [5, 7, 0]];
+    const net = n6Net(p, pts, E.map(e => [e[0], e[1]]), { color: EV.gold, r: 10, w: 4, hide: false });
+    put(net.g, { o: 0 }); tw(net.g, { o: 1 }, m('prune') - .4, .5);
+    lab(p, 'pruning', 1190, 140, m('prune') + .2, { size: 40, fill: EV.gold, weight: 600, font: SERIF, maxW: 600 });
+    const habit = E.findIndex(e => e[0] === 5 && e[1] === 8);
+    E.forEach(([i, j, used], k) => {
+      if (k === habit) return;
+      if (used) { tw(net.edges[k], { 'a_stroke-width': 9, c_stroke: EV.goldHi }, m('use'), .6); }
+      else { tw(net.edges[k], { c_stroke: '#5b5650', 'a_stroke-width': 2 }, m('prune') + .5 + (k % 5) * .15, .4); tw(net.edges[k], { o: 0 }, m('prune') + 1.6 + (k % 5) * .2, .7); }
+    });
+    const usedP = E.map((e, k) => e[2] ? net.edges[k] : null).filter(Boolean);
+    for (let t = m('use') + .4; t < D - .6; t += .9) n6Run(usedP[Math.round(t * 7) % usedP.length], t, .6, EV.goldHi, 7);
+    lab(p, 'useIt', 1190, 770, m('use'), { size: 30, fill: EV.goldHi, maxW: 620 });
+    lab(p, 'loseIt', 1190, 820, m('use') + 1.5, { size: 30, fill: EV.dim, maxW: 620 });
+    // an old habit link, red, that thins once it is no longer fed
+    const he = net.edges[habit];
+    he.setAttribute('stroke', EV.anger); he.setAttribute('stroke-width', 9);
+    const hl = lab(p, 'oldHabit', 1330, 590, m('hope'), { size: 28, fill: EV.anger, maxW: 260 });
+    tw(he, { 'a_stroke-width': 2 }, m('hope') + .8, 2.2); tw(he, { o: .15 }, m('hope') + 2, 1.4);
+    tw(hl, { o: .4 }, m('hope') + 2.4, 1);
+  }],
+
+  ['q2', 'b_prune', (m, D) => {
+    const p = panel(0);
+    const pts = [[500, 200], [700, 140], [900, 210], [1100, 150], [600, 360], [820, 330], [1040, 360]];
+    const net = n6Net(p, pts, [[0, 1], [1, 2], [2, 3], [0, 4], [4, 5], [5, 6], [1, 5], [2, 6]], { color: EV.gold, r: 10, w: 4, hide: false });
+    [0, 1, 4, 5].forEach(k => { net.edges[k].setAttribute('stroke-width', 10); net.edges[k].setAttribute('stroke', EV.goldHi); });
+    [2, 6, 7].forEach(k => { net.edges[k].setAttribute('stroke', '#5b5650'); net.edges[k].setAttribute('stroke-dasharray', '8 10'); });
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-useit', prompt: [L('q2p')],
+    build: grid([
+      { parts: [L('q2r1')], ans: ['up'], why: L('q2w1') },
+      { parts: [L('q2r2')], ans: ['down'], why: L('q2w2') },
+      { parts: [L('q2r3')], ans: ['up'], why: L('q2w3') },
+      { parts: [L('q2r4')], ans: ['down'], why: L('q2w4') },
+    ], [['up', L('q2up'), EV.calm, 'S'], ['down', L('q2down'), EV.dim, 'W']], { multi: false, text: true }),
+  }], done) }],
+
+  ['attention', 'b_att', (m, D) => {
+    const p = panel(0);
+    const v = G(p);
+    const pool = n6Pool(v, D, { edgeX: 60, deckY: 300, surf: 330, x0: 60, x1: 760, y1: 640, sky: false });
+    mk('rect', { x: 60, y: 160, width: 700, height: 140, fill: '#0e161a' }, v);
+    const sw = evPerson(v, { kind: 'm', x: 700, y: 348, s: .75 });
+    put(sw.g, { r: -90 }); evMood(sw, 'calm', 0, .01);
+    const lapX = t => { const u = ((t * 70) % 400); return 720 - u; };
+    prog(q => { const t = q * D; put(sw.g, { x: lapX(t) + 230 * .6 * 0 + 0 }); }, 0, D, lin);
+    n6Swim(sw, 0, D, .6);
+    pool.front();
+    mk('rect', { x: 60, y: 160, width: 700, height: 480, rx: 16, fill: 'none', stroke: EV.gold, 'stroke-width': 2.5, 'stroke-opacity': .7 }, v);
+    put(v, { o: 0 }); tw(v, { o: 1 }, .1, .5);
+    const tag = evText(p, L('distracted'), { x: 410, y: 690, size: 30, fill: EV.dim, weight: 600, o: 0, maxW: 600 });
+    tw(tag, { o: 1 }, m('phone'), .4);
+    // the email thought
+    const th = G(p, { x: 0, y: 0, o: 0 });
+    const thx = t => lapX(t) - 200;
+    mk('ellipse', { cx: 0, cy: 6, rx: 112, ry: 70, fill: '#141b1f', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .6 }, th);
+    mk('circle', { cx: 40, cy: 90, r: 10, fill: '#141b1f', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .6 }, th);
+    mk('rect', { x: -36, y: -26, width: 72, height: 48, rx: 4, fill: '#1d2428', stroke: EV.ink, 'stroke-width': 2.5 }, th);
+    path(th, 'M-36 -26L0 4L36 -26', { stroke: EV.ink, 'stroke-width': 2.5 });
+    evText(th, L('email'), { x: 0, y: 52, size: 22, fill: EV.dim, italic: true, maxW: 190 });
+    prog(q => { const t = q * D; put(th, { x: Math.max(200, Math.min(620, thx(t))), y: 220 }); }, 0, D, lin);
+    tw(th, { o: 1 }, m('phone') + .2, .4);
+    // focus: the thought goes, a spotlight follows him
+    tw(th, { o: 0, s: .3 }, m('focus'), .4);
+    const spot = G(p, { o: 0 });
+    const cone = path(spot, 'M0 0L-60 0L-150 200H150L60 0Z', { fill: EV.gold, 'fill-opacity': .1 });
+    evGlow(spot, 0, 220, 160, 'Gold', .7);
+    prog(q => { const t = q * D; put(spot, { x: Math.max(220, Math.min(600, lapX(t) - 170)), y: 140 }); }, 0, D, lin);
+    tw(spot, { o: 1 }, m('focus') + .2, .6);
+    tw(tag, { o: 0 }, m('focus'), .3);
+    const tag2 = evText(p, L('focused'), { x: 410, y: 690, size: 30, fill: EV.gold, weight: 600, o: 0, maxW: 600 });
+    tw(tag2, { o: 1 }, m('focus') + .3, .4);
+    // the signal trace and the change threshold
+    const gr = G(p, { x: 0, y: 0, o: 0 });
+    path(gr, 'M880 560H1520M880 560V180', { stroke: EV.dim, 'stroke-width': 2 });
+    path(gr, 'M880 360H1520', { stroke: EV.calm, 'stroke-width': 2.5, 'stroke-dasharray': '10 8' });
+    const tr = path(gr, '', { stroke: EV.goldHi, 'stroke-width': 3 });
+    n6Halo(evText(gr, L('threshold'), { x: 1520, y: 345, size: 24, fill: EV.calm, anchor: 'end', maxW: 620 }));
+    tw(gr, { o: 1 }, m('phone') + .6, .5);
+    const amp = t => t < m('focus') + .4 ? 90 : Math.min(250, 90 + (t - m('focus') - .4) * 300);
+    prog(q => {
+      const t = q * D; let d = '';
+      for (let x = 880; x <= 1520; x += 8) {
+        const tt = t - (1520 - x) / 200, ph = ((tt * 2) % 1 + 1) % 1, a = tt < m('phone') + .6 ? 0 : amp(tt);
+        const y = 560 - (ph < .1 ? a * Math.sin(ph / .1 * Math.PI) : 6 * Math.sin(tt * 13));
+        d += (x === 880 ? 'M' : 'L') + x + ' ' + y.toFixed(1);
+      }
+      tr.setAttribute('d', d);
+    }, 0, D, lin);
+    const fl = lab(p, 'faint', 1200, 620, m('weak'), { size: 30, fill: EV.dim, maxW: 640 });
+    hide(fl, m('strong') - .2, .3);
+    lab(p, 'strongS', 1200, 620, m('strong'), { size: 30, fill: EV.calm, maxW: 640 });
+    // a link that grows only once the signal crosses the line
+    const lk = G(p, { x: 1200, y: 700, o: 0 });
+    evDot(lk, -90, 0, 14, EV.gold); evDot(lk, 90, 0, 14, EV.gold);
+    const lkl = path(lk, 'M-76 0H76', { stroke: EV.goldHi, 'stroke-width': 2 });
+    tw(lk, { o: 1 }, m('weak'), .4);
+    tw(lkl, { 'a_stroke-width': 12 }, m('strong') + .4, 2, out);
+    const mo = evText(p, L('motions'), { x: 800, y: 830, size: 38, font: SERIF, italic: true, fill: EV.gold, weight: 600, o: 0, maxW: 1400 });
+    tw(mo, { o: 1 }, m('rule2'), .7);
+  }],
+
+  ['knowledge', 'b_know', (m, D) => {
+    const p = panel(0);
+    mk('rect', { x: 0, y: 760, width: 800, height: 140, fill: '#0c1114' }, p);
+    path(p, 'M0 760H800', { stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .25 });
+    // Ravi on the sofa, watching
+    const so = G(p, { x: 250, y: 760 });
+    path(so, 'M-160 -150Q-160 -176 -134 -176H134Q160 -176 160 -150V-60H-160Z', { fill: '#2a2320' });
+    path(so, 'M-190 -110Q-190 -130 -170 -130H170Q190 -130 190 -110V-14H-190Z', { fill: '#3a2f2a' });
+    const rav = evPerson(p, { kind: 'm', x: 250, y: 640 + 178 * .85 - 14, s: .85 });
+    rav.g.firstChild.setAttribute('opacity', 0);
+    put(rav.legL, { r: -8 }); put(rav.legR, { r: 8 });
+    evArm(rav, -1, 14, -60, 0, .01); evArm(rav, 1, -14, 60, 0, .01);
+    evMood(rav, 'calm', 0, .01); evBreathe(rav, D);
+    tw(rav.head, { r: 12 }, .3, .6);
+    // the screen
+    const sc = G(p, { x: 640, y: 300, o: 0 });
+    mk('rect', { x: -170, y: -100, width: 340, height: 200, rx: 12, fill: '#0f1a20', stroke: EV.gold, 'stroke-width': 3 }, sc);
+    const wave = path(sc, 'M-150 40q25 -14 50 0t50 0t50 0t50 0t50 0t50 0', { stroke: '#7fc4d1', 'stroke-width': 3, 'stroke-opacity': .7 });
+    const sm = evPerson(sc, { kind: 'm', x: 40, y: 34, s: .2 }); put(sm.g, { r: -90 }); n6Swim(sm, 0, D, 1.1);
+    path(sc, 'M-12 -30L16 -12L-12 6Z', { fill: EV.ink, opacity: .85 });
+    tw(sc, { o: 1 }, .2, .5);
+    prog(q => put(wave, { x: -((q * D * 40) % 50) }), 0, D, lin);
+    const vc = evText(p, '', { x: 640, y: 440, size: 28, fill: EV.dim, maxW: 360 });
+    prog(q => { const t = q * D, n = t < m('videos') ? 1 : Math.min(20, 1 + Math.floor((t - m('videos')) * 5)); vc.textContent = fmt('video', n); }, 0, D, lin);
+    lab(p, 'fact1', 640, 520, m('facts') + .2, { size: 30, fill: EV.fear, maxW: 440 });
+    lab(p, 'fact2', 640, 572, m('facts') + 1.6, { size: 30, fill: EV.fear, maxW: 440 });
+    // a map in the brain
+    const br = evBrain(p, { x: 1220, y: 450, s: 1.05, o: 0 });
+    tw(br, { o: 1 }, m('map') - .5, .5);
+    br._gyri.forEach(g => g.setAttribute('stroke-opacity', .2));
+    const streets = [];
+    const inE = (x, y) => (x / 175) ** 2 + ((y + 40) / 110) ** 2 < 1;
+    for (let y = -130; y <= 50; y += 36) { const h = Math.sqrt(Math.max(0, 1 - ((y + 40) / 110) ** 2)) * 175; streets.push(path(br, `M${-h} ${y}H${h}`, { stroke: EV.fear, 'stroke-width': 2.5 }, { d: 0 })); }
+    for (let x = -150; x <= 150; x += 42) { const h = Math.sqrt(Math.max(0, 1 - (x / 175) ** 2)) * 110; streets.push(path(br, `M${x} ${-40 - h}V${-40 + h}`, { stroke: EV.fear, 'stroke-width': 2.5 }, { d: 0 })); }
+    streets.forEach((s, i) => draw(s, m('map') + i * .08, .5));
+    lab(p, 'mapL', 1220, 180, m('map') + .4, { size: 30, fill: EV.fear, italic: true, font: SERIF, maxW: 600 });
+    streets.forEach((s, i) => tw(s, { o: .15 }, m('fade') + 1.6 + (i % 5) * .25, .8));
+    // a phone number, heard once
+    const num = L('phone'), pn = G(p, { x: 1220, y: 790, o: 0 }), cw = 30;
+    const chars = [...num].map((c, i) => T(pn, c, { x: (i - (num.length - 1) / 2) * cw, y: 0, size: 44, fill: EV.ink, anchor: 'middle', font: SANS, weight: 500 }));
+    tw(pn, { o: 1 }, m('fade') + .2, .4);
+    chars.forEach((c, i) => tw(c, { o: .06 }, m('fade') + 1.6 + ((i * 7) % chars.length) * .18, .4));
+    lab(p, 'heardOnce', 1220, 850, m('fade') + .6, { size: 26, fill: EV.dim, maxW: 520 });
+  }],
+
+  ['experience', 'b_exp', (m, D) => {
+    const p = panel(0);
+    const cam = camera(p, D, { x: 800, y: 450, z: 1 });
+    const W = cam.world;
+    const pool = n6Pool(W, D, { edgeX: 300, deckY: 560, surf: 590 });
+    const mee = evPerson(W, { kind: 'f', x: 1180, y: 770, s: .48 });
+    evMood(mee, 'smile', 0, .01);
+    const rav = evPerson(W, { kind: 'm', x: 420, y: 800, s: .8 });
+    evMood(rav, 'worried', 0, .01); evArm(rav, -1, 96, -10, 0, .01); evArm(rav, 1, -20, 10, 0, .01);
+    evBreathe(rav, D);
+    // lets go and floats
+    const tw0 = m('water');
+    evArm(rav, -1, 10, 0, tw0 + .2, .5);
+
+    put(rav.g.firstChild, { o: 1 }); tw(rav.g.firstChild, { o: 0 }, tw0 + .8, .3);
+    evArm(rav, -1, 70, 0, tw0 + 1.4, .6); evArm(rav, 1, -70, 0, tw0 + 1.4, .6);
+    prog(q => { const t = q * D, u = Math.max(0, Math.min(1, (t - tw0 - .8) / 1.4)), e = io(u);
+      put(rav.g, { r: 90 * e, x: 420 + 50 * e, y: 800 - 200 * e + (u >= 1 ? Math.sin(t * 1.8) * 4 : 0) }); }, 0, D, lin);
+    evMood(rav, 'smile', m('float'));
+    // Meera cheers
+    prog(q => { const t = q * D; if (t < m('senses')) return; put(mee.armL, { r: 160 + Math.sin(t * 7) * 18 }); put(mee.armR, { r: -160 - Math.sin(t * 7) * 18 }); }, 0, D, lin);
+    pool.front();
+    // splashes as he settles
+    const drops = Array.from({ length: 12 }, (_, i) => evDot(W, 640, 590, 4 + (i % 3), '#9fd6e0', 0));
+    prog(q => { const t = q * D - tw0 - 1; drops.forEach((d, i) => { const u = t * 1.4 - i * .05; if (u < 0 || u > 1) return put(d, { x: 640, y: 590, o: 0 }); const a = (i * 31 % 160 - 80) * Math.PI / 180; put(d, { x: 640 + Math.sin(a) * 200 * u, y: 590 - Math.cos(a) * 140 * u + 220 * u * u, o: 1 - u }); }); }, 0, D, lin);
+    // the brain inset (screen space) and the senses flowing in
+    const ui = G(p);
+    const bi = G(ui, { x: 1320, y: 210, o: 0 });
+    mk('rect', { x: -230, y: -150, width: 460, height: 300, rx: 16, fill: '#0e161a', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .6 }, bi);
+    const jg = evGlow(bi, 0, -10, 170, 'joy', 0);
+    const br = evBrain(bi, { s: .55, stem: false, y: 10 });
+    tw(bi, { o: 1 }, m('senses') - .3, .5);
+    const senses = [['cold', 470, 690, EV.fear], ['chlorine', 760, 470, EV.calm], ['cheer', 1180, 520, EV.joy], ['slap', 560, 520, '#9fd6e0']];
+    senses.forEach(([k, x, y, c], i) => {
+      const t = m('senses') + i * .75;
+      const e = n6Halo(evText(ui, L(k), { x, y, size: 30, fill: c, weight: 600, o: 0, maxW: 300 }));
+      tw(e, { o: 1 }, t, .4);
+      tw(e, { x: 1320 - x, y: 210 - y, s: .3, o: 0 }, t + 1.3, .9, io);
+      evFire(br, t + 2, .8);
+    });
+    const secs = evText(ui, '', { x: 880, y: 500, size: 34, fill: EV.ink, weight: 600 });
+    n6Halo(secs);
+    prog(q => { const t = q * D - m('float') - .6; secs.textContent = t < 0 || t > 4.5 ? '' : fmt('secs', Math.min(3, 1 + Math.floor(t))); }, 0, D, lin);
+    cam.to({ x: 700, y: 470, z: 1.25 }, m('float') - .4, 1.6);
+    tw(jg, { o: 1 }, m('joy'), .8);
+    const seal = G(bi, { x: 150, y: 80, s: 2.2, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 34, fill: EV.goldLo, stroke: EV.goldHi, 'stroke-width': 3 }, seal);
+    path(seal, 'M0 -18L5 -6L18 -6L8 3L12 16L0 8L-12 16L-8 3L-18 -6L-5 -6Z', { fill: EV.goldHi });
+    tw(seal, { s: 1, o: 1 }, m('joy') + .5, .35, out); pulse(bi, m('joy') + .85, 1.04);
+    labP(ui, 'sealL', 1320, 405, m('joy') + .6, { size: 30, fill: EV.joy, maxW: 460 });
+    lab(ui, 'twenty', 1320, 470, m('years') + .2, { size: 28, fill: EV.dim, italic: true, maxW: 460 });
+    // knowledge, experience, wisdom
+    const ch = G(ui, { o: 0 });
+    mk('rect', { x: 140, y: 740, width: 1320, height: 150, rx: 18, fill: EV.bg, opacity: .82 }, ch);
+    const cw = [['kn', 400, EV.fear], ['ex', 800, EV.joy], ['wi', 1200, EV.gold]];
+    cw.forEach(([k, x, c], i) => {
+      const e = evText(ch, L(k), { x, y: 800, size: 40, fill: c, weight: 600, font: SERIF, o: 0, maxW: 300 });
+      tw(e, { o: 1 }, m('wisdom') + i * 1.3, .5);
+      if (i) { const a = path(ch, `M${x - 280} 788H${x - 130}`, { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 }); draw(a, m('wisdom') + i * 1.3 - .4, .4); const h = evHead(ch, x - 126, 788, 0, EV.dim); put(h, { o: 0 }); show(h, m('wisdom') + i * 1.3, .2); }
+    });
+    tw(ch, { o: 1 }, m('wisdom') - .2, .3);
+    lab(ch, 'bodyKnow', 800, 860, m('wisdom') + 4, { size: 28, fill: EV.ink, italic: true, maxW: 1200 });
+  }],
+
+  ['enrich', 'b_enrich', (m, D) => {
+    const p = panel(0);
+    const cage = (x, k) => {
+      const g = G(p, { o: 0 });
+      mk('rect', { x, y: 160, width: 520, height: 300, rx: 10, fill: '#0e1417', stroke: EV.gold, 'stroke-width': 3 }, g);
+      for (let bx = x + 40; bx < x + 520; bx += 40) path(g, `M${bx} 160V460`, { stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .25 });
+      tw(g, { o: 1 }, .2 + k * .3, .5);
+      return g;
+    };
+    const c1 = cage(170, 0), c2 = cage(910, 1);
+    lab(p, 'bare', 430, 130, m('cages'), { size: 30, fill: EV.dim, maxW: 500 });
+    lab(p, 'rich', 1170, 130, m('cages') + 1.2, { size: 30, fill: EV.gold, maxW: 500 });
+    // the bare cage: one rat, barely moving
+    n6Rat(c1, t => [400 + Math.sin(t * .3) * 60, 420], D, .9);
+    // the rich cage: a wheel, a tunnel, a ball, three rats
+    const wh = G(c2, { x: 1010, y: 360 });
+    mk('circle', { cx: 0, cy: 0, r: 70, fill: 'none', stroke: EV.goldHi, 'stroke-width': 4 }, wh);
+    const sp = G(wh); for (let a = 0; a < 6; a++) path(sp, `M0 0L${Math.cos(a * Math.PI / 3) * 70} ${Math.sin(a * Math.PI / 3) * 70}`, { stroke: EV.goldHi, 'stroke-width': 2 });
+    path(c2, 'M1010 360L990 460M1010 360L1030 460', { stroke: EV.dim, 'stroke-width': 4 });
+    prog(q => put(sp, { r: q * D * 140 }), 0, D, lin);
+    path(c2, 'M1170 440V400Q1170 330 1240 330Q1310 330 1310 400V440', { stroke: EV.calm, 'stroke-width': 26, 'stroke-opacity': .55 });
+    const ball = G(c2, { x: 1350, y: 420 }); mk('circle', { cx: 0, cy: 0, r: 24, fill: EV.love, opacity: .8 }, ball);
+    prog(q => { const t = q * D; put(ball, { x: 1350 + Math.sin(t * .9) * 30, r: Math.sin(t * .9) * 80 }); }, 0, D, lin);
+    n6Rat(c2, t => [1010 + Math.sin(t * 6) * 4, 418], D, .75);
+    n6Rat(c2, t => [1240 + Math.cos(t * 1.1) * 150, 425 + Math.sin(t * 2.2) * 8], D, .85);
+    n6Rat(c2, t => [1180 + Math.sin(t * .8 + 2) * 110, 300 + Math.cos(t * .8) * 40], D, .8);
+    // dendrites: few spines vs many
+    const den = (x, n, t0, c) => {
+      const g = G(p, { x, y: 600, o: 0 });
+      path(g, 'M-230 0C-120 -14 120 14 230 0', { stroke: EV.gold, 'stroke-width': 8 });
+      for (let i = 0; i < n; i++) {
+        const u = (i + .5) / n, sx = -220 + u * 440, up = i % 2 ? -1 : 1;
+        const s = G(g, { x: sx, y: 0, s: 0 });
+        path(s, `M0 0V${up * -26}`, { stroke: EV.gold, 'stroke-width': 3 });
+        mk('circle', { cx: 0, cy: up * -30, r: 7, fill: EV.goldHi }, s);
+        tw(s, { s: 1 }, t0 + i * (2.2 / n), .3, back);
+      }
+      tw(g, { o: 1 }, t0 - .4, .4);
+      return g;
+    };
+    den(430, 4, m('spines') + .2); den(1170, 22, m('spines') + .4);
+    lab(p, 'fewer', 430, 680, m('spines') + 1, { size: 28, fill: EV.dim, maxW: 460 });
+    lab(p, 'more', 1170, 680, m('spines') + 1.6, { size: 28, fill: EV.goldHi, maxW: 460 });
+    lab(p, 'spinesL', 800, 540, m('spines') + 2.4, { size: 28, fill: EV.ink, italic: true, maxW: 760 });
+    // and in people
+    const hu = G(p, { o: 0 });
+    const jx = 300, jy = 800;
+    path(hu, `M${jx - 50} ${jy + 10}Q${jx} ${jy - 90} ${jx + 50} ${jy + 10}`, { stroke: EV.dim, 'stroke-width': 2, 'stroke-dasharray': '4 6' });
+    const balls = [0, 1, 2].map(i => evDot(hu, jx, jy, 11, [EV.joy, EV.calm, EV.love][i]));
+    prog(q => { const t = q * D; balls.forEach((b, i) => { const u = ((t * .7 + i / 3) % 1); put(b, { x: jx - 50 + u * 100, y: jy + 10 - Math.sin(u * Math.PI) * 50 }); }); }, 0, D, lin);
+    evText(hu, L('juggle'), { x: jx + 80, y: jy + 10, size: 28, fill: EV.ink, anchor: 'start', maxW: 420 });
+    const mx = 920, my = 790;
+    mk('rect', { x: mx - 40, y: my - 34, width: 80, height: 68, rx: 6, fill: '#0f1a20', stroke: EV.fear, 'stroke-width': 2 }, hu);
+    path(hu, `M${mx - 40} ${my - 10}H${mx + 40}M${mx - 40} ${my + 14}H${mx + 40}M${mx - 14} ${my - 34}V${my + 34}M${mx + 14} ${my - 34}V${my + 34}`, { stroke: EV.fear, 'stroke-width': 1.5, 'stroke-opacity': .6 });
+    const rt = path(hu, `M${mx - 30} ${my + 26}H${mx - 14}V${my - 10}H${mx + 14}V${my - 26}H${mx + 32}`, { stroke: EV.joy, 'stroke-width': 3.5 }, { d: 0 });
+    evText(hu, L('taxi'), { x: mx + 70, y: my + 10, size: 28, fill: EV.ink, anchor: 'start', maxW: 560 });
+    tw(hu, { o: 1 }, m('us') + .3, .6); draw(rt, m('us') + 1.6, 1);
+    tw(c1, { o: .45 }, m('us'), .6); tw(c2, { o: .45 }, m('us'), .6);
+  }],
+
+  ['q3', 'b_exp', (m, D) => {
+    const p = panel(0);
+    const pool = n6Pool(p, D, { edgeX: 0, deckY: 350, surf: 380, x0: 0, x1: 1600, y1: 900, sky: false });
+    mk('rect', { x: 0, y: 0, width: 1600, height: 380, fill: EV.bg }, p);
+    const rav = evPerson(p, { kind: 'm', x: 520, y: 392, s: .75 });
+    put(rav.g, { r: 90 }); rav.g.firstChild.setAttribute('opacity', 0);
+    evMood(rav, 'smile', 0, .01); evArm(rav, -1, 70, 0, 0, .01); evArm(rav, 1, -70, 0, 0, .01);
+    prog(q => put(rav.g, { y: 392 + Math.sin(q * D * 1.8) * 4 }), 0, D, lin);
+    pool.front();
+    const bi = G(p, { x: 1230, y: 230 });
+    evGlow(bi, 0, 0, 170, 'joy', .8);
+    evBrain(bi, { s: .55, stem: false });
+    const seal = G(bi, { x: 150, y: 70 });
+    mk('circle', { cx: 0, cy: 0, r: 34, fill: EV.goldLo, stroke: EV.goldHi, 'stroke-width': 3 }, seal);
+    path(seal, 'M0 -18L5 -6L18 -6L8 3L12 16L0 8L-12 16L-8 3L-18 -6L-5 -6Z', { fill: EV.goldHi });
+    put(p, { o: 0 }); tw(p, { o: 1 }, .1, .5);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-float', prompt: [L('q3p')],
+    build: choice([[L('q3b')], [L('q3c')], [L('q3a')]], 2, L('q3y'), [L('q3nb'), L('q3nc'), null]),
+  }], done) }],
+
+  ['novel', 'b_novel', (m, D) => {
+    const p = panel(0);
+    const br = evBrain(p, { x: 700, y: 450, s: 1.25, o: 0 });
+    tw(br, { o: 1 }, .1, .5);
+    const gA = evGlow(br, -110, -60, 170, 'Gold', 0), gB = evGlow(br, 20, -100, 140, 'Gold', 0), gC = evGlow(br, -40, 20, 130, 'Gold', 0);
+    [gA, gB, gC].forEach(g => br.insertBefore(g, br._netG));
+    const gS = evGlow(br, 130, 96, 90, 'calm', 0);
+    tw(gA, { o: 1 }, m('new'), .6); tw(gB, { o: .9 }, m('new') + .3, .6); tw(gC, { o: .8 }, m('new') + .5, .6);
+    for (let t = m('new') + .2; t < m('weeks'); t += 1.3) evFire(br, t, 1);
+    const fsL = lab(p, 'firstSwim', 700, 120, m('new') + .2, { size: 30, fill: EV.ink, maxW: 900 });
+    // effort meter
+    const mt = G(p, { x: 1330, y: 450, o: 0 });
+    mk('rect', { x: -40, y: -220, width: 80, height: 440, rx: 14, fill: 'none', stroke: EV.dim, 'stroke-width': 2 }, mt);
+    const fill = mk('rect', { x: -34, y: 214, width: 68, height: 0, rx: 10, fill: EV.surprise }, mt);
+    evText(mt, L('effort'), { x: 0, y: -246, size: 28, fill: EV.ink, maxW: 260 });
+    tw(mt, { o: 1 }, m('new') - .2, .4);
+    const lvl = t => t < m('new') ? 0 : t < m('weeks') ? Math.min(.9, (t - m('new')) * .6) : Math.max(.18, .9 - (t - m('weeks')) * .35);
+    prog(q => { const t = q * D, h = lvl(t) * 428; fill.setAttribute('y', 214 - h); fill.setAttribute('height', h); fill.setAttribute('fill', lvl(t) > .5 ? EV.surprise : EV.calm); }, 0, D, lin);
+    const wkT = evText(p, '', { x: 1330, y: 740, size: 30, fill: EV.ink, weight: 600, maxW: 300 });
+    prog(q => { const t = q * D, n = t < m('weeks') ? 1 : Math.min(6, 1 + Math.floor((t - m('weeks')) * 2.2)); wkT.textContent = t < m('new') ? '' : fmt('week', n); }, 0, D, lin);
+    [gA, gB, gC].forEach((g, i) => tw(g, { o: 0, s: .5 }, m('weeks') + i * .3, 1.4));
+    tw(gS, { o: 1 }, m('weeks') + .8, 1);
+    for (let t = m('weeks') + 1; t < D; t += 1.6) pulse(gS, t, 1.15);
+    const leL = lab(p, 'lessEffort', 700, 120, m('weeks') + 1, { size: 30, fill: EV.calm, maxW: 900 });
+    hide(fsL, m('weeks') + .5, .4); hide(leL, m('hypo') - .8, .4);
+    lab(p, 'autoL', 1010, 760, m('auto') + .2, { size: 30, fill: EV.calm, maxW: 500 });
+    // the book's hemisphere idea, marked as a hypothesis
+    const q = n6Later(m('hypo') - .2);
+    evText(q, L('top'), { x: 800, y: 110, size: 28, fill: EV.dim, italic: true, maxW: 600 });
+    const hemi = (side, c) => {
+      const g = G(q, { x: 800 + side * 12, y: 360 });
+      path(g, `M0 -200C${side * 120} -210 ${side * 170} -120 ${side * 170} 0C${side * 170} 130 ${side * 110} 200 0 200Z`, { fill: '#11181c', stroke: c, 'stroke-width': 3 });
+      path(g, `M${side * 30} -150C${side * 90} -120 ${side * 60} -60 ${side * 120} -40M${side * 40} 40C${side * 100} 30 ${side * 80} 110 ${side * 140} 100`, { stroke: c, 'stroke-width': 2, 'stroke-opacity': .35 });
+      return g;
+    };
+    const hl = hemi(-1, EV.gold), hr = hemi(1, EV.gold);
+    evText(q, L('front'), { x: 800, y: 145, size: 24, fill: EV.dim, maxW: 300 });
+    const gr = evGlow(hr, 80, 0, 140, 'Gold', 0), gl = evGlow(hl, -80, 0, 140, 'calm', 0);
+    tw(gr, { o: 1 }, m('hypo') + .4, .5); tw(gr, { o: .15 }, m('hypo') + 2.2, .8); tw(gl, { o: 1 }, m('hypo') + 2.2, .8);
+    const arc = path(q, 'M940 300C900 200 700 200 660 300', { stroke: EV.shame, 'stroke-width': 4, 'stroke-dasharray': '10 8' }, { d: 0 });
+    draw(arc, m('hypo') + 1.4, .9); const ah = evHead(q, 662, 296, 116, EV.shame); put(ah, { o: 0 }); show(ah, m('hypo') + 2.2, .2);
+    lab(q, 'leftH', 470, 370, m('hypo') + 2.2, { size: 30, fill: EV.calm, maxW: 300 });
+    lab(q, 'rightH', 1130, 370, m('hypo') + .6, { size: 30, fill: EV.gold, maxW: 300 });
+    const ht = G(q, { x: 800, y: 660, o: 0 });
+    const htT = evText(ht, L('hypoTag'), { x: 0, y: 0, size: 30, fill: EV.shame, weight: 600, maxW: 1200 });
+    tw(ht, { o: 1 }, m('hypo') + 3.4, .5);
+    const st_ = G(q, { x: 800, y: 760, o: 0 });
+    evPara(st_, L('solidTag'), { x: 0, y: 0, size: 30, fill: EV.calm, weight: 600, maxW: 1200 });
+    tw(st_, { o: 1 }, m('hypo') + 7.5, .6);
+  }],
+
+  ['scicheck', 'b_sci', (m, D) => {
+    const p = panel(0);
+    const hd = evText(p, L('sciCheck'), { x: 800, y: 110, size: 56, font: SERIF, weight: 600, fill: EV.gold, o: 0 });
+    show(hd, .2, .5);
+    path(p, 'M800 170V820', { stroke: EV.faint, 'stroke-width': 2 });
+    const colHead = (x, k, c, icon, t) => {
+      const g = G(p, { x, y: 220, o: 0 });
+      mk('circle', { cx: 0, cy: -10, r: 22, fill: 'none', stroke: c, 'stroke-width': 3 }, g);
+      if (icon === 'ok') path(g, 'M-10 -10L-3 -2L11 -18', { stroke: c, 'stroke-width': 4 });
+      else T(g, '?', { x: 0, y: 0, size: 30, fill: c, weight: 700, anchor: 'middle', font: SANS });
+      evText(g, L(k), { x: 36, y: 0, size: 34, fill: c, weight: 600, anchor: 'start', maxW: 540 });
+      tw(g, { o: 1 }, t, .5);
+    };
+    colHead(110, 'wellSup', EV.calm, 'ok', m('solid') - .2);
+    colHead(870, 'lessCert', EV.surprise, '?', m('model') - .2);
+    ['s1', 's2', 's3', 's4'].forEach((k, i) => {
+      const g = G(p, { x: 130, y: 320 + i * 115, o: 0 });
+      evDot(g, -12, -10, 6, EV.calm);
+      evPara(g, L(k), { x: 10, y: 0, size: 30, maxW: 600, anchor: 'start', fill: EV.ink });
+      put(g, { x: 110 }); tw(g, { o: 1, x: 130 }, m('solid') + .6 + i * 1.7, .5, out);
+    });
+    const m1 = G(p, { x: 890, y: 320, o: 0 });
+    evPara(m1, L('m1'), { x: 0, y: 0, size: 30, maxW: 620, anchor: 'start', fill: EV.ink });
+    tw(m1, { o: 1 }, m('model') + .4, .5);
+    const m2 = G(p, { x: 890, y: 470, o: 0 });
+    evPara(m2, L('m2'), { x: 0, y: 0, size: 30, maxW: 620, anchor: 'start', fill: EV.ink });
+    tw(m2, { o: 1 }, m('glia') + .3, .5);
+    // ten glia to one neuron, corrected to about one to one
+    const gx = 900;
+    const gl = Array.from({ length: 10 }, (_, i) => evDot(p, gx + 20 + (i % 5) * 34, 640 + Math.floor(i / 5) * 34, 11, EV.shame, 0));
+    const nu = evDot(p, gx + 260, 657, 16, EV.gold, 0);
+    gl.forEach((d, i) => tw(d, { o: 1 }, m('glia') + 1 + i * .06, .2)); tw(nu, { o: 1 }, m('glia') + 1.6, .3);
+    evText(p, L('glia'), { x: gx + 88, y: 735, size: 26, fill: EV.shame, o: 0, maxW: 200 }).setAttribute('class', 'n6gl');
+    const glL = lab(p, 'glia', gx + 88, 735, m('glia') + 1.2, { size: 26, fill: EV.shame, maxW: 200 });
+    const nuL = lab(p, 'neurons', gx + 260, 735, m('glia') + 1.6, { size: 26, fill: EV.gold, maxW: 200 });
+    const x10 = evText(p, '10 : 1', { x: gx + 470, y: 670, size: 44, fill: EV.ink, weight: 600, o: 0 });
+    show(x10, m('glia') + 2, .3);
+    draw(path(p, `M${gx + 400} 680L${gx + 540} 650`, { stroke: EV.anger, 'stroke-width': 5 }, { d: 0 }), m('glia') + 3.6, .4);
+    gl.forEach((d, i) => { if (i) tw(d, { o: 0 }, m('glia') + 4.2 + i * .05, .4); });
+    tw(gl[0], { x: gx + 200, y: 657 }, m('glia') + 4.6, .6);
+    lab(p, 'ratio', gx + 470, 740, m('glia') + 5, { size: 32, fill: EV.calm, weight: 600, maxW: 260 });
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    const tt = evText(p, L('b_wrap'), { x: 200, y: 150, size: 54, font: SERIF, weight: 600, fill: EV.gold, anchor: 'start', o: 0 });
+    show(tt, .2, .6);
+    const cols = [EV.gold, EV.goldHi, EV.calm, EV.fear];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -16, y: 290 + i * 150, o: 0 });
+      mk('circle', { cx: 230, cy: -12, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 3 }, g);
+      T(g, String(i + 1), { x: 230, y: -1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 290, y: 0, size: 36, maxW: 1100, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'What does “neurons that fire together, wire together” mean?',
+  q1a: 'When two neurons are active at the same time, again and again, the link between them strengthens, so one comes to trigger the other.',
+  q1b: 'Neurons that sit next to each other are wired for life from birth.', q1c: 'Every new thought builds a brand-new neuron.',
+  q1y: 'Right. Shared activity changes the junction; repeat it and the pair becomes a team.',
+  q1nb: 'Being neighbours is not enough. It is firing at the same time, repeatedly, that strengthens a link.',
+  q1nc: 'Learning mostly changes connections between existing neurons, not the number of neurons.',
+  q2p: 'Will each connection get stronger or weaker?', q2up: 'stronger', q2down: 'weaker',
+  q2r1: 'Ravi swims twice a week for months.', q2r2: 'School Hindi poems, unused for thirty years.',
+  q2r3: 'Two neurons that keep firing at the same moment.', q2r4: 'Snapping at Meera, a habit Ravi has stopped repeating.',
+  q2w1: 'Repeated use thickens the path.', q2w2: 'Unused connections are pruned: use it or lose it.',
+  q2w3: 'Fire together, wire together.', q2w4: 'An old habit that is no longer fed weakens like an unused path.',
+  q3p: 'Ravi forgot most of the video tips, but remembers his first float in detail. Why?',
+  q3a: 'It came through all his senses with a strong feeling, and emotion seals a memory.',
+  q3b: 'Videos can never teach anything.', q3c: 'Water is easier to remember than words.',
+  q3y: 'Right. Experience brings the senses and a feeling together, and that makes the strongest, longest-lasting memories.',
+  q3nb: 'The videos did build a map, and it helped him. Facts alone simply fade faster if they are not used.',
+  q3nc: 'It is not the water. It is the mix of senses and emotion that makes an experience memorable.',
+  p1p: 'Amma, 68, wants to learn video calls to see her grandchildren in Dubai. Which way of teaching fits this chapter best?',
+  p1a: 'Link each step to something she knows (the green button is like lifting the receiver) and let her practise a call every day.',
+  p1b: 'Hand her the phone’s manual to read once.', p1c: 'Tell her the brain is set after sixty, so she should not try.',
+  p1y: 'Association plus repetition: the new hooks onto the known, and daily practice wires it in.',
+  p1nb: 'Facts read once fade quickly. She needs links to what she knows and real practice.',
+  p1nc: 'The brain stays plastic throughout life. Age slows learning a little; it does not stop it.',
+  p2p: 'A client practises a new breathing routine every day, but checks his phone between every breath. What is he missing?',
+  p2a: 'More repetitions: quantity is all that matters.', p2b: 'Focused attention: without it, repetition leaves weak connections.', p2c: 'A different time of day.',
+  p2y: 'Attention is what pushes the signal over the threshold where connections change.',
+  p2na: 'Repetition matters, but without attention it is just going through the motions.', p2nc: 'Timing is not the issue here; his attention keeps leaving.',
+  p3p: 'Which is most likely to become a lasting memory?',
+  p3a: 'A diet tip read once in a forwarded WhatsApp message.', p3b: 'A cooking class where you smelled, tasted and laughed while making a low-sugar payasam.', p3c: 'A phone number repeated aloud once.',
+  p3y: 'Senses, people, a place and a feeling together: an experience, sealed by emotion.',
+  p3na: 'Read once and never used, it stays a faint fact and fades.', p3nc: 'Heard once, used never: the classic memory that fades.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'Adult brains can form and strengthen connections throughout life.', p4r2: 'We inherit exactly half of our neural networks.',
+  p4r3: 'Connections that are never used tend to weaken or be pruned.', p4r4: 'Glial cells outnumber neurons ten to one.',
+  p4w1: 'True. Adult neuroplasticity is well established.', p4w2: 'False. The book’s 50% figure has no solid measurement behind it.',
+  p4w3: 'True. Pruning of unused synapses is well documented, especially in development.', p4w4: 'False. An old myth; counts suggest roughly one to one.',
+});
+Object.assign(TXT.ml, {
+  q1p: '“ഒരുമിച്ച് ഉണരുന്ന ന്യൂറോണുകൾ ഒരുമിച്ച് ചേരുന്നു” എന്നതിന്റെ അർത്ഥം എന്താണ്?',
+  q1a: 'രണ്ട് ന്യൂറോണുകൾ വീണ്ടും വീണ്ടും ഒരേ സമയം ഉണരുമ്പോൾ അവ തമ്മിലുള്ള ബന്ധം ബലപ്പെടുന്നു; പിന്നെ ഒന്ന് മറ്റേതിനെ ഉണർത്തും.',
+  q1b: 'അടുത്തടുത്തുള്ള ന്യൂറോണുകൾ ജനനം മുതൽ എന്നേക്കുമായി വയർ ചെയ്തവയാണ്.', q1c: 'ഓരോ പുതിയ ചിന്തയും ഒരു പുതിയ ന്യൂറോൺ ഉണ്ടാക്കുന്നു.',
+  q1y: 'ശരി. ഒരുമിച്ചുള്ള പ്രവർത്തനം ആ കണ്ണിയെ മാറ്റുന്നു; ആവർത്തിച്ചാൽ ഇരുവരും ഒരു ടീമാകുന്നു.',
+  q1nb: 'അയൽക്കാരായാൽ മാത്രം പോരാ. വീണ്ടും വീണ്ടും ഒരേ സമയം ഉണരുന്നതാണ് ബന്ധം ബലപ്പെടുത്തുന്നത്.',
+  q1nc: 'പഠനം പ്രധാനമായും നിലവിലുള്ള ന്യൂറോണുകൾ തമ്മിലുള്ള ബന്ധങ്ങളെയാണ് മാറ്റുന്നത്, എണ്ണത്തെയല്ല.',
+  q2p: 'ഓരോ ബന്ധവും ബലപ്പെടുമോ, ദുർബലമാകുമോ?', q2up: 'ബലപ്പെടും', q2down: 'ദുർബലമാകും',
+  q2r1: 'മാസങ്ങളോളം ആഴ്ചയിൽ രണ്ടുതവണ രവി നീന്തുന്നു.', q2r2: 'മുപ്പത് വർഷമായി ഉപയോഗിക്കാത്ത സ്കൂൾ ഹിന്ദി കവിതകൾ.',
+  q2r3: 'ഒരേ നിമിഷം വീണ്ടും വീണ്ടും ഉണരുന്ന രണ്ട് ന്യൂറോണുകൾ.', q2r4: 'മീരയോട് ചൂടാകുന്ന ശീലം, രവി ആവർത്തിക്കുന്നത് നിർത്തി.',
+  q2w1: 'ആവർത്തിച്ചുള്ള ഉപയോഗം വഴി തെളിയിക്കുന്നു.', q2w2: 'ഉപയോഗിക്കാത്ത ബന്ധങ്ങൾ വെട്ടിമാറ്റപ്പെടുന്നു.',
+  q2w3: 'ഒരുമിച്ച് ഉണരുന്നവ ഒരുമിച്ച് ചേരുന്നു.', q2w4: 'തീറ്റ കിട്ടാത്ത പഴയ ശീലം, നടക്കാത്ത വഴി പോലെ ദുർബലമാകുന്നു.',
+  q3p: 'വീഡിയോയിലെ ടിപ്പുകൾ മിക്കതും രവി മറന്നു, പക്ഷേ ആദ്യമായി പൊങ്ങിക്കിടന്നത് വിശദമായി ഓർക്കുന്നു. എന്തുകൊണ്ട്?',
+  q3a: 'അത് എല്ലാ ഇന്ദ്രിയങ്ങളിലൂടെയും ശക്തമായ ഒരു വികാരത്തോടെയും വന്നു; വികാരം ഓർമ്മയെ മുദ്രവയ്ക്കുന്നു.',
+  q3b: 'വീഡിയോകൾക്ക് ഒന്നും പഠിപ്പിക്കാനാവില്ല.', q3c: 'വാക്കുകളേക്കാൾ എളുപ്പം വെള്ളം ഓർക്കാം.',
+  q3y: 'ശരി. അനുഭവം ഇന്ദ്രിയങ്ങളെയും വികാരത്തെയും ഒന്നിപ്പിക്കുന്നു; അതാണ് ഏറ്റവും ശക്തവും നീണ്ടുനിൽക്കുന്നതുമായ ഓർമ്മകൾ.',
+  q3nb: 'വീഡിയോകൾ ഒരു മാപ്പ് ഉണ്ടാക്കി, അത് സഹായിച്ചു. ഉപയോഗിക്കാത്ത വസ്തുതകൾ വേഗം മാഞ്ഞുപോകുന്നു എന്ന് മാത്രം.',
+  q3nc: 'വെള്ളമല്ല കാരണം. ഇന്ദ്രിയങ്ങളും വികാരവും ചേരുന്നതാണ് അനുഭവത്തെ ഓർമ്മയിൽ നിർത്തുന്നത്.',
+  p1p: 'ദുബായിലുള്ള പേരക്കുട്ടികളെ കാണാൻ 68 വയസ്സുള്ള അമ്മയ്ക്ക് വീഡിയോ കോൾ പഠിക്കണം. ഈ അധ്യായം അനുസരിച്ച് ഏറ്റവും നല്ല രീതി ഏത്?',
+  p1a: 'ഓരോ ഘട്ടവും അവർക്ക് അറിയാവുന്ന ഒന്നുമായി ബന്ധിപ്പിക്കുക (പച്ച ബട്ടൺ റിസീവർ എടുക്കുന്നതുപോലെ), എല്ലാ ദിവസവും ഒരു കോൾ ചെയ്ത് പരിശീലിക്കട്ടെ.',
+  p1b: 'ഫോണിന്റെ മാനുവൽ ഒരിക്കൽ വായിക്കാൻ കൊടുക്കുക.', p1c: 'അറുപത് കഴിഞ്ഞാൽ തലച്ചോർ ഉറയ്ക്കും, ശ്രമിക്കേണ്ട എന്ന് പറയുക.',
+  p1y: 'ബന്ധിപ്പിക്കലും ആവർത്തനവും: പുതിയത് അറിയാവുന്നതിൽ കൊളുത്തുന്നു, ദിവസേനയുള്ള പരിശീലനം അതിനെ ഉറപ്പിക്കുന്നു.',
+  p1nb: 'ഒരിക്കൽ വായിച്ച വസ്തുതകൾ വേഗം മായും. അറിയാവുന്നവയുമായുള്ള ബന്ധവും യഥാർത്ഥ പരിശീലനവുമാണ് വേണ്ടത്.',
+  p1nc: 'ജീവിതകാലം മുഴുവൻ തലച്ചോർ മാറാൻ കഴിവുള്ളതാണ്. പ്രായം പഠനം അൽപ്പം പതുക്കെയാക്കും, നിർത്തില്ല.',
+  p2p: 'ഒരു ക്ലയന്റ് എല്ലാ ദിവസവും ഒരു പുതിയ ശ്വസനരീതി പരിശീലിക്കുന്നു, പക്ഷേ ഓരോ ശ്വാസത്തിനിടയിലും ഫോൺ നോക്കുന്നു. എന്താണ് കുറവ്?',
+  p2a: 'കൂടുതൽ ആവർത്തനം: എണ്ണം മാത്രമാണ് പ്രധാനം.', p2b: 'കേന്ദ്രീകൃതമായ ശ്രദ്ധ: അതില്ലാതെ ആവർത്തനം ദുർബലമായ ബന്ധങ്ങളേ ഉണ്ടാക്കൂ.', p2c: 'ദിവസത്തിലെ മറ്റൊരു സമയം.',
+  p2y: 'ബന്ധങ്ങൾ മാറുന്ന പരിധിക്ക് മുകളിലേക്ക് സിഗ്നലിനെ ഉയർത്തുന്നത് ശ്രദ്ധയാണ്.',
+  p2na: 'ആവർത്തനം പ്രധാനമാണ്, പക്ഷേ ശ്രദ്ധയില്ലാതെ അത് വെറും ചലനങ്ങൾ മാത്രം.', p2nc: 'സമയമല്ല പ്രശ്നം; അവന്റെ ശ്രദ്ധ വിട്ടുപോകുന്നതാണ്.',
+  p3p: 'ഇവയിൽ ഏതാണ് നീണ്ടുനിൽക്കുന്ന ഓർമ്മയാകാൻ കൂടുതൽ സാധ്യത?',
+  p3a: 'ഫോർവേഡ് ചെയ്ത ഒരു വാട്ട്സ്ആപ്പ് സന്ദേശത്തിൽ ഒരിക്കൽ വായിച്ച ഡയറ്റ് ടിപ്പ്.', p3b: 'പഞ്ചസാര കുറഞ്ഞ പായസം ഉണ്ടാക്കുമ്പോൾ മണത്തും രുചിച്ചും ചിരിച്ചും പങ്കെടുത്ത ഒരു പാചക ക്ലാസ്.', p3c: 'ഒരിക്കൽ ഉറക്കെ പറഞ്ഞ ഒരു ഫോൺ നമ്പർ.',
+  p3y: 'ഇന്ദ്രിയങ്ങൾ, ആളുകൾ, ഒരു സ്ഥലം, ഒരു വികാരം: വികാരം മുദ്രവച്ച ഒരു അനുഭവം.',
+  p3na: 'ഒരിക്കൽ വായിച്ച്, ഒരിക്കലും ഉപയോഗിക്കാത്തത് മങ്ങിയ വസ്തുതയായി മാഞ്ഞുപോകും.', p3nc: 'ഒരിക്കൽ കേട്ടു, ഒരിക്കലും ഉപയോഗിച്ചില്ല: മാഞ്ഞുപോകുന്ന ഓർമ്മയുടെ ഉദാഹരണം.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'മുതിർന്നവരുടെ തലച്ചോറിന് ജീവിതകാലം മുഴുവൻ ബന്ധങ്ങൾ ഉണ്ടാക്കാനും ബലപ്പെടുത്താനും കഴിയും.', p4r2: 'നമ്മുടെ ന്യൂറൽ നെറ്റ്‌വർക്കുകളുടെ കൃത്യം പകുതി പാരമ്പര്യമായി കിട്ടുന്നതാണ്.',
+  p4r3: 'ഒരിക്കലും ഉപയോഗിക്കാത്ത ബന്ധങ്ങൾ ദുർബലമാകുകയോ വെട്ടിമാറ്റപ്പെടുകയോ ചെയ്യും.', p4r4: 'ഗ്ലിയൽ കോശങ്ങൾ ന്യൂറോണുകളുടെ പത്തിരട്ടിയുണ്ട്.',
+  p4w1: 'ശരി. മുതിർന്നവരിലെ ന്യൂറോപ്ലാസ്റ്റിസിറ്റി നന്നായി തെളിയിക്കപ്പെട്ടതാണ്.', p4w2: 'തെറ്റ്. പുസ്തകത്തിലെ 50% കണക്കിന് ഉറച്ച അളവെടുപ്പിന്റെ പിൻബലമില്ല.',
+  p4w3: 'ശരി. ഉപയോഗിക്കാത്ത സിനാപ്സുകളുടെ പ്രൂണിംഗ്, പ്രത്യേകിച്ച് വളർച്ചാ കാലത്ത്, നന്നായി രേഖപ്പെടുത്തിയതാണ്.', p4w4: 'തെറ്റ്. ഒരു പഴയ മിഥ്യ; എണ്ണം ഏകദേശം ഒന്നിന് ഒന്നാണ്.',
+});
+const PRACTICE = [
+  { id: 'p-amma', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 0, L('p1y'), [null, L('p1nb'), L('p1nc')]) },
+  { id: 'p-attend', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 1, L('p2y'), [L('p2na'), null, L('p2nc')]) },
+  { id: 'p-memory', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3c')], [L('p3b')]], 2, L('p3y'), [L('p3na'), L('p3nc'), null]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['t'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['f'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('evolve:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '500 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '500 30px "Noto Serif Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"', 'italic 600 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>
