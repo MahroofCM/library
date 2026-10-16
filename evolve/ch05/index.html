@@ -166,6 +166,23 @@ function pth(parent, d, attrs = {}, o = {}) {
 const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .5); return e; };
 // A new picture later in a beat, faded in on the beat clock.
 function c5Later(t) { const q = panel(t); put(q, { o: 0 }); tw(q, { o: 1 }, t, .4); return q; }
+// Pure functions of the beat clock (one whole-beat prog each), so seeking replays exactly.
+// The shape of pulse(e, t0, k) as a function of time since its start.
+const c5Pulse = (v, k) => v < .22 ? 1 + (k - 1) * out(v / .22) : v < .62 ? k + (1 - k) * io((v - .22) / .4) : 1;
+// Pulses on e at the given times (scale only).
+function c5Beats(e, times, k, D) {
+  prog(q => { const t = q * D; let j = -1; for (let i = 0; i < times.length; i++) if (times[i] <= t) j = i; put(e, { s: j < 0 ? 1 : c5Pulse(t - times[j], k) }); }, 0, D, lin);
+}
+// Elements revealed one by one at at(i): mode 'o' fades in, 'pop' pops in from small, 'd' draws a path.
+function c5Seq(els, at, D, mode = 'o', dur = .3) {
+  prog(q => {
+    const t = q * D;
+    els.forEach((e, i) => {
+      const u = Math.max(0, Math.min(1, (t - at(i)) / dur));
+      put(e, mode === 'd' ? { d: io(u) } : mode === 'pop' ? { o: Math.min(1, u * 2), s: .2 + .8 * back(u) } : { o: io(u) });
+    });
+  }, 0, D, lin);
+}
 // Deterministic noise, so seeking replays the same picture.
 const rnd = i => { const v = Math.sin(i * 127.1 + 311.7) * 43758.5453; return v - Math.floor(v); };
 let c5N = 0;
@@ -349,8 +366,8 @@ const BEATS = [
     evGlow(g, 820, 560, 320, 'Gold', .3);
     evDNA(g, { x: 540, y: 560, w: 520, amp: 32, turns: 4 });
     const net = c5Net(g, { cx: 1080, cy: 560, rx: 230, ry: 120, n: 18, seed: 3, R: 125, col: NUR });
-    net.edges.forEach((e, i) => draw(e.el, .9 + (i % 9) * .2, .6));
-    net.dots.forEach((d, i) => tw(d, { o: 1 }, .9 + (i % 7) * .22, .3));
+    c5Seq(net.edges.map(e => e.el), i => .9 + (i % 9) * .2, D, 'd', .6);
+    c5Seq(net.dots, i => .9 + (i % 7) * .22, D);
     const fl = pth(g, 'M790 560C840 560 860 548 900 552', { stroke: 'none' });
     evFlow(fl, 4, EV.goldHi, 1.2, D - 1.2, { speed: .5, r: 5, parent: g });
     evText(g, L('kicker'), { x: 800, y: 150, size: 26, fill: EV.gold, weight: 500, ls: '6' });
@@ -371,8 +388,8 @@ const BEATS = [
     mk('rect', { x: -300, y: -180, width: 600, height: 360, rx: 8, fill: '#182024' }, sl);
     const sq = evText(sl, L('slateQ'), { x: 0, y: 14, size: 56, font: SERIF, italic: true, fill: '#cfc8b4', maxW: 540 });
     tw(sl, { o: 1 }, .2, .6);
-    tw(sl, { x: 1270, y: 300, s: .62 }, m('cradle') - .2, 1.1, io);
-    hide(sq, m('prewired') - .2, .4);
+    tw(sl, { x: 1270, y: 300, s: .62 }, m('cradle'), 1.1, io);
+    hide(sq, m('prewired'), .4);
     // the room: floor, window, Leena and the cradle
     const room = G(p, { o: 0 });
     mk('rect', { x: 0, y: 760, width: 1600, height: 140, fill: '#0c1114' }, room);
@@ -380,7 +397,7 @@ const BEATS = [
     const win = G(room, { x: 90, y: 170 });
     mk('rect', { x: 0, y: 0, width: 180, height: 240, rx: 6, fill: '#0b1720', stroke: '#2b3632', 'stroke-width': 6 }, win);
     pth(win, 'M90 0V240M0 120H180', { stroke: '#2b3632', 'stroke-width': 5 });
-    tw(room, { o: 1 }, m('cradle') - .1, .7);
+    tw(room, { o: 1 }, m('cradle'), .7);
     const lee = evPerson(room, { kind: 'f', x: 360, y: 760, s: .95 });
     evMood(lee, 'smile', 0, .01); evBreathe(lee, D, 1, .8);
     lab(room, 'leena', 360, 810, m('cradle') + .4, { size: 28, fill: EV.dim });
@@ -392,39 +409,43 @@ const BEATS = [
     const baby = c5Baby(cr, { x: -40, y: 352, s: 1 });
     path(cr, 'M-176 300Q0 640 176 300Q0 470 -176 300Z', { fill: '#7a3b4a', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .6 });
     pth(cr, 'M-150 330Q0 560 150 330', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .35 });
-    lab(room, 'anu', 760, 600, m('cradle') + 1.6, { size: 28, fill: EV.dim });
+    lab(room, 'anu', 760, 600, m('anu') + .1, { size: 28, fill: EV.dim });
     // Leena calls; the sound reaches the cradle; Anu turns
-    evArm(lee, 1, -30, -50, m('turn') - 1.4, .5);
+    evArm(lee, 1, -30, -50, m('calls'), .5);
     const bub = evBubble(room, L('call'), { x: 470, y: 330, w: 220, size: 34, tail: 'left' });
-    pop(bub, m('turn') - 1.1);
+    pop(bub, m('calls') + .3);
     const arcs = [0, 1, 2].map(i => pth(room, `M${430 + i * 26} 410Q${452 + i * 30} 440 ${430 + i * 26} 470`, { stroke: EV.gold, 'stroke-width': 3, opacity: 0 }));
-    arcs.forEach((a, i) => { prog(q => { const t = q * 3, u = (t * .8 + i / 3) % 1; put(a, { x: u * 180, o: Math.sin(u * Math.PI) * .9 }); }, m('turn') - 1, 3, lin); });
+    const AT = Math.max(2, m('turn') + 1.2 - m('calls') - .4);   // the sound travels until just after Anu turns
+    arcs.forEach((a, i) => { prog(q => { const t = q * AT, u = (t * .8 + i / 3) % 1; put(a, { x: u * 180, o: Math.sin(u * Math.PI) * .9 * Math.min(1, (AT - t) / .5) }); }, m('calls') + .4, AT, lin); });
     tw(baby._head, { r: -38 }, m('turn') + .1, .7, back);
-    lab(room, 'untaught', 760, 660, m('turn') + 1.4, { size: 28, fill: EV.gold, italic: true, font: SERIF });
-    hide(bub, m('prewired') - .4, .4);
+    lab(room, 'untaught', 760, 660, m('nobody') + .1, { size: 28, fill: EV.gold, italic: true, font: SERIF });
+    hide(bub, m('prewired'), .4);
     // the slate turns out to be pre-wired
     const pw = G(sl, { o: 0 });
     const spots = [['sound', -190, -100], ['faces', 190, -100], ['touch', -190, 110], ['langW', 190, 110]];
     const hub = [0, 5];
+    const spotM = ['snd', 'fac', 'tch', 'lng'];   // each spot wires up as it is named
     spots.forEach(([k, x, y], i) => {
       const ln = path(pw, `M${hub[0]} ${hub[1]}L${x * .62} ${y * .62}`, { stroke: NAT, 'stroke-width': 4 }, { d: 0 });
-      draw(ln, m('prewired') + .3 + i * .5, .5);
-      evText(pw, L(k), { x, y: y + 14, size: 44, fill: '#e8e0c8', maxW: 250 });
+      draw(ln, m(spotM[i]), .5);
+      const lg = G(pw, { o: 0 });
+      evText(lg, L(k), { x, y: y + 14, size: 44, fill: '#e8e0c8', maxW: 250 });
+      show(lg, m(spotM[i]) + .1, .4);
     });
     evDot(pw, 0, 5, 14, NAT);
     tw(pw, { o: 1 }, m('prewired'), .5);
-    lab(p, 'prewired', 1270, 470, m('prewired') + 2.4, { size: 30, fill: NAT, weight: 600, maxW: 420 });
+    lab(p, 'prewired', 1270, 470, m('wired') + .3, { size: 30, fill: NAT, weight: 600, maxW: 420 });
     // foundation and what is built on it
     const fd = G(p, { x: 1270, y: 720, o: 0 });
     mk('rect', { x: -210, y: 0, width: 420, height: 56, rx: 6, fill: NAT, opacity: .85 }, fd);
     evText(fd, L('genesF'), { x: 0, y: 38, size: 28, fill: '#0b0f12', weight: 600, maxW: 400 });
-    tw(fd, { o: 1 }, m('both') + 2, .5);
+    tw(fd, { o: 1 }, m('genes'), .5);
     const blocks = [[-150, -50], [-50, -50], [50, -50], [150, -50], [-100, -100], [0, -100], [100, -100]].map(([bx, by], i) => {
       const b = put(mk('rect', { x: bx - 46, y: by, width: 92, height: 46, rx: 5, fill: NUR, opacity: .85 }, fd), { o: 0 });
-      tw(b, { o: 1 }, m('both') + 3.2 + i * .3, .3);
+      tw(b, { o: 1 }, m('exp') + .2 + i * .15, .3);
       return b;
     });
-    lab(p, 'expB', 1270, 590, m('both') + 4, { size: 26, fill: NUR, maxW: 470 });
+    lab(p, 'expB', 1270, 590, m('exp') + .5, { size: 26, fill: NUR, maxW: 470 });
   }],
 
   ['build', 'b_build', (m, D) => {
@@ -437,7 +458,7 @@ const BEATS = [
     const zone = G(br, { x: 0, y: -10, o: 0 });
     mk('ellipse', { cx: 0, cy: 0, rx: 60, ry: 22, fill: NAT, opacity: .35 }, zone);
     pth(zone, 'M-60 0A60 22 0 1 0 60 0A60 22 0 1 0 -60 0', { stroke: NAT, 'stroke-width': 2 });
-    tw(zone, { o: 1 }, m('make') - .3, .5);
+    tw(zone, { o: 1 }, m('make'), .5);
     // targets: places in the cortex the new cells travel to
     const N = 34, tg = [];
     for (let i = 0; tg.length < N && i < 600; i++) {
@@ -449,11 +470,11 @@ const BEATS = [
       const sx = (rnd(i + 50) - .5) * 100, sy = -10 + (rnd(i + 70) - .5) * 30;
       const d = evDot(br, sx, sy, 5.5, NAT, 0);
       put(d, { s: .2 });
-      tw(d, { o: 1, s: 1 }, m('make') + .2 + i * .07, .3, back);
       tw(d, { x, y }, m('travel') + (i % 12) * .1, 1.2, io);
-      tw(d, { c_fill: EV.goldHi }, m('branch') - .2, .5);
+      tw(d, { c_fill: EV.goldHi }, m('branch'), .5);
       return d;
     });
+    c5Seq(cells, i => m('make') + .2 + i * .07, D, 'pop');
     // branches between neighbours
     const lines = [];
     tg.forEach(([ax, ay], i) => tg.forEach(([bx, by], j) => {
@@ -462,7 +483,7 @@ const BEATS = [
       if (dd < 64) lines.push({ d: dd, el: path(br, `M${ax.toFixed(1)} ${ay.toFixed(1)}L${bx.toFixed(1)} ${by.toFixed(1)}`, { stroke: EV.goldHi, 'stroke-width': 1.6 }, { d: 0 }) });
       else if (dd < 96) lines.push({ d: dd, late: true, el: path(br, `M${ax.toFixed(1)} ${ay.toFixed(1)}L${bx.toFixed(1)} ${by.toFixed(1)}`, { stroke: EV.goldHi, 'stroke-width': 1.2 }, { d: 0 }) });
     }));
-    lines.forEach((l, i) => { if (!l.late) draw(l.el, m('branch') + .2 + (i % 10) * .12, .5); else draw(l.el, m('peak') + .1 + (i % 12) * .1, .5); });
+    lines.forEach((l, i) => { if (!l.late) draw(l.el, m('branch') + .2 + (i % 10) * .09, .5); else draw(l.el, m('peak') + .1 + (i % 12) * .08, .5); });
     cells.forEach(c => br.appendChild(c));
     // counter
     const ct = G(p, { x: 1250, y: 190, o: 0 });
@@ -481,7 +502,7 @@ const BEATS = [
       mk('circle', { cx: 0, cy: -10, r: 20, fill: c, opacity: .2 }, r);
       if (ok) pth(r, 'M-9 -10L-2 -3L10 -18', { stroke: c, 'stroke-width': 4 }); else pth(r, 'M-7 -17L7 -3M7 -17L-7 -3', { stroke: c, 'stroke-width': 4 });
       evText(r, L(k), { x: 36, y: 0, size: 28, fill: EV.ink, anchor: 'start', maxW: 400 });
-      tw(r, { o: 1 }, m('womb') + 1.2 + i * 1.1, .4);
+      tw(r, { o: 1 }, m(['nutr', 'alc', 'stress'][i]) + .1, .4);
     });
     tw(env, { o: 1 }, m('womb'), .5);
     hide(tv, m('peak'), .4); hide(bn, m('peak'), .4);
@@ -503,12 +524,12 @@ const BEATS = [
         put(d, { x: e.ax + (e.bx - e.ax) * u, y: e.ay + (e.by - e.ay) * u, o: t < 0 ? 0 : Math.min(1, t) * Math.sin(u * Math.PI) });
       });
     }, 0, D, lin);
-    unused.forEach((e, i) => { tw(e.el, { o: .15, 'a_stroke-width': 1.4 }, m('lose') + (i % 8) * .12, .6); tw(e.el, { o: 0 }, m('lose') + 2 + (i % 8) * .15, .6); });
+    unused.forEach((e, i) => { tw(e.el, { o: .15, 'a_stroke-width': 1.4 }, m('lose') + (i % 8) * .12, .6); tw(e.el, { o: 0 }, m('clear') + (i % 8) * .1, .6); });
     lab(ng, 'used', 470, 150, m('use') + .2, { size: 30, fill: EV.goldHi, maxW: 620 });
-    lab(ng, 'stronger', 470, 192, m('use') + .9, { size: 26, fill: EV.dim, italic: true, maxW: 600 });
+    lab(ng, 'stronger', 470, 192, m('strong') + .1, { size: 26, fill: EV.dim, italic: true, maxW: 600 });
     lab(ng, 'unused', 470, 790, m('lose') + .2, { size: 30, fill: EV.dim, maxW: 620 });
-    lab(ng, 'cleared', 470, 832, m('lose') + .9, { size: 26, fill: EV.dim, italic: true, maxW: 600 });
-    tw(ng, { x: -10 }, m('path') - .4, 1, io);
+    lab(ng, 'cleared', 470, 832, m('clear') + .1, { size: 26, fill: EV.dim, italic: true, maxW: 600 });
+    tw(ng, { x: -10 }, m('path'), 1, io);
     // the paddy field, from above
     const fd = G(p, { x: 1210, y: 500, o: 0 });
     mk('rect', { x: -300, y: -270, width: 600, height: 540, rx: 10, fill: '#17291d' }, fd);
@@ -519,25 +540,32 @@ const BEATS = [
     }
     pth(fd, 'M0 -270V270M-300 0H300', { stroke: '#7a6342', 'stroke-width': 24 });
     const sc = pth(fd, 'M-280 250L-30 20', { stroke: '#7a6342', 'stroke-width': 12, 'stroke-dasharray': '18 10', opacity: .9 });
-    tw(fd, { o: 1 }, m('path') - .2, .6);
-    // footprints walk the bund
-    for (let i = 0; i < 12; i++) {
-      const f = evDot(fd, (i % 2 ? 6 : -6), 250 - i * 44, 5, '#e8d6a8', 0);
-      tw(f, { o: .9 }, m('path') + 1 + i * .22, .2); tw(f, { o: .35 }, m('path') + 2.4 + i * .22, .8);
-    }
+    tw(fd, { o: 1 }, m('path'), .6);
+    // footprints walk the bund as it is named (each appears, then settles to a faint print)
+    const feet = [];
+    for (let i = 0; i < 12; i++) feet.push(evDot(fd, (i % 2 ? 6 : -6), 250 - i * 44, 5, '#e8d6a8', 0));
+    prog(q => {
+      const t = q * D;
+      feet.forEach((f, i) => {
+        const t0 = m('bund') + .2 + i * .22, a = Math.max(0, Math.min(1, (t - t0) / .2)), b = Math.max(0, Math.min(1, (t - t0 - 1.4) / .8));
+        put(f, { o: a * (.9 - .55 * io(b)) });
+      });
+    }, 0, D, lin);
     // grass closes over the shortcut
+    const tufts = [];
     for (let i = 0; i < 9; i++) {
       const u = (i + .5) / 9, x = -280 + 250 * u, y = 250 - 230 * u;
       const tuft = G(fd, { x, y, o: 0, s: .3 });
       pth(tuft, 'M-10 8L-4 -14M0 8L2 -18M10 8L6 -12', { stroke: '#6fbf73', 'stroke-width': 3.5 });
-      tw(tuft, { o: 1, s: 1 }, m('path') + 4 + i * .25, .4, back);
+      tufts.push(tuft);
     }
-    tw(sc, { o: .2 }, m('path') + 5, 1.2);
-    lab(p, 'walked', 1210, 212, m('path') + 1.4, { size: 26, fill: '#e8d6a8', maxW: 520 });
-    lab(p, 'shortcut', 1210, 812, m('path') + 4, { size: 26, fill: EV.dim, italic: true, maxW: 560 });
+    c5Seq(tufts, i => m('grass') + i * .25, D, 'pop', .4);
+    tw(sc, { o: .2 }, m('grass') + .3, 1.2);
+    lab(p, 'walked', 1210, 212, m('bund') + .3, { size: 26, fill: '#e8d6a8', maxW: 520 });
+    lab(p, 'shortcut', 1210, 812, m('short') + .2, { size: 26, fill: EV.dim, italic: true, maxW: 560 });
     const r = evText(p, L('useIt'), { x: 800, y: 92, size: 50, font: SERIF, weight: 600, fill: EV.gold, o: 0, maxW: 1100 });
     show(r, m('rule'), .6);
-    lab(p, 'notDamage', 800, 868, m('rule') + 2.5, { size: 28, fill: EV.ink, italic: true, maxW: 1300 });
+    lab(p, 'notDamage', 800, 868, m('damage') + .1, { size: 28, fill: EV.ink, italic: true, maxW: 1300 });
   }],
 
   ['q1', 'b_prune', (m, D) => {
@@ -561,10 +589,10 @@ const BEATS = [
     const chips = sounds.map((s_, i) => {
       const a = (-90 + i * 60) * Math.PI / 180;
       const c = c5Chip(nb, s_, 800 + Math.cos(a) * 170, 300 + Math.sin(a) * 150, EV.ink);
-      put(c, { s: .2, o: 0 }); pop(c, m('all') + .3 + i * .25);
+      put(c, { s: .2, o: 0 }); pop(c, m('all') + .3 + i * .15);
       return c;
     });
-    lab(nb, 'newborn', 800, 520, m('all') + 1.2, { size: 30, fill: EV.ink, maxW: 600 });
+    lab(nb, 'newborn', 800, 520, m('all') + .6, { size: 30, fill: EV.ink, maxW: 600 });
     // Kozhikode: the sounds of home stay sharp
     const kz = G(p, { x: 300, y: 330, o: 0 });
     c5Face(kz, 0, 0, .9, NUR);
@@ -572,9 +600,9 @@ const BEATS = [
     tw(kz, { o: 1 }, m('keep'), .5);
     const zh = c5Chip(p, 'ഴ', 800, 150, NUR, 40);
     put(zh, { o: 0 });
-    tw(zh, { o: 1 }, m('keep') + .4, .3); tw(zh, { x: 300, y: 500 }, m('keep') + .5, 1, io);
-    pulse(zh, m('keep') + 1.7, 1.3); pulse(zh, m('keep') + 2.6, 1.2);
-    lab(p, 'zhKept', 300, 600, m('keep') + 1.6, { size: 28, fill: NUR, maxW: 420 });
+    tw(zh, { o: 1 }, m('zh'), .3); tw(zh, { x: 300, y: 500 }, m('zh') + .1, 1, io);
+    c5Beats(zh, [m('zh') + 1.2, m('zh') + 2.1], 1.25, D);
+    lab(p, 'zhKept', 300, 600, m('zh') + 1, { size: 28, fill: NUR, maxW: 420 });
     // Tokyo: r and l merge
     const tk = G(p, { x: 1300, y: 330, o: 0 });
     c5Face(tk, 0, 0, .9, EV.fear);
@@ -583,14 +611,16 @@ const BEATS = [
     const r_ = c5Chip(p, 'r', 970, 300 + Math.sin(-30 * Math.PI / 180) * 150 + 0, EV.ink), l_ = c5Chip(p, 'l', 970, 375, EV.ink);
     put(r_, { x: 800 + Math.cos(-30 * Math.PI / 180) * 170, y: 300 + Math.sin(-30 * Math.PI / 180) * 150, o: 0 });
     put(l_, { x: 800 + Math.cos(30 * Math.PI / 180) * 170, y: 300 + Math.sin(30 * Math.PI / 180) * 150, o: 0 });
-    [r_, l_].forEach((c, i) => { tw(c, { o: 1 }, m('fade') + .3, .2); tw(c, { x: 1250 + i * 100, y: 500 }, m('fade') + .4, 1, io); });
-    tw(r_, { x: 1272 }, m('fade') + 2.6, .9, io); tw(l_, { x: 1328 }, m('fade') + 2.6, .9, io);
-    [r_, l_].forEach(c => { tw(c._ring, { c_stroke: '#5b5650' }, m('fade') + 2.6, .8); tw(c._t, { c_fill: '#8a8478' }, m('fade') + 2.6, .8); });
-    [r_, l_].forEach(c => tw(c, { o: 0 }, m('fade') + 3.5, .3));
-    const rl = c5Chip(p, 'r = l', 1300, 500, '#8a8478', 48); put(rl, { o: 0 }); tw(rl, { o: 1 }, m('fade') + 3.85, .3);
-    lab(p, 'rl', 1300, 600, m('fade') + 3, { size: 28, fill: EV.fear, maxW: 440 });
+    [r_, l_].forEach((c, i) => { tw(c, { o: 1 }, m('rl'), .2); tw(c, { x: 1250 + i * 100, y: 500 }, m('rl') + .1, 1, io); });
+    tw(r_, { x: 1272 }, m('bday') + .2, .9, io); tw(l_, { x: 1328 }, m('bday') + .2, .9, io);
+    [r_, l_].forEach(c => { tw(c._ring, { c_stroke: '#5b5650' }, m('bday') + .2, .8); tw(c._t, { c_fill: '#8a8478' }, m('bday') + .2, .8); });
+    [r_, l_].forEach(c => tw(c, { o: 0 }, m('same') + .3, .3));
+    const rl = c5Chip(p, 'r = l', 1300, 500, '#8a8478', 48); put(rl, { o: 0 }); tw(rl, { o: 1 }, m('same') + .5, .3);
+    lab(p, 'rl', 1300, 600, m('bday') + .2, { size: 28, fill: EV.fear, maxW: 440 });
     tw(nb, { o: .25 }, m('keep'), .6);
-    chips.forEach((c, i) => { if (i < 3) tw(c, { o: 0 }, m('keep') + .4, .3); });
+    // each ring sound leaves as its own baby takes it: ഴ to Kozhikode, r and l to Tokyo
+    tw(chips[0], { o: 0 }, m('zh'), .3);
+    chips.forEach((c, i) => { if (i === 1 || i === 2) tw(c, { o: 0 }, m('rl'), .3); });
     // the babbling study: answered right away vs at random
     const q = c5Later(m('reply'));
     const row = (y, key, smiles, col, t0) => {
@@ -600,26 +630,28 @@ const BEATS = [
       [220, 380, 560, 700, 880].forEach((bx, i) => {
         const b = G(g, { x: bx, y: 0, o: 0 });
         pth(b, 'M-14 -4Q-7 -22 0 -4T14 -4', { stroke: EV.goldHi, 'stroke-width': 3.5 });
-        tw(b, { o: 1 }, t0 + .4 + i * .45, .2);
+        tw(b, { o: 1 }, t0 + .2 + i * .18, .2);
       });
-      smiles.forEach((sx, i) => { const s = evDot(g, sx, 30, 11, NUR, 0); tw(s, { o: 1 }, t0 + .6 + i * .45, .2); });
+      smiles.forEach((sx, i) => { const s = evDot(g, sx, 30, 11, NUR, 0); tw(s, { o: 1 }, t0 + .35 + i * .18, .2); });
       tw(g, { o: 1 }, t0, .4);
       return g;
     };
-    row(300, 'answered', [250, 410, 590, 730, 910], NUR, m('reply') + .5);
-    row(540, 'random', [300, 470, 520, 790, 960], EV.dim, m('reply') + 2.8);
+    row(300, 'answered', [250, 410, 590, 730, 910], NUR, m('ans'));
+    row(540, 'random', [300, 470, 520, 790, 960], EV.dim, m('rand'));
     const key = G(q, { x: 160, y: 680, o: 0 });
     pth(key, 'M0 -4Q7 -22 14 -4T28 -4', { stroke: EV.goldHi, 'stroke-width': 3.5 });
     evText(key, L('babble'), { x: 44, y: 6, size: 26, fill: EV.dim, anchor: 'start' });
     evDot(key, 220, -6, 11, NUR); evText(key, L('smile'), { x: 244, y: 6, size: 26, fill: EV.dim, anchor: 'start' });
-    tw(key, { o: 1 }, m('reply') + 1, .4);
+    tw(key, { o: 1 }, m('ans') + .6, .4);
     // result bars
     const bars = G(q, { x: 1120, y: 0, o: 0 });
     evText(bars, L('speechLike'), { x: 170, y: 220, size: 26, fill: EV.ink, maxW: 380 });
     const bA = put(mk('rect', { x: 0, y: 270, width: 0, height: 44, rx: 6, fill: NUR }, bars), {});
     const bB = put(mk('rect', { x: 0, y: 510, width: 0, height: 44, rx: 6, fill: EV.dim }, bars), {});
-    tw(bars, { o: 1 }, m('reply') + 5, .4);
-    prog(k => { bA.setAttribute('width', 330 * k); bB.setAttribute('width', 170 * k); }, m('reply') + 5.3, 1.6, out);
+    // bars: answered babies on 'speech-like sounds', the random-smile babies once that row is named
+    tw(bars, { o: 1 }, m('speech'), .4);
+    prog(k => bA.setAttribute('width', 330 * k), m('speech') + .3, 1.4, out);
+    prog(k => bB.setAttribute('width', 170 * k), Math.max(m('speech'), m('rand')) + .5, 1.2, out);
     const cv = evText(q, L('conversation'), { x: 800, y: 820, size: 40, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 1300 });
     show(cv, m('turns'), .6);
   }],
@@ -642,7 +674,7 @@ const BEATS = [
     tw(tl, { o: 1 }, .2, .5);
     const mk_ = G(p, { x: AX(0), y: Y });
     mk('circle', { cx: 0, cy: 0, r: 13, fill: EV.gold }, mk_);
-    const ageOf = t => t < m('two') ? 0 : t < m('fuel') ? 2 * Math.min(1, (t - m('two')) / 1) : t < m('teen') ? 2 + 3 * Math.min(1, (t - m('fuel')) / 1) : t < m('front') ? 5 + 9 * Math.min(1, (t - m('teen')) / 1.4) : t < m('ravi') ? 14 + 11 * Math.min(1, (t - m('front')) / 2.5) : 25;
+    const ageOf = t => t < m('two') ? 0 : t < m('fuel') ? 2 * Math.min(1, (t - m('two')) / 1) : t < m('teen') ? 2 + 3 * Math.min(1, (t - m('fuel')) / 1) : t < m('front') ? 5 + 9 * Math.min(1, (t - m('teen')) / 1.4) : t < m('ravi') ? 14 + 11 * Math.min(1, (t - m('front')) / Math.max(1, m('mid') + .6 - m('front'))) : 25;
     prog(q => { const t = q * D, a = ageOf(t); put(mk_, { x: AX(a) }); put(br, { s: .72 + .28 * Math.min(1, a / 2) }); }, 0, D, lin);
     prog(q => setWash(140 * q), m('two'), 1.5, io);
     prog(q => setWash(140 + 120 * q), m('teen'), 2, io);
@@ -655,47 +687,48 @@ const BEATS = [
     const lv = mk('rect', { x: -34, y: 134, width: 68, height: 0, rx: 9, fill: EV.joy }, en);
     evText(en, L('energy'), { x: 0, y: 186, size: 26, fill: EV.dim, maxW: 400 });
     const pc = evText(en, L('twoThirds'), { x: 70, y: 0, size: 32, fill: EV.joy, weight: 600, anchor: 'start', o: 0, maxW: 280 });
-    tw(en, { o: 1 }, m('fuel') - .2, .4);
-    prog(q => { lv.setAttribute('height', 268 * .66 * q); lv.setAttribute('y', 134 - 268 * .66 * q); }, m('fuel') + .2, 1.4, out);
-    show(pc, m('fuel') + 1.4);
+    tw(en, { o: 1 }, m('fuel'), .4);
+    prog(q => { lv.setAttribute('height', 268 * .66 * q); lv.setAttribute('y', 134 - 268 * .66 * q); }, m('fuel') + .2, Math.max(.8, m('thirds') + .3 - m('fuel') - .2), out);
+    show(pc, m('thirds') + .1);
     tw(en, { o: 0 }, m('teen'), .5);
     // teens: the emotional centres run hot
     const hot = G(br, { x: 10, y: 0, o: 0 });
     evGlow(hot, 0, 0, 90, 'love', 1); evDot(hot, 0, 0, 16, EV.love);
-    tw(hot, { o: 1 }, m('teen') + .8, .6);
-    for (let k = 0; k < 4; k++) pulse(hot, m('teen') + 1.2 + k * .7, 1.25);
+    tw(hot, { o: 1 }, m('hot'), .6);
+    c5Beats(hot, [0, 1, 2, 3].map(k => m('hot') + .4 + k * .7), 1.25, D);
     const tw_ = lab(p, 'teenWave', AX(14), 640, m('teen') + .3, { size: 26, fill: EV.ink, maxW: 380 });
-    lab(p, 'emotional', 1050, 300, m('teen') + 1.4, { size: 28, fill: EV.love, anchor: 'start', maxW: 420 });
+    lab(p, 'emotional', 1050, 300, m('hot') + .2, { size: 28, fill: EV.love, anchor: 'start', maxW: 420 });
     tw(hot, { o: .35 }, m('front'), .6);
     // the front comes last
-    tw(br._lobes.fro, { o: 1 }, m('front') + 1.6, .8);
+    tw(br._lobes.fro, { o: 1 }, m('pfc'), .8);
     const pf = G(p, { o: 0 });
     evText(pf, L('pfc'), { x: 250, y: 130, size: 34, fill: EV.gold, weight: 600, maxW: 360 });
-    evPara(pf, L('pfcJob'), { x: 250, y: 172, size: 26, fill: EV.ink, maxW: 380 });
-    tw(pf, { o: 1 }, m('front') + .6, .5);
-    hide(tw_, m('front') + 2.6, .4);
-    lab(p, 'mid20s', AX(25), 640, m('front') + 3, { size: 26, fill: EV.gold, maxW: 260 });
+    tw(pf, { o: 1 }, m('pfc') + .1, .5);
+    const pj = G(p, { o: 0 });
+    evPara(pj, L('pfcJob'), { x: 250, y: 172, size: 26, fill: EV.ink, maxW: 380 });
+    show(pj, m('plan'), .5);
+    hide(tw_, m('mid'), .4);
+    lab(p, 'mid20s', AX(25), 640, m('mid') + .2, { size: 26, fill: EV.gold, maxW: 260 });
     // Ravi then and now
     const rv = G(p, { x: 1250, y: 540, o: 0 });
     pth(rv, 'M-70 0A26 26 0 1 0 -18 0A26 26 0 1 0 -70 0M18 0A26 26 0 1 0 70 0A26 26 0 1 0 18 0M-44 0L-6 -40H30L44 0M-6 -40L-20 -56', { stroke: EV.ink, 'stroke-width': 4 });
     [0, 1, 2].forEach(i => pth(rv, `M${-110 - i * 14} ${-36 + i * 18}H${-150 - i * 14}`, { stroke: EV.anger, 'stroke-width': 3, opacity: .8 }));
     evText(rv, L('ravi19'), { x: 0, y: 70, size: 26, fill: EV.dim });
     tw(rv, { o: 1 }, m('ravi'), .4); tw(rv, { x: 1180 }, m('ravi'), 1.6, out);
-    tw(en, { o: 0 }, m('ravi') - .2, .3);
+    tw(en, { o: 0 }, m('ravi'), .3);
     const r40 = evPerson(p, { kind: 'm', x: 1440, y: 660, s: .4, o: 0 });
-    tw(r40.g, { o: 1 }, m('ravi') + 2.2, .5);
-    evMood(r40, 'worried', m('ravi') + 2.4); evArm(r40, 1, -150, -40, m('ravi') + 2.6, .5);
-    lab(p, 'ravi40', 1440, 700, m('ravi') + 2.4, { size: 26, fill: EV.dim });
+    tw(r40.g, { o: 1 }, m('forty'), .5);
+    evMood(r40, 'worried', m('forty') + .2); evArm(r40, 1, -150, -40, m('forty') + .4, .5);
+    lab(p, 'ravi40', 1440, 700, m('forty') + .2, { size: 26, fill: EV.dim });
   }],
 
   ['shared', 'b_shared', (m, D) => {
     const p = panel(0);
     const br = c5Lobes(p, { x: 800, y: 420, s: 1.2, o: 0, op: .45 });
     tw(br, { o: 1 }, .1, .6);
-    const span = m('same') - m('all');
     const steps = [['occ', 'vision', 1100, 420, 'start', EV.fear], ['tem', 'hearing', 760, 690, 'middle', EV.surprise], ['strip', 'touchMove', 830, 150, 'middle', EV.calm], ['lang', 'languageL', 400, 520, 'end', EV.love]];
     const labs = steps.map(([k, key, x, y, anchor, c], i) => {
-      const t = m('all') + span * (.18 + i * .2);
+      const t = m(['vis', 'hear', 'touch', 'lang'][i]);   // each region lights as it is named
       if (k === 'strip') tw(br._strip, { o: 1 }, t, .5); else if (k === 'lang') tw(br._lang, { o: 1 }, t, .5); else tw(br._lobes[k], { o: 1 }, t, .5);
       return lab(p, key, x, y, t + .2, { size: 30, fill: c, anchor, weight: 600, maxW: 360 });
     });
@@ -708,7 +741,7 @@ const BEATS = [
       tw(b, { o: 1 }, m('same') + .6 + i * .4, .6);
       return b;
     });
-    lab(p, 'sameAll', 800, 560, m('same') + 1.4, { size: 30, fill: EV.ink, italic: true, font: SERIF, maxW: 1100 });
+    lab(p, 'sameAll', 800, 560, m('same') + .5,{ size: 30, fill: EV.ink, italic: true, font: SERIF, maxW: 1100 });
     // the phones
     const q = c5Later(m('phone'));
     const homes = [[EV.fear, '#0f2a36'], [EV.anger, '#3a1a14'], [EV.calm, '#163024']];
@@ -724,11 +757,11 @@ const BEATS = [
         if (rnd(i * 7 + k) < .5) mk('rect', { x: ix - 17, y: iy - 17, width: 34, height: 34, rx: 9, fill: c }, sc);
         else mk('circle', { cx: ix, cy: iy, r: 17, fill: c }, sc);
       }
-      tw(sc, { o: 1 }, m('home') + .3 + i * .5, .5);
+      tw(sc, { o: 1 }, m('home') + .3 + i * .4, .5);
       return f;
     });
-    lab(q, 'layout', 800, 660, m('phone') + 1, { size: 30, fill: NAT, weight: 600, maxW: 1100 });
-    lab(q, 'homeScreen', 800, 720, m('home') + 1.6, { size: 30, fill: NUR, weight: 600, maxW: 1100 });
+    lab(q, 'layout', 800, 660, m('layout') + .1, { size: 30, fill: NAT, weight: 600, maxW: 1100 });
+    lab(q, 'homeScreen', 800, 720, m('detail') + .1, { size: 30, fill: NUR, weight: 600, maxW: 1100 });
   }],
 
   ['parents', 'b_parents', (m, D) => {
@@ -746,16 +779,17 @@ const BEATS = [
       const src = w === 'd' ? dad[i] : mum[i];
       const c = tile(0, 0, w === 'd' ? DAD[i] : MUM[i]);
       put(c, { x: st(src).x, y: st(src).y });
-      tw(c, { o: 1 }, m('mix') + .2 + k * .18, .2);
-      tw(c, { x: 576 + k * 64, y: 400 }, m('mix') + .3 + k * .18, .9, io);
-      tw(src, { o: .3 }, m('mix') + .3 + k * .18, .4);
+      tw(c, { o: 1 }, m('mix') + .2 + k * .12, .2);
+      tw(c, { x: 576 + k * 64, y: 400 }, m('mix') + .3 + k * .12, .9, io);
+      tw(src, { o: .3 }, m('mix') + .3 + k * .12, .4);
     });
-    lab(p, 'you', 800, 490, m('mix') + 2.2, { size: 30, fill: EV.ink, weight: 600, maxW: 900 });
-    lab(p, 'twin', 800, 530, m('mix') + 3.4, { size: 26, fill: EV.dim, italic: true, maxW: 700 });
-    // temperament dials
+    lab(p, 'you', 800, 490, m('combo') + .2, { size: 30, fill: EV.ink, weight: 600, maxW: 900 });
+    lab(p, 'twin', 800, 530, m('twin') + .1, { size: 26, fill: EV.dim, italic: true, maxW: 700 });
+    // temperament dials, each as it is named
     const dials = [['startle', EV.fear, 30], ['warms', EV.joy, -25], ['upset', EV.anger, 15]].map(([k, c, a], i) => {
-      const d = c5Dial(p, 560 + i * 240, 680, k, c, m('temp') + i * .4);
-      tw(d._nd, { r: a }, m('temp') + .6 + i * .4, 1, back);
+      const t = m(['startle', 'warm', 'upset'][i]);
+      const d = c5Dial(p, 560 + i * 240, 680, k, c, t);
+      tw(d._nd, { r: a }, t + .3, 1, back);
       return d;
     });
     lab(p, 'temperament', 800, 590, m('temp') + .2, { size: 28, fill: EV.gold, italic: true, font: SERIF, maxW: 700 });
@@ -773,7 +807,7 @@ const BEATS = [
     dials.forEach((d, i) => prog(q => { const t = q * (D - m('tilt')); put(d._nd, { r: [30, -25, 15][i] + Math.sin(t * 1.4 + i) * 22 * Math.min(1, t) }); }, m('tilt') + .3, D - m('tilt') - .3, lin));
     lab(p, 'notHalf', 380, 790, m('tilt') + .2, { size: 26, fill: EV.dim, italic: true, maxW: 500 });
     const td = evText(p, L('tendencies'), { x: 800, y: 860, size: 44, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 1200 });
-    show(td, m('tilt') + 2, .6);
+    show(td, m('tend'), .6);
     put(tb, { x: 1150 });
   }],
 
@@ -785,18 +819,18 @@ const BEATS = [
     const par = evPerson(cl, { kind: 'f', x: 330, y: 640, s: .8 });
     evMood(par, 'hurt', 0, .01); evArm(par, 1, -30, -60, m('claim'), .5);
     const bub = evBubble(cl, L('complain'), { x: 420, y: 300, w: 380, size: 30, tail: 'left', edge: EV.anger });
-    pop(bub, m('claim') + .3);
+    pop(bub, m('habit'));
     const dn = evDNA(cl, { x: 800, y: 470, w: 380, amp: 26, turns: 3, o: 0 });
-    tw(dn, { o: 1 }, m('claim') + 1.2, .5);
+    tw(dn, { o: 1 }, m('wiring'), .5);
     const arw = path(cl, 'M520 470H600M1000 470H1110', { stroke: EV.anger, 'stroke-width': 4, 'stroke-dasharray': '10 8' }, { d: 0 });
-    draw(arw, m('claim') + 2, 1);
+    draw(arw, m('child'), 1);
     const kid = c5Baby(cl, { x: 1260, y: 470, s: 1.2 });
-    put(kid, { o: 0 }); tw(kid, { o: 1 }, m('claim') + 2.4, .5);
-    lab(cl, 'inGenes', 800, 580, m('claim') + 2.6, { size: 30, fill: EV.ink, maxW: 600 });
+    put(kid, { o: 0 }); tw(kid, { o: 1 }, m('child') + .4, .5);
+    lab(cl, 'inGenes', 800, 580, m('child') + .6, { size: 30, fill: EV.ink, maxW: 600 });
     const x = pth(cl, 'M680 380L920 560M920 380L680 560', { stroke: EV.anger, 'stroke-width': 8 }, { d: 0 });
     draw(x, m('no'), .5);
     lab(cl, 'notInDna', 800, 650, m('no') + .5, { size: 30, fill: EV.anger, weight: 600, maxW: 900 });
-    lab(cl, 'veena', 800, 700, m('no') + 2.6, { size: 26, fill: EV.dim, italic: true, maxW: 700 });
+    lab(cl, 'veena', 800, 700, m('veena') + .2, { size: 26, fill: EV.dim, italic: true, maxW: 700 });
     // what is passed on: the home. Ravi and Anu in traffic
     const q = c5Later(m('car'));
     mk('rect', { x: 0, y: 760, width: 1600, height: 140, fill: '#0c1114' }, q);
@@ -811,17 +845,17 @@ const BEATS = [
     evMood(rav, 'tense', .01, .01);
     c5Car(q, 820, 700);
     const sighR = evBubble(q, L('traffic'), { x: 640, y: 380, w: 380, size: 30, tail: 'left', edge: EV.anger });
-    evMood(rav, 'angry', m('car') + 1.4); pop(sighR, m('car') + 1.6);
-    tw(rav.head, { r: -6 }, m('car') + 1.6, .3); tw(rav.head, { r: 0 }, m('car') + 2.2, .5);
+    evMood(rav, 'angry', m('sighs')); pop(sighR, m('sighs') + .2);
+    tw(rav.head, { r: -6 }, m('sighs') + .2, .3); tw(rav.head, { r: 0 }, m('sighs') + .8, .5);
     // Anu copies, on cue
     const sighA = evBubble(q, L('sigh'), { x: 1080, y: 470, w: 180, size: 30, tail: 'left', edge: EV.anger });
     evMood(anu, 'worried', m('anu') + .2); pop(sighA, m('anu') + .4);
     tw(anu.head, { r: -6 }, m('anu') + .4, .3); tw(anu.head, { r: 0 }, m('anu') + 1, .5);
     const eye = path(q, 'M972 545Q850 470 735 505', { stroke: NUR, 'stroke-width': 3, 'stroke-dasharray': '8 8' }, { d: 0 });
-    draw(eye, m('anu') + 1.6, .8);
-    lab(q, 'byWatching', 1290, 470, m('anu') + 2, { size: 30, fill: NUR, weight: 600, anchor: 'start', maxW: 290 });
+    draw(eye, m('watch'), .8);
+    lab(q, 'byWatching', 1290, 470, m('watch') + .3, { size: 30, fill: NUR, weight: 600, anchor: 'start', maxW: 290 });
     const gn = evText(q, L('relearn'), { x: 800, y: 150, size: 46, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 1300 });
-    show(gn, m('good') + .6, .7);
+    show(gn, m('again'), .7);
   }],
 
   ['epi', 'b_epi', (m, D) => {
@@ -846,12 +880,12 @@ const BEATS = [
       mk('circle', { cx: 0, cy: 0, r: 34, fill: '#141b1f', stroke: EV.gold, 'stroke-width': 3 }, k);
       k._p = G(k, { r: 0 }); pth(k._p, 'M0 0V-26', { stroke: EV.goldHi, 'stroke-width': 5 });
       pth(p, `M${st(g).x} 196V270`, { stroke: EV.gold, 'stroke-width': 2, 'stroke-dasharray': '6 6', opacity: .5 });
-      tw(k, { o: 1 }, m('tags') + i * .2, .4);
-      tw(k._p, { r: dir[i] * 70 }, m('tags') + 1.2 + i * .3, .8, back);
-      tw(g._glow, { o: dir[i] > 0 ? 1 : 0 }, m('tags') + 1.4 + i * .3, .8);
-      tw(g._box, { o: dir[i] > 0 ? 1 : .35 }, m('tags') + 1.4 + i * .3, .8);
+      tw(k, { o: 1 }, m('dimmer') + i * .15, .4);
+      tw(k._p, { r: dir[i] * 70 }, m('updown') + i * .25, .8, back);
+      tw(g._glow, { o: dir[i] > 0 ? 1 : 0 }, m('updown') + .2 + i * .25, .8);
+      tw(g._box, { o: dir[i] > 0 ? 1 : .35 }, m('updown') + .2 + i * .25, .8);
       // tags settle on the gene
-      for (let t = 0; t < 3; t++) { const d = evDot(g, -50 + t * 50, -90, 7, EV.goldHi, 0); tw(d, { o: 1 }, m('tags') + .6 + i * .3 + t * .1, .2); tw(d, { y: -58 }, m('tags') + .6 + i * .3 + t * .1, .5, out); }
+      for (let t = 0; t < 3; t++) { const d = evDot(g, -50 + t * 50, -90, 7, EV.goldHi, 0); tw(d, { o: 1 }, m('tags') + .2 + i * .2 + t * .08, .2); tw(d, { y: -58 }, m('tags') + .2 + i * .2 + t * .08, .5, out); }
       return k;
     });
     hide(lt, m('tags'), .4);
@@ -863,17 +897,18 @@ const BEATS = [
       evGlow(g, 0, 0, 50, k === 'food' ? 'joy' : k === 'stressW' ? 'anger' : k === 'sleep' ? 'fear' : 'love', .6);
       evDot(g, 0, 0, 16, c);
       evText(g, L(k), { x: 0, y: 56, size: 28, fill: EV.ink, maxW: 260 });
-      tw(g, { o: 1 }, m('life') + i * .45, .4);
-      tw(knobs[i]._p, { r: dir[i] * 70 - dir[i] * 50 }, m('life') + .4 + i * .45, .7, io);
-      pulse(knobs[i], m('life') + .4 + i * .45, 1.2);
+      const t = m(['life', 'stress', 'sleep', 'care'][i]);   // food is the first word after 'life'
+      tw(g, { o: 1 }, t, .4);
+      tw(knobs[i]._p, { r: dir[i] * 70 - dir[i] * 50 }, t + .3, .7, io);
+      pulse(knobs[i], t + .3, 1.2);
     });
-    lab(p, 'ratCare', 800, 780, m('life') + 3.6, { size: 26, fill: EV.dim, italic: true, maxW: 1300 });
+    lab(p, 'ratCare', 800, 780, m('rats') + .2, { size: 26, fill: EV.dim, italic: true, maxW: 1300 });
     // to the next generation?
     const q = c5Later(m('next'));
     evText(q, L('toKids'), { x: 800, y: 170, size: 52, font: SERIF, weight: 600, fill: EV.gold, maxW: 1300 });
-    c5Row(q, 340, 'unsure', 'animals', m('next') + 1.2);
-    c5Row(q, 500, 'unsure', 'humans', m('next') + 2.6);
-    c5Row(q, 660, 'no', 'memories', m('next') + 4.6);
+    c5Row(q, 340, 'unsure', 'animals', m('animals'));
+    c5Row(q, 500, 'unsure', 'humans', m('humans'));
+    c5Row(q, 660, 'no', 'memories', m('mem'));
   }],
 
   ['q2', 'b_epi', (m, D) => {
@@ -903,48 +938,48 @@ const BEATS = [
       { stroke: EV.gold, 'stroke-width': 2, opacity: .7 });
     [['cheer', -110, -170], ['hope', 4, -190], ['pride', 120, -160], ['caution', -70, -80], ['wit', 70, -60], ['thrift', 170, -60]].forEach(([k, x, y], i) => {
       const t = evText(hd, L(k), { x, y, size: 28, fill: EV.goldHi, italic: true, o: 0, maxW: 120, font: SERIF });
-      tw(t, { o: 1 }, m('bumps') + .6 + i * .3, .3);
+      tw(t, { o: 1 }, m('bumps') + .5 + i * .1, .3);
     });
     tw(hd, { o: 1 }, .2, .6);
     const bl = lab(p, 'bumps', 640, 120, m('bumps') + .2, { size: 30, fill: EV.dim, italic: true, maxW: 700 });
     const stamp = G(p, { x: 900, y: 300, r: -12, o: 0, s: 1.4 });
     mk('rect', { x: -110, y: -44, width: 220, height: 88, rx: 10, fill: 'none', stroke: EV.anger, 'stroke-width': 6 }, stamp);
     evText(stamp, L('wrong'), { x: 0, y: 16, size: 48, fill: EV.anger, weight: 700, maxW: 190 });
-    tw(stamp, { o: 1, s: 1 }, m('bumps') + 3.2, .3, out);
+    tw(stamp, { o: 1, s: 1 }, m('wrong'), .3, out);
     // the real map: Broca's patch
-    hide(hd, m('broca') - .2, .6); hide(bl, m('broca') - .2, .4); hide(stamp, m('broca') - .2, .6);
+    hide(hd, m('broca'), .6); hide(bl, m('broca'), .4); hide(stamp, m('broca'), .6);
     const br = c5Lobes(p, { x: 640, y: 470, s: 1.25, o: 0, op: .38 });
     tw(br, { o: 1 }, m('broca'), .7);
     const bro = G(br, { x: -118, y: 14, o: 0 });
     evGlow(bro, 0, 0, 60, 'love', 1); evDot(bro, 0, 0, 16, EV.love);
-    tw(bro, { o: 1 }, m('broca') + 2.2, .5);
-    for (let k = 0; k < 3; k++) pulse(bro, m('broca') + 2.8 + k * .8, 1.3);
+    tw(bro, { o: 1 }, m('patch'), .5);
+    c5Beats(bro, [0, 1, 2].map(k => m('patch') + .6 + k * .8), 1.3, D);
     const lb = G(p, { o: 0 });
     pth(lb, 'M470 500L330 620', { stroke: EV.love, 'stroke-width': 2.5 });
     evText(lb, L('broca'), { x: 320, y: 664, size: 32, fill: EV.love, weight: 600, anchor: 'end', maxW: 320 });
     evText(lb, L('fluent'), { x: 320, y: 704, size: 26, fill: EV.ink, anchor: 'end', maxW: 320 });
-    tw(lb, { o: 1 }, m('broca') + 2.6, .5);
-    // a team: seeing, sound & meaning, speaking, all at once
+    tw(lb, { o: 1 }, m('name') + .2, .5);
+    // a team: seeing, sound & meaning, speaking, all at once, each lit as it is named
     hide(lb, m('team'), .4);
     const team = [['occ', 'seeing', EV.fear, 'fear'], ['tem', 'soundMeaning', EV.surprise, 'Gold'], ['fro', 'speaking', EV.gold, 'Gold']];
-    const tt = m('team') + 3.2;
-    team.forEach(([k, key], i) => tw(br._lobes[k], { o: 1 }, tt + i * 1.1, .5));
+    const tmk = ['seeing', 'sound', 'move'].map(k => m(k));
+    team.forEach(([k, key], i) => tw(br._lobes[k], { o: 1 }, tmk[i], .5));
     const flow = pth(br, 'M190 -40C120 40 40 60 -40 40C-90 30 -110 20 -118 14', { stroke: EV.goldHi, 'stroke-width': 3, opacity: .7 }, { d: 0 });
-    draw(flow, tt + .6, 2.2);
-    evFlow(flow, 5, EV.goldHi, tt + 2.6, D - tt - 2.6, { speed: .4, r: 6, parent: br });
-    [['seeing', 1000, 330, EV.fear], ['soundMeaning', 860, 700, EV.surprise], ['speaking', 320, 300, EV.gold]].forEach(([k, x, y, c], i) => lab(p, k, x, y, tt + .2 + i * 1.1, { size: 28, fill: c, weight: 600, maxW: 300 }));
+    draw(flow, m('read') + .2, Math.max(1, tmk[2] + .4 - m('read') - .2));
+    evFlow(flow, 5, EV.goldHi, tmk[2] + .6, D - tmk[2] - .6, { speed: .4, r: 6, parent: br });
+    [['seeing', 1000, 330, EV.fear], ['soundMeaning', 860, 700, EV.surprise], ['speaking', 320, 300, EV.gold]].forEach(([k, x, y, c], i) => lab(p, k, x, y, tmk[i] + .1, { size: 28, fill: c, weight: 600, maxW: 300 }));
     lab(p, 'notRooms', 640, 120, m('team') + .2, { size: 30, fill: EV.ink, italic: true, font: SERIF, maxW: 800 });
     // the sadya leaf fills from each station
     const leaf = G(p, { x: 1300, y: 600, o: 0 });
     path(leaf, 'M-200 0Q-160 -110 40 -100Q170 -90 200 0Q170 90 40 100Q-160 110 -200 0Z', { fill: '#2f6b38', stroke: '#6fbf73', 'stroke-width': 2 });
     pth(leaf, 'M-200 0H190', { stroke: '#6fbf73', 'stroke-width': 2, opacity: .6 });
-    tw(leaf, { o: 1 }, m('team') + 4.8, .5);
+    tw(leaf, { o: 1 }, m('cooks'), .5);
     [[-120, -40, EV.fear], [-40, -50, EV.surprise], [40, -46, EV.gold], [110, -30, EV.joy], [-80, 40, EV.love], [20, 50, EV.calm]].forEach(([x, y, c], i) => {
       const d = evDot(leaf, x, y, 18, c, 0); put(d, { s: .3 });
-      tw(d, { o: 1, s: 1 }, m('team') + 5.4 + i * .5, .35, back);
+      tw(d, { o: 1, s: 1 }, m('station') + i * .2, .35, back);
     });
-    lab(p, 'sadya', 1300, 430, m('team') + 5, { size: 28, fill: EV.ink, italic: true, font: SERIF, maxW: 520 });
-    lab(p, 'oneMeal', 1300, 750, m('team') + 8, { size: 28, fill: EV.joy, weight: 600, maxW: 400 });
+    lab(p, 'sadya', 1300, 430, m('cooks') + .2, { size: 28, fill: EV.ink, italic: true, font: SERIF, maxW: 520 });
+    lab(p, 'oneMeal', 1300, 750, m('meal') + .1, { size: 28, fill: EV.joy, weight: 600, maxW: 400 });
   }],
 
   ['blind', 'b_blind', (m, D) => {
@@ -965,9 +1000,9 @@ const BEATS = [
     pth(me.head, 'M-4 -59H4', { stroke: '#0b0f12', 'stroke-width': 3 });
     lab(mg, 'meera', 300, 850, .8, { size: 28, fill: EV.dim });
     lab(mg, 'sinceChild', 300, 360, m('blind') + .2, { size: 26, fill: EV.dim, italic: true, maxW: 380 });
-    tw(occ, { c_fill: NUR }, m('blind') + 1.8, 1.4);
+    tw(occ, { c_fill: NUR }, m('takes'), 1.4);
     const v2 = evPara(vl, L('touchSound'), { x: 1320, y: 680, size: 28, fill: NUR, weight: 600, o: 0, anchor: 'start', maxW: 260 });
-    show(v2, m('blind') + 2.4);
+    show(v2, m('takes') + .4);
     // inset: fingertip over the dots
     const ins = G(p, { x: 640, y: 560, o: 0 });
     mk('circle', { cx: 0, cy: 0, r: 150, fill: '#151d21', stroke: EV.gold, 'stroke-width': 2.5 }, ins);
@@ -976,20 +1011,21 @@ const BEATS = [
     const fin = G(ins, { x: -110, y: 20 });
     path(fin, 'M-20 -150V-12Q-20 12 0 12Q20 12 20 -12V-150Z', { fill: EV.skinF, stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .5 });
     path(fin, 'M-10 -8Q0 2 10 -8', { stroke: '#e8c4a8', 'stroke-width': 2 });
-    tw(ins, { o: 1 }, m('braille') - .2, .5);
-    prog(q => put(fin, { x: -110 + 220 * ((q * 3) % 1) }), m('braille'), D - m('braille'), lin);
+    tw(ins, { o: 1 }, m('braille'), .5);
+    // the fingertip slides over the dots once that is said, one pass every 2.5 s
+    prog(q => { const t = q * (D - m('dots')); put(fin, { x: -110 + 220 * ((t / 2.5) % 1) }); }, m('dots'), D - m('dots'), lin);
     const b20 = lab(p, 'braille20', 640, 760, m('braille') + .4, { size: 26, fill: EV.dim, maxW: 360 });
     // the finger's patch on the touch map grows
-    tw(br._strip, { o: 1 }, m('braille') + 1, .5);
+    tw(br._strip, { o: 1 }, m('larger'), .5);
     const fp = G(br, { x: 0, y: -120, o: 0 });
     evGlow(fp, 0, 0, 50, 'calm', 1); evDot(fp, 0, 0, 14, NUR);
-    tw(fp, { o: 1 }, m('braille') + 1.6, .4); tw(fp, { s: 2 }, m('braille') + 2.2, 1.6, out);
+    tw(fp, { o: 1 }, m('larger') + .2, .4); tw(fp, { s: 2 }, m('larger') + .5, 1.6, out);
     const fl = G(p, { o: 0 });
     pth(fl, 'M1110 250L1150 150', { stroke: NUR, 'stroke-width': 2.5 });
     evText(fl, L('fingerMap'), { x: 1150, y: 130, size: 28, fill: NUR, weight: 600, maxW: 420 });
-    tw(fl, { o: 1 }, m('braille') + 2.6, .5);
+    tw(fl, { o: 1 }, m('larger') + .8, .5);
     // the blindfold study
-    hide(mg, m('fold') - .2, .5); hide(b20, m('fold') - .2, .4); tw(br._strip, { o: 0 }, m('fold'), .4); hide(ins, m('fold') - .2, .5); hide(fl, m('fold'), .4); tw(fp, { o: 0 }, m('fold'), .4);
+    hide(mg, m('fold'), .5); hide(b20, m('fold'), .4); tw(br._strip, { o: 0 }, m('fold'), .4); hide(ins, m('fold'), .5); hide(fl, m('fold'), .4); tw(fp, { o: 0 }, m('fold'), .4);
     tw(occ, { c_fill: EV.fear }, m('fold'), .6); hide(v2, m('fold'), .4);
     const vg = G(p, { o: 0 }); tw(vg, { o: 1 }, m('fold') + .2, .6);
     const vo = evPerson(vg, { kind: 'm', x: 330, y: 800, s: .9 });
@@ -998,18 +1034,20 @@ const BEATS = [
     lab(vg, 'volunteer', 330, 850, m('fold') + .5, { size: 28, fill: EV.dim });
     lab(vg, 'blindfold', 330, 330, m('fold') + .8, { size: 26, fill: EV.dim, italic: true, maxW: 420 });
     const dc = evText(vg, '', { x: 700, y: 300, size: 48, font: SERIF, weight: 600, fill: EV.gold });
-    prog(q => { const n = Math.min(5, 1 + Math.floor(q * 5)); dc.textContent = fmt('day', n); }, m('fold') + 1, 3.6, lin);
+    // days 1 to 5 count up from 'five days' to 'began to show', while the visual area slowly greens
+    const dSpan = Math.max(1.5, m('began') + .8 - m('five'));
+    prog(q => { const n = Math.min(5, 1 + Math.floor(q * 5)); dc.textContent = fmt('day', n); }, m('five'), dSpan, lin);
     const fv = G(br, { o: 0 }); fv.appendChild(br._lobes.occ.cloneNode(true));
-    tw(occ, { c_fill: '#6fb3a4' }, m('fold') + 2, 2.6);
+    tw(occ, { c_fill: '#6fb3a4' }, m('five') + .3, Math.max(1, dSpan - .3));
     const v3 = evText(vl, L('touch'), { x: 1320, y: 680, size: 28, fill: NUR, weight: 600, o: 0, anchor: 'start', maxW: 260 });
-    show(v3, m('fold') + 3.6); hide(v3, m('off') + .4, .4);
+    show(v3, m('began') + .2); hide(v3, m('off') + .4, .4);
     // blindfold off: back to vision within a day
     tw(band, { o: 0 }, m('off'), .5);
     prog(q => { if (q > .5) dc.textContent = fmt('day', 6); }, m('off') + .3, .2, lin);
-    tw(occ, { c_fill: EV.fear }, m('off') + .6, 1.2);
-    lab(vg, 'fadedDay', 700, 350, m('off') + 1.2, { size: 28, fill: EV.fear, maxW: 380 });
+    tw(occ, { c_fill: EV.fear }, m('faded'), 1.2);
+    lab(vg, 'fadedDay', 700, 350, m('faded') + .2, { size: 28, fill: EV.fear, maxW: 380 });
     const fo = evText(p, L('follows'), { x: 1010, y: 860, size: 40, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 1000 });
-    show(fo, m('off') + 2.6, .6);
+    show(fo, m('follows'), .6);
   }],
 
   ['fingers', 'b_fingers', (m, D) => {
@@ -1021,45 +1059,45 @@ const BEATS = [
     const mp = G(p, { x: 1180, y: 470, o: 0 });
     mk('rect', { x: -110, y: -270, width: 220, height: 540, rx: 40, fill: '#141b1f', stroke: EV.gold, 'stroke-width': 2.5 }, mp);
     evText(mp, L('handMap'), { x: 0, y: -290, size: 28, fill: EV.dim, maxW: 420 });
-    tw(mp, { o: 1 }, m('webbed') + .8, .5);
+    tw(mp, { o: 1 }, m('map'), .5);
     const blob = G(mp, { o: 0 });
     mk('ellipse', { cx: 0, cy: 0, rx: 80, ry: 230, fill: EV.joy, opacity: .45 }, blob);
     mk('ellipse', { cx: 0, cy: 0, rx: 80, ry: 230, fill: 'none', stroke: EV.joy, 'stroke-width': 3 }, blob);
-    tw(blob, { o: 1 }, m('webbed') + 1.6, .6);
-    const ob = lab(p, 'oneBlob', 1180, 800, m('webbed') + 2, { size: 26, fill: EV.joy, maxW: 420 });
-    // all fingers flash together, and the one blob with them
+    tw(blob, { o: 1 }, m('blob'), .6);
+    const ob = lab(p, 'oneBlob', 1180, 800, m('blob') + .2, { size: 26, fill: EV.joy, maxW: 420 });
+    // all fingers flash together from 'move as one' (every second until the surgery), the one blob with them;
+    // after 'fire together' each fingertip flashes once with its own patch. One clock for every flash.
     const tips = [hand._thumb._tip, ...hand._f.map(f => f._tip)];
-    for (let k = 0; k < 3; k++) {
-      const t = m('webbed') + 2.6 + k * 1;
-      tips.forEach(d => { tw(d, { o: 1 }, t, .1); tw(d, { o: 0 }, t + .35, .3); });
-      pulse(blob, t, 1.06);
-    }
+    const together = []; for (let t = m('move'); t < m('surgery') - .3; t += 1) together.push(t);
+    const tipT = tips.map((d, k) => [...together, m('rule') + k * .6]);
+    const flash = v => v < .1 ? v / .1 : v < .35 ? 1 : v < .65 ? 1 - (v - .35) / .3 : 0;
+    prog(q => {
+      const t = q * D;
+      tips.forEach((d, k) => { let j = -1; tipT[k].forEach((f, i) => { if (f <= t) j = i; }); put(d, { o: j < 0 ? 0 : flash(t - tipT[k][j]) }); });
+    }, 0, D, lin);
+    c5Beats(blob, together, 1.06, D);
     // surgery: the web goes, the fingers spread, the map splits
     const cut = path(p, 'M375 380V500M410 370V500M450 370V500', { stroke: EV.goldHi, 'stroke-width': 3, 'stroke-dasharray': '6 8' }, { d: 0 });
     draw(cut, m('surgery'), .6); hide(jn, m('surgery'), .4); tw(cut, { o: 0 }, m('surgery') + 1.2, .4);
     tw(hand._web, { o: 0 }, m('surgery') + .8, .8);
     hand._f.forEach(f => tw(f, { r: f._spread }, m('surgery') + 1.2, .9, back));
     lab(p, 'separated', 450, 220, m('surgery') + .3, { size: 28, fill: EV.gold, maxW: 420 });
-    tw(blob, { o: 0 }, m('surgery') + 2, .8); hide(ob, m('surgery') + 2, .4);
+    tw(blob, { o: 0 }, m('weeks'), .8); hide(ob, m('weeks'), .4);
     const patches = FING_C.map((c, i) => {
       const g = G(mp, { x: 0, y: -200 + i * 100, o: 0 });
       mk('ellipse', { cx: 0, cy: 0, rx: 76, ry: 40, fill: c, opacity: .5 }, g);
       mk('ellipse', { cx: 0, cy: 0, rx: 76, ry: 40, fill: 'none', stroke: c, 'stroke-width': 3 }, g);
       put(g, { y: -200 + i * 100 + (2 - i) * 40 });
-      tw(g, { o: 1, y: -200 + i * 100 }, m('surgery') + 2.2 + i * .15, .7, out);
+      tw(g, { o: 1, y: -200 + i * 100 }, m('weeks') + .2 + i * .15, .7, out);
       return g;
     });
-    lab(p, 'fivePatches', 1180, 800, m('surgery') + 3, { size: 26, fill: EV.ink, maxW: 500 });
-    // each finger now flashes with its own patch
-    for (let k = 0; k < 5; k++) {
-      const t = m('rule') - .2 + k * .6;
-      tw(tips[k], { o: 1 }, t, .1); tw(tips[k], { o: 0 }, t + .4, .3);
-      pulse(patches[k], t, 1.15);
-    }
+    lab(p, 'fivePatches', 1180, 800, m('each') + .1, { size: 26, fill: EV.ink, maxW: 500 });
+    // each finger now flashes with its own patch (the tips are driven above, on the same times)
+    patches.forEach((g, k) => c5Beats(g, [m('rule') + k * .6], 1.15, D));
     const fw = evText(p, L('fireWire'), { x: 800, y: 92, size: 44, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 1300 });
     show(fw, m('rule'), .6);
     const ap = evText(p, L('apart'), { x: 800, y: 138, size: 32, font: SERIF, italic: true, fill: EV.ink, o: 0, maxW: 1300 });
-    show(ap, m('rule') + 2.4, .6);
+    show(ap, m('stop'), .6);
   }],
 
   ['q3', 'b_fingers', (m, D) => {
@@ -1088,22 +1126,22 @@ const BEATS = [
     const lk = G(p, { x: 1040, y: 560, o: 0 });
     mk('rect', { x: -22, y: -6, width: 44, height: 36, rx: 6, fill: EV.sad }, lk);
     pth(lk, 'M-13 -6V-18Q-13 -32 0 -32Q13 -32 13 -18V-6', { stroke: EV.sad, 'stroke-width': 5 });
-    tw(lk, { o: 1 }, m('deep') + 1, .4);
-    lab(p, 'hardwired', 1080, 600, m('deep') + 1.2, { size: 28, fill: EV.sad, weight: 600, anchor: 'start', maxW: 420 });
+    tw(lk, { o: 1 }, m('hard'), .4);
+    lab(p, 'hardwired', 1080, 600, m('hard') + .2, { size: 28, fill: EV.sad, weight: 600, anchor: 'start', maxW: 420 });
     // the cortex and, most of all, the front
     const cl = clipTo(br, BRAIN_D); br.insertBefore(cl, br._gyri[0]);
     const cx_ = G(cl, { o: 0 }); pth(cx_, BRAIN_D, { fill: EV.gold, opacity: .22 });
     const fr = G(cl, { o: 0 }); pth(fr, LOBES.fro, { fill: EV.gold, opacity: .5 });
-    tw(cx_, { o: 1 }, m('cortex') + .2, .6); tw(fr, { o: 1 }, m('cortex') + 1.8, .6);
-    for (let k = 0; k < 3; k++) pulse(fr, m('cortex') + 2.4 + k * .7, 1.04);
-    lab(p, 'changeable', 380, 230, m('cortex') + 2, { size: 28, fill: EV.gold, weight: 600, maxW: 400 });
+    tw(cx_, { o: 1 }, m('cortex') + .2, .6); tw(fr, { o: 1 }, m('front'), .6);
+    c5Beats(fr, [0, 1, 2].map(k => m('front') + .6 + k * .7), 1.04, D);
+    lab(p, 'changeable', 380, 230, m('front') + .2, { size: 28, fill: EV.gold, weight: 600, maxW: 400 });
     // a scale from fixed to changeable
     const sc = G(p, { x: 0, y: 760, o: 0 });
     for (let i = 0; i < 40; i++) mk('rect', { x: 300 + i * 25, y: -12, width: 25, height: 24, fill: i < 20 ? EV.sad : EV.gold, opacity: .25 + .6 * Math.abs(i - 19.5) / 20 }, sc);
     evText(sc, L('moreFixed'), { x: 300, y: 56, size: 26, fill: EV.sad, anchor: 'start', maxW: 380 });
     evText(sc, L('moreChange'), { x: 1300, y: 56, size: 26, fill: EV.gold, anchor: 'end', maxW: 380 });
     tw(sc, { o: 1 }, m('cortex') + .2, .5);
-    [['stem', 360, EV.sad, m('deep') + 1], ['cortex', 1000, EV.gold, m('cortex') + 1], ['front', 1240, EV.goldHi, m('cortex') + 2.2]].forEach(([k, x, c, t]) => {
+    [['stem', 360, EV.sad, m('hard')], ['cortex', 1000, EV.gold, m('cortex') + .5], ['front', 1240, EV.goldHi, m('front') + .1]].forEach(([k, x, c, t]) => {
       const g = G(p, { x, y: 760, o: 0 });
       pth(g, 'M0 -22V-50', { stroke: c, 'stroke-width': 3 }); evDot(g, 0, 0, 10, c);
       evText(g, L(k), { x: 0, y: -62, size: 26, fill: c, weight: 600, maxW: 300 });
@@ -1125,19 +1163,21 @@ const BEATS = [
       const s = G(A, { x: -200 + (i % 3) * 200, y: 330 + Math.floor(i / 3) * 90 });
       mk('rect', { x: -40, y: -20, width: 80, height: 40, rx: 20, fill: '#1d2428', stroke: EV.dim, 'stroke-width': 2 }, s);
       const k = evDot(s, -20, 0, 14, EV.dim);
-      if (i === 1 || i === 3) { tw(k, { x: 20, c_fill: NAT }, m('select') + 2.4 + i * .3, .4, back); }
+      if (i === 1 || i === 3) { tw(k, { x: 20, c_fill: NAT }, m('switch') + .2 + i * .3, .4, back); }
     }
     const cb = c5Crawl(A, 60, 720, 1.1);
-    prog(qq => { const t = qq * 20; put(cb, { x: 60 - t * 6 }); put(cb._armF, { r: Math.sin(t * 3) * 20 }); put(cb._legB, { r: -Math.sin(t * 3) * 18 }); }, m('select') + 3, 20, lin);
+    prog(qq => { const t = qq * 20; put(cb, { x: 60 - t * 6 }); put(cb._armF, { r: Math.sin(t * 3) * 20 }); put(cb._legB, { r: -Math.sin(t * 3) * 18 }); }, m('crawl'), 20, lin);
     evText(A, L('crawl'), { x: 0, y: 770, size: 26, fill: EV.dim, italic: true, maxW: 600 });
     const B = card(1170, 'instruction', 'instructionD', NUR, m('instruct'));
     const dr = c5Drum(B, 0, 420, 1);
-    prog(qq => { const t = qq * 20; dr._hands.forEach((h, i) => put(h, { y: -30 + Math.max(0, Math.sin(t * 9 + i * Math.PI)) * 16 })); }, m('instruct') + .2, 20, lin);
-    lab(B, 'mridangam', 0, 530, m('instruct') + .6, { size: 26, fill: EV.dim, maxW: 600 });
+    prog(qq => { const t = qq * 20; dr._hands.forEach((h, i) => put(h, { y: -30 + Math.max(0, Math.sin(t * 9 + i * Math.PI)) * 16 })); }, m('mrid'), 20, lin);
+    lab(B, 'mridangam', 0, 530, m('mrid') + .2, { size: 26, fill: EV.dim, maxW: 600 });
+    // the hand-and-hearing circuits draw in from 'circuits' and are complete by 'denser and finer'
     const nt = c5Net(B, { cx: 0, cy: 660, rx: 250, ry: 70, n: 16, seed: 9, R: 110, col: NUR, w: 2.4, dr: 6 });
-    nt.dots.forEach((d, i) => tw(d, { o: 1 }, m('instruct') + 1 + i * .05, .3));
-    nt.edges.forEach((e, i) => draw(e.el, m('instruct') + 1.4 + i * .12, .4));
-    lab(B, 'denser', 0, 770, m('instruct') + 3, { size: 26, fill: NUR, weight: 600, maxW: 600 });
+    c5Seq(nt.dots, i => m('circ') + i * .05, D);
+    const eStep = Math.max(.03, (m('denser') + .6 - m('circ') - .3) / Math.max(1, nt.edges.length));
+    c5Seq(nt.edges.map(e => e.el), i => m('circ') + .3 + i * eStep, D, 'd', .4);
+    lab(B, 'denser', 0, 770, m('denser') + .1, { size: 26, fill: NUR, weight: 600, maxW: 600 });
     const yo = evText(q, L('howPlays'), { x: 760, y: 82, size: 40, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 1000 });
     show(yo, m('you') + .4, .6);
   }],

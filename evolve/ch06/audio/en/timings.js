@@ -2,7 +2,7 @@ window.TIMINGS = {
  "intro": {
   "dur": 9.744,
   "marks": {
-   "sub": 1.542
+   "sub": 3.107
   },
   "cues": [
    [
@@ -23,9 +23,14 @@ window.TIMINGS = {
   "dur": 27.977,
   "marks": {
    "chip": 5.669,
+   "by30": 6.938,
+   "wear": 8.816,
    "crack": 11.481,
    "grow": 15.284,
    "alive": 17.527,
+   "newc": 20.253,
+   "strong": 21.533,
+   "letgo": 23.112,
    "name": 26.25
   },
   "cues": [
@@ -67,9 +72,13 @@ window.TIMINGS = {
   "dur": 23.353,
   "marks": {
    "pool": 5.014,
+   "meera": 8.737,
    "old": 10.732,
+   "tells": 11.532,
    "leena": 14.235,
-   "watch": 17.915
+   "bday": 15.521,
+   "watch": 17.915,
+   "head": 19.867
   },
   "cues": [
    [
@@ -113,7 +122,9 @@ window.TIMINGS = {
    "fire": 6.707,
    "again": 13.325,
    "alone": 18.21,
-   "rule": 22.731
+   "follows": 20.6,
+   "rule": 22.731,
+   "words": 31.281
   },
   "cues": [
    [
@@ -168,6 +179,7 @@ window.TIMINGS = {
   "dur": 28.003,
   "marks": {
    "coach": 3.51,
+   "knows": 6.044,
    "tea": 8.488,
    "cycle": 12.406,
    "light": 15.3,
@@ -213,10 +225,13 @@ window.TIMINGS = {
   "dur": 32.522,
   "marks": {
    "baby": 2.919,
+   "cry": 5.65,
    "parent": 8.819,
    "shout": 16.056,
+   "snaps": 17.336,
    "habit": 20.976,
-   "deposit": 25.364
+   "deposit": 25.364,
+   "adds": 30.026
   },
   "cues": [
    [
@@ -255,8 +270,11 @@ window.TIMINGS = {
    "field": 2.436,
    "first": 5.869,
    "daily": 11.733,
+   "soon": 15.274,
    "syn": 17.61,
-   "auto": 26.015
+   "bdnf": 20.982,
+   "auto": 26.015,
+   "autom": 28.308
   },
   "cues": [
    [
@@ -298,9 +316,13 @@ window.TIMINGS = {
   "marks": {
    "stop": 2.734,
    "hindi": 6.04,
+   "gone": 10.406,
    "prune": 14.218,
+   "called": 17.183,
    "use": 18.802,
-   "hope": 22.682
+   "lose": 20.566,
+   "hope": 22.682,
+   "habits": 24.411
   },
   "cues": [
    [
@@ -400,8 +422,12 @@ window.TIMINGS = {
   "marks": {
    "videos": 3.473,
    "facts": 7.726,
+   "hand": 8.814,
+   "turn": 10.18,
    "map": 11.648,
-   "fade": 16.495
+   "fade": 16.495,
+   "phone": 18.532,
+   "quickly": 20.612
   },
   "cues": [
    [
@@ -434,11 +460,18 @@ window.TIMINGS = {
   "dur": 30.354,
   "marks": {
    "water": 2.34,
+   "letgo": 3.61,
    "senses": 7.387,
+   "chlorine": 8.325,
+   "cheer": 9.595,
+   "slap": 10.523,
    "float": 12.833,
    "joy": 15.25,
    "years": 18.473,
-   "wisdom": 21.457
+   "wisdom": 21.457,
+   "walked": 23.059,
+   "together": 24.735,
+   "body": 26.292
   },
   "cues": [
    [
@@ -483,8 +516,13 @@ window.TIMINGS = {
   "dur": 29.518,
   "marks": {
    "cages": 3.208,
+   "rich": 6.088,
    "spines": 10.11,
-   "us": 18.343
+   "more": 12.702,
+   "dock": 14.836,
+   "us": 18.343,
+   "juggle": 20.619,
+   "taxi": 22.049
   },
   "cues": [
    [
@@ -529,7 +567,11 @@ window.TIMINGS = {
    "new": 3.73,
    "weeks": 10.199,
    "auto": 13.383,
-   "hypo": 19.282
+   "hypo": 19.282,
+   "right": 20.989,
+   "left": 22.557,
+   "hypo2": 23.7,
+   "broad": 26.431
   },
   "cues": [
    [
@@ -566,8 +608,15 @@ window.TIMINGS = {
   "dur": 30.616,
   "marks": {
    "solid": 2.579,
+   "s1": 3.518,
+   "s2": 5.907,
+   "s3": 9.608,
+   "s4": 11.678,
    "model": 14.115,
-   "glia": 21.595
+   "glia": 21.595,
+   "ten": 24.667,
+   "myth": 25.339,
+   "real": 27.224
   },
   "cues": [
    [

@@ -22,10 +22,11 @@ window.TIMINGS = {
  "morning": {
   "dur": 27.35,
   "marks": {
-   "smell": 3.887,
+   "smell": 4.081,
    "in": 7.802,
    "decide": 12.793,
    "out": 15.87,
+   "arms": 19.22,
    "neuron": 21.612
   },
   "cues": [
@@ -67,6 +68,7 @@ window.TIMINGS = {
   "dur": 26.984,
   "marks": {
    "n": 2.286,
+   "older": 5.004,
    "sec": 9.48,
    "glia": 14.833,
    "water": 23.905
@@ -106,10 +108,19 @@ window.TIMINGS = {
   "dur": 33.567,
   "marks": {
    "dend": 3.134,
+   "dendw": 5.747,
+   "listen": 6.797,
    "spine": 8.607,
+   "spines": 10.73,
    "body": 13.767,
+   "cb": 15.089,
+   "nuc": 16.967,
    "axon": 19.186,
+   "cable": 20.434,
+   "axw": 21.469,
    "term": 24.954,
+   "termw": 26.831,
+   "speak": 27.546,
    "sum": 30.765
   },
   "cues": [
@@ -157,7 +168,9 @@ window.TIMINGS = {
    "sens": 3.684,
    "motor": 9.141,
    "inter": 13.298,
-   "long": 21.76
+   "long": 21.76,
+   "toe": 25.701,
+   "metre": 28.779
   },
   "cues": [
    [
@@ -208,9 +221,16 @@ window.TIMINGS = {
   "dur": 34.038,
   "marks": {
    "rest": 5.199,
+   "ions": 10.421,
    "gate": 16.747,
-   "flip": 20.774,
-   "reset": 27.366
+   "open": 18.486,
+   "flip": 20.928,
+   "ms": 22.986,
+   "pos": 24.746,
+   "reset": 27.366,
+   "close": 28.998,
+   "pump": 30.139,
+   "ready": 32.177
   },
   "cues": [
    [
@@ -249,8 +269,11 @@ window.TIMINGS = {
    "small": 3.192,
    "small2": 7.246,
    "thresh": 9.125,
+   "thr": 11.429,
    "cooker": 15.231,
+   "whistle": 20.298,
    "same": 23.944,
+   "push": 25.892,
    "often": 29.08
   },
   "cues": [
@@ -299,10 +322,15 @@ window.TIMINGS = {
  "travel": {
   "dur": 29.127,
   "marks": {
-   "wave": 4.297,
+   "wave": 4.538,
    "speed": 11.769,
+   "mps": 13.807,
+   "walk": 15.023,
    "myelin": 16.855,
-   "jump": 22.282
+   "myw": 19.639,
+   "jump": 22.282,
+   "fast": 24.405,
+   "train": 26.893
   },
   "cues": [
    [
@@ -335,10 +363,19 @@ window.TIMINGS = {
   "dur": 38.504,
   "marks": {
    "gap": 3.311,
+   "tiny": 7.767,
+   "syn": 8.631,
+   "hair": 9.772,
    "ves": 12.55,
+   "nt": 15.003,
    "burst": 19.002,
+   "fuse": 20.314,
    "dock": 24.42,
-   "again": 30.968
+   "rec": 27.108,
+   "again": 30.968,
+   "e1": 35.148,
+   "e2": 35.702,
+   "e3": 36.513
   },
   "cues": [
    [
@@ -379,9 +416,13 @@ window.TIMINGS = {
   "dur": 32.104,
   "marks": {
    "glu": 2.321,
+   "gluw": 6.086,
    "gaba": 9.913,
+   "wild": 15.244,
    "sum": 19.059,
-   "fire": 25.318
+   "vote": 22.185,
+   "fire": 25.318,
+   "firew": 28.56
   },
   "cues": [
    [
@@ -444,10 +485,15 @@ window.TIMINGS = {
   "dur": 35.474,
   "marks": {
    "div": 4.658,
+   "divw": 8.789,
+   "fwd": 10.197,
    "conv": 14.415,
+   "one": 16.942,
+   "convw": 19.985,
    "web": 21.622,
    "jelly": 25.265,
-   "more": 29.339
+   "more": 29.339,
+   "brain": 32.336
   },
   "cues": [
    [
@@ -490,6 +536,8 @@ window.TIMINGS = {
    "myel": 5.594,
    "astro": 10.184,
    "micro": 16.082,
+   "clear": 19.458,
+   "prune": 20.674,
    "team": 24.219
   },
   "cues": [
@@ -533,7 +581,8 @@ window.TIMINGS = {
    "see": 2.555,
    "know": 8.894,
    "plan": 12.591,
-   "move": 15.153,
+   "move": 15.3,
+   "arm": 19.524,
    "smooth": 21.922,
    "feel": 26.681,
    "none": 30.119
@@ -599,7 +648,9 @@ window.TIMINGS = {
    "pns": 12.764,
    "cranial": 18.582,
    "spinal": 23.807,
-   "reflex": 28.359
+   "reflex": 28.359,
+   "pan": 31.458,
+   "pull": 34.775
   },
   "cues": [
    [
@@ -643,10 +694,21 @@ window.TIMINGS = {
  "auto": {
   "dur": 42.397,
   "marks": {
+   "ans": 3.265,
    "symp": 11.242,
+   "late": 12.831,
+   "sympw": 14.504,
+   "s1": 17.057,
+   "s2": 17.953,
+   "s3": 18.646,
+   "ff": 20.521,
    "para": 21.905,
+   "paraw": 24.006,
+   "p1": 27.135,
+   "p2": 28.159,
    "balance": 30.756,
-   "breath": 35.293
+   "breath": 35.293,
+   "slow": 38.149
   },
   "cues": [
    [

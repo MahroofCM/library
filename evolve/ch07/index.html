@@ -168,7 +168,6 @@ function c7Node(p, x, y, r = 30, color = EV.gold, glowK = 'Gold', o = 1) {
   g._core = mk('circle', { cx: 0, cy: 0, r: r * .5, fill: color }, g);
   return g;
 }
-const c7Flash = (n, t, k = .9) => { tw(n._glow, { o: k }, t, .15); tw(n._glow, { o: 0 }, t + .3, .6); pulse(n, t, 1.25); };
 // A dot that runs once along any path (in that path's parent).
 function c7Run(pathEl, t0, dur, color = EV.goldHi, r = 8) {
   const L_ = pathEl.getTotalLength(), d = evDot(pathEl.parentNode, 0, 0, r, color, 0);
@@ -186,7 +185,85 @@ function c7NetShow(net, t0, d = 1) {
   net.nodes.forEach((n, i) => tw(n, { o: 1 }, t0 + i * d / net.nodes.length * .6, .3));
   net.edges.forEach((e, i) => draw(e, t0 + .2 + i * d / net.edges.length * .6, .4));
 }
-function c7NetFire(net, t0) { net.nodes.forEach((n, i) => pulse(n, t0 + (i % 4) * .12, 1.4)); }
+/* Repeated effects, each driven by one whole-beat prog from the beat clock: replays are exact, and the first
+   repeat starts on the word it belongs to (pass times that begin at a mark). */
+// Start times t0, t0 + every, … below t1.
+const c7Times = (t0, every, t1) => { const a = []; for (let t = t0; t < t1 - 1e-6; t += every) a.push(t); return a; };
+// fn(v, j, t): v = time since the latest start (-1 before the first), j = its index.
+function c7Every(times, D, fn) { prog(q => { const t = q * D; let j = -1; for (let i = 0; i < times.length; i++) if (times[i] <= t) j = i; fn(j < 0 ? -1 : t - times[j], j, t); }, 0, D, lin); }
+// pulse(e, t0, k) as a function of time since it started.
+const c7P = (v, k) => v < 0 ? 1 : v < .22 ? 1 + (k - 1) * out(v / .22) : v < .62 ? k + (1 - k) * io((v - .22) / .4) : 1;
+// 0..1: rise over `up`, hold until `hold`, fall over `down`.
+const c7Bump = (v, up, hold, down) => v < 0 ? 0 : v < up ? io(v / up) : v < hold ? 1 : 1 - io(Math.min(1, (v - hold) / down));
+// Scale pulses at the given times (untouched before the first unless base is given; base(t) multiplies the scale).
+function c7Beats(e, times, k, D, base) { c7Every(times, D, (v, j, t) => { if (v < 0 && !base) return; put(e, { s: (base ? base(t) : 1) * c7P(v, Array.isArray(k) ? k[Math.max(0, j)] : k) }); }); }
+// A node flashing at each time: the glow flares and the node pulses.
+function c7Flashes(n, times, D, k = .9) { c7Every(times, D, v => { if (v < 0) return; put(n._glow, { o: k * c7Bump(v, .15, .3, .6) }); put(n, { s: c7P(v, 1.25) }); }); }
+// A network firing at each time (its nodes pulse in a quick ripple).
+function c7NetFires(net, times, D) { net.nodes.forEach((n, i) => c7Beats(n, times.map(t => t + (i % 4) * .12), 1.4, D)); }
+// c7Run repeated: dots run along the path at each start (enough dots for runs that overlap).
+function c7Runs(pathEl, times, dur, D, color = EV.goldHi, r = 8) {
+  const L_ = pathEl.getTotalLength();
+  let n = 1; times.forEach((t, i) => { let c = 1; for (let j = i + 1; j < times.length && times[j] < t + dur; j++) c++; n = Math.max(n, c); });
+  const p0 = pathEl.getPointAtLength(0), dots = Array.from({ length: n }, () => evDot(pathEl.parentNode, p0.x, p0.y, r, color, 0));
+  prog(q => {
+    const t = q * D;
+    dots.forEach(d => put(d, { x: p0.x, y: p0.y, o: 0 }));   // idle dots wait, hidden, at the start (same frame however we got here)
+    times.forEach((t0, i) => {
+      const u = (t - t0) / dur; if (u < 0 || u > 1) return;
+      const pt = pathEl.getPointAtLength(u * L_); put(dots[i % n], { x: pt.x, y: pt.y, o: Math.min(1, u * 10, (1 - u) * 10) });
+    });
+  }, 0, D, lin);
+  return dots;
+}
+// A numeric attribute stepping to new values: steps [[t, value], …], each eased over dur.
+function c7Steps(e, attr, steps, D, dur = .3) {
+  const v0 = parseFloat(e.getAttribute(attr));
+  prog(q => { const t = q * D; let v = v0; for (const [t0, x] of steps) { if (t < t0) break; v += (x - v) * io(Math.min(1, (t - t0) / dur)); } put(e, { ['a_' + attr]: v }); }, 0, D, lin);
+}
+// An arm moved through poses: keys [[t, shoulder, elbow, dur, ease?], …] (replaces chains of evArm on that arm).
+function c7ArmKeys(P_, side, keys, D) {
+  const a = side < 0 ? P_.armL : P_.armR, s0 = st(a).r, e0 = st(a._lo).r;
+  prog(q => {
+    const t = q * D; let sh = s0, el = e0;
+    for (const [t0, s1, e1, d, ease = io] of keys) { if (t < t0) break; const k = ease(Math.min(1, (t - t0) / d)); sh += (s1 - sh) * k; el += (e1 - el) * k; }
+    put(a, { r: sh }); put(a._lo, { r: el });
+  }, 0, D, lin);
+}
+/* One-off staggers (a network drawing itself, a brain firing, links and nodes lighting in turn) as one whole-beat
+   driver: items [e, t0, dur, to, ease = io], `to` a set of state keys (o, d, s, c_stroke, …) and their end values.
+   Each key starts from the element's pose when the beat is built (or the previous item's end), so before its first item
+   the element is held in that fixed pose, whatever frame we came from. */
+function c7Seq(items, D) {
+  const last = new Map(), its = items.slice().sort((a, b) => a[1] - b[1]).map(([e, t0, dur, to, ease = io]) => {
+    const from = {}, first = {};
+    for (const k in to) {
+      const id = e, m_ = last.get(id) || {}; last.set(id, m_);
+      first[k] = !(k in m_); from[k] = k in m_ ? m_[k] : st(e)[k] ?? fromAttr(e, k); m_[k] = to[k];
+    }
+    return { e, t0, dur, to, ease, from, first };
+  });
+  prog(q => {
+    const t = q * D;
+    for (const w of its) {
+      const o = {};
+      for (const k in w.to) {
+        if (t < w.t0) { if (w.first[k]) o[k] = w.from[k]; continue; }
+        const u = w.ease(Math.min(1, (t - w.t0) / w.dur));
+        o[k] = k.startsWith('c_') ? mix(w.from[k], w.to[k], u) : w.from[k] + (w.to[k] - w.from[k]) * u;
+      }
+      put(w.e, o);
+    }
+  }, 0, D, lin);
+}
+// pulse(e, t0, k) as c7Seq items.
+const c7PulseIt = (e, t0, k) => [[e, t0, .22, { s: k }, out], [e, t0 + .22, .4, { s: 1 }]];
+// c7NetShow as c7Seq items.
+const c7NetIt = (net, t0, d = 1) => net.nodes.map((n, i) => [n, t0 + i * d / net.nodes.length * .6, .3, { o: 1 }])
+  .concat(net.edges.map((e, i) => [e, t0 + .2 + i * d / net.edges.length * .6, .4, { d: 1 }]));
+// evFire as c7Seq items.
+const c7FireIt = (B, t0, d = 1.2) => B._edges.map((e, i) => [e, t0 + (i % 7) * d / 9, d * .5, { d: 1 }])
+  .concat(...B._nodes.map((n, i) => { const t = t0 + (i % 5) * d / 7; return [[n, t, .25, { o: 1 }], ...c7PulseIt(n, t, 1.8)]; }));
 // A ring of n points round (cx, cy).
 const c7Ring = (cx, cy, rx, ry, n, a0 = 0) => Array.from({ length: n }, (_, i) => { const a = a0 + i / n * Math.PI * 2; return [cx + Math.cos(a) * rx, cy + Math.sin(a) * ry]; });
 const c7RingEdges = (n, extra = []) => Array.from({ length: n }, (_, i) => [i, (i + 1) % n]).concat(extra);
@@ -268,20 +345,16 @@ const BEATS = [
     // three familiar clusters; a new node is wired in to them, and the links fire again and again
     const known = [[330, 500], [800, 440], [1270, 500]];
     const nets = known.map(([cx, cy], k) => {
-      const net = c7Net(g, c7Ring(cx, cy, 80, 46, 6, k), c7RingEdges(6, [[0, 3]]), { color: EV.gold, r: 7, w: 2 });
-      c7NetShow(net, .3 + k * .3, 1.2);
-      return net;
+      return c7Net(g, c7Ring(cx, cy, 80, 46, 6, k), c7RingEdges(6, [[0, 3]]), { color: EV.gold, r: 7, w: 2 });
     });
     const nw = c7Node(g, 800, 610, 16, EV.calm, 'calm', 0);
-    tw(nw, { o: 1 }, 1.3, .5);
     const links = known.map(([cx, cy]) => path(g, `M${cx + (cx < 800 ? 80 : cx > 800 ? -80 : 0)} ${cy + 20}Q${(cx + 800) / 2} ${cy + 120} 800 594`, { stroke: EV.goldHi, 'stroke-width': 2 }, { d: 0 }));
-    links.forEach((l, i) => draw(l, 1.6 + i * .2, .7));
-    let k = 0;
-    for (let t = 2.4; t < D - 1; t += 1.5, k++) {
-      nets.forEach((n, i) => c7NetFire(n, t + i * .1));
-      links.forEach((l, i) => { c7Run(l, t + .2 + i * .1, .8, EV.goldHi, 6); tw(l, { 'a_stroke-width': Math.min(7, 2 + k * 1.2) }, t + .9, .4); });
-      c7Flash(nw, t + 1);
-    }
+    // the clusters draw themselves, the new node appears and the links reach it: one driver (scene-setting, under the title)
+    c7Seq([].concat(...nets.map((net, k) => c7NetIt(net, .3 + k * .3, 1.2)), [[nw, 1.3, .5, { o: 1 }]], links.map((l, i) => [l, 1.6 + i * .2, .7, { d: 1 }])), D);
+    const fireT = c7Times(2.4, 1.5, D - 1);
+    nets.forEach((n, i) => c7NetFires(n, fireT.map(t => t + i * .1), D));
+    links.forEach((l, i) => { c7Runs(l, fireT.map(t => t + .2 + i * .1), .8, D, EV.goldHi, 6); c7Steps(l, 'stroke-width', fireT.map((t, k) => [t + .9, Math.min(7, 2 + k * 1.2)]), D, .4); });
+    c7Flashes(nw, fireT.map(t => t + 1), D);
     evText(g, L('kicker'), { x: 800, y: 150, size: 26, fill: EV.gold, weight: 500, ls: '6' });
     evText(g, L('title'), { x: 800, y: 280, size: 76, font: SERIF, weight: 600, maxW: 1420 });
     tw(g, { o: 1 }, .15, 1.1, out);
@@ -302,15 +375,16 @@ const BEATS = [
     draw(lk, .6, .6);
     const fires = [];
     for (let t = 1.1; t < m('two') - 1; t += 1.1) fires.push(t);
-    fires.forEach((t, i) => { c7Flash(A, t); c7Flash(B, t + .05); c7Run(lk, t + .1, .5, EV.goldHi, 7); tw(lk, { 'a_stroke-width': Math.min(14, 3 + i * 2) }, t + .5, .3); });
+    c7Flashes(A, fires, D); c7Flashes(B, fires.map(t => t + .05), D); c7Runs(lk, fires.map(t => t + .1), .5, D, EV.goldHi, 7);
+    c7Steps(lk, 'stroke-width', fires.map((t, i) => [t + .5, Math.min(14, 3 + i * 2)]), D);
     const cnt = evText(top, '', { x: 800, y: 300, size: 32, fill: EV.gold, weight: 600, maxW: 600 });
     prog(q => { const t = q * D, n = fires.filter(f => t >= f + .3).length; cnt.textContent = n ? fmt('together', n) : ''; }, 0, D, lin);
-    lab(top, 'ltp', 800, 570, Math.min(3.2, m('two') - 2), { size: 40, fill: EV.ink, font: SERIF, weight: 600, maxW: 1100 });
-    lab(top, 'ltpSub', 800, 625, Math.min(3.8, m('two') - 1.5), { size: 30, fill: EV.dim, maxW: 1000 });
-    tw(top, { o: 0 }, m('two') - .2, .5);
+    lab(top, 'ltp', 800, 570, m('ltp'), { size: 40, fill: EV.ink, font: SERIF, weight: 600, maxW: 1100 });
+    lab(top, 'ltpSub', 800, 625, m('ltp') + .6, { size: 30, fill: EV.dim, maxW: 1000 });
+    tw(top, { o: 0 }, m('two'), .5);
     // the two laws, as two cards
     const card = (x, t) => { const g = G(p, { o: 0 }); mk('rect', { x, y: 160, width: 650, height: 540, rx: 22, fill: '#0e1518', stroke: EV.gold, 'stroke-width': 2.5, 'stroke-opacity': .7 }, g); tw(g, { o: 1 }, t, .5); return g; };
-    const cR = card(110, m('rep') - .3), cA = card(840, m('assoc') - .3);
+    const cR = card(110, m('rep')), cA = card(840, m('assoc'));
     evText(cR, L('lawRep'), { x: 435, y: 235, size: 40, font: SERIF, weight: 600, fill: EV.gold, maxW: 580 });
     evText(cA, L('lawAssoc'), { x: 1165, y: 235, size: 40, font: SERIF, weight: 600, fill: EV.gold, maxW: 580 });
     // repetition: a turning loop; each turn fires the pair and thickens the link
@@ -321,30 +395,33 @@ const BEATS = [
     const a2 = c7Node(cR, 345, 450, 26), b2 = c7Node(cR, 525, 450, 26);
     const l2 = path(cR, 'M371 450H499', { stroke: EV.goldHi, 'stroke-width': 2 });
     cR.insertBefore(l2, a2);
-    let k = 0;
-    for (let t = m('rep') + .4; t < D - .3; t += 1.3, k++) { c7Flash(a2, t); c7Flash(b2, t + .05); c7Run(l2, t + .05, .4, EV.goldHi, 6); tw(l2, { 'a_stroke-width': Math.min(16, 3 + k * 2.6) }, t + .4, .3); }
+    const repT = c7Times(m('rep') + .4, 1.3, D - .3);
+    c7Flashes(a2, repT, D); c7Flashes(b2, repT.map(t => t + .05), D); c7Runs(l2, repT.map(t => t + .05), .4, D, EV.goldHi, 6);
+    c7Steps(l2, 'stroke-width', repT.map((t, k) => [t + .4, Math.min(16, 3 + k * 2.6)]), D);
     evPara(cR, L('repSub'), { x: 435, y: 650, size: 28, fill: EV.ink, maxW: 580 });
     // association: a known cluster, and a new node hooking on
     const kn = c7Net(cA, c7Ring(1090, 450, 90, 70, 6, .3), c7RingEdges(6, [[0, 3], [1, 4]]), { color: EV.gold, r: 10, w: 3, hide: false });
     const kg = evGlow(cA, 1090, 450, 160, 'Gold', 0); cA.insertBefore(kg, kn.g);
-    for (let t = m('assoc') + .3; t < D - .3; t += 1.5) { c7NetFire(kn, t); tw(kg, { o: .8 }, t, .2); tw(kg, { o: .2 }, t + .4, .8); }
+    const asT = c7Times(m('assoc') + .3, 1.5, D - .3);
+    c7NetFires(kn, asT, D);
+    c7Every(asT, D, (v, j) => { if (v < 0) return; const lo = j ? .2 : 0, f = c7Bump(v, .2, .4, .8); put(kg, { o: v < .4 ? lo + (.8 - lo) * f : .2 + .6 * f }); });
     const nw = G(cA, { x: 1340, y: 380 });
     const nr = mk('circle', { cx: 0, cy: 0, r: 22, fill: EV.bg, stroke: EV.dim, 'stroke-width': 3, 'stroke-dasharray': '6 6' }, nw);
     const nc = put(mk('circle', { cx: 0, cy: 0, r: 13, fill: EV.calm }, nw), { o: 0 });
     const nl = path(cA, 'M1178 430Q1270 420 1318 390', { stroke: EV.calm, 'stroke-width': 5 }, { d: 0 });
-    draw(nl, m('assoc') + 1.2, .6); tw(nr, { c_stroke: EV.calm }, m('assoc') + 1.8, .3); tw(nc, { o: 1 }, m('assoc') + 1.8, .3); pulse(nw, m('assoc') + 1.8, 1.4);
+    draw(nl, m('link'), .6); tw(nr, { c_stroke: EV.calm }, m('link') + .5, .3); tw(nc, { o: 1 }, m('link') + .5, .3); pulse(nw, m('link') + .5, 1.4);
     evPara(cA, L('assocSub'), { x: 1165, y: 650, size: 28, fill: EV.ink, maxW: 580 });
     // attention: the switch
     const sw = G(p, { x: 640, y: 800, o: 0 });
     const track = mk('rect', { x: -60, y: -28, width: 120, height: 56, rx: 28, fill: '#1a2226', stroke: EV.gold, 'stroke-width': 2.5 }, sw);
     const knob = put(mk('circle', { cx: 0, cy: 0, r: 20, fill: EV.dim }, sw), { x: -30 });
-    tw(sw, { o: 1 }, m('att') - .2, .4);
-    tw(knob, { x: 30, c_fill: EV.goldHi }, m('att') + .5, .35, back); tw(track, { c_fill: EV.goldLo }, m('att') + .5, .35);
+    tw(sw, { o: 1 }, m('att'), .4);
+    tw(knob, { x: 30, c_fill: EV.goldHi }, m('your'), .35, back); tw(track, { c_fill: EV.goldLo }, m('your'), .35);
     const at = evText(p, L('attSwitch'), { x: 720, y: 812, size: 36, fill: EV.gold, weight: 600, anchor: 'start', o: 0, maxW: 780 });
     show(at, m('att') + .3, .5);
     [[435, 'M600 772C560 740 435 750 435 702'], [1165, 'M680 772C760 740 1165 750 1165 702']].forEach(([, d], i) => {
-      const w = path(p, d, { stroke: EV.goldHi, 'stroke-width': 3 }, { d: 0 }); draw(w, m('att') + .9 + i * .1, .5);
-      for (let t = m('att') + 1.5; t < D - .4; t += 1.2) c7Run(w, t + i * .2, .6, EV.goldHi, 6);
+      const w = path(p, d, { stroke: EV.goldHi, 'stroke-width': 3 }, { d: 0 }); draw(w, m('your') + .4 + i * .1, .5);
+      c7Runs(w, c7Times(m('your') + 1, 1.2, D - .4).map(t => t + i * .2), .6, D, EV.goldHi, 6);
     });
   }],
 
@@ -356,7 +433,7 @@ const BEATS = [
     const ng = evGlow(p, 330, 450, 230, 'Gold', 0); p.insertBefore(ng, net.g);
     c7NetShow(net, .2, 1.2);
     tw(ng, { o: .7 }, m('known'), .6);
-    for (let t = m('known') + .3; t < D - .3; t += 1.2) c7NetFire(net, t);
+    c7NetFires(net, c7Times(m('known') + .3, 1.2, D - .3), D);
     lab(p, 'knownL', 330, 640, m('known') + .3, { size: 30, fill: EV.gold, maxW: 480 });
     // the new, weak signal
     const wk = c7Node(p, 650, 450, 20, EV.dim, 'calm', 0);
@@ -367,28 +444,28 @@ const BEATS = [
     p.insertBefore(jl, wk);
     draw(jl, m('join') + .2, .6);
     tw(wk._ring, { c_stroke: EV.calm }, m('join') + .8, .3); tw(wk._core, { c_fill: EV.calm, o: 1 }, m('join') + .8, .3); tw(wk._glow, { o: .8 }, m('join') + .8, .4);
-    for (let t = m('join') + 1.2; t < D - .3; t += 1.2) c7Run(jl, t, .5, EV.goldHi, 7);
+    c7Runs(jl, c7Times(m('join') + 1.2, 1.2, D - .3), .5, D, EV.goldHi, 7);
     hide(wl, m('join') + .6, .3);
     lab(p, 'joinsL', 650, 330, m('join') + .9, { size: 28, fill: EV.calm, maxW: 400 });
     // the lamp picture
     const fr = G(p, { o: 0 });
     c7Box(fr, 860, 140, 680, 640); c7Frame(fr, 860, 140, 680, 640);
-    tw(fr, { o: 1 }, m('known') - .2, .5);
+    tw(fr, { o: 1 }, m('known'), .5);
     mk('rect', { x: 860, y: 690, width: 680, height: 90, fill: '#151c1f' }, fr);
     const lamp = c7Lamp(fr, 990, 700, 1.25);
     const f1 = c7Flame(fr, lamp.wick[0], lamp.wick[1], 1, D);
     tw(f1, { o: 1 }, m('known') + .3, .4);
-    lab(fr, 'litL', 990, 330, m('known') + .6, { size: 28, fill: EV.joy, maxW: 240 });
+    lab(fr, 'litL', 990, 330, m('lamp'), { size: 28, fill: EV.joy, maxW: 240 });
     // a new diya on a stool, close to the flame
     mk('rect', { x: 1140, y: 470, width: 120, height: 14, rx: 4, fill: '#3a2f27' }, fr);
     path(fr, 'M1152 484V690M1248 484V690', { stroke: '#3a2f27', 'stroke-width': 8 });
     const dy1 = c7Diya(fr, 1170, 470, 1);
     const f2 = c7Flame(fr, dy1.wick[0], dy1.wick[1], .8, D);
     const jump = path(fr, `M${lamp.wick[0]} ${lamp.wick[1] - 30}Q${(lamp.wick[0] + dy1.wick[0]) / 2} ${lamp.wick[1] - 90} ${dy1.wick[0]} ${dy1.wick[1] - 14}`, { stroke: EV.joy, 'stroke-width': 3, 'stroke-dasharray': '6 8' }, { d: 0 });
-    draw(jump, m('join') + .3, .5); tw(jump, { o: 0 }, m('join') + 1.4, .4);
-    c7Run(jump, m('join') + .3, .6, '#ffd99a', 7);
-    tw(f2, { o: 1 }, m('join') + .9, .3);
-    lab(fr, 'catchL', 1200, 740, m('join') + 1, { size: 26, fill: EV.joy, maxW: 230 });
+    draw(jump, m('wick'), .5); tw(jump, { o: 0 }, m('wick') + 1.1, .4);
+    c7Run(jump, m('wick'), .6, '#ffd99a', 7);
+    tw(f2, { o: 1 }, m('wick') + .6, .3);
+    lab(fr, 'catchL', 1200, 740, m('wick') + .7, { size: 26, fill: EV.joy, maxW: 230 });
     // a lone diya, far away: the match only sparks
     const dy2 = c7Diya(fr, 1370, 690, 1);
     const match = G(fr, { x: dy2.wick[0] + 40, y: dy2.wick[1] - 40, o: 0 });
@@ -411,7 +488,7 @@ const BEATS = [
     mk('rect', { x: -10, y: 840, width: 1620, height: 70, fill: '#0c1114' }, p);
     const lee = evPerson(p, { kind: 'f', x: 230, y: 850, s: .82 });
     const mee = evPerson(p, { kind: 'f', x: 450, y: 850, s: .52, o: 0 });
-    put(lee.g, { o: 0 }); tw(lee.g, { o: 1 }, .1, .5); tw(mee.g, { o: 1 }, m('meera') - .2, .5);
+    put(lee.g, { o: 0 }); tw(lee.g, { o: 1 }, .1, .5); tw(mee.g, { o: 1 }, m('meera'), .5);
     [lee, mee].forEach((P_, i) => { evMood(P_, 'calm', 0, .01); evBreathe(P_, D, 1.2, .8 + i * .3); });
     evMood(mee, 'ask', m('meera') + .3);
     lab(p, 'leena', 230, 890, .4, { size: 26, fill: EV.dim }); lab(p, 'meera', 450, 890, m('meera'), { size: 26, fill: EV.dim });
@@ -434,34 +511,39 @@ const BEATS = [
     // they fire together and build a new picture
     const tb = m('build');
     const conv = spots.map(([x, y]) => path(kn, `M${x} ${y + 170}Q${(x + 1060) / 2} ${y + 270} 1060 ${y + 300}`, { stroke: EV.goldHi, 'stroke-width': 4 }, { d: 0 }));
-    nets.forEach(({ n, gl }, i) => { for (let t = tb + i * .15; t < m('taste') - .3; t += 1.4) { c7NetFire(n, t); tw(gl, { o: .9 }, t, .2); tw(gl, { o: .25 }, t + .5, .7); } });
-    conv.forEach((c, i) => { draw(c, tb + .3 + i * .15, .6); for (let t = tb + 1; t < m('taste') - .5; t += 1.4) c7Run(c, t + i * .1, .5, EV.goldHi, 7); });
+    nets.forEach(({ n, gl }, i) => {
+      const ft = c7Times(tb + i * .15, 1.4, m('taste') - .3);
+      c7NetFires(n, ft, D);
+      c7Every(ft, D, (v, j) => { if (v < 0) return; const lo = j ? .25 : 0, f = c7Bump(v, .2, .5, .7); put(gl, { o: v < .5 ? lo + (.9 - lo) * f : .25 + .65 * f }); });
+    });
+    conv.forEach((c, i) => { draw(c, tb + .3 + i * .15, .6); c7Runs(c, c7Times(tb + 1, 1.4, m('taste') - .5).map(t => t + i * .1), .5, D, EV.goldHi, 7); });
     const rb = c7Rambutan(kn, 1060, 600, 62, 0);
-    put(rb, { s: .2 }); tw(rb, { o: 1, s: 1 }, tb + 1.2, .8, back);
+    put(rb, { s: .2 }); tw(rb, { o: 1, s: 1 }, m('pic'), .8, back);
     // the word hooks on
     const wl = path(kn, 'M1150 600H1238', { stroke: EV.calm, 'stroke-width': 4 }, { d: 0 });
     draw(wl, m('word') + .2, .4);
     const wc = c7Chip(kn, L('rambutan'), { x: 1360, y: 612, size: 36, color: EV.calm, maxW: 240 });
     put(wc, { s: .7 }); tw(wc, { o: 1, s: 1 }, m('word') + .5, .5, back);
     // tasting: the senses, handled in different areas, bound into one memory
-    tw(kn, { o: 0 }, m('taste') - .1, .5);
+    tw(kn, { o: 0 }, m('taste'), .5);
     const bg = G(p, { o: 0 });
     tw(bg, { o: 1 }, m('taste') + .2, .6);
     const br = evBrain(bg, { x: 1040, y: 460, s: 1.25, stem: true });
     const sense = [['sight', 182, -20, EV.fear, 1340, 470, 'start'], ['touch', 60, -140, EV.love, 1115, 180, 'middle'], ['smell', -158, 40, EV.calm, 760, 640, 'middle'], ['taste', -40, -40, EV.joy, 840, 250, 'middle']];
     const ac = [1040 + 30 * 1.25, 460 + 66 * 1.25];
     sense.forEach(([k, bx, by, c, lx, ly, an], i) => {
-      const sx = 1040 + bx * 1.25, sy = 460 + by * 1.25, t = m('taste') + .8 + i * .55;
-      const d = evDot(bg, sx, sy, 15, c, 0); tw(d, { o: 1 }, t, .3); pulse(d, t, 1.6);
-      for (let u = t + 1; u < D - .3; u += 1.6) pulse(d, u, 1.35);
+      const sx = 1040 + bx * 1.25, sy = 460 + by * 1.25, t = m(['sight', 'touch', 'smell', 'tst'][i]);
+      const d = evDot(bg, sx, sy, 15, c, 0); tw(d, { o: 1 }, t, .3);
+      const dT = [t].concat(c7Times(t + 1, 1.6, D - .3));
+      c7Beats(d, dT, dT.map((_, j) => j ? 1.35 : 1.6), D);
       lab(bg, k, lx, ly, t, { size: 30, fill: c, weight: 600, anchor: an, maxW: 220 });
       const ln = path(bg, `M${sx} ${sy}Q${(sx + ac[0]) / 2} ${(sy + ac[1]) / 2 - 30} ${ac[0]} ${ac[1]}`, { stroke: c, 'stroke-width': 3 }, { d: 0 });
-      draw(ln, m('taste') + 3.2 + i * .15, .6);
-      for (let u = m('taste') + 4; u < D - .3; u += 1.6) c7Run(ln, u + i * .12, .6, c, 6);
+      draw(ln, m('bind') + i * .15, .6);
+      c7Runs(ln, c7Times(m('bind') + .8, 1.6, D - .3).map(u => u + i * .12), .6, D, c, 6);
     });
-    const ag = evGlow(bg, ac[0], ac[1], 90, 'Gold', 0); tw(ag, { o: 1 }, m('taste') + 3.8, .5);
-    lab(bg, 'assocArea', 1040, 790, m('taste') + 3.8, { size: 30, fill: EV.gold, weight: 600, maxW: 820 });
-    evFire(br, m('taste') + .4, 1.4);
+    const ag = evGlow(bg, ac[0], ac[1], 90, 'Gold', 0); tw(ag, { o: 1 }, m('bind') + .3, .5);
+    lab(bg, 'assocArea', 1040, 790, m('bind') + .3, { size: 30, fill: EV.gold, weight: 600, maxW: 820 });
+    c7Seq(c7FireIt(br, m('taste') + .4, 1.4), D);   // the brain lights up as she tastes: one driver
     // Meera holds one up
     const hand = c7Rambutan(mee.armR._lo, 0, 96, 22, 0);
     tw(hand, { o: 1 }, m('taste') + .2, .3);
@@ -495,7 +577,7 @@ const BEATS = [
     path(bk, 'M-30 -96H24M-30 -84H24', { stroke: EV.fear, 'stroke-width': 2, opacity: .7 });
     path(bk, 'M40 0V-100L60 -96V0Z', { fill: '#6b2b2b', stroke: EV.anger, 'stroke-width': 2 });
     const fc = (y, k, t) => { const c = c7Chip(s1, L(k), { x: 560, y, size: 26, maxW: 290, color: EV.fear, o: 1 }); put(c, { o: 0 }); tw(c, { o: 1 }, t, .4); return c; };
-    fc(222, 'fact1', m('sem') + .8); fc(300, 'fact2', m('sem') + 1.6);
+    fc(222, 'fact1', m('abu')); fc(300, 'fact2', m('fruit'));
     tw(s1, { o: 1 }, m('sem'), .5);
     // shelf 2: a photo with its tags
     const s2 = G(p, { o: 0 });
@@ -516,7 +598,7 @@ const BEATS = [
     mk('rect', { x: -56, y: -74, width: 112, height: 148, rx: 10, fill: '#11181c', stroke: EV.calm, 'stroke-width': 2 }, kp);
     const keys = [];
     for (let i = 0; i < 9; i++) keys.push(mk('circle', { cx: -30 + (i % 3) * 30, cy: -40 + Math.floor(i / 3) * 34, r: 10, fill: '#24323a' }, kp));
-    [4, 1, 8, 6].forEach((k, i) => { for (let t = m('proc') + .6 + i * .25; t < D; t += 2.4) { tw(keys[k], { c_fill: EV.calm }, t, .08); tw(keys[k], { c_fill: '#24323a' }, t + .2, .2); } });
+    [4, 1, 8, 6].forEach((k, i) => c7Every(c7Times(m('pin') + i * .25, 2.4, D), D, v => { if (v >= 0) put(keys[k], { c_fill: mix('#24323a', EV.calm, c7Bump(v, .08, .2, .2)) }); }));
     tw(s3, { o: 1 }, m('proc'), .5);
     // the names
     const nm = (kT, kS, y, c, t) => { lab(p, kT, 820, y, t, { size: 38, fill: c, weight: 600, anchor: 'start', font: SERIF, maxW: 720 }); lab(p, kS, 820, y + 50, t + .3, { size: 30, fill: EV.ink, anchor: 'start', maxW: 720 }); };
@@ -525,12 +607,12 @@ const BEATS = [
     nm('procT', 'procS', 650, EV.calm, m('proc') + .2);
     // practice moves knowledge down the shelves
     const ar = path(p, 'M190 230C80 300 80 600 190 680', { stroke: EV.gold, 'stroke-width': 4 }, { d: 0 });
-    draw(ar, m('move') + .2, .8);
-    const ah = evHead(p, 190, 680, 40, EV.gold); put(ah, { o: 0 }); show(ah, m('move') + 1, .2);
+    draw(ar, m('prac'), .8);
+    const ah = evHead(p, 190, 680, 40, EV.gold); put(ah, { o: 0 }); show(ah, m('prac') + .8, .2);
     const pg = G(p, { x: 82, y: 455, r: -90, o: 0 });
     evText(pg, L('practice'), { x: 0, y: 0, size: 30, fill: EV.gold, weight: 600, maxW: 300 });
-    tw(pg, { o: 1 }, m('move') + .6, .4);
-    for (let t = m('move') + 1.2; t < D - .3; t += 1.3) c7Run(ar, t, .9, EV.goldHi, 8);
+    tw(pg, { o: 1 }, m('prac') + .2, .4);
+    c7Runs(ar, c7Times(m('prac') + 1, 1.3, D - .3), .9, D, EV.goldHi, 8);
   }],
 
   ['prawns', 'b_prawn', (m, D) => {
@@ -566,26 +648,26 @@ const BEATS = [
     // the four ordinary details become tags
     const tg = [['tFriends', 260], ['tShack', 620], ['tTime', 980], ['tPrawns', 1340]].map(([k, x], i) => {
       const c = c7Chip(p, L(k), { x, y: 150, size: 30, maxW: 290, color: EV.dim });
-      put(c, { s: .7 }); tw(c, { o: 1, s: 1 }, m('tags') + i * .55, .45, back);
+      put(c, { s: .7 }); tw(c, { o: 1, s: 1 }, m(['tags', 'place', 'time', 'plate'][i]), .45, back);
       return c;
     });
-    const wsL = lab(p, 'weakSig', 800, 80, m('tags') + 2.4, { size: 28, fill: EV.dim, maxW: 600 });
+    const wsL = lab(p, 'weakSig', 800, 80, m('weakS'), { size: 28, fill: EV.dim, maxW: 600 });
     // night: everyone goes home; Ravi is sick
     const night = put(mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: '#02050a' }, p), { o: 0 });
     p.insertBefore(night, tg[0]);
-    tw(night, { o: .62 }, m('sick') - .3, .8);
-    [f1, f2].forEach(P_ => hide(P_.g, m('sick') - .3, .6));
+    tw(night, { o: .62 }, m('sick'), .8);
+    [f1, f2].forEach(P_ => hide(P_.g, m('sick'), .6));
     hide(plate, m('sick'), .4);
     evMood(rav, 'sad', m('sick')); evMood(rav, 'hurt', m('sick') + .8);
     tw(rav.torso, { r: 16 }, m('sick') + .2, .6); evArm(rav, -1, -50, -70, m('sick') + .2, .5); evArm(rav, 1, 40, 60, m('sick') + .2, .5);
     const ill2 = G(p, { o: 0 }); evGlow(ill2, 760, 680, 140, 'anger', 1);
-    tw(ill2, { o: .9 }, m('sick') + .3, .5);
-    for (let t = m('sick') + .8; t < m('smell'); t += 1.1) { tw(ill2, { o: .4 }, t, .5); tw(ill2, { o: .9 }, t + .5, .5); }
-    tw(ill2, { o: 0 }, m('smell'), .6);
+    // throbs from the sickness until the smell: one driver from the beat clock
+    const illT = c7Times(m('sick') + .8, 1.1, m('smell'));
+    c7Every(illT, D, (v, j, t) => { if (v < 0) { if (t >= m('sick') + .3) put(ill2, { o: .9 * io(Math.min(1, (t - m('sick') - .3) / .5)) }); return; } put(ill2, { o: t >= m('smell') ? .9 * (1 - io(Math.min(1, (t - m('smell')) / .6))) : .9 - .5 * c7Bump(v, .5, .5, .5) }); });
     // the strong signal wires itself to the weak ones
     const sk = c7Chip(p, L('sick'), { x: 800, y: 330, size: 32, color: EV.anger, ink: EV.anger, maxW: 360 });
     tw(sk, { o: 1 }, m('sick') + .4, .5);
-    hide(wsL, m('link') - .2, .3);
+    hide(wsL, m('link'), .3);
     lab(p, 'strongSig', 800, 400, m('link') + .2, { size: 26, fill: EV.anger, maxW: 400 });
     const links = [260, 620, 980, 1340].map((x, i) => {
       const d = path(p, `M800 296Q${(800 + x) / 2} ${230 + Math.abs(x - 800) * .05} ${x} 182`, { stroke: EV.anger, 'stroke-width': 6 }, { d: 0 });
@@ -593,7 +675,7 @@ const BEATS = [
       tw(tg[i]._box, { c_stroke: EV.anger }, m('link') + .8 + i * .12, .3);
       return d;
     });
-    for (let t = m('link') + 1.1; t < D - .3; t += 1.5) links.forEach((d, i) => c7Run(d, t + i * .08, .6, '#ffb08a', 7));
+    links.forEach((d, i) => c7Runs(d, c7Times(m('link') + 1.1, 1.5, D - .3).map(t => t + i * .08), .6, D, '#ffb08a', 7));
     // years later: just the smell of frying prawns
     tw(night, { o: .3 }, m('smell'), .6);
     const yl = lab(p, 'yearsLater', 1340, 290, m('smell'), { size: 30, fill: EV.ink, italic: true, font: SERIF, maxW: 300 });
@@ -604,8 +686,8 @@ const BEATS = [
     tw(pan, { o: 1 }, m('smell') + .2, .5);
     const fumes = [0, 1, 2].map(k => path(p, `M${1150 + k * 30} 720q-12 -20 0 -40q12 -20 0 -40q-12 -20 0 -40`, { stroke: EV.disgust, 'stroke-width': 3, 'stroke-opacity': .8 }, { o: 0 }));
     prog(q => { const t = q * D - m('smell') - .5; fumes.forEach((f, k) => put(f, { o: t < 0 ? 0 : .5 + .3 * Math.sin(t * 3 + k), x: t < 0 ? 0 : -Math.min(260, t * 90) - k * 10, y: t < 0 ? 0 : -Math.min(80, t * 30) })); }, 0, D, lin);
-    evMood(rav, 'worried', m('smell') + 1.4); tw(rav.torso, { r: -8 }, m('smell') + 1.4, .4);
-    pulse(tg[3], m('smell') + 1.4, 1.2);
+    evMood(rav, 'worried', m('stomach')); tw(rav.torso, { r: -8 }, m('stomach'), .4);
+    pulse(tg[3], m('stomach'), 1.2);
     const cap = evText(p, L('aversion'), { x: 800, y: 470, size: 34, font: SERIF, italic: true, weight: 600, fill: EV.gold, o: 0, maxW: 1300 });
     c7Halo(cap); tw(cap, { o: 1 }, m('surv'), .6);
   }],
@@ -638,49 +720,49 @@ const BEATS = [
     // the call
     const phone = G(lee.armR._lo, { x: 0, y: 84 });
     mk('rect', { x: -9, y: -20, width: 18, height: 34, rx: 4, fill: '#1d2428', stroke: EV.gold, 'stroke-width': 2 }, phone);
-    evArm(lee, 1, -150, -135, m('call') - .2, .5);
-    evMood(lee, 'smile', m('call') + .6); evMood(amma, 'smile', m('call') + 1.2);
-    evArm(amma, 1, -40, -60, m('call') + 1.2, .5); evArm(amma, -1, 40, 60, m('call') + 1.2, .5);
+    evArm(lee, 1, -150, -135, m('call'), .5);
+    evMood(lee, 'smile', m('offer')); evMood(amma, 'smile', m('offer') + .5);
+    evArm(amma, 1, -40, -60, m('offer') + .5, .5); evArm(amma, -1, 40, 60, m('offer') + .5, .5);
     const jg = evGlow(fr, 470, 560, 180, 'joy', 0); fr.insertBefore(jg, lee.g);
-    tw(jg, { o: .8 }, m('call') + .6, .6);
+    tw(jg, { o: .8 }, m('offer'), .6);
     // the details, every one recorded
     const cks = ['cRain', 'cKettle', 'cAmma', 'cWords'];
-    const chips = cks.map((k, i) => { const c = c7Chip(p, L(k), { x: 1200, y: 210 + i * 86, size: 30, maxW: 560, color: EV.joy }); put(c, { x: 1230 }); tw(c, { o: 1, x: 1200 }, m('detail') + i * .9, .45, out); return c; });
+    const chips = cks.map((k, i) => { const c = c7Chip(p, L(k), { x: 1200, y: 210 + i * 86, size: 30, maxW: 560, color: EV.joy }); put(c, { x: 1230 }); tw(c, { o: 1, x: 1200 }, m(['detail', 'kettle', 'face', 'words'][i]), .45, out); return c; });
     pulse(win, m('detail'), 1.04);
-    whistle.forEach((w, k) => { for (let t = m('detail') + .9 + k * .15; t < D; t += .8) { tw(w, { o: 1 }, t, .1); tw(w, { o: 0 }, t + .3, .3); } });
-    pulse(amma.head, m('detail') + 1.8, 1.15);
-    pulse(phone, m('detail') + 2.7, 1.4);
+    whistle.forEach((w, k) => c7Every(c7Times(m('kettle') + k * .15, .8, D), D, v => { if (v >= 0) put(w, { o: c7Bump(v, .1, .3, .3) }); }));
+    pulse(amma.head, m('face'), 1.15);
+    pulse(phone, m('words'), 1.4);
     // the signal strength
     const mt = G(p, { o: 0 });
-    tw(mt, { o: 1 }, m('spike') - .2, .4);
+    tw(mt, { o: 1 }, m('spike'), .4);
     evText(mt, L('signal'), { x: 1200, y: 600, size: 28, fill: EV.dim, maxW: 600 });
     path(mt, 'M1420 620V770', { stroke: EV.gold, 'stroke-width': 3, 'stroke-dasharray': '8 8' });
     evText(mt, L('longTerm'), { x: 1420, y: 798, size: 26, fill: EV.gold, maxW: 260 });
     [['ordinary', 660, 1310, EV.dim], ['jobCall', 740, 1520, EV.joy]].forEach(([k, y, x1, c], i) => {
       evText(mt, L(k), { x: 910, y: y + 10, size: 28, fill: EV.ink, anchor: 'start', maxW: 310 });
       const b = mk('rect', { x: 1240, y: y - 18, width: 0, height: 36, rx: 6, fill: c }, mt);
-      prog(q => b.setAttribute('width', (x1 - 1240) * q), m('spike') + .4 + i * .8, 1, out);
+      prog(q => b.setAttribute('width', (x1 - 1240) * q), i ? m('stronger') : m('spike') + .4, 1, out);
     });
     // science check: the details drift, the confidence does not
-    tw(mt, { o: 0 }, m('check') - .2, .4);
+    tw(mt, { o: 0 }, m('check'), .4);
     [[0, 'cRain2'], [1, 'cKettle2']].forEach(([i, k], j) => {
       const alt = c7Chip(p, L(k), { x: 1200, y: 210 + i * 86, size: 30, maxW: 560, color: EV.surprise, ink: EV.surprise });
-      tw(chips[i], { o: 0 }, m('check') + 2.5 + j * .8, .3); tw(alt, { o: 1 }, m('check') + 2.85 + j * .8, .4);
+      tw(chips[i], { o: 0 }, m('change') + j * .8, .3); tw(alt, { o: 1 }, m('change') + .35 + j * .8, .4);
     });
     const cf = G(p, { o: 0 });
     tw(cf, { o: 1 }, m('check') + .2, .4);
     const yr = evText(cf, '', { x: 1200, y: 580, size: 28, fill: EV.dim, weight: 600, maxW: 300 });
-    prog(q => { const t = q * D - m('check') - 1; yr.textContent = t < 0 ? '' : fmt('year', Math.min(25, 1 + Math.floor(t * 3))); }, 0, D, lin);
+    prog(q => { const t = q * D - m('change'); yr.textContent = t < 0 ? '' : fmt('year', Math.min(25, 1 + Math.floor(t * 3))); }, 0, D, lin);
     const bar = (k, y, c, f) => {
       evText(cf, L(k), { x: 910, y: y + 10, size: 28, fill: EV.ink, anchor: 'start', maxW: 310 });
       mk('rect', { x: 1240, y: y - 16, width: 280, height: 32, rx: 6, fill: 'none', stroke: EV.faint, 'stroke-width': 2 }, cf);
       const b = mk('rect', { x: 1240, y: y - 16, width: 280, height: 32, rx: 6, fill: c }, cf);
-      prog(q => { const t = q * D - m('check') - 1; b.setAttribute('width', 280 * f(Math.max(0, t))); }, 0, D, lin);
+      prog(q => { const t = q * D - m('change'); b.setAttribute('width', 280 * f(Math.max(0, t))); }, 0, D, lin);
     };
     bar('sure', 650, EV.joy, () => 1);
     bar('accurate', 730, EV.surprise, t => Math.max(.45, 1 - t * .07));
     const vv = evText(p, L('vivid'), { x: 800, y: 860, size: 38, font: SERIF, italic: true, weight: 600, fill: EV.gold, o: 0, maxW: 1400 });
-    tw(vv, { o: 1 }, m('check') + 5, .6);
+    tw(vv, { o: 1 }, m('vivid'), .6);
   }],
 
   ['recall', 'b_recall', (m, D) => {
@@ -694,7 +776,7 @@ const BEATS = [
     lab(p, 'ravi', 1000, 760, .4, { size: 26, fill: EV.dim }); lab(p, 'meera', 1400, 760, .4, { size: 26, fill: EV.dim });
     // the memory in a thought bubble
     const th = evThought(p, { x: 960, y: 450, w: 520, h: 280, dx: -140 });
-    tw(th, { o: 1 }, m('hostel') - .2, .5);
+    tw(th, { o: 1 }, m('hostel'), .5);
     const mem = G(th._in, { o: 0 });
     tw(mem, { o: 1 }, m('hostel') + .2, .5);
     const hb = G(mem, { x: -40, y: 10 });
@@ -702,29 +784,28 @@ const BEATS = [
     for (let i = 0; i < 6; i++) mk('rect', { x: -126 + (i % 3) * 52, y: -76 + Math.floor(i / 3) * 52, width: 30, height: 30, fill: '#e8b765', opacity: .7 }, hb);
     const pals = [[90, 20, '#2b7c78'], [140, 20, '#9c84d8'], [190, 20, '#c4b08a']].map(([x, y, c]) => { const g = G(hb, { x, y }); mk('circle', { cx: 0, cy: -30, r: 14, fill: EV.skinM }, g); path(g, 'M-18 24Q0 -24 18 24Z', { fill: c }); return g; });
     lab(th._in, 'hostel', -40, 110, m('hostel') + .4, { size: 26, fill: '#c9a87a', maxW: 300 });
-    evArm(rav, 1, -60, -50, m('hostel') + .2, .4, back);
-    for (let t = m('hostel') + .8; t < D - .5; t += 1.6) { evArm(rav, 1, -80, -40, t, .35); evArm(rav, 1, -50, -60, t + .8, .4); }
-    pals.forEach((g, i) => { for (let t = m('hostel') + 1 + i * .3; t < D; t += 1.8) pulse(g, t, 1.12); });
+    // he talks with his hand, and his friends in the memory bob along: one driver each, from the beat clock
+    c7ArmKeys(rav, 1, [[m('hostel') + .2, -60, -50, .4, back]].concat(...c7Times(m('hostel') + .8, 1.6, D - .5).map(t => [[t, -80, -40, .35], [t + .8, -50, -60, .4]])), D);
+    const shrink = t => 1 - .15 * io(Math.max(0, Math.min(1, (t - m('edit') - .4) / .6)));   // the edit: one friend shrinks a little
+    pals.forEach((g, i) => c7Beats(g, c7Times(m('hostel') + 1 + i * .3, 1.8, D), 1.12, D, i ? null : shrink));
     // the feeling comes back with it
     evMood(rav, 'smile', m('warm')); evMood(mee, 'smile', m('warm') + .6);
     const wg = evGlow(p, 1000, 520, 170, 'joy', 0); p.insertBefore(wg, rav.g);
-    tw(wg, { o: .9 }, m('warm') + .3, .7);
-    for (let t = m('warm') + 1.2; t < D - .4; t += 1.6) { tw(wg, { o: .55 }, t, .6); tw(wg, { o: .9 }, t + .8, .6); }
+    c7Every(c7Times(m('warm') + 1.2, 1.6, D - .4), D, (v, j, t) => put(wg, { o: v >= 0 ? .9 - .35 * c7Bump(v, .6, .8, .6) : .9 * io(Math.max(0, Math.min(1, (t - m('warm') - .3) / .7))) }));
     const slot = (k, t, c, t2) => { const g = G(p, { x: 330, y: 560, o: 0 }); const e = evPara(g, L(k), { x: 0, y: 0, size: 30, fill: c, maxW: 420, weight: 600 }); tw(g, { o: 1 }, t, .5); if (t2) tw(g, { o: 0 }, t2, .4); return e; };
-    slot('feelBack', m('warm') + .5, EV.joy, m('good') - .3);
+    slot('feelBack', m('fires'), EV.joy, m('good'));
     // the good old days: sepia
     const sep = put(mk('rect', { x: -170, y: -110, width: 400, height: 210, rx: 10, fill: '#a07a3a' }, mem), { x: 0, o: 0 });
     tw(sep, { o: .25 }, m('good') + .2, .8);
-    slot('goodOld', m('good'), '#c9a87a', m('rewrite') - .3);
+    slot('goodOld', m('good'), '#c9a87a', m('rewrite'));
     // each recall rewrites it a little
-    tw(pals[2], { x: 70 }, m('rewrite') + 1.4, .8); tw(bld, { c_fill: '#3a4a3c' }, m('rewrite') + 1.6, .8);
-    tw(pals[0], { s: .85 }, m('rewrite') + 2, .6);
+    tw(pals[2], { x: 70 }, m('edit'), .8); tw(bld, { c_fill: '#3a4a3c' }, m('edit') + .2, .8);
     const cyc = G(p, { x: 1150, y: 200, o: 0 });
     path(cyc, 'M0 -44A44 44 0 1 1 -40 -18', { stroke: EV.gold, 'stroke-width': 4 });
     evHead(cyc, -40, -18, -65, EV.gold);
-    tw(cyc, { o: 1 }, m('rewrite') + .3, .4);
+    tw(cyc, { o: 1 }, m('each'), .4);
     prog(q => put(cyc, { r: q * D * 90 }), 0, D, lin);
-    slot('rebuilt', m('rewrite') + .4, EV.gold);
+    slot('rebuilt', m('rebuilt'), EV.gold);
   }],
 
   ['q2', 'b_mem', (m, D) => {
@@ -764,24 +845,27 @@ const BEATS = [
     lab(sy, 'recvCell', 1220, 470, .5, { size: 30, fill: EV.ink, maxW: 340, anchor: 'start' });
     // repeated strong firing: signals cross forward
     const fw = [380, 430, 480].map(y => path(sy, `M700 ${y}L840 ${y}`, { stroke: 'none' }));
-    for (let t = m('fire'); t < m('drum') - .4; t += .9) { c7Run(ax, t, .5, EV.goldHi, 10); fw.forEach((f, i) => c7Run(f, t + .5 + i * .06, .35, EV.goldHi, 7)); ves.forEach((v, i) => pulse(v, t + .5 + (i % 3) * .05, 1.3)); }
+    const fT = c7Times(m('fire'), .9, m('drum') - .4);
+    c7Runs(ax, fT, .5, D, EV.goldHi, 10);
+    fw.forEach((f, i) => c7Runs(f, fT.map(t => t + .5 + i * .06), .35, D, EV.goldHi, 7));
+    ves.forEach((v, i) => c7Beats(v, fT.map(t => t + .5 + (i % 3) * .05), 1.3, D));
     lab(sy, 'sigL', 765, 150, m('fire') + .4, { size: 30, fill: EV.goldHi, weight: 600, maxW: 260 });
     // growth factors travel back
     const bw = [400, 460].map(y => path(sy, `M860 ${y}C820 ${y + 30} 740 ${y + 30} 690 ${y}`, { stroke: 'none' }));
-    for (let t = m('back') + .2; t < m('drum') - .4; t += .7) bw.forEach((b, i) => c7Run(b, t + i * .3, .9, EV.calm, 9));
+    bw.forEach((b, i) => c7Runs(b, c7Times(m('back') + .2, .7, m('drum') - .4).map(t => t + i * .3), .9, D, EV.calm, 9));
     lab(sy, 'gfL', 765, 760, m('back') + .3, { size: 30, fill: EV.calm, weight: 600, maxW: 560 });
     // new branches and contact points sprout
     [[-1, 'M600 330Q620 270 700 250', 700, 250, 880, 250], [1, 'M600 530Q620 590 700 610', 700, 610, 880, 610]].forEach(([s, d, bx, by, hx, hy], i) => {
       const br = path(sy, d, { stroke: EV.calm, 'stroke-width': 8 }, { d: 0 });
-      draw(br, m('back') + 1.6 + i * .3, .8);
+      draw(br, m('branch') + i * .3, .8);
       const b = put(mk('circle', { cx: bx, cy: by, r: 22, fill: '#141c20', stroke: EV.calm, 'stroke-width': 4 }, sy), { o: 0 });
       const n = path(sy, `M1170 ${hy}H${hx + 30}`, { stroke: EV.calm, 'stroke-width': 14 }, { d: 0 });
       const h_ = put(mk('ellipse', { cx: hx - 20, cy: hy, rx: 30, ry: 34, fill: '#141c20', stroke: EV.calm, 'stroke-width': 4 }, sy), { o: 0 });
-      tw(b, { o: 1 }, m('back') + 2.4 + i * .3, .4); draw(n, m('back') + 2.6 + i * .3, .6); tw(h_, { o: 1 }, m('back') + 3 + i * .3, .4);
+      tw(b, { o: 1 }, m('branch') + .6 + i * .3, .4); draw(n, m('contact') + i * .3, .6); tw(h_, { o: 1 }, m('contact') + .4 + i * .3, .4);
     });
-    lab(sy, 'newContacts', 1220, 650, m('back') + 2.8, { size: 28, fill: EV.calm, maxW: 340, anchor: 'start' });
+    lab(sy, 'newContacts', 1220, 650, m('contact') + .2, { size: 28, fill: EV.calm, maxW: 340, anchor: 'start' });
     // the chenda drummer
-    const q = c7Later(m('drum') - .2);
+    const q = c7Later(m('drum'));
     mk('rect', { x: -10, y: 840, width: 1620, height: 70, fill: '#0c1114' }, q);
     const dr = evPerson(q, { kind: 'm', x: 280, y: 850, s: .85 });
     evMood(dr, 'calm', 0, .01);
@@ -804,17 +888,20 @@ const BEATS = [
     lab(q, 'handArea', 760, 150, m('drum') + .4, { size: 30, fill: EV.calm, maxW: 480 });
     const yr = evText(q, '', { x: 760, y: 740, size: 30, fill: EV.ink, weight: 600, maxW: 300 });
     prog(qq => { const t = qq * D - m('drum'); yr.textContent = t < 0 ? '' : fmt('year', Math.min(10, 1 + Math.floor(t * 1.5))); }, 0, D, lin);
-    for (let t = m('drum') + .5; t < D; t += 2) evFire(br, t, 1, EV.calm);
+    // the map fires on every stroke: draw once, then the nodes pulse on the beat clock
+    const drT = c7Times(m('drum') + .5, 2, D);
+    br._edges.forEach((e, i) => { e.setAttribute('stroke', EV.calm); draw(e, drT[0] + (i % 7) / 9, .5); });
+    br._nodes.forEach((n, i) => { tw(n, { o: 1 }, drT[0] + (i % 5) / 7, .25); c7Beats(n, drT.map(t => t + (i % 5) / 7), 1.8, D); });
     // what the book says, and what is better supported
     const bs = G(q, { x: 1330, y: 230, o: 0 });
     const bsT = evPara(bs, L('bookSays'), { x: 0, y: 0, size: 28, fill: EV.dim, maxW: 400 });
     tw(bs, { o: 1 }, m('sci'), .5);
     [...bsT.children].forEach((ln, i) => {
       const w = Math.min(400, ln.getComputedTextLength()), y = +ln.getAttribute('y') - 28 * (ML ? .88 : 1) * .32;
-      draw(path(bsT, `M${-w / 2} ${y}H${w / 2}`, { stroke: EV.anger, 'stroke-width': 4 }, { d: 0 }), m('sci') + 3.2 + i * .2, .3);
+      draw(path(bsT, `M${-w / 2} ${y}H${w / 2}`, { stroke: EV.anger, 'stroke-width': 4 }, { d: 0 }), m('bdnf') + i * .2, .3);
     });
-    labP(q, 'bdnfL', 1330, 230 + bsT._h + 40, m('sci') + 3.4, { size: 30, fill: EV.calm, maxW: 400, weight: 600 });
-    labP(q, 'metaphor', 1330, 230 + bsT._h + 170, m('sci') + 5.5, { size: 28, fill: EV.ink, maxW: 400 });
+    labP(q, 'bdnfL', 1330, 230 + bsT._h + 40, m('bdnf') + .2, { size: 30, fill: EV.calm, maxW: 400, weight: 600 });
+    labP(q, 'metaphor', 1330, 230 + bsT._h + 170, m('meta'), { size: 28, fill: EV.ink, maxW: 400 });
     // other ways to raise BDNF
     const ic = [['exercise', 1180], ['sleepL', 1340], ['learning', 1500]];
     ic.forEach(([k, x], i) => {
@@ -824,7 +911,7 @@ const BEATS = [
       else if (i === 1) path(g, 'M8 -22A22 22 0 1 0 22 10A16 16 0 1 1 8 -22Z', { fill: EV.calm });
       else path(g, 'M-22 -14H-2V18H-22ZM2 -14H22V18H2Z', { stroke: EV.calm, 'stroke-width': 3 });
       evText(g, L(k), { x: 0, y: 76, size: 26, fill: EV.ink, maxW: 150 });
-      tw(g, { o: 1 }, m('ways') + i * .5, .4); pulse(g, m('ways') + i * .5 + .4, 1.2);
+      const t = m(['ways', 'sleep', 'learn'][i]); tw(g, { o: 1 }, t, .4); pulse(g, t + .4, 1.2);
     });
   }],
 
@@ -855,7 +942,7 @@ const BEATS = [
     });
     // knowledge: the taster's words
     const wd = [['brisk', 1040, 190], ['malty', 1380, 190], ['smoky', 1040, 290], ['astringent', 1380, 290]];
-    const wc = wd.map(([w, x, y], i) => { const c = c7Chip(p, w, { x, y, size: 30, maxW: 260 }); put(c, { s: .7 }); tw(c, { o: 1, s: 1 }, m('words') + .8 + i * .5, .4, back); return c; });
+    const wc = wd.map(([w, x, y], i) => { const c = c7Chip(p, w, { x, y, size: 30, maxW: 260 }); put(c, { s: .7 }); tw(c, { o: 1, s: 1 }, m(['brisk', 'malty', 'smoky', 'astr'][i]), .4, back); return c; });
     // attention: a spotlight on one cup, and she tastes
     const spot = G(p, { o: 0 });
     path(spot, 'M410 140L340 640H480Z', { fill: EV.gold, 'fill-opacity': .12 });
@@ -863,30 +950,36 @@ const BEATS = [
     p.insertBefore(spot, cups[0]);
     tw(spot, { o: 1 }, m('focus') + .2, .5);
     tw(spot, { o: 0 }, m('repeat') + .2, .5);
-    evArm(lee, 1, -40, -110, m('focus') + .4, .5); evMood(lee, 'ask', m('focus') + .4);
-    pulse(cups[2], m('focus') + .6, 1.15);
+    evMood(lee, 'ask', m('focus') + .4);
     // repetition: cup after cup
     const cn = evText(p, '', { x: 480, y: 470, size: 32, fill: EV.ink, weight: 600, maxW: 300 });
     c7Halo(cn);
     prog(q => { const t = q * D - m('repeat'); cn.textContent = t < 0 ? '' : fmt('cup', Math.min(48, 1 + Math.floor(t * 6))); }, 0, D, lin);
-    for (let t = m('repeat') + .3; t < D - .3; t += .5) { const c = cups[Math.round(t * 2) % 6]; pulse(c, t, 1.1); }
-    for (let t = m('repeat') + .3; t < D - .4; t += 1.4) { evArm(lee, 1, -50, -100, t, .3); evArm(lee, 1, -20, -30, t + .7, .4); }
+    // cup after cup, sip after sip: one driver per cup and one for her arm, from the beat clock
+    const cupT = cups.map(() => []);
+    c7Times(m('repeat') + .3, .5, D - .3).forEach(t => cupT[Math.round(t * 2) % 6].push(t));
+    cupT[2].unshift(m('focus') + .6);   // the cup she tastes with attention
+    cups.forEach((c, i) => c7Beats(c, cupT[i], cupT[i].map((_, j) => i === 2 && !j ? 1.15 : 1.1), D));
+    c7ArmKeys(lee, 1, [[m('focus') + .4, -40, -110, .5]].concat(...c7Times(m('repeat') + .3, 1.4, D - .4).map(t => [[t, -50, -100, .3], [t + .7, -20, -30, .4]])), D);
     // her tea network grows, hooked onto the words
     const pts = [[1020, 430], [1180, 400], [1340, 430], [1480, 470], [1060, 560], [1220, 540], [1380, 580], [1120, 700], [1290, 690], [1450, 680]];
     const ed = [[0, 1], [1, 2], [2, 3], [0, 4], [1, 5], [2, 6], [4, 5], [5, 6], [3, 6], [4, 7], [5, 8], [6, 9], [7, 8], [8, 9], [5, 7], [6, 8]];
     const net = c7Net(p, pts, ed, { color: EV.gold, r: 10, w: 3 });
     const tn = m('net');
-    net.nodes.forEach((n, i) => tw(n, { o: 1 }, tn + (i < 4 ? 0 : .4 + i * .25), .3));
-    net.edges.forEach((e, i) => draw(e, tn + .3 + i * .18, .4));
-    const hooks = wc.map((c, i) => { const h = path(p, `M${wd[i][1]} ${wd[i][2] + 26}L${pts[i][0]} ${pts[i][1] - 14}`, { stroke: EV.goldHi, 'stroke-width': 2.5 }, { d: 0 }); draw(h, tn + .2 + i * .15, .4); return h; });
-    for (let t = tn + 2; t < D - .3; t += 1.5) { c7NetFire(net, t); hooks.forEach((h, i) => c7Run(h, t - .3 + i * .05, .3, EV.goldHi, 5)); }
-    lab(p, 'teaNet', 1250, 790, tn + .5, { size: 30, fill: EV.gold, weight: 600, maxW: 480 });
+    const hooks = wc.map((c, i) => path(p, `M${wd[i][1]} ${wd[i][2] + 26}L${pts[i][0]} ${pts[i][1] - 14}`, { stroke: EV.goldHi, 'stroke-width': 2.5 }, { d: 0 }));
+    // from 'net': the word hooks, then node after node and link after link, as one driver
+    c7Seq(net.nodes.map((n, i) => [n, tn + (i < 4 ? 0 : .4 + i * .25), .3, { o: 1 }])
+      .concat(net.edges.map((e, i) => [e, tn + .3 + i * .18, .4, { d: 1 }]), hooks.map((h, i) => [h, tn + .2 + i * .15, .4, { d: 1 }])), D);
+    const tnT = c7Times(tn + 2, 1.5, D - .3);
+    c7NetFires(net, tnT, D);
+    hooks.forEach((h, i) => c7Runs(h, tnT.map(t => t - .3 + i * .05), .3, D, EV.goldHi, 5));
+    lab(p, 'teaNet', 1250, 790, m('teanet'), { size: 30, fill: EV.gold, weight: 600, maxW: 480 });
     // she notices more
     evMood(lee, 'smile', m('notice'));
     const spk = Array.from({ length: 6 }, (_, i) => evDot(p, 410 + Math.cos(i) * 50, 640 + Math.sin(i * 1.7) * 30, 5, EV.goldHi, 0));
     prog(q => { const t = q * D - m('notice'); spk.forEach((s, i) => put(s, { o: t < 0 ? 0 : Math.max(0, Math.sin(t * 4 + i)) })); }, 0, D, lin);
     const nl = evText(p, L('noticeL'), { x: 800, y: 870, size: 34, font: SERIF, italic: true, weight: 600, fill: EV.gold, o: 0, maxW: 1450 });
-    c7Halo(nl); tw(nl, { o: 1 }, m('notice') + 1.5, .6);
+    c7Halo(nl); tw(nl, { o: 1 }, m('prep'), .6);
   }],
 
   ['cue', 'b_cue', (m, D) => {
@@ -908,11 +1001,11 @@ const BEATS = [
     lab(p, 'leena', 330, 895, .4, { size: 26, fill: EV.dim });
     const man = c7Recolor(evPerson(p, { kind: 'm', x: 1700, y: 860, s: .85 }), '#5d6470');
     evMood(man, 'tense', 0, .01);
-    evWalk(man, 1700, 1250, .2, Math.max(1, m('mall') + 1.4), 60);
-    const mt = lab(p, 'manager', 1250, 470, m('mall') + 1.6, { size: 28, fill: EV.dim, italic: true, maxW: 420 });
+    evWalk(man, 1700, 1250, .2, Math.max(1, m('mgr')), 60);
+    const mt = lab(p, 'manager', 1250, 470, m('mgr') + .2, { size: 28, fill: EV.dim, italic: true, maxW: 420 });
     c7Halo(mt);
-    evMood(lee, 'worried', m('mall') + 1.8);
-    pulse(lee.head, m('mall') + 1.8, 1.08);
+    evMood(lee, 'worried', m('mgr') + .4);
+    pulse(lee.head, m('mgr') + .4, 1.08);
     // into the past
     const dim = put(mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: '#04070a' }, p), { o: 0 });
     p.insertBefore(dim, lee.g);
@@ -923,7 +1016,7 @@ const BEATS = [
       mk('rect', { x: -130, y: -100, width: 260, height: 200, rx: 14, fill: '#161d22', stroke: EV.shame, 'stroke-width': 2.5 }, g);
       draw_(g);
       const l_ = evText(g, L(k), { x: 0, y: 140, size: 28, fill: EV.shame, weight: 600, maxW: 270 }); c7Halo(l_);
-      put(g, { s: .8 }); tw(g, { o: 1, s: 1 }, t, .5, back);
+      g._t0 = t; tw(g, { o: 1 }, t, .5, back);   // its pop is in the scale driver below
       return g;
     };
     const c1 = card(800, m('back') + .3, 'card1', g => {
@@ -932,17 +1025,17 @@ const BEATS = [
       const me = evPerson(g, { kind: 'f', x: -60, y: 90, s: .34 }); evMood(me, 'sad', 0, .01);
       [-100, 100].forEach(x => mk('circle', { cx: x, cy: -50, r: 10, fill: EV.dim, opacity: .6 }, g));
     });
-    const c2 = card(1100, m('chain') + .4, 'card2', g => {
+    const c2 = card(1100, m('job'), 'card2', g => {
       mk('rect', { x: -50, y: -70, width: 100, height: 130, fill: '#e9e2d0' }, g);
       path(g, 'M-34 -46H34M-34 -26H34M-34 -6H20M-34 14H34M-34 34H10', { stroke: '#5a5040', 'stroke-width': 3 });
     });
-    const c3 = card(1400, m('chain') + 1.6, 'card3', g => {
+    const c3 = card(1400, m('exam'), 'card3', g => {
       mk('rect', { x: -50, y: -70, width: 100, height: 130, fill: '#e9e2d0' }, g);
       path(g, 'M-34 -36H20M-34 -16H34M-34 4H26', { stroke: '#5a5040', 'stroke-width': 3 });
       T(g, '38/100', { x: 0, y: 44, size: 26, fill: '#c0392b', weight: 700, anchor: 'middle', font: SANS });
     });
     const lk = [[930, 1235], [1230, 1535]].map(([a]) => path(p, `M${a} 250H${a + 40}`, { stroke: EV.shame, 'stroke-width': 4 }, { d: 0 }));
-    draw(lk[0], m('chain') + .2, .3); draw(lk[1], m('chain') + 1.4, .3);
+    draw(lk[0], m('job'), .3); draw(lk[1], m('exam'), .3);
     const back_ = path(p, 'M400 520C420 420 600 260 668 250', { stroke: EV.shame, 'stroke-width': 4, 'stroke-dasharray': '8 8' }, { d: 0 });
     draw(back_, m('back') + .1, .5);
     // her body follows the memory
@@ -952,12 +1045,13 @@ const BEATS = [
     const sg = evGlow(p, 330, 640, 200, 'shame', 0); p.insertBefore(sg, lee.g);
     tw(sg, { o: .8 }, m('feel') + .3, .7);
     const nb = evBubble(p, L('never'), { x: 470, y: 470, w: 420, size: 32, tail: 'left', edge: EV.shame, italic: true });
-    pop(nb, m('feel') + .6);
+    pop(nb, m('never'));
     // nothing happened today
     tw(dim, { o: .35 }, m('past'), .6);
     const loop = [back_, lk[0], lk[1]];
-    for (let t = m('back') + 1; t < D - .4; t += 1.6) loop.forEach((l_, i) => c7Run(l_, t + i * .4, .5, '#c9b8f0', 7));
-    [c1, c2, c3].forEach((c, i) => { for (let t = m('past') + .3 + i * .4; t < D; t += 1.6) pulse(c, t, 1.04); });
+    const drawn = [m('back') + .1, m('job'), m('exam')];   // a link carries dots once it is drawn
+    loop.forEach((l_, i) => c7Runs(l_, c7Times(m('back') + 1, 1.6, D - .4).map(t => t + i * .4).filter(t => t >= drawn[i] + .3), .5, D, '#c9b8f0', 7));
+    [c1, c2, c3].forEach((c, i) => c7Beats(c, c7Times(m('past') + .3 + i * .4, 1.6, D), 1.04, D, t => .8 + .2 * back(Math.max(0, Math.min(1, (t - c._t0) / .5)))));
     const pl = evText(p, L('pastL'), { x: 800, y: 90, size: 36, font: SERIF, italic: true, weight: 600, fill: EV.gold, o: 0, maxW: 1450 });
     c7Halo(pl); tw(pl, { o: 1 }, m('past') + .4, .6);
     tw(man.g, { o: 0 }, m('past') + .2, .8);
@@ -983,7 +1077,8 @@ const BEATS = [
     mk('rect', { x: 0, y: 160, width: 1600, height: 260, fill: '#10201a' }, p);
     const rd = path(p, 'M-20 300H1620', { stroke: '#6b5a3a', 'stroke-width': 16 });
     const edgeL = path(p, 'M-20 300H1620', { stroke: EV.dim, 'stroke-width': 2, 'stroke-dasharray': '30 26' }, { o: 0 });
-    const wNow = t => t < m('traffic') + .6 ? 16 : t < m('traffic') + 3 ? 16 + (t - m('traffic') - .6) / 2.4 * 54 : Math.min(150, 70 + (t - m('traffic') - 3) * 50);
+    const w1 = m('widen'), w2 = Math.max(m('hwy'), w1 + .6);   // widened on 'widened', a highway on 'highway'
+    const wNow = t => t < w1 ? 16 : t < w2 ? 16 + (t - w1) / (w2 - w1) * 54 : Math.min(150, 70 + (t - w2) * 50);
     const carsN = 18, cars = Array.from({ length: carsN }, (_, i) => { const g = G(p, { o: 0 }); mk('rect', { x: -22, y: -10, width: 44, height: 20, rx: 6, fill: ['#c4b08a', '#7fc4d1', '#e2694f', '#e8cf86'][i % 4] }, g); return g; });
     prog(q => {
       const t = q * D, w = wNow(t);
@@ -996,17 +1091,17 @@ const BEATS = [
         put(c, { x, y: 300 + dir * (w > 30 ? w * .22 : 0) + lane * 22 * dir, o: i < live ? 1 : 0, s: w < 30 ? .6 : 1 });
       });
     }, 0, D, lin);
-    [['lane', m('lane'), m('traffic') + .6], ['widened', m('traffic') + .8, m('traffic') + 3], ['highway', m('traffic') + 3.2, m('money') + .2]].map(([k, t0, t1]) => {
+    [['lane', m('lane'), w1], ['widened', w1, w2], ['highway', w2, m('money') + .2]].map(([k, t0, t1]) => {
       const e = lab(p, k, 800, 130, t0, { size: 36, fill: EV.gold, weight: 600, font: SERIF, maxW: 700 }); hide(e, t1, .3); return e;
     });
     const tc = G(p, { x: 800, y: 560, o: 0 });
     evText(tc, L('perDay'), { x: 0, y: -70, size: 30, fill: EV.dim, maxW: 700 });
     const tn = evText(tc, '', { x: 0, y: 20, size: 72, fill: EV.ink, weight: 600, font: SERIF });
     prog(q => { const t = q * D, w = wNow(t); tn.textContent = (Math.round(20 * (w / 16) ** 2.5) * 10).toLocaleString('en-US'); }, 0, D, lin);
-    tw(tc, { o: 1 }, m('lane') + .3, .5); tw(tc, { o: 0 }, m('money') - .5, .4);
+    tw(tc, { o: 1 }, m('lane') + .3, .5); tw(tc, { o: 0 }, m('money'), .4);
     // Ravi's daily money worry
     const rav = evPerson(p, { kind: 'm', x: 220, y: 880, s: .7, o: 0 });
-    tw(rav.g, { o: 1 }, m('money') - .2, .5); evMood(rav, 'worried', m('money')); evBreathe(rav, D);
+    tw(rav.g, { o: 1 }, m('money'), .5); evMood(rav, 'worried', m('money')); evBreathe(rav, D);
     evArm(rav, 1, -80, -90, m('money') + .3, .5);
     lab(p, 'ravi', 220, 580, m('money'), { size: 26, fill: EV.dim });
     const pts = [[700, 600], [900, 540], [1120, 560], [1320, 620], [1250, 780], [1000, 800], [780, 760]];
@@ -1017,7 +1112,9 @@ const BEATS = [
     const loopP = path(p, 'M700 600L900 540L1120 560L1320 620L1250 780L1000 800L780 760Z', { stroke: 'none' });
     const dc = evText(p, '', { x: 1010, y: 690, size: 30, fill: EV.ink, weight: 600, maxW: 260 });
     const mornings = []; for (let t = m('money') + 1.5; t < D - .6; t += 1.25) mornings.push(t);
-    mornings.forEach((t, i) => { c7Run(loopP, t, 1.1, EV.goldHi, 8); if (t > m('thick') - .2) net.edges.forEach(e => tw(e, { 'a_stroke-width': Math.min(14, 3 + (i + 1) * 1.4) }, t + .9, .3)); });
+    c7Runs(loopP, mornings, 1.1, D, EV.goldHi, 8);
+    const thickT = mornings.map((t, i) => [t + .9, Math.min(14, 3 + (i + 1) * 1.4)]).filter(([t]) => t - .9 > m('thick') - .2);   // used daily, the links thicken
+    net.edges.forEach(e => c7Steps(e, 'stroke-width', thickT, D));
     prog(q => { const t = q * D, n = mornings.filter(x => t >= x).length; dc.textContent = n ? fmt('day', n * 7) : ''; }, 0, D, lin);
     // smaller and smaller triggers set it off
     const gg = G(p, { x: 480, y: 700, o: 0 });
@@ -1028,11 +1125,12 @@ const BEATS = [
     prog(q => { const t = q * D - m('thick'); const h = 228 * Math.max(.12, 1 - Math.max(0, t) * .14); gf.setAttribute('y', 114 - h); gf.setAttribute('height', h); }, 0, D, lin);
     [['bill', 470, 860], ['headline', 700, 860]].forEach(([k, x, y], i) => {
       const c = c7Chip(p, L(k), { x, y, size: 28, maxW: 200, color: EV.surprise }); put(c, { s: .6 });
-      tw(c, { o: 1, s: 1 }, m('less') + .4 + i * 1.2, .4, back);
-      c7NetFire(net, m('less') + .8 + i * 1.2);
+      tw(c, { o: 1, s: 1 }, m(k === 'bill' ? 'bill' : 'news'), .4, back);
     });
+    // each trigger fires the whole network (the second waits until the first pulse has settled)
+    c7NetFires(net, [m('bill') + .4, Math.max(m('news') + .4, m('bill') + 1.05)], D);
     const mc = evText(p, L('moreThink'), { x: 800, y: 130, size: 34, font: SERIF, italic: true, weight: 600, fill: EV.gold, o: 0, maxW: 1450 });
-    tw(mc, { o: 1 }, m('less') + 3, .6);
+    tw(mc, { o: 1 }, m('more'), .6);
   }],
 
   ['self', 'b_self', (m, D) => {
@@ -1044,23 +1142,23 @@ const BEATS = [
     const cols = [EV.gold, EV.calm, EV.fear, EV.joy, EV.shame];
     const nets = [[-70, -70], [40, -100], [110, -10], [-20, 40], [-100, 60]].map(([x, y], i) => {
       const n = c7Net(hd, c7Ring(x, y, 34, 26, 5, i), c7RingEdges(5, [[0, 2]]), { color: cols[i], r: 5, w: 2 });
-      c7NetShow(n, .6 + i * .3, .8);
-      for (let t = 1.6 + i * .3; t < m('meet') - .3; t += 1.5) c7NetFire(n, t);
+      c7NetFires(n, c7Times(1.6 + i * .3, 1.5, m('meet') - .3), D);
       return n;
     });
+    c7Seq([].concat(...nets.map((n, i) => c7NetIt(n, .6 + i * .3, .8))), D);   // the head fills with networks: one driver
     const srcs = [['genes', 250, EV.shame], ['family', 400, EV.calm], ['culture', 550, EV.fear], ['experience', 700, EV.joy]];
     srcs.forEach(([k, y, c], i) => {
-      const t = m('make') + i * .7;
+      const t = m(['genes', 'family', 'culture', 'exp'][i]);
       const ch = c7Chip(p, L(k), { x: 220, y, size: 30, color: c, maxW: 260 });
       tw(ch, { o: 1 }, t, .4);
       const a = path(p, `M${370} ${y - 10}Q${480} ${y - 10} ${560} ${470 + (y - 470) * .4}`, { stroke: c, 'stroke-width': 3 }, { d: 0 });
       draw(a, t + .3, .5);
-      for (let u = t + 1; u < m('meet') - .3; u += 1.6) c7Run(a, u, .6, c, 6);
+      c7Runs(a, c7Times(t + 1, 1.6, m('meet') - .3), .6, D, c, 6);
     });
-    labP(p, 'selfL', 1310, 380, m('make') + 2.4, { size: 30, fill: EV.ink, maxW: 440 });
-    labP(p, 'selfL2', 1310, 560, m('make') + 3.4, { size: 34, fill: EV.gold, weight: 600, maxW: 440, font: SERIF });
+    labP(p, 'selfL', 1310, 380, m('habits'), { size: 30, fill: EV.ink, maxW: 440 });
+    labP(p, 'selfL2', 1310, 560, m('selfk'), { size: 34, fill: EV.gold, weight: 600, maxW: 440, font: SERIF });
     // a wedding in Sharjah
-    const q = c7Later(m('meet') - .2);
+    const q = c7Later(m('meet'));
     mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: '#0d0f12' }, q);
     mk('rect', { x: 0, y: 840, width: 1600, height: 60, fill: '#151a1d' }, q);
     for (let k = 0; k < 3; k++) {
@@ -1075,26 +1173,29 @@ const BEATS = [
     const oth = c7Recolor(evPerson(q, { kind: 'm', x: 1080, y: 860, s: .85 }), '#6b4f7a');
     [rav, oth].forEach((P_, i) => { evMood(P_, 'calm', 0, .01); evBreathe(P_, D, 1.2, .9 + i * .2); });
     lab(q, 'ravi', 520, 895, m('meet'), { size: 26, fill: EV.dim });
-    const span = Math.max(4, m('match') - m('meet') - .4) / 4;
+    const qT = ['home', 'thr', 'school', 'biju'].map(k => m(k)).concat(m('match'));   // each bubble on its words
     ['wq1', 'wq2', 'wq3', 'wq4'].forEach((k, i) => {
-      const left = i % 2 === 0, t = m('meet') + .4 + i * span;
+      const left = i % 2 === 0, t = qT[i];
       const b = evBubble(q, L(k), { x: left ? 560 : 1040, y: 500, w: 400, size: 30, tail: left ? 'left' : 'right' });
-      pop(b, t); hide(b, i < 3 ? t + span - .1 : m('match') - .1, .3);
+      pop(b, t); hide(b, qT[i + 1], .3);
       evArm(left ? rav : oth, left ? 1 : -1, left ? -40 : 40, left ? -30 : 30, t, .4, back);
       evMood(left ? rav : oth, i < 2 ? 'ask' : 'smile', t);
     });
     // their networks match
     const heads = [[520, 370], [1080, 370]];
     const hn = heads.map(([x, y], h_) => { const n = c7Net(q, c7Ring(x, y, 90, 60, 6, .4), c7RingEdges(6, [[0, 3]]), { color: EV.gold, r: 9, w: 2.5 }); c7NetShow(n, m('match') + h_ * .2, .8); return n; });
+    // one bridge per shared thing, in turn from 'match': one driver for the bridges, their end nodes and the chips
+    const bridge = [];
     [['mThrissur', 0, 310], ['mSchool', 1, 380], ['mBiju', 2, 450]].forEach(([k, i, y], j) => {
-      const t = m('match') + 1 + j * .7;
+      const t = m('nmatch') + j * .6;
       const a = hn[0].nodes[[0, 1, 5][i]], b = hn[1].nodes[[3, 2, 4][i]];
       const br = path(q, `M${st(a).x} ${st(a).y}C700 ${y - 40} 900 ${y - 40} ${st(b).x} ${st(b).y}`, { stroke: EV.calm, 'stroke-width': 4 }, { d: 0 });
-      draw(br, t, .6); pulse(a, t, 1.6); pulse(b, t + .5, 1.6);
-      const ch = c7Chip(q, L(k), { x: 800, y: y - 30, size: 26, color: EV.calm, maxW: 200 }); tw(ch, { o: 1 }, t + .4, .4);
-      for (let u = t + 1; u < D - .3; u += 1.8) c7Run(br, u, .7, EV.goldHi, 6);
+      const ch = c7Chip(q, L(k), { x: 800, y: y - 30, size: 26, color: EV.calm, maxW: 200 });
+      bridge.push([br, t, .6, { d: 1 }], ...c7PulseIt(a, t, 1.6), ...c7PulseIt(b, t + .5, 1.6), [ch, t + .4, .4, { o: 1 }]);
+      c7Runs(br, c7Times(t + 1, 1.8, D - .3), .7, D, EV.goldHi, 6);
     });
-    evMood(rav, 'smile', m('match') + .5); evMood(oth, 'smile', m('match') + .7);
+    c7Seq(bridge, D);
+    evMood(rav, 'smile', m('nmatch') + .5); evMood(oth, 'smile', m('nmatch') + .7);
     const kl = evText(q, L('keepL'), { x: 800, y: 215, size: 30, fill: EV.ink, weight: 600, o: 0, maxW: 1300 });
     c7Halo(kl); tw(kl, { o: 1 }, m('keep') + .3, .5);
   }],
@@ -1102,36 +1203,42 @@ const BEATS = [
   ['box', 'b_box', (m, D) => {
     const p = panel(0);
     const bx = mk('rect', { x: 200, y: 200, width: 560, height: 500, rx: 20, fill: '#0e1518', stroke: EV.gold, 'stroke-width': 4 }, p);
-    put(bx, { o: 0 }); tw(bx, { o: 1 }, m('box') - .2, .5);
+    put(bx, { o: 0 }); tw(bx, { o: 1 }, m('box'), .5);
     lab(p, 'boxL', 480, 160, m('box') + .2, { size: 36, fill: EV.gold, weight: 600, font: SERIF, maxW: 700 });
     const pts = [[300, 300], [430, 270], [580, 300], [680, 380], [330, 430], [480, 420], [620, 470], [290, 580], [440, 600], [600, 610], [700, 560], [380, 510]];
     const ed = [[0, 1], [1, 2], [2, 3], [0, 4], [1, 5], [2, 6], [4, 5], [5, 6], [3, 6], [4, 11], [11, 8], [5, 11], [7, 8], [8, 9], [9, 10], [6, 10], [7, 11], [6, 9]];
     const net = c7Net(p, pts, ed, { color: EV.gold, r: 10, w: 3 });
-    c7NetShow(net, .3, 1.4);
+    const boxSeq = c7NetIt(net, .3, 1.4);   // drawn with the outside nodes below, in one driver
     const loopD = 'M300 300L430 270L580 300L680 380L620 470L600 610L440 600L290 580L330 430Z';
     const lp = path(p, loopD, { stroke: EV.goldHi, 'stroke-width': 5, 'stroke-opacity': .5 }, { d: 0 });
     draw(lp, m('inside'), 1.2);
-    for (let t = m('inside') + .4; t < D - .4; t += 1.6) c7Run(lp, t, 1.5, EV.goldHi, 8);
+    c7Runs(lp, c7Times(m('inside') + .4, 1.6, D - .4), 1.5, D, EV.goldHi, 8);
     const il = lab(p, 'insideL', 480, 760, m('inside') + .2, { size: 30, fill: EV.ink, maxW: 600 });
     // outside: new combinations, practised until they are easy
     const out_ = [[960, 260], [1140, 330], [1330, 250], [1480, 380], [1000, 480], [1220, 520], [1420, 600], [1060, 680], [1290, 720]];
-    const on = out_.map(([x, y], i) => { const g = G(p, { x, y, o: 0 }); const r_ = mk('circle', { cx: 0, cy: 0, r: 12, fill: EV.bg, stroke: EV.dim, 'stroke-width': 3, 'stroke-dasharray': '5 5' }, g); g._r = r_; g._c = put(mk('circle', { cx: 0, cy: 0, r: 7, fill: EV.calm }, g), { o: 0 }); tw(g, { o: 1 }, .8 + i * .15, .4); return g; });
+    const on = out_.map(([x, y], i) => { const g = G(p, { x, y, o: 0 }); const r_ = mk('circle', { cx: 0, cy: 0, r: 12, fill: EV.bg, stroke: EV.dim, 'stroke-width': 3, 'stroke-dasharray': '5 5' }, g); g._r = r_; g._c = put(mk('circle', { cx: 0, cy: 0, r: 7, fill: EV.calm }, g), { o: 0 }); boxSeq.push([g, .8 + i * .15, .4, { o: 1 }]); return g; });
     const nl = [[3, 0], [3, 1], [6, 4], [6, 5], [10, 7], [10, 8]].map(([a, b], i) => {
       const A = pts[a], B = out_[b];
       const e = path(p, `M${A[0]} ${A[1]}Q${(A[0] + B[0]) / 2} ${(A[1] + B[1]) / 2 - 40} ${B[0]} ${B[1]}`, { stroke: EV.calm, 'stroke-width': 2, 'stroke-dasharray': '8 8' }, { d: 0 });
-      draw(e, m('outside') + .3 + i * .3, .6);
+      boxSeq.push([e, m('outside') + .3 + i * .3, .6, { d: 1 }]);
       return e;
     });
-    let k = 0;
-    for (let t = m('outside') + 2.2; t < D - .4; t += 1.3, k++) nl.forEach((e, i) => { c7Run(e, t + i * .1, .6, EV.calm, 7); if (k === 2) { e.setAttribute('stroke-dasharray', 'none'); } tw(e, { 'a_stroke-width': Math.min(8, 2 + k * 1.5) }, t + .6, .3); });
-    on.slice(0, 6).forEach((n, i) => { tw(n._r, { c_stroke: EV.calm }, m('outside') + 1 + i * .3, .3); tw(n._c, { o: 1 }, m('outside') + 1 + i * .3, .3); });
+    // again and again: each new link carries a signal and thickens, starting on 'again'
+    const agT = c7Times(m('again'), 1.3, D - .4);
+    nl.forEach((e, i) => {
+      c7Runs(e, agT.map(t => t + i * .1), .6, D, EV.calm, 7);
+      if (agT.length > 2) e.setAttribute('stroke-dasharray', 'none');
+      c7Steps(e, 'stroke-width', agT.map((t, k) => [t + .6, Math.min(8, 2 + k * 1.5)]), D);
+    });
+    on.slice(0, 6).forEach((n, i) => boxSeq.push([n._r, m('outside') + 1 + i * .3, .3, { c_stroke: EV.calm }], [n._c, m('outside') + 1 + i * .3, .3, { o: 1 }]));
+    c7Seq(boxSeq, D);
     const ol = lab(p, 'outsideL', 1220, 820, m('outside') + .3, { size: 30, fill: EV.calm, maxW: 640 });
     // hope: the box grows
     tw(bx, { a_width: 1360, c_stroke: EV.calm }, m('hope') + .3, 1.6);
     hide(il, m('hope'), .3); hide(ol, m('hope'), .3);
     const hl = evText(p, L('hopeL'), { x: 800, y: 800, size: 38, font: SERIF, italic: true, weight: 600, fill: EV.gold, o: 0, maxW: 1400 });
-    tw(hl, { o: 1 }, m('hope') + 1.2, .6);
-  }],
+    tw(hl, { o: 1 }, m('hope') + .4, .6);
+  }, { lead: false }],   // the box's networks are on screen from the first second (their driver is not a reveal)
 
   ['scicheck', 'b_sci', (m, D) => {
     const p = panel(0);
@@ -1146,28 +1253,28 @@ const BEATS = [
       evText(g, L(k), { x: 36, y: 0, size: 34, fill: c, weight: 600, anchor: 'start', maxW: 540 });
       tw(g, { o: 1 }, t, .5);
     };
-    colHead(110, 'wellSup', EV.calm, 'ok', m('solid') - .2);
-    colHead(870, 'lessCert', EV.surprise, '?', m('model') - .2);
+    colHead(110, 'wellSup', EV.calm, 'ok', m('solid'));
+    colHead(870, 'lessCert', EV.surprise, '?', m('model'));
     ['s1', 's2', 's3', 's4'].forEach((k, i) => {
       const g = G(p, { x: 130, y: 320 + i * 125, o: 0 });
       evDot(g, -12, -10, 6, EV.calm);
       evPara(g, L(k), { x: 10, y: 0, size: 30, maxW: 600, anchor: 'start', fill: EV.ink });
-      put(g, { x: 110 }); tw(g, { o: 1, x: 130 }, m('solid') + .6 + i * 1.6, .5, out);
+      put(g, { x: 110 }); tw(g, { o: 1, x: 130 }, m(k), .5, out);
     });
     ['m1', 'm2', 'm3'].forEach((k, i) => {
       const g = G(p, { x: 890, y: 320 + i * 125, o: 0 });
       evDot(g, -12, -10, 6, EV.surprise);
       evPara(g, L(k), { x: 10, y: 0, size: 30, maxW: 620, anchor: 'start', fill: EV.ink });
-      put(g, { x: 910 }); tw(g, { o: 1, x: 890 }, (i < 2 ? m('model') + .4 + i * 3 : m('pers') + .3), .5, out);
+      put(g, { x: 910 }); tw(g, { o: 1, x: 890 }, (i < 2 ? m(k) : m('pers') + .3), .5, out);
     });
     // a trait drifting slowly across a life
     const ch = G(p, { o: 0 });
-    tw(ch, { o: 1 }, m('pers') + 1.2, .5);
+    tw(ch, { o: 1 }, m('traits'), .5);
     path(ch, 'M920 830H1500M920 830V700', { stroke: EV.dim, 'stroke-width': 2 });
     evText(ch, L('age'), { x: 1500, y: 868, size: 26, fill: EV.dim, anchor: 'end', maxW: 200 });
     evText(ch, L('trait'), { x: 930, y: 690, size: 26, fill: EV.dim, anchor: 'start', maxW: 260 });
     const tr = path(ch, 'M930 790C1050 786 1150 776 1250 764S1420 744 1490 738', { stroke: EV.surprise, 'stroke-width': 4 }, { d: 0 });
-    draw(tr, m('pers') + 1.6, 2.4);
+    draw(tr, m('shift'), 2.4);
   }],
 
   ['wrap', 'b_wrap', (m) => {

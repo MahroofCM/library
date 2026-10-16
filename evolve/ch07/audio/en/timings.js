@@ -22,10 +22,13 @@ window.TIMINGS = {
  "laws": {
   "dur": 29.962,
   "marks": {
+   "ltp": 8.055,
    "two": 10.077,
    "rep": 13.285,
    "assoc": 18.959,
-   "att": 24.955
+   "link": 22.255,
+   "att": 24.955,
+   "your": 28.465
   },
   "cues": [
    [
@@ -64,6 +67,8 @@ window.TIMINGS = {
    "known": 2.979,
    "weak": 9.247,
    "join": 12.767,
+   "wick": 16.394,
+   "lamp": 18.613,
    "alone": 20.585,
    "rule": 26.506
   },
@@ -102,8 +107,14 @@ window.TIMINGS = {
    "hair": 11.317,
    "size": 14.787,
    "build": 17.296,
+   "pic": 21.893,
    "word": 23.223,
-   "taste": 26.413
+   "taste": 26.413,
+   "sight": 28.291,
+   "touch": 29.187,
+   "smell": 30.072,
+   "tst": 31.107,
+   "bind": 34.968
   },
   "cues": [
    [
@@ -163,9 +174,13 @@ window.TIMINGS = {
   "marks": {
    "shelf": 2.345,
    "sem": 4.009,
+   "abu": 7.764,
+   "fruit": 10.693,
    "epi": 15.435,
    "proc": 24.953,
-   "move": 37.783
+   "pin": 35.833,
+   "move": 37.783,
+   "prac": 40.532
   },
   "cues": [
    [
@@ -215,9 +230,14 @@ window.TIMINGS = {
   "marks": {
    "beach": 4.313,
    "tags": 9.877,
+   "place": 10.41,
+   "time": 10.762,
+   "plate": 11.232,
+   "weakS": 13.539,
    "sick": 15.701,
    "link": 17.96,
    "smell": 22.318,
+   "stomach": 25.124,
    "surv": 29.795
   },
   "cues": [
@@ -263,9 +283,16 @@ window.TIMINGS = {
   "dur": 37.747,
   "marks": {
    "call": 4.022,
+   "offer": 5.728,
    "detail": 8.154,
+   "kettle": 9.594,
+   "face": 10.896,
+   "words": 12.016,
    "spike": 14.428,
-   "check": 22.726
+   "stronger": 17.158,
+   "check": 22.726,
+   "change": 29.598,
+   "vivid": 34.998
   },
   "cues": [
    [
@@ -307,8 +334,12 @@ window.TIMINGS = {
   "marks": {
    "hostel": 2.717,
    "warm": 8.251,
+   "fires": 10.743,
    "good": 16.547,
-   "rewrite": 21.009
+   "rewrite": 21.009,
+   "each": 22.727,
+   "edit": 26.716,
+   "rebuilt": 28.546
   },
   "cues": [
    [
@@ -360,9 +391,15 @@ window.TIMINGS = {
   "marks": {
    "fire": 2.607,
    "back": 9.706,
+   "branch": 15.85,
+   "contact": 16.874,
    "drum": 18.891,
    "sci": 26.393,
-   "ways": 38.504
+   "bdnf": 31.38,
+   "meta": 35.05,
+   "ways": 38.504,
+   "sleep": 39.56,
+   "learn": 42.696
   },
   "cues": [
    [
@@ -400,10 +437,16 @@ window.TIMINGS = {
   "marks": {
    "taster": 2.157,
    "words": 5.528,
+   "brisk": 8.891,
+   "malty": 9.712,
+   "smoky": 10.405,
+   "astr": 11.013,
    "focus": 12.064,
    "repeat": 18.372,
    "net": 22.164,
-   "notice": 29.204
+   "teanet": 26.548,
+   "notice": 29.204,
+   "prep": 33.744
   },
   "cues": [
    [
@@ -456,9 +499,13 @@ window.TIMINGS = {
   "dur": 32.34,
   "marks": {
    "mall": 3.357,
+   "mgr": 6.535,
    "back": 8.891,
    "chain": 14.596,
+   "job": 16.335,
+   "exam": 18.116,
    "feel": 20.181,
+   "never": 21.793,
    "past": 24.749
   },
   "cues": [
@@ -515,9 +562,14 @@ window.TIMINGS = {
   "marks": {
    "lane": 2.843,
    "traffic": 4.93,
+   "widen": 6.904,
+   "hwy": 9.72,
    "money": 11.808,
    "thick": 17.276,
-   "less": 21.488
+   "less": 21.488,
+   "bill": 22.928,
+   "news": 23.674,
+   "more": 26.494
   },
   "cues": [
    [
@@ -558,8 +610,19 @@ window.TIMINGS = {
   "dur": 38.296,
   "marks": {
    "make": 4.238,
+   "habits": 4.758,
+   "genes": 8.419,
+   "family": 9.166,
+   "culture": 9.72,
+   "exp": 10.467,
+   "selfk": 11.32,
    "meet": 13.348,
+   "home": 16.736,
+   "thr": 18.153,
+   "school": 19.23,
+   "biju": 20.508,
    "match": 22.683,
+   "nmatch": 25.573,
    "keep": 28.956
   },
   "cues": [
@@ -607,6 +670,7 @@ window.TIMINGS = {
    "box": 3.247,
    "inside": 8.941,
    "outside": 13.04,
+   "again": 16.88,
    "hope": 21.074
   },
   "cues": [
@@ -640,8 +704,16 @@ window.TIMINGS = {
   "dur": 38.217,
   "marks": {
    "solid": 2.649,
+   "s1": 3.62,
+   "s2": 6.254,
+   "s3": 9.262,
+   "s4": 12.516,
    "model": 15.179,
-   "pers": 24.882
+   "m1": 15.969,
+   "m2": 19.457,
+   "pers": 24.882,
+   "traits": 28.317,
+   "shift": 30.994
   },
   "cues": [
    [

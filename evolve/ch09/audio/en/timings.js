@@ -22,9 +22,15 @@ window.TIMINGS = {
  "argue": {
   "dur": 23.562,
   "marks": {
+   "walk": 2.036,
    "ask": 5.793,
    "flash": 7.597,
-   "heat": 15.821
+   "ago": 9.562,
+   "forgot": 10.33,
+   "heat": 15.821,
+   "voice": 17.154,
+   "minute": 18.733,
+   "fight": 18.573
   },
   "cues": [
    [
@@ -56,9 +62,13 @@ window.TIMINGS = {
  "stop": {
   "dur": 20.689,
   "marks": {
-   "stop": 2.236,
+   "stop": 2.362,
+   "cant": 4.608,
    "def": 7.337,
-   "mem": 12.78
+   "mem": 12.78,
+   "feel": 14.593,
+   "recall": 15.868,
+   "chem": 18.876
   },
   "cues": [
    [
@@ -113,7 +123,9 @@ window.TIMINGS = {
    "blood": 12.154,
    "body": 14.202,
    "back": 15.818,
-   "cycle": 21.17
+   "think": 18.538,
+   "cycle": 21.17,
+   "state": 27.145
   },
   "cues": [
    [
@@ -189,9 +201,21 @@ window.TIMINGS = {
   "dur": 24.633,
   "marks": {
    "prim": 4.958,
+   "sad": 5.384,
+   "fear": 6.067,
+   "joy": 6.547,
+   "surp": 6.952,
+   "disg": 7.763,
    "mix": 8.682,
+   "shame": 10.355,
+   "guilt": 10.985,
+   "jeal": 11.347,
+   "pride": 12.147,
    "leena": 13.606,
-   "cocktail": 19.738
+   "turned": 16.774,
+   "anger": 18.876,
+   "cocktail": 19.738,
+   "mixed": 22.042
   },
   "cues": [
    [
@@ -225,7 +249,10 @@ window.TIMINGS = {
   "marks": {
    "recep": 3.517,
    "key": 7.111,
-   "inside": 10.914
+   "inside": 10.914,
+   "does": 14.707,
+   "builds": 15.422,
+   "reads": 16.35
   },
   "cues": [
    [
@@ -253,10 +280,14 @@ window.TIMINGS = {
  "upreg": {
   "dur": 22.779,
   "marks": {
+   "every": 1.157,
    "flood": 2.882,
    "divide": 7.518,
+   "newc": 8.958,
+   "morer": 10.899,
    "lanes": 13.151,
-   "crave": 17.473
+   "crave": 17.473,
+   "wants": 18.742
   },
   "cues": [
    [
@@ -289,9 +320,11 @@ window.TIMINGS = {
   "dur": 21.812,
   "marks": {
    "over": 2.522,
-   "shut": 5.215,
+   "shut": 5.103,
    "more": 7.733,
-   "drug": 14.226
+   "bigger": 11.744,
+   "drug": 14.226,
+   "mw": 17.37
   },
   "cues": [
    [
@@ -337,11 +370,18 @@ window.TIMINGS = {
  "genes": {
   "dur": 38.949,
   "marks": {
-   "dna": 2.374,
+   "pep": 1.306,
+   "dna": 2.725,
    "prot": 4.859,
+   "skin": 8.645,
+   "joints": 9.2,
+   "enz": 10.181,
    "same": 12.61,
+   "rest": 18.199,
    "wear": 20.334,
-   "note": 24.404
+   "note": 24.404,
+   "strong": 25.995,
+   "model": 31.47
   },
   "cues": [
    [
@@ -386,10 +426,15 @@ window.TIMINGS = {
   "dur": 27.899,
   "marks": {
    "quiet": 3.199,
+   "supply": 5.065,
+   "low": 6.335,
    "call": 7.419,
    "replay": 11.61,
+   "old": 15.618,
+   "insult": 17.373,
    "refill": 18.933,
-   "voice": 21.845
+   "voice": 21.845,
+   "asking": 25.472
   },
   "cues": [
    [
@@ -434,10 +479,13 @@ window.TIMINGS = {
   "dur": 21.499,
   "marks": {
    "worry": 2.906,
+   "chem": 4.25,
    "uneasy": 5.85,
    "reads": 7.712,
-   "more": 10.869,
-   "spin": 13.723
+   "more": 11.189,
+   "spin": 13.723,
+   "panic": 17.435,
+   "nodanger": 18.395
   },
   "cues": [
    [
@@ -468,8 +516,14 @@ window.TIMINGS = {
    "mid": 4.394,
    "urge": 7.735,
    "voices": 9.909,
+   "v2": 11.286,
+   "v3": 13.43,
    "reasons": 15.303,
-   "choose": 22.258
+   "tea": 17.899,
+   "driver": 19.148,
+   "scratch": 20.56,
+   "choose": 22.258,
+   "decides": 23.876
   },
   "cues": [
    [
@@ -526,11 +580,17 @@ window.TIMINGS = {
   "dur": 26.253,
   "marks": {
    "f1": 3.615,
+   "n1": 5.002,
    "f2": 5.837,
+   "n2": 6.947,
    "f3": 7.969,
+   "n3": 9.25,
    "f4": 10.204,
+   "n4": 11.569,
    "f5": 12.701,
+   "n5": 14.386,
    "plate": 15.149,
+   "whole": 18.2,
    "rush": 20.377
   },
   "cues": [
@@ -591,9 +651,13 @@ window.TIMINGS = {
   "marks": {
    "harb": 3.374,
    "lights": 6.094,
+   "old": 8.543,
    "dark": 10.679,
+   "stored": 13.313,
    "turn": 17.366,
-   "keep": 22.675
+   "back": 20.544,
+   "keep": 22.675,
+   "leaving": 26.182
   },
   "cues": [
    [
@@ -638,8 +702,15 @@ window.TIMINGS = {
   "dur": 26.723,
   "marks": {
    "joy": 2.799,
+   "ojoy": 3.545,
+   "olove": 4.324,
    "spiral": 7.032,
+   "wlove": 8.237,
+   "winsp": 9.725,
+   "wgrat": 12.048,
+   "feed": 13.14,
    "newsig": 16.374,
+   "genes": 19.169,
    "choice": 22.937
   },
   "cues": [

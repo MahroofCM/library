@@ -23,8 +23,12 @@ window.TIMINGS = {
   "dur": 27.22,
   "marks": {
    "alarm": 4.51,
+   "brush": 5.914,
+   "tea": 6.831,
+   "road": 8.005,
    "auto": 10.811,
-   "box": 17.238
+   "box": 17.238,
+   "outside": 22.559
   },
   "cues": [
    [
@@ -65,9 +69,13 @@ window.TIMINGS = {
   "dur": 29.858,
   "marks": {
    "dusk": 3.808,
+   "scan": 9.589,
+   "match": 11.52,
    "rustle": 15.061,
+   "nomatch": 18.085,
    "jolt": 20.363,
-   "cat": 24.928
+   "cat": 24.928,
+   "laugh": 26.521
   },
   "cues": [
    [
@@ -111,12 +119,15 @@ window.TIMINGS = {
  "alarm": {
   "dur": 29.048,
   "marks": {
+   "ff": 2.255,
+   "symp": 4.325,
    "heart": 7.385,
    "eyes": 10.659,
    "lungs": 13.446,
    "sugar": 15.905,
    "muscles": 18.726,
-   "gut": 21.277
+   "gut": 21.277,
+   "move": 27.084
   },
   "cues": [
    [
@@ -161,6 +172,9 @@ window.TIMINGS = {
   "dur": 23.249,
   "marks": {
    "para": 2.721,
+   "p1": 4.566,
+   "p2": 5.59,
+   "p3": 7.201,
    "pedals": 11.369,
    "balance": 14.165
   },
@@ -191,7 +205,8 @@ window.TIMINGS = {
   "dur": 20.793,
   "marks": {
    "nerve": 4.639,
-   "adrenal": 7.745,
+   "spine": 6.324,
+   "adrenal": 7.775,
    "adrenaline": 12.454,
    "seconds": 15.2
   },
@@ -226,9 +241,14 @@ window.TIMINGS = {
   "dur": 30.537,
   "marks": {
    "hypo": 4.321,
+   "crh": 7.02,
    "pit": 8.486,
+   "acth": 12.411,
    "cortisol": 14.277,
-   "bus": 19.467
+   "glands": 15.781,
+   "cort": 17.21,
+   "bus": 19.467,
+   "ordinary": 21.569
   },
   "cues": [
    [
@@ -275,8 +295,14 @@ window.TIMINGS = {
   "dur": 24.973,
   "marks": {
    "spike": 2.953,
+   "adr": 5.001,
+   "cort": 6.515,
    "down": 8.415,
    "repair": 12.624,
+   "dig": 15.415,
+   "rep": 16.065,
+   "germs": 16.769,
+   "grow": 17.772,
    "acute": 18.594
   },
   "cues": [
@@ -365,7 +391,9 @@ window.TIMINGS = {
    "bed": 3.538,
    "think": 7.18,
    "heart": 10.864,
-   "same": 14.2
+   "knot": 12.4,
+   "same": 14.2,
+   "nodanger": 19.859
   },
   "cues": [
    [
@@ -429,6 +457,7 @@ window.TIMINGS = {
   "dur": 30.198,
   "marks": {
    "budget": 3.008,
+   "fine": 6.391,
    "months": 8.147,
    "immune": 9.525,
    "gut": 12.816,
@@ -484,9 +513,14 @@ window.TIMINGS = {
   "dur": 32.549,
   "marks": {
    "front": 1.841,
+   "react": 5.041,
    "hippo": 10.588,
+   "wear": 13.361,
+   "hp": 14.012,
+   "animal": 18.267,
    "routine": 20.832,
-   "regrow": 25.696
+   "regrow": 25.696,
+   "neurons": 28.0
   },
   "cues": [
    [
@@ -583,8 +617,14 @@ window.TIMINGS = {
   "dur": 24.451,
   "marks": {
    "loop": 3.105,
+   "back": 4.118,
+   "thought": 5.505,
+   "flow": 7.83,
    "rush": 10.352,
    "link": 15.48,
+   "people": 16.6,
+   "places": 17.155,
+   "worries": 18.414,
    "next": 20.118
   },
   "cues": [
@@ -633,6 +673,7 @@ window.TIMINGS = {
   "marks": {
    "aim": 4.364,
    "breath": 8.505,
+   "exhale": 11.374,
    "needle": 14.01,
    "walk": 18.17,
    "sleep": 21.974

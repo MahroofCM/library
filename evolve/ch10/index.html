@@ -142,6 +142,18 @@ function pth(parent, d, attrs = {}, o = {}) {
   if (attrs.opacity !== undefined) { const { opacity, ...rest } = attrs; return path(parent, d, rest, { o: opacity, ...o }); }
   return path(parent, d, attrs, o);
 }
+// Staggered reveals from one clock (opacity, draw or pop), so seeking replays the same picture.
+function c10Seq(els, at, D, mode = 'o', dur = .3) {
+  prog(q => {
+    const t = q * D;
+    els.forEach((e, i) => {
+      const u = Math.max(0, Math.min(1, (t - at(i)) / dur));
+      put(e, mode === 'd' ? { d: io(u) } : { o: io(u) });
+    });
+  }, 0, D, lin);
+}
+// One scale pulse as a pure function of time since it started (1 outside the pulse).
+const c10Pulse = (u, k) => u < 0 || u > .62 ? 1 : u < .22 ? 1 + (k - 1) * out(u / .22) : k + (1 - k) * io((u - .22) / .4);
 // A second picture later in the beat, hidden until its time.
 function c10Later(t) { const q = panel(t); put(q, { o: 0 }); tw(q, { o: 1 }, t + .4, .4); return q; }
 // Rising particles of a colour from a point, for a duration (emotional heat).
@@ -297,7 +309,7 @@ const BEATS = [
     evText(lg, L('thought'), { x: C.x, y: C.y - R - 24, size: 32, fill: EV.ink, maxW: 300 });
     evText(lg, L('feeling'), { x: C.x, y: C.y + R + 50, size: 32, fill: EV.anger, maxW: 300 });
     evDot(lg, C.x, C.y - R, 12, EV.ink); evDot(lg, C.x, C.y + R, 12, EV.anger);
-    tw(lg, { o: 1 }, m('loop') - .3, .6);
+    tw(lg, { o: 1 }, m('ring'), .6);
     const com = Array.from({ length: 7 }, (_, i) => evDot(W, 0, 0, 12 - i, EV.anger, 0));
     prog(q => {
       const t = q * D;
@@ -317,7 +329,7 @@ const BEATS = [
     // zoom to the forehead; a gold glow just behind it
     const fg = G(W, { x: 420, y: 334, o: 0 });
     evGlow(fg, 0, 0, 70, 'Gold', 1); evDot(fg, 0, 0, 8, EV.goldHi);
-    tw(lg, { o: .25 }, m('fore') - .3, .5); hide(dc, m('fore') - .2, .4); hide(wq, m('fore') - .2, .4);
+    tw(lg, { o: .25 }, m('fore'), .5); hide(dc, m('fore'), .4); hide(wq, m('fore'), .4);
     cam.to({ x: 470, y: 360, z: 1.9 }, m('fore') - .2, 1.6);
     tw(fg, { o: 1 }, m('fore') + .6, .8);
     const fl = lab(W, 'forehead', 540, 250, m('fore') + 1.2, { size: 22, fill: EV.gold, anchor: 'start', maxW: 240 });
@@ -329,8 +341,8 @@ const BEATS = [
     const br = evBrain(p, { x: BX, y: BY, s: BS, o: 0 });
     tw(br, { o: 1 }, .1, .6);
     const lobe = c10Lobe(br);
-    tw(lobe, { o: 1 }, m('lobe'), .8);
-    lab(p, 'frontal', 300, 190, m('lobe') + .3, { size: 38, fill: EV.gold, weight: 600, font: SERIF, maxW: 380 });
+    tw(lobe, { o: 1 }, m('fl'), .8);
+    lab(p, 'frontal', 300, 190, m('fl') + .2, { size: 38, fill: EV.gold, weight: 600, font: SERIF, maxW: 380 });
     // the orchestra: players in an arc, the conductor's baton cueing them
     const or = G(p, { x: 1220, y: 470, o: 0 });
     const players = [[-210, 40], [-140, -40], [-50, -90], [50, -90], [140, -40], [210, 40]].map(([x, y], i) => {
@@ -342,24 +354,26 @@ const BEATS = [
     const bat = G(or, { x: 0, y: 150 });
     path(bat, 'M0 0L-10 -110', { stroke: EV.goldHi, 'stroke-width': 4 });
     evDot(bat, 0, 0, 10, EV.gold);
-    tw(or, { o: 1 }, m('conductor') - .2, .6);
+    tw(or, { o: 1 }, m('conductor'), .6);
     prog(q => { const t = q * D; put(bat, { r: Math.sin(t * 2.4) * 28 }); }, 0, D, lin);
-    players.forEach((g, i) => { const t0 = m('conductor') + 1 + i * .55; tw(g, { s: 1.35 }, t0, .25, out); tw(g, { s: 1 }, t0 + .25, .5); });
+    prog(q => { const t = q * D; players.forEach((g, i) => put(g, { s: c10Pulse(t - m('plays') - i * .55, 1.35) })); }, 0, D, lin);
     const cl_ = lab(p, 'conductor', 1220, 230, m('conductor') + .2, { size: 36, fill: EV.gold, font: SERIF, weight: 600, maxW: 420 });
-    const wp_ = lab(p, 'whoPlays', 1220, 690, m('conductor') + 1.4, { size: 28, fill: EV.dim, italic: true, maxW: 520 });
-    hide(cl_, m('young') - .3, .4); hide(wp_, m('young') - .3, .4);
+    const wp_ = lab(p, 'whoPlays', 1220, 690, m('plays') + .2, { size: 28, fill: EV.dim, italic: true, maxW: 520 });
+    hide(cl_, m('young'), .4); hide(wp_, m('young'), .4);
     // wiring: lines from the frontal lobe to the rest of the brain
     const F = [BX - 120 * BS, BY - 60 * BS];
     const ends = [[150, -30], [80, 70], [40, -140], [-12, 72], [130, 100], [-40, 40]];
+    const wl = [], wd = [];
     ends.forEach(([x, y], i) => {
       const ex = BX + x * BS, ey = BY + y * BS;
-      const l = pth(p, `M${F[0]} ${F[1]}Q${(F[0] + ex) / 2} ${Math.min(F[1], ey) - 70} ${ex} ${ey}`, { stroke: EV.goldHi, 'stroke-width': 3, opacity: .8 }, { d: 0 });
-      draw(l, m('wires') + i * .2, .7);
-      const d = evDot(p, ex, ey, 9, EV.goldHi, 0); tw(d, { o: 1 }, m('wires') + .6 + i * .2, .3);
+      wl.push(pth(p, `M${F[0]} ${F[1]}Q${(F[0] + ex) / 2} ${Math.min(F[1], ey) - 70} ${ex} ${ey}`, { stroke: EV.goldHi, 'stroke-width': 3, opacity: .8 }, { d: 0 }));
+      wd.push(evDot(p, ex, ey, 9, EV.goldHi, 0));
     });
+    c10Seq(wl, i => m('wires') + i * .2, D, 'd', .7);
+    c10Seq(wd, i => m('wires') + .6 + i * .2, D);
     lab(p, 'wired', 520, 820, m('wires') + 1, { size: 30, fill: EV.ink, maxW: 700 });
     // still maturing: an age bar, filling into the mid-twenties
-    hide(or, m('young') - .3, .4);
+    hide(or, m('young'), .4);
     const ag = G(p, { x: 1220, y: 470, o: 0 });
     tw(ag, { o: 1 }, m('young'), .5);
     mk('rect', { x: -250, y: -22, width: 500, height: 44, rx: 22, fill: 'none', stroke: EV.dim, 'stroke-width': 2 }, ag);
@@ -369,7 +383,7 @@ const BEATS = [
     evText(ag, L('age'), { x: -250, y: -48, size: 26, fill: EV.dim, anchor: 'start' });
     evText(ag, L('mid20'), { x: 250, y: -48, size: 28, fill: EV.gold, anchor: 'end', weight: 600, maxW: 300 });
     lab(ag, 'mature', 0, -120, m('young') + .6, { size: 34, fill: EV.ink, font: SERIF, italic: true, maxW: 480 });
-    lab(ag, 'teen', 0, 160, m('young') + 3.5, { size: 28, fill: EV.surprise, italic: true, maxW: 520 });
+    lab(ag, 'teen', 0, 160, m('teen') + .2, { size: 28, fill: EV.surprise, italic: true, maxW: 520 });
   }],
 
   ['gage', 'b_gage', (m, D) => {
@@ -380,33 +394,33 @@ const BEATS = [
       { fill: '#141b1f', stroke: EV.dim, 'stroke-width': 3 });
     const br = evBrain(hd, { x: 10, y: -80, s: .66, stem: false });
     const lobe = c10Lobe(br, EV.anger);
-    lab(p, 'y1848', 500, 130, .5, { size: 56, fill: EV.gold, font: SERIF, weight: 600 });
+    lab(p, 'y1848', 500, 130, m('rod'), { size: 56, fill: EV.gold, font: SERIF, weight: 600 });
     // the rod: shoots up through cheek and out of the top of the head
     const rod = G(hd);
     const rl = path(rod, 'M-150 250L-4 -330', { stroke: '#9aa3a8', 'stroke-width': 13 }, { d: 0 });
-    draw(rl, m('rod') + 5.6, .35);
-    tw(rod, { x: 40, y: -160, o: 0 }, m('rod') + 6.8, .8, p_ => p_ * p_);
+    draw(rl, m('iron') + .2, .35);
+    tw(rod, { x: 40, y: -160, o: 0 }, m('out'), .8, p_ => p_ * p_);
     const flash = evGlow(hd, -66, -80, 120, 'anger', 0);
-    tw(flash, { o: 1 }, m('rod') + 5.8, .2); tw(flash, { o: .35 }, m('rod') + 6.1, 1.2);
-    tw(lobe, { o: .9 }, m('rod') + 5.9, .5);
+    tw(flash, { o: 1 }, m('iron') + .4, .2); tw(flash, { o: .35 }, m('iron') + .7, 1.2);
+    tw(lobe, { o: .9 }, m('iron') + .5, .5);
     // he lived
     const ok = G(p, { x: 1000, y: 0, o: 0 });
     evText(ok, L('alive'), { x: 0, y: 230, size: 40, fill: EV.calm, font: SERIF, weight: 600, anchor: 'start', maxW: 520 });
-    ['walks', 'talks', 'remembers'].forEach((k, i) => {
+    [['walks', 'walk'], ['talks', 'talk'], ['remembers', 'rem']].forEach(([k, mk_], i) => {
       const r = G(ok, { y: 300 + i * 56, o: 0 });
       path(r, 'M0 -8L10 2L28 -18', { stroke: EV.calm, 'stroke-width': 5 });
       evText(r, L(k), { x: 46, y: 0, size: 32, fill: EV.ink, anchor: 'start', maxW: 440 });
-      tw(r, { o: 1 }, m('alive') + .6 + i * .5, .4);
+      tw(r, { o: 1 }, m(mk_), .4);
     });
     tw(ok, { o: 1 }, m('alive'), .5);
     // but changed
     const ch = G(p, { x: 1000, y: 0, o: 0 });
     evText(ch, L('notHim'), { x: 0, y: 530, size: 40, fill: EV.anger, font: SERIF, italic: true, anchor: 'start', maxW: 560 });
-    ['impulsive', 'rude', 'noPlan'].forEach((k, i) => {
+    [['impulsive', 'imp'], ['rude', 'rude'], ['noPlan', 'noplan']].forEach(([k, mk_], i) => {
       const r = G(ch, { y: 600 + i * 56, o: 0 });
       path(r, 'M2 -18L24 2M24 -18L2 2', { stroke: EV.anger, 'stroke-width': 5 });
       evText(r, L(k), { x: 46, y: 0, size: 32, fill: EV.ink, anchor: 'start', maxW: 440 });
-      tw(r, { o: 1 }, m('changed') + 1.2 + i * .6, .4);
+      tw(r, { o: 1 }, m(mk_), .4);
     });
     tw(ch, { o: 1 }, m('changed'), .5);
     // in fairness: a stagecoach in Chile
@@ -425,13 +439,13 @@ const BEATS = [
     const legs = [-50, -30, 40, 60].map(x => { const lg = G(horse, { x, y: -90 }); path(lg, 'M0 0V90', { stroke: '#3a2c22', 'stroke-width': 9 }); return lg; });
     path(coach, 'M100 -110L196 -112', { stroke: EV.dim, 'stroke-width': 2 });
     prog(qq => { const t = qq * D - m('fair'); if (t < 0) return; put(coach, { x: 400 + t * 40 }); wh.forEach(w => put(w, { r: t * 140 })); legs.forEach((l, i) => put(l, { r: Math.sin(t * 7 + i * 1.6) * 22 })); }, 0, D, lin);
-    lab(q, 'later', 800, 170, m('fair') + .4, { size: 40, fill: EV.ink, font: SERIF, italic: true, maxW: 1300 });
-    lab(q, 'recovered', 800, 240, m('fair') + 1.6, { size: 30, fill: EV.dim, maxW: 1200 });
+    lab(q, 'later', 800, 170, m('chile'), { size: 40, fill: EV.ink, font: SERIF, italic: true, maxW: 1300 });
+    lab(q, 'recovered', 800, 240, m('recov'), { size: 30, fill: EV.dim, maxW: 1200 });
     const cl = G(q, { x: 800, y: 780, o: 0 });
     const mb = evBrain(cl, { x: -560, y: 0, s: .26, stem: false });
     tw(c10Lobe(mb), { o: 1 }, 0, .01);
     evText(cl, L('firstClue'), { x: -490, y: 12, size: 32, fill: EV.gold, anchor: 'start', maxW: 1120 });
-    tw(cl, { o: 1 }, D - 7, .6);
+    tw(cl, { o: 1 }, m('clue'), .6);
   }],
 
   ['jobs', 'b_jobs', (m, D) => {
@@ -444,7 +458,7 @@ const BEATS = [
       const x = 200 + i * 300;
       const g = G(p, { x, y: 420, o: 0, s: .5 });
       c10Icon(g, k);
-      tw(g, { o: 1, s: 1 }, m(k), .5, back);
+      g._t = m(k);
       const t = G(p, { x, y: 560, o: 0 });
       evText(t, L(n), { x: 0, y: 0, size: 38, fill: EV.gold, font: SERIF, weight: 600, maxW: 270 });
       evPara(t, L(d), { x: 0, y: 48, size: 28, fill: EV.dim, maxW: 250 });
@@ -454,7 +468,11 @@ const BEATS = [
       draw(l, m('all') + i * .12, .6);
       return g;
     });
-    icons.forEach((g, i) => { const t0 = m('all') + .6 + i * .25; tw(g, { s: 1.15 }, t0, .25, out); tw(g, { s: 1 }, t0 + .25, .45); });
+    // each icon pops in on its word, then all five pulse in turn: one clock
+    prog(q => {
+      const t = q * D;
+      icons.forEach((g, i) => { const u = Math.max(0, Math.min(1, (t - g._t) / .5)); put(g, { o: io(u), s: (.5 + .5 * back(u)) * c10Pulse(t - m('all') - .6 - i * .25, 1.15) }); });
+    }, 0, D, lin);
     lab(p, 'allFive', 800, 790, m('all') + .4, { size: 36, fill: EV.ink, font: SERIF, italic: true, maxW: 1200 });
   }],
 
@@ -486,10 +504,10 @@ const BEATS = [
     const gate = G(p, { o: 0 });
     mk('rect', { x: 938, y: 230, width: 24, height: 180, rx: 6, fill: EV.goldLo, stroke: EV.gold, 'stroke-width': 2 }, gate);
     mk('rect', { x: 938, y: 470, width: 24, height: 180, rx: 6, fill: EV.goldLo, stroke: EV.gold, 'stroke-width': 2 }, gate);
-    tw(gate, { o: 1 }, m('gate') - .2, .5);
+    tw(gate, { o: 1 }, m('gate'), .5);
     lab(p, 'gate', 950, 196, m('gate') + .2, { size: 32, fill: EV.gold, weight: 600, maxW: 340 });
     lab(p, 'senses', 430, 700, m('flood') + .8, { size: 30, fill: EV.dim, italic: true, maxW: 700 });
-    lab(p, 'noticed', BX, 250, m('gate') + 1.6, { size: 30, fill: EV.goldHi, maxW: 420 });
+    lab(p, 'noticed', BX, 250, m('few') + .2, { size: 30, fill: EV.goldHi, maxW: 420 });
     // the stream: each particle's fate is fixed when its trip starts (before the gate: all reach the brain)
     const N = 44, sp = .26, tg = m('gate');
     const cols = [EV.dim, EV.fear, EV.calm, EV.love, EV.surprise, EV.dim];
@@ -523,10 +541,18 @@ const BEATS = [
     [0, 120, 240].forEach(a => { const b = G(bl, { r: a }); path(b, 'M0 0Q46 -10 84 5Q46 16 0 8Z', { fill: '#2a2c27', stroke: EV.dim, 'stroke-width': 2 }); });
     evDot(fan, 0, -14, 12, EV.dim);
     prog(q => { const t = q * D; put(bl, { r: t * 320 }); }, 0, D, lin);
-    tw(fan, { o: 1 }, m('fan') - .2, .5);
+    tw(fan, { o: 1 }, m('fan'), .5);
     lab(p, 'fan', 470, 212, m('fan') + .2, { size: 28, fill: EV.dim, maxW: 300 });
     const hum = [0, 1, 2].map(i => pth(p, `M${600 + i * 26} 82Q${616 + i * 26} 112 ${600 + i * 26} 142`, { stroke: EV.dim, 'stroke-width': 3, opacity: 0 }));
-    hum.forEach((h, i) => { tw(h, { o: .5 }, m('fan') + .6 + i * .2, .3); tw(h, { o: .08 }, m('fan') + 2 + i * .2, .8); });
+    // the hum is heard, then fades from hearing as the days go by (one clock)
+    prog(q => {
+      const t = q * D;
+      hum.forEach((h, i) => {
+        const a = .5 * io(Math.max(0, Math.min(1, (t - m('fan') - .6 - i * .2) / .3)));
+        const f = io(Math.max(0, Math.min(1, (t - m('hear') - .4 - i * .2) / .8)));
+        put(h, { o: a + (.08 - a) * f });
+      });
+    }, 0, D, lin);
     const ck = Array.from({ length: 5 }, () => evDot(p, 0, 0, 9, EV.surprise, 0));
     const tc = m('click');
     prog(q => {
@@ -545,9 +571,9 @@ const BEATS = [
     const mt = evText(my, L('myth'), { x: 560, y: 790, size: 32, fill: EV.ink, font: SERIF, italic: true, maxW: 900 });
     tw(my, { o: 1 }, m('bits'), .5);
     const mw = mt.getBBox().width;
-    const st_ = pth(p, `M${560 - mw / 2 - 10} 780H${560 + mw / 2 + 10}`, { stroke: EV.anger, 'stroke-width': 4 }, { d: 0 }); draw(st_, m('bits') + 4.5, .6);
-    lab(p, 'noStudy', 1180, 792, m('bits') + 4.8, { size: 30, fill: EV.anger, weight: 600, maxW: 360 });
-    lab(p, 'point', 800, 856, m('bits') + 7, { size: 30, fill: EV.gold, maxW: 1400 });
+    const st_ = pth(p, `M${560 - mw / 2 - 10} 780H${560 + mw / 2 + 10}`, { stroke: EV.anger, 'stroke-width': 4 }, { d: 0 }); draw(st_, m('nostudy'), .6);
+    lab(p, 'noStudy', 1180, 792, m('nostudy') + .3, { size: 30, fill: EV.anger, weight: 600, maxW: 360 });
+    lab(p, 'point', 800, 856, m('idea') + .2, { size: 30, fill: EV.gold, maxW: 1400 });
     hide(cl, m('bits'), .4);
   }],
 
@@ -560,7 +586,7 @@ const BEATS = [
       ['movement', 'calm', EV.calm, [-14, -160]], ['emotion', 'anger', EV.anger, [-20, 40]], ['focus', 'Gold', EV.goldHi, [-125, -60]]];
     const desk = G(p, { o: 0 });
     mk('rect', { x: 700, y: 190, width: 820, height: 520, rx: 18, fill: '#0f1519', stroke: EV.faint, 'stroke-width': 2 }, desk);
-    tw(desk, { o: 1 }, m('desk') - .2, .5);
+    tw(desk, { o: 1 }, m('desk'), .5);
     lab(p, 'desk', 1110, 160, m('desk'), { size: 32, fill: EV.gold, font: SERIF, italic: true, maxW: 760 });
     const X0 = 1040, XW = 420;
     const kn = rows.map(([k, gk, c, [rx, ry]], i) => {
@@ -576,14 +602,14 @@ const BEATS = [
       return { k, kb, bar, spot, v0 };
     });
     const set = (r, v, t0, d) => { tw(r.kb, { x: X0 + XW * v }, t0, d, io); prog(q => r.bar.setAttribute('width', XW * (r.v0 + (v - r.v0) * io(q))), t0, d, lin); tw(r.spot, { o: v * .9 }, t0, d); };
-    const lobe = c10Lobe(br); tw(lobe, { o: .7 }, m('down') - .4, .5);
-    [0, 1, 2, 4].forEach((i, n) => set(kn[i], .1, m('down') + .6 + n * 1.2, .9));
+    const lobe = c10Lobe(br); tw(lobe, { o: .7 }, m('down'), .5);
+    [[0, 'see'], [1, 'snd'], [2, 'ache'], [4, 'emo']].forEach(([i, k]) => set(kn[i], .1, m(k) + .1, .9));
     set(kn[3], .06, m('still'), 1);
     lab(p, 'goStill', 400, 820, m('still') + .4, { size: 30, fill: EV.calm, italic: true, maxW: 600 });
     set(kn[5], .96, m('one'), 1.6);
     tw(lobe, { o: 1 }, m('one'), 1);
     const fg = evGlow(p, BX - 120 * BS, BY - 60 * BS, 200, 'Gold', 0); tw(fg, { o: 1 }, m('one') + .4, 1.4);
-    lab(p, 'louder', 1110, 790, m('one') + 1.2, { size: 38, fill: EV.gold, font: SERIF, italic: true, maxW: 800 });
+    lab(p, 'louder', 1110, 790, m('loud') + .1, { size: 38, fill: EV.gold, font: SERIF, italic: true, maxW: 800 });
   }],
 
   ['drive', 'b_drive', (m, D) => {
@@ -623,20 +649,20 @@ const BEATS = [
     // the thought
     const th = evThought(p, { x: 820, y: 520, w: 400, h: 210, dx: 60, o: 0 });
     put(th, { s: .7 });
-    tw(th, { o: 1, s: 1 }, m('drive') + .8, .8, out);
+    tw(th, { o: 1, s: 1 }, m('prob'), .8, out);
     const ic = G(th._in, { y: -10 });
     [[-60, 50], [-20, 30], [20, 60], [60, 20]].forEach(([x, h]) => mk('rect', { x: x - 14, y: 30 - h, width: 28, height: h, fill: EV.gold, opacity: .6 }, ic));
     path(ic, 'M-80 -40L-20 -10L20 -30L84 24', { stroke: EV.anger, 'stroke-width': 4 });
     evText(th._in, L('workProblem'), { x: 0, y: 72, size: 26, fill: EV.ink, maxW: 300 });
-    lab(p, 'habits', 760, 870, m('fade') + 2.8, { size: 28, fill: EV.dim, italic: true, maxW: 600 });
+    lab(p, 'habits', 760, 870, m('habit') + .1, { size: 28, fill: EV.dim, italic: true, maxW: 600 });
     tw(sc, { o: .16 }, m('fade'), 2.2);
     // he arrives
     const tq = G(p, { x: 300, y: 230, o: 0 });
     const ck = c10Clock(tq, 0, 0, 52); ck.set(40);
     evText(tq, '?', { x: 80, y: 20, size: 70, fill: EV.ink, font: SERIF, weight: 600 });
-    tw(tq, { o: 1 }, m('arrive') + .6, .5);
-    lab(p, 'tenMin', 300, 340, m('arrive') + 1, { size: 32, fill: EV.ink, font: SERIF, italic: true, maxW: 520 });
-    evMood(car._rv, 'ask', m('arrive') + .8);
+    tw(tq, { o: 1 }, m('ten'), .5);
+    lab(p, 'tenMin', 300, 340, m('ten') + .3, { size: 32, fill: EV.ink, font: SERIF, italic: true, maxW: 520 });
+    evMood(car._rv, 'ask', m('ten'));
     // the zone
     const zg = evGlow(th, 60, -175, 260, 'Gold', 0); th.insertBefore(zg, th.firstChild); tw(zg, { o: 1 }, m('zone'), 1);
     lab(p, 'zone', 1300, 180, m('zone') + .4, { size: 48, fill: EV.gold, font: SERIF, weight: 600, maxW: 520 });
@@ -654,15 +680,21 @@ const BEATS = [
     path(ch, 'M780 260V620H1470', { stroke: EV.dim, 'stroke-width': 2.5 });
     evText(ch, L('activity'), { x: 800, y: 230, size: 30, fill: EV.gold, anchor: 'start', maxW: 650 });
     evText(ch, L('repeats'), { x: 1125, y: 690, size: 28, fill: EV.dim, maxW: 400 });
-    tw(ch, { o: 1 }, m('first') - .4, .5);
+    tw(ch, { o: 1 }, m('first'), .5);
     const H = [320, 240, 150, 95, 70, 58];
-    H.forEach((h, i) => {
+    const bars = H.map((h, i) => {
       const x = 820 + i * 108;
-      const b = mk('rect', { x, y: 620, width: 70, height: 0, rx: 6, fill: i === 0 ? EV.goldHi : EV.gold, opacity: .85 }, p);
       evText(p, String(i + 1), { x: x + 35, y: 652, size: 26, fill: EV.dim });
-      const t0 = i === 0 ? m('first') + .3 : m('repeat') + (i - 1) * .55;
-      prog(q => { b.setAttribute('y', 620 - h * q); b.setAttribute('height', h * q); }, t0, .7, out);
+      return mk('rect', { x, y: 620, width: 70, height: 0, rx: 6, fill: i === 0 ? EV.goldHi : EV.gold, opacity: .85 }, p);
     });
+    // bar 1 on "first time", the repeats grow one after another from "repeats" (one clock)
+    prog(q => {
+      const t = q * D;
+      bars.forEach((b, i) => {
+        const t0 = i === 0 ? m('first') + .3 : m('repeat') + (i - 1) * .55, v = H[i] * out(Math.max(0, Math.min(1, (t - t0) / .7)));
+        b.setAttribute('y', 620 - v); b.setAttribute('height', v);
+      });
+    }, 0, D, lin);
     tw(lobe, { o: 1 }, m('first') + .3, .7);
     tw(lobe, { o: .12 }, m('repeat') + 1, 2.4);
     // handed on: a glow runs from the front to the back of the brain
@@ -694,8 +726,8 @@ const BEATS = [
     };
     card(450, 'week1', true, false);
     card(1150, 'yearLater', false, true);
-    lab(q, 'allAttn', 450, 670, m('leena') + 1.6, { size: 30, fill: EV.gold, maxW: 560 });
-    lab(q, 'chatting', 1150, 670, m('leena') + 4, { size: 30, fill: EV.calm, maxW: 560 });
+    lab(q, 'allAttn', 450, 670, m('wk1') + .3, { size: 30, fill: EV.gold, maxW: 560 });
+    lab(q, 'chatting', 1150, 670, m('yr') + .3, { size: 30, fill: EV.calm, maxW: 560 });
     lab(q, 'fullyOn', 800, 800, m('cost') + .3, { size: 36, fill: EV.gold, font: SERIF, italic: true, maxW: 1400 });
   }],
 
@@ -736,16 +768,17 @@ const BEATS = [
     // path one: he taps
     lab(p, 'path1', 800, 110, m('pathA'), { size: 46, fill: EV.ink, font: SERIF, weight: 600, maxW: 700 });
     hide(nb, m('pathA') + .4, .4);
-    evArm(rav, 1, -40, -110, m('pathA') + .3, .6);
-    tw(phone, { x: 700, y: 470, r: -70 }, m('pathA') + .4, .6);
-    evMood(rav, 'smile', m('pathA') + 1);
-    const face = evGlow(p, 640, 400, 110, 'fear', 0); tw(face, { o: .7 }, m('pathA') + 1, .6);
-    tw(note, { o: .25 }, m('pathA') + 1.6, 1.2);
+    evArm(rav, 1, -40, -110, m('tap'), .6);
+    tw(phone, { x: 700, y: 470, r: -70 }, m('tap') + .1, .6);
+    evMood(rav, 'smile', m('tap') + .6);
+    const face = evGlow(p, 640, 400, 110, 'fear', 0); tw(face, { o: .7 }, m('tap') + .6, .6);
+    tw(note, { o: .25 }, m('tap') + 1, 1.2);
     // ninety minutes vanish
-    prog(q => clk.set(q * 90), m('later') - .4, 2.2, io);
-    prog(q => { ct.textContent = q < .5 ? L('clock8') : L('clock930'); }, m('later') + 1.4, .1, lin);
-    tw(ct, { c_fill: EV.anger }, m('later') + 1.4, .4);
-    lab(p, 'neverNoticed', 800, 870, m('later') + 2.6, { size: 32, fill: EV.anger, font: SERIF, italic: true, maxW: 1100 });
+    // the hands sweep from "looks up" to "half past nine"
+    prog(q => clk.set(q * 90), m('later'), Math.max(.8, m('half') + .3 - m('later')), io);
+    prog(q => { ct.textContent = q < .5 ? L('clock8') : L('clock930'); }, m('half') + .3, .1, lin);
+    tw(ct, { c_fill: EV.anger }, m('half') + .3, .4);
+    lab(p, 'neverNoticed', 800, 870, m('lost') + .1, { size: 32, fill: EV.anger, font: SERIF, italic: true, maxW: 1100 });
   }],
 
   ['brake', 'b_brake', (m, D) => {
@@ -756,7 +789,7 @@ const BEATS = [
     evBreathe(rav, D);
     clk.set(0); const ct = evText(p, L('clock8'), { x: 1340, y: 320, size: 30, fill: EV.dim });
     const p2 = lab(p, 'path2', 800, 110, .2, { size: 46, fill: EV.ink, font: SERIF, weight: 600, maxW: 700 });
-    hide(p2, m('picture') - .5, .4);
+    hide(p2, m('picture'), .4);
     // the same buzz, the same pull
     prog(q => { const t = q * D - m('urge'); put(phone._in, { x: .001 + (t > 0 && t < 1.6 ? Math.sin(t * 60) * 4 : 0) }); }, 0, D, lin);
     tw(phone._glow, { o: .8 }, m('urge'), .2); tw(phone._scr, { o: 1 }, m('urge'), .2);
@@ -772,7 +805,7 @@ const BEATS = [
     evMood(rav, 'calm', m('notice') + .6);
     // the picture of why
     const th = evThought(p, { x: 700, y: 420, w: 380, h: 200, dx: 240 });
-    tw(th, { o: 1 }, m('picture') - .1, .5, out);
+    tw(th, { o: 1 }, m('picture'), .5, out);
     const cert = G(th._in, { x: -40, y: -10 });
     mk('rect', { x: -70, y: -50, width: 140, height: 96, rx: 6, fill: '#e8dcc0', stroke: EV.gold, 'stroke-width': 2 }, cert);
     path(cert, 'M-46 -24H46M-46 -4H30M-46 16H20', { stroke: '#7d6a35', 'stroke-width': 3 });
@@ -785,12 +818,12 @@ const BEATS = [
     tw(phone, { y: 548 }, m('down'), .2); tw(phone, { y: 552 }, m('down') + .2, .3, back);
     hide(pl, m('down'), .3); hide(pullL, m('down'), .3);
     lab(p, 'after9', 790, 620, m('down') + .5, { size: 30, fill: EV.ink, weight: 600, maxW: 320 });
-    hide(th, m('why') - .2, .4); hide(ring, m('why') - .2, .4); hide(nl_, m('why') - .2, .4);
+    hide(th, m('why'), .4); hide(ring, m('why'), .4); hide(nl_, m('why'), .4);
     // and the study goes on
     prog(q => clk.set(q * 5), m('down') + 1, D - m('down') - 1, lin);
     prog(q => { ct.textContent = q < .5 ? L('clock8') : L('clock805'); }, D - 1, .1, lin);
     prog(q => { const t = q * D - m('why'); if (t < 0) return; const u = (t * .4) % 1; put(page, { o: Math.sin(u * Math.PI), r: -u * 160 }); }, 0, D, lin);
-    ['held', 'braked', 'planWins'].forEach((k, i) => lab(p, k, 330 + i * 470, 800, m('why') + 1.6 + i * 1.3, { size: 32, fill: EV.gold, weight: 600, maxW: 420 }));
+    [['held', 'held'], ['braked', 'braked'], ['planWins', 'wins']].forEach(([k, mk_], i) => lab(p, k, 330 + i * 470, 800, m(mk_) + .1, { size: 32, fill: EV.gold, weight: 600, maxW: 420 }));
   }],
 
   ['wander', 'b_wander', (m, D) => {
@@ -811,18 +844,18 @@ const BEATS = [
     const c0 = chip(570, 300, 'calmTalk', EV.gold, m('sit') + .5);
     const pts = [[770, 200], [950, 390], [1110, 200], [1280, 390], [1410, 200]];
     const keys = ['electrician', 'bill', 'acRepair', 'wedding', 'wear'];
-    const tk = [m('drift') + 1.4, m('drift') + 3.3, m('drift') + 4.6, m('drift') + 6.2, m('drift') + 8.2];
+    const tk = ['elec', 'bill', 'ac', 'wed', 'wear'].map(k => m(k) + .1);
     let prev = [570, 300];
     const links = [], chips = pts.map(([x, y], i) => {
       const l = pth(p, `M${prev[0] + 60} ${prev[1]}Q${(prev[0] + x) / 2} ${y < prev[1] ? prev[1] - 120 : prev[1] + 120} ${x - 60} ${y}`, { stroke: EV.dim, 'stroke-width': 2.5, 'stroke-dasharray': '6 8', opacity: .8 });
-      put(l, { o: 0 }); tw(l, { o: .8 }, tk[i] - .3, .4); links.push(l);
+      put(l, { o: 0 }); tw(l, { o: .8 }, tk[i] - .1, .4); links.push(l);
       prev = [x, y];
       return chip(x, y, keys[i], i < 3 ? EV.ink : EV.joy, tk[i]);
     });
     // the drifting chain floats away from her
     const drift = G(p); [...links, ...chips].forEach(e => drift.appendChild(e));
     prog(q => { const t = q * D - m('drift'); put(drift, { x: Math.min(20, Math.max(0, t) * 2), y: Math.sin(Math.max(0, t) * .8) * 8 }); }, 0, D, lin);
-    evMood(lee, 'worried', m('drift') + 4);
+    evMood(lee, 'worried', m('ac'));
     // back to the chosen picture: a kite string from her hand
     tw(drift, { o: .12 }, m('back'), 1);
     const str_ = pth(p, 'M330 520Q470 470 560 330', { stroke: EV.gold, 'stroke-width': 3 }, { d: 0 });
@@ -847,13 +880,14 @@ const BEATS = [
     const ring = mk('circle', { cx: C.x, cy: C.y, r: R, fill: 'none', stroke: EV.anger, 'stroke-width': 3, opacity: .5 }, old);
     tw(old, { o: 1 }, .1, .5);
     const st_ = [['thought', -90, EV.ink], ['chem', 0, EV.anger], ['feeling', 90, EV.anger], ['matching', 180, EV.ink]];
+    const stM = ['th', 'chem', 'feel', 'match'];
     st_.forEach(([k, a, c], i) => {
       const rad = a * Math.PI / 180, x = C.x + Math.cos(rad) * R, y = C.y + Math.sin(rad) * R;
       const g = G(old, { x, y, o: 0 });
       evDot(g, 0, 0, 14, c);
       const off = { '-90': [0, -50, 'middle'], '0': [30, 10, 'start'], '90': [0, 54, 'middle'], '180': [-30, 10, 'end'] }[a];
       evText(g, L(k), { x: off[0], y: off[1], size: 30, anchor: off[2], fill: c, maxW: a === 180 ? 330 : a === 0 ? 220 : 320 });
-      tw(g, { o: 1 }, m('loop') + .6 + i * .9, .4);
+      tw(g, { o: 1 }, m(stM[i]), .4);
     });
     // the gap in the old ring, and the bridge to a new loop
     const gap = pth(p, `M${C.x + Math.cos(-80 * Math.PI / 180) * R} ${C.y + Math.sin(-80 * Math.PI / 180) * R}A${R} ${R} 0 0 1 ${C.x + Math.cos(-55 * Math.PI / 180) * R} ${C.y + Math.sin(-55 * Math.PI / 180) * R}`, { stroke: EV.bg, 'stroke-width': 12, opacity: 0 });
@@ -864,8 +898,8 @@ const BEATS = [
     draw(bridge, m('gap') + .4, 1);
     const nl = G(p, { o: 0 });
     const ring2 = mk('circle', { cx: C2.x, cy: C2.y, r: R2, fill: 'none', stroke: EV.calm, 'stroke-width': 3 }, nl);
-    tw(nl, { o: 1 }, m('gap') + 1, .6);
-    lab(p, 'newLoop', C2.x, C2.y + R2 + 56, m('gap') + 1.6, { size: 30, fill: EV.calm, maxW: 520 });
+    tw(nl, { o: 1 }, m('choose'), .6);
+    lab(p, 'newLoop', C2.x, C2.y + R2 + 56, m('choose') + .3, { size: 30, fill: EV.calm, maxW: 520 });
     lab(p, 'theGap', 940, 100, m('gap') + .3, { size: 34, fill: EV.gold, font: SERIF, italic: true, weight: 600, maxW: 300 });
     // notice it, name it: a gold ring at the thought station
     const nr = G(p, { x: C.x, y: C.y - R, o: 0 });
@@ -873,7 +907,7 @@ const BEATS = [
     tw(nr, { o: 1 }, m('notice'), .4); pulse(nr, m('notice') + .3, 1.4);
     lab(p, 'noticeName', C.x, 130, m('notice') + .4, { size: 32, fill: EV.gold, weight: 600, maxW: 420 });
     // the comet: round the old loop until it reaches the top after the gap, then over the bridge, then round the new loop
-    const w1 = .3, w2 = .32, tTop = Math.ceil((m('gap') + .6) * w1) / w1, tB = 1.4;
+    const w1 = .3, w2 = .32, tTop = Math.ceil((m('choose') + .1) * w1) / w1, tB = 1.4;
     const bl = bridge.getTotalLength();
     const pos = t => {
       if (t < tTop) { const a = (-90 + 360 * w1 * t) * Math.PI / 180; return [C.x + Math.cos(a) * R, C.y + Math.sin(a) * R, 0]; }
@@ -896,7 +930,7 @@ const BEATS = [
     mk('rect', { x: -150, y: 826, width: 300, height: 22, rx: 11, fill: 'none', stroke: EV.dim, 'stroke-width': 2 }, mt);
     const lv = mk('rect', { x: -146, y: 830, width: 292, height: 14, rx: 7, fill: EV.anger }, mt);
     tw(mt, { o: 1 }, m('fade') + .2, .4);
-    prog(q => lv.setAttribute('width', 292 * (1 - .85 * q)), m('fade') + .6, 3.5, io);
+    prog(q => lv.setAttribute('width', 292 * (1 - .85 * q)), m('unfed'), Math.max(1, m('new') - m('unfed')), io);
     // weaker and stronger
     prog(q => { ring2.setAttribute('stroke-width', 3 + 6 * q); ring.setAttribute('stroke-width', 3 - 1.6 * q); }, m('new'), 2, io);
     lab(p, 'weaker', C.x, C.y + 12, m('new') + .4, { size: 28, fill: EV.dim, italic: true, maxW: 300 });
@@ -947,7 +981,7 @@ const BEATS = [
     }, 0, D, lin);
     // a new pattern in the brain
     const br = evBrain(p, { x: 1150, y: 250, s: .55, o: 0 });
-    tw(br, { o: 1 }, m('made') - .3, .5);
+    tw(br, { o: 1 }, m('made'), .5);
     tw(c10Lobe(br), { o: 1 }, m('made'), .5);
     evFire(br, m('made') + .3, 1.6, EV.goldHi);
     lab(p, 'madeMind', 1150, 440, m('made') + .8, { size: 32, fill: EV.gold, font: SERIF, italic: true, maxW: 560 });
@@ -977,31 +1011,33 @@ const BEATS = [
     tw(bd, { o: 1 }, .2, .6);
     const hl = G(p, { x: 1160, y: 280, o: 0 });
     mk('rect', { x: -290, y: -36, width: 580, height: 56, rx: 28, fill: 'none', stroke: EV.gold, 'stroke-width': 3 }, hl);
-    tw(hl, { o: 1 }, m('menu') + 1.4, .3);
-    evArm(rav, 1, -60, -20, m('menu') + .6, .6);
+    tw(hl, { o: 1 }, m('chaya'), .3);
+    evArm(rav, 1, -60, -20, m('hand'), .6);
     // day after day, the same order
     const dt = evText(p, '', { x: 400, y: 210, size: 34, fill: EV.dim, o: 0 });
-    tw(dt, { o: 1 }, m('same') - .3, .3);
-    prog(q => { dt.textContent = fmt('day', 1 + Math.floor(q * 6.99)); }, m('same') - .3, 3.6, lin);
-    for (let k = 0; k < 4; k++) { const t0 = m('same') + k * .9; tw(hl, { s: 1.06 }, t0, .2, out); tw(hl, { s: 1 }, t0 + .2, .4); }
-    const pat = lab(p, 'pattern', 1160, 690, m('same') + 2, { size: 30, fill: EV.dim, italic: true, maxW: 620 });
+    tw(dt, { o: 1 }, m('same'), .3);
+    prog(q => { dt.textContent = fmt('day', 1 + Math.floor(q * 6.99)); }, m('same'), 3.6, lin);
+    // the ring pulses once a day, from one clock
+    prog(q => { const t = q * D; let s = 1; for (let k = 0; k < 4; k++) s *= c10Pulse(t - m('same') - k * .9, 1.06); put(hl, { s }); }, 0, D, lin);
+    const pat = lab(p, 'pattern', 1160, 690, m('pat') + .1, { size: 30, fill: EV.dim, italic: true, maxW: 620 });
     // the study
     const sd = G(p, { o: 0 });
     evText(sd, L('study'), { x: 1160, y: 690, size: 28, fill: EV.ink, weight: 600, maxW: 700 });
-    const card = (x, ok, k) => {
-      const g = G(sd, { x, y: 790 });
+    const card = (x, ok, k, t) => {
+      const g = G(sd, { x, y: 790, o: 0 });
+      tw(g, { o: 1 }, t, .5);
       mk('rect', { x: -170, y: -50, width: 340, height: 100, rx: 14, fill: '#0f1519', stroke: ok ? EV.calm : EV.anger, 'stroke-width': 2.5 }, g);
       const tx = evPara(g, L(k), { x: 0, y: 0, size: 26, maxW: 300, fill: ok ? EV.calm : EV.anger });
       put(tx, { y: -tx._h / 2 + 20 });
     };
-    card(970, true, 'rightAns'); card(1350, false, 'justPick');
+    card(970, true, 'rightAns', m('right') + .2); card(1350, false, 'justPick', m('pick') + .2);
     tw(sd, { o: 1 }, m('exp') + .3, .5); hide(pat, m('exp'), .3);
     // read the menu again
-    hide(dt, m('free') - .2, .3);
-    tw(hl, { y: 350 }, m('free') + 1.6, .8, back);
-    const fg = evGlow(p, 400, 318, 80, 'Gold', 0); tw(fg, { o: 1 }, m('free') + 1, .8);
-    lab(p, 'readAgain', 400, 200, m('free') + 2.4, { size: 36, fill: EV.gold, font: SERIF, italic: true, weight: 600, maxW: 560 });
-    hide(sd, m('free') + 3, .5);
+    hide(dt, m('free'), .3);
+    tw(hl, { y: 350 }, m('again') + .3, .8, back);
+    const fg = evGlow(p, 400, 318, 80, 'Gold', 0); tw(fg, { o: 1 }, m('again'), .8);
+    lab(p, 'readAgain', 400, 200, m('again') + .4, { size: 36, fill: EV.gold, font: SERIF, italic: true, weight: 600, maxW: 560 });
+    hide(sd, m('again'), .5);
   }],
 
   ['science', 'b_sci', (m, D) => {
@@ -1019,7 +1055,7 @@ const BEATS = [
       return g;
     };
     row(330, true, 'sciY1', m('yes1') + .2);
-    row(500, true, 'sciY2', m('yes1') + 7);
+    row(500, true, 'sciY2', m('y2') + .1);
     row(690, false, 'sciN', m('no') + .2);
   }],
 

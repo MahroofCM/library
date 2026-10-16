@@ -178,11 +178,11 @@ const BEATS = [
     S.lee = lee;
     evBreathe(lee, D);
     evArm(lee, -1, 8, -30, 0, .01); evArm(lee, 1, -10, 20, 0, .01);
-    evWalk(rav, 1720, 1180, .4, Math.max(1.2, m('ask') - .5));
-    lab(W, 'leena', 560, 760, .6, { size: 28, fill: EV.dim }); lab(W, 'ravi', 1180, 760, m('ask') - .2, { size: 28, fill: EV.dim });
+    evWalk(rav, 1720, 1180, m('walk'), m('walk') + 1.4);
+    lab(W, 'leena', 560, 760, .6, { size: 28, fill: EV.dim }); lab(W, 'ravi', 1180, 760, m('walk') + 1, { size: 28, fill: EV.dim });
     // Ravi's question
-    evMood(rav, 'ask', m('ask') - .2);
-    evArm(rav, 1, -18, -40, m('ask') - .1, .5);
+    evMood(rav, 'ask', m('ask'));
+    evArm(rav, 1, -18, -40, m('ask'), .5);
     const q = evBubble(W, L('askQ'), { x: 1210, y: 250, w: 470, size: 34, tail: 'left' });
     pop(q, m('ask'));
     // the memory fires
@@ -194,26 +194,26 @@ const BEATS = [
     const ph = G(th._in, { x: -70, y: -10 });
     mk('rect', { x: -26, y: -46, width: 52, height: 92, rx: 9, fill: '#1d2428', stroke: EV.gold, 'stroke-width': 2.5 }, ph);
     const rings = [0, 1, 2].map(i => path(ph, `M${34 + i * 12} -30Q${46 + i * 14} 0 ${34 + i * 12} 30`, { stroke: EV.gold, 'stroke-width': 3, opacity: 0 }));
-    rings.forEach((r, i) => { tw(r, { o: 1 }, m('flash') + .7 + i * .12, .2); tw(r, { o: .2 }, m('flash') + 1.1 + i * .12, .4); });
+    rings.forEach((r, i) => { tw(r, { o: 1 }, m('ago') + i * .12, .2); tw(r, { o: .2 }, m('ago') + .4 + i * .12, .4); });
     const xx = path(th._in, 'M40 -30L100 30M100 -30L40 30', { stroke: EV.anger, 'stroke-width': 6 }, { d: 0 });
-    draw(xx, m('flash') + 1.6, .5);
+    draw(xx, m('forgot') + .2, .5);
     const ma = evText(th._in, L('monthsAgo'), { x: 0, y: 84, size: 26, fill: EV.dim, o: 0, italic: true });
-    show(ma, m('flash') + 1.2);
+    show(ma, m('ago'));
     // the argument
     cam.to({ x: 870, y: 450, z: 1 }, m('heat') - .3, 1.2);
-    hide(th, m('heat') - .2, .4);
-    evMood(lee, 'angry', m('heat')); evMood(lee, 'shout', m('heat') + 1.4);
+    hide(th, m('heat'), .4);
+    evMood(lee, 'angry', m('heat')); evMood(lee, 'shout', m('voice'));
     evArm(lee, 1, -55, -70, m('heat') + .3, .4, back); evArm(lee, -1, 30, 40, m('heat') + .5, .4);
     heat(W, 560, 330, EV.anger, m('heat'), D - m('heat'), 16, 70, 240);
-    evMood(rav, 'hurt', m('heat') + .9); evMood(rav, 'angry', m('heat') + 2.6); evMood(rav, 'shout', m('heat') + 3.6);
-    evArm(rav, -1, 50, 60, m('heat') + 2.8, .4, back);
-    heat(W, 1180, 330, EV.anger, m('heat') + 2.6, D - m('heat') - 2.6, 10, 60, 200);
+    evMood(rav, 'hurt', m('voice') + .3); evMood(rav, 'angry', m('minute')); evMood(rav, 'shout', m('fight'));
+    evArm(rav, -1, 50, 60, m('minute') + .2, .4, back);
+    heat(W, 1180, 330, EV.anger, m('minute'), D - m('minute'), 10, 60, 200);
     const zz = path(W, 'M700 300L760 280L740 320L820 300L800 340L880 320L860 360L960 330L940 370L1040 344',
       { stroke: EV.anger, 'stroke-width': 4 }, { d: 0 });
-    draw(zz, m('heat') + 1.6, .5);
+    draw(zz, m('voice') + .2, .5);
     const b1 = evBubble(W, L('always'), { x: 520, y: 210, w: 300, size: 30, tail: 'left', edge: EV.anger });
     const b2 = evBubble(W, L('never'), { x: 1230, y: 200, w: 300, size: 30, tail: 'left', edge: EV.anger });
-    pop(b1, m('heat') + 1.4); pop(b2, m('heat') + 3.6);
+    pop(b1, m('voice')); pop(b2, m('fight'));
   }],
 
   ['stop', 'b_stop', (m, D) => {
@@ -226,7 +226,7 @@ const BEATS = [
     const s1 = evText(p, L('stopIt'), { x: 1020, y: 190, size: 56, font: SERIF, italic: true, o: 0, maxW: 900 });
     put(s1, { y: 210 }); tw(s1, { y: 190, o: 1 }, m('stop'), .6, out);
     // the words reach her and fall away
-    tw(s1, { o: .25 }, m('stop') + 2.2, .8);
+    tw(s1, { o: .25 }, m('cant'), .8);
     const def = G(p, { x: 1020, y: 340, o: 0 });
     evText(def, L('addiction'), { x: 0, y: 0, size: 84, font: SERIF, weight: 600, fill: EV.gold });
     evText(def, L('addDef'), { x: 0, y: 64, size: 38, fill: EV.ink, maxW: 820 });
@@ -242,12 +242,12 @@ const BEATS = [
     evText(fe, L('feeling'), { x: 0, y: 100, size: 28, fill: EV.dim });
     const link = path(p, 'M935 560H1180', { stroke: EV.gold, 'stroke-width': 4, 'stroke-dasharray': '10 10' });
     put(link, { o: 0 });
-    tw(mem, { o: 1 }, m('mem'), .5); tw(fe, { o: 1 }, m('mem') + .6, .5); show(link, m('mem') + .4);
-    pulse(fe, m('mem') + 2.6, 1.25);
-    const ch = lab(p, 'chemistry', 1030, 790, m('mem') + 3.2, { size: 30, fill: EV.anger, italic: true });
+    tw(mem, { o: 1 }, m('mem'), .5); tw(fe, { o: 1 }, m('feel'), .5); show(link, m('feel'));
+    pulse(fe, m('recall'), 1.25);
+    const ch = lab(p, 'chemistry', 1030, 790, m('chem'), { size: 30, fill: EV.anger, italic: true });
     // the chemistry flows back into her
     const back_ = path(p, 'M1180 600C1000 760 640 760 450 520', { stroke: 'none' });
-    evFlow(back_, 9, EV.anger, m('mem') + 3, D - m('mem') - 3, { speed: .35, r: 6, parent: p });
+    evFlow(back_, 9, EV.anger, m('recall') + .3, D - m('recall') - .3, { speed: .35, r: 6, parent: p });
     S.stopPic = p;
   }],
 
@@ -261,27 +261,27 @@ const BEATS = [
     const br = evBrain(p, { x: 450, y: 380, s: .85, o: 0 });
     const bd = evBody(p, { x: 1180, y: 430, s: 1.05, o: 0 });
     tw(br, { o: 1 }, .2, .6); tw(bd, { o: 1 }, .5, .6);
-    lab(p, 'thought', 450, 145, m('net') - .2, { size: 32, fill: EV.gold, italic: true });
+    lab(p, 'thought', 450, 145, m('net'), { size: 32, fill: EV.gold, italic: true });
     evFire(br, m('net'), 1.4);
     lab(p, 'neurons', 450, 190, m('net') + .8, { size: 26, fill: EV.dim });
     tw(br._hypo.firstChild, { o: 1 }, m('hypo'), .5); pulse(br._hypoDot, m('hypo'), 2);
     lab(p, 'hypo', 400, 520, m('hypo') + .2, { size: 28, fill: EV.gold });
     const top = path(p, 'M600 260C760 110 960 110 1100 190', { stroke: EV.anger, 'stroke-width': 3, opacity: .5 }, { d: 0 });
-    draw(top, m('blood') - .2, .9); headAt(p, top, EV.anger, m('blood') + .6);
+    draw(top, m('blood'), .9); headAt(p, top, EV.anger, m('blood') + .6);
     evFlow(top, 7, EV.anger, m('blood'), D - m('blood'), { speed: .32, r: 7, parent: p });
     lab(p, 'chemicals', 850, 120, m('blood') + .2, { size: 30, fill: EV.anger });
     tw(bd._glow, { o: 1 }, m('body'), 1); pulse(bd._heart, m('body') + .2, 2.2);
     const bodyAnger = evGlow(p, 1180, 360, 120, 'anger', 0); tw(bodyAnger, { o: .8 }, m('body'), 1.2);
     lab(p, 'bodyFeels', 1180, 760, m('body') + .2, { size: 30, fill: EV.ink });
     const bot = path(p, 'M1060 640C900 780 650 780 520 600', { stroke: EV.ink, 'stroke-width': 3, opacity: .5 }, { d: 0 });
-    draw(bot, m('back') - .1, .9); headAt(p, bot, EV.ink, m('back') + .7);
+    draw(bot, m('back'), .9); headAt(p, bot, EV.ink, m('back') + .7);
     evFlow(bot, 6, EV.ink, m('back'), D - m('back'), { speed: .32, r: 6, parent: p });
     lab(p, 'brainReads', 800, 800, m('back') + .4, { size: 28, fill: EV.dim });
-    evFire(br, m('back') + 1.2, 1.2, EV.anger);
+    evFire(br, m('think'), 1.2, EV.anger);
     const ln = evPara(p, L('loopLine'), { x: 850, y: 420, size: 40, font: SERIF, italic: true, fill: EV.ink, o: 0, maxW: 380, weight: 500 });
     show(ln, m('cycle'), .8);
-    const sb = lab(p, 'state', 850, 440 + ln._h + 10, m('cycle') + 3, { size: 32, fill: EV.gold, weight: 600 });
-    pulse(sb, m('cycle') + 3.4, 1.15);
+    const sb = lab(p, 'state', 850, 440 + ln._h + 10, m('state'), { size: 32, fill: EV.gold, weight: 600 });
+    pulse(sb, m('state') + .4, 1.15);
   }],
 
   ['messengers', 'b_mess', (m, D) => {
@@ -323,12 +323,12 @@ const BEATS = [
       evGlow(g, 0, 0, 70, k === 'anger' ? 'anger' : k === 'joy' ? 'joy' : k === 'fear' ? 'fear' : k === 'sadness' ? 'sad' : 'Gold', .5);
       evDot(g, 0, 0, 30, c);
       evText(g, L(k), { x: 0, y: 72, size: 28, fill: EV.ink });
-      tw(g, { o: 1, s: 1 }, m('prim') + i * .45, .5, back);
+      tw(g, { o: 1, s: 1 }, m(['prim', 'sad', 'fear', 'joy', 'surp', 'disg'][i]), .5, back);
       return g;
     });
     lab(p, 'blends', 800, 420, m('mix'), { size: 28, fill: EV.dim, italic: true });
-    const sec = [['shame', EV.shame, [1, 2, 0]], ['guilt', '#8f86a8', [1, 0]], ['jealousy', '#86a86a', [0, 2, 5]], ['pride', '#d9a65a', [3, 4]]];
-    const pools = sec.map(([k, c, from], i) => {
+    const sec = [['shame', EV.shame, [1, 2, 0], 'shame'], ['guilt', '#8f86a8', [1, 0], 'guilt'], ['jealousy', '#86a86a', [0, 2, 5], 'jeal'], ['pride', '#d9a65a', [3, 4], 'pride']];
+    const pools = sec.map(([k, c, from, mk_], i) => {
       const x = 380 + i * 280, y = 560;
       const g = G(p, { x, y, o: 0 });
       from.forEach((j, n) => mk('circle', { cx: (n - (from.length - 1) / 2) * 22, cy: 0, r: 36, fill: prims[j][1], opacity: .55 }, g));
@@ -337,21 +337,21 @@ const BEATS = [
       // copies of the primaries travel down into the pool
       from.forEach((j, n) => {
         const d = evDot(p, 300 + j * 200, 220, 14, prims[j][1], 0);
-        tw(d, { o: 1 }, m('mix') + .2 + i * .35, .2);
-        tw(d, { x: x, y: y }, m('mix') + .2 + i * .35, .9, io);
-        tw(d, { o: 0 }, m('mix') + 1.0 + i * .35, .25);
+        tw(d, { o: 1 }, m(mk_), .2);
+        tw(d, { x: x, y: y }, m(mk_), .6, io);
+        tw(d, { o: 0 }, m(mk_) + .55, .25);
       });
-      tw(g, { o: 1 }, m('mix') + .9 + i * .35, .4);
+      tw(g, { o: 1 }, m(mk_) + .4, .4);
       return g;
     });
     // Leena's blend: shame turns into anger, poured into her cocktail
     pools.forEach((g, i) => { if (i) tw(g, { o: 0 }, m('leena'), .5); });
     dots.forEach((g, i) => { if (i) tw(g, { o: .25 }, m('leena'), .5); });
     tw(pools[0], { x: 560, y: 600, s: 1.1 }, m('leena') + .2, .8);
-    const ar = path(p, 'M640 600H860', { stroke: EV.ink, 'stroke-width': 3 }, { d: 0 }); draw(ar, m('leena') + 1.6, .5);
-    const ah = evHead(p, 866, 600, 0, EV.ink); put(ah, { o: 0 }); show(ah, m('leena') + 2, .2);
+    const ar = path(p, 'M640 600H860', { stroke: EV.ink, 'stroke-width': 3 }, { d: 0 }); draw(ar, m('turned'), .5);
+    const ah = evHead(p, 866, 600, 0, EV.ink); put(ah, { o: 0 }); show(ah, m('turned') + .4, .2);
     const an = G(p, { x: 960, y: 600, o: 0 }); evGlow(an, 0, 0, 90, 'anger', .8); evDot(an, 0, 0, 32, EV.anger); evText(an, L('anger'), { x: 0, y: 84, size: 30, weight: 600 });
-    tw(an, { o: 1 }, m('leena') + 2.1, .5);
+    tw(an, { o: 1 }, m('anger'), .5);
     // the vial
     const v = G(p, { x: 1300, y: 640, o: 0 });
     const clipId = 'evVialClip';
@@ -363,10 +363,10 @@ const BEATS = [
     path(v, 'M-60 -170V40Q-60 80 0 80Q60 80 60 40V-170', { stroke: EV.gold, 'stroke-width': 3.5 });
     path(v, 'M-74 -170H74', { stroke: EV.gold, 'stroke-width': 3.5 });
     evText(v, L('herBlend'), { x: 0, y: 140, size: 30, fill: EV.gold, weight: 600 });
-    tw(v, { o: 1 }, m('cocktail') - .4, .5);
+    tw(v, { o: 1 }, m('cocktail'), .5);
     prog(q => { lay1.setAttribute('y', 80 - q * 90); lay1.setAttribute('height', q * 90); }, m('cocktail'), 1.2, out);
     prog(q => { lay2.setAttribute('y', -10 - q * 130); lay2.setAttribute('height', q * 130); }, m('cocktail') + 1.1, 1.4, out);
-    lab(p, 'cocktail', 1300, 820, m('cocktail') + 2.2, { size: 26, fill: EV.dim, italic: true });
+    lab(p, 'cocktail', 1300, 820, m('mixed'), { size: 26, fill: EV.dim, italic: true });
   }],
 
   ['dock', 'b_dock', (m, D) => {
@@ -377,26 +377,26 @@ const BEATS = [
     lab(p, 'receptors', 800, 240, m('recep') + .5, { size: 32, fill: EV.gold });
     const r = c._rec[4];
     const pep = evPeptide(c, EV.anger, { x: -560, y: -560, r: 140, o: 0 });
-    tw(pep, { o: 1 }, m('key') - .6, .3);
-    evDock(pep, r, m('key') - .4, 1.2);
+    tw(pep, { o: 1 }, m('key'), .3);
+    evDock(pep, r, m('key') + .1, 1.2);
     lab(p, 'lockKey', 1040, 200, m('key') + .9, { size: 30, fill: EV.ink, italic: true });
-    lab(p, 'angerPep', 470, 130, m('key') - .4, { size: 26, fill: EV.anger });
+    lab(p, 'angerPep', 470, 130, m('key'), { size: 26, fill: EV.anger });
     // the signal runs inside to the nucleus
     const rip = mk('circle', { cx: 0, cy: -260, r: 0, fill: 'none', stroke: EV.goldHi, 'stroke-width': 3 }, c);
     prog(q => { rip.setAttribute('r', q * 240); rip.setAttribute('opacity', (1 - q) * .9); }, m('inside'), 1.4, out);
     const sig = path(c, 'M0 -250C10 -150 20 -60 31 30', { stroke: EV.goldHi, 'stroke-width': 4 }, { d: 0 });
     draw(sig, m('inside') + .2, .8);
     tw(c._nuc, { s: 1.12 }, m('inside') + .9, .3, out); tw(c._nuc, { s: 1 }, m('inside') + 1.2, .5);
-    lab(p, 'does', 1230, 520, m('inside') + 2, { size: 28, fill: EV.ink, anchor: 'start' });
-    lab(p, 'builds', 1230, 580, m('inside') + 2.8, { size: 28, fill: EV.ink, anchor: 'start' });
-    lab(p, 'reads', 1230, 640, m('inside') + 3.6, { size: 28, fill: EV.shame, anchor: 'start' });
+    lab(p, 'does', 1230, 520, m('does'), { size: 28, fill: EV.ink, anchor: 'start' });
+    lab(p, 'builds', 1230, 580, m('builds'), { size: 28, fill: EV.ink, anchor: 'start' });
+    lab(p, 'reads', 1230, 640, m('reads'), { size: 28, fill: EV.shame, anchor: 'start' });
   }],
 
   ['upreg', 'b_up', (m, D) => {
     const p = panel(0);
     const a = evCell(p, { x: 470, y: 560, r: 190, n: 5, a0: -160, a1: -20, o: 0, nucleus: true });
     tw(a, { o: 1 }, .1, .6);
-    lab(p, 'everyday', 470, 140, m('flood') - .2, { size: 30, fill: EV.dim, italic: true });
+    lab(p, 'everyday', 470, 140, m('every'), { size: 30, fill: EV.dim, italic: true });
     // a steady rain of anger peptides docking, over and over
     const peps = a._rec.map((r, i) => {
       const e = evPeptide(a, EV.anger, { x: r.ox * 2.2, y: r.oy * 2.2 - 120, r: r.a + 90, o: 0, s: .8 });
@@ -412,12 +412,12 @@ const BEATS = [
     const b = evCell(p, { x: 470, y: 560, r: 190, n: 11, a0: -168, a1: -12, o: 0 });
     b._rec.forEach(r => put(r.g, { o: 0 }));
     tw(b, { o: 1 }, m('divide'), .3); tw(b, { x: 1110 }, m('divide') + .1, 1.4, out);
-    b._rec.forEach((r, i) => tw(r.g, { o: 1 }, m('divide') + 1.2 + i * .12, .3));
-    b._rec.forEach(r => tw(r.cup, { c_stroke: EV.anger }, m('divide') + 1.4, .4));
+    b._rec.forEach((r, i) => tw(r.g, { o: 1 }, m('morer') + i * .08, .3));
+    b._rec.forEach(r => tw(r.cup, { c_stroke: EV.anger }, m('morer') + .2, .4));
     a._rec.forEach(r => tw(r.cup, { c_stroke: EV.anger }, m('flood') + 1, .4));
-    const ca = lab(p, null, 470, 820, m('divide') + 1.6); ca.textContent = fmt('locks', ML ? '5' : 'five');
-    const cb = lab(p, null, 1110, 820, m('divide') + 2.4); cb.textContent = fmt('locks', ML ? '11' : 'eleven');
-    lab(p, 'newCell', 1110, 866, m('divide') + 1.4, { size: 24, fill: EV.dim, italic: true });
+    const ca = lab(p, null, 470, 820, m('morer')); ca.textContent = fmt('locks', ML ? '5' : 'five');
+    const cb = lab(p, null, 1110, 820, m('morer') + .4); cb.textContent = fmt('locks', ML ? '11' : 'eleven');
+    lab(p, 'newCell', 1110, 866, m('newc'), { size: 24, fill: EV.dim, italic: true });
     // counters
     const ct = G(p, { x: 1110, y: 175, o: 0 });
     for (let i = 0; i < 5; i++) {
@@ -429,7 +429,7 @@ const BEATS = [
     lab(p, 'counters', 1110, 110, m('lanes') + .3, { size: 26, fill: EV.ink, italic: true, maxW: 760 });
     b._rec.forEach((r, i) => pulse(r.g, m('crave') + .1 + (i % 4) * .15, 1.25));
     const want = evText(p, L('wantMore'), { x: 1110, y: 300, size: 36, fill: EV.anger, weight: 600, o: 0, font: SERIF, italic: true });
-    tw(want, { o: 1 }, m('crave') + .5, .4); pulse(want, m('crave') + 1.2, 1.2);
+    tw(want, { o: 1 }, m('wants'), .4); pulse(want, m('wants') + .4, 1.2);
   }],
 
   ['downreg', 'b_down', (m, D) => {
@@ -461,7 +461,7 @@ const BEATS = [
     evText(gg, L('howStrong'), { x: 0, y: 70, size: 26, fill: EV.dim, maxW: 460 });
     const nd = G(gg, { r: -70 });
     path(nd, 'M0 0V-175', { stroke: EV.ink, 'stroke-width': 5 }); evDot(nd, 0, 0, 12, EV.ink);
-    tw(gg, { o: 1 }, m('more') - .5, .5);
+    tw(gg, { o: 1 }, m('more'), .5);
     const dose = G(p, { x: 1180, y: 700, o: 0 });
     const db = mk('rect', { x: -110, y: -18, width: 0, height: 36, rx: 8, fill: EV.anger }, dose);
     mk('rect', { x: -110, y: -18, width: 220, height: 36, rx: 8, fill: 'none', stroke: EV.dim, 'stroke-width': 1.5 }, dose);
@@ -469,14 +469,14 @@ const BEATS = [
     tw(dose, { o: 1 }, m('more'), .4);
     prog(q => db.setAttribute('width', 110 * q), m('more') + .1, .6, out);
     tw(nd, { r: -48 }, m('more') + .5, .9, out);        // the same dose now lands short of normal
-    prog(q => db.setAttribute('width', 110 + 100 * q), m('more') + 2.6, .7, out);
-    prog(q => { if (q > .01) dl.textContent = L('biggerDose'); }, m('more') + 2.6, .1, lin);
-    tw(nd, { r: 0 }, m('more') + 3, 1, out);
+    prog(q => db.setAttribute('width', 110 + 100 * q), m('bigger'), .7, out);
+    prog(q => { if (q > .01) dl.textContent = L('biggerDose'); }, m('bigger'), .1, lin);
+    tw(nd, { r: 0 }, m('bigger') + .4, 1, out);
     const tol = G(p, { x: 1180, y: 160, o: 0 });
     evText(tol, L('tolerance'), { x: 0, y: 0, size: 64, font: SERIF, weight: 600, fill: EV.gold });
     const td = evText(tol, '', { x: 0, y: 52, size: 28, fill: EV.ink });
     tw(tol, { o: 1 }, m('drug'), .5);
-    stream(td, L('toleranceD'), m('drug') + 1.6, 2.4);
+    stream(td, L('toleranceD'), m('mw'), 2.4);
   }],
 
   ['q2', 'b_down', (m, D) => {
@@ -511,19 +511,19 @@ const BEATS = [
       return g;
     });
     const pep = evPeptide(p, EV.anger, { x: 600, y: 60, r: 180, o: 0, s: .9 });
-    tw(pep, { o: 1 }, m('dna') - .4, .3); tw(pep, { y: 262 }, m('dna') - .3, .8, out);
+    tw(pep, { o: 1 }, m('pep'), .3); tw(pep, { y: 262 }, m('pep') + .1, .8, out);
     pulse(genes[1], m('dna') + .5, 1.15);
     lab(p, 'geneA', 600, 430, m('dna') + .6, { size: 26, fill: EV.anger });
     // proteins built from the busy gene
-    const prods = [['skin', 330], ['joints', 600], ['enzymes', 870]].map(([k, x], i) => {
+    const prods = [['skin', 330, 'skin'], ['joints', 600, 'joints'], ['enzymes', 870, 'enz']].map(([k, x, mk_], i) => {
       const g = G(p, { x, y: 640, o: 0 });
       if (k === 'skin') { path(g, 'M-70 -10Q-35 -34 0 -10T70 -10V30H-70Z', { fill: '#7a4b34', stroke: EV.gold, 'stroke-width': 2 }); }
       if (k === 'joints') { mk('circle', { cx: 0, cy: -16, r: 26, fill: '#26302f', stroke: EV.gold, 'stroke-width': 2 }, g); path(g, 'M-10 8L-30 50M10 8L30 50', { stroke: EV.gold, 'stroke-width': 10, opacity: .7 }); }
       if (k === 'enzymes') { path(g, 'M30 -30A42 42 0 1 0 30 30L0 0Z', { fill: '#2b3a2f', stroke: EV.calm, 'stroke-width': 2 }); }
       evText(g, L(k), { x: 0, y: 92, size: 28, fill: EV.ink });
       const ch = path(p, `M600 400C600 520 ${x} 520 ${x} 590`, { stroke: EV.gold, 'stroke-width': 3, opacity: .6 }, { d: 0 });
-      draw(ch, m('prot') + i * .35, .8);
-      tw(g, { o: 1 }, m('prot') + .6 + i * .35, .5);
+      draw(ch, m(mk_), .5);
+      tw(g, { o: 1 }, m(mk_) + .2, .5);
       return g;
     });
     lab(p, 'proteins', 600, 530, m('prot') + .3, { size: 28, fill: EV.gold, italic: true });
@@ -531,8 +531,9 @@ const BEATS = [
     const ct = evText(p, '', { x: 1290, y: 640, size: 48, font: SERIF, weight: 600, fill: EV.anger, o: 0 });
     tw(ct, { o: 1 }, m('same'), .4);
     prog(q => { const n = Math.max(1, Math.round(q * q * 3650)); ct.textContent = fmt('day', n.toLocaleString(LANG === 'ml' ? 'en-IN' : 'en')); }, m('same'), 3.2, lin);
-    for (let k = 0; k < 6; k++) pulse(genes[1], m('same') + .2 + k * .5, 1.12);
-    [0, 2, 3].forEach(i => { tw(genes[i], { o: .35 }, m('same') + 1.5, .6); lab(genes[i], 'asleep', 0, 90, m('same') + 1.8, { size: 24, fill: EV.dim, italic: true }); });
+    // six heartbeats on the busy gene, driven from time (one start, on the mark)
+    prog(q => { const t = q * 3, u = (t % .5) / .5; put(genes[1], { s: q >= 1 ? 1 : 1 + .12 * Math.sin(Math.PI * u) }); }, m('same') + .2, 3, lin);
+    [0, 2, 3].forEach(i => { tw(genes[i], { o: .35 }, m('rest'), .6); lab(genes[i], 'asleep', 0, 90, m('rest') + .3, { size: 24, fill: EV.dim, italic: true }); });
     // wear: the parts come out dull
     prods.forEach((g, i) => { tw(g, { o: .45 }, m('wear') + i * .3, .6); });
     lab(p, 'lowerQ', 600, 820, m('wear') + .8, { size: 28, fill: EV.dim, italic: true });
@@ -550,8 +551,8 @@ const BEATS = [
       return g;
     };
     tw(sg, { o: 1 }, m('note') + .1, .4);
-    row(420, true, 'sci1', m('note') + 1.6);
-    row(620, false, 'sci2', m('note') + 7.5);
+    row(420, true, 'sci1', m('strong'));
+    row(620, false, 'sci2', m('model'));
   }],
 
   ['memory', 'b_mem', (m, D) => {
@@ -567,35 +568,35 @@ const BEATS = [
     const lvl = mk('rect', { x: -12, y: -66, width: 24, height: 132, rx: 7, fill: EV.anger }, gauge);
     const gl = evText(gauge, L('supply'), { x: 0, y: 106, size: 24, fill: EV.dim });
     const gs = evText(gauge, L('low'), { x: 30, y: 6, size: 24, fill: EV.anger, anchor: 'start', o: 0 });
-    tw(gauge, { o: 1 }, m('quiet') + .2, .4);
+    tw(gauge, { o: 1 }, m('supply'), .4);
     const setLvl = q => { lvl.setAttribute('height', 132 * q); lvl.setAttribute('y', 66 - 132 * q); };
-    prog(q => setLvl(1 - .8 * q), m('quiet') + .5, 2, io);
-    show(gs, m('quiet') + 1.6);
+    prog(q => setLvl(1 - .8 * q), m('supply') + .2, 1.6, io);
+    show(gs, m('low'));
     // the call goes up to the brain
     const up = path(p, 'M600 470C680 430 690 340 600 300', { stroke: EV.anger, 'stroke-width': 3, opacity: .5 }, { d: 0 });
     draw(up, m('call'), .7);
     evFlow(up, 5, EV.anger, m('call'), m('refill') - m('call'), { speed: .7, r: 6, parent: p });
     // replay
     const th = evThought(p, { x: 610, y: 350, w: 380, h: 200, dx: 190 });
-    tw(th, { o: 1 }, m('replay') - .2, .5, out);
+    tw(th, { o: 1 }, m('replay'), .5, out);
     const mini = evPerson(th._in, { kind: 'm', x: -60, y: 80, s: .32 });
     evMood(mini, 'shout', 0, .01); evArm(mini, -1, 50, 60, 0, .01);
     path(th._in, 'M10 -40L40 -50L30 -24L70 -34L56 -6L100 -16', { stroke: EV.anger, 'stroke-width': 4 });
     const tl = evText(th._in, L('oldArg'), { x: 40, y: 50, size: 26, fill: EV.ink, anchor: 'start', o: 0, maxW: 150 });
-    show(tl, m('replay') + 1.4, .3);
-    prog(q => { if (q > .5) tl.textContent = L('insult'); else tl.textContent = L('oldArg'); }, m('replay') + 2.6, .2, lin);
+    show(tl, m('old'), .3);
+    prog(q => { if (q > .5) tl.textContent = L('insult'); else tl.textContent = L('oldArg'); }, m('insult'), .2, lin);
     // refill
     const dn = path(p, 'M600 300C690 340 680 430 600 470', { stroke: 'none' });
     evFlow(dn, 8, EV.anger, m('refill'), D - m('refill'), { speed: .5, r: 7, parent: p });
-    prog(q => setLvl(.2 + .8 * q), m('refill') + .4, 1.8, out);
-    prog(q => { gs.textContent = q > .5 ? L('full') : L('low'); }, m('refill') + 1.6, .2, lin);
+    prog(q => setLvl(.2 + .8 * q), m('refill') + .2, 1.2, out);
+    prog(q => { gs.textContent = q > .5 ? L('full') : L('low'); }, m('refill') + 1, .2, lin);
     evMood(lee, 'tense', m('refill') + .6);
     heat(p, 560, 330, EV.anger, m('refill') + .6, D - m('refill') - .6, 9, 50, 180);
     // the voice
-    hide(th, m('voice') - .2, .4);
+    hide(th, m('voice'), .4);
     const w1 = evText(p, L('whisper1'), { x: 330, y: 200, size: 34, fill: EV.anger, italic: true, font: SERIF, o: 0, maxW: 520 });
     const w2 = evText(p, L('whisper2'), { x: 900, y: 250, size: 34, fill: EV.anger, italic: true, font: SERIF, o: 0, maxW: 520 });
-    tw(w1, { o: .85 }, m('voice') + .2, .8); tw(w2, { o: .85 }, m('voice') + 1.6, .8);
+    tw(w1, { o: .85 }, m('voice') + .2, .8); tw(w2, { o: .85 }, m('asking'), .8);
   }],
 
   ['anxiety', 'b_anx', (m, D) => {
@@ -605,23 +606,25 @@ const BEATS = [
     const ring = mk('circle', { cx: C.x, cy: C.y, r: R, fill: 'none', stroke: EV.fear, 'stroke-width': 2.5, opacity: .35 }, rg);
     tw(rg, { o: 1 }, .2, .6);
     const stations = [['worryT', -90, 'worry'], ['worryC', 0, 'uneasy'], ['uneasy', 90, 'reads'], ['proof', 180, 'more']];
-    const marksAt = ['worry', 'uneasy', 'reads', 'more'];
+    const marksAt = ['worry', 'chem', 'uneasy', 'reads'];
     stations.forEach(([k, a, mk_], i) => {
       const rad = a * Math.PI / 180, x = C.x + Math.cos(rad) * R, y = C.y + Math.sin(rad) * R;
       const g = G(p, { x, y, o: 0 });
       evDot(g, 0, 0, 16, EV.fear);
       const off = { '-90': [0, -38, 'middle'], '0': [36, 10, 'start'], '90': [0, 56, 'middle'], '180': [-36, 10, 'end'] }[a];
       evText(g, L(k), { x: off[0], y: off[1], size: 30, anchor: off[2], fill: EV.ink, maxW: a === 0 || a === 180 ? 440 : 600 });
-      tw(g, { o: 1 }, m(marksAt[i]) - .1, .4);
+      tw(g, { o: 1 }, m(marksAt[i]), .4);
     });
     // the comet: station to station on the marks, then faster and tighter
     const com = G(p);
     const trail = Array.from({ length: 8 }, (_, i) => evDot(com, 0, 0, 13 - i, EV.fear, 0));
-    const tA = marksAt.map(k => m(k)), ts = m('spin');
+    const tA = [...marksAt, 'more'].map(k => m(k)), ts = m('spin');
+    // the comet arrives at each station as it is named (and back at the top on 'more')
+    const leg = (t, i) => { const a = Math.max(tA[i - 1], tA[i] - .9); return soft(Math.max(0, Math.min(1, (t - a) / (tA[i] - a)))); };
     const ang = t => {
       if (t < tA[0]) return -90;
-      for (let i = 0; i < 3; i++) if (t < tA[i + 1]) return -90 + 90 * i + 90 * soft(Math.min(1, (t - tA[i]) / .9));
-      if (t < ts) return 180 + 90 * soft(Math.min(1, (t - tA[3]) / 1.2));
+      for (let i = 1; i < 5; i++) if (t < tA[i]) return -180 + 90 * i + 90 * leg(t, i);
+      if (t < ts) return 270;
       const u = t - ts; return 270 + 360 * (.4 * u + .09 * u * u);
     };
     const rad_ = t => t < ts ? R : R * (1 - .55 * Math.min(1, (t - ts) / Math.max(1, D - ts - .5)));
@@ -637,8 +640,8 @@ const BEATS = [
     }, 0, D, lin);
     const core = evGlow(p, C.x, C.y, 160, 'fear', 0);
     tw(core, { o: 1 }, ts + 1, D - ts - 1);
-    const pn = lab(p, 'panic', 800, 640, ts + 2.5, { size: 40, fill: EV.fear, weight: 600, font: SERIF });
-    lab(p, 'noDanger', 800, 870, ts + 3.5, { size: 28, fill: EV.dim, italic: true });
+    const pn = lab(p, 'panic', 800, 640, m('panic'), { size: 40, fill: EV.fear, weight: 600, font: SERIF });
+    lab(p, 'noDanger', 800, 870, m('nodanger'), { size: 28, fill: EV.dim, italic: true });
   }],
 
   ['withdraw', 'b_with', (m, D) => {
@@ -657,7 +660,7 @@ const BEATS = [
     evMood(lee, 'worried', m('mid') + .4);
     const vs = [['v1', 470, 250], ['v2', 1150, 300], ['v3', 450, 420]].map(([k, x, y], i) => {
       const e = evText(p, L(k), { x, y, size: 34, font: SERIF, italic: true, fill: EV.anger, o: 0, maxW: 520 });
-      tw(e, { o: .9 }, m('voices') + i * 1.3, .6);
+      tw(e, { o: .9 }, m(['voices', 'v2', 'v3'][i]), .6);
       return e;
     });
     heat(p, 800, 330, EV.anger, m('urge'), D - m('urge'), 6, 40, 140);
@@ -667,24 +670,23 @@ const BEATS = [
     ic(520, 'tea', g => { path(g, 'M-34 -30H30V10Q30 30 0 30Q-34 30 -34 10Z', { fill: '#2b2420', stroke: EV.gold, 'stroke-width': 2.5, transform: 'rotate(-35)' }); path(g, 'M18 18Q50 28 70 22', { stroke: '#8a5a33', 'stroke-width': 8 }); });
     ic(800, 'driver', g => { path(g, 'M-60 10V-10L-34 -34H34L60 -10V10Z', { fill: '#1d262b', stroke: EV.gold, 'stroke-width': 2.5 }); evText(g, '!!', { x: 66, y: -28, size: 36, fill: EV.anger, weight: 700 }); });
     ic(1080, 'scratch', g => { path(g, 'M-60 10V-10L-34 -34H34L60 -10V10Z', { fill: '#1d262b', stroke: EV.gold, 'stroke-width': 2.5 }); path(g, 'M-30 -4L10 2L-6 -10L30 -2', { stroke: EV.anger, 'stroke-width': 3 }); });
-    icons.forEach((g, i) => tw(g, { o: 1, s: 1 }, m('reasons') + .8 + i * 1.1, .45, back));
+    icons.forEach((g, i) => tw(g, { o: 1, s: 1 }, m(['tea', 'driver', 'scratch'][i]), .45, back));
     // the fork
     vs.forEach(e => tw(e, { o: .2 }, m('choose'), .5));
     const wd = evText(p, L('withdrawal'), { x: 800, y: 150, size: 64, font: SERIF, weight: 600, fill: EV.gold, o: 0 });
     show(wd, m('choose'), .6);
     const lft = path(p, 'M720 520C600 520 470 560 330 640', { stroke: EV.anger, 'stroke-width': 4 }, { d: 0 });
     const rgt = path(p, 'M880 520C1000 520 1130 560 1270 640', { stroke: EV.gold, 'stroke-width': 4 }, { d: 0 });
-    draw(lft, m('choose') + .8, .7); draw(rgt, m('choose') + .8, .7);
-    lab(p, 'oldLoop', 330, 690, m('choose') + 1.3, { size: 30, fill: EV.anger });
-    lab(p, 'newLoop', 1270, 690, m('choose') + 1.3, { size: 30, fill: EV.gold });
+    draw(lft, m('decides'), .7); draw(rgt, m('decides'), .7);
+    lab(p, 'oldLoop', 330, 690, m('decides') + .4, { size: 30, fill: EV.anger });
+    lab(p, 'newLoop', 1270, 690, m('decides') + .4, { size: 30, fill: EV.gold });
     icons.forEach(g => tw(g, { o: .25 }, m('choose') + .5, .5));
   }],
 
   ['cascade', 'b_casc', (m, D) => {
     const p = panel(0);
     const fs = [['frustration', EV.surprise], ['anger', EV.anger], ['resentment', '#c25a4a'], ['jealousy', '#86a86a'], ['insecurity', EV.fear], ['guilt', EV.shame]];
-    const marks = [null, 'f1', 'f2', 'f3', 'f4', 'f5'];
-    const tiles = fs.map(([k, c], i) => {
+        const tiles = fs.map(([k, c], i) => {
       const x = 270 + i * 205, g = G(p, { x, y: 470, o: 0 });
       mk('rect', { x: -70, y: -230, width: 70, height: 230, rx: 10, fill: '#121a1e', stroke: c, 'stroke-width': 4 }, g);
       evDot(g, -35, -195, 14, c);
@@ -693,11 +695,12 @@ const BEATS = [
       return { g, t, x };
     });
     // tile i falls when the narration names the feeling it becomes
+    // each feeling's name appears as it is first spoken ('X turns into [[nK]]Y'); X tips onto Y on that word
     tiles.forEach((tl, i) => {
-      const t0 = i === 0 ? m('f1') - .6 : m(marks[i]);
-      show(tl.t, i === 0 ? m('f1') - .8 : t0 - .1, .4);
-      if (i < tiles.length - 1) tw(tl.g, { r: 36 }, (i === 0 ? m('f1') : m(marks[i + 1])) - .45, .45, p_ => p_ * p_);
-      pulse(tl.t, t0, 1.15);
+      const t0 = i === 0 ? m('f1') : m('n' + i);
+      show(tl.t, t0, .4);
+      if (i < tiles.length - 1) tw(tl.g, { r: 36 }, m('n' + (i + 1)), .45, p_ => p_ * p_);
+      pulse(tl.t, t0 + .1, 1.15);
     });
     // a plate of banana fritters, emptied one after another
     const pl = G(p, { x: 520, y: 740, o: 0 });
@@ -709,15 +712,15 @@ const BEATS = [
       path(g, 'M-30 -4Q0 -14 30 -4', { stroke: '#a8682a', 'stroke-width': 3 });
       return g;
     });
-    tw(pl, { o: 1 }, m('plate') - .3, .5);
+    tw(pl, { o: 1 }, m('plate'), .5);
     lab(p, 'onePromise', 520, 640, m('plate'), { size: 30, fill: EV.joy, italic: true, font: SERIF });
-    fr.forEach((g, i) => { tw(g, { s: .5, o: 0, y: st(g).y - 30 }, m('plate') + 1.4 + i * .32, .3); });
+    fr.forEach((g, i) => { tw(g, { s: .5, o: 0, y: st(g).y - 30 }, m('whole') + i * .32, .3); });
     // the rush meter
     const mt = G(p, { x: 1180, y: 760, o: 0 });
     mk('rect', { x: -170, y: -24, width: 340, height: 48, rx: 24, fill: 'none', stroke: EV.dim, 'stroke-width': 2 }, mt);
     const mf = mk('rect', { x: -166, y: -20, width: 0, height: 40, rx: 20, fill: EV.anger }, mt);
     evText(mt, L('rush'), { x: 0, y: -46, size: 28, fill: EV.anger, weight: 600 });
-    tw(mt, { o: 1 }, m('rush') - .3, .4);
+    tw(mt, { o: 1 }, m('rush'), .4);
     prog(q => mf.setAttribute('width', 332 * q), m('rush'), 2.6, out);
   }],
 
@@ -763,16 +766,16 @@ const BEATS = [
     const ui = G(p);
     const fl = feelings.map(([k, x, y, c]) => { const e = evText(ui, L(k), { x: 0, y: 0, size: 28, fill: c, italic: true, o: 0 }); return { e, x, y }; });
     prog(q => { const t = q * D; fl.forEach(f => { const [sx, sy] = cam.screen(f.x, f.y, t); put(f.e, { x: sx, y: sy }); }); }, 0, D, lin);
-    fl.forEach((f, i) => tw(f.e, { o: .9 }, m('lights') + .3 + i * .35, .5));
+    fl.forEach((f, i) => tw(f.e, { o: .9 }, m('old') + i * .35, .5));
     const fam = lab(ui, 'familiar', 300, 140, m('lights') + .2, { size: 34, fill: EV.joy, font: SERIF, italic: true });
     hide(fam, m('dark'), .6);
-    const op = lab(ui, 'open', 1180, 300, m('dark') + .3, { size: 34, fill: EV.dim, font: SERIF, italic: true, maxW: 600 });
-    const tb = lab(ui, 'turnBack', 800, 200, m('turn') + .4, { size: 44, fill: EV.ink, font: SERIF, italic: true });
+    const op = lab(ui, 'open', 1180, 300, m('stored'), { size: 34, fill: EV.dim, font: SERIF, italic: true, maxW: 600 });
+    const tb = lab(ui, 'turnBack', 800, 200, m('back'), { size: 44, fill: EV.ink, font: SERIF, italic: true });
     hide(tb, m('keep'), .5); hide(op, m('keep'), .5);
     // a first light ahead
     const star = G(W, { x: bx(m('keep')) + 760, y: 500, o: 0 });
     evGlow(star, 0, 0, 90, 'Gold', 1); evDot(star, 0, 0, 5, '#fff3cf');
-    tw(star, { o: 1 }, m('keep') + 1.6, 2);
+    tw(star, { o: 1 }, m('leaving'), 2);
     const lv = lab(ui, 'leaving', 800, 190, m('keep') + .4, { size: 44, fill: EV.gold, font: SERIF, italic: true, maxW: 1300 });
   }],
 
@@ -783,34 +786,34 @@ const BEATS = [
     let d = '';
     for (let i = 0; i <= 200; i++) { const u = i / 200, a = u * turns * Math.PI * 2; d += (i ? 'L' : 'M') + (cx + Math.sin(a) * rx * (1 - u * .35)).toFixed(1) + ' ' + (y0 - 60 - u * H + Math.cos(a) * 105 * (1 - u * .35)).toFixed(1); }
     const sp = path(p, d, { stroke: EV.gold, 'stroke-width': 3, opacity: .75 }, { d: 0 });
-    draw(sp, m('spiral') - .3, 3.2);
-    evFlow(sp, 6, EV.goldHi, m('spiral') + 2, D - m('spiral') - 2, { speed: .18, r: 6, parent: p });
+    draw(sp, m('spiral'), 3.2);
+    evFlow(sp, 6, EV.goldHi, m('feed'), D - m('feed'), { speed: .18, r: 6, parent: p });
     const orbs = [['joy', EV.joy, 'joy'], ['love', EV.love, 'love'], ['gratitude', EV.calm, 'calm']].map(([k, c, gk], i) => {
       const g = G(p, { x: 340 + i * 220, y: 860, o: 0 });
       evGlow(g, 0, 0, 60, gk, .7); evDot(g, 0, 0, 20, c);
-      tw(g, { o: 1 }, m('joy') + i * .5, .5);
+      tw(g, { o: 1 }, m(['ojoy', 'olove', 'joy'][i]), .5);
       return g;
     });
-    orbs.forEach(g => tw(g, { o: 0 }, m('spiral') - .2, .5));
+    orbs.forEach(g => tw(g, { o: 0 }, m('spiral'), .5));
     const words = [['joy', EV.joy, .1], ['love', EV.love, .36], ['inspiration', EV.gold, .6], ['gratitude', EV.calm, .86]];
     words.forEach(([k, c, u], i) => {
       const L_ = sp.getTotalLength(), pt = sp.getPointAtLength(u * L_);
       const right = pt.x >= cx;
       const e = evText(p, L(k), { x: pt.x + (right ? 30 : -30), y: pt.y + 12, size: 38, fill: c, weight: 600, font: SERIF, anchor: right ? 'start' : 'end', o: 0 });
       e.setAttribute('paint-order', 'stroke'); e.setAttribute('stroke', EV.bg); e.setAttribute('stroke-width', 10); e.setAttribute('stroke-linejoin', 'round');
-      tw(e, { o: 1 }, m('spiral') + .4 + i * 1.3, .6);
+      tw(e, { o: 1 }, m(['spiral', 'wlove', 'winsp', 'wgrat'][i]), .6);
     });
     // new signals reach a cell and its genes
     const c = evCell(p, { x: 1220, y: 420, r: 170, n: 7, a0: -165, a1: -15, o: 0 });
     c._rec.forEach(r => r.cup.setAttribute('stroke', EV.calm));
-    tw(c, { o: 1 }, m('newsig') - .4, .5);
+    tw(c, { o: 1 }, m('newsig'), .5);
     [1, 3, 5].forEach((k, i) => { const pp = evPeptide(c, EV.calm, { s: .8, o: 0, x: -300, y: -300 }); evDock(pp, c._rec[k], m('newsig') + i * .4, 1); });
     lab(p, 'newSignal', 1220, 190, m('newsig') + .3, { size: 28, fill: EV.calm });
     const gn = G(p, { x: 1220, y: 720, o: 0 });
     evDNA(gn, { w: 420, amp: 18, turns: 3, color: EV.calm });
     const hl = mk('rect', { x: -40, y: -34, width: 110, height: 68, rx: 12, fill: EV.calm, opacity: .25, stroke: EV.calm, 'stroke-width': 2 }, gn);
     evText(gn, L('newGene'), { x: 0, y: 80, size: 26, fill: EV.calm });
-    tw(gn, { o: 1 }, m('newsig') + 2.2, .6); pulse(hl, m('newsig') + 3, 1.2);
+    tw(gn, { o: 1 }, m('genes'), .6); pulse(hl, m('genes') + .6, 1.2);
     const wl = evText(p, L('whichLoop'), { x: 800, y: 120, size: 44, font: SERIF, italic: true, fill: EV.ink, o: 0, maxW: 1300 });
     show(wl, m('choice'), .7);
   }],

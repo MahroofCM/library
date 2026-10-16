@@ -24,8 +24,11 @@ window.TIMINGS = {
   "marks": {
    "nets": 2.779,
    "match": 6.739,
+   "out": 9.651,
    "field": 11.523,
-   "live": 15.16
+   "prep": 13.753,
+   "live": 15.16,
+   "body": 19.233
   },
   "cues": [
    [
@@ -58,8 +61,15 @@ window.TIMINGS = {
   "dur": 32.261,
   "marks": {
    "know": 3.101,
+   "bday": 5.201,
+   "pump": 6.466,
+   "say": 8.376,
    "how": 12.186,
+   "scoot": 14.844,
+   "typing": 16.307,
+   "dosa": 17.349,
    "pin": 21.218,
+   "fingers": 23.746,
    "body": 26.476
   },
   "cues": [
@@ -126,9 +136,14 @@ window.TIMINGS = {
   "marks": {
    "front": 2.447,
    "save": 7.375,
+   "file": 11.151,
    "deep": 15.048,
    "note": 20.548,
-   "hm": 34.96
+   "simple": 24.692,
+   "spread": 26.245,
+   "hm": 34.96,
+   "skill": 39.202,
+   "lesson": 41.1
   },
   "cues": [
    [
@@ -187,8 +202,14 @@ window.TIMINGS = {
   "dur": 36.989,
   "marks": {
    "think": 3.406,
+   "shukran": 8.955,
    "do": 12.859,
+   "order": 14.669,
+   "heart": 16.761,
+   "works": 17.945,
    "be": 22.579,
+   "chat": 24.7,
+   "notrans": 25.99,
    "iam": 33.41
   },
   "cues": [
@@ -305,7 +326,8 @@ window.TIMINGS = {
    "knowledge": 3.66,
    "instruction": 8.809,
    "feedback": 16.656,
-   "cycle": 20.927
+   "cycle": 20.927,
+   "turn": 23.732
   },
   "cues": [
    [
@@ -350,8 +372,12 @@ window.TIMINGS = {
   "dur": 24.163,
   "marks": {
    "rain": 3.618,
+   "boys": 5.401,
    "towel": 8.328,
+   "smiled": 11.492,
+   "reach": 12.185,
    "jaw": 15.029,
+   "clench": 17.837,
    "head": 19.661,
    "how": 22.023
   },
@@ -403,9 +429,14 @@ window.TIMINGS = {
   "marks": {
    "outside": 1.864,
    "inside": 4.874,
+   "anger": 5.824,
    "being": 9.023,
+   "inmatch": 11.781,
    "review": 14.451,
-   "add": 18.792
+   "replay": 15.262,
+   "add": 18.792,
+   "shoulders": 21.657,
+   "funny": 23.503
   },
   "cues": [
    [
@@ -460,10 +491,14 @@ window.TIMINGS = {
   "dur": 40.568,
   "marks": {
    "people": 2.51,
+   "calmer": 5.068,
    "chart": 6.912,
+   "tick": 8.514,
    "body": 12.259,
+   "stairs": 13.781,
    "screen": 16.695,
    "fair": 23.19,
+   "modest": 27.552,
    "fast": 35.084
   },
   "cues": [
@@ -525,10 +560,19 @@ window.TIMINGS = {
   "dur": 38.687,
   "marks": {
    "horn": 2.701,
+   "blare": 5.442,
    "chain": 8.293,
+   "c1": 10.489,
+   "c2": 12.182,
+   "c3": 14.334,
+   "grey": 16.232,
    "prime": 18.161,
    "car": 24.083,
-   "self": 30.191
+   "buy": 25.965,
+   "white": 27.287,
+   "self": 30.191,
+   "notice": 33.082,
+   "first": 35.772
   },
   "cues": [
    [
@@ -589,9 +633,14 @@ window.TIMINGS = {
   "dur": 29.257,
   "marks": {
    "stripes": 3.33,
+   "vert": 7.66,
+   "horiz": 9.228,
    "chair": 11.934,
+   "bump": 13.832,
+   "notthere": 15.24,
    "wired": 17.095,
-   "us": 20.828
+   "us": 20.828,
+   "see": 25.417
   },
   "cues": [
    [
@@ -628,11 +677,15 @@ window.TIMINGS = {
   "dur": 37.094,
   "marks": {
    "once": 2.187,
+   "wire": 3.019,
    "study": 5.125,
+   "avg": 11.484,
    "range": 15.997,
    "miss": 20.014,
    "back": 22.86,
-   "genes": 24.847
+   "genes": 24.847,
+   "noev": 31.771,
+   "example": 33.987
   },
   "cues": [
    [
@@ -707,10 +760,14 @@ window.TIMINGS = {
   "dur": 31.53,
   "marks": {
    "rain": 1.477,
+   "boys": 3.246,
    "laugh": 6.04,
+   "throw": 8.152,
    "ask": 13.406,
+   "plumber": 15.054,
    "flash": 16.547,
    "notice": 21.768,
+   "letgo": 22.685,
    "answer": 24.095,
    "being": 27.104
   },
@@ -782,8 +839,13 @@ window.TIMINGS = {
   "marks": {
    "claim": 3.685,
    "check": 10.974,
+   "measure": 13.375,
+   "disturb": 16.117,
+   "noev": 21.228,
    "true": 24.592,
-   "life": 32.526
+   "changed": 27.703,
+   "life": 32.526,
+   "evolving": 36.119
   },
   "cues": [
    [

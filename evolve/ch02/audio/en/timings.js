@@ -23,10 +23,13 @@ window.TIMINGS = {
   "dur": 27.22,
   "marks": {
    "edge": 1.822,
+   "run": 8.525,
    "cheer": 10.354,
    "leap": 13.208,
+   "sing": 14.669,
    "glow": 15.921,
-   "mom": 20.514
+   "mom": 20.514,
+   "far": 24.372
   },
   "cues": [
    [
@@ -69,7 +72,8 @@ window.TIMINGS = {
    "files": 2.825,
    "term": 12.011,
    "rare": 14.74,
-   "ask": 16.871
+   "ask": 16.871,
+   "what": 18.648
   },
   "cues": [
    [
@@ -105,6 +109,7 @@ window.TIMINGS = {
    "p2": 8.275,
    "p3": 12.179,
    "p4": 15.194,
+   "lose": 17.87,
    "hold": 21.969
   },
   "cues": [
@@ -161,7 +166,9 @@ window.TIMINGS = {
    "cells": 7.437,
    "gut": 11.89,
    "ride": 22.932,
-   "fair": 26.57
+   "fair": 26.57,
+   "stretch": 28.518,
+   "ftl": 31.803
   },
   "cues": [
    [
@@ -202,7 +209,11 @@ window.TIMINGS = {
   "dur": 27.22,
   "marks": {
    "msg": 2.466,
+   "line": 4.723,
+   "mgr": 6.323,
    "gut": 9.674,
+   "heart": 10.922,
+   "nothing": 12.743,
    "loop": 15.974,
    "ch9": 24.173
   },
@@ -267,10 +278,19 @@ window.TIMINGS = {
   "dur": 39.445,
   "marks": {
    "pill": 5.803,
+   "tablet": 7.972,
+   "believes": 8.58,
+   "sugar": 10.202,
    "ease": 12.262,
    "why": 15.369,
+   "endo": 19.048,
    "block": 21.015,
-   "nocebo": 30.925
+   "fades": 24.471,
+   "bio": 27.693,
+   "nocebo": 30.925,
+   "list": 32.806,
+   "feel": 35.036,
+   "noc": 37.063
   },
   "cues": [
    [
@@ -319,8 +339,17 @@ window.TIMINGS = {
   "dur": 23.458,
   "marks": {
    "strong": 2.591,
+   "pain": 5.918,
+   "naus": 6.324,
+   "tired": 6.974,
+   "mood": 7.913,
    "weak": 8.992,
-   "trial": 14.158
+   "tum": 9.547,
+   "inf": 10.539,
+   "bone": 11.958,
+   "trial": 14.158,
+   "real": 19.166,
+   "beat": 20.862
   },
   "cues": [
    [
@@ -356,8 +385,13 @@ window.TIMINGS = {
    "some": 8.446,
    "silent": 10.815,
    "ask": 15.783,
+   "prove": 18.866,
    "bias": 21.557,
-   "test": 34.992
+   "look": 30.724,
+   "test": 34.992,
+   "did": 38.878,
+   "didnt": 40.116,
+   "over": 40.852
   },
   "cues": [
    [
@@ -424,8 +458,13 @@ window.TIMINGS = {
   "dur": 23.928,
   "marks": {
    "meds": 2.928,
+   "never": 5.605,
    "dad": 7.415,
+   "tabs": 9.908,
+   "calm": 11.604,
+   "doc": 14.004,
    "review": 15.65,
+   "adj": 17.207,
    "safe": 19.596
   },
   "cues": [
@@ -459,9 +498,13 @@ window.TIMINGS = {
   "dur": 27.246,
   "marks": {
    "drive": 7.171,
+   "learn": 9.325,
+   "now": 12.15,
    "auto": 15.585,
    "notice": 19.292,
-   "fact": 23.634
+   "catch": 21.158,
+   "fact": 23.558,
+   "notf": 25.234
   },
   "cues": [
    [
@@ -503,10 +546,15 @@ window.TIMINGS = {
   "marks": {
    "study": 2.842,
    "played": 11.058,
+   "hours": 12.935,
    "imagined": 15.838,
    "none": 19.82,
    "result": 22.472,
-   "wire": 32.031
+   "finger": 24.477,
+   "close": 26.024,
+   "better": 29.779,
+   "wire": 32.031,
+   "fire": 34.162
   },
   "cues": [
    [
@@ -550,9 +598,16 @@ window.TIMINGS = {
  "plastic": {
   "dur": 33.515,
   "marks": {
+   "adult": 1.902,
    "juggle": 4.627,
+   "months": 7.593,
+   "grey": 8.553,
    "stop": 13.184,
+   "use": 15.272,
    "stroke": 16.927,
+   "rep": 18.004,
+   "reroute": 20.959,
+   "arm": 22.196,
    "honest": 25.19
   },
   "cues": [
@@ -604,9 +659,13 @@ window.TIMINGS = {
   "dur": 28.238,
   "marks": {
    "paint": 2.802,
-   "time": 7.402,
+   "time": 7.625,
+   "two": 8.809,
    "frontal": 10.527,
-   "skill": 17.193
+   "lobe": 11.679,
+   "down": 14.697,
+   "skill": 17.193,
+   "like": 24.277
   },
   "cues": [
    [
@@ -639,8 +698,14 @@ window.TIMINGS = {
   "dur": 32.575,
   "marks": {
    "brain": 2.273,
+   "is": 4.789,
    "more": 8.945,
-   "check": 17.197
+   "consc": 11.193,
+   "inner": 14.201,
+   "qf": 15.62,
+   "check": 17.197,
+   "main": 18.773,
+   "beliefs": 22.438
   },
   "cues": [
    [

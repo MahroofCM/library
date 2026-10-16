@@ -24,7 +24,8 @@ window.TIMINGS = {
   "marks": {
    "weight": 3.75,
    "energy": 6.218,
-   "why": 11.317
+   "why": 11.317,
+   "whatfor": 19.741
   },
   "cues": [
    [
@@ -57,8 +58,12 @@ window.TIMINGS = {
   "dur": 26.54,
   "marks": {
    "sheet": 2.21,
+   "flat": 6.098,
+   "page": 7.495,
    "crumple": 10.19,
-   "hidden": 17.461
+   "folds": 11.63,
+   "hidden": 17.461,
+   "walnut": 23.862
   },
   "cues": [
    [
@@ -97,7 +102,8 @@ window.TIMINGS = {
    "stem": 11.343,
    "limbic": 16.59,
    "neo": 22.081,
-   "map": 25.754
+   "map": 25.754,
+   "qmark": 28.951
   },
   "cues": [
    [
@@ -138,9 +144,13 @@ window.TIMINGS = {
   "dur": 24.738,
   "marks": {
    "sleep": 1.729,
+   "nobody": 5.608,
    "heart": 7.85,
-   "breath": 9.401,
-   "wake": 17.781
+   "breath": 9.44,
+   "bstem": 13.732,
+   "wake": 17.781,
+   "dawn": 20.051,
+   "alert": 21.619
   },
   "cues": [
    [
@@ -176,10 +186,15 @@ window.TIMINGS = {
  "cereb": {
   "dur": 26.488,
   "marks": {
+   "cb": 1.903,
    "wobble": 4.389,
+   "every": 6.725,
    "practice": 9.772,
    "auto": 11.836,
-   "neurons": 19.314
+   "planning": 13.127,
+   "handed": 14.878,
+   "neurons": 19.314,
+   "half": 21.158
   },
   "cues": [
    [
@@ -235,8 +250,13 @@ window.TIMINGS = {
   "marks": {
    "deep": 2.694,
    "thermo": 6.312,
+   "tstat": 7.144,
    "steady": 12.042,
-   "feel": 19.442
+   "sugar": 16.096,
+   "thirst": 17.13,
+   "horm": 18.144,
+   "feel": 19.442,
+   "names": 22.792
   },
   "cues": [
    [
@@ -281,8 +301,9 @@ window.TIMINGS = {
   "dur": 29.753,
   "marks": {
    "thal": 2.058,
+   "smell": 9.209,
    "hypo": 11.154,
-   "pit": 14.981,
+   "pit": 15.165,
    "hip": 21.396,
    "amy": 25.859
   },
@@ -323,8 +344,11 @@ window.TIMINGS = {
    "shape": 2.304,
    "jump": 8.378,
    "fast": 12.937,
-   "slow": 16.741,
-   "hose": 22.099
+   "slow": 16.82,
+   "hose": 22.099,
+   "only": 24.767,
+   "laugh": 26.996,
+   "guess": 28.157
   },
   "cues": [
    [
@@ -378,8 +402,13 @@ window.TIMINGS = {
   "marks": {
    "new": 4.166,
    "links": 6.058,
+   "hall": 6.612,
+   "gold": 7.263,
+   "month": 7.903,
+   "what": 8.703,
    "smell": 12.108,
-   "flood": 15.017
+   "flood": 15.223,
+   "thread": 17.647
   },
   "cues": [
    [
@@ -426,7 +455,10 @@ window.TIMINGS = {
   "dur": 25.678,
   "marks": {
    "thin": 2.995,
+   "coins": 4.99,
+   "billions": 7.527,
    "halves": 10.07,
+   "opp": 12.704,
    "bridge": 16.569,
    "lobes": 22.54
   },
@@ -467,7 +499,8 @@ window.TIMINGS = {
    "occ": 0.25,
    "tem": 3.783,
    "par": 9.772,
-   "fro": 15.161
+   "fro": 15.161,
+   "eye": 22.05
   },
   "cues": [
    [
@@ -502,8 +535,9 @@ window.TIMINGS = {
    "strip": 3.915,
    "size": 6.86,
    "lips": 9.269,
-   "hands": 11.379,
-   "back": 13.563
+   "hands": 11.487,
+   "back": 13.563,
+   "feel": 15.873
   },
   "cues": [
    [
@@ -542,8 +576,14 @@ window.TIMINGS = {
    "late": 1.966,
    "ping": 5.76,
    "pause": 10.476,
+   "notice": 14.592,
+   "stop": 16.011,
    "choose": 16.934,
-   "plan": 20.394
+   "light": 19.057,
+   "plan": 20.394,
+   "focus": 20.906,
+   "choosing": 21.589,
+   "hold": 22.517
   },
   "cues": [
    [
@@ -598,8 +638,19 @@ window.TIMINGS = {
   "dur": 42.292,
   "marks": {
    "tiffin": 2.267,
+   "reptile": 7.119,
+   "mammal": 8.836,
+   "human": 10.564,
    "but": 12.837,
+   "m1": 15.76,
+   "m2": 19.113,
+   "m3": 23.999,
    "web": 26.3,
+   "net": 28.934,
+   "amy": 30.119,
+   "fro": 31.186,
+   "talk": 32.124,
+   "woven": 33.863,
    "keep": 36.513
   },
   "cues": [

@@ -23,9 +23,19 @@ window.TIMINGS = {
   "dur": 36.989,
   "marks": {
    "cradle": 8.52,
-   "turn": 16.893,
+   "anu": 11.404,
+   "calls": 14.091,
+   "turn": 16.982,
+   "nobody": 19.732,
    "prewired": 21.455,
-   "both": 28.885
+   "wired": 23.161,
+   "snd": 25.455,
+   "fac": 26.191,
+   "tch": 27.151,
+   "lng": 27.876,
+   "both": 28.885,
+   "genes": 32.825,
+   "exp": 35.033
   },
   "cues": [
    [
@@ -71,8 +81,11 @@ window.TIMINGS = {
   "marks": {
    "make": 3.21,
    "travel": 9.398,
-   "branch": 11.878,
+   "branch": 12.054,
    "womb": 15.951,
+   "nutr": 18.733,
+   "alc": 20.525,
+   "stress": 22.2,
    "peak": 26.079
   },
   "cues": [
@@ -106,9 +119,15 @@ window.TIMINGS = {
   "dur": 29.048,
   "marks": {
    "use": 4.133,
+   "strong": 6.96,
    "lose": 8.027,
+   "clear": 10.875,
    "path": 12.105,
-   "rule": 21.022
+   "bund": 13.796,
+   "short": 17.297,
+   "grass": 19.335,
+   "rule": 21.022,
+   "damage": 22.677
   },
   "cues": [
    [
@@ -172,8 +191,15 @@ window.TIMINGS = {
   "marks": {
    "all": 2.508,
    "keep": 7.263,
+   "zh": 12.329,
    "fade": 15.703,
+   "rl": 18.007,
+   "bday": 20.13,
+   "same": 22.391,
    "reply": 24.054,
+   "ans": 28.243,
+   "speech": 31.966,
+   "rand": 34.558,
    "turns": 37.48
   },
   "cues": [
@@ -212,9 +238,15 @@ window.TIMINGS = {
   "marks": {
    "two": 2.813,
    "fuel": 6.665,
+   "thirds": 7.987,
    "teen": 13.778,
+   "hot": 18.983,
    "front": 21.227,
-   "ravi": 32.93
+   "pfc": 24.128,
+   "plan": 26.891,
+   "mid": 30.159,
+   "ravi": 32.93,
+   "forty": 36.67
   },
   "cues": [
    [
@@ -255,9 +287,15 @@ window.TIMINGS = {
   "dur": 31.843,
   "marks": {
    "all": 2.801,
+   "vis": 5.4,
+   "hear": 6.574,
+   "touch": 8.163,
+   "lang": 10.766,
    "same": 13.876,
    "phone": 19.451,
-   "home": 23.906
+   "home": 23.906,
+   "layout": 26.71,
+   "detail": 29.424
   },
   "cues": [
    [
@@ -302,9 +340,15 @@ window.TIMINGS = {
   "dur": 34.403,
   "marks": {
    "mix": 2.048,
+   "combo": 4.278,
+   "twin": 7.787,
    "temp": 10.796,
+   "startle": 12.62,
+   "warm": 14.742,
+   "upset": 16.577,
    "twins": 18.708,
-   "tilt": 28.867
+   "tilt": 28.867,
+   "tend": 31.28
   },
   "cues": [
    [
@@ -337,10 +381,17 @@ window.TIMINGS = {
   "dur": 38.583,
   "marks": {
    "claim": 2.811,
+   "habit": 5.766,
+   "wiring": 7.729,
+   "child": 9.563,
    "no": 12.038,
+   "veena": 15.192,
    "car": 19.856,
+   "sighs": 23.448,
    "anu": 26.905,
-   "good": 34.62
+   "watch": 31.32,
+   "good": 34.62,
+   "again": 36.34
   },
   "cues": [
    [
@@ -389,9 +440,18 @@ window.TIMINGS = {
   "dur": 36.78,
   "marks": {
    "letters": 6.591,
-   "tags": 9.013,
+   "tags": 9.161,
+   "dimmer": 11.337,
+   "updown": 12.415,
    "life": 14.79,
-   "next": 25.348
+   "stress": 15.185,
+   "sleep": 15.739,
+   "care": 16.507,
+   "rats": 18.98,
+   "next": 25.348,
+   "animals": 27.948,
+   "humans": 29.81,
+   "mem": 32.36
   },
   "cues": [
    [
@@ -446,8 +506,18 @@ window.TIMINGS = {
   "dur": 35.683,
   "marks": {
    "bumps": 2.726,
+   "wrong": 8.248,
    "broca": 9.459,
-   "team": 20.897
+   "patch": 11.652,
+   "name": 15.982,
+   "team": 20.897,
+   "read": 23.321,
+   "seeing": 25.284,
+   "sound": 25.817,
+   "move": 27.513,
+   "cooks": 28.985,
+   "station": 31.705,
+   "meal": 33.38
   },
   "cues": [
    [
@@ -484,9 +554,16 @@ window.TIMINGS = {
   "dur": 36.65,
   "marks": {
    "blind": 2.974,
+   "takes": 10.07,
    "braille": 12.18,
+   "dots": 15.188,
+   "larger": 17.641,
    "fold": 21.861,
-   "off": 30.967
+   "five": 24.901,
+   "began": 27.152,
+   "off": 30.967,
+   "faded": 33.036,
+   "follows": 34.266
   },
   "cues": [
    [
@@ -523,8 +600,14 @@ window.TIMINGS = {
   "dur": 25.26,
   "marks": {
    "webbed": 2.075,
+   "move": 5.632,
+   "map": 7.882,
+   "blob": 10.677,
    "surgery": 12.059,
-   "rule": 18.836
+   "weeks": 14.214,
+   "each": 16.454,
+   "rule": 18.836,
+   "stop": 21.671
   },
   "cues": [
    [
@@ -571,9 +654,16 @@ window.TIMINGS = {
   "dur": 39.079,
   "marks": {
    "deep": 3.335,
+   "hard": 7.889,
    "cortex": 9.93,
+   "front": 12.234,
    "select": 15.026,
+   "switch": 18.984,
+   "crawl": 21.662,
    "instruct": 26.523,
+   "mrid": 29.046,
+   "circ": 30.827,
+   "denser": 32.534,
    "you": 34.323
   },
   "cues": [

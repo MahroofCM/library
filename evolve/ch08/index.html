@@ -158,6 +158,18 @@ function c8Heat(p, x, y, color, t0, dur, n = 12, spread = 60, h = 200) {
 }
 // A heartbeat: the element swells on each beat, as a pure function of time (no overlapping tweens).
 function c8Beat(e, t0, dur, hz = 2, k = .3) { prog(q => { const t = q * dur; put(e, { s: 1 + k * Math.max(0, Math.sin(t * hz * Math.PI * 2)) ** 4 }); }, t0, dur, lin); }
+// A stagger driven by one clock: element i fades in at at(i) (beat time), optionally pulsing after (pure function of time).
+function c8Seq(els, at, D, { o = 1, dur = .4, pulseAt = null, k = .5 } = {}) {
+  prog(q => {
+    const t = q * D;
+    els.forEach((e, i) => {
+      const u = Math.max(0, Math.min(1, (t - at(i)) / dur));
+      const st_ = { o: o * io(u) };
+      if (pulseAt) { const v = t - pulseAt(i); st_.s = 1 + (v > 0 && v < .62 ? k * (v < .22 ? out(v / .22) : 1 - io((v - .22) / .4)) : 0); }
+      put(e, st_);
+    });
+  }, 0, D, lin);
+}
 // Piecewise-linear map from beat time to a value, through [t, v] knots (kept in time order).
 function c8Knots(ks) {
   for (let i = 1; i < ks.length; i++) ks[i][0] = Math.max(ks[i][0], ks[i - 1][0] + .1);
@@ -328,12 +340,12 @@ const BEATS = [
     // the daily loop: four stops around a racetrack
     const track = pth(p, 'M440 240H1160C1320 240 1320 440 1160 440H440C280 440 280 240 440 240Z', { stroke: EV.gold, 'stroke-width': 2.5, 'stroke-dasharray': '10 12', opacity: .5 }, { d: 0 });
     draw(track, .3, 1.4);
-    const stops = [['clock', 'r1', 440], ['brush', 'r2', 680], ['tea', 'r3', 920], ['car', 'r4', 1160]];
-    stops.forEach(([k, key, x], i) => {
+    const stops = [['clock', 'r1', 440, 'alarm'], ['brush', 'r2', 680, 'brush'], ['tea', 'r3', 920, 'tea'], ['car', 'r4', 1160, 'road']];
+    stops.forEach(([k, key, x, mk_]) => {
       const ic = c8Icon(p, k, x, 240, { o: 0, s: .5 });
       mk('circle', { cx: 0, cy: 0, r: 58, fill: EV.bg, stroke: EV.gold, 'stroke-width': 2 }, ic).parentNode.insertBefore(ic.lastChild, ic.firstChild);
-      tw(ic, { o: 1, s: 1 }, m('alarm') + i * .9, .45, back);
-      lab(p, key, x, 340, m('alarm') + i * .9 + .2, { size: 28, fill: EV.ink, maxW: 210 });
+      tw(ic, { o: 1, s: 1 }, m(mk_), .45, back);
+      lab(p, key, x, 340, m(mk_) + .2, { size: 28, fill: EV.ink, maxW: 210 });
     });
     // a dot goes round, faster once he stops noticing
     const dot = evDot(p, 440, 240, 10, EV.goldHi, 0);
@@ -347,12 +359,12 @@ const BEATS = [
     const bl = lab(p, 'boxL', 800, 128, m('box') + .8, { size: 30, fill: EV.gold, font: SERIF, italic: true, maxW: 900 });
     c8Halo(bl);
     evMood(rav, 'smile', m('box') + .6);
-    [[115, 300], [1485, 380], [115, 560], [1485, 640]].forEach(([x, y], i) => {
-      const q_ = evText(p, '?', { x, y, size: 64, fill: EV.fear, weight: 600, o: 0, font: SERIF });
-      tw(q_, { o: .8 }, m('box') + 1.6 + i * .3, .4); pulse(q_, m('box') + 2.6 + i * .3, 1.3);
-    });
-    lab(p, 'unfamiliar', 115, 760, m('box') + 2.2, { size: 26, fill: EV.fear, maxW: 200 });
-    lab(p, 'unfamiliar', 1485, 760, m('box') + 2.4, { size: 26, fill: EV.fear, maxW: 200 });
+    // outside the box: question marks, one clock from the word "outside"
+    const qs = [[115, 300], [1485, 380], [115, 560], [1485, 640]].map(([x, y]) => evText(p, '?', { x, y, size: 64, fill: EV.fear, weight: 600, o: 0, font: SERIF }));
+    const to = m('outside');
+    c8Seq(qs, i => to + i * .3, D, { o: .8, pulseAt: i => to + 1 + i * .3, k: .3 });
+    lab(p, 'unfamiliar', 115, 760, to + .4, { size: 26, fill: EV.fear, maxW: 200 });
+    lab(p, 'unfamiliar', 1485, 760, to + .6, { size: 26, fill: EV.fear, maxW: 200 });
   }],
 
   ['rustle', 'b_rustle', (m, D) => {
@@ -392,15 +404,15 @@ const BEATS = [
       pth(g, 'M-10 0L-2 9L12 -9', { stroke: EV.calm, 'stroke-width': 4 });
       tw(g, { o: 1, s: 1 }, t, .4, back); tw(g, { o: 0 }, m('jolt'), .3);
     };
-    tick(800, 440, m('dusk') + 2.4); tick(940, 600, m('dusk') + 3.3);
+    tick(800, 440, m('match') + .2); tick(940, 600, m('match') + 1.1);
     const ui = G(p);
-    const sc = lab(ui, 'scan', 800, 110, m('dusk') + 1.2, { size: 30, fill: EV.gold, italic: true, maxW: 1100 });
+    const sc = lab(ui, 'scan', 800, 110, m('scan') + .2,{ size: 30, fill: EV.gold, italic: true, maxW: 1100 });
     hide(sc, m('rustle'), .3);
     // the rustle
     prog(q => { const t = q * D - m('rustle'); const a = t > 0 && t < 3 ? Math.sin(t * 28) * 6 * (1 - t / 3) : 0; put(ban._leaves, { r: a }); put(ban2._leaves, { r: -a * .7 }); }, 0, D, lin);
     const qm = evText(W, '?', { x: 1260, y: 400, size: 96, fill: EV.fear, weight: 600, font: SERIF, o: 0 });
     tw(qm, { o: 1 }, m('rustle') + .3, .3); pulse(qm, m('rustle') + .6, 1.3); hide(qm, m('cat'), .4);
-    const nm = lab(ui, 'noMatch', 800, 110, m('rustle') + .6, { size: 34, fill: EV.fear, weight: 600, maxW: 900 });
+    const nm = lab(ui, 'noMatch', 800, 110, m('nomatch'),{ size: 34, fill: EV.fear, weight: 600, maxW: 900 });
     hide(nm, m('cat'), .4);
     cam.to({ x: 900, y: 520, z: 1.18 }, m('rustle') - .2, 1.2);
     // the jolt
@@ -410,12 +422,12 @@ const BEATS = [
     cam.shake(6, m('jolt'), .6);
     const hg = evGlow(rav.torso, 8, -100, 70, 'anger', 0);
     tw(hg, { o: .95 }, m('jolt'), .2);
-    c8Beat(hg, m('jolt') + .3, Math.max(1, m('cat') + 1.6 - m('jolt') - .3), 2.4);
+    c8Beat(hg, m('jolt') + .3, Math.max(1, m('laugh') + .4 - m('jolt') - .3), 2.4);
     // just a cat
-    tw(cat, { o: 1 }, m('cat') - .2, .3); tw(cat, { x: 1000 }, m('cat') - .2, 2.2, out);
-    evArm(rav, -1, 10, -20, m('cat') + 1, .6); evArm(rav, 1, -10, 20, m('cat') + 1, .6);
-    evMood(rav, 'smile', m('cat') + 1.2);
-    tw(hg, { o: 0 }, m('cat') + 1.6, 2);
+    tw(cat, { o: 1 }, m('cat'), .3); tw(cat, { x: 1000 }, m('cat'), 2.2, out);
+    evArm(rav, -1, 10, -20, m('laugh'), .6); evArm(rav, 1, -10, 20, m('laugh'), .6);
+    evMood(rav, 'smile', m('laugh') + .2);
+    tw(hg, { o: 0 }, m('laugh') + .4, 2);
     cam.to({ x: 800, y: 450, z: 1 }, m('cat') + .4, 1.6);
     lab(ui, 'cat', 800, 110, m('cat') + .8, { size: 34, fill: EV.calm, font: SERIF, italic: true, maxW: 900 });
   }],
@@ -424,8 +436,8 @@ const BEATS = [
     const p = panel(0);
     const bd = evBody(p, { x: 800, y: 520, s: 1.3, o: 0 });
     tw(bd, { o: 1 }, .2, .6);
-    lab(p, 'ffTitle', 800, 92, .4, { size: 52, font: SERIF, weight: 600, fill: EV.gold, maxW: 900 });
-    lab(p, 'symp', 800, 140, .9, { size: 28, fill: EV.dim, maxW: 900 });
+    lab(p, 'ffTitle', 800, 92, m('ff'), { size: 52, font: SERIF, weight: 600, fill: EV.gold, maxW: 900 });
+    lab(p, 'symp', 800, 140, m('symp') + .3,{ size: 28, fill: EV.dim, maxW: 900 });
     // inner parts (body coordinates)
     const eyes = [-13, 13].map(x => evDot(bd, x, -212, 3.5, EV.ink, 0));
     const lungs = G(bd, { y: -118, o: 0 });
@@ -447,7 +459,7 @@ const BEATS = [
     prog(q => { const t = q * D; if (t < m('heart')) return; const k = 1 + .35 * Math.max(0, Math.sin((t - m('heart')) * Math.PI * 2 * 2.2)); put(bd._heart, { s: k }); put(hglow, { s: .8 + .5 * (k - 1) * 2 }); }, 0, D, lin);
     tw(bd._heart, { c_fill: ADR }, m('heart'), .3);
     item('eyesL', -1, 250, 790, 245, m('eyes'));
-    eyes.forEach(e => { tw(e, { o: 1 }, m('eyes') - .2, .3); tw(e, { s: 2.1 }, m('eyes') + .2, .6, back); });
+    eyes.forEach(e => { tw(e, { o: 1 }, m('eyes'), .3); tw(e, { s: 2.1 }, m('eyes') + .3, .6, back); });
     item('lungsL', -1, 380, 768, 372, m('lungs'));
     tw(lungs, { o: 1 }, m('lungs'), .4);
     prog(q => { const t = q * D; if (t < m('lungs')) return; put(lungs, { s: 1 + .14 * Math.sin((t - m('lungs')) * 7) }); }, 0, D, lin);
@@ -460,7 +472,7 @@ const BEATS = [
     const ps = G(p, { x: 800, y: 488, o: 0 });
     mk('rect', { x: -16, y: -18, width: 10, height: 36, fill: EV.ink }, ps); mk('rect', { x: 6, y: -18, width: 10, height: 36, fill: EV.ink }, ps);
     tw(ps, { o: .9 }, m('gut') + .5, .4);
-    const mv = lab(p, 'moveNow', 800, 868, m('gut') + 2.4, { size: 36, font: SERIF, italic: true, fill: ADR, maxW: 1200 });
+    const mv = lab(p, 'moveNow', 800, 868, m('move'),{ size: 36, font: SERIF, italic: true, fill: ADR, maxW: 1200 });
     c8Halo(mv);
   }],
 
@@ -471,7 +483,7 @@ const BEATS = [
     lab(p, 'para', 550, 570, m('para') + .2, { size: 26, fill: EV.dim, maxW: 320 });
     lab(p, 'sympS', 1050, 570, .8, { size: 26, fill: EV.dim, maxW: 320 });
     tw(dl._needle, { r: -62 }, m('para'), 1.4, io);
-    ['p1', 'p2', 'p3'].forEach((k, i) => lab(p, k, 90, 240 + i * 58, m('para') + .8 + i * .7, { size: 30, fill: EV.calm, anchor: 'start', maxW: 400 }));
+    ['p1', 'p2', 'p3'].forEach((k, i) => lab(p, k, 90, 240 + i * 58, m(k) + .1,{ size: 30, fill: EV.calm, anchor: 'start', maxW: 400 }));
     const pd = (x, color, key) => {
       const g = G(p, { x, y: 740, o: 0 });
       const pad = G(g);
@@ -514,13 +526,13 @@ const BEATS = [
       draw(ln, t, .5);
       lab(p, key, 905, ly, t + .2, { size: 30, anchor: 'start', maxW: 600, fill: color });
     };
-    item('brainL', 270, 585, 262, .9);
-    item('spine', 380, 562, 400, m('nerve'));
+    item('brainL', 270, 585, 262, m('nerve'));
+    item('spine', 380, 562, 400, m('spine'));
     item('adrenals', 510, 600, 490, m('adrenal'));
     item('adrBlood', 640, 640, 600, m('adrenaline'), ADR);
     // the spark down the spine
     const spark = G(bd, { o: 0 }); evGlow(spark, 0, 0, 30, 'Gold', 1); evDot(spark, 0, 0, 6, EV.goldHi);
-    prog(q => put(spark, { y: -190 + 160 * q, o: Math.min(1, q * 8, (1 - q) * 8 + .2) }), m('nerve') + .1, 1.1, io);
+    prog(q => put(spark, { y: -190 + 160 * q, o: Math.min(1, q * 8, (1 - q) * 8 + .2) }), m('spine'), Math.max(.6, m('adrenal') + .1 - m('spine')), io);
     tw(spark, { o: 0 }, m('adrenal') + .2, .2);
     kid.forEach((k, i) => { pulse(k._ad, m('adrenal') + .1 + i * .1, 1.8); tw(k._ad.firstChild, { c_fill: ADR }, m('adrenal') + .1, .3); });
     // adrenaline spreads into the body
@@ -531,7 +543,7 @@ const BEATS = [
     mk('circle', { cx: 0, cy: 0, r: 44, fill: '#10171b', stroke: EV.gold, 'stroke-width': 3 }, sw);
     pth(sw, 'M-8 -54H8M0 -44V-54', { stroke: EV.gold, 'stroke-width': 4 });
     const hand = G(sw); pth(hand, 'M0 0V-34', { stroke: ADR, 'stroke-width': 4 });
-    tw(sw, { o: 1 }, m('seconds') - .2, .4);
+    tw(sw, { o: 1 }, m('seconds'), .4);
     tw(hand, { r: 120 }, m('seconds'), 1.4, out);
     lab(p, 'secs', 1030, 802, m('seconds') + .3, { size: 32, fill: EV.ink, anchor: 'start', weight: 600, maxW: 480 });
   }],
@@ -549,38 +561,38 @@ const BEATS = [
     draw(hl, m('hypo') + .1, .5);
     lab(p, 'hypo', 250, 636, m('hypo') + .3, { size: 30, fill: EV.gold, maxW: 300 });
     const crh = c8Pill(p, L('crh'), { x: 190, y: 440, w: 130, color: EV.goldHi, o: 0 });
-    put(crh, { s: .6 }); pop(crh, m('hypo') + 1.2);
+    put(crh, { s: .6 }); pop(crh, m('crh'));
     pulse(pit, m('pit'), 2.2);
     const pl = pth(p, 'M480 700L356 434', { stroke: EV.gold, 'stroke-width': 2, 'stroke-dasharray': '6 6', opacity: .7 }, { d: 0 });
     draw(pl, m('pit') + .1, .5);
     lab(p, 'pituitary', 480, 736, m('pit') + .3, { size: 30, fill: EV.gold, maxW: 340 });
     // the long road through the blood
     const ves = pth(p, 'M362 432C520 440 620 330 820 400C1000 460 1080 520 1170 600', { stroke: ADR, 'stroke-width': 10, opacity: .22 }, { d: 0 });
-    draw(ves, m('pit') + .6, 1);
+    draw(ves, m('acth'), .8);
     const acth = c8Pill(p, L('acth'), { x: 362, y: 432, w: 140, color: EV.goldHi, o: 0 });
-    tw(acth, { o: 1 }, m('pit') + 1.2, .3);
+    tw(acth, { o: 1 }, m('acth'), .3);
     const vl = ves.getTotalLength();
-    prog(q => { const pt = ves.getPointAtLength(q * vl); put(acth, { x: pt.x, y: pt.y - 40 }); }, m('pit') + 1.2, Math.max(1.5, m('cortisol') - m('pit') - 1.2), io);
+    prog(q => { const pt = ves.getPointAtLength(q * vl); put(acth, { x: pt.x, y: pt.y - 40 }); }, m('acth') + .3, Math.max(1.5, m('glands') - m('acth') - .3), io);
     // kidney and adrenal gland
     const kd = G(p, { x: 1200, y: 690, o: 0 });
     pth(kd, 'M-30 -50Q-70 -48 -70 0Q-70 52 -26 56Q12 56 6 18Q-4 0 6 -18Q12 -54 -30 -50Z', { fill: '#2a1d1a', stroke: EV.gold, 'stroke-width': 2.5 });
     const ad = pth(kd, 'M-60 -48L-26 -88L8 -48Z', { fill: '#3a2a1a', stroke: CORT, 'stroke-width': 3 });
-    tw(kd, { o: 1 }, m('pit') + .6, .6);
-    lab(p, 'adrenalG', 1180, 800, m('pit') + 1.2, { size: 30, fill: EV.ink, maxW: 400 });
-    tw(acth, { o: 0 }, m('cortisol') + .1, .3);
-    pulse(ad, m('cortisol') + .1, 1.4); tw(ad, { c_fill: CORT }, m('cortisol') + .2, .4);
+    tw(kd, { o: 1 }, m('cortisol'), .6);
+    lab(p, 'adrenalG', 1180, 800, m('glands') + .2, { size: 30, fill: EV.ink, maxW: 400 });
+    tw(acth, { o: 0 }, Math.max(m('glands'), m('acth') + 1.8) + .1, .3);
+    pulse(ad, m('cort'), 1.4); tw(ad, { c_fill: CORT }, m('cort') + .1, .4);
     const out1 = pth(p, 'M1180 600C1260 500 1340 420 1420 260', { stroke: 'none' });
     const out2 = pth(p, 'M1180 600C1100 500 1000 470 900 530', { stroke: 'none' });
-    evFlow(out1, 7, CORT, m('cortisol') + .4, D - m('cortisol') - .4, { speed: .22, r: 7, parent: p });
-    evFlow(out2, 5, CORT, m('cortisol') + .8, D - m('cortisol') - .8, { speed: .2, r: 6, parent: p });
-    lab(p, 'cortisol', 1450, 330, m('cortisol') + .6, { size: 34, fill: CORT, weight: 600, maxW: 260 });
+    evFlow(out1, 7, CORT, m('cort') + .2, D - m('cort') - .2, { speed: .22, r: 7, parent: p });
+    evFlow(out2, 5, CORT, m('cort') + .5, D - m('cort') - .5, { speed: .2, r: 6, parent: p });
+    lab(p, 'cortisol', 1450, 330, m('cort') + .3, { size: 34, fill: CORT, weight: 600, maxW: 260 });
     // clock: minutes
     const ck = G(p, { x: 1420, y: 120, o: 0 });
     mk('circle', { cx: 0, cy: 0, r: 40, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2.5 }, ck);
     const mh = G(ck); pth(mh, 'M0 0V-30', { stroke: EV.ink, 'stroke-width': 4 });
     evText(ck, L('mins'), { x: 0, y: 78, size: 26, fill: EV.dim, maxW: 220 });
-    tw(ck, { o: 1 }, m('pit') + .8, .4);
-    prog(q => put(mh, { r: q * 720 }), m('pit') + .8, Math.max(2, m('bus') - m('pit') - .8), lin);
+    tw(ck, { o: 1 }, m('pit') + .2, .4);
+    prog(q => put(mh, { r: q * 720 }), m('pit') + .2, Math.max(2, m('bus') - m('pit') - .2), lin);
     // the two buses
     const q2 = c8Later(m('bus'));
     mk('rect', { x: -50, y: 300, width: 1700, height: 380, fill: '#0e1417' }, q2);
@@ -596,10 +608,11 @@ const BEATS = [
     const ordi = c8Bus(q2, L('busOrd'), CORT, { x: -200, y: 600 });
     const tb = m('bus') + .3;
     prog(q => { const t = q * D - tb; put(fast, { x: t < 0 ? -200 : -200 + ((t * 900) % 2600) }); }, 0, D, lin);
-    const ox = c8Knots([[tb, -200], [tb + 2.2, 500], [tb + 3.2, 500], [tb + 5.2, 900], [tb + 6.2, 900], [tb + 8.2, 1300], [tb + 9.2, 1300], [tb + 12, 1800]]);
+    const to = m('ordinary');
+    const ox = c8Knots([[to, -200], [to + 2.2, 500], [to + 3.2, 500], [to + 5.2, 900], [to + 6.2, 900], [to + 8.2, 1300], [to + 9.2, 1300], [to + 12, 1800]]);
     prog(q => put(ordi, { x: ox(q * D) }), 0, D, lin);
     lab(q2, 'adrFast', 800, 230, m('bus') + .6, { size: 34, fill: ADR, weight: 600, maxW: 1200 });
-    lab(q2, 'cortSlow', 800, 800, m('bus') + 2.5, { size: 34, fill: CORT, weight: 600, maxW: 1300 });
+    lab(q2, 'cortSlow', 800, 800, m('ordinary') + .2, { size: 34, fill: CORT, weight: 600, maxW: 1300 });
   }],
 
   ['q1', 'b_slow', (m, D) => {
@@ -627,10 +640,10 @@ const BEATS = [
     lab(p, 'calm', 200, 608, .6, { size: 26, fill: EV.calm, anchor: 'end', maxW: 170 });
     const fa = u => .06 + c8Spike(u, .3, .012, .05, .82), fc = u => .06 + c8Spike(u, .37, .04, .11, .5);
     const la = gr.line(fa, ADR), lc = gr.line(fc, CORT, 4);
-    const u = c8Knots([[.4, 0], [m('spike'), .27], [m('spike') + 3, .44], [m('down') + 1.5, .62], [m('repair') + 2, .82], [D - .4, 1]]);
+    const u = c8Knots([[.4, 0], [m('spike'), .27], [m('cort') + .9, .44], [m('down') + 1.5, .62], [m('dig'), .82], [D - .4, 1]]);
     prog(q => { const v = u(q * D); la._to(v); lc._to(v); }, 0, D, lin);
-    lab(p, 'adrenaline', gr.X(.3) - 30, gr.Y(.88) - 4, m('spike') + .6, { size: 28, fill: ADR, weight: 600, anchor: 'end', maxW: 300 });
-    lab(p, 'cortisol', gr.X(.45) + 10, gr.Y(.5), m('spike') + 2, { size: 28, fill: CORT, weight: 600, anchor: 'start', maxW: 300 });
+    lab(p, 'adrenaline', gr.X(.3) - 30, gr.Y(.88) - 4, m('adr') + .2, { size: 28, fill: ADR, weight: 600, anchor: 'end', maxW: 300 });
+    lab(p, 'cortisol', gr.X(.45) + 10, gr.Y(.5), m('cort') + .2, { size: 28, fill: CORT, weight: 600, anchor: 'start', maxW: 300 });
     const mark = (u_, key, t, color) => {
       const ln = pth(p, `M${gr.X(u_)} 600V630`, { stroke: color, 'stroke-width': 3 }, { o: 0 });
       show(ln, t, .3);
@@ -638,11 +651,11 @@ const BEATS = [
     };
     mark(.285, 'rustleM', m('spike'), EV.fear);
     mark(.48, 'catM', m('down'), EV.calm);
-    [['dig', 360], ['rep', 640], ['germs', 940], ['grow', 1240]].forEach(([k, x], i) => {
+    [['dig', 360], ['rep', 640], ['germs', 940], ['grow', 1240]].forEach(([k, x]) => {
       const g = G(p, { x, y: 760, o: 0 });
       evGlow(g, 0, 0, 40, 'calm', .6); evDot(g, 0, 0, 12, EV.calm);
       evPara(g, L(k), { x: 0, y: 56, size: 28, fill: EV.ink, maxW: 250, weight: 500 });
-      tw(g, { o: 1 }, m('repair') + .8 + i * .6, .5);
+      tw(g, { o: 1 }, m(k), .5);
     });
     const at = lab(p, 'acuteT', 800, 110, m('acute'), { size: 44, font: SERIF, weight: 600, fill: EV.gold, maxW: 1300 });
     c8Halo(at);
@@ -689,7 +702,7 @@ const BEATS = [
     const lee = room._lee;
     evBreathe(lee, D, 1, .5);
     const th = evThought(p, { x: 820, y: 520, w: 440, h: 220, dx: 80 });
-    tw(th, { o: 1 }, m('think') - .2, .5, out);
+    tw(th, { o: 1 }, m('think'), .5, out);
     const mini = evPerson(th._in, { kind: 'm', x: -80, y: 70, s: .3 });
     evMood(mini, 'ask', 0, .01); evArm(mini, 1, -30, -40, 0, .01);
     const cal = G(th._in, { x: 70, y: 0 });
@@ -704,10 +717,10 @@ const BEATS = [
     tw(hg, { o: .9 }, m('heart'), .4);
     c8Beat(hg, m('heart') + .3, D - m('heart') - .3, 2.2);
     const knot = pth(lee.torso, 'M-14 -40C-4 -54 8 -30 18 -44C26 -54 20 -24 0 -22', { stroke: ADR, 'stroke-width': 4 }, { o: 0 });
-    tw(knot, { o: 1 }, m('heart') + 1.2, .4);
+    tw(knot, { o: 1 }, m('knot') + .2, .4);
     evMood(lee, 'tense', m('heart'));
-    const nd = lab(p, 'noDanger', 800, 800, m('same') + .2, { size: 32, fill: EV.dim, italic: true, maxW: 1100 });
-    const sc = lab(p, 'sameChem', 800, 856, m('same') + 1.4, { size: 34, fill: ADR, weight: 600, font: SERIF, maxW: 1200 });
+    const nd = lab(p, 'noDanger', 800, 800, m('nodanger') + .2, { size: 32, fill: EV.dim, italic: true, maxW: 1100 });
+    const sc = lab(p, 'sameChem', 800, 856, m('same') + .2, { size: 34, fill: ADR, weight: 600, font: SERIF, maxW: 1200 });
     c8Halo(nd); c8Halo(sc);
   }],
 
@@ -750,14 +763,14 @@ const BEATS = [
     mk('rect', { x: X0, y: Y_ - 36, width: W_, height: 72, rx: 8, fill: 'none', stroke: EV.gold, 'stroke-width': 2 }, bar);
     const la = evText(bar, L('alarmS'), { x: X0 + 80, y: Y_ + 82, size: 28, fill: ADR, weight: 600, maxW: 220 });
     const lg = evText(bar, L('upkeep'), { x: X0 + 160 + (W_ - 160) / 2, y: Y_ + 82, size: 26, fill: EV.calm, maxW: 820 });
-    const share = c8Knots([[m('budget'), .15], [m('budget') + 1, .8], [m('budget') + 3.2, .8], [m('budget') + 4.2, .15], [m('months'), .15], [m('months') + 1, .82]]);
+    const share = c8Knots([[m('budget'), .15], [m('budget') + 1, .8], [m('fine') + .9, .8], [m('months') - .1, .15], [m('months'), .15], [m('months') + 1, .82]]);
     prog(q => {
       const s_ = share(q * D), wa = W_ * s_;
       ra.setAttribute('width', wa.toFixed(1)); rg.setAttribute('x', (X0 + wa).toFixed(1)); rg.setAttribute('width', (W_ - wa).toFixed(1));
       put(la, { x: X0 + wa / 2 }); put(lg, { x: X0 + wa + (W_ - wa) / 2, o: s_ > .5 ? 0 : 1 });
     }, 0, D, lin);
-    const fm = lab(p, 'fewMin', 800, 120, m('budget') + 1.4, { size: 28, fill: EV.dim, italic: true, maxW: 800 });
-    hide(fm, m('months') - .3, .4);
+    const fm = lab(p, 'fewMin', 800, 120, m('fine'), { size: 28, fill: EV.dim, italic: true, maxW: 800 });
+    hide(fm, m('months'), .4);
     // months go by
     const cal = G(p, { x: 1460, y: 260, o: 0 });
     mk('rect', { x: -70, y: -50, width: 140, height: 100, rx: 10, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2 }, cal);
@@ -787,21 +800,22 @@ const BEATS = [
     evFire(br, .4, 1.2);
     tw(fg, { o: .15 }, m('front') + .3, 1.2);
     const rg = evGlow(br, 10, 50, 110, 'anger', 0);
-    tw(rg, { o: 1 }, m('front') + 1.4, 1);
-    for (let k = 0; k < 4; k++) pulse(rg, m('front') + 2.4 + k * .7, 1.15);
+    tw(rg, { o: 1 }, m('react'), 1);
+    c8Beat(rg, m('react') + .6, 2.8, 1 / .7, .15);
     labP(p, 'front', 260, 190, m('front') + .5, { size: 30, fill: EV.gold, maxW: 380, weight: 500 });
-    labP(p, 'react', 1170, 300, m('front') + 1.6, { size: 30, fill: ADR, maxW: 400, anchor: 'start', weight: 500 });
+    labP(p, 'react', 1170, 300, m('react') + .2, { size: 30, fill: ADR, maxW: 400, anchor: 'start', weight: 500 });
     pth(p, 'M1160 300L840 450', { stroke: ADR, 'stroke-width': 2, 'stroke-dasharray': '6 6', opacity: .6 }, { d: 0 });
-    draw(p.lastChild, m('front') + 1.6, .5);
+    draw(p.lastChild, m('react') + .2, .5);
     // the hippocampus
     const hp = G(br, { x: 40, y: 40, o: 0 });
     const hpL = pth(hp, 'M-30 -10C-10 -30 30 -20 30 5C30 25 5 30 -5 18', { stroke: CORT, 'stroke-width': 9, 'stroke-linecap': 'round' });
-    tw(hp, { o: 1 }, m('hippo'), .4); pulse(hp, m('hippo') + .2, 1.4);
-    tw(hp, { s: .7 }, m('hippo') + 2, 1.6); tw(hpL, { o: .45 }, m('hippo') + 2, 1.6);
+    const tWear = Math.max(m('wear'), m('hp') + .9);
+    tw(hp, { o: 1 }, m('hp'), .4); pulse(hp, m('hp') + .2, 1.4);
+    tw(hp, { s: .7 }, tWear, 1.6); tw(hpL, { o: .45 }, tWear, 1.6);
     const hl = pth(p, 'M1160 552L870 460', { stroke: CORT, 'stroke-width': 2, 'stroke-dasharray': '6 6', opacity: .7 }, { d: 0 });
-    draw(hl, m('hippo') + .2, .5);
-    const hpT = labP(p, 'hippo', 1170, 540, m('hippo') + .3, { size: 30, fill: CORT, weight: 600, maxW: 400, anchor: 'start' });
-    labP(p, 'animal', 1170, 540 + hpT._h + 6, m('hippo') + 2.5, { size: 26, fill: EV.dim, italic: true, maxW: 400, anchor: 'start' });
+    draw(hl, m('hp') + .2, .5);
+    const hpT = labP(p, 'hippo', 1170, 540, m('hp') + .3, { size: 30, fill: CORT, weight: 600, maxW: 400, anchor: 'start' });
+    labP(p, 'animal', 1170, 540 + hpT._h + 6, m('animal') + .2, { size: 26, fill: EV.dim, italic: true, maxW: 400, anchor: 'start' });
     // clings to routine
     const bx = pth(p, 'M470 120H1130V720H470Z', { stroke: EV.gold, 'stroke-width': 3, 'stroke-dasharray': '12 10' }, { d: 0 });
     draw(bx, m('routine'), 1.2);
@@ -809,10 +823,9 @@ const BEATS = [
     tw(bx, { o: .2 }, m('regrow'), .6);
     // new neurons
     tw(hp, { s: 1 }, m('regrow') + .3, 1.2); tw(hpL, { o: 1, c_stroke: EV.calm }, m('regrow') + .3, 1.2);
-    [[-40, -36], [36, -30], [44, 28], [-34, 30], [0, -44], [-48, 4]].forEach(([dx, dy], i) => {
-      const d = evDot(br, 40 + dx, 40 + dy, 5, EV.calm, 0);
-      put(d, { s: .2 }); tw(d, { o: 1, s: 1 }, m('regrow') + .8 + i * .2, .4, back);
-    });
+    const nds = [[-40, -36], [36, -30], [44, 28], [-34, 30], [0, -44], [-48, 4]].map(([dx, dy]) => evDot(br, 40 + dx, 40 + dy, 5, EV.calm, 0));
+    const tn = m('neurons');
+    prog(q => { const t = q * D; nds.forEach((d, i) => { const u = Math.max(0, Math.min(1, (t - tn - i * .2) / .4)); put(d, { o: u, s: .2 + .8 * back(u) }); }); }, 0, D, lin);
     lab(p, 'regrow', 1170, 740, m('regrow') + .6, { size: 30, fill: EV.calm, weight: 600, maxW: 410, anchor: 'start' });
   }],
 
@@ -867,11 +880,11 @@ const BEATS = [
       evDot(g, 0, 0, 16, ADR);
       if (a === 180) { const tx = evPara(g, L(k), { x: ox, y: oy, size: 30, anchor: an, fill: EV.ink, maxW: mw, weight: 500 }); put(tx, { y: oy - (tx._n - 1) * 20 }); }
       else evText(g, L(k), { x: ox, y: oy, size: 30, anchor: an, fill: EV.ink, maxW: mw });
-      tw(g, { o: 1 }, m('loop') + i * .9, .4);
+      tw(g, { o: 1 }, [m('thought'), m('loop'), m('loop') + .6, m('back')][i], .4);
     });
     const com = G(p);
     const trail = Array.from({ length: 8 }, (_, i) => evDot(com, 0, 0, 13 - i, ADR, 0));
-    const sp = c8Knots([[m('loop'), -90], [m('loop') + 4, 270], [D, 270 + (D - m('loop') - 4) * 160]]);
+    const sp = c8Knots([[m('loop'), 0], [m('back'), 180], [m('thought'), 270], [m('flow'), 360], [D, 360 + (D - m('flow')) * 160]]);
     prog(q => {
       const t = q * D;
       trail.forEach((d, i) => { const a = sp(Math.max(0, t - i * .05)) * Math.PI / 180; put(d, { x: C.x + Math.cos(a) * R, y: C.y + Math.sin(a) * R, o: t < m('loop') ? 0 : (1 - i / 8) * .95 }); });
@@ -881,11 +894,11 @@ const BEATS = [
     mk('rect', { x: -170, y: -24, width: 340, height: 48, rx: 24, fill: 'none', stroke: EV.dim, 'stroke-width': 2 }, mt);
     const mf = mk('rect', { x: -166, y: -20, width: 0, height: 40, rx: 20, fill: ADR }, mt);
     evText(mt, L('rush'), { x: 0, y: -44, size: 28, fill: ADR, weight: 600, maxW: 320 });
-    tw(mt, { o: 1 }, m('rush') - .2, .4);
+    tw(mt, { o: 1 }, m('rush'), .4);
     prog(q => mf.setAttribute('width', (332 * q).toFixed(1)), m('rush'), 2.6, out);
     // people, places and worries tied to it
-    [['boss', 300], ['rentDay', 470], ['trafficS', 640]].forEach(([k, y], i) => {
-      const t = m('link') + i * .6;
+    [['boss', 300, 'people'], ['rentDay', 470, 'worries'], ['trafficS', 640, 'places']].forEach(([k, y, mk_]) => {
+      const t = m(mk_);
       const ln = pth(p, `M1180 ${y}L${C.x + R + 20} ${C.y}`, { stroke: ADR, 'stroke-width': 2, 'stroke-dasharray': '6 6', opacity: .6 }, { d: 0 });
       draw(ln, t + .2, .5);
       const pl = c8Pill(p, L(k), { x: 1300, y, w: 240, color: EV.ink, o: 0 });
@@ -922,7 +935,7 @@ const BEATS = [
     const bc = G(p, { x: 600, y: 360, o: 0 });
     evGlow(bc, 0, 0, 120, 'calm', .5);
     const ring = mk('circle', { cx: 0, cy: 0, r: 70, fill: 'none', stroke: EV.calm, 'stroke-width': 4 }, bc);
-    tw(bc, { o: 1 }, m('breath') - .2, .5);
+    tw(bc, { o: 1 }, m('breath'), .5);
     const tb = m('breath');
     prog(q => {
       const t = q * D - tb; if (t < 0) return;
@@ -930,8 +943,8 @@ const BEATS = [
       ring.setAttribute('r', (60 + 60 * k).toFixed(1));
       put(rav.head, { y: -132 - 3 * k });
     }, 0, D, lin);
-    lab(p, 'breathOut', 600, 540, m('breath') + 1.2, { size: 30, fill: EV.calm, maxW: 380 });
-    evMood(rav, 'calm', m('breath') + 1.5, 1);
+    lab(p, 'breathOut', 600, 540, m('exhale') + .1, { size: 30, fill: EV.calm, maxW: 380 });
+    evMood(rav, 'calm', m('exhale') + .3, 1);
     tw(dl._needle, { r: -55 }, m('needle'), 3, io);
     // three daily brakes
     [['lungs', 'slowBreath', 'needle', 820], ['feet', 'walkL', 'walk', 1100], ['moon', 'sleepL', 'sleep', 1380]].forEach(([ic, key, mk_, x]) => {

@@ -26,6 +26,7 @@ window.TIMINGS = {
  "recap": {
   "dur": 21.525,
   "marks": {
+   "ring": 2.074,
    "loop": 2.956,
    "decide": 8.006,
    "who": 11.956,
@@ -65,10 +66,13 @@ window.TIMINGS = {
  "lobe": {
   "dur": 29.858,
   "marks": {
+   "fl": 0.762,
    "lobe": 2.173,
    "conductor": 6.977,
+   "plays": 10.148,
    "wires": 13.263,
-   "young": 19.722
+   "young": 19.722,
+   "teen": 25.527
   },
   "cues": [
    [
@@ -105,9 +109,20 @@ window.TIMINGS = {
   "dur": 39.367,
   "marks": {
    "rod": 3.973,
+   "iron": 12.069,
+   "out": 14.906,
    "alive": 16.707,
+   "walk": 18.435,
+   "talk": 18.798,
+   "rem": 19.363,
    "changed": 20.244,
-   "fair": 26.574
+   "imp": 23.146,
+   "rude": 23.818,
+   "noplan": 24.384,
+   "fair": 26.574,
+   "recov": 29.209,
+   "chile": 31.108,
+   "clue": 34.214
   },
   "cues": [
    [
@@ -224,9 +239,13 @@ window.TIMINGS = {
   "marks": {
    "flood": 0.25,
    "gate": 5.231,
+   "few": 8.144,
    "fan": 11.849,
+   "hear": 14.026,
    "click": 16.369,
-   "bits": 20.391
+   "bits": 20.391,
+   "nostudy": 26.929,
+   "idea": 29.601
   },
   "cues": [
    [
@@ -280,8 +299,13 @@ window.TIMINGS = {
   "marks": {
    "desk": 2.693,
    "down": 8.016,
+   "see": 10.719,
+   "snd": 11.967,
+   "ache": 12.97,
+   "emo": 14.058,
    "still": 16.493,
-   "one": 19.429
+   "one": 19.429,
+   "loud": 22.085
   },
   "cues": [
    [
@@ -314,8 +338,11 @@ window.TIMINGS = {
   "dur": 26.906,
   "marks": {
    "drive": 2.067,
+   "prob": 4.168,
    "fade": 6.701,
+   "habit": 9.797,
    "arrive": 12.628,
+   "ten": 14.484,
    "zone": 16.874
   },
   "cues": [
@@ -360,6 +387,8 @@ window.TIMINGS = {
    "repeat": 9.697,
    "hand": 13.381,
    "leena": 18.469,
+   "wk1": 23.151,
+   "yr": 26.754,
    "cost": 29.151
   },
   "cues": [
@@ -421,7 +450,10 @@ window.TIMINGS = {
    "goal": 1.917,
    "buzz": 7.971,
    "pathA": 12.736,
-   "later": 15.711
+   "tap": 13.849,
+   "later": 15.711,
+   "half": 16.5,
+   "lost": 20.576
   },
   "cues": [
    [
@@ -469,7 +501,10 @@ window.TIMINGS = {
    "notice": 3.138,
    "picture": 5.769,
    "down": 10.139,
-   "why": 13.913
+   "why": 13.913,
+   "held": 17.009,
+   "braked": 18.417,
+   "wins": 19.665
   },
   "cues": [
    [
@@ -519,6 +554,11 @@ window.TIMINGS = {
   "marks": {
    "sit": 3.325,
    "drift": 6.57,
+   "elec": 10.395,
+   "bill": 12.48,
+   "ac": 13.845,
+   "wed": 16.066,
+   "wear": 18.189,
    "back": 19.57,
    "train": 26.876
   },
@@ -565,9 +605,15 @@ window.TIMINGS = {
   "dur": 34.586,
   "marks": {
    "loop": 3.738,
+   "th": 6.013,
+   "chem": 6.61,
+   "feel": 7.463,
+   "match": 8.274,
    "notice": 11.148,
    "gap": 17.86,
+   "choose": 20.633,
    "fade": 22.556,
+   "unfed": 26.022,
    "new": 29.428
   },
   "cues": [
@@ -674,9 +720,15 @@ window.TIMINGS = {
   "dur": 29.858,
   "marks": {
    "menu": 1.748,
+   "hand": 2.74,
+   "chaya": 6.183,
    "same": 8.139,
+   "pat": 10.716,
    "exp": 13.048,
-   "free": 22.751
+   "right": 16.963,
+   "pick": 18.84,
+   "free": 22.751,
+   "again": 26.42
   },
   "cues": [
    [
@@ -721,6 +773,7 @@ window.TIMINGS = {
   "dur": 32.914,
   "marks": {
    "yes1": 1.807,
+   "y2": 10.918,
    "no": 14.695
   },
   "cues": [

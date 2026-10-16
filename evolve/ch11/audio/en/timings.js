@@ -24,9 +24,17 @@ window.TIMINGS = {
   "marks": {
    "fail": 3.75,
    "sit": 5.979,
+   "eyes": 8.336,
+   "drive": 10.075,
    "steps": 12.441,
+   "s2": 13.393,
+   "s3": 14.389,
+   "s4": 15.836,
+   "s5": 17.971,
+   "s6": 19.121,
    "feel": 20.15,
-   "day": 24.395
+   "day": 24.395,
+   "fam": 25.313
   },
   "cues": [
    [
@@ -84,8 +92,13 @@ window.TIMINGS = {
   "marks": {
    "def": 2.159,
    "dream": 8.154,
+   "jump": 11.6,
    "reh": 13.838,
-   "self": 20.396
+   "every": 15.757,
+   "self": 20.396,
+   "calm": 24.796,
+   "pat": 25.351,
+   "kind": 26.333
   },
   "cues": [
    [
@@ -187,7 +200,9 @@ window.TIMINGS = {
    "grow": 0.25,
    "flat": 4.02,
    "but": 8.316,
+   "five": 11.031,
    "one": 16.384,
+   "jump": 19.104,
    "combo": 22.806
   },
   "cues": [
@@ -226,7 +241,8 @@ window.TIMINGS = {
   "marks": {
    "same": 5.275,
    "wire": 11.049,
-   "lesson": 18.345
+   "lesson": 18.345,
+   "scene": 22.027
   },
   "cues": [
    [
@@ -263,10 +279,16 @@ window.TIMINGS = {
   "dur": 36.78,
   "marks": {
    "study": 2.162,
+   "pinky": 6.439,
    "real": 11.853,
+   "r30": 14.661,
    "mind": 17.456,
+   "still": 20.133,
+   "r22": 22.031,
    "ctrl": 25.1,
-   "how": 28.874
+   "how": 28.874,
+   "gain": 31.273,
+   "drv": 33.662
   },
   "cues": [
    [
@@ -312,8 +334,13 @@ window.TIMINGS = {
   "marks": {
    "later": 3.528,
    "meta": 8.975,
+   "mental": 11.975,
+   "realp": 14.53,
+   "both": 16.463,
    "brain": 19.757,
-   "m1": 29.077,
+   "plan": 25.687,
+   "m1": 28.759,
+   "mus": 32.012,
    "tool": 37.005
   },
   "cues": [
@@ -377,9 +404,13 @@ window.TIMINGS = {
   "dur": 33.541,
   "marks": {
    "noise": 2.73,
+   "tv": 6.161,
+   "cooker": 7.046,
+   "phone": 7.91,
    "old": 10.18,
    "conductor": 18.328,
-   "spot": 24.944,
+   "hush": 20.853,
+   "spot": 24.693,
    "place": 28.132
   },
   "cues": [
@@ -419,6 +450,7 @@ window.TIMINGS = {
    "new": 2.964,
    "old": 8.355,
    "fade": 13.513,
+   "use": 16.944,
    "move": 18.571,
    "note": 25.384
   },
@@ -461,10 +493,23 @@ window.TIMINGS = {
   "dur": 42.867,
   "marks": {
    "rav": 2.108,
+   "snap": 2.502,
    "morning": 7.55,
+   "scene": 11.081,
+   "boys": 12.76,
+   "breathe": 17.24,
+   "smile": 17.827,
+   "towel": 18.595,
    "pieces": 20.295,
+   "gma": 22.825,
+   "art": 25.377,
+   "work": 27.346,
    "real": 29.523,
-   "calm": 34.807
+   "mud": 32.601,
+   "calm": 34.807,
+   "tow": 38.166,
+   "stare": 40.065,
+   "who": 41.432
   },
   "cues": [
    [
@@ -547,10 +592,18 @@ window.TIMINGS = {
   "dur": 35.056,
   "marks": {
    "ask": 1.99,
+   "bq1": 4.074,
+   "bq2": 6.104,
    "parts": 8.034,
+   "pc1": 12.661,
+   "pc2": 13.802,
+   "pc3": 15.114,
    "join": 17.035,
+   "someone": 18.496,
+   "box": 21.128,
    "love": 23.956,
-   "fair": 27.367
+   "fair": 27.367,
+   "enjoy": 30.988
   },
   "cues": [
    [
@@ -604,7 +657,15 @@ window.TIMINGS = {
   "marks": {
    "two": 1.763,
    "a": 3.931,
+   "trip": 7.591,
+   "cold": 8.967,
+   "laugh": 11.32,
+   "on": 11.938,
    "b": 13.614,
+   "snz": 14.51,
+   "rush": 15.396,
+   "cold2": 16.057,
+   "shout": 18.538,
    "warm": 20.442,
    "match": 25.412
   },
@@ -655,8 +716,14 @@ window.TIMINGS = {
   "dur": 33.541,
   "marks": {
    "heal": 2.052,
+   "moving": 5.391,
+   "faster": 6.383,
    "cast": 8.546,
+   "cstudy": 10.502,
+   "half": 14.406,
    "not": 20.182,
+   "repair": 21.376,
+   "cure": 26.612,
    "use": 28.208
   },
   "cues": [

@@ -23,8 +23,14 @@ window.TIMINGS = {
   "dur": 25.025,
   "marks": {
    "think": 1.344,
+   "pickle": 3.222,
    "mouth": 8.113,
+   "touch": 9.768,
    "body": 12.751,
+   "heart": 15.721,
+   "breath": 16.51,
+   "gut": 17.598,
+   "horm": 18.419,
    "you": 19.703
   },
   "cues": [
@@ -76,7 +82,8 @@ window.TIMINGS = {
    "fan": 2.347,
    "bike": 3.945,
    "heart": 6.312,
-   "shift": 7.872
+   "shift": 7.872,
+   "torch": 13.424
   },
   "cues": [
    [
@@ -114,9 +121,13 @@ window.TIMINGS = {
   "marks": {
    "ache": 2.691,
    "match": 4.685,
+   "forget": 6.339,
    "check": 8.318,
+   "still": 9.687,
+   "back": 11.135,
    "daily": 12.718,
-   "thick": 18.497
+   "thick": 18.497,
+   "become": 21.237
   },
   "cues": [
    [
@@ -175,9 +186,16 @@ window.TIMINGS = {
   "dur": 32.888,
   "marks": {
    "try": 2.557,
+   "pinky": 3.603,
+   "index": 4.947,
+   "ring": 6.429,
+   "middle": 7.923,
+   "faster": 9.232,
    "bright": 10.773,
+   "dimmer": 14.711,
    "close": 16.616,
-   "same": 20.185
+   "same": 20.185,
+   "notsame": 26.423
   },
   "cues": [
    [
@@ -218,8 +236,13 @@ window.TIMINGS = {
   "dur": 23.562,
   "marks": {
    "duck": 2.282,
+   "seeduck": 4.36,
+   "memory": 6.223,
    "rabbit": 9.517,
+   "ears": 12.967,
    "effort": 13.923,
+   "quiet": 16.093,
+   "fire": 17.32,
    "change": 19.171
   },
   "cues": [
@@ -271,7 +294,12 @@ window.TIMINGS = {
    "front": 1.81,
    "newest": 6.032,
    "roles": 9.38,
-   "simple": 14.199
+   "r1": 9.529,
+   "r2": 10.201,
+   "r3": 10.969,
+   "r4": 11.492,
+   "simple": 14.199,
+   "spread": 19.433
   },
   "cues": [
    [
@@ -310,7 +338,8 @@ window.TIMINGS = {
    "ravi": 2.401,
    "repeat": 9.541,
    "feel": 12.939,
-   "addict": 15.507
+   "addict": 15.507,
+   "ch9": 21.493
   },
   "cues": [
    [
@@ -349,6 +378,8 @@ window.TIMINGS = {
    "old": 4.735,
    "new": 8.309,
    "age": 12.737,
+   "sixty": 13.238,
+   "any": 13.985,
    "web": 15.19
   },
   "cues": [
@@ -394,7 +425,10 @@ window.TIMINGS = {
    "year": 2.89,
    "race": 9.948,
    "hit": 13.751,
-   "spine": 15.831
+   "spine": 15.831,
+   "six": 18.049,
+   "wedge": 19.959,
+   "worst": 21.143
   },
   "cues": [
    [
@@ -427,8 +461,11 @@ window.TIMINGS = {
   "dur": 17.58,
   "marks": {
    "rods": 0.25,
+   "steel": 2.853,
    "warn": 5.569,
-   "no": 10.341
+   "no": 10.341,
+   "sayno": 13.136,
+   "leave": 13.847
   },
   "cues": [
    [
@@ -453,7 +490,9 @@ window.TIMINGS = {
   "dur": 31.608,
   "marks": {
    "rest": 2.428,
+   "meals": 3.494,
    "see": 5.591,
+   "build": 8.567,
    "hands": 12.84,
    "board": 15.542,
    "pool": 21.309,
@@ -500,6 +539,7 @@ window.TIMINGS = {
   "marks": {
    "vow": 0.25,
    "teach": 8.963,
+   "colours": 13.806,
    "book": 16.656
   },
   "cues": [
@@ -525,7 +565,14 @@ window.TIMINGS = {
   "dur": 42.58,
   "marks": {
    "anec": 2.098,
+   "called": 5.375,
    "mix": 10.601,
+   "cRest": 11.096,
+   "cLoad": 11.199,
+   "cSwim": 13.097,
+   "cFood": 13.791,
+   "cSee": 14.729,
+   "cYoung": 17.546,
    "heal": 19.248,
    "unseen": 26.983,
    "test": 31.773,
@@ -599,7 +646,13 @@ window.TIMINGS = {
    "how": 4.93,
    "what": 6.537,
    "map": 8.417,
-   "matter": 17.264
+   "u1": 10.378,
+   "u2": 12.096,
+   "u3": 13.554,
+   "u4": 15.627,
+   "matter": 17.264,
+   "tm": 19.483,
+   "both": 22.268
   },
   "cues": [
    [
