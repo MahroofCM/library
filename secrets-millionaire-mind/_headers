@@ -1,0 +1,9 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+/lib/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/*/audio/*
+  Cache-Control: public, max-age=2592000
+/lib/*
+  Cache-Control: public, max-age=86400
