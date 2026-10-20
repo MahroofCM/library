@@ -510,7 +510,7 @@ window.TIMINGS = {
   ]
  },
  "brain": {
-  "dur": 32.549,
+  "dur": 34.717,
   "marks": {
    "front": 1.841,
    "react": 5.041,
@@ -518,9 +518,9 @@ window.TIMINGS = {
    "wear": 13.361,
    "hp": 14.012,
    "animal": 18.267,
-   "routine": 20.832,
-   "regrow": 25.696,
-   "neurons": 28.0
+   "routine": 22.99,
+   "regrow": 27.854,
+   "neurons": 30.158
   },
   "cues": [
    [
@@ -541,18 +541,18 @@ window.TIMINGS = {
    ],
    [
     18.267,
-    "This is clearest in animal studies."
+    "So, in the book's picture, learning gets harder under long-term stress."
    ],
    [
-    20.832,
+    22.99,
     "And a stressed brain clings to routine, which keeps us inside the box."
    ],
    [
-    25.696,
+    27.854,
     "The good news is that the hippocampus can grow new neurons."
    ],
    [
-    29.82,
+    31.977,
     "When stress eases, it can recover."
    ]
   ]
@@ -576,40 +576,32 @@ window.TIMINGS = {
   ]
  },
  "science": {
-  "dur": 36.885,
+  "dur": 33.829,
   "marks": {
-   "solid": 2.098,
-   "stretch": 14.59,
-   "stretch2": 25.166
+   "k1": 2.349,
+   "k2": 11.271,
+   "k3": 19.247
   },
   "cues": [
    [
     0.25,
-    "Time for a science check."
+    "Let's gather the key ideas."
    ],
    [
-    2.098,
-    "Well supported: the fight or flight response, the hormone chain that ends in cortisol, and the harm long-term stress does to immunity, sleep, the heart, and blood sugar."
+    2.349,
+    "Dispenza describes the stress response as a survival system, built to switch on in an emergency and then switch off again."
    ],
    [
-    14.59,
-    "Stretched: the book repeats a claim that up to ninety percent of doctor visits are stress related."
+    11.271,
+    "In his view, the trouble starts when our thoughts keep it switched on, so we live in survival mode with no danger present."
    ],
    [
-    20.395,
-    "The figure is widely quoted, but no solid study stands behind it."
+    19.247,
+    "The book links long-term stress to much of our illness, and puts it behind as many as ninety percent of visits to the doctor."
    ],
    [
-    25.166,
-    "It also says unused adrenaline sits in the muscles and makes them sore."
-   ],
-   [
-    30.415,
-    "Stress does tighten muscles, but not that way."
-   ],
-   [
-    33.463,
-    "Adrenaline is cleared from the blood within minutes."
+    27.294,
+    "The reason, as he sees it: the body spends its energy on the emergency, not on repair."
    ]
   ]
  },

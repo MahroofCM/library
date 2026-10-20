@@ -368,7 +368,7 @@ window.TIMINGS = {
   ]
  },
  "genes": {
-  "dur": 38.949,
+  "dur": 40.202,
   "marks": {
    "pep": 1.306,
    "dna": 2.725,
@@ -377,11 +377,11 @@ window.TIMINGS = {
    "joints": 9.2,
    "enz": 10.181,
    "same": 12.61,
-   "rest": 18.199,
-   "wear": 20.334,
-   "note": 24.404,
-   "strong": 25.995,
-   "model": 31.47
+   "rest": 17.538,
+   "wear": 19.52,
+   "note": 23.59,
+   "strong": 25.899,
+   "model": 31.528
   },
   "cues": [
    [
@@ -398,27 +398,23 @@ window.TIMINGS = {
    ],
    [
     12.61,
-    "The author argues that the same signal, day after day, keeps the same genes busy and leaves the rest asleep."
+    "In this book, the same signal, day after day, keeps the same genes busy and leaves the rest asleep."
    ],
    [
-    20.334,
+    19.52,
     "An overworked system starts turning out lower quality parts."
    ],
    [
-    24.404,
-    "A fair science note."
+    23.59,
+    "Let's pause on the key ideas."
    ],
    [
-    25.995,
-    "The strong evidence is for stress hormones like cortisol wearing the body down."
+    25.899,
+    "A feeling repeated every day sends the same signal to the genes, again and again."
    ],
    [
-    31.47,
-    "The receptor story for everyday emotions is the author's model."
-   ],
-   [
-    35.969,
-    "A useful model, not a proven fact."
+    31.528,
+    "And in Dispenza's view, the cells retune themselves to the emotions we live in most, so the body learns the mood by heart."
    ]
   ]
  },

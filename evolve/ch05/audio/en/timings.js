@@ -234,19 +234,19 @@ window.TIMINGS = {
   ]
  },
  "stages": {
-  "dur": 40.542,
+  "dur": 41.509,
   "marks": {
    "two": 2.813,
    "fuel": 6.665,
-   "thirds": 7.987,
-   "teen": 13.778,
-   "hot": 18.983,
-   "front": 21.227,
-   "pfc": 24.128,
-   "plan": 26.891,
-   "mid": 30.159,
-   "ravi": 32.93,
-   "forty": 36.67
+   "thirds": 9.022,
+   "teen": 14.748,
+   "hot": 19.953,
+   "front": 22.197,
+   "pfc": 25.098,
+   "plan": 27.861,
+   "mid": 31.129,
+   "ravi": 33.9,
+   "forty": 37.64
   },
   "cues": [
    [
@@ -259,26 +259,26 @@ window.TIMINGS = {
    ],
    [
     6.665,
-    "Around age five, it uses about two thirds of the body's resting energy, just to grow and learn."
+    "In these early years, the book notes, about two thirds of the calories a baby takes in go to feeding her growing brain."
    ],
    [
-    13.778,
+    14.748,
     "In the teenage years, a new wave of pruning and rewiring sweeps through, and the emotional centres run hot."
    ],
    [
-    21.227,
+    22.197,
     "The last region to mature is the very front, the prefrontal cortex, which helps us plan, focus, and hold back an impulse."
    ],
    [
-    30.159,
+    31.129,
     "It keeps refining into the mid twenties."
    ],
    [
-    32.93,
+    33.9,
     "Nineteen-year-old Ravi raced his bike on the highway."
    ],
    [
-    36.67,
+    37.64,
     "Forty-year-old Ravi can hardly believe he did."
    ]
   ]
@@ -337,7 +337,7 @@ window.TIMINGS = {
   ]
  },
  "parents": {
-  "dur": 34.403,
+  "dur": 36.493,
   "marks": {
    "mix": 2.048,
    "combo": 4.278,
@@ -347,8 +347,8 @@ window.TIMINGS = {
    "warm": 14.742,
    "upset": 16.577,
    "twins": 18.708,
-   "tilt": 28.867,
-   "tend": 31.28
+   "tilt": 29.266,
+   "tend": 33.352
   },
   "cues": [
    [
@@ -365,126 +365,130 @@ window.TIMINGS = {
    ],
    [
     18.708,
-    "Twin studies suggest that across large groups of people, roughly forty to fifty percent of the differences in personality are linked to genes."
+    "The book cites researchers who link about half of our personality traits to the wiring we inherit, a foundation of our parents' ways of thinking and feeling."
    ],
    [
-    28.867,
-    "That does not mean half of you is fixed."
+    29.266,
+    "The other half, in this view, is learned from the life we live."
    ],
    [
-    31.28,
+    33.352,
     "Genes set tendencies, not destinies."
    ]
   ]
  },
  "copy": {
-  "dur": 38.583,
+  "dur": 42.658,
   "marks": {
-   "claim": 2.811,
-   "habit": 5.766,
-   "wiring": 7.729,
-   "child": 9.563,
-   "no": 12.038,
-   "veena": 15.192,
-   "car": 19.856,
-   "sighs": 23.448,
-   "anu": 26.905,
-   "watch": 31.32,
-   "good": 34.62,
-   "again": 36.34
+   "claim": 2.769,
+   "habit": 5.767,
+   "wiring": 7.783,
+   "child": 9.724,
+   "no": 12.195,
+   "veena": 18.326,
+   "car": 22.171,
+   "sighs": 24.851,
+   "anu": 28.308,
+   "watch": 32.723,
+   "good": 38.213,
+   "again": 40.408
   },
   "cues": [
    [
     0.25,
-    "Here the book goes further than the evidence."
+    "Here the book makes a bold proposal."
    ],
    [
-    2.811,
-    "It suggests that a parent's most practised moods, say a habit of complaining, become wiring that is passed to the child in the genes."
+    2.769,
+    "It suggests that a parent's most practised moods, say a habit of complaining, become wiring that can be passed to the child in the genes."
    ],
    [
-    12.038,
-    "Genes do not carry learned habits or memories."
+    12.195,
+    "In this view, what one generation rehearses most becomes part of the next one's starting equipment."
    ],
    [
-    15.192,
-    "A mother's skill on the veena does not arrive in her baby's DNA."
+    18.326,
+    "A mother's gift for the veena might show up early in her daughter."
    ],
    [
-    19.856,
-    "What children inherit, very powerfully, is the home."
+    22.171,
+    "The book adds a second route: the home."
    ],
    [
-    23.448,
+    24.851,
     "Ravi sighs and grumbles in every traffic jam."
    ],
    [
-    26.905,
+    28.308,
     "Six-year-old Anu now sighs at exactly the same moments."
    ],
    [
-    31.32,
-    "She learned it by watching, not through her genes."
+    32.723,
+    "Watching a parent, the book says, can switch on patterns the child already carries."
    ],
    [
-    34.62,
-    "And that is good news."
+    38.213,
+    "And here is the hopeful part."
    ],
    [
-    36.34,
+    40.408,
     "What was learned can be relearned."
    ]
   ]
  },
  "epi": {
-  "dur": 36.78,
+  "dur": 42.266,
   "marks": {
-   "letters": 6.591,
-   "tags": 9.161,
-   "dimmer": 11.337,
-   "updown": 12.415,
-   "life": 14.79,
-   "stress": 15.185,
-   "sleep": 15.739,
-   "care": 16.507,
-   "rats": 18.98,
-   "next": 25.348,
-   "animals": 27.948,
-   "humans": 29.81,
-   "mem": 32.36
+   "letters": 7.27,
+   "tags": 9.841,
+   "dimmer": 12.017,
+   "updown": 13.094,
+   "life": 15.469,
+   "stress": 15.864,
+   "sleep": 16.419,
+   "care": 17.187,
+   "rats": 19.659,
+   "next": 26.028,
+   "animals": 28.921,
+   "humans": 33.486,
+   "mem": 35.312
   },
   "cues": [
    [
     0.25,
-    "There is real science in the space between genes and experience."
+    "A whole field of science studies the space between genes and experience."
    ],
    [
-    4.562,
+    5.241,
     "It is called epigenetics."
    ],
    [
-    6.591,
+    7.27,
     "Your DNA letters stay the same for life, but chemical tags act like dimmer switches, turning genes up or down."
    ],
    [
-    14.79,
+    15.469,
     "Food, stress, sleep, and early care can move those switches."
    ],
    [
-    18.98,
+    19.659,
     "In rats, a mother who licks and grooms her pups a lot changes how their stress genes are set."
    ],
    [
-    25.348,
-    "Can these switches pass to your children?"
+    26.028,
+    "Can these settings reach the next generation?"
    ],
    [
-    27.948,
-    "In some animals, a little."
+    28.921,
+    "In some animal studies, a parent's experience shows up in the young."
    ],
    [
-    29.81,
-    "In humans, the evidence is still thin, and nothing shows that memories or skills travel this way."
+    33.486,
+    "The book takes this further."
+   ],
+   [
+    35.312,
+    "It sees the learned experience of our parents and grandparents as part of the wiring we are born with."
    ]
   ]
  },
@@ -503,21 +507,21 @@ window.TIMINGS = {
   ]
  },
  "map": {
-  "dur": 35.683,
+  "dur": 36.702,
   "marks": {
    "bumps": 2.726,
    "wrong": 8.248,
-   "broca": 9.459,
-   "patch": 11.652,
-   "name": 15.982,
-   "team": 20.897,
-   "read": 23.321,
-   "seeing": 25.284,
-   "sound": 25.817,
-   "move": 27.513,
-   "cooks": 28.985,
-   "station": 31.705,
-   "meal": 33.38
+   "broca": 10.488,
+   "patch": 12.681,
+   "name": 17.011,
+   "team": 21.926,
+   "read": 24.35,
+   "seeing": 26.313,
+   "sound": 26.846,
+   "move": 28.542,
+   "cooks": 30.014,
+   "station": 32.734,
+   "meal": 34.409
   },
   "cues": [
    [
@@ -530,22 +534,22 @@ window.TIMINGS = {
    ],
    [
     8.248,
-    "They were wrong."
+    "The idea was soon overturned."
    ],
    [
-    9.459,
+    10.488,
     "Real maps came from patients."
    ],
    [
-    11.652,
+    12.681,
     "Damage to one patch in the left frontal lobe took away fluent speech, and that patch still carries the name of Broca, the doctor who found it."
    ],
    [
-    20.897,
+    21.926,
     "But regions are not sealed rooms."
    ],
    [
-    23.321,
+    24.35,
     "Reading a sentence aloud uses seeing, sound, meaning and movement areas at once, like the cooks in a wedding sadya kitchen, each at a station, all serving one meal."
    ]
   ]
@@ -706,63 +710,47 @@ window.TIMINGS = {
   ]
  },
  "fair": {
-  "dur": 42.606,
+  "dur": 33.881,
   "marks": {
-   "c1": 2.098,
-   "c2": 9.128,
-   "c3": 26.783
+   "c1": 2.349,
+   "c2": 11.871,
+   "c3": 23.114
   },
   "cues": [
    [
     0.25,
-    "Time for a science check."
+    "Let's gather the key ideas."
    ],
    [
-    2.098,
-    "Well established: we are born prewired, and experience keeps reshaping that wiring all through life."
+    2.349,
+    "We are born prewired, with circuits from our species and from our parents, and experience keeps reshaping that wiring all through life."
    ],
    [
-    9.128,
-    "Not supported: that parents pass their practised moods and skills to children through genes."
+    11.871,
+    "In the book's view, about half of our personality comes through inherited wiring, including our parents' most practised patterns."
    ],
    [
-    15.301,
-    "Learned things travel by example, not by DNA."
+    20.704,
+    "The other half is learned from life."
    ],
    [
-    19.137,
-    "And forty to fifty percent genetic describes differences across many people."
+    23.114,
+    "And Dispenza asks a hopeful question."
    ],
    [
-    24.818,
-    "It is not a measure of you."
-   ],
-   [
-    26.783,
-    "Speculative: the book suggests large areas of unused, latent brain wait to be switched on."
-   ],
-   [
-    33.943,
-    "That echoes the old ten percent myth."
-   ],
-   [
-    36.433,
-    "The real hope is simpler."
-   ],
-   [
-    38.278,
-    "The connections you already have keep changing with what you practise."
+    25.809,
+    "Could unused, latent areas of the brain be waiting to be switched on, opening the way to a new level of mind?"
    ]
   ]
  },
  "wrap": {
-  "dur": 25.13,
+  "dur": 23.824,
   "marks": {
    "w1": 1.391,
    "w2": 7.831,
    "w3": 13.239,
    "w4": 16.414,
-   "end": 22.734
+   "end": 21.448
   },
   "cues": [
    [
@@ -787,10 +775,10 @@ window.TIMINGS = {
    ],
    [
     19.376,
-    "Habits travel by example, and can be relearned."
+    "What was learned can be relearned."
    ],
    [
-    22.734,
+    21.448,
     "Now, try the chapter practice."
    ]
   ]

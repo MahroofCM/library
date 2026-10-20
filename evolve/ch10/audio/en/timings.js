@@ -106,7 +106,7 @@ window.TIMINGS = {
   ]
  },
  "gage": {
-  "dur": 39.367,
+  "dur": 45.218,
   "marks": {
    "rod": 3.973,
    "iron": 12.069,
@@ -120,9 +120,9 @@ window.TIMINGS = {
    "rude": 23.818,
    "noplan": 24.384,
    "fair": 26.574,
-   "recov": 29.209,
-   "chile": 31.108,
-   "clue": 34.214
+   "tied": 29.934,
+   "rebuilt": 33.226,
+   "clue": 40.505
   },
   "cues": [
    [
@@ -147,11 +147,15 @@ window.TIMINGS = {
    ],
    [
     26.574,
-    "In fairness, historians later found he recovered a good deal, and drove stagecoaches in Chile for years."
+    "Years later, his doctor drew the lesson from that change: the front of the brain is tied to who we are."
    ],
    [
-    34.214,
-    "Still, his case first pointed science to the front of the brain for self control."
+    33.226,
+    "Modern scientists have even rebuilt his injury on computer, to see which areas the rod passed through."
+   ],
+   [
+    40.505,
+    "His case first pointed science to the front of the brain for self control."
    ]
   ]
  },
@@ -235,7 +239,7 @@ window.TIMINGS = {
   ]
  },
  "filter": {
-  "dur": 35.553,
+  "dur": 36.336,
   "marks": {
    "flood": 0.25,
    "gate": 5.231,
@@ -244,8 +248,8 @@ window.TIMINGS = {
    "hear": 14.026,
    "click": 16.369,
    "bits": 20.391,
-   "nostudy": 26.929,
-   "idea": 29.601
+   "seen": 26.354,
+   "idea": 30.524
   },
   "cues": [
    [
@@ -278,18 +282,14 @@ window.TIMINGS = {
    ],
    [
     20.391,
-    "You may have read that the brain handles four hundred billion bits a second, and we notice two thousand."
+    "The book even puts numbers on it: about four hundred billion bits of information every second, and only about two thousand of them reach our awareness."
    ],
    [
-    26.929,
-    "No solid study backs those numbers."
+    30.524,
+    "The point is simple."
    ],
    [
-    29.601,
-    "But the idea holds."
-   ],
-   [
-    31.38,
+    32.158,
     "What you notice is a tiny selection, and you get a say in it."
    ]
   ]
@@ -602,7 +602,7 @@ window.TIMINGS = {
   ]
  },
  "breakloop": {
-  "dur": 34.586,
+  "dur": 34.769,
   "marks": {
    "loop": 3.738,
    "th": 6.013,
@@ -613,8 +613,8 @@ window.TIMINGS = {
    "gap": 17.86,
    "choose": 20.633,
    "fade": 22.556,
-   "unfed": 26.022,
-   "new": 29.428
+   "unfed": 26.726,
+   "new": 29.619
   },
   "cues": [
    [
@@ -651,10 +651,14 @@ window.TIMINGS = {
    ],
    [
     22.556,
-    "The chemicals already in your blood won't vanish on command, but unfed, they settle within minutes."
+    "The chemistry already in your body takes a little while to settle."
    ],
    [
-    29.428,
+    26.726,
+    "With no thought feeding it, it calms down."
+   ],
+   [
+    29.619,
     "Each time, the old loop gets a little weaker, and the new one a little stronger."
    ]
   ]
@@ -674,45 +678,37 @@ window.TIMINGS = {
   ]
  },
  "intent": {
-  "dur": 34.9,
+  "dur": 37.564,
   "marks": {
-   "mind": 3.171,
-   "made": 10.14,
-   "true": 15.488,
-   "stretch": 23.668
+   "mind": 3.274,
+   "made": 10.918,
+   "true": 16.532,
+   "stretch": 22.296
   },
   "cues": [
    [
     0.25,
-    "The author makes a big claim about intention."
+    "The author gives intention a special place."
    ],
    [
-    3.171,
-    "When you make up your mind firmly, whatever you happen to feel right now, the frontal lobe takes the lead."
+    3.274,
+    "When you make up your mind firmly, whatever you happen to feel right now, the frontal lobe has its finest moment."
    ],
    [
-    10.14,
-    "He says that is literally making up a mind: building a new pattern in the brain."
+    10.918,
+    "In his view, that is literally making up a mind: building a new pattern in the brain."
    ],
    [
-    15.488,
-    "There's real truth here."
+    16.532,
+    "Clear intentions and practised attention shape behaviour, and behaviour shapes the brain."
    ],
    [
-    17.233,
-    "Clear intentions and practised attention do change behaviour, and behaviour reshapes the brain."
+    22.296,
+    "He also tells of a man with a serious illness who made up his mind to live, and lived far longer than his doctors expected."
    ],
    [
-    23.668,
-    "But the book goes further, with stories of people deciding their way out of serious illness."
-   ],
-   [
-    29.528,
-    "Those are anecdotes, not evidence."
-   ],
-   [
-    31.963,
-    "Hold your intention, and keep your doctor."
+    30.943,
+    "If you are unwell, use these practices alongside your doctor's care, never instead of it."
    ]
   ]
  },
@@ -770,32 +766,36 @@ window.TIMINGS = {
   ]
  },
  "science": {
-  "dur": 32.914,
+  "dur": 31.869,
   "marks": {
-   "yes1": 1.807,
-   "y2": 10.918,
-   "no": 14.695
+   "yes1": 2.789,
+   "y2": 13.791,
+   "no": 19.378
   },
   "cues": [
    [
     0.25,
-    "A quick science check."
+    "Let's gather the author's key ideas."
    ],
    [
-    1.807,
-    "Well supported: the frontal lobe is central to attention, planning and impulse control, and it matures into the mid twenties."
+    2.789,
+    "He sees the frontal lobe as what sets us apart."
    ],
    [
-    10.918,
-    "New tasks recruit it more, and practice hands them on."
+    6.221,
+    "The book puts it at thirty to forty percent of the human neocortex, a far bigger share than in other primates."
    ],
    [
-    14.695,
-    "Not supported: the exact counts of bits we notice, the idea that a uniquely giant frontal lobe sets us apart from apes, and the claim that most of us are, as the author puts it, self lobotomised."
+    13.791,
+    "He calls it a gatekeeper, choosing a few signals from the flood our senses bring in."
    ],
    [
-    29.342,
-    "That one is a metaphor, not a diagnosis."
+    19.378,
+    "And he offers a striking image: living on routine and old feelings, most of us leave this control centre half switched off."
+   ],
+   [
+    28.029,
+    "Waking it up, on purpose, is where change begins."
    ]
   ]
  },

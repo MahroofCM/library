@@ -65,13 +65,13 @@ window.TIMINGS = {
   ]
  },
  "count": {
-  "dur": 26.984,
+  "dur": 23.432,
   "marks": {
    "n": 2.286,
-   "older": 5.004,
-   "sec": 9.48,
-   "glia": 14.833,
-   "water": 23.905
+   "older": 5.642,
+   "sec": 7.941,
+   "glia": 12.671,
+   "water": 20.335
   },
   "cues": [
    [
@@ -80,26 +80,26 @@ window.TIMINGS = {
    ],
    [
     2.286,
-    "Current counts say about eighty six billion."
+    "The book puts the number at about a hundred billion."
    ],
    [
-    5.004,
-    "Older books, including this one, round it up to a hundred billion."
+    5.642,
+    "Each one far too small to see."
    ],
    [
-    9.48,
-    "Counting one every second would take you more than two thousand seven hundred years."
+    7.941,
+    "Counting one every second would take you more than three thousand years."
    ],
    [
-    14.833,
-    "Alongside them sit the glial cells."
+    12.671,
+    "Alongside them sit the glial cells, the support crew."
    ],
    [
-    17.453,
-    "They were once thought to vastly outnumber neurons, but careful counts suggest roughly one for one."
+    16.457,
+    "The book counts them as the most plentiful cells in the brain."
    ],
    [
-    23.905,
+    20.335,
     "And about three quarters of your brain is water."
    ]
   ]
@@ -762,41 +762,33 @@ window.TIMINGS = {
   ]
  },
  "check": {
-  "dur": 40.438,
+  "dur": 31.269,
   "marks": {
-   "c1": 2.579,
-   "c2": 11.219,
-   "c3": 23.826,
-   "also": 35.72
+   "c1": 3.042,
+   "c2": 10.898,
+   "c3": 17.35,
+   "also": 27.499
   },
   "cues": [
    [
     0.25,
-    "A quick science check on this chapter."
+    "Let's gather the key ideas of this chapter."
    ],
    [
-    2.579,
-    "Well established: neurons fire all or none, pass messages with chemicals across synapses, and work alongside glia."
+    3.042,
+    "Neurons fire all or none, pass their messages with chemicals across synapses, and work alongside glia."
    ],
    [
-    11.219,
-    "Simplified in the book: movement commands start in the motor strip of the frontal lobe, not the parietal lobe."
+    10.898,
+    "Networks of neurons connect and disconnect all the time, growing stronger or weaker with use."
    ],
    [
-    19.074,
-    "And autopilot is run mainly by the hypothalamus and brainstem."
+    17.35,
+    "In the author's view, each kind of messenger answers to its own electrical pattern, and the chemistry we make with our own thoughts shapes how we feel."
    ],
    [
-    23.826,
-    "The author's model, not established: the idea that each chemical is released by its own electrical frequency, and that your thoughts alone decide your brain chemistry."
-   ],
-   [
-    35.72,
-    "Thoughts matter a lot."
-   ],
-   [
-    37.4,
-    "So do sleep, food, hormones and health."
+    27.499,
+    "Knowing this wiring is the first step to changing it."
    ]
   ]
  },

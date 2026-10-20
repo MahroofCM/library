@@ -132,18 +132,18 @@ window.TIMINGS = {
   ]
  },
  "handoff": {
-  "dur": 44.016,
+  "dur": 42.553,
   "marks": {
    "front": 2.447,
    "save": 7.375,
    "file": 11.151,
    "deep": 15.048,
    "note": 20.548,
-   "simple": 24.692,
-   "spread": 26.245,
-   "hm": 34.96,
-   "skill": 39.202,
-   "lesson": 41.1
+   "simple": 25.285,
+   "spread": 28.386,
+   "hm": 33.236,
+   "skill": 37.741,
+   "lesson": 39.64
   },
   "cues": [
    [
@@ -164,22 +164,22 @@ window.TIMINGS = {
    ],
    [
     20.548,
-    "The author calls the cerebellum the seat of the subconscious."
+    "In the author's picture, the cerebellum is the seat of the subconscious."
    ],
    [
-    24.692,
-    "That is too simple."
+    25.285,
+    "It keeps what the body has learned from the mind."
    ],
    [
-    26.245,
-    "Habits and skills are spread across several systems, especially the basal ganglia, with the cerebellum fine tuning movement."
+    28.386,
+    "Once a skill is stored there, it runs on its own, with very little thinking."
    ],
    [
-    34.96,
-    "But the main idea is solid."
+    33.236,
+    "This fits a striking observation."
    ],
    [
-    37.068,
+    35.608,
     "People who cannot form new memories can still learn a new skill, without remembering a single lesson."
    ]
   ]
@@ -276,47 +276,47 @@ window.TIMINGS = {
   ]
  },
  "ladder": {
-  "dur": 30.328,
+  "dur": 28.97,
   "marks": {
-   "s1": 4.722,
-   "s2": 7.045,
-   "s3": 11.509,
-   "s4": 15.91,
-   "quit": 18.172,
-   "model": 23.592
+   "s1": 4.897,
+   "s2": 7.22,
+   "s3": 11.683,
+   "s4": 16.084,
+   "quit": 18.346,
+   "model": 23.767
   },
   "cues": [
    [
     0.25,
-    "Teachers describe the same journey as a ladder with four steps."
+    "The author describes the same journey as a ladder with four steps."
    ],
    [
-    4.722,
+    4.897,
     "First, you don't know what you don't know."
    ],
    [
-    7.045,
+    7.22,
     "Then you notice the gap."
    ],
    [
-    8.781,
+    8.955,
     "You can't do it yet, and it feels awkward."
    ],
    [
-    11.509,
+    11.683,
     "With practice, you can do it, but only while concentrating hard."
    ],
    [
-    15.91,
+    16.084,
     "Finally, it runs by itself."
    ],
    [
-    18.172,
+    18.346,
     "Most people give up on the second or third step, exactly where it feels hardest."
    ],
    [
-    23.592,
-    "This ladder is a teaching model, not a lab finding, but it matches what learners describe."
+    23.767,
+    "It is a simple map, and it helps you see exactly where you are on the climb."
    ]
   ]
  },
@@ -488,7 +488,7 @@ window.TIMINGS = {
   ]
  },
  "feedback": {
-  "dur": 40.568,
+  "dur": 42.658,
   "marks": {
    "people": 2.51,
    "calmer": 5.068,
@@ -498,8 +498,8 @@ window.TIMINGS = {
    "stairs": 13.781,
    "screen": 16.695,
    "fair": 23.19,
-   "modest": 27.552,
-   "fast": 35.084
+   "modest": 30.441,
+   "fast": 37.16
   },
   "cues": [
    [
@@ -540,18 +540,18 @@ window.TIMINGS = {
    ],
    [
     23.19,
-    "The author tells of stroke patients moving paralysed limbs this way."
+    "The author describes a hospital study in which stroke patients learned to move paralysed limbs again this way."
    ],
    [
-    27.552,
-    "Brain training with feedback does help some patients, but the gains are usually modest, not miraculous."
+    30.441,
+    "They watched their own brain signals, found the healthy pattern, and practised it, one try at a time."
    ],
    [
-    35.084,
+    37.16,
     "The clearest feedback is quick."
    ],
    [
-    37.142,
+    39.217,
     "The sooner you see the result, the faster you learn."
    ]
   ]
@@ -630,7 +630,7 @@ window.TIMINGS = {
   ]
  },
  "kittens": {
-  "dur": 29.257,
+  "dur": 27.899,
   "marks": {
    "stripes": 3.33,
    "vert": 7.66,
@@ -640,7 +640,7 @@ window.TIMINGS = {
    "notthere": 15.24,
    "wired": 17.095,
    "us": 20.828,
-   "see": 25.417
+   "see": 24.058
   },
   "cues": [
    [
@@ -661,20 +661,16 @@ window.TIMINGS = {
    ],
    [
     20.828,
-    "Adults are far more flexible than kittens."
+    "The author draws the same lesson for all of us."
    ],
    [
-    23.766,
-    "But the lesson holds."
-   ],
-   [
-    25.417,
+    24.058,
     "We tend to see what our brain has been trained to look for."
    ]
   ]
  },
  "time": {
-  "dur": 37.094,
+  "dur": 42.527,
   "marks": {
    "once": 2.187,
    "wire": 3.019,
@@ -684,8 +680,8 @@ window.TIMINGS = {
    "miss": 20.014,
    "back": 22.86,
    "genes": 24.847,
-   "noev": 31.771,
-   "example": 33.987
+   "noev": 34.884,
+   "example": 37.989
   },
   "cues": [
    [
@@ -722,19 +718,19 @@ window.TIMINGS = {
    ],
    [
     24.847,
-    "One more science check."
+    "The author takes this one step further."
    ],
    [
-    26.545,
-    "The author suggests that what we master passes to our children through our genes."
+    27.332,
+    "In his view, what we master deeply enough is passed on, through our genes, to the generations after us."
    ],
    [
-    31.771,
-    "There is no good evidence for that."
+    34.884,
+    "So the change you make is not only for you."
    ],
    [
-    33.987,
-    "What children do inherit is our example."
+    37.989,
+    "And every day, our children are also learning from our example."
    ]
   ]
  },
@@ -835,17 +831,17 @@ window.TIMINGS = {
   ]
  },
  "epilogue": {
-  "dur": 38.217,
+  "dur": 41.587,
   "marks": {
    "claim": 3.685,
-   "check": 10.974,
-   "measure": 13.375,
-   "disturb": 16.117,
-   "noev": 21.228,
-   "true": 24.592,
-   "changed": 27.703,
-   "life": 32.526,
-   "evolving": 36.119
+   "check": 7.885,
+   "measure": 13.381,
+   "disturb": 17.552,
+   "noev": 23.658,
+   "true": 28.383,
+   "changed": 31.064,
+   "life": 35.886,
+   "evolving": 39.479
   },
   "cues": [
    [
@@ -854,38 +850,38 @@ window.TIMINGS = {
    ],
    [
     3.685,
-    "The author suggests that our minds shape reality, the way observing tiny particles seems to change them."
+    "The author's view is that mind and reality are deeply linked."
    ],
    [
-    10.974,
-    "A clear science check."
+    7.885,
+    "He points to the observer in quantum experiments."
    ],
    [
-    12.575,
-    "In physics, observing means measuring with instruments, and that measurement disturbs the particle."
+    11.152,
+    "At the smallest scale, he explains, a particle behaves like a spread-out wave of possibilities, and when it is observed, it settles into one."
    ],
    [
-    19.073,
-    "It says nothing about human wishes, and there is no evidence that thoughts move matter."
+    21.141,
+    "To him, this means the observer matters, and a mind trained to observe well can shape the life it lives."
    ],
    [
-    24.592,
-    "But there is a simpler truth, and it is enough."
+    28.383,
+    "Here is how that looks in an ordinary day."
    ],
    [
-    27.703,
+    31.064,
     "A changed person makes different choices."
    ],
    [
-    30.443,
+    33.804,
     "Each choice leads to the next."
    ],
    [
-    32.526,
+    35.886,
     "Day after day, those choices build a different life."
    ],
    [
-    36.119,
+    39.479,
     "That is evolving your being."
    ]
   ]

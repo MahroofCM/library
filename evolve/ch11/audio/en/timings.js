@@ -1,6 +1,6 @@
 window.TIMINGS = {
  "intro": {
-  "dur": 7.993,
+  "dur": 8.15,
   "marks": {
    "sub": 1.676
   },
@@ -15,7 +15,7 @@ window.TIMINGS = {
    ],
    [
     4.727,
-    "Practising in your head, and what it really does."
+    "Practising in your head, and how it can change you."
    ]
   ]
  },
@@ -195,15 +195,15 @@ window.TIMINGS = {
   ]
  },
  "result": {
-  "dur": 27.533,
+  "dur": 25.443,
   "marks": {
    "grow": 0.25,
    "flat": 4.02,
    "but": 8.316,
-   "five": 11.031,
-   "one": 16.384,
-   "jump": 19.104,
-   "combo": 22.806
+   "five": 11.199,
+   "one": 14.085,
+   "jump": 15.728,
+   "combo": 18.443
   },
   "cues": [
    [
@@ -216,23 +216,19 @@ window.TIMINGS = {
    ],
    [
     8.316,
-    "Here is the part that often gets left out."
+    "Here is the part the author finds so striking."
    ],
    [
-    11.031,
-    "After five days, the imaginers did not play as well as the real players."
+    11.199,
+    "The imaginers never pressed a single key."
    ],
    [
-    16.384,
-    "Then they had one real session on the keys, and jumped to about where the players had been on day three."
+    14.085,
+    "Yet their brain maps grew in much the same way as the players' maps."
    ],
    [
-    22.806,
-    "Imagination prepared the brain."
-   ],
-   [
-    25.118,
-    "Real practice finished the job."
+    18.443,
+    "As the author sees it, the brain wired those circuits whether the keys were real or only in the mind."
    ]
   ]
  },
@@ -330,64 +326,52 @@ window.TIMINGS = {
   ]
  },
  "science": {
-  "dur": 40.803,
+  "dur": 35.37,
   "marks": {
-   "later": 3.528,
-   "meta": 8.975,
-   "mental": 11.975,
-   "realp": 14.53,
-   "both": 16.463,
-   "brain": 19.757,
-   "plan": 25.687,
-   "m1": 28.759,
-   "mus": 32.012,
-   "tool": 37.005
+   "later": 2.881,
+   "meta": 7.885,
+   "mental": 9.047,
+   "realp": 10.711,
+   "both": 11.789,
+   "brain": 14.48,
+   "plan": 22.994,
+   "m1": 24.53,
+   "mus": 27.037,
+   "tool": 31.615
   },
   "cues": [
    [
     0.25,
-    "A science check, because these numbers get stretched."
+    "Let's gather the key ideas so far."
    ],
    [
-    3.528,
-    "Later studies usually found smaller gains from imagery, and a few found none."
+    2.881,
+    "A rehearsal is precise."
    ],
    [
-    8.975,
-    "Reviews of many studies agree on a pattern."
+    4.799,
+    "Every step, in order, felt from the inside."
    ],
    [
-    11.975,
-    "Mental practice helps, moderately."
+    7.885,
+    "In the piano study, imagined practice and real practice both grew the brain's map for the hand."
    ],
    [
-    14.53,
-    "Real practice helps more."
+    14.48,
+    "The author's view is that when your focus is complete, the brain does not know the difference between doing something and rehearsing it."
    ],
    [
-    16.463,
-    "And the two together usually beat either one alone."
+    22.994,
+    "The same circuits fire, and they wire together in the same way, even while the muscles stay still, as the finger study showed."
    ],
    [
-    19.757,
-    "The book also says the brain cannot tell imagining from doing."
-   ],
-   [
-    24.104,
-    "That goes too far."
-   ],
-   [
-    25.687,
-    "Imagining uses much of the same planning network, but the main movement area fires far less, the muscles stay quiet, and the real world gives you no feedback."
-   ],
-   [
-    37.005,
-    "Rehearsal is a strong warm up, not a replacement."
+    31.615,
+    "So rehearsal is real practice, done in the mind."
    ]
   ]
  },
  "q2": {
-  "dur": 4.493,
+  "dur": 3.605,
   "marks": {},
   "cues": [
    [
@@ -396,7 +380,7 @@ window.TIMINGS = {
    ],
    [
     1.384,
-    "What is the fair takeaway from the finger study?"
+    "What does the finger study show?"
    ]
   ]
  },
@@ -445,7 +429,7 @@ window.TIMINGS = {
   ]
  },
  "prune": {
-  "dur": 32.993,
+  "dur": 31.399,
   "marks": {
    "new": 2.964,
    "old": 8.355,
@@ -481,11 +465,7 @@ window.TIMINGS = {
    ],
    [
     25.384,
-    "Pruning unused connections is real biology."
-   ],
-   [
-    29.036,
-    "The moving house is a picture, not a measured process."
+    "So the old habit is pruned away, and what once held it together now helps bind the new one."
    ]
   ]
  },
@@ -589,7 +569,7 @@ window.TIMINGS = {
   ]
  },
  "build": {
-  "dur": 35.056,
+  "dur": 35.971,
   "marks": {
    "ask": 1.99,
    "bq1": 4.074,
@@ -603,7 +583,7 @@ window.TIMINGS = {
    "box": 21.128,
    "love": 23.956,
    "fair": 27.367,
-   "enjoy": 30.988
+   "enjoy": 31.634
   },
   "cues": [
    [
@@ -644,11 +624,7 @@ window.TIMINGS = {
    ],
    [
     27.367,
-    "That is advice about motivation, and it is sound."
-   ],
-   [
-    30.988,
-    "A picture you enjoy is one you will come back to every day."
+    "In his view, love is one of the strongest motivators there is.A picture you enjoy is one you will come back to every day."
    ]
   ]
  },
@@ -713,58 +689,66 @@ window.TIMINGS = {
   ]
  },
  "limits": {
-  "dur": 33.541,
+  "dur": 36.467,
   "marks": {
-   "heal": 2.052,
-   "moving": 5.391,
-   "faster": 6.383,
-   "cast": 8.546,
-   "cstudy": 10.502,
-   "half": 14.406,
-   "not": 20.182,
-   "repair": 21.376,
-   "cure": 26.612,
-   "use": 28.208
+   "heal": 2.735,
+   "moving": 7.847,
+   "faster": 9.137,
+   "cast": 12.746,
+   "cstudy": 15.433,
+   "half": 19.212,
+   "not": 22.822,
+   "repair": 25.67,
+   "cure": 28.443,
+   "use": 30.206
   },
   "cues": [
    [
     0.25,
-    "One last science check."
+    "The author takes this one step further."
    ],
    [
-    2.052,
-    "The author suggests that imagining a sprained ankle moving freely could help it heal faster."
+    2.735,
+    "Say you have sprained an ankle."
    ],
    [
-    8.546,
-    "There is a grain of truth here."
+    4.669,
+    "While it rests, you rehearse walking and running on it, moving freely."
    ],
    [
-    10.502,
-    "In one study, people with a wrist in a cast for four weeks lost about half as much strength when they imagined strong contractions every day."
+    9.137,
+    "He suggests this could help it heal, and grow stronger."
    ],
    [
-    20.182,
-    "But slowing weakness is not repairing tissue."
+    12.746,
+    "His reasoning follows the finger study."
    ],
    [
-    23.455,
-    "No study shows imagery healing a sprain, or curing a disease."
+    15.433,
+    "Rehearsing the movement fires the ankle's circuits in the brain."
    ],
    [
-    28.208,
-    "Use rehearsal alongside your physio and your doctor, never instead of them."
+    19.212,
+    "Repeating it, day after day, strengthens that wiring."
+   ],
+   [
+    22.822,
+    "And the brain sends that message down to the tissues, where, in his view, it supports the body's own repair."
+   ],
+   [
+    30.206,
+    "If you try this, use it alongside your physio and your doctor, never instead of them."
    ]
   ]
  },
  "wrap": {
-  "dur": 25.731,
+  "dur": 24.085,
   "marks": {
    "w1": 1.391,
    "w2": 7.523,
-   "w3": 14.402,
-   "w4": 18.898,
-   "end": 23.35
+   "w3": 12.461,
+   "w4": 17.236,
+   "end": 21.688
   },
   "cues": [
    [
@@ -777,26 +761,22 @@ window.TIMINGS = {
    ],
    [
     7.523,
-    "It changes the brain, and even strength, but less than real practice."
+    "It changes the brain, and even the body."
    ],
    [
-    12.341,
-    "The two together work best."
+    10.434,
+    "A finger grew stronger without moving.Be precise."
    ],
    [
-    14.402,
-    "Be precise."
-   ],
-   [
-    15.711,
+    14.049,
     "Repeat the same scene, with your full attention."
    ],
    [
-    18.898,
+    17.236,
     "Rehearse early, so the new response is ready before the old one."
    ],
    [
-    23.35,
+    21.688,
     "Now, try the chapter practice."
    ]
   ]

@@ -55,7 +55,7 @@ window.TIMINGS = {
   ]
  },
  "fold": {
-  "dur": 26.54,
+  "dur": 28.447,
   "marks": {
    "sheet": 2.21,
    "flat": 6.098,
@@ -63,7 +63,7 @@ window.TIMINGS = {
    "crumple": 10.19,
    "folds": 11.63,
    "hidden": 17.461,
-   "walnut": 23.862
+   "walnut": 25.762
   },
   "cues": [
    [
@@ -84,26 +84,26 @@ window.TIMINGS = {
    ],
    [
     17.461,
-    "About two thirds of the cortex is tucked away inside those folds."
+    "Most of the cortex, nearly all of it in the book's telling, is tucked away inside those folds."
    ],
    [
-    22.066,
+    23.965,
     "More surface, same head."
    ],
    [
-    23.862,
+    25.762,
     "That is why a brain looks like a walnut."
    ]
   ]
  },
  "three": {
-  "dur": 33.489,
+  "dur": 37.564,
   "marks": {
    "stem": 11.343,
    "limbic": 16.59,
    "neo": 22.081,
    "map": 25.754,
-   "qmark": 28.951
+   "qmark": 29.779
   },
   "cues": [
    [
@@ -128,14 +128,14 @@ window.TIMINGS = {
    ],
    [
     25.754,
-    "It is a handy map, and we will use it today."
+    "It is a handy map, and we will use it all through this lesson."
    ],
    [
-    28.951,
-    "But keep a small question mark beside it."
+    29.779,
+    "Keep one more idea beside it: the three layers are linked, and they work as a team."
    ],
    [
-    31.576,
+    35.634,
     "We will come back to that."
    ]
   ]
@@ -246,7 +246,7 @@ window.TIMINGS = {
   ]
  },
  "limbic": {
-  "dur": 32.967,
+  "dur": 33.593,
   "marks": {
    "deep": 2.694,
    "thermo": 6.312,
@@ -289,11 +289,11 @@ window.TIMINGS = {
    ],
    [
     24.517,
-    "The book calls this area the midbrain."
+    "The book calls this area the midbrain, the brain in the middle."
    ],
    [
-    26.861,
-    "Anatomists use that word for a part of the brainstem, so here we will say limbic system."
+    28.416,
+    "Its other name is the limbic system, and that is the name we will use here."
    ]
   ]
  },
@@ -635,117 +635,121 @@ window.TIMINGS = {
   ]
  },
  "myth": {
-  "dur": 42.292,
+  "dur": 44.748,
   "marks": {
-   "tiffin": 2.267,
-   "reptile": 7.119,
-   "mammal": 8.836,
-   "human": 10.564,
-   "but": 12.837,
-   "m1": 15.76,
-   "m2": 19.113,
-   "m3": 23.999,
-   "web": 26.3,
-   "net": 28.934,
-   "amy": 30.119,
-   "fro": 31.186,
-   "talk": 32.124,
-   "woven": 33.863,
-   "keep": 36.513
+   "tiffin": 2.963,
+   "reptile": 6.449,
+   "mammal": 8.156,
+   "human": 9.948,
+   "but": 12.808,
+   "m1": 17.95,
+   "m2": 19.689,
+   "m3": 23.822,
+   "web": 29.37,
+   "net": 32.005,
+   "amy": 33.19,
+   "fro": 34.256,
+   "talk": 35.195,
+   "woven": 36.934,
+   "keep": 39.583
   },
   "cues": [
    [
     0.25,
-    "Time for that question mark."
+    "Now, back to that idea beside the map."
    ],
    [
-    2.267,
-    "The three brains picture treats the brain like a three tier tiffin box."
+    2.963,
+    "Picture the three brains as a three tier tiffin box."
    ],
    [
-    7.119,
-    "A reptile tin at the bottom, a mammal tin in the middle, a human tin on top."
+    6.449,
+    "The reptile brain at the bottom, the mammal brain in the middle, the new, human brain on top."
    ],
    [
-    12.837,
-    "Neuroscientists no longer see it that way."
+    12.808,
+    "In the book, these are not three sealed tins."
    ],
    [
-    15.76,
-    "Evolution did not stack new tins on old ones."
+    15.731,
+    "They are three linked computers."
    ],
    [
-    19.113,
-    "Reptiles and birds have their own versions of the so called new parts, and the old parts kept changing too."
+    17.95,
+    "Each one has its own job, its own memory, and its own sense of time and space."
    ],
    [
-    26.3,
+    23.822,
+    "And in us, the whole brain works together, so the whole becomes greater than its parts."
+   ],
+   [
+    29.37,
     "In a living brain, the regions work as one network."
    ],
    [
-    30.119,
+    33.19,
     "The amygdala and the frontal lobe talk all the time, and feeling and thinking are woven together."
    ],
    [
-    36.513,
-    "So use the three brains as a simple map for learning, not as a literal description."
+    39.583,
+    "Three layers, one team."
+   ],
+   [
+    41.395,
+    "That is the picture to carry into the next chapters."
    ]
   ]
  },
  "fair": {
-  "dur": 43.624,
+  "dur": 38.322,
   "marks": {
-   "c1": 2.198,
-   "c2": 14.062,
-   "c3": 27.073
+   "c1": 2.349,
+   "c2": 14.687,
+   "c3": 20.634
   },
   "cues": [
    [
     0.25,
-    "A few more claims to check."
+    "Let's gather the key ideas."
    ],
    [
-    2.198,
-    "Well established: the brainstem keeps you alive, the cerebellum coordinates movement, the limbic system shapes feelings and memory, and the cortex lets you think and plan."
+    2.349,
+    "Each layer has its work."
    ],
    [
-    14.062,
-    "The book also suggests the new brain is mostly unused potential."
+    4.193,
+    "The brainstem keeps you alive, the cerebellum coordinates movement, the limbic system shapes feelings and memory, and the cortex lets you think and plan."
    ],
    [
-    18.95,
-    "That echoes the old myth that we use only ten percent of our brain."
+    14.687,
+    "In the book's view, the new brain holds a huge potential that most of us have barely tapped."
    ],
    [
-    23.492,
-    "Scans show we use all of it, just not all at once."
+    20.634,
+    "The book also describes a sudden leap in the size of the human neocortex, about two hundred and fifty thousand years ago, and calls it a mystery."
    ],
    [
-    27.073,
-    "And a sudden, mysterious leap in brain size is not settled science."
+    30.829,
+    "And here is the hopeful part."
    ],
    [
-    32.139,
-    "Our ancestors' brains grew over roughly two million years."
+    33.025,
+    "The connections inside keep changing."
    ],
    [
-    36.026,
-    "What is true, and hopeful, is that the connections inside keep changing."
-   ],
-   [
-    40.955,
+    35.637,
     "That is the story of the next chapters."
    ]
   ]
  },
  "wrap": {
-  "dur": 23.275,
+  "dur": 22.622,
   "marks": {
    "w1": 1.391,
    "w2": 6.447,
    "w3": 10.207,
    "w4": 15.565,
-   "end": 20.88
+   "end": 20.23
   },
   "cues": [
    [
@@ -766,10 +770,10 @@ window.TIMINGS = {
    ],
    [
     15.565,
-    "Three layers is a useful map, but the brain works as one connected whole."
+    "The three layers are linked, and the brain works as one connected whole."
    ],
    [
-    20.88,
+    20.23,
     "Now, try the chapter practice."
    ]
   ]

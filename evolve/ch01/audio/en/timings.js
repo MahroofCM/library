@@ -183,7 +183,7 @@ window.TIMINGS = {
   ]
  },
  "fingers": {
-  "dur": 32.888,
+  "dur": 31.687,
   "marks": {
    "try": 2.557,
    "pinky": 3.603,
@@ -195,7 +195,7 @@ window.TIMINGS = {
    "dimmer": 14.711,
    "close": 16.616,
    "same": 20.185,
-   "notsame": 26.423
+   "notsame": 27.048
   },
   "cues": [
    [
@@ -224,11 +224,11 @@ window.TIMINGS = {
    ],
    [
     20.185,
-    "Brain scans show that imagining a movement uses many of the same regions as doing it."
+    "The author points to brain scans: imagining a movement fires many of the same circuits as doing it."
    ],
    [
-    26.423,
-    "Not exactly the same, but close enough that mental rehearsal counts as real practice."
+    27.048,
+    "So in his view, mental rehearsal counts as real practice."
    ]
   ]
  },
@@ -289,7 +289,7 @@ window.TIMINGS = {
   ]
  },
  "frontal": {
-  "dur": 24.816,
+  "dur": 25.861,
   "marks": {
    "front": 1.81,
    "newest": 6.032,
@@ -299,7 +299,7 @@ window.TIMINGS = {
    "r3": 10.969,
    "r4": 11.492,
    "simple": 14.199,
-   "spread": 19.433
+   "spread": 19.497
   },
   "cues": [
    [
@@ -320,26 +320,26 @@ window.TIMINGS = {
    ],
    [
     14.199,
-    "One note of caution."
+    "In this book, the frontal lobe is the seat of the self, the part that makes you, you."
    ],
    [
-    15.834,
-    "Calling it the seat of the self is a helpful shortcut."
+    19.497,
+    "And it does not work alone."
    ],
    [
-    19.433,
-    "In reality, your sense of self comes from many brain areas working together."
+    21.436,
+    "It leads the whole brain, like a conductor leading an orchestra."
    ]
   ]
  },
  "stuck": {
-  "dur": 24.869,
+  "dur": 24.32,
   "marks": {
    "ravi": 2.401,
    "repeat": 9.541,
    "feel": 12.939,
-   "addict": 15.507,
-   "ch9": 21.493
+   "addict": 14.891,
+   "ch9": 20.877
   },
   "cues": [
    [
@@ -360,15 +360,15 @@ window.TIMINGS = {
    ],
    [
     12.939,
-    "The author's answer is a bold one."
+    "Here is the author's answer."
    ],
    [
-    15.507,
+    14.891,
     "We get used to the feelings our lives produce, and the body comes to expect them, like a habit."
    ],
    [
-    21.493,
-    "We will test that idea properly in chapter nine."
+    20.877,
+    "We will explore that idea fully in chapter nine."
    ]
   ]
  },
@@ -535,12 +535,12 @@ window.TIMINGS = {
   ]
  },
  "vow": {
-  "dur": 19.043,
+  "dur": 19.148,
   "marks": {
    "vow": 0.25,
    "teach": 8.963,
-   "colours": 13.806,
-   "book": 16.656
+   "colours": 13.977,
+   "book": 16.766
   },
   "cues": [
    [
@@ -553,75 +553,67 @@ window.TIMINGS = {
    ],
    [
     8.963,
-    "He also credits a spiritual teaching he came across during those weeks, and it colours some of the book's bigger claims."
+    "He also credits a spiritual teaching he came across during those weeks, and that thread runs all through the book."
    ],
    [
-    16.656,
+    16.766,
     "This book grew out of that promise."
    ]
   ]
  },
  "science": {
-  "dur": 42.58,
+  "dur": 41.247,
   "marks": {
-   "anec": 2.098,
-   "called": 5.375,
-   "mix": 10.601,
-   "cRest": 11.096,
-   "cLoad": 11.199,
-   "cSwim": 13.097,
-   "cFood": 13.791,
-   "cSee": 14.729,
-   "cYoung": 17.546,
-   "heal": 19.248,
-   "unseen": 26.983,
-   "test": 31.773,
-   "doctor": 37.75
+   "anec": 2.494,
+   "called": 5.801,
+   "mix": 7.597,
+   "cRest": 10.879,
+   "cLoad": 10.982,
+   "cSwim": 12.902,
+   "cFood": 13.574,
+   "cSee": 14.555,
+   "cYoung": 17.576,
+   "heal": 19.696,
+   "unseen": 23.911,
+   "test": 30.086,
+   "doctor": 34.386
   },
   "cues": [
    [
     0.25,
-    "Time for a science check."
+    "Time to gather the key ideas."
    ],
    [
-    2.098,
-    "This is one person's story."
+    2.494,
+    "This is one man's story, and the author tells it as the seed of the whole book."
    ],
    [
-    4.159,
-    "Scientists call that an anecdote."
+    7.597,
+    "His recovery wove many threads together."
    ],
    [
-    6.298,
-    "It can inspire us, but it cannot prove what caused the healing."
+    10.384,
+    "He rested, loaded the spine slowly, swam, ate lightly, and visualised, every single day."
    ],
    [
-    10.601,
-    "He rested, loaded the spine slowly, swam, ate lightly, and visualised, all at once."
+    16.914,
+    "He was also young, fit and determined."
    ],
    [
-    16.885,
-    "He was also young and very fit."
+    19.696,
+    "In his view, the mind took an active part in healing the body."
    ],
    [
-    19.248,
-    "And many spine fractures do heal without surgery, with rest and a brace."
+    23.911,
+    "He believed that the same inner intelligence that built the body lives in every one of us."
    ],
    [
-    24.584,
-    "Doctors decide case by case."
+    30.086,
+    "And he set out to understand, through the brain, how that could work."
    ],
    [
-    26.983,
-    "We rarely hear from people who tried the same thing and did not recover."
-   ],
-   [
-    31.773,
-    "To know whether visualising speeds healing, you would need many patients, compared fairly."
-   ],
-   [
-    37.75,
-    "So enjoy the story, but never skip medical advice because of it."
+    34.386,
+    "As you try the ideas in this book, use them alongside your doctor's care, never instead of it."
    ]
   ]
  },
@@ -635,12 +627,12 @@ window.TIMINGS = {
    ],
    [
     1.384,
-    "What can one recovery story tell us?"
+    "What does the author take from his recovery?"
    ]
   ]
  },
  "promise": {
-  "dur": 34.482,
+  "dur": 34.064,
   "marks": {
    "why": 2.338,
    "how": 4.93,
@@ -697,26 +689,22 @@ window.TIMINGS = {
    ],
    [
     22.268,
-    "They are important, and they turn into something physical."
+    "They are important, and, as the author sees it, they become something physical."
    ],
    [
-    25.972,
-    "Take the second part gently."
-   ],
-   [
-    27.984,
+    27.591,
     "A thought is real brain activity, and repeated thoughts slowly reshape the brain's connections."
    ]
   ]
  },
  "wrap": {
-  "dur": 19.435,
+  "dur": 20.428,
   "marks": {
    "w1": 1.391,
    "w2": 5.272,
    "w3": 9.195,
    "w4": 11.928,
-   "end": 17.046
+   "end": 18.055
   },
   "cues": [
    [
@@ -737,10 +725,10 @@ window.TIMINGS = {
    ],
    [
     11.928,
-    "The author's recovery is inspiring, but it is one story, not proof."
+    "The author's recovery planted the seed of this book: the mind can take part in healing."
    ],
    [
-    17.046,
+    18.055,
     "Now, try the chapter practice."
    ]
   ]

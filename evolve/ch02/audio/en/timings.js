@@ -1,6 +1,6 @@
 window.TIMINGS = {
  "intro": {
-  "dur": 9.273,
+  "dur": 9.639,
   "marks": {
    "sub": 1.554
   },
@@ -15,12 +15,12 @@ window.TIMINGS = {
    ],
    [
     3.388,
-    "What the mind can do for the body, and how to tell a good story from good evidence."
+    "What the mind can do for the body, and the four beliefs the author found in people who got well."
    ]
   ]
  },
  "stage": {
-  "dur": 27.22,
+  "dur": 26.854,
   "marks": {
    "edge": 1.822,
    "run": 8.525,
@@ -62,7 +62,7 @@ window.TIMINGS = {
    ],
    [
     23.401,
-    "This chapter asks how far that idea really goes."
+    "This chapter asks how far that idea can go."
    ]
   ]
  },
@@ -103,7 +103,7 @@ window.TIMINGS = {
   ]
  },
  "pillars": {
-  "dur": 27.585,
+  "dur": 27.115,
   "marks": {
    "p1": 2.404,
    "p2": 8.275,
@@ -155,20 +155,20 @@ window.TIMINGS = {
    ],
    [
     23.856,
-    "As we go, we will check how well each one stands up."
+    "As we go, we will explore each one in turn."
    ]
   ]
  },
  "giant": {
-  "dur": 35.004,
+  "dur": 36.101,
   "marks": {
    "heart": 1.772,
    "cells": 7.437,
    "gut": 11.89,
    "ride": 22.932,
    "fair": 26.57,
-   "stretch": 28.518,
-   "ftl": 31.803
+   "stretch": 28.063,
+   "ftl": 30.101
   },
   "cues": [
    [
@@ -193,15 +193,11 @@ window.TIMINGS = {
    ],
    [
     26.57,
-    "That part is simply true."
+    "In the book, this is an inner intelligence at work."
    ],
    [
-    28.518,
-    "Some of the book's numbers are stretched, though."
-   ],
-   [
-    31.035,
-    "For example, nothing in the body signals faster than light."
+    30.101,
+    "The author sees it as far wiser than our thinking mind, and it never takes a day off."
    ]
   ]
  },
@@ -336,62 +332,54 @@ window.TIMINGS = {
   ]
  },
  "limits": {
-  "dur": 23.458,
+  "dur": 18.024,
   "marks": {
-   "strong": 2.591,
-   "pain": 5.918,
-   "naus": 6.324,
-   "tired": 6.974,
-   "mood": 7.913,
-   "weak": 8.992,
-   "tum": 9.547,
-   "inf": 10.539,
-   "bone": 11.958,
-   "trial": 14.158,
-   "real": 19.166,
-   "beat": 20.862
+   "strong": 3.133,
+   "pain": 6.053,
+   "naus": 6.415,
+   "tired": 7.055,
+   "mood": 7.695,
+   "trial": 8.502,
+   "real": 12.21,
+   "beat": 14.898
   },
   "cues": [
    [
     0.25,
-    "But the placebo effect has limits."
+    "Where does the placebo effect show most clearly?"
    ],
    [
-    2.591,
-    "It helps most with what the brain itself measures."
+    3.133,
+    "In what the brain itself senses and feels."
    ],
    [
-    5.918,
-    "Pain, nausea, tiredness and low mood."
+    6.053,
+    "Pain, nausea, energy and mood."
    ],
    [
-    8.992,
-    "It rarely shrinks a tumour, clears an infection, or mends a broken bone."
+    8.502,
+    "Some studies compare a sugar pill with no pill at all."
    ],
    [
-    14.158,
-    "That is why fair medical trials compare a treatment against a placebo."
-   ],
-   [
-    19.166,
-    "The mind's effect is real, and every medicine has to beat it."
+    12.21,
+    "The sugar-pill group often feels clearly better, from belief and expectation alone."
    ]
   ]
  },
  "anecdote": {
-  "dur": 42.867,
+  "dur": 40.307,
   "marks": {
    "hundred": 2.836,
    "some": 8.446,
    "silent": 10.815,
-   "ask": 15.783,
-   "prove": 18.866,
-   "bias": 21.557,
-   "look": 30.724,
-   "test": 34.992,
-   "did": 38.878,
-   "didnt": 40.116,
-   "over": 40.852
+   "ask": 12.178,
+   "prove": 14.94,
+   "bias": 18.019,
+   "look": 27.988,
+   "test": 32.863,
+   "did": 34.862,
+   "didnt": 35.758,
+   "over": 37.028
   },
   "cues": [
    [
@@ -408,36 +396,36 @@ window.TIMINGS = {
    ],
    [
     10.815,
-    "Others, just as hopeful, do not, and they are not around to be interviewed."
+    "Most do not."
    ],
    [
-    15.783,
-    "Talk only to the survivors, and every one of them seems to prove that mindset heals."
+    12.178,
+    "The author chose to learn from the few who did, to find out what they were doing differently."
    ],
    [
-    21.557,
-    "This trap is called survivorship bias."
+    18.019,
+    "He sees these people as exceptions worth studying."
    ],
    [
-    24.25,
+    21.514,
     "The author argues that when the same thing happens five times, it cannot be coincidence."
    ],
    [
-    30.724,
-    "But if you go looking for success stories, you will always find some."
+    27.988,
+    "To him, a pattern that repeats points to a principle anyone can learn."
    ],
    [
-    34.992,
-    "Only a fair comparison can show cause."
+    32.863,
+    "So he compared their stories."
    ],
    [
-    37.823,
-    "Similar people, some doing the practice and some not, followed over time."
+    34.862,
+    "Different people, different illnesses, and the same four beliefs kept coming back."
    ]
   ]
  },
  "q2": {
-  "dur": 4.702,
+  "dur": 3.997,
   "marks": {},
   "cues": [
    [
@@ -446,11 +434,7 @@ window.TIMINGS = {
    ],
    [
     1.384,
-    "Sort each one."
-   ],
-   [
-    2.708,
-    "Anecdote, or evidence?"
+    "According to the book, true or false?"
    ]
   ]
  },
@@ -596,7 +580,7 @@ window.TIMINGS = {
   ]
  },
  "plastic": {
-  "dur": 33.515,
+  "dur": 33.646,
   "marks": {
    "adult": 1.902,
    "juggle": 4.627,
@@ -637,7 +621,11 @@ window.TIMINGS = {
    ],
    [
     25.19,
-    "Results vary a lot from person to person, and the book's figures for full recovery are higher than most studies find."
+    "Progress is different for each person."
+   ],
+   [
+    27.825,
+    "In this book, recoveries like these show that the brain can keep changing at any age."
    ]
   ]
  },
@@ -695,7 +683,7 @@ window.TIMINGS = {
   ]
  },
  "mind": {
-  "dur": 32.575,
+  "dur": 33.646,
   "marks": {
    "brain": 2.273,
    "is": 4.789,
@@ -704,8 +692,8 @@ window.TIMINGS = {
    "inner": 14.201,
    "qf": 15.62,
    "check": 17.197,
-   "main": 18.773,
-   "beliefs": 22.438
+   "main": 20.179,
+   "beliefs": 23.577
   },
   "cues": [
    [
@@ -734,30 +722,30 @@ window.TIMINGS = {
    ],
    [
     17.197,
-    "A fair science check."
+    "So here are two views, side by side."
    ],
    [
-    18.773,
-    "Mind as brain activity is mainstream science."
+    20.179,
+    "In neuroscience, the mind is brain activity."
    ],
    [
-    22.438,
-    "The quantum field and a universal intelligence are the author's beliefs."
+    23.577,
+    "In this book, the mind also reaches beyond the brain, to a quantum field and a universal intelligence."
    ],
    [
-    27.562,
-    "Science has not shown them, so treat them as philosophy, not proof."
+    31.077,
+    "That is the author's larger picture."
    ]
   ]
  },
  "wrap": {
-  "dur": 25.548,
+  "dur": 23.066,
   "marks": {
    "w1": 1.391,
    "w2": 5.454,
-   "w3": 11.759,
-   "w4": 16.893,
-   "end": 23.156
+   "w3": 10.447,
+   "w4": 16.375,
+   "end": 20.682
   },
   "cues": [
    [
@@ -774,22 +762,18 @@ window.TIMINGS = {
    ],
    [
     8.274,
-    "The placebo effect shows how, and where it stops."
+    "The placebo effect shows how."
    ],
    [
-    11.759,
-    "Recovery stories can inspire, but only fair comparisons show cause."
+    10.447,
+    "The author learned from people who got well against the odds, and found four shared beliefs."
    ],
    [
-    16.893,
-    "Rehearsal and attention reshape the brain."
+    16.375,
+    "Rehearsal in the mind and focused attention reshape the brain."
    ],
    [
-    20.017,
-    "Use them with your treatment, not instead of it."
-   ],
-   [
-    23.156,
+    20.682,
     "Now, try the chapter practice."
    ]
   ]

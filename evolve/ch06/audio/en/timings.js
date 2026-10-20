@@ -20,18 +20,18 @@ window.TIMINGS = {
   ]
  },
  "fixed": {
-  "dur": 27.977,
+  "dur": 28.395,
   "marks": {
    "chip": 5.669,
    "by30": 6.938,
    "wear": 8.816,
    "crack": 11.481,
    "grow": 15.284,
-   "alive": 17.527,
-   "newc": 20.253,
-   "strong": 21.533,
-   "letgo": 23.112,
-   "name": 26.25
+   "alive": 17.938,
+   "newc": 20.664,
+   "strong": 21.944,
+   "letgo": 23.523,
+   "name": 26.661
   },
   "cues": [
    [
@@ -48,22 +48,22 @@ window.TIMINGS = {
    ],
    [
     15.284,
-    "We now know that picture was wrong."
+    "Today the brain is seen very differently."
    ],
    [
-    17.527,
+    17.938,
     "Your brain is living tissue."
    ],
    [
-    19.635,
+    20.046,
     "Every day it grows new connections, strengthens some, and lets others go."
    ],
    [
-    24.505,
+    24.916,
     "That ability has a name."
    ],
    [
-    26.25,
+    26.661,
     "Neuroplasticity."
    ]
   ]
@@ -222,16 +222,16 @@ window.TIMINGS = {
   ]
  },
  "start": {
-  "dur": 32.522,
+  "dur": 31.504,
   "marks": {
    "baby": 2.919,
    "cry": 5.65,
    "parent": 8.819,
-   "shout": 16.056,
-   "snaps": 17.336,
-   "habit": 20.976,
-   "deposit": 25.364,
-   "adds": 30.026
+   "shout": 15.052,
+   "snaps": 16.332,
+   "habit": 19.972,
+   "deposit": 24.36,
+   "adds": 29.022
   },
   "cues": [
    [
@@ -244,28 +244,28 @@ window.TIMINGS = {
    ],
    [
     8.819,
-    "We also pick up patterns from our families, partly through genes, and mostly through years of watching them."
+    "We also pick up patterns from our families, through our genes and through years of watching them."
    ],
    [
-    16.056,
+    15.052,
     "Ravi notices it when he snaps at Meera in exactly his father's tone."
    ],
    [
-    20.976,
+    19.972,
     "That old circuit has fired so often that it feels like who he is."
    ],
    [
-    25.364,
+    24.36,
     "But what we inherit is a starting deposit, not a final balance."
    ],
    [
-    30.026,
+    29.022,
     "Every new thing we learn adds to it."
    ]
   ]
  },
  "path": {
-  "dur": 29.91,
+  "dur": 31.295,
   "marks": {
    "field": 2.436,
    "first": 5.869,
@@ -273,8 +273,8 @@ window.TIMINGS = {
    "soon": 15.274,
    "syn": 17.61,
    "bdnf": 20.982,
-   "auto": 26.015,
-   "autom": 28.308
+   "auto": 27.423,
+   "autom": 29.716
   },
   "cues": [
    [
@@ -303,10 +303,10 @@ window.TIMINGS = {
    ],
    [
     20.982,
-    "Growth chemicals such as BDNF help the synapse thicken and hold."
+    "Growth factors, a kind of fertiliser made by the brain, help the synapse thicken and hold."
    ],
    [
-    26.015,
+    27.423,
     "What was effortful becomes easy, and then automatic."
    ]
   ]
@@ -562,7 +562,7 @@ window.TIMINGS = {
   ]
  },
  "novel": {
-  "dur": 33.411,
+  "dur": 34.508,
   "marks": {
    "new": 3.73,
    "weeks": 10.199,
@@ -571,7 +571,7 @@ window.TIMINGS = {
    "right": 20.989,
    "left": 22.557,
    "hypo2": 23.7,
-   "broad": 26.431
+   "broad": 29.681
   },
   "cues": [
    [
@@ -596,48 +596,52 @@ window.TIMINGS = {
    ],
    [
     23.7,
-    "That is one researcher's hypothesis."
+    "In this view, the right half meets what is new, and the left half keeps what has become routine."
    ],
    [
-    26.431,
-    "The broader finding, that practice makes the brain's work smaller and more efficient, is well supported."
+    29.681,
+    "So practice makes the brain's work smaller, smoother and more efficient."
    ]
   ]
  },
  "scicheck": {
-  "dur": 30.616,
+  "dur": 33.933,
   "marks": {
-   "solid": 2.579,
-   "s1": 3.518,
-   "s2": 5.907,
-   "s3": 9.608,
-   "s4": 11.678,
-   "model": 14.115,
-   "glia": 21.595,
-   "ten": 24.667,
-   "myth": 25.339,
-   "real": 27.224
+   "solid": 3.042,
+   "s1": 3.575,
+   "s2": 6.167,
+   "s3": 9.313,
+   "s4": 11.745,
+   "model": 14.36,
+   "glia": 21.185,
+   "ten": 24.897,
+   "nfire": 29.17,
+   "care": 30.962
   },
   "cues": [
    [
     0.25,
-    "A quick science check on this chapter."
+    "Let's gather the key ideas of this chapter."
    ],
    [
-    2.579,
-    "Well supported: adult brains keep changing, connections strengthen with use and weaken with disuse, emotion helps memory, and rich surroundings grow connections."
+    3.042,
+    "Your brain keeps changing all through adult life."
    ],
    [
-    14.115,
-    "Less certain: the book says we inherit about half of our neural networks, but there is no solid number behind that."
+    6.167,
+    "Connections strengthen with use and fade with disuse, emotion seals memories, and rich surroundings grow connections."
    ],
    [
-    21.595,
-    "And the claim that glial cells outnumber neurons ten to one is an old myth."
+    14.36,
+    "The book also says we inherit about half of our neural networks, and build the rest through what we learn."
    ],
    [
-    27.224,
-    "The real ratio is closer to one to one."
+    21.185,
+    "And it describes the glial cells that support our neurons, about ten of them for every neuron, by the book's count."
+   ],
+   [
+    29.17,
+    "Neurons carry the signals, and glia keep them fed and protected."
    ]
   ]
  },

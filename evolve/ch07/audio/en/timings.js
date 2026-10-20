@@ -280,7 +280,7 @@ window.TIMINGS = {
   ]
  },
  "flashbulb": {
-  "dur": 37.747,
+  "dur": 39.288,
   "marks": {
    "call": 4.022,
    "offer": 5.728,
@@ -291,8 +291,9 @@ window.TIMINGS = {
    "spike": 14.428,
    "stronger": 17.158,
    "check": 22.726,
-   "change": 29.598,
-   "vivid": 34.998
+   "inside": 29.446,
+   "change": 32.002,
+   "vivid": 36.184
   },
   "cues": [
    [
@@ -313,33 +314,29 @@ window.TIMINGS = {
    ],
    [
     22.726,
-    "Now a science check."
+    "In the book's view, what fixes a memory like this is a meeting of two things: what happened outside, and the change she felt inside."
    ],
    [
-    24.363,
-    "Memories like this feel crystal clear."
+    32.002,
+    "Years later, the details still come back, carried by that feeling."
    ],
    [
-    26.942,
-    "But studies of such vivid memories find that the details quietly change over the years, while our confidence stays high."
-   ],
-   [
-    34.998,
-    "Vivid does not always mean accurate."
+    36.184,
+    "We record a moment by how it made us feel."
    ]
   ]
  },
  "recall": {
-  "dur": 31.373,
+  "dur": 34.351,
   "marks": {
    "hostel": 2.717,
    "warm": 8.251,
    "fires": 10.743,
    "good": 16.547,
    "rewrite": 21.009,
-   "each": 22.727,
-   "edit": 26.716,
-   "rebuilt": 28.546
+   "each": 23.67,
+   "edit": 27.798,
+   "rebuilt": 31.061
   },
   "cues": [
    [
@@ -364,11 +361,15 @@ window.TIMINGS = {
    ],
    [
     21.009,
-    "One thing the book doesn't mention: each time we recall a memory, the brain stores it again, slightly edited."
+    "In Dispenza's view, this is chemistry."
    ],
    [
-    28.546,
-    "Memories are rebuilt, not replayed."
+    23.67,
+    "Each time we remember, the network releases the same chemicals, and the body feels much as it did back then."
+   ],
+   [
+    31.061,
+    "Remembering the past, we feel it again, now."
    ]
   ]
  },
@@ -387,7 +388,7 @@ window.TIMINGS = {
   ]
  },
  "growth": {
-  "dur": 45.505,
+  "dur": 49.476,
   "marks": {
    "fire": 2.607,
    "back": 9.706,
@@ -395,11 +396,11 @@ window.TIMINGS = {
    "contact": 16.874,
    "drum": 18.891,
    "sci": 26.393,
-   "bdnf": 31.38,
-   "meta": 35.05,
-   "ways": 38.504,
-   "sleep": 39.56,
-   "learn": 42.696
+   "wire": 32.131,
+   "hungry": 36.323,
+   "ways": 40.423,
+   "learn": 43.335,
+   "novel": 46.695
   },
   "cues": [
    [
@@ -420,15 +421,15 @@ window.TIMINGS = {
    ],
    [
     26.393,
-    "The book names one growth factor, NGF, and says neurons crave it."
+    "The book names the growth factor at work here: nerve growth factor, or NGF."
    ],
    [
-    31.38,
-    "In the adult cortex the best studied one is BDNF, and craving is a metaphor, not chemistry."
+    32.131,
+    "It is the chemical that turns repeated firing into lasting wiring, and in the book's picture, neurons are hungry for it."
    ],
    [
-    38.504,
-    "Exercise and good sleep also raise BDNF, so learning is not the only way to make it."
+    40.423,
+    "According to the book, there are two ways to make it: learning new things with repetition and attention, and having new experiences."
    ]
   ]
  },
@@ -701,55 +702,70 @@ window.TIMINGS = {
   ]
  },
  "scicheck": {
-  "dur": 38.217,
+  "dur": 37.616,
   "marks": {
-   "solid": 2.649,
-   "s1": 3.62,
-   "s2": 6.254,
-   "s3": 9.262,
-   "s4": 12.516,
-   "model": 15.179,
-   "m1": 15.969,
-   "m2": 19.457,
-   "pers": 24.882,
-   "traits": 28.317,
-   "shift": 30.994
+   "solid": 3.042,
+   "s1": 4.566,
+   "s2": 8.288,
+   "s3": 11.436,
+   "s4": 14.513,
+   "model": 17.536,
+   "m1": 19.54,
+   "m2": 22.516,
+   "pers": 27.59,
+   "shift": 33.007
   },
   "cues": [
    [
     0.25,
-    "A short science check on this chapter."
+    "Let's gather the key ideas of this chapter."
    ],
    [
-    2.649,
-    "Well supported: repetition strengthens synapses, new learning hooks onto existing knowledge, emotion and novelty strengthen memory, and growth factors help synapses grow."
+    3.042,
+    "First, how we learn."
    ],
    [
-    15.179,
-    "Less certain: the book's claim that every memory carries a feeling, and that brain scans show people firing the same signature day after day."
+    4.566,
+    "Repetition strengthens the connections between neurons."
    ],
    [
-    24.882,
-    "And personality is more than repeated thoughts."
+    8.288,
+    "New learning hooks onto what we already know."
    ],
    [
-    28.317,
-    "Traits are partly inherited and fairly stable, yet they shift slowly across life."
+    11.436,
+    "Novelty and emotion make a memory last."
    ],
    [
-    33.963,
-    "Habits of thought are one real lever, not the whole story."
+    14.513,
+    "And growth factor helps new connections grow."
+   ],
+   [
+    17.536,
+    "Then, memory and the self."
+   ],
+   [
+    19.54,
+    "In the book's view, every memory carries a feeling, and each of us fires a familiar signature of thought, day after day."
+   ],
+   [
+    27.59,
+    "Our personality is built from what we inherit, what we learn and what we live."
+   ],
+   [
+    33.007,
+    "And by choosing new thoughts, again and again, we can wire it anew."
    ]
   ]
  },
  "wrap": {
-  "dur": 28.395,
+  "dur": 28.787,
   "marks": {
    "w1": 1.391,
    "w2": 7.562,
    "w3": 15.39,
-   "w4": 20.676,
-   "end": 26.004
+   "w4": 21.064,
+   "end": 26.391
   },
   "cues": [
    [
@@ -766,14 +782,14 @@ window.TIMINGS = {
    ],
    [
     15.39,
-    "Novelty and emotion make memories strong, but vivid is not always accurate."
+    "Novelty and emotion make memories strong, and each memory brings its feeling back."
    ],
    [
-    20.676,
+    21.064,
     "Thoughts repeated daily become automatic, and over time, part of who we are."
    ],
    [
-    26.004,
+    26.391,
     "Now, try the chapter practice."
    ]
   ]

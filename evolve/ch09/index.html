@@ -59,9 +59,9 @@ Object.assign(TXT.en, {
   wantMore: 'more, please', flooded: 'flooded', switchedOff: 'switched off', howStrong: 'how strongly you feel it', normal: 'normal',
   sameDose: 'same dose', biggerDose: 'bigger dose', tolerance: 'Tolerance', toleranceD: 'more worry · more anger · more drama',
   dna: 'DNA', proteins: 'proteins', skin: 'skin', joints: 'joints', enzymes: 'enzymes', geneA: 'busy gene', asleep: 'asleep',
-  day: 'day {n}', lowerQ: 'lower quality parts', sciCheck: 'Science check',
-  sci1: 'Strong evidence: chronic stress hormones, like cortisol, wear the body down.',
-  sci2: 'The author’s model: cells retuning their receptors to everyday emotions. Useful, not proven.',
+  day: 'day {n}', lowerQ: 'lower quality parts', keyIdeas: 'Key ideas',
+  key1: 'A feeling repeated every day sends the same signal to the genes.',
+  key2: 'In Dispenza’s view, cells retune themselves to the emotions we live in most.',
   supply: 'supply', low: 'running low', full: 'refilled', oldArg: 'an old argument', insult: 'a past insult',
   whisper1: 'Remember how he said it?', whisper2: 'They never listen to you.',
   worryT: 'worried thought', worryC: 'chemistry of worry', uneasy: 'body feels uneasy', proof: 'brain reads it as proof', panic: 'ready to panic',
@@ -102,9 +102,9 @@ Object.assign(TXT.ml, {
   wantMore: 'ഇനിയും വേണം', flooded: 'നിറഞ്ഞൊഴുകുന്നു', switchedOff: 'ഓഫ് ചെയ്തു', howStrong: 'എത്ര ശക്തമായി അനുഭവപ്പെടുന്നു', normal: 'സാധാരണ',
   sameDose: 'അതേ അളവ്', biggerDose: 'കൂടിയ അളവ്', tolerance: 'സഹിഷ്ണുത', toleranceD: 'കൂടുതൽ ആശങ്ക · കൂടുതൽ ദേഷ്യം · കൂടുതൽ നാടകം',
   dna: 'ഡി എൻ എ', proteins: 'പ്രോട്ടീനുകൾ', skin: 'ചർമ്മം', joints: 'സന്ധികൾ', enzymes: 'എൻസൈമുകൾ', geneA: 'തിരക്കുള്ള ജീൻ', asleep: 'ഉറങ്ങുന്നു',
-  day: 'ദിവസം {n}', lowerQ: 'ഗുണം കുറഞ്ഞ ഭാഗങ്ങൾ', sciCheck: 'ശാസ്ത്രീയ പരിശോധന',
-  sci1: 'ശക്തമായ തെളിവ്: കോർട്ടിസോൾ പോലുള്ള സ്ട്രെസ് ഹോർമോണുകൾ ദീർഘകാലം ശരീരത്തെ തളർത്തുന്നു.',
-  sci2: 'ഗ്രന്ഥകാരന്റെ മാതൃക: ദൈനംദിന വികാരങ്ങൾക്കനുസരിച്ച് കോശങ്ങൾ റിസപ്റ്ററുകൾ മാറ്റുന്നു. ഉപകാരപ്രദം, തെളിയിക്കപ്പെട്ടതല്ല.',
+  day: 'ദിവസം {n}', lowerQ: 'ഗുണം കുറഞ്ഞ ഭാഗങ്ങൾ', keyIdeas: 'പ്രധാന ആശയങ്ങൾ',
+  key1: 'ദിവസവും ആവർത്തിക്കുന്ന വികാരം ജീനുകളിലേക്ക് ഒരേ സന്ദേശം അയയ്ക്കുന്നു.',
+  key2: 'ഡിസ്പെൻസയുടെ കാഴ്ചപ്പാടിൽ, നാം ഏറ്റവും കൂടുതൽ ജീവിക്കുന്ന വികാരങ്ങൾക്കനുസരിച്ച് കോശങ്ങൾ സ്വയം മാറുന്നു.',
   supply: 'സ്റ്റോക്ക്', low: 'കുറയുന്നു', full: 'വീണ്ടും നിറഞ്ഞു', oldArg: 'ഒരു പഴയ വഴക്ക്', insult: 'പണ്ടത്തെ ഒരു അപമാനം',
   whisper1: 'അവൻ അത് പറഞ്ഞത് ഓർക്കുന്നില്ലേ?', whisper2: 'ആരും നിന്നെ കേൾക്കുന്നില്ല.',
   worryT: 'ആശങ്കയുള്ള ചിന്ത', worryC: 'ആശങ്കയുടെ രസതന്ത്രം', uneasy: 'ശരീരത്തിന് അസ്വസ്ഥത', proof: 'തലച്ചോർ അത് തെളിവായി വായിക്കുന്നു', panic: 'പരിഭ്രാന്തിക്ക് തയ്യാർ',
@@ -123,7 +123,7 @@ Object.assign(TXT.ml, {
   practice: 'അധ്യായ പരിശീലനം',
 });
 
-const CHAPTER = { number: 9, title: L('title'), minutes: LANG === 'ml' ? 10 : 10, language: LANG, next: '../ch10/index.html' };
+const CHAPTER = { number: 9, title: L('title'), minutes: LANG === 'ml' ? 10 : 9, language: LANG, next: '../ch10/index.html' };
 const fmt = (k, n) => L(k).replace('{n}', n);
 
 /* ---------- chapter helpers ---------- */
@@ -537,22 +537,21 @@ const BEATS = [
     // wear: the parts come out dull
     prods.forEach((g, i) => { tw(g, { o: .45 }, m('wear') + i * .3, .6); });
     lab(p, 'lowerQ', 600, 820, m('wear') + .8, { size: 28, fill: EV.dim, italic: true });
-    // science check, on its own picture
+    // key ideas recap, on its own picture
     const sc = panel(m('note'));
     const sg = G(sc, { o: 0 });
-    evText(sg, L('sciCheck'), { x: 800, y: 210, size: 64, font: SERIF, weight: 600, fill: EV.gold });
-    const row = (y, ok, k, t) => {
+    evText(sg, L('keyIdeas'), { x: 800, y: 210, size: 64, font: SERIF, weight: 600, fill: EV.gold });
+    const row = (y, k, t) => {
       const g = G(sg, { x: 230, y, o: 0 });
-      if (ok) { mk('circle', { cx: 0, cy: 0, r: 30, fill: EV.calm, opacity: .2 }, g); path(g, 'M-13 1L-3 11L15 -11', { stroke: EV.calm, 'stroke-width': 5 }); }
-      else { mk('circle', { cx: 0, cy: 0, r: 30, fill: 'none', stroke: EV.gold, 'stroke-width': 3, 'stroke-dasharray': '6 7' }, g); path(g, 'M-12 0H12', { stroke: EV.gold, 'stroke-width': 5 }); }
+      mk('circle', { cx: 0, cy: 0, r: 30, fill: EV.gold, opacity: .18 }, g); path(g, 'M-13 1L-3 11L15 -11', { stroke: EV.gold, 'stroke-width': 5 });
       const tx = evPara(g, L(k), { x: 70, y: -8, size: 36, maxW: 1060, anchor: 'start', fill: EV.ink });
       put(tx, { y: -tx._h / 2 + 22 });
       tw(g, { o: 1, x: 230 }, t, .6, out);
       return g;
     };
     tw(sg, { o: 1 }, m('note') + .1, .4);
-    row(420, true, 'sci1', m('strong'));
-    row(620, false, 'sci2', m('model'));
+    row(420, 'key1', m('strong'));
+    row(620, 'key2', m('model'));
   }],
 
   ['memory', 'b_mem', (m, D) => {
@@ -872,12 +871,12 @@ Object.assign(TXT.en, {
   p3y: 'Discomfort is a sign of leaving the harbour, not of going the wrong way. Consistency builds the new loop.',
   p3nb: 'Feeling right is exactly what the old chemistry produces. Using that feeling as the guide leads straight back.',
   p3nc: 'The feeling is real chemistry. Naming it as withdrawal helps more than denying it.',
-  p4p: 'Science check: mark each statement true or false.',
-  p4r1: 'Chronic stress hormones such as cortisol can wear the body down over time.',
-  p4r2: 'It is firmly proven in humans that cells grow extra receptors for everyday emotions like anger.',
-  p4r3: 'Peptides travel through the blood and dock on receptors on cells.',
-  p4w1: 'True. This is well supported by research on chronic stress.', p4w2: 'False. This is the author’s model, extrapolated from receptor science. Useful, not proven.',
-  p4w3: 'True. Receptor binding is how many peptide hormones act on cells.',
+  p4p: 'According to the book: mark each statement true or false.',
+  p4r1: 'According to the book, the same feeling repeated every day keeps the same genes busy and leaves others asleep.',
+  p4r2: 'According to the book, a feeling you repeat every day leaves your cells just as they were.',
+  p4r3: 'According to the book, peptides travel through the blood and dock on receptors on cells.',
+  p4w1: 'True. The book describes the same daily signal keeping the same genes at work.', p4w2: 'False. In Dispenza’s view, cells retune their receptors to the feelings we repeat, so the body starts asking for them.',
+  p4w3: 'True. In the book, a peptide fits its receptor like a key in a lock, and changes the cell from inside.',
 });
 Object.assign(TXT.ml, {
   q1p: 'രവിയുടെ ചോദ്യം സാധാരണമായിരുന്നു. ലീനയ്ക്ക് ആ ദേഷ്യം ഓഫ് ചെയ്യാൻ കഴിയാത്തത് എന്തുകൊണ്ട്?',
@@ -913,18 +912,18 @@ Object.assign(TXT.ml, {
   p3y: 'അസ്വസ്ഥത തുറമുഖം വിടുന്നതിന്റെ അടയാളമാണ്, തെറ്റായ വഴിയുടേതല്ല. സ്ഥിരത പുതിയ ചക്രം പണിയുന്നു.',
   p3nb: '“ശരിയാണെന്ന തോന്നൽ” തന്നെയാണ് പഴയ രസതന്ത്രം ഉണ്ടാക്കുന്നത്. അതിനെ വഴികാട്ടിയാക്കിയാൽ നേരെ തിരിച്ചുപോകും.',
   p3nc: 'ആ വികാരം യഥാർത്ഥ രസതന്ത്രമാണ്. അതിനെ നിഷേധിക്കുന്നതിനേക്കാൾ വിത്ഡ്രോവൽ എന്ന് പേരിടുന്നതാണ് സഹായകരം.',
-  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
-  p4r1: 'കോർട്ടിസോൾ പോലുള്ള ദീർഘകാല സ്ട്രെസ് ഹോർമോണുകൾ കാലക്രമേണ ശരീരത്തെ തളർത്താം.',
-  p4r2: 'ദേഷ്യം പോലുള്ള ദൈനംദിന വികാരങ്ങൾക്കായി കോശങ്ങൾ കൂടുതൽ റിസപ്റ്ററുകൾ വളർത്തുന്നു എന്നത് മനുഷ്യരിൽ ഉറപ്പായി തെളിയിക്കപ്പെട്ടതാണ്.',
-  p4r3: 'പെപ്റ്റൈഡുകൾ രക്തത്തിലൂടെ സഞ്ചരിച്ച് കോശങ്ങളിലെ റിസപ്റ്ററുകളിൽ ചേരുന്നു.',
-  p4w1: 'ശരി. ദീർഘകാല സ്ട്രെസിനെ കുറിച്ചുള്ള ഗവേഷണം ഇതിനെ നന്നായി പിന്തുണയ്ക്കുന്നു.', p4w2: 'തെറ്റ്. ഇത് റിസപ്റ്റർ ശാസ്ത്രത്തിൽ നിന്ന് വികസിപ്പിച്ച ഗ്രന്ഥകാരന്റെ മാതൃകയാണ്. ഉപകാരപ്രദം, തെളിയിക്കപ്പെട്ടതല്ല.',
-  p4w3: 'ശരി. പല പെപ്റ്റൈഡ് ഹോർമോണുകളും കോശങ്ങളിൽ പ്രവർത്തിക്കുന്നത് ഇങ്ങനെയാണ്.',
+  p4p: 'പുസ്തകം അനുസരിച്ച്: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'പുസ്തകം അനുസരിച്ച്, ദിവസവും ആവർത്തിക്കുന്ന ഒരേ വികാരം ഒരേ ജീനുകളെ തിരക്കിലാക്കുന്നു, ബാക്കിയുള്ളവ ഉറങ്ങുന്നു.',
+  p4r2: 'പുസ്തകം അനുസരിച്ച്, ദിവസവും ആവർത്തിക്കുന്ന ഒരു വികാരം കോശങ്ങളെ ഒട്ടും മാറ്റുന്നില്ല.',
+  p4r3: 'പുസ്തകം അനുസരിച്ച്, പെപ്റ്റൈഡുകൾ രക്തത്തിലൂടെ സഞ്ചരിച്ച് കോശങ്ങളിലെ റിസപ്റ്ററുകളിൽ ചേരുന്നു.',
+  p4w1: 'ശരി. ദിവസവും വരുന്ന ഒരേ സന്ദേശം ഒരേ ജീനുകളെ പണിയെടുപ്പിക്കുന്നു എന്ന് പുസ്തകം വിവരിക്കുന്നു.', p4w2: 'തെറ്റ്. ഡിസ്പെൻസയുടെ കാഴ്ചപ്പാടിൽ, ആവർത്തിക്കുന്ന വികാരങ്ങൾക്കനുസരിച്ച് കോശങ്ങൾ റിസപ്റ്ററുകൾ മാറ്റുന്നു. അപ്പോൾ ശരീരം ആ വികാരം ചോദിച്ചുതുടങ്ങുന്നു.',
+  p4w3: 'ശരി. പുസ്തകത്തിൽ, താക്കോൽ പൂട്ടിൽ ചേരുന്നതുപോലെ പെപ്റ്റൈഡ് റിസപ്റ്ററിൽ ചേർന്ന് കോശത്തെ അകത്തുനിന്ന് മാറ്റുന്നു.',
 });
 const PRACTICE = [
   { id: 'p-partner', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 0, L('p1y'), [null, L('p1nb'), L('p1nc')]) },
   { id: 'p-anxiety', prompt: [L('p2p')], build: choice([[L('p2b')], [L('p2a')], [L('p2c')]], 1, L('p2y'), [L('p2nb'), null, L('p2nc')]) },
   { id: 'p-coach', prompt: [L('p3p')], build: choice([[L('p3b')], [L('p3c')], [L('p3a')]], 2, L('p3y'), [L('p3nb'), L('p3nc'), null]) },
-  { id: 'p-science', prompt: [L('p4p')], build: grid([
+  { id: 'p-ideas', prompt: [L('p4p')], build: grid([
     { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
     { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
     { parts: [L('p4r3')], ans: ['t'], why: L('p4w3') },
