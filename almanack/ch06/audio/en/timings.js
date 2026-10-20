@@ -1,9 +1,9 @@
 window.TIMINGS = {
  "intro": {
-  "dur": 10.584,
+  "dur": 8.304,
   "marks": {
    "title": 1.329,
-   "sub": 3.553
+   "sub": 3.539
   },
   "cues": [
    [
@@ -15,158 +15,132 @@ window.TIMINGS = {
     "Work that feels like play, and luck."
    ],
    [
-    3.553,
-    "Why play beats grind, what real retirement means, and four kinds of luck, from pure chance to the kind you build."
+    3.539,
+    "Why play beats grind, what real retirement means, and four kinds of luck."
    ]
   ]
  },
  "history": {
-  "dur": 31.824,
+  "dur": 22.392,
   "marks": {
-   "hunt": 2.566,
-   "farm": 7.026,
-   "factory": 10.934,
-   "internet": 16.026,
-   "own": 19.671,
-   "fail": 22.158,
-   "learns": 26.5,
-   "companies": 30.368
+   "hunt": 1.447,
+   "farm": 4.434,
+   "factory": 7.039,
+   "internet": 9.329,
+   "own": 10.566,
+   "fail": 13.066,
+   "learns": 17.092,
+   "companies": 20.947
   },
   "cues": [
    [
-    0.145,
-    "For most of human history, people lived by hunting and gathering in small bands."
+    0.105,
+    "Our ancestors lived by hunting and gathering, with no boss."
    ],
    [
-    5.5,
-    "Nobody had a boss."
+    4.434,
+    "Farming brought landlords and labourers."
    ],
    [
-    7.026,
-    "Farming brought landlords, and labourers to work their land."
+    7.039,
+    "Factories made the ladder taller."
    ],
    [
-    10.934,
-    "Factories made the ladder taller, because no single worker could build a factory."
+    9.053,
+    "Now the internet lets more people work for themselves."
    ],
    [
-    15.724,
-    "Now the internet is tipping things back, and a growing number of people can work for themselves."
+    12.145,
+    "Naval would rather fail at his own venture than never try: even a failed founder learns to stand on their own feet."
    ],
    [
-    21.237,
-    "Naval would rather fail at his own venture than never try, because even a failed founder learns to stand on their own feet."
-   ],
-   [
-    28.724,
+    19.303,
     "He dreams of nearly as many companies as people."
    ]
   ]
  },
  "games": {
-  "dur": 30.0,
+  "dur": 21.024,
   "marks": {
-   "needed": 2.934,
-   "problems": 4.868,
-   "games": 9.0,
-   "school": 10.908,
-   "social": 12.092,
-   "money": 13.434,
-   "status": 14.474,
-   "next": 19.566,
-   "treadmill": 22.158,
-   "see": 27.066
-  },
-  "cues": [
-   [
-    0.118,
-    "Why work at all?"
-   ],
-   [
-    1.25,
-    "Naval learned to make money because he needed it."
-   ],
-   [
-    3.961,
-    "Once he didn't, problems interested him far more than money."
-   ],
-   [
-    7.592,
-    "He sees life as a string of games."
-   ],
-   [
-    9.987,
-    "As a child you play the school game."
-   ],
-   [
-    11.908,
-    "Then the social game."
-   ],
-   [
-    13.224,
-    "Then the money game, and the status game, each with a longer horizon."
-   ],
-   [
-    17.447,
-    "Every goal you reach just opens the next one."
-   ],
-   [
-    20.553,
-    "Naval wants off what he calls the hedonic treadmill, where you keep running and stay in the same place."
-   ],
-   [
-    26.776,
-    "Once you see the games as games, you can step off."
-   ]
-  ]
- },
- "retire": {
-  "dur": 29.832,
-  "marks": {
-   "freedom": 1.211,
-   "sixty": 5.842,
-   "trading": 8.921,
-   "feels": 11.724,
-   "roads": 15.079,
-   "one": 16.434,
-   "cover": 20.079,
-   "two": 21.553,
-   "nothing": 22.618,
-   "three": 25.434,
-   "love": 26.276
+   "needed": 1.395,
+   "problems": 3.276,
+   "games": 6.224,
+   "school": 6.987,
+   "social": 7.789,
+   "money": 8.671,
+   "status": 9.184,
+   "next": 12.868,
+   "treadmill": 14.092,
+   "see": 17.974
   },
   "cues": [
    [
     0.105,
-    "What you're really after is freedom, starting with freedom from money worries."
+    "Naval made money because he needed it; after that, problems interested him more."
    ],
    [
-    4.461,
+    5.211,
+    "Life is a string of games: school, social, money, status, each one longer."
+   ],
+   [
+    11.513,
+    "Every goal just opens the next."
+   ],
+   [
+    13.789,
+    "That's the hedonic treadmill: running hard, staying in place."
+   ],
+   [
+    17.974,
+    "See the games as games, and you can step off."
+   ]
+  ]
+ },
+ "retire": {
+  "dur": 24.456,
+  "marks": {
+   "freedom": 1.184,
+   "sixty": 4.461,
+   "trading": 7.355,
+   "later": 9.092,
+   "feels": 9.855,
+   "roads": 11.987,
+   "one": 13.513,
+   "r1": 14.171,
+   "cover": 15.329,
+   "two": 16.842,
+   "nothing": 17.882,
+   "three": 20.566,
+   "love": 21.408
+  },
+  "cues": [
+   [
+    0.118,
+    "What you're really after is freedom from money worries."
+   ],
+   [
+    3.079,
     "Naval's retirement isn't sixty-five and a pension."
    ],
    [
-    8.0,
-    "It's the day you stop trading today away for some imagined later."
+    6.632,
+    "It's when you stop trading today for some imagined later, and today feels whole on its own."
    ],
    [
-    11.605,
-    "When today feels whole on its own, you're retired."
+    11.987,
+    "Three roads lead there."
    ],
    [
-    14.855,
-    "There are three roads there."
+    13.513,
+    "One: savings whose income covers what you spend."
    ],
    [
-    16.434,
-    "One: savings that earn enough, without your work, to cover what you spend."
+    16.842,
+    "Two: cut your spending close to nothing, like a monk."
    ],
    [
-    21.553,
-    "Two: bring your spending close to nothing, like a monk."
-   ],
-   [
-    25.434,
-    "Three: do work you love so much that money stops being the point."
+    20.566,
+    "Three: do work you love, so money stops being the point."
    ]
   ]
  },
@@ -185,19 +159,19 @@ window.TIMINGS = {
   ]
  },
  "authentic": {
-  "dur": 26.856,
+  "dur": 22.392,
   "marks": {
    "competition": 1.0,
-   "authentic": 2.618,
-   "love": 6.0,
-   "hiba": 7.658,
-   "calligraphy": 11.842,
-   "matched": 14.737,
-   "wedding": 17.224,
-   "leverage": 19.013,
-   "name": 22.184,
-   "risk": 24.566,
-   "reward": 25.947
+   "authentic": 2.684,
+   "love": 4.776,
+   "hiba": 5.855,
+   "calligraphy": 8.934,
+   "matched": 10.868,
+   "wedding": 13.263,
+   "leverage": 15.039,
+   "name": 18.026,
+   "risk": 20.263,
+   "reward": 21.5
   },
   "cues": [
    [
@@ -205,114 +179,91 @@ window.TIMINGS = {
     "How do you escape the competition trap?"
    ],
    [
-    2.5,
-    "Be authentic."
+    2.487,
+    "Be authentic: do what you're best at because you love it."
    ],
    [
-    3.671,
-    "Find what you do better than anyone, because you love doing it."
+    5.855,
+    "Hiba in Thrissur has loved Malayalam and Arabic calligraphy since school."
    ],
    [
-    7.434,
-    "Meet Hiba in Thrissur."
+    10.684,
+    "She matched it to what people want: hand-lettered wedding cards."
    ],
    [
-    9.079,
-    "Since school she has loved Malayalam and Arabic calligraphy."
+    14.5,
+    "She added leverage, a printer and an online shop, and her name on every card."
    ],
    [
-    12.921,
-    "Nobody had to push her."
-   ],
-   [
-    14.447,
-    "Then she matched it to what people want: hand-lettered wedding cards."
-   ],
-   [
-    18.474,
-    "She added leverage, a printer and an online shop, and put her name on every card."
-   ],
-   [
-    23.908,
-    "She carries the risk, and she owns the reward."
+    19.724,
+    "Hers is the risk, and hers the reward."
    ]
   ]
  },
  "play": {
-  "dur": 34.824,
+  "dur": 27.024,
   "marks": {
-   "art": 2.961,
-   "own": 5.921,
-   "side": 11.224,
-   "desperate": 13.342,
-   "tech": 19.118,
-   "looks": 23.895,
-   "play": 25.434,
-   "grinding": 27.132,
-   "keeps": 29.382,
-   "all": 31.197,
-   "shift": 32.829
+   "art": 2.079,
+   "own": 4.026,
+   "loving": 5.25,
+   "making": 5.987,
+   "playing": 6.434,
+   "side": 7.711,
+   "desperate": 9.355,
+   "tech": 14.737,
+   "looks": 16.816,
+   "play": 18.013,
+   "grinding": 19.079,
+   "keeps": 21.526,
+   "all": 23.316,
+   "shift": 24.895
   },
   "cues": [
    [
-    0.171,
-    "For Naval, building businesses has become a kind of art."
+    0.184,
+    "For Naval, business has become art: done purely for its own sake, like loving, making or playing."
    ],
    [
-    3.776,
-    "Art is anything you do purely for its own sake: loving someone, making something, playing."
+    7.316,
+    "Money is a side effect."
    ],
    [
-    9.947,
-    "The money comes almost as a side effect."
+    8.868,
+    "Young and desperate, he'd have taken any business, even hauling waste."
    ],
    [
-    12.395,
-    "When he was young and desperate, he'd have taken any business going, even hauling waste."
+    13.868,
+    "He's glad he chose technology and science."
    ],
    [
-    18.184,
-    "He's glad he chose technology and science, which he truly enjoys."
+    16.684,
+    "What looks like work to others is play to him."
    ],
    [
-    22.632,
-    "Here's his edge."
+    19.0,
+    "A grinding rival stops at night; the one playing keeps going."
    ],
    [
-    23.776,
-    "What looks like work to others feels like play to him."
-   ],
-   [
-    26.408,
-    "A rival who is grinding stops at night."
-   ],
-   [
-    28.921,
-    "The one who's playing keeps going."
-   ],
-   [
-    30.789,
-    "And it isn't all or nothing."
-   ],
-   [
-    32.592,
-    "You can shift toward play a little each year."
+    22.961,
+    "It isn't all or nothing: shift toward play a little each year."
    ]
   ]
  },
  "check": {
-  "dur": 27.72,
+  "dur": 25.56,
   "marks": {
    "sci": 0.118,
-   "review": 3.868,
-   "enjoy": 6.882,
-   "quality": 9.066,
-   "quantity": 12.105,
-   "edge": 14.263,
-   "sixteen": 15.632,
-   "fiftyfive": 20.5,
-   "stroke": 23.618,
-   "sleep": 26.276
+   "q": 1.263,
+   "review": 3.553,
+   "enjoy": 6.539,
+   "quality": 8.658,
+   "pay": 10.0,
+   "quantity": 11.763,
+   "edge": 12.987,
+   "sixteen": 14.224,
+   "fiftyfive": 16.145,
+   "stroke": 18.618,
+   "sleep": 24.105
   },
   "cues": [
    [
@@ -321,50 +272,51 @@ window.TIMINGS = {
    ],
    [
     1.263,
-    "Does play really beat grind?"
+    "Does play beat grind?"
    ],
    [
-    3.039,
+    2.737,
     "Partly."
    ],
    [
-    3.803,
-    "A review of forty years of studies found that people who enjoy the work itself turn out better quality, while pay and bonuses mostly push up quantity."
+    3.5,
+    "A review of forty years of studies found that people who enjoy the work itself do better quality work, while pay and bonuses mostly raise quantity."
    ],
    [
-    13.066,
-    "So enjoyment is a real edge."
+    12.75,
+    "That's a real edge."
    ],
    [
-    15.513,
-    "But sixteen-hour days are another matter."
+    14.118,
+    "But sixteen-hour days?"
    ],
    [
-    17.934,
-    "The World Health Organization estimates that working fifty-five hours or more a week raises the risk of stroke by about a third."
+    15.776,
+    "Working fifty-five hours a week or more raises stroke risk by about a third, the World Health Organization estimates."
    ],
    [
-    25.474,
+    23.303,
     "Even play needs sleep and rest."
    ]
   ]
  },
  "lust": {
-  "dur": 39.408,
+  "dur": 29.112,
   "marks": {
    "money": 1.316,
-   "craving": 2.303,
-   "bottom": 6.526,
-   "fear": 11.25,
-   "shafeeq": 13.776,
-   "car": 16.789,
-   "flat": 17.829,
-   "climbs": 18.829,
-   "faisal": 22.539,
-   "gap": 26.0,
-   "lifestyle": 29.118,
-   "lumps": 32.329,
-   "freedom": 35.132
+   "craving": 2.132,
+   "bottom": 4.526,
+   "fear": 8.803,
+   "shafeeq": 11.026,
+   "car": 12.855,
+   "flat": 14.145,
+   "climbs": 16.513,
+   "faisal": 18.461,
+   "life": 19.303,
+   "gap": 20.763,
+   "lifestyle": 23.737,
+   "lumps": 25.842,
+   "freedom": 27.803
   },
   "cues": [
    [
@@ -372,48 +324,28 @@ window.TIMINGS = {
     "Naval has nothing against money."
    ],
    [
-    2.053,
-    "It's the craving for it that does harm, and mostly to you."
+    2.066,
+    "The craving is what hurts, and it has no bottom: no number switches it off."
    ],
    [
-    5.684,
-    "The craving has no bottom."
+    7.197,
+    "The more you have, the more you fear losing it."
    ],
    [
-    7.382,
-    "It never switches off at some number."
+    10.224,
+    "Faisal's cousin Shafeeq in Dubai gets a bigger car, then a bigger flat, with every raise."
    ],
    [
-    9.487,
-    "And the more you have, the more you fear losing it."
+    16.382,
+    "His spending climbs with his pay."
    ],
    [
-    12.605,
-    "Look at Faisal's cousin Shafeeq in Dubai."
+    18.461,
+    "Faisal keeps his life the same, so the gap keeps widening."
    ],
    [
-    15.408,
-    "Every raise brings a bigger car, a bigger flat."
-   ],
-   [
-    18.711,
-    "His spending climbs with his pay, so nothing is left over."
-   ],
-   [
-    22.539,
-    "Faisal keeps his life the same as his pay rises, so the gap keeps widening."
-   ],
-   [
-    27.776,
-    "Naval's advice: hold your lifestyle fixed, and if you can, earn in big lumps rather than a trickle."
-   ],
-   [
-    34.447,
-    "For him, freedom comes first."
-   ],
-   [
-    36.684,
-    "Money is good to the extent it buys freedom."
+    22.408,
+    "Naval's advice: hold your lifestyle fixed, earn in big lumps if you can, and put freedom first."
    ]
   ]
  },
@@ -436,57 +368,53 @@ window.TIMINGS = {
   ]
  },
  "ride": {
-  "dur": 30.216,
+  "dur": 20.616,
   "marks": {
-   "join": 4.618,
-   "takes": 6.513,
-   "promoted": 11.605,
-   "arun": 15.211,
-   "infopark": 18.25,
-   "people": 23.316,
-   "lead": 25.882,
-   "remember": 28.961
+   "join": 2.882,
+   "takes": 4.303,
+   "promoted": 5.605,
+   "arun": 8.553,
+   "infopark": 11.355,
+   "people": 14.368,
+   "lead": 16.921,
+   "remember": 19.382
   },
   "cues": [
    [
     0.105,
-    "Must you start a company to do well?"
+    "Must you start a company?"
    ],
    [
-    2.184,
+    1.553,
     "No."
    ],
    [
-    2.895,
-    "Many of the most successful people join a young company just as it takes off, when customers suddenly want what it makes."
+    2.263,
+    "Many winners join a young company as it takes off, and get promoted early, with less red tape."
    ],
    [
-    10.158,
-    "In a small team you can be promoted early, with less red tape in the way."
+    8.211,
+    "Picture Arun at a forty-person startup in Kochi's Infopark."
    ],
    [
-    14.855,
-    "Picture Arun joining a forty-person startup in Kochi's Infopark."
+    12.5,
+    "The best thing the job gives him is the people around him."
    ],
    [
-    19.408,
-    "Early in a career, the most valuable thing a job gives you is the people around you."
-   ],
-   [
-    24.711,
-    "Ten years on, they lead teams and start companies of their own, and they remember Arun."
+    15.658,
+    "Ten years on, they lead teams and start companies, and they remember Arun."
    ]
   ]
  },
  "universes": {
-  "dur": 17.568,
+  "dur": 14.664,
   "marks": {
    "luck": 0.303,
-   "without": 2.0,
-   "thousand": 4.053,
-   "fifty": 7.934,
-   "all": 11.171,
-   "four": 16.474
+   "without": 2.013,
+   "thousand": 3.671,
+   "fifty": 7.276,
+   "all": 10.211,
+   "four": 13.461
   },
   "cues": [
    [
@@ -495,23 +423,350 @@ window.TIMINGS = {
    ],
    [
     1.066,
-    "Naval wants to get rich without needing it."
+    "Naval wants to get rich without it."
    ],
    [
-    3.618,
+    3.237,
     "Picture a thousand versions of your life."
    ],
    [
-    6.145,
-    "A gambler might strike it rich in fifty of them."
+    5.763,
+    "A gambler strikes it rich in fifty."
    ],
    [
-    9.079,
-    "Naval wants a plan that works in nearly all of them, say nine hundred and ninety-nine."
+    8.184,
+    "Naval wants a plan that works in nearly all of them."
    ],
    [
-    14.263,
-    "Still, luck helps, and he sees four kinds."
+    11.224,
+    "Still, luck helps, and it comes in four kinds."
+   ]
+  ]
+ },
+ "luck": {
+  "dur": 24.768,
+  "marks": {
+   "first": 0.184,
+   "blind": 0.671,
+   "raffle": 2.763,
+   "second": 3.711,
+   "hustle": 4.447,
+   "clicks": 9.171,
+   "third": 12.868,
+   "spotting": 13.382,
+   "nisha": 14.447,
+   "english": 18.855,
+   "opening": 23.0
+  },
+  "cues": [
+   [
+    0.118,
+    "The first is blind luck, like winning an airport raffle."
+   ],
+   [
+    3.645,
+    "The second is hustle: Faisal chats with every shop owner on his route, until something clicks and a restaurant hands him all its deliveries."
+   ],
+   [
+    12.789,
+    "The third is spotting it: Nisha, a teacher, notices parents asking again and again for spoken English classes."
+   ],
+   [
+    20.658,
+    "Others scroll past; she sees an opening in her own field."
+   ]
+  ]
+ },
+ "diver": {
+  "dur": 24.264,
+  "marks": {
+   "fourth": 0.197,
+   "character": 2.711,
+   "looking": 6.0,
+   "beypore": 7.395,
+   "wreck": 10.092,
+   "deep": 12.789,
+   "salim": 15.316,
+   "share": 19.092,
+   "fisher": 20.276,
+   "salims": 21.618
+  },
+  "cues": [
+   [
+    0.118,
+    "The fourth kind is the strangest: you build a character, a skill and a name, that brings luck looking for you."
+   ],
+   [
+    7.171,
+    "Off Beypore, a fisherman's net snags an old wreck: his blind luck."
+   ],
+   [
+    12.013,
+    "But it lies too deep for anyone he knows, except Salim, the diver who goes where nobody dares."
+   ],
+   [
+    18.855,
+    "So they share the find."
+   ],
+   [
+    20.276,
+    "The fisherman's luck became Salim's luck, and Salim built that."
+   ]
+  ]
+ },
+ "destiny": {
+  "dur": 26.4,
+  "marks": {
+   "feeling": 1.855,
+   "char": 3.368,
+   "destiny": 4.342,
+   "deira": 7.776,
+   "yusuf": 9.132,
+   "two": 10.816,
+   "him": 12.947,
+   "cut": 16.013,
+   "long": 19.263,
+   "bake": 21.829,
+   "short": 23.671,
+   "grabs": 25.026
+  },
+  "cues": [
+   [
+    0.105,
+    "Get good enough, and it stops feeling like luck: your character becomes your destiny."
+   ],
+   [
+    5.342,
+    "Reputation works the same way."
+   ],
+   [
+    7.579,
+    "In the Deira gold souk, Yusuf keeps his word."
+   ],
+   [
+    10.816,
+    "Two traders who don't trust each other both trust him, so they deal through him, and he takes a cut."
+   ],
+   [
+    16.816,
+    "As Naval's co-founder Nivi says, in long games people make each other rich, baking a bigger pie."
+   ],
+   [
+    23.579,
+    "In short games, everyone grabs a slice."
+   ]
+  ]
+ },
+ "q3": {
+  "dur": 2.712,
+  "marks": {},
+  "cues": [
+   [
+    0.118,
+    "Quick check."
+   ],
+   [
+    1.118,
+    "Which kind of luck is this?"
+   ]
+  ]
+ },
+ "network": {
+  "dur": 21.768,
+  "marks": {
+   "networking": 0.197,
+   "waste": 4.711,
+   "card": 6.329,
+   "hundred": 9.184,
+   "make": 12.5,
+   "show": 14.842,
+   "practising": 16.224,
+   "find": 17.908,
+   "orders": 20.803
+  },
+  "cues": [
+   [
+    0.105,
+    "And networking?"
+   ],
+   [
+    1.158,
+    "Chasing contacts before you have anything to offer is mostly a waste of time."
+   ],
+   [
+    5.974,
+    "Think of a card-swapping evening in a Dubai hotel: a hundred cards, no deals."
+   ],
+   [
+    11.539,
+    "Instead, make something interesting that people want."
+   ],
+   [
+    14.842,
+    "Show your craft, keep practising, and the right people find you."
+   ],
+   [
+    18.882,
+    "Hiba's cards on Instagram brought the orders."
+   ]
+  ]
+ },
+ "trust": {
+  "dur": 23.928,
+  "marks": {
+   "trust": 0.408,
+   "honest": 3.355,
+   "thumb": 4.882,
+   "sharks": 7.395,
+   "badly": 11.724,
+   "warns": 12.882,
+   "back": 14.25,
+   "failings": 16.342,
+   "respect": 18.947,
+   "closer": 20.276,
+   "higher": 21.921
+  },
+  "cues": [
+   [
+    0.132,
+    "Whom do you trust?"
+   ],
+   [
+    1.382,
+    "Beware anyone who keeps telling you how honest they are."
+   ],
+   [
+    4.645,
+    "That's a rule of thumb, not a lab finding."
+   ],
+   [
+    7.395,
+    "Sharks eat well, yet they live among sharks."
+   ],
+   [
+    10.553,
+    "If a friend treats someone badly, Naval warns them once, then steps back."
+   ],
+   [
+    15.487,
+    "You can't hide your own failings from yourself, and they wear down your self-respect."
+   ],
+   [
+    20.197,
+    "The closer someone comes, the higher their values must be."
+   ]
+  ]
+ },
+ "check2": {
+  "dur": 28.368,
+  "marks": {
+   "sci": 0.118,
+   "make": 1.487,
+   "wiseman": 3.5,
+   "stop": 9.539,
+   "lucky": 12.711,
+   "noticing": 14.895,
+   "model": 16.658,
+   "luckiest": 19.895,
+   "talented": 21.237,
+   "raise": 24.0,
+   "guarantee": 26.803
+  },
+  "cues": [
+   [
+    0.118,
+    "Science check."
+   ],
+   [
+    1.263,
+    "Can you make your own luck?"
+   ],
+   [
+    2.737,
+    "Partly."
+   ],
+   [
+    3.5,
+    "Richard Wiseman asked people to count the photos in a newspaper."
+   ],
+   [
+    7.618,
+    "Inside, in big type: stop counting, there are forty-three."
+   ],
+   [
+    12.0,
+    "People who felt lucky spotted it far more often."
+   ],
+   [
+    14.895,
+    "Noticing is a skill."
+   ],
+   [
+    16.5,
+    "But a computer model of careers found the top usually went to the luckiest of the fairly talented, not the most talented."
+   ],
+   [
+    23.763,
+    "So skill and character raise your odds, but don't guarantee a destiny."
+   ]
+  ]
+ },
+ "wrap": {
+  "dur": 21.864,
+  "marks": {
+   "w1": 1.026,
+   "w2": 7.211,
+   "w3": 12.276,
+   "w4": 17.395
+  },
+  "cues": [
+   [
+    0.118,
+    "To sum up."
+   ],
+   [
+    1.026,
+    "Real retirement: today feels complete, through savings, low spending or work you love."
+   ],
+   [
+    7.211,
+    "Do what you love, matched to what people want, with leverage and your name on it."
+   ],
+   [
+    12.276,
+    "Want freedom, not more money: keep your lifestyle fixed as income grows."
+   ],
+   [
+    17.395,
+    "Build skill, character and a good name, and luck starts looking for you."
+   ]
+  ]
+ },
+ "final1": {
+  "dur": 3.648,
+  "marks": {},
+  "cues": [
+   [
+    0.105,
+    "Chapter practice."
+   ],
+   [
+    1.5,
+    "Four questions on everything we covered."
+   ]
+  ]
+ },
+ "finish": {
+  "dur": 4.056,
+  "marks": {},
+  "cues": [
+   [
+    0.105,
+    "Well done."
+   ],
+   [
+    1.026,
+    "That's chapter six, and the end of unit one."
    ]
   ]
  }
