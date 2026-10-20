@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Desire and the success trap · The Almanack of Naval Ravikant, Chapter 13">
+<meta property="og:description" content="A 9-minute animated lesson in English and Malayalam: why every desire is a contract to feel uneasy, why winning doesn't buy lasting happiness, and what the science says about wanting, lottery wins and age.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/ch13/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<title>Desire and the success trap · The Almanack of Naval Ravikant</title>
+<meta name="description" content="An animated, narrated lesson on The Almanack of Naval Ravikant: desire as a contract to be unhappy, the 'I'll be happy when' delusion, one big desire at a time, time, health and money across a life, success versus contentment, hedonic adaptation, stepping out of the game, and peace. Science checks on materialism, goal progress, lottery winners and age. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'ആഗ്രഹവും വിജയത്തിന്റെ കെണിയും · The Almanack of Naval Ravikant';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/ymu.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/almanack/ch13/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Desire and the success trap', kicker: 'PART 2 · HAPPINESS · CHAPTER 13',
+  sub: 'Why every “I’ll be happy when…” signs you up to wait, and why winning doesn’t end it',
+  credit: 'A study companion to The Almanack of Naval Ravikant, by Eric Jorgenson',
+  b_intro: 'Title', b_car: 'Waiting for the car', b_when: '“I’ll be happy when…”', b_contract: 'A contract with yourself', b_q1: 'Quick check',
+  b_check: 'Science check', b_ages: 'Time, health, money', b_q2: 'Quick check', b_success: 'Content, or striving',
+  b_game: 'The game you outgrow', b_check2: 'Science check', b_winners: 'Who really wins', b_peace: 'Peace first', b_q3: 'Quick check',
+  b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  shafeeq: 'Shafeeq · Sharjah', weeks: 'six weeks', daysL: 'days to go', reviews: 'reviews · forums · videos', excite: 'excitement',
+  arrives: 'the car arrives', week: 'a week later: just a car', wanting: 'hooked on the wanting',
+  delusion: 'the fundamental delusion', out: 'something outside → happy for good',
+  visa: 'when I get the visa', loan: 'when the loan is paid off', house: 'when the house is built', moves: 'the finish line moves',
+  act: 'build and grow: yes', expect: 'expecting lasting peace from it: the mistake',
+  contract: 'a contract with yourself', clause: '“I agree to feel uneasy until I get this.”',
+  car: 'a car', promo: 'a promotion', slim: 'a slimmer waist', flat: 'a bigger flat',
+  one: 'one big desire', axis: 'the place I’ve chosen to struggle', choose: 'choose your desires with care',
+  sci: 'Science check', every: 'every desire = a debt?', samples: '2014 review · 259 samples', first: 'money and things first',
+  small: 'a real link, but small', studies: '85 studies', progress: 'progress on goals you care about', clear: 'clearly higher well-being',
+  journey: 'progress counts more than arrival', prog2: 'progress', arrive2: 'arrival',
+  strong: '“every desire = unhappiness”', tooS: 'too strong', what: 'what you want, and why, makes the difference',
+  young: 'young · 24', middle: 'middle age', old: 'old age', time: 'time', health: 'health', money: 'money',
+  three: 'all three at once', enough: 'enough money, after time and health are spent',
+  desires: 'more desires: less happy?', older: 'the old: happier?',
+  satisfied: 'happiness: content with what you have', dissat: 'success: grows from discontent', chooseS: 'choose',
+  second: 'a second life', won: 'won: money · status', nothappy: 'the winners around him: not so happy',
+  gain: 'every gain: normal in weeks', adapt: 'hedonic adaptation', inside: 'happiness: an inside job',
+  wired: 'wired to strive', good: 'the trap: a game you’re good at', hamza: 'Hamza · Sharjah',
+  survive: 'survive & provide: puts you on', adaptT: 'adaptation: keeps you on', step: 'step off', play: 'and play',
+  used: 'getting used to everything?', winners: 'lottery winners · 22 · 1978', winL: 'winners', othL: 'others',
+  nohappier: 'no happier', tiny: 'a tiny study', players: 'players ≈ 3,300 · Sweden', bigW: 'big winners', smallW: 'the rest',
+  more: 'more satisfied with life', decade: '10+ years later', daily: 'daily happiness: about the same',
+  much: 'we adapt to much, not everything', countries: '145 countries', ageL: 'age', dipped: 'dip near 50',
+  youngest: 'now, 44 countries: the young, most distress', falls: 'distress falls with age', holds: 'holds, for now',
+  success: 'who is successful?', champ: 'the champion of your own game', bat: 'a record-breaking batsman',
+  founder: 'a founder who changed an industry', stepG: 'step out of the game', game: 'the game',
+  need: 'need nothing from anyone', moreM: 'more money or less: unmoved', buddha: 'the Buddha',
+  sit: 'sit quietly, alone, in a room', pascal: 'Pascal', thirty: 'thirty minutes, content', wonT: 'you’ve won',
+  peace: 'peace → happiness', war: 'war, to win peace?', biz: 'a business', dishes: 'the dishes fight',
+  endless: 'outside problems: endless', drop: 'drop the idea of “problems”', rest: 'peace: happiness, sitting still',
+  motion: 'happiness: peace on the move', onething: 'one thing, above all',
+  w1: 'Desire is a contract to feel uneasy until the wish comes true. Sign few, and choose them well.',
+  w2: 'Outside wins fade fast: we adapt to much, though not to everything.',
+  w3: 'Happiness comes from contentment, success from discontent. Know which one you’re feeding.',
+  w4: 'The real win is needing little from the game: peace first, and happiness follows.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'ആഗ്രഹവും വിജയത്തിന്റെ കെണിയും', kicker: 'ഭാഗം 2 · സന്തോഷം · അധ്യായം 13',
+  sub: '“ഇത് കിട്ടിയാൽ സന്തോഷിക്കും” എന്ന കാത്തിരിപ്പ്, ജയിച്ചാലും തീരാത്തത് എന്തുകൊണ്ട്',
+  credit: 'The Almanack of Naval Ravikant · എറിക് ജോർഗൻസൻ · പഠനസഹായി',
+  b_intro: 'തലക്കെട്ട്', b_car: 'കാറിനായുള്ള കാത്തിരിപ്പ്', b_when: '“അത് കിട്ടിയാൽ…”', b_contract: 'സ്വന്തമായൊരു കരാർ', b_q1: 'ചെറിയ പരിശോധന',
+  b_check: 'ശാസ്ത്രീയ പരിശോധന', b_ages: 'സമയം, ആരോഗ്യം, പണം', b_q2: 'ചെറിയ പരിശോധന', b_success: 'തൃപ്തിയോ, പരിശ്രമമോ',
+  b_game: 'വളർന്നുകഴിഞ്ഞ കളി', b_check2: 'ശാസ്ത്രീയ പരിശോധന', b_winners: 'യഥാർഥ വിജയി', b_peace: 'ആദ്യം സമാധാനം', b_q3: 'ചെറിയ പരിശോധന',
+  b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  shafeeq: 'ഷഫീഖ് · ഷാർജ', weeks: 'ആറ് ആഴ്ച', daysL: 'ദിവസം ബാക്കി', reviews: 'റിവ്യൂ · ഫോറം · വീഡിയോ', excite: 'ആവേശം',
+  arrives: 'കാർ എത്തി', week: 'ഒരാഴ്ച കഴിഞ്ഞ്: വെറുമൊരു വണ്ടി', wanting: 'ആഗ്രഹിക്കലിന്റെ ലഹരി',
+  delusion: 'അടിസ്ഥാനപരമായ മിഥ്യാധാരണ', out: 'പുറത്തുള്ള എന്തോ → എന്നേക്കും സന്തോഷം',
+  visa: 'വിസ കിട്ടിയാൽ', loan: 'ലോൺ അടച്ചുതീർന്നാൽ', house: 'വീടുപണി കഴിഞ്ഞാൽ', moves: 'ഫിനിഷ് ലൈൻ നീങ്ങുന്നു',
+  act: 'പണിയുക, വളരുക: വേണം', expect: 'പ്രതീക്ഷ: പുറത്തുനിന്ന് ശാശ്വത സമാധാനം → തെറ്റ്',
+  contract: 'കരാർ: നിങ്ങളോടുതന്നെ', clause: '“ഇത് കിട്ടുംവരെ അസ്വസ്ഥനായിരിക്കാൻ ഞാൻ സമ്മതിക്കുന്നു.”',
+  car: 'കാർ', promo: 'പ്രമോഷൻ', slim: 'ഒതുങ്ങിയ അരക്കെട്ട്', flat: 'വലിയ ഫ്ലാറ്റ്',
+  one: 'ഒരു വലിയ ആഗ്രഹം', axis: 'തിരഞ്ഞെടുത്ത പോരാട്ടക്കളം', choose: 'ശ്രദ്ധിച്ച് തിരഞ്ഞെടുക്കൂ',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', every: 'ഓരോ ആഗ്രഹവും = കടം?', samples: '2014 · 259 പഠനസംഘങ്ങൾ', first: 'പണത്തിനും വസ്തുക്കൾക്കും ഒന്നാം സ്ഥാനം',
+  small: 'ചെറുത്, പക്ഷേ യഥാർഥം', studies: '85 പഠനങ്ങൾ', progress: 'പുരോഗതി: പ്രധാന ലക്ഷ്യങ്ങളിലേക്ക്', clear: 'വ്യക്തമായും കൂടുതൽ സന്തോഷം',
+  journey: 'എത്തിച്ചേരലിനേക്കാൾ മുന്നേറ്റം', prog2: 'മുന്നേറ്റം', arrive2: 'എത്തിച്ചേരൽ',
+  strong: '“ഓരോ ആഗ്രഹവും = അസന്തോഷം”', tooS: 'അതിരുകടന്നത്', what: 'എന്ത്, എന്തിന്: അതിലാണ് വ്യത്യാസം',
+  young: 'ചെറുപ്പം · 24', middle: 'മധ്യവയസ്സ്', old: 'വാർധക്യം', time: 'സമയം', health: 'ആരോഗ്യം', money: 'പണം',
+  three: 'മൂന്നും ഒരുമിച്ച്', enough: 'ആവശ്യത്തിന് പണം: സമയവും ആരോഗ്യവും പോയശേഷം',
+  desires: 'ആഗ്രഹങ്ങൾ കൂടുതൽ: സന്തോഷം കുറവ്?', older: 'പ്രായമായവർ: കൂടുതൽ സന്തോഷം?',
+  satisfied: 'ഉള്ളതിൽ തൃപ്തി = സന്തോഷം', dissat: 'തൃപ്തിയില്ലായ്മ → വിജയം', chooseS: 'തിരഞ്ഞെടുക്കൂ',
+  second: 'രണ്ടാം ജീവിതം', won: 'നേടി: പണം · പദവി', nothappy: 'ചുറ്റുമുള്ള വിജയികൾ: അത്ര സന്തോഷമില്ല',
+  gain: 'ഓരോ നേട്ടവും: ആഴ്ചകൾക്കകം സാധാരണം', adapt: 'ഹെഡോണിക് അഡാപ്റ്റേഷൻ', inside: 'ഉള്ളിലെ പണി: സന്തോഷം',
+  wired: 'നിർമിതി: പരിശ്രമിക്കാൻ', good: 'മിടുക്കുള്ള കളി: അതാണ് കെണി', hamza: 'ഹംസ · ഷാർജ',
+  survive: 'അതിജീവനം, കുടുംബം: കയറ്റുന്നു', adaptT: 'ശീലിച്ചുപോകൽ: നിലനിർത്തുന്നു', step: 'ഇറങ്ങൂ', play: 'കളിക്കൂ',
+  used: 'എല്ലാം ശീലിച്ചുപോകുമോ?', winners: 'ലോട്ടറി ജേതാക്കൾ · 22 · 1978', winL: 'ജേതാക്കൾ', othL: 'മറ്റുള്ളവർ',
+  nohappier: 'സന്തോഷം: കൂടുതലില്ല', tiny: 'ചെറിയ പഠനം', players: 'കളിക്കാർ ≈ 3,300 · സ്വീഡൻ', bigW: 'വലിയ തുക', smallW: 'ബാക്കിയുള്ളവർ',
+  more: 'കൂടുതൽ തൃപ്തി: ജീവിതത്തിൽ', decade: 'പത്ത് വർഷത്തിനു ശേഷവും', daily: 'ദൈനംദിന സന്തോഷം: ഏകദേശം അതേ',
+  much: 'പലതും ശീലിക്കും, എല്ലാമല്ല', countries: '145 രാജ്യങ്ങൾ', ageL: 'പ്രായം', dipped: 'താഴ്ച: 50-നടുത്ത്',
+  youngest: 'ചെറുപ്പക്കാർക്ക് ഏറ്റവും ക്ലേശം · ഇപ്പോൾ, 44 രാജ്യങ്ങൾ', falls: 'കുറയുന്നു: പ്രായം കൂടുംതോറും', holds: 'ശരി, ഇപ്പോഴേക്ക്',
+  success: 'ആരാണ് വിജയി?', champ: 'സ്വന്തം കളിയിലെ ചാമ്പ്യൻ', bat: 'റെക്കോർഡ് ബാറ്റ്സ്മാൻ',
+  founder: 'വ്യവസായം മാറ്റിയ സംരംഭകൻ', stepG: 'കളിക്ക് പുറത്തേക്ക്', game: 'കളി',
+  need: 'ആരിൽനിന്നും ഒന്നും വേണ്ട', moreM: 'പണം കൂടിയാലും കുറഞ്ഞാലും: ഇളക്കമില്ല', buddha: 'ബുദ്ധൻ',
+  sit: 'ഒരു മുറിയിൽ തനിച്ച്, ശാന്തമായി', pascal: 'പാസ്കൽ', thirty: 'മുപ്പത് മിനിറ്റ്, തൃപ്തിയോടെ', wonT: 'നിങ്ങൾ ജയിച്ചു',
+  peace: 'സമാധാനം → സന്തോഷം', war: 'യുദ്ധത്തിലൂടെ സമാധാനം?', biz: 'ബിസിനസ്', dishes: 'രാത്രിയിലെ വഴക്ക്',
+  endless: 'പുറത്തെ പ്രശ്നങ്ങൾ: തീരില്ല', drop: 'പ്രശ്നങ്ങൾ എന്ന ആശയം: ഉപേക്ഷിക്കൂ', rest: 'അനങ്ങാത്ത സന്തോഷം = സമാധാനം',
+  motion: 'ചലിക്കുന്ന സമാധാനം = സന്തോഷം', onething: 'ഒരൊറ്റ കാര്യം, എല്ലാറ്റിനും മേലെ',
+  w1: 'ആഗ്രഹം ഒരു കരാറാണ്: കിട്ടുംവരെ അസ്വസ്ഥനായിരിക്കാനുള്ള കരാർ. കുറച്ചെണ്ണം മാത്രം ഒപ്പിടൂ, ശ്രദ്ധിച്ച് തിരഞ്ഞെടുക്കൂ.',
+  w2: 'പുറത്തെ നേട്ടങ്ങളുടെ തിളക്കം വേഗം മങ്ങും: നമ്മൾ പലതും ശീലിക്കും, എല്ലാമല്ല.',
+  w3: 'തൃപ്തിയിൽ നിന്ന് സന്തോഷം, അതൃപ്തിയിൽ നിന്ന് വിജയം. ഏതിനെയാണ് പോറ്റുന്നതെന്ന് അറിയൂ.',
+  w4: 'കളിയിൽ നിന്ന് അധികമൊന്നും വേണ്ടാതാകുന്നതാണ് യഥാർഥ വിജയം: ആദ്യം സമാധാനം, പിന്നാലെ സന്തോഷം.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 13, title: L('title'), minutes: LANG === 'ml' ? 11 : 9, language: LANG, next: '../index.html#contents' };
+
+/* ---------- meaning colours (style.json look.meaning) ---------- */
+const WEALTH = EV.gold, MONEY = '#7cc79d', STATUS = '#e2694f', TIME = '#5fb3cf', SCI = '#9c84d8', SAD = EV.sad, HEALTH = EV.love;
+
+/* ---------- chapter helpers (prefixed a13 to stay clear of engine globals) ---------- */
+// A label that fades in at t (beat clock, always a mark).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+const a13Ground = (p, y = 760, fill = '#0c1114') => {
+  mk('rect', { x: -10, y, width: 1620, height: 900 - y + 20, fill }, p);
+  path(p, `M0 ${y}H1600`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+};
+const a13Faisal = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#2f5f8f', '#21466b');
+const a13Shafeeq = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#a8553f', '#7f3e2d');
+const a13Man = (p, o, top = '#5a6470', topD = '#434b55') => evRecolor(evPerson(p, { kind: 'm', ...o }), top, topD);
+const a13Woman = (p, o, top, topD, scarf) => { const P = evRecolor(evPerson(p, { kind: 'f', ...o }), top, topD); if (scarf) evScarf(P, scarf); return P; };
+// Grey the hair of a puppet (an older face).
+const a13Grey = (P, c = '#cfc8b8') => { P.head.querySelectorAll('path,circle').forEach(e => { if (e.getAttribute('fill') === EV.hair) e.setAttribute('fill', c); }); return P; };
+function a13Icon(p, x, y, color = EV.dim, s = 1, o = 1) {
+  const g = G(p, { x, y, s, o });
+  g._head = mk('circle', { cx: 0, cy: -46, r: 14, fill: color }, g);
+  g._body = path(g, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: color });
+  return g;
+}
+// A rounded tag with a label, centred on (x, y); Malayalam is measured at full size; maxPill caps the width.
+function a13Pill(p, key, x, y, { color = EV.gold, size = 30, fill = '#151d21', ink = EV.goldHi, minW = 160, o = 0, maxPill = 1400 } = {}) {
+  const g = G(p, { x, y, o });
+  const w = Math.min(maxPill, Math.max(minW, evW(L(key), size) + 64));
+  mk('rect', { x: -w / 2, y: -32, width: w, height: 60, rx: 30, fill, stroke: color, 'stroke-width': 2 }, g);
+  evText(g, L(key), { x: 0, y: 8, size, fill: ink, maxW: w - 34 });
+  g._w = w;
+  return g;
+}
+function a13Phone(p, { x = 0, y = 0, s = 1, o = 1, w = 150, h = 280 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 22, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 3 }, g);
+  mk('rect', { x: -w / 2 + 10, y: -h / 2 + 26, width: w - 20, height: h - 52, rx: 6, fill: '#1d3440' }, g);
+  return g;
+}
+// Science-check frame and tag on #scene, kept across panels inside the beat.
+function a13Sci(m, D) {
+  const keep = G(scene);
+  hide(keep, D - .45, .4);
+  prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+  const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+  draw(fr, m('sci'), 1);
+  const tag = G(keep, { x: 200, y: 60, o: 0 });
+  const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+  mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+  evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+  show(tag, m('sci'), .4);
+}
+// A tilted verdict stamp.
+function a13Stamp(p, key, x, y, t, color = SCI) {
+  const g = G(p, { x, y, o: 0, r: -7 });
+  const sw = Math.max(240, evW(L(key), 30) + 50);
+  mk('rect', { x: -sw / 2, y: -30, width: sw, height: 60, rx: 8, fill: 'none', stroke: color, 'stroke-width': 4 }, g);
+  evText(g, L(key), { x: 0, y: 11, size: 30, weight: 700, fill: color, maxW: sw - 30 });
+  put(g, { s: 1.5 }); tw(g, { o: 1, s: 1 }, t, .4, back);
+  return g;
+}
+// Walking along several legs of a route from one clock: segs [[t0, t1, x0, x1], …] in time order.
+function a13Walk(P, segs, D, stride = 60) {
+  prog(q => {
+    const t = q * D; let x = segs[0][2], moving = false, dist = 0;
+    for (const [t0, t1, x0, x1] of segs) if (t >= t0) { const u = Math.min(1, (t - t0) / (t1 - t0)); x = x0 + (x1 - x0) * u; if (u < 1) { moving = true; dist = Math.abs(x - x0); } }
+    const ph = dist / stride * Math.PI, sw = moving ? Math.sin(ph) * 14 : 0;
+    put(P.g, { x }); put(P.legL, { r: sw }); put(P.legR, { r: -sw });
+    put(P.torso, { y: -178 - (moving ? Math.abs(Math.sin(ph)) * 5 : 0) });
+  }, 0, D, lin);
+}
+// A small saloon car, wheels on y = 0, about 310 long.
+function a13Car(p, { x = 0, y = 0, s = 1, o = 1, color = '#b8862f' } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-150 -26Q-152 -58 -118 -62L-72 -66L-38 -104H50L92 -66L138 -60Q158 -56 158 -28V-16H-150Z', { fill: color, stroke: EV.goldHi, 'stroke-width': 2, 'stroke-opacity': .5 });
+  path(g, 'M-30 -96H-2V-70H-58ZM8 -96H44L74 -70H8Z', { fill: '#1b2a33' });
+  [-92, 98].forEach(cx => mk('circle', { cx, cy: -16, r: 24, fill: '#151d21', stroke: EV.dim, 'stroke-width': 6 }, g));
+  return g;
+}
+// A paper card with ruled lines, centred on (0,0).
+function a13Doc(p, { x = 0, y = 0, w = 90, h = 110, s = 1, o = 1, color = EV.gold } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 6, fill: '#151d21', stroke: color, 'stroke-width': 2 }, g);
+  for (let i = 0; i < 4; i++) path(g, `M${-w / 2 + 14} ${-h / 2 + 22 + i * 20}H${w / 2 - 14 - (i === 3 ? 24 : 0)}`, { stroke: EV.dim, 'stroke-width': 2, opacity: .7 });
+  return g;
+}
+// A small shop front, base at (0,0).
+function a13Shop(p, { x = 0, y = 0, s = 1, o = 1, color = WEALTH, dashed = false } = {}) {
+  const g = G(p, { x, y, s, o });
+  const st = dashed ? { 'stroke-dasharray': '8 7' } : {};
+  mk('rect', { x: -55, y: -90, width: 110, height: 90, fill: dashed ? 'none' : '#151d21', stroke: color, 'stroke-width': 2.5, ...st }, g);
+  if (!dashed) {
+    for (let i = 0; i < 5; i++) mk('rect', { x: -60 + i * 24, y: -112, width: 24, height: 24, fill: i % 2 ? '#1b2226' : color }, g);
+    mk('rect', { x: -14, y: -50, width: 28, height: 50, fill: '#2b3632' }, g);
+    mk('rect', { x: -44, y: -66, width: 24, height: 22, fill: '#e8cf86', opacity: .55 }, g);
+    mk('rect', { x: 20, y: -66, width: 24, height: 22, fill: '#e8cf86', opacity: .55 }, g);
+  } else path(g, 'M-60 -112H60', { stroke: color, 'stroke-width': 2.5, ...st });
+  return g;
+}
+// A seated, cross-legged figure, base at (0,0).
+function a13Seated(p, { x = 0, y = 0, s = 1, o = 1, color = EV.goldHi } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('ellipse', { cx: 0, cy: -14, rx: 62, ry: 16, fill: color, opacity: .85 }, g);
+  path(g, 'M-34 -24Q-36 -80 0 -88Q36 -80 34 -24Z', { fill: color });
+  mk('circle', { cx: 0, cy: -108, r: 20, fill: color }, g);
+  return g;
+}
+// A Kerala brass lamp (nilavilakku) with a flame, base at (0,0).
+function a13Lamp(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-50 0Q-50 -20 -10 -24V-130H10V-24Q50 -20 50 0Z', { fill: '#b8862f', stroke: EV.goldHi, 'stroke-width': 2 });
+  path(g, 'M-46 -130Q0 -112 46 -130Q40 -146 0 -146Q-40 -146 -46 -130Z', { fill: '#c9a84c' });
+  g._flame = G(g, { x: 0, y: -150 });
+  evGlow(g._flame, 0, -10, 60, 'Warm', .9);
+  path(g._flame, 'M0 -34Q12 -14 8 -2Q0 6 -8 -2Q-12 -14 0 -34Z', { fill: '#f6d27a' });
+  return g;
+}
+// A kite with a tail, centred on (0,0).
+function a13Kite(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M0 -50L36 0L0 60L-36 0Z', { fill: STATUS, stroke: EV.goldHi, 'stroke-width': 2 });
+  path(g, 'M0 -50V60M-36 0H36', { stroke: EV.goldHi, 'stroke-width': 1.5, opacity: .7 });
+  path(g, 'M0 60Q-14 90 6 116Q20 140 0 168', { stroke: EV.goldHi, 'stroke-width': 2 });
+  return g;
+}
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    tw(g, { o: 1 }, .1, .6, out);
+    // dusk over a desert highway; a mirage pool keeps sliding toward the horizon
+    const sun = G(g, { x: 800, y: 660 });
+    evGlow(sun, 0, 0, 420, 'Warm', .7);
+    mk('circle', { cx: 0, cy: 0, r: 70, fill: '#f0a35e' }, sun);
+    mk('rect', { x: -10, y: 640, width: 1620, height: 280, fill: '#120f0c' }, g);
+    path(g, 'M0 660Q200 620 420 650T860 646T1300 640T1610 652V700H0Z', { fill: '#1d1712' });
+    path(g, 'M0 640H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .45 });
+    path(g, 'M560 910L792 640H808L1040 910Z', { fill: '#191c1e' });
+    let dd = '';
+    for (let i = 0; i < 7; i++) { const u = i / 7, y0 = 640 + 270 * u * u, y1 = 640 + 270 * Math.pow(u + .07, 2); dd += `M800 ${y0.toFixed(1)}V${y1.toFixed(1)}`; }
+    path(g, dd, { stroke: EV.goldHi, 'stroke-width': 4, opacity: .55 });
+    const mir = mk('ellipse', { cx: 0, cy: 0, rx: 120, ry: 9, fill: '#7fb6d0', opacity: .45 }, g);
+    prog(q => { const t = q * D, u = (t * .12) % 1; put(mir, { x: 800, y: 760 - 105 * u, s: 1.2 - .9 * u, o: .75 * Math.sin(u * Math.PI) }); }, 0, D, lin);
+    const kk = evText(g, L('kicker'), { x: 800, y: 140, size: 26, fill: EV.gold, weight: 500, ls: '6', o: 0 });
+    show(kk, m('chap'), .5);
+    draw(path(g, 'M620 172H980', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .6 }, { d: 0 }), m('chap'), .8);
+    const ti = evText(g, L('title'), { x: 800, y: 280, size: 88, font: SERIF, weight: 600, maxW: 1420, o: 0 });
+    put(ti, { y: 300 }); tw(ti, { y: 280, o: 1 }, m('title'), .7, out);
+    const sub = evPara(g, L('sub'), { x: 800, y: 370, size: 32, fill: EV.ink, o: 0, maxW: 1420, font: SERIF, italic: true });
+    put(sub, { y: 385 }); tw(sub, { y: 370, o: .85 }, m('sub'), .7, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 470, size: 24, fill: '#8a8270', o: 0, maxW: 1400 });
+    show(cr, m('sub'), 1);
+    tw(g, { o: 0 }, D - .6, .5); hide(cr, D - .6, .5);
+  }],
+
+  ['car', 'b_car', (m, D) => {
+    const p = panel(0);
+    a13Ground(p, 780);
+    // Shafeeq's room at night: a window and a moon
+    const win = G(p, { x: 120, y: 150 });
+    mk('rect', { x: 0, y: 0, width: 300, height: 240, rx: 6, fill: '#0d1620', stroke: EV.goldLo, 'stroke-width': 3 }, win);
+    path(win, 'M150 0V240M0 120H300', { stroke: EV.goldLo, 'stroke-width': 3 });
+    mk('circle', { cx: 220, cy: 60, r: 26, fill: '#e8dcb5' }, win); mk('circle', { cx: 232, cy: 52, r: 23, fill: '#0d1620' }, win);
+    const sf = a13Shafeeq(p, { x: 330, y: 780, s: .72 });
+    evBreathe(sf, D);
+    lab(p, 'shafeeq', 330, 835, m('shafeeq'), { size: 28, weight: 600 });
+    evArm(sf, -1, -16, -104, .2, .01);
+    const ph = a13Phone(sf.armL._lo, { x: 2, y: 86, s: .22, r: 0 });
+    const pg = evGlow(p, 340, 560, 90, 'Gold', 0);
+    p.insertBefore(pg, sf.g);
+    tw(pg, { o: .8 }, m('reviews'), .5);
+    void ph;
+    evMood(sf, 'smile', m('reviews'));
+    // the countdown
+    const cal = G(p, { x: 640, y: 260, o: 0 });
+    mk('rect', { x: -110, y: -90, width: 220, height: 180, rx: 10, fill: '#10171b', stroke: EV.gold, 'stroke-width': 3 }, cal);
+    mk('rect', { x: -110, y: -90, width: 220, height: 38, rx: 10, fill: EV.goldLo }, cal);
+    const num = T(cal, '42', { x: 0, y: 30, size: 72, fill: EV.goldHi, font: SANS, weight: 600, anchor: 'middle' });
+    evText(cal, L('daysL'), { x: 0, y: 74, size: 24, fill: EV.dim });
+    show(cal, m('days'), .4);
+    lab(p, 'weeks', 640, 400, m('days'), { size: 30, fill: TIME, weight: 600 });
+    evCount(num, t => Math.round(42 * (1 - evU(t, m('days') + .6, Math.max(1, m('arrives') - m('days') - .6)))), D);
+    lab(p, 'reviews', 640, 470, m('reviews'), { size: 26, fill: EV.ink, maxW: 380 });
+    // excitement over time: climbs while waiting, spikes, then falls back
+    const OX = 900, OY = 690, W = 600, H = 400;
+    path(p, `M${OX} ${OY - H}V${OY}H${OX + W}`, { stroke: EV.dim, 'stroke-width': 3 });
+    const base = path(p, `M${OX} ${OY - .18 * H}H${OX + W}`, { stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '6 8' });
+    void base;
+    lab(p, 'excite', OX + 14, OY - H + 20, m('curve'), { size: 26, fill: STATUS, anchor: 'start' });
+    const v = x => x < .6 ? .18 + .62 * Math.pow(x / .6, 1.5) : x < .63 ? .8 + .15 * (x - .6) / .03 : .18 + .77 * Math.exp(-(x - .63) * 18);
+    const cv = path(p, '', { stroke: STATUS, 'stroke-width': 5 });
+    const hl = path(p, '', { stroke: EV.goldHi, 'stroke-width': 9, opacity: 0 });
+    const reach = t => .6 * evU(t, m('curve'), Math.max(1, m('arrives') - m('curve'))) + .05 * evU(t, m('arrives'), .5) + .35 * io(evU(t, m('week'), 1.4));
+    const dpath = (a, b) => { let d = ''; for (let i = 0; i <= 80; i++) { const x = a + (b - a) * i / 80; d += (i ? 'L' : 'M') + (OX + W * x).toFixed(1) + ' ' + (OY - H * v(x)).toFixed(1); } return d; };
+    prog(q => { const t = q * D, r = reach(t);
+      cv.setAttribute('d', r > 0 ? dpath(0, r) : '');
+      const k = evU(t, m('wanting'), .6); hl.setAttribute('d', k > 0 ? dpath(0, .6 * k) : ''); put(hl, { o: .5 * k }); }, 0, D, lin);
+    const car = a13Car(p, { x: OX + W * .615, y: OY - H * .95 - 14, s: .32, o: 0 });
+    put(car, { s: .2 }); tw(car, { o: 1, s: .32 }, m('arrives'), .45, back);
+    lab(p, 'arrives', OX + W * .615, OY - H - 48, m('arrives'), { size: 26, fill: EV.goldHi, weight: 600 });
+    evMood(sf, 'calm', m('week'));
+    lab(p, 'week', OX + W * .5, OY + 50, m('week'), { size: 28, fill: EV.ink, maxW: 600 });
+    lab(p, 'wanting', 640, 140, m('wanting'), { size: 42, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 520 });
+  }],
+
+  ['when', 'b_when', (m, D) => {
+    const p = panel(0);
+    a13Ground(p, 640);
+    lab(p, 'delusion', 800, 95, m('delusion'), { size: 46, font: SERIF, weight: 600, fill: EV.gold, maxW: 1200 });
+    lab(p, 'out', 800, 155, m('out'), { size: 30, fill: STATUS, maxW: 1100 });
+    // three signposts along the road, a finish flag that keeps moving on
+    const posts = [['visa', 520], ['loan', 880], ['house', 1240]];
+    posts.forEach(([k, x]) => path(p, `M${x} 640V340`, { stroke: EV.faint, 'stroke-width': 4 }));
+    const tags = posts.map(([k, x]) => { const g = a13Pill(p, k, x, 300, { size: 26, color: STATUS, ink: EV.ink, minW: 220, maxPill: 340 }); put(g, { y: 320 }); tw(g, { o: 1, y: 300 }, m(k), .4, out); return g; });
+    const fz = a13Faisal(p, { x: 170, y: 640, s: .58 });
+    evBreathe(fz, D);
+    const T1 = m('visa') + .4, T2 = m('loan') + .2, T3 = m('house') + .2;
+    a13Walk(fz, [[T1, T1 + 2.2, 170, 440], [T2, T2 + 1.8, 440, 800], [T3, T3 + 1.8, 800, 1160]], D);
+    // the flag: at the next post until he nearly reaches it, then off again
+    const flag = G(p, { x: 520, y: 640, o: 0 });
+    path(flag, 'M0 0V-150', { stroke: EV.goldHi, 'stroke-width': 4 });
+    path(flag, 'M0 -150L56 -132L0 -114Z', { fill: EV.goldHi });
+    show(flag, m('visa'), .4);
+    prog(q => { const t = q * D;
+      const x = 560 + 360 * io(evU(t, T2 - .3, .5)) + 360 * io(evU(t, T3 - .3, .5)) + 200 * io(evU(t, m('moves'), .7));
+      put(flag, { x }); }, 0, D, lin);
+    tags.forEach((g, i) => tw(g, { o: .35 }, [T2, T3, m('moves')][i], .5));
+    lab(p, 'moves', 1400, 690, m('moves'), { size: 28, fill: EV.goldHi, italic: true, font: SERIF, maxW: 300 });
+    evMood(fz, 'worried', m('moves'));
+    // still act; just don't expect the outside win to bring lasting peace
+    const a = a13Pill(p, 'act', 470, 760, { size: 30, color: MONEY, ink: EV.ink, minW: 300, maxPill: 640 });
+    put(a, { y: 780 }); tw(a, { o: 1, y: 760 }, m('act'), .45, out);
+    const e = a13Pill(p, 'expect', 1090, 760, { size: 30, color: STATUS, ink: EV.ink, minW: 300, maxPill: 760 });
+    put(e, { y: 780 }); tw(e, { o: 1, y: 760 }, m('expect'), .45, out);
+    evMood(fz, 'calm', m('act'));
+  }],
+
+  ['contract', 'b_contract', (m, D) => {
+    const p = panel(0);
+    lab(p, 'contract', 560, 110, m('contract'), { size: 44, font: SERIF, weight: 600, fill: EV.gold, maxW: 760 });
+    // the scroll unrolls
+    const sc = G(p, { x: 560, y: 170 });
+    const sheet = mk('rect', { x: -280, y: 0, width: 560, height: 0, rx: 8, fill: '#13191c', stroke: EV.gold, 'stroke-width': 2.5 }, sc);
+    mk('rect', { x: -300, y: -14, width: 600, height: 28, rx: 14, fill: '#2a2418', stroke: EV.gold, 'stroke-width': 2 }, sc);
+    const rollB = mk('rect', { x: -300, y: -14, width: 600, height: 28, rx: 14, fill: '#2a2418', stroke: EV.gold, 'stroke-width': 2 }, sc);
+    prog(q => { const t = q * D, h = 440 * io(evU(t, m('contract'), .9)); sheet.setAttribute('height', h); put(rollB, { y: h }); }, 0, D, lin);
+    const cl = evPara(sc, L('clause'), { x: 0, y: 120, size: 36, maxW: 460, font: SERIF, italic: true, fill: EV.ink, o: 0 });
+    show(cl, m('clause'), .5);
+    path(sc, 'M-200 360H200', { stroke: EV.dim, 'stroke-width': 2, opacity: .6 });
+    const sig = path(sc, 'M-170 350Q-150 300 -130 350T-90 340Q-70 300 -50 352Q-20 330 10 345T70 338Q100 320 140 344', { stroke: EV.goldHi, 'stroke-width': 3 }, { d: 0 });
+    draw(sig, m('clause') + .3, 1.2);
+    // the many contracts we sign, and the cloud they build
+    const fz = a13Faisal(p, { x: 1440, y: 840, s: .5 });
+    evBreathe(fz, D);
+    const cloud = G(p, { x: 1440, y: 560, o: 0, s: .4 });
+    [[-60, 10, 44], [-10, -20, 58], [50, -6, 50], [10, 24, 46]].forEach(([cx, cy, r]) => mk('circle', { cx, cy, r, fill: '#2a3038' }, cloud));
+    const ks = ['car', 'promo', 'slim', 'flat'];
+    const cards = ks.map((k, i) => {
+      const g = G(p, { x: 1110, y: 240 + i * 110, o: 0 });
+      a13Doc(g, { x: -120, y: 0, w: 60, h: 76, color: STATUS });
+      evText(g, L(k), { x: -70, y: 10, size: 28, fill: EV.ink, anchor: 'start', maxW: 250 });
+      put(g, { x: 1160 }); tw(g, { o: 1, x: 1110 }, m(k), .4, out);
+      return g;
+    });
+    prog(q => { const t = q * D, n = ks.reduce((a, k) => a + io(evU(t, m(k), .5)), 0), c = io(evU(t, m('one'), .8));
+      put(cloud, { o: Math.min(1, n * .3) * (1 - .85 * c), s: .4 + .2 * n - .7 * c }); }, 0, D, lin);
+    evMood(fz, 'worried', m('promo'));
+    evMood(fz, 'tense', m('flat'));
+    // keep one, knowingly
+    cards.forEach(g => tw(g, { o: 0, x: 1180 }, m('one'), .28));
+    evMood(fz, 'calm', m('one'));
+    const one = a13Pill(p, 'one', 1110, 340, { size: 36, color: WEALTH, minW: 340, maxPill: 560 });
+    put(one, { s: .7 }); tw(one, { o: 1, s: 1 }, m('one') + .3, .45, back);
+    lab(p, 'axis', 1110, 430, m('axis'), { size: 28, fill: EV.ink, italic: true, font: SERIF, maxW: 560 });
+    lab(p, 'choose', 800, 750, m('choose'), { size: 36, fill: EV.goldHi, weight: 600, maxW: 1000 });
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    const p = panel(0);
+    a13Ground(p, 430);
+    const ni = evPerson(p, { kind: 'f', x: 330, y: 430, s: .5 });
+    evBreathe(ni, D); evMood(ni, 'worried', .4);
+    const card = G(p, { x: 820, y: 250 });
+    mk('rect', { x: -170, y: -150, width: 340, height: 300, rx: 10, fill: '#10171b', stroke: EV.gold, 'stroke-width': 3 }, card);
+    for (let i = 0; i < 5; i++) { mk('rect', { x: -140, y: -120 + i * 54, width: 28, height: 28, rx: 4, fill: 'none', stroke: STATUS, 'stroke-width': 2.5 }, card); path(card, `M-96 ${-106 + i * 54}H${120 - (i % 2) * 50}`, { stroke: EV.dim, 'stroke-width': 3, opacity: .7 }); }
+    a13Shop(p, { x: 1240, y: 360, s: 1, color: STATUS, dashed: true });
+    a13Car(p, { x: 1260, y: 160, s: .5, color: '#5a6470' });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-onedesire', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 1, L('q1y'), [L('q1na'), null, L('q1nc')]),
+  }], done) }],
+
+  ['check', 'b_check', (m, D) => {
+    const p = panel(0);
+    a13Sci(m, D);
+    lab(p, 'every', 800, 140, m('every'), { size: 42, font: SERIF, italic: true, fill: EV.ink });
+    path(p, 'M800 200V620', { stroke: EV.faint, 'stroke-width': 1.5 });
+    // left: materialism review, 259 samples
+    lab(p, 'samples', 440, 220, m('samples'), { size: 28, weight: 600, maxW: 560 });
+    const dots = [];
+    for (let i = 0; i < 259; i++) { const c = mk('circle', { cx: 210 + (i % 37) * 12.6, cy: 254 + Math.floor(i / 37) * 12, r: 4, fill: SCI }, p); put(c, { o: 0 }); dots.push([c, m('samples') + i * .004, .2]); }
+    evSeq(dots, D);
+    lab(p, 'first', 440, 400, m('first'), { size: 28, fill: MONEY, maxW: 600 });
+    const ZL = 500;
+    path(p, `M${ZL - 220} 470H${ZL + 220}`, { stroke: EV.dim, 'stroke-width': 2 });
+    path(p, `M${ZL} 450V490`, { stroke: EV.ink, 'stroke-width': 3 });
+    T(p, '0', { x: ZL, y: 520, size: 22, fill: EV.dim, anchor: 'middle', font: SANS });
+    const bl = mk('rect', { x: ZL, y: 455, width: 0, height: 30, rx: 4, fill: STATUS }, p);
+    const rl = T(p, 'r ≈ −0.15', { x: ZL - 70, y: 445, size: 22, fill: STATUS, anchor: 'middle', font: SANS, o: 0 });
+    show(rl, m('small'), .4);
+    prog(q => { const t = q * D, w = 400 * .15 * io(evU(t, m('small'), .6)); bl.setAttribute('x', ZL - w); bl.setAttribute('width', w); }, 0, D, lin);
+    lab(p, 'small', 440, 580, m('small'), { size: 28, fill: EV.ink, weight: 600, maxW: 560 });
+    // right: goal progress, 85 studies
+    lab(p, 'studies', 1160, 220, m('studies'), { size: 28, weight: 600 });
+    const sq = [];
+    for (let i = 0; i < 85; i++) { const c = mk('rect', { x: 990 + (i % 17) * 20, y: 248 + Math.floor(i / 17) * 20, width: 14, height: 14, rx: 2, fill: SCI }, p); put(c, { o: 0 }); sq.push([c, m('studies') + i * .01, .2]); }
+    evSeq(sq, D);
+    lab(p, 'progress', 1160, 400, m('progress'), { size: 26, fill: MONEY, maxW: 600 });
+    const ZR = 960;
+    path(p, `M${ZR - 60} 470H${ZR + 400}`, { stroke: EV.dim, 'stroke-width': 2 });
+    path(p, `M${ZR} 450V490`, { stroke: EV.ink, 'stroke-width': 3 });
+    T(p, '0', { x: ZR, y: 520, size: 22, fill: EV.dim, anchor: 'middle', font: SANS });
+    const br = mk('rect', { x: ZR, y: 455, width: 0, height: 30, rx: 4, fill: MONEY }, p);
+    const rr = T(p, 'ρ ≈ +0.43', { x: ZR + 172, y: 445, size: 22, fill: MONEY, anchor: 'middle', font: SANS, o: 0 });
+    show(rr, m('progress') + .3, .4);
+    prog(q => { const t = q * D; br.setAttribute('width', 400 * .43 * io(evU(t, m('progress'), .7))); }, 0, D, lin);
+    lab(p, 'clear', 1160, 545, m('clear'), { size: 24, fill: EV.dim, maxW: 520 });
+    lab(p, 'journey', 1160, 600, m('journey'), { size: 26, fill: EV.ink, weight: 600, maxW: 560 });
+    // verdict
+    lab(p, 'strong', 780, 690, m('strong'), { size: 28, italic: true, font: SERIF, fill: EV.dim, maxW: 520, anchor: 'end' });
+    a13Stamp(p, 'tooS', 960, 688, m('tooS') + .1);
+    lab(p, 'what', 800, 790, m('what'), { size: 34, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1300 });
+  }],
+
+  ['ages', 'b_ages', (m, D) => {
+    const p = panel(0);
+    a13Ground(p, 560, '#0a0f12');
+    // legend
+    const leg = [['time', TIME, 'time'], ['health', HEALTH, 'health'], ['money', MONEY, 'nomoney']];
+    leg.forEach(([k, c, mk_], i) => { const x = 610 + i * 190; const g = G(p, { o: 0 }); mk('rect', { x: x - 70, y: 92, width: 22, height: 22, rx: 4, fill: c }, g); show(g, m(mk_), .4); lab(p, k, x - 38, 111, m(mk_), { size: 26, fill: c, anchor: 'start', weight: 600 }); });
+    const cols = [300, 800, 1300];
+    const fz = a13Faisal(p, { x: cols[0], y: 560, s: .55 });
+    const boss = a13Man(p, { x: cols[1], y: 560, s: .55 }, '#3d4654', '#2b323d');
+    const gp = a13Grey(a13Man(p, { x: cols[2], y: 560, s: .55 }, '#e2dccb', '#bdb6a3'));
+    [fz, boss, gp].forEach((P, i) => evBreathe(P, D, 1, .8 + i * .1));
+    lab(p, 'young', cols[0], 610, m('young'), { size: 28, weight: 600 });
+    lab(p, 'middle', cols[1], 610, m('middle'), { size: 28, weight: 600 });
+    lab(p, 'old', cols[2], 610, m('old'), { size: 28, weight: 600 });
+    // three bars per life stage: time, health, money
+    const vals = [[.9, .95, .15], [.15, .8, .85], [.9, .25, .8]];
+    const when = [['time', 'health', 'nomoney'], ['notime', 'middle', 'middle'], ['old', 'nohealth', 'old']];
+    const BY = 840, BH = 160, cl = [TIME, HEALTH, MONEY];
+    const bars = [];
+    cols.forEach((cx, i) => { path(p, `M${cx - 110} ${BY}H${cx + 110}`, { stroke: EV.faint, 'stroke-width': 2 });
+      [0, 1, 2].forEach(j => { const r = mk('rect', { x: cx - 85 + j * 62, y: BY, width: 46, height: 0, rx: 4, fill: cl[j] }, p); bars.push([r, vals[i][j], m(when[i][j])]); }); });
+    prog(q => { const t = q * D; bars.forEach(([r, v, t0]) => { const h = BH * v * io(evU(t, t0, .6)); r.setAttribute('height', h); r.setAttribute('y', BY - h); }); }, 0, D, lin);
+    evMood(gp, 'calm', 0);
+    // the prize, and what usually happens
+    const gl = evGlow(p, 800, 200, 260, 'Gold', 0);
+    tw(gl, { o: .6 }, m('three'), .6); tw(gl, { o: 0 }, m('desires'), .5);
+    const th = a13Pill(p, 'three', 800, 200, { size: 34, color: WEALTH, minW: 320 });
+    put(th, { s: .7 }); tw(th, { o: 1, s: 1 }, m('three'), .45, back); tw(th, { o: 0 }, m('desires'), .5);
+    const en = lab(p, 'enough', 800, 280, m('enough'), { size: 28, fill: EV.ink, italic: true, font: SERIF, maxW: 1000 });
+    hide(en, m('desires'), .5);
+    // the young carry more wants; the old look calmer
+    const bub = [[-70, 250, '₹'], [10, 215, '★'], [85, 255, '⌂']].map(([dx, y, gl]) => { const c = G(p, { x: cols[0] + dx, y, o: 0 }); mk('circle', { cx: 0, cy: 0, r: 22, fill: '#151d21', stroke: STATUS, 'stroke-width': 2.5 }, c); T(c, gl, { x: 0, y: 8, size: 22, fill: STATUS, anchor: 'middle', font: SANS }); return c; });
+    evSeq(bub.map((c, i) => [c, m('desires') + i * .15, .3]), D);
+    evMood(fz, 'worried', m('desires'));
+    lab(p, 'desires', cols[0] + 40, 170, m('desires'), { size: 26, fill: STATUS, maxW: 460 });
+    evMood(gp, 'smile', m('older'));
+    const g2 = evGlow(p, cols[2], 420, 150, 'Gold', 0);
+    p.insertBefore(g2, gp.g);
+    tw(g2, { o: .7 }, m('older'), .6);
+    lab(p, 'older', cols[2], 200, m('older'), { size: 26, fill: EV.goldHi, maxW: 420 });
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    a13Ground(p, 430);
+    const fz = a13Faisal(p, { x: 330, y: 430, s: .5 });
+    evBreathe(fz, D); evMood(fz, 'ask', .4);
+    // an hourglass and a growing stack of coins
+    const hg = G(p, { x: 820, y: 250 });
+    path(hg, 'M-70 -130H70M-70 130H70M-60 -130Q-60 -40 0 0Q-60 40 -60 130M60 -130Q60 -40 0 0Q60 40 60 130', { stroke: TIME, 'stroke-width': 4 });
+    path(hg, 'M-40 -80Q0 -40 40 -80Z', { fill: '#e8cf86', opacity: .7 });
+    path(hg, 'M-50 128Q0 70 50 128Z', { fill: '#e8cf86', opacity: .7 });
+    for (let i = 0; i < 7; i++) mk('ellipse', { cx: 1240, cy: 380 - i * 26, rx: 70, ry: 18, fill: '#2c4a3a', stroke: MONEY, 'stroke-width': 2.5 }, p);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-trifecta', prompt: [L('q2p')],
+    build: choice([[L('q2a')], [L('q2b')], [L('q2c')]], 2, L('q2y'), [L('q2na'), L('q2nb'), null]),
+  }], done) }],
+
+  ['success', 'b_success', (m, D) => {
+    const p = panel(0);
+    // a balance: contentment on one pan, the drive of discontent on the other
+    const piv = G(p, { x: 800, y: 380 });
+    path(p, 'M800 380V640M730 640H870', { stroke: EV.dim, 'stroke-width': 5 });
+    const beam = G(piv);
+    path(beam, 'M-330 0H330', { stroke: EV.gold, 'stroke-width': 6 });
+    mk('circle', { cx: 0, cy: 0, r: 12, fill: EV.gold }, piv);
+    const pans = [-1, 1].map(k => { const g = G(beam, { x: 330 * k }); path(g, 'M0 0L-70 120M0 0L70 120', { stroke: EV.dim, 'stroke-width': 2 }); path(g, 'M-90 120Q0 170 90 120Z', { fill: '#1b2226', stroke: EV.gold, 'stroke-width': 2.5 }); return g; });
+    const cg = G(pans[0], { y: 112, o: 0 }); evGlow(cg, 0, -20, 90, 'Gold', 1); mk('circle', { cx: 0, cy: -20, r: 26, fill: EV.goldHi }, cg);
+    const fl = G(pans[1], { y: 112, o: 0 }); path(fl, 'M0 -70Q30 -30 20 -6Q0 10 -20 -6Q-30 -30 0 -70Z', { fill: STATUS }); path(fl, 'M0 -40Q12 -22 8 -10Q0 -2 -8 -10Q-12 -22 0 -40Z', { fill: '#f0a35e' });
+    show(cg, m('satisfied'), .4); show(fl, m('dissat'), .4);
+    prog(q => { const t = q * D, v = t - m('choose'); put(beam, { r: v < 0 ? 0 : 7 * Math.sin(v * 3.2) * Math.exp(-v * .6) }); }, 0, D, lin);
+    lab(p, 'satisfied', 470, 230, m('satisfied'), { size: 30, fill: EV.goldHi, weight: 600, maxW: 560 });
+    lab(p, 'dissat', 1130, 230, m('dissat'), { size: 30, fill: STATUS, weight: 600, maxW: 560 });
+    const ch = a13Pill(p, 'chooseS', 800, 740, { size: 34, color: WEALTH, minW: 240 });
+    put(ch, { y: 760 }); tw(ch, { o: 1, y: 740 }, m('choose'), .45, out);
+    // a second life, and what winning taught him
+    const q = panel(m('second'));
+    put(q, { o: 0 }); show(q, m('second'), .4);
+    const lamp = a13Lamp(q, { x: 260, y: 560, s: 1.1 });
+    prog(qq => { const t = qq * D; put(lamp._flame, { s: 1 + .06 * Math.sin(t * 9) + .04 * Math.sin(t * 13.7) }); }, 0, D, lin);
+    lab(q, 'second', 260, 640, m('second'), { size: 34, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 360 });
+    const nv = a13Icon(q, 720, 470, EV.goldHi, 2.2);
+    void nv;
+    const ic = [[600, 300, MONEY], [840, 300, STATUS]].map(([x, y, c]) => { const g = G(q, { x, y, o: 0 }); mk('circle', { cx: 0, cy: 0, r: 30, fill: '#151d21', stroke: c, 'stroke-width': 3 }, g); T(g, c === MONEY ? '₹' : '★', { x: 0, y: 11, size: 32, fill: c, anchor: 'middle', font: SANS }); show(g, m('won'), .4); return g; });
+    void ic;
+    lab(q, 'won', 720, 230, m('won'), { size: 28, fill: EV.ink, maxW: 420 });
+    const peers = [560, 880].map(x => { const g = a13Icon(q, x, 560, EV.dim, 1.4, 0); show(g, m('nothappy'), .4); return g; });
+    void peers;
+    lab(q, 'nothappy', 720, 640, m('nothappy'), { size: 26, fill: EV.dim, maxW: 520 });
+    // each gain spikes, then the line settles back
+    const OX = 1060, OY = 560, W = 440, H = 300;
+    path(q, `M${OX} ${OY - H}V${OY}H${OX + W}`, { stroke: EV.dim, 'stroke-width': 3 });
+    path(q, `M${OX} ${OY - .3 * H}H${OX + W}`, { stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '6 8' });
+    const g3 = [.12, .45, .78];
+    const f = x => .3 + g3.reduce((a, c) => a + (x >= c ? .6 * Math.exp(-(x - c) * 22) : 0), 0);
+    const cv = path(q, '', { stroke: WEALTH, 'stroke-width': 4 });
+    prog(qq => { const t = qq * D, r = evU(t, m('gain'), Math.max(1.5, m('adapt') - m('gain') + .5)); if (r <= 0) { cv.setAttribute('d', ''); return; }
+      let d = ''; for (let i = 0; i <= 120; i++) { const x = r * i / 120; d += (i ? 'L' : 'M') + (OX + W * x).toFixed(1) + ' ' + (OY - H * Math.min(1, f(x))).toFixed(1); } cv.setAttribute('d', d); }, 0, D, lin);
+    lab(q, 'gain', OX + W / 2, OY + 50, m('gain'), { size: 26, fill: EV.ink, maxW: 500 });
+    lab(q, 'adapt', OX + W / 2, OY - H - 30, m('adapt'), { size: 34, font: SERIF, weight: 600, fill: WEALTH, maxW: 500 });
+    const ig = evGlow(q, 800, 790, 260, 'Gold', 0);
+    tw(ig, { o: .6 }, m('inside'), .6);
+    lab(q, 'inside', 800, 800, m('inside'), { size: 40, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1100 });
+  }],
+
+  ['game', 'b_game', (m, D) => {
+    const p = panel(0);
+    a13Ground(p, 720);
+    lab(p, 'wired', 330, 120, m('wired'), { size: 32, fill: EV.ink, weight: 600, maxW: 520 });
+    lab(p, 'good', 800, 200, m('good'), { size: 38, font: SERIF, weight: 600, fill: EV.gold, maxW: 1000 });
+    // the treadmill
+    const TX = 780, TY = 700;
+    mk('rect', { x: TX - 260, y: TY - 10, width: 520, height: 30, rx: 14, fill: '#1b2226', stroke: EV.dim, 'stroke-width': 3 }, p);
+    path(p, `M${TX + 240} ${TY - 10}L${TX + 290} ${TY - 230}H${TX + 330}`, { stroke: EV.dim, 'stroke-width': 6 });
+    const belt = path(p, '', { stroke: EV.faint, 'stroke-width': 3 });
+    const hz = a13Man(p, { x: TX, y: TY - 10, s: .58 }, '#6b5a8a', '#4f4266');
+    a13Grey(hz, '#8f8a80');
+    lab(p, 'hamza', TX, 790, m('hamza'), { size: 28, weight: 600 });
+    const offT = m('step') + .1;
+    prog(q => { const t = q * D, run = 1 - evU(t, offT - .2, .4), ph = t * 7;
+      let d = ''; const sh = (t * 160 * run + 160 * Math.min(t, offT)) % 40; for (let x = TX - 250 + sh; x < TX + 250; x += 40) d += `M${x.toFixed(1)} ${TY + 5}h18`;
+      belt.setAttribute('d', d);
+      if (t < offT) { const sw = Math.sin(ph) * 22 * evU(t, .3, .6); put(hz.legL, { r: sw }); put(hz.legR, { r: -sw }); put(hz.armL, { r: -sw }); put(hz.armR, { r: sw }); put(hz.torso, { y: -178 - Math.abs(Math.sin(ph)) * 6 * evU(t, .3, .6) }); } }, 0, D, lin);
+    evMood(hz, 'tense', m('adaptT'));
+    // the shops pile up
+    [1, 2, 3].forEach(i => { const s = a13Shop(p, { x: 500 + i * 140, y: 420, s: .9, o: 0 }); put(s, { y: 440 }); tw(s, { o: 1, y: 420 }, m('shop' + i), .4, out); });
+    lab(p, 'survive', 330, 470, m('survive'), { size: 26, fill: EV.ink, maxW: 420 });
+    lab(p, 'adaptT', 330, 540, m('adaptT'), { size: 26, fill: STATUS, maxW: 420 });
+    // step off, and play
+    a13Walk(hz, [[offT, offT + 1.6, TX, 1180]], D);
+    prog(q => { const t = q * D; if (t >= offT) { put(hz.g, { y: TY - 10 + 30 * io(evU(t, offT, .5)) }); put(hz.armL, { r: 0 }); put(hz.armR, { r: -150 * io(evU(t, m('play'), .5)) }); } }, 0, D, lin);
+    evMood(hz, 'smile', m('play'));
+    const st = a13Pill(p, 'step', 980, 610, { size: 28, color: WEALTH, minW: 180 });
+    put(st, { y: 630 }); tw(st, { o: 1, y: 610 }, m('step'), .4, out);
+    const kid = evPerson(p, { kind: 'm', x: 1330, y: 720, s: .32, o: 0 });
+    evRecolor(kid, '#c9894a', '#8a5a2c');
+    show(kid.g, m('play'), .4);
+    evMood(kid, 'smile', m('play'));
+    const kite = a13Kite(p, { x: 1430, y: 300, s: .9, o: 0 });
+    const str = path(p, '', { stroke: EV.dim, 'stroke-width': 1.5 });
+    prog(q => { const t = q * D, k = evU(t, m('play'), .6); put(kite, { o: k, y: 300 + 12 * Math.sin(t * 1.7), r: 8 * Math.sin(t * 1.3) });
+      str.setAttribute('d', k > 0 ? `M1192 ${(TY - 10 + 30 - 210 * .58).toFixed(1)}Q1320 380 1430 ${(350 + 12 * Math.sin(t * 1.7)).toFixed(1)}` : ''); put(str, { o: k }); }, 0, D, lin);
+    const pl = a13Pill(p, 'play', 1300, 120, { size: 30, color: MONEY, ink: EV.ink, minW: 200 });
+    put(pl, { y: 140 }); tw(pl, { o: 1, y: 120 }, m('play'), .4, out);
+  }],
+
+  ['check2', 'b_check2', (m, D) => {
+    const p = panel(0);
+    a13Sci(m, D);
+    lab(p, 'used', 800, 140, m('used'), { size: 42, font: SERIF, italic: true, fill: EV.ink });
+    path(p, 'M800 200V680', { stroke: EV.faint, 'stroke-width': 1.5 });
+    // 1978: two equal bars
+    lab(p, 'winners', 440, 220, m('winners'), { size: 26, weight: 600, maxW: 560 });
+    const B1 = 380;
+    const w1 = mk('rect', { x: 330, y: B1, width: 70, height: 0, fill: SCI }, p), o1 = mk('rect', { x: 470, y: B1, width: 70, height: 0, fill: EV.faint }, p);
+    path(p, `M300 ${B1}H580`, { stroke: EV.dim, 'stroke-width': 2 });
+    lab(p, 'winL', 365, B1 + 30, m('winners'), { size: 20, fill: SCI, maxW: 120 });
+    lab(p, 'othL', 505, B1 + 30, m('others'), { size: 20, fill: EV.dim, maxW: 120 });
+    prog(q => { const t = q * D, a = 110 * io(evU(t, m('winners'), .5)), b = 108 * io(evU(t, m('nohappier'), .5)); w1.setAttribute('height', a); w1.setAttribute('y', B1 - a); o1.setAttribute('height', b); o1.setAttribute('y', B1 - b); }, 0, D, lin);
+    lab(p, 'nohappier', 680, 320, m('nohappier'), { size: 26, fill: EV.ink, weight: 600, maxW: 200 });
+    lab(p, 'tiny', 680, 360, m('tiny'), { size: 22, fill: EV.dim, italic: true, font: SERIF, maxW: 200 });
+    // Sweden: life satisfaction up, daily happiness about the same
+    lab(p, 'players', 440, 470, m('players'), { size: 26, weight: 600, maxW: 560 });
+    const B2 = 640;
+    path(p, `M240 ${B2}H640`, { stroke: EV.dim, 'stroke-width': 2 });
+    const pr = [[262, 'more', 60, 100], [500, 'daily', 62, 66]].map(([x, k, a, b]) => {
+      const r0 = mk('rect', { x, y: B2, width: 56, height: 0, fill: EV.faint }, p), r1 = mk('rect', { x: x + 66, y: B2, width: 56, height: 0, fill: SCI }, p);
+      return [r0, r1, k, a, b]; });
+    prog(q => { const t = q * D, u = io(evU(t, m('big'), .5));
+      pr.forEach(([r0, r1, k, a, b]) => { const v = io(evU(t, m(k), .6)); r0.setAttribute('height', a * u); r0.setAttribute('y', B2 - a * u); const h = (a + (b - a) * v) * u; r1.setAttribute('height', h); r1.setAttribute('y', B2 - h); }); }, 0, D, lin);
+    lab(p, 'bigW', 680, 520, m('big'), { size: 22, fill: SCI, maxW: 200 });
+    lab(p, 'smallW', 680, 552, m('big'), { size: 22, fill: EV.dim, maxW: 200 });
+    const pm = evPara(p, L('more'), { x: 323, y: 672, size: 22, maxW: 200, fill: EV.ink, o: 0 }); show(pm, m('more'), .45);
+    lab(p, 'decade', 323, 736, m('decade'), { size: 20, fill: EV.dim, maxW: 220 });
+    const pd = evPara(p, L('daily'), { x: 561, y: 672, size: 22, maxW: 200, fill: EV.ink, o: 0 }); show(pd, m('daily'), .45);
+    lab(p, 'much', 440, 800, m('much'), { size: 30, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 640 });
+    // age: the old U, and the new falling line of distress
+    lab(p, 'countries', 1160, 220, m('countries'), { size: 26, weight: 600 });
+    const AX = 900, AW = 520;
+    const ax = x => AX + AW * (x - 20) / 60;
+    path(p, `M${AX} 260V420H${AX + AW}`, { stroke: EV.dim, 'stroke-width': 2.5 });
+    [20, 50, 80].forEach(a => T(p, String(a), { x: ax(a), y: 446, size: 20, fill: EV.dim, anchor: 'middle', font: SANS }));
+    lab(p, 'ageL', AX + AW + 44, 446, m('age'), { size: 20, fill: EV.dim, anchor: 'start' });
+    const u1 = path(p, '', { stroke: WEALTH, 'stroke-width': 4 });
+    const U = a => 300 + 80 * Math.exp(-Math.pow((a - 49) / 15, 2));
+    const dU = r => { let d = ''; for (let i = 0; i <= 60; i++) { const a = 20 + 60 * r * i / 60; d += (i ? 'L' : 'M') + ax(a).toFixed(1) + ' ' + U(a).toFixed(1); } return d; };
+    prog(q => { const t = q * D, r = io(evU(t, m('dipped') - .3, .9)); u1.setAttribute('d', r > 0 ? dU(r) : ''); }, 0, D, lin);
+    lab(p, 'dipped', ax(49), 300, m('dipped'), { size: 22, fill: WEALTH, maxW: 240 });
+    lab(p, 'youngest', 1160, 500, m('youngest'), { size: 22, fill: EV.ink, weight: 600, maxW: 600 });
+    path(p, `M${AX} 530V680H${AX + AW}`, { stroke: EV.dim, 'stroke-width': 2.5 });
+    const l2 = path(p, `M${ax(20)} 548Q${ax(45)} 600 ${ax(80)} 664`, { stroke: STATUS, 'stroke-width': 4 }, { d: 0 });
+    draw(l2, m('youngest') + .2, 1.6);
+    lab(p, 'falls', ax(50), 570, m('falls'), { size: 22, fill: STATUS, maxW: 300, anchor: 'start' });
+    a13Stamp(p, 'holds', 1160, 780, m('holds'));
+  }],
+
+  ['winners', 'b_winners', (m, D) => {
+    const p = panel(0);
+    a13Ground(p, 640);
+    lab(p, 'success', 800, 100, m('success'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    lab(p, 'champ', 800, 170, m('champ'), { size: 30, fill: EV.ink, maxW: 900 });
+    // a trophy between a batsman and a founder
+    const tr = G(p, { x: 800, y: 470 });
+    path(tr, 'M-60 -120H60Q60 -40 0 -20Q-60 -40 -60 -120ZM-60 -110Q-100 -100 -90 -70Q-80 -50 -54 -54M60 -110Q100 -100 90 -70Q80 -50 54 -54M-12 -20V20H12V-20M-50 20H50V44H-50Z', { fill: '#b8862f', stroke: EV.goldHi, 'stroke-width': 2 });
+    const bt = a13Man(p, { x: 430, y: 640, s: .6 }, '#e8e4d8', '#bdb6a3');
+    evBreathe(bt, D);
+    const bat = G(bt.armR._lo, { x: 0, y: 78 }); path(bat, 'M-6 0H6V40H12V150H-12V40H-6Z', { fill: '#c9a46a', stroke: '#8a6a44', 'stroke-width': 2 });
+    tw(bt.armR, { r: -40 }, m('bat'), .5, back); tw(bt.armR._lo, { r: -30 }, m('bat'), .5);
+    lab(p, 'bat', 430, 700, m('bat'), { size: 26, fill: EV.ink, maxW: 420 });
+    const fo = a13Woman(p, { x: 1170, y: 640, s: .6 }, '#3d4654', '#2b323d');
+    evBreathe(fo, D, 1, 1.1);
+    const sk = G(p, { x: 1330, y: 640, o: 0 });
+    [[0, 160], [44, 230], [88, 120]].forEach(([dx, h]) => mk('rect', { x: dx - 18, y: -h, width: 36, height: h, fill: '#1b2226', stroke: EV.gold, 'stroke-width': 2 }, sk));
+    show(sk, m('founder'), .4);
+    evMood(fo, 'smile', m('founder'));
+    lab(p, 'founder', 1200, 700, m('founder'), { size: 26, fill: EV.ink, maxW: 460 });
+    // step out of the game
+    const q = panel(m('step'));
+    put(q, { o: 0 }); show(q, m('step'), .4);
+    const box = G(q, { x: 520, y: 450 });
+    mk('rect', { x: -320, y: -200, width: 640, height: 400, rx: 18, fill: '#0d1215', stroke: STATUS, 'stroke-width': 2.5, 'stroke-dasharray': '12 10' }, box);
+    evText(box, L('game'), { x: -300, y: -164, size: 26, fill: STATUS, anchor: 'start', weight: 600 });
+    const racers = [0, 1, 2, 3].map(i => a13Icon(box, -200 + i * 30, -60 + i * 70, EV.dim, 1.1));
+    prog(qq => { const t = qq * D; racers.forEach((g, i) => put(g, { x: -220 + ((t * (70 + i * 25) + i * 130) % 440) })); }, 0, D, lin);
+    const me = a13Icon(q, 640, 640, EV.goldHi, 1.6);
+    prog(qq => { const t = qq * D; put(me, { x: 640 + 520 * io(evU(t, m('step') + .3, 1.6)) }); }, 0, D, lin);
+    lab(q, 'stepG', 1160, 300, m('step'), { size: 34, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 520 });
+    lab(q, 'need', 1160, 360, m('need'), { size: 28, fill: EV.ink, maxW: 520 });
+    const cs = G(q, { x: 1340, y: 640, o: 0 });
+    const coins = [0, 1, 2, 3, 4, 5].map(i => mk('ellipse', { cx: 0, cy: -10 - i * 18, rx: 34, ry: 10, fill: '#2c4a3a', stroke: MONEY, 'stroke-width': 2 }, cs));
+    show(cs, m('more'), .3);
+    prog(qq => { const t = qq * D, v = t - m('more'); const n = v < 0 ? 6 : 3 + Math.round(3 * Math.cos(v * 2.4)); coins.forEach((c, i) => c.setAttribute('opacity', i < n ? 1 : .12)); }, 0, D, lin);
+    const mg = evGlow(q, 1160, 590, 110, 'Gold', 0);
+    q.insertBefore(mg, me);
+    tw(mg, { o: .8 }, m('need'), .5);
+    prog(qq => { const t = qq * D; put(mg, { x: 640 + 520 * io(evU(t, m('step') + .3, 1.6)) }); }, 0, D, lin);
+    lab(q, 'moreM', 1160, 420, m('more'), { size: 26, fill: MONEY, maxW: 560 });
+    const bu = a13Seated(q, { x: 1160, y: 820, s: .8, o: 0 });
+    show(bu, m('buddha'), .5);
+    lab(q, 'buddha', 1300, 790, m('buddha'), { size: 26, fill: EV.goldHi, anchor: 'start' });
+    // a quiet room: thirty minutes, alone, content
+    const r0 = Math.min(m('sit'), m('pascal'));
+    const r = panel(r0);
+    put(r, { o: 0 }); show(r, r0, .4);
+    mk('rect', { x: 260, y: 160, width: 1080, height: 600, rx: 10, fill: '#0d1215', stroke: EV.goldLo, 'stroke-width': 3 }, r);
+    mk('rect', { x: 980, y: 240, width: 220, height: 200, rx: 4, fill: '#10202a', stroke: EV.goldLo, 'stroke-width': 3 }, r);
+    path(r, 'M1090 240V440M980 340H1200', { stroke: EV.goldLo, 'stroke-width': 3 });
+    mk('rect', { x: 560, y: 690, width: 360, height: 30, rx: 6, fill: '#3a2f22' }, r);
+    const sv = a13Seated(r, { x: 740, y: 700, s: 1.2, color: '#8a8270' });
+    const sg = evGlow(r, 740, 600, 170, 'Gold', 0);
+    r.insertBefore(sg, sv);
+    const ck = G(r, { x: 480, y: 330 });
+    mk('circle', { cx: 0, cy: 0, r: 70, fill: '#10171b', stroke: TIME, 'stroke-width': 3 }, ck);
+    const sweep = path(ck, '', { fill: TIME, opacity: .35 });
+    const hand = G(ck); path(hand, 'M0 6V-56', { stroke: EV.goldHi, 'stroke-width': 4 });
+    prog(qq => { const t = qq * D, u = .5 * io(evU(t, m('thirty'), Math.max(1.5, m('won') - m('thirty')))); put(hand, { r: 360 * u });
+      if (u <= 0) { sweep.setAttribute('d', ''); } else { const a = u * Math.PI * 2; sweep.setAttribute('d', `M0 0V-66A66 66 0 ${u > .5 ? 1 : 0} 1 ${(66 * Math.sin(a)).toFixed(1)} ${(-66 * Math.cos(a)).toFixed(1)}Z`); }
+      put(sg, { o: .8 * io(evU(t, m('thirty') + .5, 1.5)) }); }, 0, D, lin);
+    [...sv.children].forEach(e => tw(e, { c_fill: EV.goldHi }, m('won'), .6));
+    lab(r, 'sit', 800, 120, m('sit'), { size: 36, font: SERIF, italic: true, fill: EV.ink, maxW: 1100 });
+    lab(r, 'pascal', 800, 820, m('pascal'), { size: 24, fill: EV.dim });
+    lab(r, 'thirty', 480, 450, m('thirty'), { size: 26, fill: TIME, maxW: 360 });
+    const wn = a13Pill(r, 'wonT', 1090, 560, { size: 32, color: WEALTH, minW: 240 });
+    put(wn, { s: .7 }); tw(wn, { o: 1, s: 1 }, m('won'), .45, back);
+  }],
+
+  ['peace', 'b_peace', (m, D) => {
+    const p = panel(0);
+    const gl = evGlow(p, 800, 100, 240, 'Gold', 0);
+    tw(gl, { o: .6 }, m('peace'), .8);
+    lab(p, 'peace', 800, 115, m('peace'), { size: 50, font: SERIF, weight: 600, fill: EV.gold });
+    lab(p, 'war', 800, 185, m('war'), { size: 32, fill: STATUS, weight: 600 });
+    a13Ground(p, 700);
+    // a business: a shop front with a battle chart
+    const sh = a13Shop(p, { x: 400, y: 700, s: 1.5, o: 0, color: STATUS });
+    show(sh, m('biz'), .4);
+    const zz = path(p, 'M260 420L320 360L360 400L420 320L470 350L540 270', { stroke: STATUS, 'stroke-width': 4 }, { d: 0 });
+    draw(zz, m('biz') + .2, .8);
+    lab(p, 'biz', 400, 760, m('biz'), { size: 28, weight: 600 });
+    // flatmates over the dishes
+    const sink = G(p, { x: 1150, y: 560, o: 0 });
+    mk('rect', { x: -90, y: 0, width: 180, height: 140, fill: '#1b2226', stroke: EV.dim, 'stroke-width': 3 }, sink);
+    [0, 1, 2, 3].forEach(i => mk('ellipse', { cx: -10 + (i % 2) * 14, cy: -8 - i * 14, rx: 56, ry: 9, fill: '#d9d2c0', stroke: EV.dim, 'stroke-width': 1.5 }, sink));
+    show(sink, m('dishes'), .4);
+    const f1 = a13Man(p, { x: 985, y: 700, s: .45, o: 0 }, '#4f7a5a', '#3a5a42'), f2 = a13Shafeeq(p, { x: 1315, y: 700, s: .45, o: 0 });
+    [f1, f2].forEach((P, i) => { evBreathe(P, D, 1, .9 + i * .2); show(P.g, m('dishes'), .4); evMood(P, 'angry', m('dishes') + .3); });
+    lab(p, 'dishes', 1150, 760, m('dishes'), { size: 28, weight: 600 });
+    // endless problems: solve one, the next pops up
+    const q = panel(m('endless'));
+    put(q, { o: 0 }); show(q, m('endless'), .4);
+    const en = lab(q, 'endless', 800, 115, m('endless'), { size: 38, font: SERIF, weight: 600, fill: STATUS, maxW: 1100 });
+    hide(en, m('drop'), .4);
+    lab(q, 'drop', 800, 115, m('drop') + .3, { size: 38, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1100 });
+    const times = [];
+    for (let tt = m('endless') + .4; tt < m('drop') - .3; tt += tt < m('next') ? .7 : .32) times.push(tt);
+    const probs = times.map((t0, i) => {
+      const g = G(q, { x: 200 + ((i * 377) % 1200), y: 220 + ((i * 173) % 300), o: 0 });
+      mk('circle', { cx: 0, cy: 0, r: 32, fill: '#151d21', stroke: STATUS, 'stroke-width': 3 }, g);
+      T(g, '!', { x: 0, y: 12, size: 34, fill: STATUS, anchor: 'middle', font: SANS, weight: 700 });
+      const tick = path(g, 'M-14 2L-4 12L16 -10', { stroke: MONEY, 'stroke-width': 5 });
+      return [g, tick, t0];
+    });
+    prog(qq => { const t = qq * D, k = 1 - evU(t, m('drop'), .6);
+      probs.forEach(([g, tick, t0]) => { const v = t - t0; put(g, { o: v < 0 ? 0 : Math.min(1, v / .2) * (1 - .55 * evU(v, .8, .4)) * k, s: v < 0 ? .5 : .5 + .5 * back(Math.min(1, v / .3)) }); put(tick, { o: evU(v, .6, .2) }); }); }, 0, D, lin);
+    const cg = evGlow(q, 800, 360, 170, 'Gold', 0);
+    const cf = a13Seated(q, { x: 800, y: 440, s: 1, o: 0 });
+    tw(cg, { o: .8 }, m('drop') + .3, .8); show(cf, m('drop') + .3, .6);
+    // still water and a flowing river
+    const pond = G(q, { x: 470, y: 610, o: 0 });
+    mk('ellipse', { cx: 0, cy: 0, rx: 230, ry: 52, fill: '#14303a', stroke: TIME, 'stroke-width': 2.5 }, pond);
+    path(pond, 'M-120 -6H-40M20 10H110M-60 22H10', { stroke: '#7fb6d0', 'stroke-width': 2, opacity: .5 });
+    show(pond, m('rest'), .5);
+    lab(q, 'rest', 470, 715, m('rest'), { size: 28, fill: EV.ink, maxW: 600 });
+    const riv = G(q, { o: 0 });
+    path(riv, 'M880 560Q1000 600 1120 570T1440 580V650Q1320 630 1160 650T880 630Z', { fill: '#14303a', stroke: TIME, 'stroke-width': 2.5 });
+    const flow = path(riv, '', { stroke: '#7fb6d0', 'stroke-width': 3, opacity: .7 });
+    prog(qq => { const t = qq * D; let d = ''; for (let i = 0; i < 9; i++) { const x = 890 + ((i * 64 + t * 90) % 530), y = 600 + 10 * Math.sin(i * 1.7); d += `M${x.toFixed(1)} ${y.toFixed(1)}h28`; } flow.setAttribute('d', d); }, 0, D, lin);
+    show(riv, m('motion'), .5);
+    lab(q, 'motion', 1160, 715, m('motion'), { size: 28, fill: EV.ink, maxW: 600 });
+    const ot = a13Pill(q, 'onething', 800, 810, { size: 32, color: WEALTH, minW: 320 });
+    put(ot, { y: 830 }); tw(ot, { o: 1, y: 810 }, m('onething'), .45, out);
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    a13Ground(p, 430);
+    const hz = a13Grey(a13Man(p, { x: 330, y: 430, s: .5 }, '#6b5a8a', '#4f4266'), '#8f8a80');
+    evBreathe(hz, D); evMood(hz, 'worried', .4);
+    [0, 1, 2].forEach(i => a13Shop(p, { x: 760 + i * 150, y: 380, s: .9 }));
+    a13Shop(p, { x: 1210, y: 380, s: .9, color: STATUS, dashed: true });
+    T(p, '?', { x: 1210, y: 352, size: 56, fill: STATUS, anchor: 'middle', font: SANS, weight: 700 });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-game', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 0, L('q3y'), [null, L('q3nb'), L('q3nc')]),
+  }], done) }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    evText(p, L('b_wrap'), { x: 800, y: 130, size: 52, font: SERIF, weight: 600, fill: EV.gold });
+    const cols = [STATUS, SCI, WEALTH, EV.goldHi];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -30, y: 260 + i * 150, o: 0 });
+      mk('circle', { cx: 200, cy: -10, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: 200, y: 1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 260, y: 0, size: 36, maxW: 1150, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Nisha, a teacher in Kozhikode, wants a new house, a promotion, a PhD, to lose ten kilos and a new car, all this year. She feels on edge all the time. What would Naval suggest?',
+  q1a: 'Chase all five harder, so the waiting ends sooner.',
+  q1b: 'Pick the one she wants most, and treat it as the place she has chosen to struggle.',
+  q1c: 'Give up wanting anything, and stop working.',
+  q1y: 'Right. Naval keeps one big desire at a time, and knows that is where he has agreed to feel uneasy.',
+  q1na: 'Each one is its own contract to feel uneasy. Chasing five at once keeps all five open.',
+  q1nc: 'Naval says we are meant to act and build. The point is choosing desires, not dropping life.',
+  q2p: 'Faisal, 24, plans to work sixteen-hour days for twenty years, then start enjoying life. What does Naval’s picture of the three ages warn?',
+  q2a: 'Nothing: money first is the safe order.',
+  q2b: 'Young people are always the happiest, so it doesn’t matter.',
+  q2c: 'Enough money may arrive after his time and health are gone, so aim to protect all three.',
+  q2y: 'Right. The prize is time, health and money together, not one traded away for another.',
+  q2na: 'Money first often means time and health last. By the time it’s enough, they may be spent.',
+  q2nb: 'Naval notices the opposite: the young, with many desires, often seem less happy.',
+  q3p: 'Hamza, 61, owns three supermarkets in Sharjah. His sons run them, yet he is opening a fourth and can’t sleep for worry. Which idea from this chapter fits best?',
+  q3a: 'He may be stuck in a game he has outgrown; the next win won’t bring the peace he wants.',
+  q3b: 'The fourth shop will finally give him lasting peace.',
+  q3c: 'Hard work was a mistake from the start.',
+  q3y: 'Right. A game you’re good at is hard to quit, and adaptation keeps you running long after it stops serving you.',
+  q3nb: 'Each gain soon feels normal. That is hedonic adaptation: the fourth will feel like the third.',
+  q3nc: 'Naval says we should do the outside work. The trap is playing on after the game stops serving you.',
+  p1p: 'Naval calls desire a contract you sign with yourself. What does it say?',
+  p1a: 'I will be grateful for what I have.',
+  p1b: 'I will work hard and get rich.',
+  p1c: 'I agree to feel uneasy until I get what I want.',
+  p1y: 'Yes. Each desire sets a condition for feeling at ease. Sign few, and sign them on purpose.',
+  p1na: 'That’s closer to contentment, the opposite of desire.',
+  p1nb: 'It isn’t a business plan. It’s about how you feel while you wait.',
+  p2p: 'Shafeeq’s new car thrilled him for a week; now it’s just the thing he parks downstairs. What is this called?',
+  p2a: 'Hedonic adaptation', p2b: 'Specific knowledge', p2c: 'Compound interest',
+  p2y: 'Right. We get used to gains fast, so the thrill fades back to the baseline.',
+  p2nb: 'That’s from Part 1: knowledge only you have. Here the thrill faded because he got used to the car.',
+  p2nc: 'Compounding makes things grow. The thrill did the opposite: it shrank as he got used to the car.',
+  p3p: 'Naval says happiness is being content with what you have, while success grows from discontent. What follows?',
+  p3a: 'They’re the same thing, so chase both at full speed.',
+  p3b: 'Choose, knowingly, which one you’re feeding, and when.',
+  p3c: 'Never try to succeed at anything.',
+  p3y: 'Right. Striving has its season; just know that it runs on dissatisfaction.',
+  p3na: 'They pull in opposite directions: one says “enough”, the other “more”.',
+  p3nc: 'Naval still builds and works. He asks you to choose, not to quit.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'In a Swedish study, big lottery winners were more satisfied with life even a decade later.',
+  p4r2: 'Research shows that every kind of wanting lowers well-being.',
+  p4r3: 'In data from 145 countries, happiness has tended to dip in midlife, near age 50.',
+  p4r4: 'Recent surveys in 44 countries find that young adults report the least distress of any age.',
+  p4w1: 'True. About 3,300 players were surveyed; big winners stayed more satisfied with life, though daily happiness barely differed.',
+  p4w2: 'False. Putting money and things first has a small negative link, but progress on goals you care about goes with higher well-being.',
+  p4w3: 'True. That is the well-known U-shape, seen in many countries before the recent shift.',
+  p4w4: 'False. The young now report the most distress, and it falls with age.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'കോഴിക്കോട്ടെ അധ്യാപികയായ നിഷയ്ക്ക് ഈ വർഷം തന്നെ വേണം: പുതിയ വീട്, പ്രമോഷൻ, പിഎച്ച്ഡി, പത്ത് കിലോ കുറയ്ക്കൽ, പുതിയ കാർ. അവൾ എപ്പോഴും അസ്വസ്ഥയാണ്. നവൽ എന്ത് നിർദേശിക്കും?',
+  q1a: 'അഞ്ചിന്റെയും പിന്നാലെ കൂടുതൽ ശക്തമായി ഓടുക, കാത്തിരിപ്പ് വേഗം തീരാൻ.',
+  q1b: 'ഏറ്റവും ആഗ്രഹിക്കുന്ന ഒന്ന് തിരഞ്ഞെടുക്കുക; അതാണ് താൻ തിരഞ്ഞെടുത്ത പോരാട്ടക്കളം എന്ന് അറിയുക.',
+  q1c: 'ഒന്നും ആഗ്രഹിക്കാതെ, പണിയെല്ലാം നിർത്തുക.',
+  q1y: 'ശരി. നവൽ ഒരേ സമയം ഒരു വലിയ ആഗ്രഹം മാത്രം വയ്ക്കുന്നു; അസ്വസ്ഥനാകാൻ താൻ സമ്മതിച്ചത് അവിടെയാണെന്ന് അറിഞ്ഞുകൊണ്ട്.',
+  q1na: 'ഓരോന്നും അസ്വസ്ഥതയ്ക്കുള്ള ഓരോ കരാറാണ്. അഞ്ചിന്റെയും പിന്നാലെ ഒരുമിച്ച് ഓടിയാൽ അഞ്ച് കരാറും തുറന്നുകിടക്കും.',
+  q1nc: 'പ്രവർത്തിക്കാനും പണിയാനുമാണ് നമ്മൾ എന്ന് നവൽ പറയുന്നു. ആഗ്രഹങ്ങൾ തിരഞ്ഞെടുക്കലാണ് കാര്യം, ജീവിതം ഉപേക്ഷിക്കലല്ല.',
+  q2p: 'ഇരുപത്തിനാലുകാരനായ ഫൈസൽ, ഇരുപത് വർഷം ദിവസവും പതിനാറ് മണിക്കൂർ പണിയെടുത്ത്, പിന്നെ ജീവിതം ആസ്വദിക്കാൻ പദ്ധതിയിടുന്നു. മൂന്ന് പ്രായങ്ങളെക്കുറിച്ചുള്ള നവലിന്റെ ചിത്രം എന്ത് മുന്നറിയിപ്പ് നൽകുന്നു?',
+  q2a: 'ഒന്നുമില്ല: ആദ്യം പണം, അതാണ് സുരക്ഷിതമായ ക്രമം.',
+  q2b: 'ചെറുപ്പക്കാർ എപ്പോഴും ഏറ്റവും സന്തോഷവാന്മാരാണ്, അതുകൊണ്ട് പ്രശ്നമില്ല.',
+  q2c: 'ആവശ്യത്തിന് പണം എത്തുമ്പോഴേക്കും സമയവും ആരോഗ്യവും പോയേക്കാം; മൂന്നും കാക്കാൻ ശ്രമിക്കുക.',
+  q2y: 'ശരി. സമയവും ആരോഗ്യവും പണവും ഒരുമിച്ചാണ് സമ്മാനം; ഒന്നിനുവേണ്ടി മറ്റുള്ളവ കളയുന്നതല്ല.',
+  q2na: 'ആദ്യം പണം എന്നാൽ പലപ്പോഴും സമയവും ആരോഗ്യവും അവസാനം എന്നാണ്. പണം തികയുമ്പോഴേക്കും അവ തീർന്നേക്കാം.',
+  q2nb: 'നവൽ കാണുന്നത് മറിച്ചാണ്: ഒരുപാട് ആഗ്രഹങ്ങളുള്ള ചെറുപ്പക്കാർ പലപ്പോഴും സന്തോഷം കുറഞ്ഞവരായി തോന്നുന്നു.',
+  q3p: 'അറുപത്തൊന്നുകാരനായ ഹംസയ്ക്ക് ഷാർജയിൽ മൂന്ന് സൂപ്പർമാർക്കറ്റുകളുണ്ട്. മക്കളാണ് അവ നടത്തുന്നത്; എന്നിട്ടും അദ്ദേഹം നാലാമത്തേത് തുടങ്ങുന്നു, ആധി കാരണം ഉറക്കമില്ല. ഈ അധ്യായത്തിലെ ഏത് ആശയമാണ് ഏറ്റവും ചേരുന്നത്?',
+  q3a: 'വളർന്നുകഴിഞ്ഞ ഒരു കളിയിൽ അദ്ദേഹം കുടുങ്ങിയിരിക്കാം; അടുത്ത ജയം അദ്ദേഹം തേടുന്ന സമാധാനം തരില്ല.',
+  q3b: 'നാലാമത്തെ കട ഒടുവിൽ ശാശ്വതമായ സമാധാനം നൽകും.',
+  q3c: 'കഠിനാധ്വാനം തുടക്കം മുതലേ തെറ്റായിരുന്നു.',
+  q3y: 'ശരി. നന്നായി കളിക്കാനറിയുന്ന കളി നിർത്താൻ പ്രയാസമാണ്; അത് ഗുണം ചെയ്യാതായിട്ടും ശീലിച്ചുപോകൽ ഓട്ടം തുടരിക്കുന്നു.',
+  q3nb: 'ഓരോ നേട്ടവും വേഗം സാധാരണമാകും. അതാണ് ഹെഡോണിക് അഡാപ്റ്റേഷൻ: നാലാമത്തേതും മൂന്നാമത്തേത് പോലെ തോന്നും.',
+  q3nc: 'പുറത്തെ പണി ചെയ്യണം എന്നുതന്നെയാണ് നവൽ പറയുന്നത്. കളി ഗുണം ചെയ്യാതായിട്ടും അത് തുടരുന്നതാണ് കെണി.',
+  p1p: 'ആഗ്രഹത്തെ, നിങ്ങൾ നിങ്ങളോടുതന്നെ ഒപ്പിടുന്ന കരാർ എന്ന് നവൽ വിളിക്കുന്നു. അതിൽ എന്താണ് എഴുതിയിരിക്കുന്നത്?',
+  p1a: 'ഉള്ളതിന് ഞാൻ നന്ദിയുള്ളവനായിരിക്കും.',
+  p1b: 'ഞാൻ കഠിനമായി പണിയെടുത്ത് പണക്കാരനാകും.',
+  p1c: 'ആഗ്രഹിച്ചത് കിട്ടുംവരെ അസ്വസ്ഥനായിരിക്കാൻ ഞാൻ സമ്മതിക്കുന്നു.',
+  p1y: 'അതെ. ഓരോ ആഗ്രഹവും സ്വസ്ഥതയ്ക്ക് ഒരു നിബന്ധന വയ്ക്കുന്നു. കുറച്ചെണ്ണം മാത്രം, മനഃപൂർവം ഒപ്പിടൂ.',
+  p1na: 'അത് തൃപ്തിയോടാണ് അടുത്ത്; ആഗ്രഹത്തിന്റെ നേർവിപരീതം.',
+  p1nb: 'ഇതൊരു ബിസിനസ് പദ്ധതിയല്ല. കാത്തിരിക്കുമ്പോൾ നിങ്ങൾക്ക് എങ്ങനെ തോന്നുന്നു എന്നതാണ് കാര്യം.',
+  p2p: 'ഷഫീഖിന്റെ പുതിയ കാർ ഒരാഴ്ച അവനെ ആവേശം കൊള്ളിച്ചു; ഇപ്പോൾ അത് താഴെ പാർക്ക് ചെയ്യുന്ന വെറുമൊരു വണ്ടി. ഇതിനെ എന്ത് വിളിക്കുന്നു?',
+  p2a: 'ഹെഡോണിക് അഡാപ്റ്റേഷൻ (ശീലിച്ചുപോകൽ)', p2b: 'സ്പെസിഫിക് നോളജ്', p2c: 'കൂട്ടുപലിശ',
+  p2y: 'ശരി. നേട്ടങ്ങൾ നമ്മൾ വേഗം ശീലിക്കും; ആവേശം പഴയ നിലയിലേക്ക് മടങ്ങും.',
+  p2nb: 'അത് ഒന്നാം ഭാഗത്തിലെ ആശയമാണ്: നിങ്ങൾക്ക് മാത്രമുള്ള അറിവ്. ഇവിടെ കാർ ശീലമായതുകൊണ്ടാണ് ആവേശം മങ്ങിയത്.',
+  p2nc: 'കൂട്ടുപലിശ കാര്യങ്ങളെ വളർത്തുന്നു. ഇവിടെ നേരെ മറിച്ചാണ്: കാർ ശീലമായപ്പോൾ ആവേശം ചുരുങ്ങി.',
+  p3p: 'ഉള്ളതിൽ തൃപ്തിപ്പെടുന്നതാണ് സന്തോഷം, തൃപ്തിയില്ലായ്മയിൽ നിന്നാണ് വിജയം എന്ന് നവൽ പറയുന്നു. അതിൽ നിന്ന് എന്ത് മനസ്സിലാക്കാം?',
+  p3a: 'രണ്ടും ഒന്നുതന്നെ; രണ്ടിന്റെയും പിന്നാലെ മുഴുവൻ വേഗത്തിൽ ഓടുക.',
+  p3b: 'ഏതിനെയാണ്, എപ്പോഴാണ് പോറ്റുന്നതെന്ന് അറിഞ്ഞുകൊണ്ട് തിരഞ്ഞെടുക്കുക.',
+  p3c: 'ഒന്നിലും വിജയിക്കാൻ ശ്രമിക്കരുത്.',
+  p3y: 'ശരി. പരിശ്രമത്തിന് അതിന്റേതായ കാലമുണ്ട്; അത് ഓടുന്നത് അതൃപ്തിയിലാണെന്ന് അറിഞ്ഞാൽ മതി.',
+  p3na: 'രണ്ടും എതിർദിശകളിലേക്ക് വലിക്കുന്നു: ഒന്ന് “മതി” എന്ന്, മറ്റേത് “ഇനിയും” എന്ന്.',
+  p3nc: 'നവൽ ഇപ്പോഴും പണിയുന്നു, പ്രവർത്തിക്കുന്നു. തിരഞ്ഞെടുക്കാനാണ് അദ്ദേഹം പറയുന്നത്, ഉപേക്ഷിക്കാനല്ല.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'ഒരു സ്വീഡിഷ് പഠനത്തിൽ, വലിയ ലോട്ടറി ജേതാക്കൾക്ക് പത്ത് വർഷത്തിനു ശേഷവും ജീവിതത്തിൽ കൂടുതൽ തൃപ്തിയുണ്ടായിരുന്നു.',
+  p4r2: 'ഏത് തരം ആഗ്രഹവും സന്തോഷം കുറയ്ക്കുമെന്ന് ഗവേഷണം കാണിക്കുന്നു.',
+  p4r3: '145 രാജ്യങ്ങളിലെ കണക്കുകളിൽ, മധ്യവയസ്സിൽ, 50-നടുത്ത്, സന്തോഷം താഴുന്ന പ്രവണത കണ്ടു.',
+  p4r4: '44 രാജ്യങ്ങളിലെ പുതിയ സർവേകളിൽ, ഏറ്റവും കുറവ് മാനസിക ക്ലേശം ചെറുപ്പക്കാർക്കാണ്.',
+  p4w1: 'ശരി. ഏകദേശം 3,300 കളിക്കാരെ സർവേ ചെയ്തു; വലിയ തുക നേടിയവർക്ക് ജീവിതത്തിൽ കൂടുതൽ തൃപ്തി തുടർന്നു, ദൈനംദിന സന്തോഷത്തിൽ കാര്യമായ വ്യത്യാസമില്ലെങ്കിലും.',
+  p4w2: 'തെറ്റ്. പണത്തിനും വസ്തുക്കൾക്കും ഒന്നാം സ്ഥാനം നൽകുന്നതിന് ചെറിയൊരു ദോഷബന്ധമുണ്ട്; പക്ഷേ പ്രധാന ലക്ഷ്യങ്ങളിലേക്കുള്ള പുരോഗതി കൂടുതൽ സന്തോഷത്തിനൊപ്പമാണ്.',
+  p4w3: 'ശരി. പല രാജ്യങ്ങളിലും കണ്ട, പ്രശസ്തമായ U ആകൃതിയാണിത്; പുതിയ മാറ്റത്തിന് മുൻപുള്ള ചിത്രം.',
+  p4w4: 'തെറ്റ്. ഇപ്പോൾ ഏറ്റവും കൂടുതൽ ക്ലേശം ചെറുപ്പക്കാർക്കാണ്; പ്രായം കൂടുംതോറും അത് കുറയുന്നു.',
+});
+const PRACTICE = [
+  { id: 'p-contract', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 2, L('p1y'), [L('p1na'), L('p1nb'), null]) },
+  { id: 'p-adapt', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 0, L('p2y'), [null, L('p2nb'), L('p2nc')]) },
+  { id: 'p-success', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 1, L('p3y'), [L('p3na'), null, L('p3nc')]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['t'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['f'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('almanack:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>
