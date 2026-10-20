@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Envy, and the habits of happiness · The Almanack of Naval Ravikant, Chapter 14">
+<meta property="og:description" content="A 9-minute animated lesson in English and Malayalam: why envy is a game nobody wins, happiness as a single-player game, and the habits that build it, with honest science checks.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/ch14/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<title>Envy, and the habits of happiness · The Almanack of Naval Ravikant</title>
+<meta name="description" content="An animated, narrated lesson on The Almanack of Naval Ravikant: dropping shoulds, multiplayer versus single-player games, the inner scorecard, envy and the whole-life swap, happiness as a skill built by trial and error, habits, friends, small tricks and how to change a habit, with three science checks on envy, placebo and the health habits. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'അസൂയയും സന്തോഷത്തിന്റെ ശീലങ്ങളും · The Almanack of Naval Ravikant';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/ymu.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/almanack/ch14/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Envy, and the habits of happiness', kicker: 'PART 2 · HAPPINESS · CHAPTER 14', sub: 'Why envy is a game nobody wins, and how happiness is built, one habit at a time',
+  credit: 'A study companion to The Almanack of Naval Ravikant, by Eric Jorgenson',
+  b_intro: 'Title', b_should: 'The word “should”', b_games: 'Single-player games', b_q1: 'Quick check', b_envy: 'Envy and the swap', b_check: 'Science check',
+  b_skill: 'A skill, by trial and error', b_q2: 'Quick check', b_habits: 'Habits', b_check2: 'Science check', b_people: 'Your five chimps',
+  b_tricks: 'Tricks for the moment', b_q3: 'Quick check', b_change: 'Changing a habit', b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  should: '“should”', gym: 'I should hit the gym', car: 'I should get a bigger car', reply: 'I should answer every message',
+  guilt: 'guilt', programming: 'programming from others', want: 'you don’t really want it',
+  fit: 'get fit', money: 'make money', house: 'a big house', see: 'others can see the score', multi: 'multiplayer',
+  single: 'single-player', nocrowd: 'no crowd · no prize', you: 'you against yourself', ants: 'social, like ants in a line',
+  yoga: 'yoga · meditation', clap: 'nobody claps', buffett: 'Warren Buffett asks', best: 'the best, thought the worst', worst: 'the worst, thought the best',
+  inner: 'inner scorecard', outer: 'outer scorecard', inside: 'the real scorecards: inside',
+  riyas: 'Riyas · Abu Dhabi', villa: 'villa', promo: 'promotion', gymb: 'gym body', worse: 'Shafeeq: worse', same: 'Riyas: doesn’t feel a thing',
+  fiveL: 'the five it spends most time with', pick: 'pick and choose?', whole: 'his whole life', worries: 'his worries', family: 'his family', moods: 'his moods', sees: 'how he sees himself',
+  swap: 'swap all of it, for good?', point: 'no point', me: 'rather be himself', clap2: 'happy as you are: a choice, no applause',
+  sci: 'Science check', claim: 'envy: really poison?', two: '2 studies · Belgium & Michigan', scroll: 'scrolling, not posting', worseS: 'worse', envyS: 'envy: much of the drop',
+  mal: 'malicious: pull them down', ben: 'benign: climb up too', harder: 'tried harder', benB: 'benign envy', adm: 'admiration',
+  verdict: 'mostly true', push: 'envy that pushes you to grow can help',
+  skill: 'peace & happiness: skills', range: 'genes set a range', retrain: 'you can retrain', eat: 'eating well', fitness: 'fitness', love: 'love',
+  trial: 'trial and error', retreat: 'ten-day silent retreat', twenty: 'twenty minutes each morning', football: 'football with friends', cooking: 'cooking for flatmates',
+  keeps: 'keep what works', open: 'go in open-minded', placebo: '“placebo: 100% effective”?', strong: 'too strong: eases some symptoms, a little', curious: 'curiosity beats sneering',
+  habits: 'habits', alcohol: 'alcohol', sugar: 'sugar', feeds: 'social feeds', games: 'video games', caffeine: 'caffeine', calm: 'calm',
+  lift: 'a quick lift, then it’s taken back', trade: 'next month’s calm → this minute’s buzz', sun: 'sunlight', workout: 'daily workout', meditate: 'meditation',
+  mind: 'peace of body → peace of mind', screens: 'time on screens or games: changes little', what: 'what you do there matters more',
+  youEq: 'you =', habitsEq: 'habits', peopleEq: '+ people',
+  claim2: 'how do the habits hold up?', nolift: 'no lift in mood · 31 studies', tired: 'more tired within an hour',
+  nz: 'New Zealand, followed from birth', before: 'drinking problems → depression', exercise: 'exercise', thousand: 'more than 1,000 trials', eases: 'eases depression & anxiety',
+  bright: 'bright light helps winter depression', cancer: 'skin-cancer risk · harsh Gulf midday sun', withdrawal: 'quitting: headaches for days',
+  lower: 'coffee drinkers: somewhat less depression', verdict2: 'mostly sound · caffeine unclear', doctor: 'check with a doctor', condition: 'especially with a health condition',
+  chimps: 'the five chimps idea', care: 'choose friends with care', next: 'lives next door?', upbeat: 'upbeat', easy: 'easy to be with', admire: 'admire, don’t envy',
+  conflict: 'always in conflict', why: '“stop asking why…', wow: '…start saying wow”', roof: 'a roof', plate: 'a full plate', call: 'a call with Umma',
+  wild: 'long ago: out in the wild', dubai: 'evening · Dubai',
+  judge: 'judging someone?', kind: 'find the kind reading', lonely: 'judging → lonely', unhappy: 'Will I truly be miserable if I don’t get this?', usually: 'usually not',
+  tell: 'tell friends: “I’m a happy person”', live: 'then live up to it', secrets: 'keep few secrets', funk: 'in a funk?', med: 'meditation', music: 'music', move: 'exercise',
+  one: 'pick one thing', wantC: 'want it, picture it', sustain: 'a path you can sustain', triggers: 'know your triggers', sub2: 'find a substitute', tellC: 'tell your friends', track: 'track it closely',
+  bridge: 'discipline: the bridge', self: 'a new picture of yourself', sixty: '≈ 66 days on average · 18 to 254', miss: 'missing one day didn’t spoil it',
+  know: 'know it', understand: 'understand it', explain: 'explain it', feel: 'feel it', be: 'be it',
+  w1: 'Shoulds and status games are scored by others. Happiness is a single-player game with an inner scorecard.',
+  w2: 'Envy makes you unhappier and changes nothing. Unless you’d swap your whole life, let it go.',
+  w3: 'Happiness is a skill, built from habits and the people around you. Experiment, and keep what works.',
+  w4: 'On sugar, alcohol, exercise and light, the science mostly agrees; caffeine is unclear. Check with a doctor before big changes.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'അസൂയയും സന്തോഷത്തിന്റെ ശീലങ്ങളും', kicker: 'ഭാഗം 2 · സന്തോഷം · അധ്യായം 14',
+  sub: 'ആരും ജയിക്കാത്ത കളിയാണ് അസൂയ; സന്തോഷം, ഓരോ ശീലമായി പണിതെടുക്കുന്നത്',
+  credit: 'The Almanack of Naval Ravikant · എറിക് ജോർഗൻസൻ · പഠനസഹായി',
+  b_intro: 'തലക്കെട്ട്', b_should: '‘വേണം’ എന്ന വാക്ക്', b_games: 'സിംഗിൾ-പ്ലെയർ കളികൾ', b_q1: 'ചെറിയ പരിശോധന', b_envy: 'അസൂയയും വെച്ചുമാറലും', b_check: 'ശാസ്ത്രീയ പരിശോധന',
+  b_skill: 'പരീക്ഷിച്ചും പിഴച്ചും ഒരു കഴിവ്', b_q2: 'ചെറിയ പരിശോധന', b_habits: 'ശീലങ്ങൾ', b_check2: 'ശാസ്ത്രീയ പരിശോധന', b_people: 'നിങ്ങളുടെ അഞ്ച് ചിമ്പാൻസികൾ',
+  b_tricks: 'നിമിഷത്തിലെ വിദ്യകൾ', b_q3: 'ചെറിയ പരിശോധന', b_change: 'ഒരു ശീലം മാറ്റാൻ', b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  should: '‘വേണം’', gym: 'ജിമ്മിൽ പോകണം', car: 'വലിയൊരു കാർ വാങ്ങണം', reply: 'എല്ലാ മെസേജിനും മറുപടി കൊടുക്കണം',
+  guilt: 'കുറ്റബോധം', programming: 'പ്രോഗ്രാമിങ്, മറ്റുള്ളവരുടേത്', want: 'സത്യത്തിൽ ആഗ്രഹമില്ല',
+  fit: 'ഫിറ്റാകുക', money: 'പണമുണ്ടാക്കുക', house: 'വലിയ വീട്', see: 'കാണാം, എല്ലാവർക്കും', multi: 'മൾട്ടിപ്ലെയർ',
+  single: 'സിംഗിൾ-പ്ലെയർ', nocrowd: 'കാണികളില്ല · സമ്മാനമില്ല', you: 'നിങ്ങളും നിങ്ങളും തമ്മിൽ', ants: 'ഉറുമ്പുകളെപ്പോലെ, കൂട്ടമായി',
+  yoga: 'യോഗ · ധ്യാനം', clap: 'ആരും കയ്യടിക്കില്ല', buffett: 'വാറൻ ബഫറ്റിന്റെ ചോദ്യം', best: 'ഏറ്റവും മികച്ചവൻ, കരുതുന്നത് മോശക്കാരൻ', worst: 'ഏറ്റവും മോശക്കാരൻ, കരുതുന്നത് മികച്ചവൻ',
+  inner: 'ഉള്ളിലെ സ്കോർകാർഡ്', outer: 'പുറമേയുള്ള സ്കോർകാർഡ്', inside: 'യഥാർഥ സ്കോർകാർഡുകൾ: ഉള്ളിൽ',
+  riyas: 'റിയാസ് · അബുദാബി', villa: 'വില്ല', promo: 'പ്രമോഷൻ', gymb: 'ജിമ്മിലെ ശരീരം', worse: 'ഷഫീഖ്: വിഷമം കൂടി', same: 'റിയാസ്: ഒന്നും അറിയുന്നില്ല',
+  fiveL: 'അഞ്ചുപേർ, ഏറ്റവും അടുത്തവർ', pick: 'ഇഷ്ടമുള്ളത് മാത്രം?', whole: 'ജീവിതം മുഴുവൻ', worries: 'ആധികൾ', family: 'കുടുംബം', moods: 'മനോനിലകൾ', sees: 'തന്നെത്തന്നെ കാണുന്ന രീതി',
+  swap: 'വെച്ചുമാറാമോ? എല്ലാം, എന്നേക്കും', point: 'ഒരർഥവുമില്ല', me: 'താനായിരിക്കാനാണ് ഇഷ്ടം', clap2: 'കയ്യടി കിട്ടില്ല; എങ്കിലും ഒരു തിരഞ്ഞെടുപ്പ്',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', claim: 'അസൂയ ശരിക്കും വിഷമോ?', two: 'രണ്ട് പഠനങ്ങൾ · ബെൽജിയം, മിഷിഗൺ', scroll: 'സ്ക്രോൾ മാത്രം, പോസ്റ്റില്ല', worseS: 'മനസ്സ് മോശമായി', envyS: 'അസൂയ: ഇടിവിന്റെ വലിയ പങ്ക്',
+  mal: 'ദുഷിച്ച അസൂയ: താഴെ വലിച്ചിടാൻ', ben: 'നല്ല അസൂയ: ഒപ്പം കയറാൻ', harder: 'കൂടുതൽ പരിശ്രമം', benB: 'നല്ല അസൂയ', adm: 'ആരാധന',
+  verdict: 'മിക്കവാറും ശരി', push: 'വളരാൻ തള്ളിവിടുന്ന അസൂയ സഹായിക്കാം',
+  skill: 'സമാധാനവും സന്തോഷവും: കഴിവുകൾ', range: 'ജീനുകൾ: ഒരു പരിധി', retrain: 'വീണ്ടും പരിശീലിപ്പിക്കാം', eat: 'നന്നായി കഴിക്കൽ', fitness: 'ഫിറ്റ്നസ്', love: 'സ്നേഹം',
+  trial: 'പരീക്ഷിച്ചും പിഴച്ചും', retreat: 'പത്തുദിവസത്തെ മൗനധ്യാനം', twenty: 'രാവിലെ ഇരുപത് മിനിറ്റ്', football: 'കൂട്ടുകാരുമൊത്ത് ഫുട്ബോൾ', cooking: 'പാചകം, ഫ്ലാറ്റിലുള്ളവർക്ക്',
+  keeps: 'ഫലിക്കുന്നത് നിലനിർത്തുക', open: 'തുറന്ന മനസ്സോടെ', placebo: '“പ്ലാസിബോ: നൂറു ശതമാനം”?', strong: 'അതിരുകടന്നത്: ചില ലക്ഷണങ്ങൾ, അല്പം', curious: 'പരിഹാസത്തെക്കാൾ നല്ലത് കൗതുകം',
+  habits: 'ശീലങ്ങൾ', alcohol: 'മദ്യം', sugar: 'പഞ്ചസാര', feeds: 'സോഷ്യൽ ഫീഡുകൾ', games: 'വീഡിയോ ഗെയിമുകൾ', caffeine: 'കഫീൻ', calm: 'ശാന്തത',
+  lift: 'ഉണർവ്, പിന്നെ തിരിച്ചെടുക്കും', trade: 'അടുത്ത മാസത്തെ ശാന്തത → ഈ നിമിഷത്തെ ആവേശം', sun: 'സൂര്യപ്രകാശം', workout: 'ദിവസവും വ്യായാമം', meditate: 'ധ്യാനം',
+  mind: 'മനസ്സിന്റെ സമാധാനം ← ശരീരത്തിന്റെ സമാധാനം', screens: 'സ്ക്രീനിലോ ഗെയിമിലോ ഉള്ള സമയം: വലിയ മാറ്റമില്ല', what: 'അവിടെ എന്ത് ചെയ്യുന്നു: അതാണ് കാര്യം',
+  youEq: 'നിങ്ങൾ =', habitsEq: 'ശീലങ്ങൾ', peopleEq: '+ ആളുകൾ',
+  claim2: 'നവലിന്റെ ശീലങ്ങൾ: എത്രത്തോളം ശരി?', nolift: 'മനസ്സ് തെളിഞ്ഞില്ല · 31 പഠനങ്ങൾ', tired: 'കൂടുതൽ ക്ഷീണം, ഒരു മണിക്കൂറിനുള്ളിൽ',
+  nz: 'ജനനം മുതൽ പിന്തുടർന്നു · ന്യൂസിലാൻഡ്', before: 'മദ്യപ്രശ്നങ്ങൾ → വിഷാദം', exercise: 'വ്യായാമം', thousand: 'ആയിരത്തിലേറെ പരീക്ഷണങ്ങൾ', eases: 'വിഷാദവും ഉത്കണ്ഠയും കുറയ്ക്കും',
+  bright: 'തീവ്രമായ വെളിച്ചം: ശൈത്യകാല വിഷാദത്തിന് സഹായം', cancer: 'ത്വക്ക് കാൻസർ സാധ്യത · ഗൾഫിലെ ഉച്ചവെയിൽ', withdrawal: 'തലവേദന, നിർത്തിയാൽ കുറച്ചു ദിവസം',
+  lower: 'അല്പം കുറവ് വിഷാദം, കാപ്പി കുടിക്കുന്നവരിൽ', verdict2: 'മിക്കവാറും ശരി · കഫീൻ വ്യക്തമല്ല', doctor: 'ഡോക്ടറോട് ചോദിക്കൂ', condition: 'പ്രത്യേകിച്ച് എന്തെങ്കിലും രോഗമുണ്ടെങ്കിൽ',
+  chimps: 'അഞ്ച് ചിമ്പാൻസികൾ എന്ന ആശയം', care: 'കൂട്ടുകാരെ ശ്രദ്ധയോടെ', next: 'അടുത്ത വീട്ടിലുള്ളവർ?', upbeat: 'ഉന്മേഷമുള്ളവർ', easy: 'കൂടെയിരിക്കാൻ എളുപ്പം', admire: 'ആദരവ്, അസൂയയല്ല',
+  conflict: 'എപ്പോഴും വഴക്ക്', why: '“എന്തുകൊണ്ട് എന്ന് ചോദിക്കേണ്ട…', wow: '…എത്ര അത്ഭുതം എന്ന് പറയൂ”', roof: 'മേൽക്കൂര', plate: 'നിറഞ്ഞ പ്ലേറ്റ്', call: 'വീഡിയോ കോൾ, ഉമ്മയുമായി',
+  wild: 'കാട്ടിൽ, പണ്ടായിരുന്നെങ്കിൽ', dubai: 'സന്ധ്യ · ദുബായ്',
+  judge: 'വിധിക്കുകയാണോ?', kind: 'ദയയോടെ വായിക്കൂ', lonely: 'ഒറ്റപ്പെടൽ ← വിധിക്കൽ', unhappy: 'ഇത് കിട്ടിയില്ലെങ്കിൽ ഞാൻ ശരിക്കും ദുഃഖിതനാകുമോ?', usually: 'മിക്കപ്പോഴും ഇല്ല',
+  tell: 'കൂട്ടുകാരോട്: “ഞാൻ സന്തോഷമുള്ള ആളാണ്”', live: 'അതിനൊത്ത് ജീവിക്കാൻ', secrets: 'രഹസ്യങ്ങൾ കുറച്ച്', funk: 'മനസ്സ് മൂടിക്കെട്ടിയോ?', med: 'ധ്യാനം', music: 'സംഗീതം', move: 'വ്യായാമം',
+  one: 'ഒരു കാര്യം മാത്രം', wantC: 'ആഗ്രഹം വളർത്തൂ, മനസ്സിൽ കാണൂ', sustain: 'തുടർന്നുപോകാവുന്ന വഴി', triggers: 'ട്രിഗറുകൾ അറിയൂ', sub2: 'പകരക്കാരൻ കണ്ടെത്തൂ', tellC: 'കൂട്ടുകാരോട് പറയൂ', track: 'കൃത്യമായി രേഖപ്പെടുത്തൂ',
+  bridge: 'പാലം: അച്ചടക്കം', self: 'നിങ്ങളുടെ പുതിയ ചിത്രം', sixty: '≈ ശരാശരി 66 ദിവസം · 18 മുതൽ 254 വരെ', miss: 'ഒരു ദിവസം മുടങ്ങിയാൽ കുഴപ്പമില്ല',
+  know: 'അറിയുക', understand: 'മനസ്സിലാക്കുക', explain: 'വിശദീകരിക്കുക', feel: 'അനുഭവിക്കുക', be: 'അതായിത്തീരുക',
+  w1: '‘വേണ’ങ്ങളും പദവിക്കളികളും സ്കോർ ചെയ്യുന്നത് മറ്റുള്ളവരാണ്. സന്തോഷം, ഉള്ളിലെ സ്കോർകാർഡുള്ള ഒരു സിംഗിൾ-പ്ലെയർ കളിയാണ്.',
+  w2: 'അസൂയ സന്തോഷം കുറയ്ക്കുന്നു, ഒന്നും മാറ്റുന്നില്ല. ജീവിതം മുഴുവൻ വെച്ചുമാറാൻ തയ്യാറല്ലെങ്കിൽ, അത് വിട്ടേക്കൂ.',
+  w3: 'സന്തോഷം ഒരു കഴിവാണ്; ശീലങ്ങളും ചുറ്റുമുള്ള ആളുകളും ചേർന്ന് പണിയുന്നത്. പരീക്ഷിക്കൂ, ഫലിക്കുന്നത് നിലനിർത്തൂ.',
+  w4: 'പഞ്ചസാര, മദ്യം, വ്യായാമം, വെളിച്ചം: ശാസ്ത്രം മിക്കവാറും യോജിക്കുന്നു; കഫീൻ വ്യക്തമല്ല. വലിയ മാറ്റങ്ങൾക്ക് മുൻപ് ഡോക്ടറോട് ചോദിക്കൂ.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 14, title: L('title'), minutes: LANG === 'ml' ? 11 : 9, language: LANG, next: '../ch15/index.html' };
+
+/* ---------- meaning colours (style.json look.meaning, plus this chapter's own) ---------- */
+const WEALTH = EV.gold, MONEY = '#7cc79d', STATUS = '#e2694f', TIME = '#5fb3cf', SCI = '#9c84d8';
+const INNER = EV.goldHi, ENVY = '#a7b866', GOOD = '#8ec9c0', HEALTH = EV.love;
+
+/* ---------- chapter helpers (prefixed a14 to stay clear of engine globals) ---------- */
+// A label that fades in at t (beat clock, always a mark).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+const a14Ground = (p, y = 760, fill = '#0c1114') => {
+  mk('rect', { x: -10, y, width: 1620, height: 900 - y + 20, fill }, p);
+  path(p, `M0 ${y}H1600`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+};
+const a14Faisal = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#2f5f8f', '#21466b');
+const a14Shafeeq = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#a8553f', '#7f3e2d');
+const a14Hiba = (p, o) => { const P = evRecolor(evPerson(p, { kind: 'f', ...o }), '#b8862f', '#8f6620'); evScarf(P, '#3a2f4a'); return P; };
+const a14Man = (p, o, top = '#5a6470', topD = '#434b55') => evRecolor(evPerson(p, { kind: 'm', ...o }), top, topD);
+const a14Woman = (p, o, top, topD, scarf) => { const P = evRecolor(evPerson(p, { kind: 'f', ...o }), top, topD); if (scarf) evScarf(P, scarf); return P; };
+function a14Icon(p, x, y, color = EV.dim, s = 1, o = 1) {
+  const g = G(p, { x, y, s, o });
+  g._head = mk('circle', { cx: 0, cy: -46, r: 14, fill: color }, g);
+  g._body = path(g, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: color });
+  return g;
+}
+// A rounded tag with a label, centred on (x, y); Malayalam is measured at full size (as a7Pill); maxPill caps the width.
+function a14Pill(p, key, x, y, { color = EV.gold, size = 30, fill = '#151d21', ink = EV.goldHi, minW = 160, o = 0, maxPill = 1400 } = {}) {
+  const g = G(p, { x, y, o });
+  const w = Math.min(maxPill, Math.max(minW, evW(L(key), size) + 64));
+  mk('rect', { x: -w / 2, y: -32, width: w, height: 60, rx: 30, fill, stroke: color, 'stroke-width': 2 }, g);
+  evText(g, L(key), { x: 0, y: 8, size, fill: ink, maxW: w - 34 });
+  g._w = w;
+  return g;
+}
+function a14Phone(p, { x = 0, y = 0, s = 1, o = 1, w = 150, h = 280 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 22, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 3 }, g);
+  mk('rect', { x: -w / 2 + 10, y: -h / 2 + 26, width: w - 20, height: h - 52, rx: 6, fill: '#142026' }, g);
+  mk('rect', { x: -18, y: -h / 2 + 10, width: 36, height: 6, rx: 3, fill: '#2b3632' }, g);
+  return g;
+}
+const a14Tick = (p, x, y, color = MONEY, s = 1) => put(path(p, 'M-14 0L-4 11L16 -12', { stroke: color, 'stroke-width': 5 }, { d: 0 }), { x, y, s });
+const a14Cross = (p, x, y, color = STATUS, s = 1) => put(path(p, 'M-13 -13L13 13M13 -13L-13 13', { stroke: color, 'stroke-width': 5 }, { d: 0 }), { x, y, s });
+// Science-check frame and tag on #scene, kept across panels inside the beat.
+function a14Sci(m, D) {
+  const keep = G(scene);
+  hide(keep, D - .45, .4);
+  prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+  const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+  draw(fr, m('sci'), 1);
+  const tag = G(keep, { x: 200, y: 60, o: 0 });
+  const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+  mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+  evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+  show(tag, m('sci'), .4);
+}
+// A tilted verdict stamp.
+function a14Stamp(p, key, x, y, t, color = SCI, size = 30) {
+  const g = G(p, { x, y, o: 0, r: -5 });
+  const sw = Math.max(240, evW(L(key), size, SANS, 700) + 56);
+  mk('rect', { x: -sw / 2, y: -32, width: sw, height: 62, rx: 8, fill: 'none', stroke: color, 'stroke-width': 4 }, g);
+  evText(g, L(key), { x: 0, y: 11, size, weight: 700, fill: color, maxW: sw - 30 });
+  put(g, { s: 1.5 }); tw(g, { o: 1, s: 1 }, t, .4, back);
+  return g;
+}
+// A dumbbell centred on (0,0), horizontal (from ch11).
+function a14Dumbbell(p, { x = 0, y = 0, s = 1, o = 1, r = 0 } = {}) {
+  const g = G(p, { x, y, s, o, r });
+  path(g, 'M-40 0H40', { stroke: EV.dim, 'stroke-width': 8 });
+  [-1, 1].forEach(k => mk('rect', { x: k > 0 ? 30 : -48, y: -22, width: 18, height: 44, rx: 4, fill: '#3a3f3a', stroke: EV.gold, 'stroke-width': 2 }, g));
+  return g;
+}
+// A house, base-centre at (0,0), about 140 wide.
+function a14House(p, { x = 0, y = 0, s = 1, o = 1, color = WEALTH } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-70 0V-80L0 -130L70 -80V0Z', { fill: '#151d21', stroke: color, 'stroke-width': 3 });
+  mk('rect', { x: -14, y: -44, width: 28, height: 44, fill: '#2b3632' }, g);
+  mk('rect', { x: -52, y: -70, width: 24, height: 22, fill: EV.goldHi, opacity: .5 }, g);
+  mk('rect', { x: 28, y: -70, width: 24, height: 22, fill: EV.goldHi, opacity: .5 }, g);
+  return g;
+}
+// A stack of coins, base-centre at (0,0).
+function a14Coins(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  for (let i = 0; i < 5; i++) { mk('rect', { x: -40, y: -16 - i * 16, width: 80, height: 16, fill: '#2d4a3a', stroke: MONEY, 'stroke-width': 2 }, g); }
+  mk('ellipse', { cx: 0, cy: -96, rx: 40, ry: 9, fill: '#3c6a50', stroke: MONEY, 'stroke-width': 2 }, g);
+  return g;
+}
+// A sticky note with a line of text, centred on (0,0).
+function a14Note(p, key, { x = 0, y = 0, w = 380, r = 0, o = 0 } = {}) {
+  const g = G(p, { x, y, r, o });
+  mk('rect', { x: -w / 2, y: -34, width: w, height: 68, rx: 4, fill: '#e9dca0', stroke: STATUS, 'stroke-width': 2 }, g);
+  mk('rect', { x: -w / 2, y: -34, width: w, height: 10, fill: '#d8c47a' }, g);
+  evText(g, L(key), { x: 0, y: 14, size: 27, weight: 600, fill: '#2a2320', maxW: w - 30 });
+  return g;
+}
+// A small ant walking right, centred on (0,0).
+function a14Ant(p) {
+  const g = G(p);
+  [[-14, 6], [0, 5], [14, 7]].forEach(([cx, r]) => mk('circle', { cx, cy: 0, r, fill: '#6a5a44' }, g));
+  path(g, 'M-6 4L-12 12M2 4L0 12M10 4L14 12M18 -4L24 -10', { stroke: '#6a5a44', 'stroke-width': 2 });
+  return g;
+}
+// A seated, cross-legged figure, base at (0,0) (from ch13).
+function a14Seated(p, { x = 0, y = 0, s = 1, o = 1, color = EV.goldHi } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('ellipse', { cx: 0, cy: -14, rx: 62, ry: 16, fill: color, opacity: .85 }, g);
+  path(g, 'M-34 -24Q-36 -80 0 -88Q36 -80 34 -24Z', { fill: color });
+  mk('circle', { cx: 0, cy: -108, r: 20, fill: color }, g);
+  return g;
+}
+// A chimp's head and shoulders, centred on (0,0).
+function a14Chimp(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-50 80Q-56 30 0 26Q56 30 50 80Z', { fill: '#3a2a1e' });
+  [-36, 36].forEach(cx => mk('circle', { cx, cy: -6, r: 13, fill: '#a07a56' }, g));
+  mk('circle', { cx: 0, cy: -10, r: 34, fill: '#3a2a1e' }, g);
+  mk('ellipse', { cx: 0, cy: 0, rx: 22, ry: 20, fill: '#a07a56' }, g);
+  [-8, 8].forEach(cx => mk('circle', { cx, cy: -8, r: 3, fill: '#1a120d' }, g));
+  path(g, 'M-8 10Q0 15 8 10', { stroke: '#1a120d', 'stroke-width': 2.5 });
+  return g;
+}
+// A card with a soft frame, centred on (0,0).
+function a14Card(p, { x = 0, y = 0, w = 420, h = 250, color = EV.gold, o = 0 } = {}) {
+  const g = G(p, { x, y, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 16, fill: '#10171b', stroke: color, 'stroke-width': 2.5 }, g);
+  return g;
+}
+// A distant skyline period (from ch01's a1Skyline), baseline at y=0.
+function a14Skyline(p, { color = '#121a1f', edge = '#2b3632' } = {}) {
+  const g = G(p);
+  [[0, 160, 120], [130, 240, 90], [230, 190, 140], [380, 310, 70], [460, 220, 110], [580, 150, 160], [750, 270, 90], [850, 200, 130]].forEach(([x, h, w]) => {
+    mk('rect', { x, y: -h, width: w, height: h, fill: color, stroke: edge, 'stroke-width': 2 }, g);
+    for (let wy = -h + 24; wy < -20; wy += 34) for (let wx = x + 16; wx < x + w - 14; wx += 30)
+      if (((wx * 7 + wy * 3) % 5) < 2) mk('rect', { x: wx, y: wy, width: 8, height: 12, fill: EV.goldHi, opacity: .35 }, g);
+  });
+  return g;
+}
+// A rain cloud outline (a funk), centred on (0,0).
+const CLOUD = 'M-50 22Q-74 22 -72 0Q-72 -24 -46 -26Q-40 -52 -10 -48Q8 -66 34 -48Q62 -50 64 -22Q80 -8 68 12Q62 24 44 22Z';
+const gauss = u => Math.exp(-u * u);
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    // dawn over the backwaters; stepping stones light up one by one (habits, a day at a time)
+    const sun = G(g, { x: 800, y: 600 });
+    evGlow(sun, 0, 0, 230, 'Warm', .55); mk('circle', { cx: 0, cy: 0, r: 52, fill: '#f0b860' }, sun);
+    mk('rect', { x: -10, y: 560, width: 1620, height: 170, fill: '#0b1418' }, g);
+    path(g, 'M0 560H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .3 });
+    prog(q => put(sun, { y: 600 - 110 * io(q) }), 0, D, lin);
+    const stones = [];
+    for (let i = 0; i < 9; i++) stones.push(mk('ellipse', { cx: 260 + i * 135, cy: 690 - i * 11, rx: 48, ry: 12, fill: '#1b2226', stroke: '#2b3632', 'stroke-width': 2 }, g));
+    prog(q => { const t = q * D; stones.forEach((s, i) => { const on = t >= m('sub') + i * .35; s.setAttribute('fill', on ? EV.goldLo : '#1b2226'); s.setAttribute('stroke', on ? EV.goldHi : '#2b3632'); }); }, 0, D, lin);
+    evText(g, L('kicker'), { x: 800, y: 150, size: 26, fill: EV.gold, weight: 500, ls: ML ? undefined : '6' });
+    const ti = evText(g, L('title'), { x: 800, y: 250, size: 80, font: SERIF, weight: 600, maxW: 1420, o: 0 });
+    tw(g, { o: 1 }, .15, .9, out);
+    put(ti, { y: 270 }); tw(ti, { y: 250, o: 1 }, m('title'), .7, out);
+    const sub = evText(scene, L('sub'), { x: 800, y: 790, size: 34, fill: EV.dim, o: 0, maxW: 1380, font: SERIF, italic: true });
+    put(sub, { y: 810 }); tw(sub, { y: 790, o: 1 }, m('sub'), .7, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 850, size: 24, fill: '#7a7466', o: 0, maxW: 1400 });
+    show(cr, m('sub'), 1);
+    tw(g, { o: 0 }, D - .6, .5); hide(sub, D - .6, .5); hide(cr, D - .6, .5);
+  }],
+
+  ['should', 'b_should', (m, D) => {
+    const p = panel(0);
+    // Faisal's room in Dubai: the mirror opens the beat
+    a14Ground(p, 760);
+    const mir = G(p, { o: 0 }); show(mir, .3, .4);
+    mk('rect', { x: 320, y: 150, width: 420, height: 470, rx: 10, fill: '#5a4229' }, mir);
+    mk('rect', { x: 336, y: 166, width: 388, height: 438, rx: 6, fill: '#142026' }, mir);
+    path(mir, 'M380 560L560 200M440 590L640 190', { stroke: '#2b4650', 'stroke-width': 6, opacity: .7 });
+    const fz = a14Faisal(p, { x: 920, y: 760, s: .85, o: 0 }); show(fz.g, .3, .4);
+    evBreathe(fz, D); evMood(fz, 'worried', m('gym')); evMood(fz, 'smile', m('peel') + .3);
+    evArm(fz, -1, 95, 15, m('peel'), .4);
+    lab(p, 'should', 530, 110, m('should'), { size: 46, font: SERIF, weight: 600, fill: STATUS });
+    // three sticky notes on the mirror; they peel off one by one (one clock)
+    const notes = [['gym', 250, -3], ['car', 370, 2], ['reply', 490, -2]].map(([k, y, r]) => a14Note(p, k, { x: 530, y, r }));
+    prog(q => { const t = q * D;
+      notes.forEach((n, i) => { const k = ['gym', 'car', 'reply'][i], u = io(evU(t, m('peel') + .25 + i * .3, .7));
+        put(n, { o: io(evU(t, m(k), .35)) * (1 - u), x: 530 - 380 * u, y: [250, 370, 490][i] + 30 * u, r: [-3, 2, -2][i] - 14 * u }); }); }, 0, D, lin);
+    // where shoulds come from
+    const gp = a14Pill(p, 'guilt', 1300, 260, { color: STATUS, ink: STATUS, size: 30 }); show(gp, m('guilt'), .4);
+    const pp = a14Pill(p, 'programming', 1300, 350, { color: STATUS, ink: EV.ink, size: 28, maxPill: 520 }); show(pp, m('programming'), .4);
+    const crowd = [0, 1, 2, 3, 4].map(i => a14Icon(p, 1180 + i * 60, 470, '#7f3e2d', .9, 0));
+    evSeq(crowd.map((c, i) => [c, m('programming') + i * .05, .3]), D);
+    lab(p, 'want', 1300, 560, m('want'), { size: 34, font: SERIF, italic: true, fill: EV.goldHi, maxW: 520 });
+  }],
+
+  ['games', 'b_games', (m, D) => {
+    const p = panel(0);
+    path(p, 'M800 150V690', { stroke: EV.faint, 'stroke-width': 2 });
+    // multiplayer: things other people can score (the divider opens the beat)
+    const it = [['fit', 210], ['money', 400], ['house', 590]].map(([k, x]) => {
+      const g = G(p, { x, y: 270, o: 0 });
+      if (k === 'fit') a14Dumbbell(g, { y: -20, s: 1.2 });
+      if (k === 'money') a14Coins(g, { y: 30, s: .8 });
+      if (k === 'house') a14House(g, { y: 30, s: .75 });
+      show(g, m(k), .4);
+      lab(p, k, x, 340, m(k), { size: 27, fill: EV.ink, maxW: 172 });
+      return g; });
+    void it;
+    const crowd = [];
+    for (let r = 0; r < 2; r++) for (let i = 0; i < 7; i++) crowd.push(a14Icon(p, 190 + i * 70 + r * 35, 470 + r * 55, EV.dim, .8, 0));
+    evSeq(crowd.map((c, i) => [c, m('see') + i * .02, .3]), D);
+    crowd.forEach((c, i) => { tw(c._head, { c_fill: STATUS }, m('multi') + i * .02, .3); tw(c._body, { c_fill: STATUS }, m('multi') + i * .02, .3); });
+    lab(p, 'see', 400, 600, m('see'), { size: 28, fill: EV.dim, maxW: 520 });
+    lab(p, 'multi', 400, 670, m('multi'), { size: 44, font: SERIF, weight: 600, fill: STATUS });
+    // single-player: you, and the you of yesterday
+    lab(p, 'single', 1100, 170, m('single'), { size: 44, font: SERIF, weight: 600, fill: INNER });
+    lab(p, 'nocrowd', 1100, 225, m('crowd'), { size: 26, fill: EV.dim });
+    const me = a14Icon(p, 1000, 400, INNER, 2.2, 0); show(me, m('single'), .4);
+    const ghost = G(p, { x: 1200, y: 400, o: 0, s: 2.2 });
+    mk('circle', { cx: 0, cy: -46, r: 14, fill: 'none', stroke: INNER, 'stroke-width': 1.5, 'stroke-dasharray': '4 3' }, ghost);
+    path(ghost, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: 'none', stroke: INNER, 'stroke-width': 1.5, 'stroke-dasharray': '4 3' });
+    show(ghost, m('you'), .4);
+    lab(p, 'you', 1100, 450, m('you'), { size: 28, fill: INNER, weight: 600 });
+    const yg = a14Seated(p, { x: 1100, y: 600, s: .75, o: 0, color: '#6a675e' }); show(yg, m('yoga'), .4);
+    lab(p, 'yoga', 1100, 640, m('yoga'), { size: 26, fill: EV.ink });
+    lab(p, 'clap', 1100, 690, m('clap'), { size: 30, font: SERIF, italic: true, fill: STATUS });
+    // ants in a line along the floor (one clock from "ants")
+    const ants = []; for (let i = 0; i < 16; i++) ants.push(a14Ant(p));
+    prog(q => { const t = q * D, u = evU(t, m('ants'), .4), v = Math.max(0, t - m('ants'));
+      ants.forEach((a, i) => put(a, { x: ((i * 105 + 60 * v) % 1700) - 50, y: 770, o: u })); }, 0, D, lin);
+    lab(p, 'ants', 800, 830, m('ants'), { size: 28, fill: EV.dim, maxW: 900 });
+    // Buffett's question: two cards, two scorecards
+    const q2 = panel(m('buffett'));
+    put(q2, { o: 0 }); show(q2, m('buffett'), .4);
+    lab(q2, 'buffett', 800, 140, m('buffett'), { size: 38, font: SERIF, weight: 600, fill: EV.gold, maxW: 1200 });
+    const cA = a14Card(q2, { x: 470, y: 360, w: 580, h: 230, color: INNER }); show(cA, m('best'), .4);
+    const glowA = evGlow(cA, 0, 0, 300, 'Gold', 0); tw(glowA, { o: .5 }, m('inside'), .8);
+    a14Icon(cA, -205, 50, INNER, 1.5);
+    evPara(cA, L('best'), { x: 45, y: -10, size: 29, maxW: 380, fill: INNER, weight: 600 });
+    const cB = a14Card(q2, { x: 1130, y: 360, w: 580, h: 230, color: STATUS }); show(cB, m('worst'), .4);
+    a14Icon(cB, -205, 50, '#6a675e', 1.5);
+    evPara(cB, L('worst'), { x: 45, y: -10, size: 29, maxW: 380, fill: EV.ink, weight: 600 });
+    const ip = a14Pill(q2, 'inner', 470, 560, { color: INNER, ink: INNER, size: 32, minW: 300 }); show(ip, m('inner'), .4);
+    const op = a14Pill(q2, 'outer', 1130, 560, { color: STATUS, ink: STATUS, size: 32, minW: 300 }); show(op, m('outer'), .4);
+    lab(q2, 'inside', 800, 740, m('inside'), { size: 44, font: SERIF, weight: 600, fill: INNER, maxW: 1300 });
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    const p = panel(0);
+    // Kappad beach at sunrise: Nisha runs, her phone keeps score
+    mk('rect', { x: -10, y: 260, width: 1620, height: 150, fill: '#0b1418' }, p);
+    path(p, 'M0 260H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .3 });
+    evGlow(p, 1300, 250, 140, 'Warm', .6);
+    const ni = evPerson(p, { kind: 'f', x: 330, y: 400, s: .58 });
+    evBreathe(ni, D); evMood(ni, 'worried', .4);
+    a14Phone(p, { x: 820, y: 220, w: 180, h: 300 });
+    [[0, 140, STATUS], [1, 110, EV.dim], [2, 80, EV.dim]].forEach(([i, w, c]) => mk('rect', { x: 750, y: 140 + i * 56, width: w, height: 28, rx: 6, fill: c }, p));
+    evText(p, '?', { x: 1050, y: 240, size: 64, weight: 700, fill: EV.gold });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-game', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 0, L('q1y'), [null, L('q1nb'), L('q1nc')]),
+  }], done) }],
+
+  ['envy', 'b_envy', (m, D) => {
+    const p = panel(0);
+    a14Ground(p, 760);
+    // Shafeeq with his phone (opens the beat), and the feed he scrolls
+    const glow = mk('circle', { cx: 250, cy: 600, r: 190, fill: ENVY, opacity: 0 }, p);
+    const sf = a14Shafeeq(p, { x: 250, y: 760, s: .8, o: 0 }); show(sf.g, .3, .4);
+    evBreathe(sf, D); evMood(sf, 'sad', m('worse')); evMood(sf, 'calm', m('point')); evMood(sf, 'smile', m('me'));
+    const hp = G(sf.armR._lo, { x: 0, y: 78 }); mk('rect', { x: -16, y: -28, width: 32, height: 54, rx: 6, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 2 }, hp);
+    evArm(sf, 1, -40, -70, .3, .01);
+    const feed = G(p, { o: 0 }); show(feed, .3, .4);
+    mk('rect', { x: 560, y: 130, width: 480, height: 580, rx: 28, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 3 }, feed);
+    mk('rect', { x: 576, y: 160, width: 448, height: 520, rx: 8, fill: '#142026' }, feed);
+    const head = G(p, { o: 0 }); mk('circle', { cx: 620, cy: 210, r: 24, fill: '#3e6a5a' }, head); show(head, m('riyas'), .4);
+    lab(p, 'riyas', 660, 220, m('riyas'), { size: 26, fill: EV.ink, weight: 600, anchor: 'start', maxW: 340 });
+    const posts = [['villa', 330], ['promo', 460], ['gymb', 590]].map(([k, y], i) => {
+      const g = G(p, { x: 0, y: 0, o: 0 });
+      mk('rect', { x: 596, y: y - 50, width: 408, height: 104, rx: 8, fill: '#1b2a30' }, g);
+      if (i === 0) a14House(g, { x: 660, y: y + 40, s: .55 });
+      if (i === 1) { mk('rect', { x: 628, y: y - 30, width: 64, height: 60, rx: 6, fill: '#2b3a4a', stroke: EV.gold, 'stroke-width': 2 }, g); path(g, `M640 ${y + 6}L656 ${y + 18}L682 ${y - 14}`, { stroke: EV.goldHi, 'stroke-width': 4 }); }
+      if (i === 2) a14Dumbbell(g, { x: 660, y, s: .8 });
+      show(g, m(['villa', 'promo', 'gym'][i]), .4);
+      lab(p, k, 730, y + 10, m(['villa', 'promo', 'gym'][i]), { size: 28, fill: EV.goldHi, anchor: 'start', maxW: 260 });
+      return g; });
+    void posts;
+    tw(glow, { o: .16 }, m('worse'), .8);
+    lab(p, 'worse', 250, 820, m('worse'), { size: 28, fill: ENVY, weight: 600, maxW: 420 });
+    const ry = a14Man(p, { x: 1340, y: 760, s: .8, o: 0 }, '#3e6a5a', '#2c4c40'); show(ry.g, m('riyas'), .4);
+    evBreathe(ry, D, 1, 1.1); evMood(ry, 'smile', m('riyas'));
+    lab(p, 'same', 1340, 820, m('same'), { size: 28, fill: EV.ink, maxW: 440 });
+    // you can't pick and choose: the villa comes with the whole life
+    const q2 = panel(m('pick'));
+    put(q2, { o: 0 }); show(q2, m('pick'), .4);
+    a14Ground(q2, 760);
+    const glow2 = mk('circle', { cx: 200, cy: 600, r: 180, fill: ENVY, opacity: .16 }, q2);
+    tw(glow2, { o: 0 }, m('point'), .6);
+    const gold2 = G(q2, { o: 0 }); evGlow(gold2, 200, 590, 200, 'Gold', .7); tw(gold2, { o: 1 }, m('me'), .6);
+    const s2 = a14Shafeeq(q2, { x: 200, y: 760, s: .72 }); evBreathe(s2, D, 1, 1.2);
+    evMood(s2, 'ask', m('pick')); evMood(s2, 'tense', m('swap')); evMood(s2, 'calm', m('point')); evMood(s2, 'smile', m('me'));
+    evArm(s2, 1, -120, -10, m('pick'), .5); evArm(s2, 1, 0, 0, m('point'), .5);
+    prog(q => { const t = q * D, v = t - m('point'); put(s2.head, { r: v > 0 && v < 1.2 ? 12 * Math.sin(v * 16) * (1 - v / 1.2) : 0 }); }, 0, D, lin);
+    lab(q2, 'pick', 200, 330, m('pick'), { size: 30, font: SERIF, italic: true, fill: EV.goldHi, maxW: 330 });
+    const r2 = a14Man(q2, { x: 900, y: 760, s: .72 }, '#3e6a5a', '#2c4c40'); evBreathe(r2, D, 1, 1.1);
+    const box = path(q2, 'M430 150H1440V790H430Z', { stroke: EV.dim, 'stroke-width': 2.5, 'stroke-dasharray': '10 8' }, { d: 0 });
+    draw(box, m('whole'), .9);
+    lab(q2, 'whole', 935, 130, m('whole'), { size: 32, font: SERIF, weight: 600, fill: EV.ink, maxW: 600 });
+    // what he wants from Riyas's life: the villa, the promotion, the gym body (as icons)
+    [600, 900, 1200].forEach((x, i) => { const g = G(q2, { x, y: 225, o: 0 });
+      mk('circle', { cx: 0, cy: 0, r: 52, fill: '#151d21', stroke: WEALTH, 'stroke-width': 2.5 }, g);
+      if (i === 0) a14House(g, { y: 30, s: .45 });
+      if (i === 1) { mk('rect', { x: -24, y: -22, width: 48, height: 44, rx: 6, fill: '#2b3a4a', stroke: EV.gold, 'stroke-width': 2 }, g); path(g, 'M-12 2L-2 12L16 -10', { stroke: EV.goldHi, 'stroke-width': 4 }); }
+      if (i === 2) a14Dumbbell(g, { s: .7 });
+      show(g, m('pick'), .4); });
+    const lifeTags = [['worries', 590, 360], ['family', 840, 400], ['moods', 1060, 360], ['sees', 1250, 440]];
+    const tags = lifeTags.map(([k, x, y]) => { const g = a14Pill(q2, k, x, y, { color: EV.dim, ink: EV.ink, size: 26, minW: 150, maxPill: 360 }); show(g, m(k), .4); return g; });
+    void tags;
+    const sw = G(q2, { o: 0 });
+    path(sw, 'M300 620H420', { stroke: STATUS, 'stroke-width': 4 }); evHead(sw, 420, 620, 0, STATUS, 1.2); evHead(sw, 300, 620, 180, STATUS, 1.2);
+    show(sw, m('swap'), .4);
+    lab(q2, 'swap', 220, 270, m('swap'), { size: 28, fill: STATUS, weight: 600, maxW: 370 });
+    const cx_ = a14Cross(q2, 360, 620, STATUS, 2.2); draw(cx_, m('point'), .35);
+    lab(q2, 'point', 360, 690, m('point'), { size: 30, fill: STATUS, weight: 600 });
+    lab(q2, 'me', 200, 830, m('me'), { size: 30, fill: INNER, weight: 600, maxW: 360 });
+    lab(q2, 'clap2', 935, 830, m('clap'), { size: 28, fill: EV.dim, italic: true, font: SERIF, maxW: 980 });
+  }],
+
+  ['check', 'b_check', (m, D) => {
+    const p = panel(0);
+    a14Sci(m, D);
+    lab(p, 'claim', 800, 145, m('claim'), { size: 40, font: SERIF, italic: true, fill: EV.ink, maxW: 1200 });
+    path(p, 'M800 200V620', { stroke: EV.faint, 'stroke-width': 2 });
+    // left: scrolling without posting, and envy as the reason
+    lab(p, 'two', 440, 240, m('two'), { size: 28, fill: SCI, weight: 600, maxW: 640 });
+    const ph = a14Phone(p, { x: 260, y: 420, w: 140, h: 240, o: 0 }); show(ph, m('scroll'), .4);
+    const rows = [0, 1, 2, 3].map(i => mk('rect', { x: 210, y: 340 + i * 44, width: 100, height: 28, rx: 5, fill: '#2b3a4a' }, p));
+    prog(q => { const t = q * D, v = Math.max(0, t - m('scroll')), on = evU(t, m('scroll'), .4);
+      rows.forEach((r, i) => { const yy = 340 + ((i * 44 - v * 60) % 176 + 176) % 176; r.setAttribute('y', yy.toFixed(1)); r.setAttribute('opacity', (on * (yy > 330 && yy < 500 ? 1 : 0)).toFixed(2)); }); }, 0, D, lin);
+    lab(p, 'scroll', 260, 580, m('scroll'), { size: 26, fill: EV.ink, maxW: 300 });
+    mk('rect', { x: 400, y: 300, width: 340, height: 220, rx: 10, fill: '#0f171b', stroke: EV.faint, 'stroke-width': 2 }, p);
+    const ml = path(p, '', { stroke: EV.ink, 'stroke-width': 4 });
+    prog(q => { const t = q * D; let d = '';
+      for (let i = 0; i <= 40; i++) { const u = i / 40, tt = m('scroll') + u * 5; if (tt > t) break; const dn = io(evU(tt, m('worse'), 1.6));
+        d += (i ? 'L' : 'M') + (420 + u * 300).toFixed(1) + ' ' + (350 + 120 * dn * u).toFixed(1); }
+      ml.setAttribute('d', d); }, 0, D, lin);
+    lab(p, 'worseS', 690, 548, m('worse'), { size: 26, fill: STATUS, weight: 600, maxW: 200 });
+    lab(p, 'envyS', 600, 640, m('envy'), { size: 28, fill: ENVY, weight: 600, maxW: 360 });
+    // right: two kinds of envy, and who tried harder
+    const mp = a14Pill(p, 'mal', 1160, 240, { color: STATUS, ink: STATUS, size: 26, maxPill: 640 }); show(mp, m('mal'), .4);
+    const bp = a14Pill(p, 'ben', 1160, 320, { color: INNER, ink: INNER, size: 26, maxPill: 640 }); show(bp, m('ben'), .4);
+    mk('rect', { x: 960, y: 600, width: 400, height: 2, fill: EV.faint }, p);
+    const b1 = mk('rect', { x: 1020, y: 600, width: 100, height: 0, rx: 4, fill: INNER }, p), b2 = mk('rect', { x: 1200, y: 600, width: 100, height: 0, rx: 4, fill: '#6a675e' }, p);
+    prog(q => { const t = q * D, u = io(evU(t, m('harder'), .9)), v = io(evU(t, m('adm'), .9)); b1.setAttribute('y', (600 - 170 * u).toFixed(1)); b1.setAttribute('height', (170 * u).toFixed(1));
+      b2.setAttribute('y', (600 - 110 * v).toFixed(1)); b2.setAttribute('height', (110 * v).toFixed(1)); }, 0, D, lin);
+    lab(p, 'harder', 1160, 400, m('harder'), { size: 28, fill: INNER, weight: 600 });
+    lab(p, 'benB', 1070, 635, m('benB'), { size: 22, fill: INNER, maxW: 170 });
+    lab(p, 'adm', 1250, 635, m('adm'), { size: 22, fill: EV.dim, maxW: 170 });
+    a14Stamp(p, 'verdict', 800, 720, m('verdict'), SCI, 34);
+    lab(p, 'push', 800, 800, m('push'), { size: 30, fill: EV.ink, weight: 600, maxW: 1300 });
+  }],
+
+  ['skill', 'b_skill', (m, D) => {
+    const p = panel(0);
+    lab(p, 'skill', 800, 140, m('skill'), { size: 44, font: SERIF, weight: 600, fill: INNER, maxW: 1300 });
+    // genes set a range; within it you can move (the bar opens the beat)
+    const bar = G(p, { o: 0 }); show(bar, .3, .4);
+    mk('rect', { x: 300, y: 300, width: 1000, height: 18, rx: 9, fill: '#1b2226' }, bar);
+    const band = mk('rect', { x: 540, y: 294, width: 520, height: 30, rx: 15, fill: EV.goldLo, opacity: 0 }, p);
+    show(band, m('range'), .5);
+    lab(p, 'range', 800, 260, m('range'), { size: 28, fill: EV.gold, weight: 600 });
+    const dot = G(p, { x: 600, y: 309, o: 0 }); evGlow(dot, 0, 0, 40, 'Gold', .8); mk('circle', { cx: 0, cy: 0, r: 13, fill: INNER }, dot);
+    prog(q => { const t = q * D, u = io(evU(t, m('retrain'), 1.5)); put(dot, { x: 600 + 400 * u, o: Math.min(1, evU(t, m('retrain'), .3)) }); }, 0, D, lin);
+    lab(p, 'retrain', 800, 370, m('retrain'), { size: 28, fill: INNER, weight: 600 });
+    [['eat', 480], ['fitness', 800], ['love', 1120]].forEach(([k, x]) => { const g = a14Pill(p, k, x, 500, { color: GOOD, ink: GOOD, size: 30, minW: 220 }); put(g, { y: 520 }); tw(g, { o: 1, y: 500 }, m(k), .4, out); });
+    // trial and error: Faisal's experiment board
+    const q2 = panel(m('trial'));
+    put(q2, { o: 0 }); show(q2, m('trial'), .4);
+    a14Ground(q2, 845);
+    lab(q2, 'trial', 800, 115, m('trial'), { size: 42, font: SERIF, weight: 600, fill: EV.gold });
+    const fz = a14Faisal(q2, { x: 220, y: 845, s: .72 }); evBreathe(fz, D);
+    evMood(fz, 'worried', m('much')); evMood(fz, 'smile', m('better'));
+    const rows = [['retreat', 'much', false], ['twenty', 'better', true], ['football', 'football', true], ['cooking', 'cooking', true]];
+    rows.forEach(([k, mark, ok], i) => {
+      const y = 210 + i * 80;
+      const g = G(q2, { o: 0 });
+      mk('rect', { x: 470, y: y - 32, width: 860, height: 62, rx: 10, fill: '#10171b', stroke: EV.faint, 'stroke-width': 2 }, g);
+      show(g, m(k), .35);
+      lab(q2, k, 500, y + 10, m(k), { size: 28, fill: EV.ink, anchor: 'start', maxW: 700 });
+      const mk2 = ok ? a14Tick(q2, 1290, y, MONEY, 1.4) : a14Cross(q2, 1290, y, STATUS, 1.3);
+      draw(mk2, m(mark) + (ok && mark === k ? .3 : 0), .35);
+    });
+    const kp = path(q2, 'M455 258V482', { stroke: MONEY, 'stroke-width': 5 }, { d: 0 }); draw(kp, m('keeps'), .5);
+    lab(q2, 'keeps', 1290, 525, m('keeps'), { size: 26, fill: MONEY, weight: 600, maxW: 300 });
+    // open-minded, and a note on placebo
+    lab(q2, 'open', 900, 590, m('open'), { size: 32, fill: INNER, weight: 600, maxW: 900 });
+    const pl = a14Pill(q2, 'placebo', 900, 650, { color: SCI, ink: SCI, size: 28, maxPill: 900 }); show(pl, m('placebo'), .4);
+    lab(q2, 'strong', 900, 725, m('strong'), { size: 28, fill: SCI, weight: 600, maxW: 1100 });
+    lab(q2, 'curious', 900, 800, m('curious'), { size: 32, font: SERIF, italic: true, fill: EV.goldHi, maxW: 1100 });
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    a14Ground(p, 400);
+    const fz = a14Faisal(p, { x: 330, y: 400, s: .55 }); evBreathe(fz, D); evMood(fz, 'worried', .4);
+    mk('rect', { x: 620, y: 360, width: 220, height: 30, rx: 8, fill: '#3e4a5a' }, p);
+    a14Seated(p, { x: 730, y: 360, s: .6, color: '#6a675e' });
+    const c = a14Cross(p, 730, 270, STATUS, 3); put(c, { d: 1 });
+    a14Dumbbell(p, { x: 1000, y: 280, s: 1 });
+    evText(p, '?', { x: 1180, y: 300, size: 64, weight: 700, fill: EV.gold });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-trial', prompt: [L('q2p')],
+    build: choice([[L('q2a')], [L('q2b')], [L('q2c')]], 2, L('q2y'), [L('q2na'), L('q2nb'), null]),
+  }], done) }],
+
+  ['habits', 'b_habits', (m, D) => {
+    const p = panel(0);
+    lab(p, 'habits', 800, 105, m('habits'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    // a mood chart (opens the beat) with a calm baseline
+    const ch = G(p, { o: 0 }); show(ch, .3, .4);
+    mk('rect', { x: 560, y: 170, width: 940, height: 340, rx: 12, fill: '#0f171b', stroke: EV.faint, 'stroke-width': 2 }, ch);
+    path(ch, 'M580 340H1480', { stroke: GOOD, 'stroke-width': 2, 'stroke-dasharray': '8 8', opacity: .6 });
+    lab(p, 'calm', 1488, 326, m('calmw'), { size: 22, fill: GOOD, anchor: 'end' });
+    // the jolts: rust chips; each puts a spike and a dip into the line
+    const J = ['alcohol', 'sugar', 'feeds', 'games', 'caffeine'];
+    J.forEach((k, i) => { const g = a14Pill(p, k, 300, 200 + i * 72, { color: STATUS, ink: STATUS, size: 26, minW: 200, maxPill: 360 }); put(g, { x: 270 }); tw(g, { o: 1, x: 300 }, m(k), .35, out); });
+    const t0 = m('alcohol') - .4, t1 = m('mind') + 1.4;
+    const line = path(p, '', { stroke: EV.ink, 'stroke-width': 4 });
+    const yAt = tt => { let y = 0; const calm = io(evU(tt, m('sun'), 2.5));
+      J.forEach(k => { const tj = m(k); y += 85 * gauss((tt - tj - .25) / .25) - 60 * gauss((tt - tj - 1) / .45); });
+      if (tt > m('caffeine') + 1.2) y += 30 * Math.sin(tt * 6.5) * Math.min(1, (tt - m('caffeine') - 1.2) / .8);
+      return 340 - y * (1 - calm) - 18 * calm * Math.sin(tt * 2) * .3; };
+    prog(q => { const t = q * D; let d = '';
+      for (let i = 0; i <= 120; i++) { const tt = t0 + (t1 - t0) * i / 120; if (tt > t) break; d += (i ? 'L' : 'M') + (580 + 900 * i / 120).toFixed(1) + ' ' + Math.max(185, Math.min(495, yAt(tt))).toFixed(1); }
+      line.setAttribute('d', d); }, 0, D, lin);
+    lab(p, 'lift', 1030, 565, m('lift'), { size: 28, fill: STATUS, weight: 600, maxW: 900 });
+    lab(p, 'trade', 1030, 620, m('trade'), { size: 28, fill: EV.ink, maxW: 900 });
+    // what he adds: teal chips, and the line settles
+    [['sun', 610], ['workout', 900], ['meditate', 1190]].forEach(([k, x]) => { const g = a14Pill(p, k, x, 710, { color: GOOD, ink: GOOD, size: 27, minW: 200, maxPill: 270 }); put(g, { y: 730 }); tw(g, { o: 1, y: 710 }, m(k), .4, out); });
+    lab(p, 'mind', 900, 805, m('mind'), { size: 32, font: SERIF, italic: true, fill: GOOD, maxW: 1100 });
+    // what studies say about screens, and the sum of it all
+    const q2 = panel(m('screens'));
+    put(q2, { o: 0 }); show(q2, m('screens'), .4);
+    const ph = a14Phone(q2, { x: 640, y: 270, w: 110, h: 190 });
+    const pad = G(q2, { x: 960, y: 270 });
+    path(pad, 'M-80 -20Q-90 -50 -50 -50H50Q90 -50 80 -20L70 30Q62 56 36 40L20 24H-20L-36 40Q-62 56 -70 30Z', { fill: '#1b2226', stroke: EV.dim, 'stroke-width': 3 });
+    path(pad, 'M-50 -16H-26M-38 -28V-4', { stroke: EV.dim, 'stroke-width': 4 });
+    [[34, -22], [50, -6]].forEach(([cx, cy]) => mk('circle', { cx, cy, r: 6, fill: EV.dim }, pad));
+    void ph;
+    lab(q2, 'screens', 800, 430, m('screens'), { size: 32, fill: SCI, weight: 600, maxW: 1300 });
+    lab(q2, 'what', 800, 495, m('what'), { size: 30, fill: EV.ink, maxW: 1300 });
+    lab(q2, 'youEq', 560, 680, m('youw'), { size: 52, font: SERIF, weight: 600, fill: INNER });
+    lab(q2, 'habitsEq', 830, 680, m('sum'), { size: 52, font: SERIF, weight: 600, fill: GOOD });
+    lab(q2, 'peopleEq', 1110, 680, m('people'), { size: 52, font: SERIF, weight: 600, fill: EV.goldHi });
+    const ppl = [0, 1, 2, 3, 4].map(i => a14Icon(q2, 1010 + i * 50, 790, EV.goldHi, .8, 0));
+    evSeq(ppl.map((g, i) => [g, m('people') + i * .05, .3]), D);
+  }],
+
+  ['check2', 'b_check2', (m, D) => {
+    const p = panel(0);
+    a14Sci(m, D);
+    lab(p, 'claim2', 800, 125, m('claim'), { size: 36, font: SERIF, italic: true, fill: EV.ink, maxW: 1100 });
+    // a table: one row per habit, the finding, and a verdict mark
+    const R = [
+      ['sugar', 'nolift', 'tired', 'tick', 'tired'],
+      ['alcohol', 'nz', 'before', 'tick', 'before'],
+      ['exercise', 'thousand', 'eases', 'tick', 'eases'],
+      ['sun', 'bright', 'cancer', 'care', 'cancer'],
+      ['caffeine', 'withdrawal', 'lower', 'q', 'lower'],
+    ];
+    R.forEach(([k, a, b, v, vm], i) => {
+      const y = 200 + i * 98;
+      const rowBg = mk('rect', { x: 110, y: y - 40, width: 1380, height: 86, rx: 10, fill: '#0f171b', opacity: 0 }, p); show(rowBg, m(k), .3);
+      const g = a14Pill(p, k, 230, y + 2, { color: i === 4 ? SCI : HEALTH, ink: i === 4 ? SCI : HEALTH, size: 26, minW: 200, maxPill: 230 }); show(g, m(k), .35);
+      lab(p, a, 370, y - 6, m(a), { size: 27, fill: EV.ink, weight: 600, anchor: 'start', maxW: 920 });
+      lab(p, b, 370, y + 30, m(b), { size: 25, fill: i === 3 ? STATUS : EV.dim, anchor: 'start', maxW: 920 });
+      if (v === 'tick') draw(a14Tick(p, 1420, y, MONEY, 1.5), m(vm) + .3, .35);
+      if (v === 'care') { draw(a14Tick(p, 1400, y, MONEY, 1.5), m(vm) + .3, .35); lab(p, 'care!', 1450, y + 12, m(vm) + .3, { size: 34, weight: 700, fill: STATUS }); }
+      if (v === 'q') lab(p, 'q?', 1420, y + 14, m(vm) + .3, { size: 44, weight: 700, fill: SCI });
+    });
+    a14Stamp(p, 'verdict2', 1080, 700, m('verdict'), SCI, 32);
+    const dp = a14Pill(p, 'doctor', 540, 790, { color: MONEY, ink: MONEY, size: 28, minW: 260, maxPill: 420 }); show(dp, m('doctor'), .4);
+    lab(p, 'condition', 760, 800, m('condition'), { size: 26, fill: EV.ink, anchor: 'start', maxW: 700 });
+  }],
+
+  ['people', 'b_people', (m, D) => {
+    const p = panel(0);
+    // one chimp (opens the beat), then the five it spends its days with
+    lab(p, 'chimps', 800, 130, m('chimps'), { size: 42, font: SERIF, weight: 600, fill: EV.gold, maxW: 1200 });
+    const c0 = a14Chimp(p, { x: 800, y: 440, s: 1.4, o: 0 }); show(c0, .3, .4);
+    const pos = [0, 1, 2, 3, 4].map(i => { const ang = Math.PI * (1.05 + i * .225); return [800 + Math.cos(ang) * 420, 470 + Math.sin(ang) * 220]; });
+    const links = pos.map(([x, y]) => path(p, `M800 440L${x.toFixed(0)} ${y.toFixed(0)}`, { stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '6 6' }, { d: 0 }));
+    const ring = pos.map(([x, y]) => a14Chimp(p, { x, y, s: .9, o: 0 }));
+    evSeq(ring.map((c, i) => [c, m('five') + i * .1, .35]), D);
+    lab(p, 'fiveL', 800, 680, m('five'), { size: 30, fill: EV.ink, maxW: 900 });
+    prog(q => { const t = q * D; links.forEach((l, i) => put(l, { d: io(evU(t, m('five') + .2 + i * .1, .4)) })); }, 0, D, lin);
+    // choosing them: Faisal and his circle
+    const q2 = panel(m('care'));
+    put(q2, { o: 0 }); show(q2, m('care'), .4);
+    a14Ground(q2, 780);
+    lab(q2, 'care', 800, 130, m('care'), { size: 42, font: SERIF, weight: 600, fill: EV.gold, maxW: 1200 });
+    const fz = a14Faisal(q2, { x: 800, y: 780, s: .72 }); evBreathe(fz, D); evMood(fz, 'smile', m('upbeat'));
+    const fr = [[560, 760], [660, 690], [940, 690], [1040, 760]].map(([x, y]) => a14Icon(q2, x, y, INNER, 1.4, 0));
+    evSeq(fr.map((g, i) => [g, m('care') + .1 + i * .06, .3]), D);
+    const hs = a14House(q2, { x: 250, y: 330, s: .8, o: 0, color: EV.dim }); show(hs, m('next'), .4);
+    lab(q2, 'next', 250, 390, m('next'), { size: 28, fill: EV.dim, maxW: 360 });
+    draw(a14Cross(q2, 250, 280, STATUS, 2.4), m('next') + .3, .35);
+    [['upbeat', 260], ['easy', 350], ['admire', 440]].forEach(([k, y]) => { const g = a14Pill(q2, k, 1290, y, { color: GOOD, ink: GOOD, size: 28, minW: 220, maxPill: 460 }); show(g, m(k), .4); });
+    const cp = a14Pill(q2, 'conflict', 250, 540, { color: STATUS, ink: STATUS, size: 28, minW: 240, maxPill: 420 }); show(cp, m('conflict'), .4);
+    draw(a14Cross(q2, 250 + Math.min(210, cp._w / 2) + 10, 540, STATUS, 1.2), m('conflict') + .3, .3);
+    // stop asking why, start saying wow: an evening in Dubai
+    const q3 = panel(m('why'));
+    put(q3, { o: 0 }); show(q3, m('why'), .4);
+    a14Ground(q3, 780);
+    lab(q3, 'why', 560, 130, m('why'), { size: 34, font: SERIF, italic: true, fill: EV.dim, maxW: 760 });
+    lab(q3, 'wow', 1100, 190, m('wow'), { size: 40, font: SERIF, italic: true, weight: 600, fill: INNER, maxW: 760 });
+    const win = G(q3, { x: 120, y: 300 });
+    mk('rect', { x: 0, y: 0, width: 280, height: 220, rx: 6, fill: '#0b1720', stroke: '#2b3632', 'stroke-width': 6 }, win);
+    put(a14Skyline(win, { color: '#10181d', edge: '#222c2a' }), { x: 6, y: 216, s: .28 });
+    lab(q3, 'dubai', 260, 560, m('dubai'), { size: 24, fill: EV.dim });
+    const roof = path(q3, 'M80 300L520 230L960 300', { stroke: INNER, 'stroke-width': 6 }, { d: 0 }); draw(roof, m('roof'), .7);
+    lab(q3, 'roof', 520, 270, m('roof'), { size: 28, fill: INNER, weight: 600 });
+    const f3 = a14Faisal(q3, { x: 660, y: 780, s: .7 }); evBreathe(f3, D); evMood(f3, 'smile', m('wow'));
+    const tb = G(q3, { o: 0 }); path(tb, 'M800 640H1000M820 640V780M980 640V780', { stroke: '#8a6a44', 'stroke-width': 8 });
+    mk('ellipse', { cx: 900, cy: 628, rx: 70, ry: 14, fill: '#e8e4d8' }, tb); mk('ellipse', { cx: 900, cy: 622, rx: 44, ry: 9, fill: '#e8a23a' }, tb);
+    show(tb, m('plate'), .4);
+    lab(q3, 'plate', 900, 600, m('plate'), { size: 26, fill: EV.ink, weight: 600 });
+    const cph = a14Phone(q3, { x: 500, y: 420, w: 110, h: 180, o: 0 }); show(cph, m('call'), .4);
+    const um = G(cph, { y: 10 }); mk('circle', { cx: 0, cy: -14, r: 16, fill: EV.skinF }, um); path(um, 'M-30 30Q-30 0 0 0Q30 0 30 30Z', { fill: '#e8e4d8' }); path(um, 'M-20 -18Q0 -46 20 -18', { stroke: '#2f5a3a', 'stroke-width': 7 });
+    lab(q3, 'call', 495, 548, m('call'), { size: 24, fill: EV.ink, maxW: 230 });
+    // long ago: out in the wild (dashed, faint)
+    const wild = G(q3, { o: 0 }); show(wild, m('wild'), .6);
+    [[1150, 780, 1], [1330, 780, 1.3], [1480, 780, .9]].forEach(([x, y, s]) => { path(wild, `M${x} ${y}V${y - 150 * s}`, { stroke: '#4a6a4a', 'stroke-width': 3, 'stroke-dasharray': '8 6' });
+      put(path(wild, CLOUD, { stroke: '#4a6a4a', 'stroke-width': 2, 'stroke-dasharray': '8 6', fill: 'none' }), { x, y: y - 190 * s, s: 1.3 * s }); });
+    mk('circle', { cx: 1420, cy: 330, r: 26, fill: 'none', stroke: EV.dim, 'stroke-width': 2, 'stroke-dasharray': '5 5' }, wild);
+    lab(q3, 'wild', 1310, 840, m('wild'), { size: 28, fill: EV.dim, italic: true, font: SERIF, maxW: 520 });
+  }],
+
+  ['tricks', 'b_tricks', (m, D) => {
+    const p = panel(0);
+    // five cards, dealt as each trick is named (the first card's frame opens the beat)
+    const C = [[300, 300, 'judge'], [800, 300, 'unhappy'], [1300, 300, 'tell'], [550, 640, 'secrets'], [1050, 640, 'funk']];
+    const cards = C.map(([x, y, k], i) => { const g = a14Card(p, { x, y, w: 440, h: 270, color: [INNER, INNER, GOOD, GOOD, GOOD][i] });
+      if (i === 0) show(g, .3, .4); else show(g, m(k), .4); return g; });
+    // icons: an eye, a scale of wants, a speech bubble, a lock, a cloud
+    const ic = (g, f) => { const h = G(g, { y: -80 }); f(h); return h; };
+    ic(cards[0], h => { path(h, 'M-40 0Q0 -30 40 0Q0 30 -40 0Z', { fill: 'none', stroke: INNER, 'stroke-width': 3 }); mk('circle', { cx: 0, cy: 0, r: 10, fill: INNER }, h); });
+    ic(cards[1], h => evText(h, '?', { y: 18, size: 54, weight: 700, fill: INNER }));
+    ic(cards[2], h => path(h, 'M-40 -24H40V14H-6L-22 30V14H-40Z', { fill: 'none', stroke: GOOD, 'stroke-width': 3 }));
+    ic(cards[3], h => { mk('rect', { x: -24, y: -8, width: 48, height: 36, rx: 6, fill: 'none', stroke: GOOD, 'stroke-width': 3 }, h); path(h, 'M-14 -8V-20Q-14 -34 0 -34Q14 -34 14 -20V-8', { stroke: GOOD, 'stroke-width': 3 }); });
+    ic(cards[4], h => put(path(h, CLOUD, { fill: '#1b2226', stroke: GOOD, 'stroke-width': 2.5 }), { s: .55 }));
+    lab(cards[0], 'judge', 0, -10, m('judge'), { size: 30, weight: 600, fill: EV.ink, maxW: 400 });
+    lab(cards[0], 'kind', 0, 40, m('kind'), { size: 28, fill: INNER, weight: 600, maxW: 400 });
+    lab(cards[0], 'lonely', 0, 90, m('lonely'), { size: 26, fill: STATUS, maxW: 400 });
+    const up = evPara(cards[1], L('unhappy'), { x: 0, y: -14, size: 27, maxW: 390, fill: EV.ink, weight: 600, o: 0 }); show(up, m('unhappy'), .45);
+    lab(cards[1], 'usually', 0, 95, m('usually'), { size: 28, fill: INNER, weight: 600 });
+    const tp = evPara(cards[2], L('tell'), { x: 0, y: -10, size: 27, maxW: 390, fill: EV.ink, weight: 600, o: 0 }); show(tp, m('tell'), .45);
+    lab(cards[2], 'live', 0, 95, m('live'), { size: 28, fill: GOOD, weight: 600 });
+    lab(cards[3], 'secrets', 0, 20, m('secrets'), { size: 32, weight: 600, fill: EV.ink, maxW: 400 });
+    lab(cards[4], 'funk', 0, 0, m('funk'), { size: 30, weight: 600, fill: EV.ink, maxW: 400 });
+    [['med', -135], ['music', 0], ['move', 135]].forEach(([k, x]) => lab(cards[4], k, x, 60, m(k), { size: 25, fill: GOOD, weight: 600, maxW: 130 }));
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    a14Ground(p, 400);
+    [[560, 'b'], [920, 'c'], [1280, 'd']].forEach(([x]) => mk('rect', { x, y: 70, width: 240, height: 120, rx: 6, fill: '#0b1720', stroke: '#2b3632', 'stroke-width': 5 }, p));
+    const hb = a14Hiba(p, { x: 380, y: 400, s: .5 }); evBreathe(hb, D); evMood(hb, 'tense', .4);
+    const co = a14Woman(p, { x: 1000, y: 400, s: .5 }, '#5a4a6a', '#40354d', '#2a3a4a');
+    evWalk(co, 1150, 850, 0, D, 50);
+    evText(p, '?', { x: 560, y: 260, size: 64, weight: 700, fill: EV.gold });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-kind', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 1, L('q3y'), [L('q3na'), null, L('q3nc')]),
+  }], done) }],
+
+  ['change', 'b_change', (m, D) => {
+    const p = panel(0);
+    // the recipe as a checklist (its rail opens the beat)
+    const rail = path(p, 'M150 150V650', { stroke: EV.faint, 'stroke-width': 3 }); put(rail, { o: 0 }); show(rail, .3, .4);
+    const steps = [['one', 'one'], ['wantC', 'want'], ['sustain', 'sustain'], ['triggers', 'triggers'], ['sub2', 'sub'], ['tellC', 'tell'], ['track', 'track']];
+    steps.forEach(([k, mk_], i) => {
+      const y = 170 + i * 76;
+      const d = G(p, { x: 150, y, o: 0 }); mk('circle', { cx: 0, cy: 0, r: 16, fill: '#10171b', stroke: EV.gold, 'stroke-width': 3 }, d);
+      evText(d, String(i + 1), { y: 8, size: 20, weight: 600, fill: EV.gold });
+      show(d, m(mk_), .35);
+      lab(p, k, 190, y + 10, m(mk_), { size: 28, fill: EV.ink, anchor: 'start', maxW: 520 });
+    });
+    // discipline: a bridge to a new picture of yourself
+    const br = G(p, { o: 0 }); show(br, m('bridge'), .4);
+    path(br, 'M820 470H1420', { stroke: '#8a6a44', 'stroke-width': 10 });
+    path(br, 'M820 470Q1120 330 1420 470', { stroke: EV.gold, 'stroke-width': 3 });
+    for (let i = 1; i < 10; i++) { const x = 820 + i * 60, yy = 470 - 280 * (i / 10) * (1 - i / 10); path(br, `M${x} 470V${yy.toFixed(1)}`, { stroke: EV.goldLo, 'stroke-width': 2 }); }
+    lab(p, 'bridge', 1120, 290, m('bridge'), { size: 30, fill: EV.gold, weight: 600 });
+    const self = G(p, { x: 1460, y: 470, o: 0 }); evGlow(self, 0, -40, 90, 'Gold', .8); a14Icon(self, 0, 0, INNER, 1.6);
+    show(self, m('self'), .5);
+    lab(p, 'self', 1400, 530, m('self'), { size: 24, fill: INNER, maxW: 300 });
+    const fz = a14Faisal(p, { x: 840, y: 465, s: .38, o: 0 }); show(fz.g, m('bridge'), .4);
+    evWalk(fz, 840, 1330, m('bridge') + .2, m('bridge') + 4, 40);
+    lab(p, 'sixty', 1120, 610, m('sixty'), { size: 28, fill: SCI, weight: 600, maxW: 700 });
+    lab(p, 'miss', 1120, 660, m('miss'), { size: 26, fill: SCI, maxW: 700 });
+    // the ladder: know → understand → explain → feel → be
+    const L5 = [['know', 230], ['understand', 520], ['explain', 810], ['feel', 1090], ['be', 1370]];
+    const pills = [];
+    L5.forEach(([k, x], i) => {
+      const g = a14Pill(p, k, x, 790 - i * 14, { color: i === 4 ? INNER : EV.gold, ink: i === 4 ? INNER : EV.ink, size: i === 4 ? 30 : 27, minW: 160, maxPill: 255 });
+      put(g, { s: .9 }); tw(g, { o: 1, s: 1 }, m(k), .35, out); pills.push(g);
+      if (i) { const a = path(p, `M${L5[i - 1][1] + pills[i - 1]._w / 2 + 4} ${790 - (i - 1) * 14}L${x - g._w / 2 - 4} ${790 - i * 14}`, { stroke: EV.faint, 'stroke-width': 2 }, { d: 0 }); draw(a, m(k), .3); }
+    });
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    evText(p, L('b_wrap'), { x: 800, y: 130, size: 52, font: SERIF, weight: 600, fill: EV.gold });
+    const cols = [INNER, ENVY, GOOD, SCI];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -30, y: 260 + i * 150, o: 0 });
+      mk('circle', { cx: 200, cy: -10, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: 200, y: 1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 260, y: 0, size: 36, maxW: 1150, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  'care!': '!', 'q?': '?',
+  q1p: 'Nisha starts morning runs at Kappad beach to clear her head. Soon she posts every run, and feels low when a colleague is faster. What would Naval say?',
+  q1a: 'She has turned a single-player game into a multiplayer one. Run for her inner scorecard.',
+  q1b: 'Train harder until she beats the colleague. Then she can relax.',
+  q1c: 'Running clearly doesn’t suit her. She should stop.',
+  q1y: 'Right. The calm was her own game. Posting every run handed the scorecard to other people.',
+  q1nb: 'Beating one colleague only moves the scoreboard. Someone faster will always turn up.',
+  q1nc: 'The running was helping. What hurt was turning it into a contest.',
+  q2p: 'Faisal tried a ten-day silent retreat and hated it. What would Naval suggest?',
+  q2a: 'Meditation isn’t for him, so happiness can’t be learned in his case.',
+  q2b: 'Book the same retreat again and force himself through it.',
+  q2c: 'Keep experimenting: shorter sits, football, cooking. Keep what works.',
+  q2y: 'Right. Naval calls it trial and error. One method failing says nothing about the skill.',
+  q2na: 'One method failing doesn’t put the skill out of reach. Try another way.',
+  q2nb: 'Forcing what clearly doesn’t suit him isn’t the idea. Try something else and keep what works.',
+  q3p: 'In a Doha office, Hiba’s colleague walks past without a hello. Hiba thinks: “So rude!” Which of Naval’s tricks fits?',
+  q3a: 'Ignore the colleague back tomorrow.',
+  q3b: 'Look for the kind reading: maybe she’s worried about something.',
+  q3c: 'Tell the team, so they know what she’s like.',
+  q3y: 'Right. Ask for the kind reading. Judging feels good for a moment, then leaves you lonely.',
+  q3na: 'That keeps the judging going, and the distance only grows.',
+  q3nc: 'Spreading the judgment pushes Hiba further from people.',
+  p1p: 'Shafeeq envies Riyas’s villa in Abu Dhabi. What is Naval’s swap test?',
+  p1a: 'Which of Riyas’s things could Shafeeq buy too?',
+  p1b: 'Would Shafeeq trade his whole life for Riyas’s, worries, family, moods and all, for good?',
+  p1c: 'How could Riyas lose some of his success?',
+  p1y: 'Yes. You can’t take one piece of someone’s life. If you wouldn’t swap all of it, envy has no point.',
+  p1na: 'That is still picking parts. The test is about the whole person, all the time.',
+  p1nc: 'Wanting someone pulled down is malicious envy. It leaves you no better off.',
+  p2p: 'Which of these is a single-player game?',
+  p2a: 'Becoming calmer in Dubai traffic.',
+  p2b: 'Owning the biggest car in the family.',
+  p2c: 'Getting the most likes on a post.',
+  p2y: 'Yes. Nobody else sees that score. Only you know if you’re calmer than last month.',
+  p2nb: 'Other people keep that score. It’s a multiplayer status game.',
+  p2nc: 'Likes are other people’s scorecard. That’s multiplayer.',
+  p3p: 'Anjali in Thrissur wants to stop scrolling in bed at night. Which plan follows Naval’s recipe?',
+  p3a: 'Change five habits at once, starting Monday.',
+  p3b: 'No plan needed. Willpower will be enough.',
+  p3c: 'Pick this one habit, know the trigger (phone in bed), find a substitute (a book), tell a friend, and track it.',
+  p3y: 'Yes. One thing, a plan she can keep, the trigger and a substitute, a friend who knows, and tracking.',
+  p3na: 'Naval’s recipe starts with one thing. Five at once is hard to sustain.',
+  p3nb: 'Willpower alone fades. The recipe adds a plan, triggers, a substitute and tracking.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'In a review of 31 studies, sugar lifted people’s mood for about an hour.',
+  p4r2: 'More than a thousand trials show exercise can ease depression and anxiety.',
+  p4r3: 'Envy never helps anyone.',
+  p4r4: 'Quitting caffeine often brings a few days of headaches.',
+  p4w1: 'False. Sugar didn’t lift mood, and people felt more tired within an hour.',
+  p4w2: 'True. It’s one of the best-supported habits. Check with a doctor before hard training, especially with a health condition.',
+  p4w3: 'False. Benign envy, wanting to climb up too, made people try harder in experiments.',
+  p4w4: 'True. Withdrawal headaches are common and pass within days. Yet coffee drinkers show somewhat lower rates of depression, so the long run is unclear.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'മനസ്സ് തെളിയാൻ നിഷ കാപ്പാട് ബീച്ചിൽ രാവിലെ ഓടാൻ തുടങ്ങുന്നു. പിന്നെ ഓരോ ഓട്ടവും അവൾ പോസ്റ്റ് ചെയ്യുന്നു; ഒരു സഹപ്രവർത്തക കൂടുതൽ വേഗത്തിൽ ഓടുമ്പോൾ മനസ്സ് ഇടിയുന്നു. നവൽ എന്ത് പറയും?',
+  q1a: 'സിംഗിൾ-പ്ലെയർ കളിയെ അവൾ മൾട്ടിപ്ലെയർ കളിയാക്കി. ഉള്ളിലെ സ്കോർകാർഡിനായി ഓടൂ.',
+  q1b: 'സഹപ്രവർത്തകയെ തോൽപ്പിക്കുംവരെ കൂടുതൽ പരിശീലിക്കൂ. പിന്നെ സമാധാനിക്കാം.',
+  q1c: 'ഓട്ടം അവൾക്ക് ചേരില്ലെന്ന് വ്യക്തം. നിർത്തിക്കോളൂ.',
+  q1y: 'ശരി. ആ ശാന്തത അവളുടെ സ്വന്തം കളിയായിരുന്നു. ഓരോ ഓട്ടവും പോസ്റ്റ് ചെയ്തപ്പോൾ സ്കോർകാർഡ് മറ്റുള്ളവരുടെ കയ്യിലായി.',
+  q1nb: 'ഒരാളെ തോൽപ്പിച്ചാൽ സ്കോർബോർഡ് മാറുകയേ ഉള്ളൂ. കൂടുതൽ വേഗമുള്ള ആരെങ്കിലും എപ്പോഴും വരും.',
+  q1nc: 'ഓട്ടം സഹായിക്കുകയായിരുന്നു. അതിനെ മത്സരമാക്കിയതാണ് നോവിച്ചത്.',
+  q2p: 'ഫൈസൽ പത്തുദിവസത്തെ മൗനധ്യാനം പരീക്ഷിച്ചു; അവന് അത് തീരെ ഇഷ്ടപ്പെട്ടില്ല. നവൽ എന്ത് നിർദേശിക്കും?',
+  q2a: 'ധ്യാനം അവനുള്ളതല്ല; അതുകൊണ്ട് അവന് സന്തോഷം പഠിക്കാനാവില്ല.',
+  q2b: 'അതേ റിട്രീറ്റ് വീണ്ടും ബുക്ക് ചെയ്ത് നിർബന്ധിച്ച് പൂർത്തിയാക്കുക.',
+  q2c: 'പരീക്ഷണം തുടരുക: ചെറിയ ധ്യാനം, ഫുട്ബോൾ, പാചകം. ഫലിക്കുന്നത് നിലനിർത്തുക.',
+  q2y: 'ശരി. പരീക്ഷിച്ചും പിഴച്ചും എന്നാണ് നവൽ പറയുന്നത്. ഒരു വഴി പാളിയാൽ കഴിവിനെക്കുറിച്ച് അത് ഒന്നും പറയുന്നില്ല.',
+  q2na: 'ഒരു വഴി പാളിയെന്ന് വെച്ച് കഴിവ് കൈയെത്താത്തതാകുന്നില്ല. വേറൊരു വഴി നോക്കൂ.',
+  q2nb: 'ചേരാത്തതിനെ നിർബന്ധിക്കുകയല്ല ആശയം. മറ്റൊന്ന് പരീക്ഷിച്ച്, ഫലിക്കുന്നത് നിലനിർത്തൂ.',
+  q3p: 'ദോഹയിലെ ഓഫീസിൽ, ഹിബയുടെ സഹപ്രവർത്തക ഒരു ഹലോ പോലും പറയാതെ കടന്നുപോകുന്നു. ഹിബ കരുതുന്നു: “എന്തൊരു അഹങ്കാരം!” നവലിന്റെ ഏത് വിദ്യയാണ് ചേരുന്നത്?',
+  q3a: 'നാളെ അവളെയും അവഗണിക്കുക.',
+  q3b: 'ദയയോടെയുള്ള വായന തേടുക: ഒരുപക്ഷേ അവൾക്ക് എന്തെങ്കിലും വിഷമമുണ്ടാകാം.',
+  q3c: 'അവൾ എങ്ങനെയുള്ളവളാണെന്ന് ടീമിനെ അറിയിക്കുക.',
+  q3y: 'ശരി. ദയയോടെയുള്ള വായന ചോദിക്കൂ. വിധിക്കുന്നത് ഒരു നിമിഷം സുഖം തരും; പിന്നെ ഒറ്റപ്പെടുത്തും.',
+  q3na: 'അത് വിധിക്കൽ തുടരുകയാണ്; അകലം കൂടുകയേ ഉള്ളൂ.',
+  q3nc: 'വിധി പരത്തുന്നത് ഹിബയെ ആളുകളിൽ നിന്ന് കൂടുതൽ അകറ്റും.',
+  p1p: 'അബുദാബിയിലെ റിയാസിന്റെ വില്ല കണ്ട് ഷഫീഖിന് അസൂയ. നവലിന്റെ ‘വെച്ചുമാറൽ’ പരീക്ഷണം എന്താണ്?',
+  p1a: 'റിയാസിന്റെ ഏതൊക്കെ സാധനങ്ങൾ ഷഫീഖിനും വാങ്ങാം?',
+  p1b: 'ആധികളും കുടുംബവും മനോനിലകളും ഉൾപ്പെടെ, തന്റെ ജീവിതം മുഴുവൻ റിയാസിന്റേതുമായി എന്നേക്കുമായി ഷഫീഖ് വെച്ചുമാറുമോ?',
+  p1c: 'റിയാസിന്റെ വിജയം എങ്ങനെ കുറച്ചുകൂടി നഷ്ടപ്പെടുത്താം?',
+  p1y: 'അതെ. ഒരാളുടെ ജീവിതത്തിൽ നിന്ന് ഒരു കഷണം മാത്രം എടുക്കാനാവില്ല. മുഴുവൻ വെച്ചുമാറില്ലെങ്കിൽ, അസൂയയ്ക്ക് അർഥമില്ല.',
+  p1na: 'അത് ഇപ്പോഴും കഷണങ്ങൾ പെറുക്കലാണ്. പരീക്ഷണം ആ മനുഷ്യനെ മുഴുവനായി, എല്ലാ സമയത്തും, കുറിച്ചാണ്.',
+  p1nc: 'ഒരാൾ താഴെ വീഴണമെന്ന ആഗ്രഹം ദുഷിച്ച അസൂയയാണ്. അതുകൊണ്ട് നിങ്ങൾക്ക് ഒരു നേട്ടവുമില്ല.',
+  p2p: 'ഇവയിൽ ഏതാണ് സിംഗിൾ-പ്ലെയർ കളി?',
+  p2a: 'ദുബായിലെ ട്രാഫിക്കിൽ കൂടുതൽ ശാന്തനാകുക.',
+  p2b: 'കുടുംബത്തിലെ ഏറ്റവും വലിയ കാർ സ്വന്തമാക്കുക.',
+  p2c: 'ഒരു പോസ്റ്റിന് ഏറ്റവും കൂടുതൽ ലൈക്ക് നേടുക.',
+  p2y: 'അതെ. ആ സ്കോർ മറ്റാരും കാണുന്നില്ല. കഴിഞ്ഞ മാസത്തെക്കാൾ ശാന്തനാണോ എന്ന് നിങ്ങൾക്ക് മാത്രം അറിയാം.',
+  p2nb: 'ആ സ്കോർ ഇടുന്നത് മറ്റുള്ളവരാണ്. അതൊരു മൾട്ടിപ്ലെയർ പദവിക്കളിയാണ്.',
+  p2nc: 'ലൈക്കുകൾ മറ്റുള്ളവരുടെ സ്കോർകാർഡാണ്. അത് മൾട്ടിപ്ലെയർ.',
+  p3p: 'രാത്രി കിടക്കയിൽ കിടന്ന് സ്ക്രോൾ ചെയ്യുന്നത് നിർത്താൻ തൃശ്ശൂരിലെ അഞ്ജലി ആഗ്രഹിക്കുന്നു. നവലിന്റെ കുറിപ്പടിക്ക് ചേരുന്ന പ്ലാൻ ഏത്?',
+  p3a: 'തിങ്കളാഴ്ച മുതൽ അഞ്ച് ശീലങ്ങൾ ഒരുമിച്ച് മാറ്റുക.',
+  p3b: 'പ്ലാൻ വേണ്ട. മനക്കരുത്ത് മതി.',
+  p3c: 'ഈ ഒരു ശീലം മാത്രം എടുക്കുക, ട്രിഗർ അറിയുക (കിടക്കയിലെ ഫോൺ), പകരക്കാരനെ കണ്ടെത്തുക (ഒരു പുസ്തകം), കൂട്ടുകാരിയോട് പറയുക, രേഖപ്പെടുത്തുക.',
+  p3y: 'അതെ. ഒരു കാര്യം, തുടരാവുന്ന പ്ലാൻ, ട്രിഗറും പകരക്കാരനും, അറിയുന്ന ഒരു കൂട്ടുകാരി, പിന്നെ രേഖപ്പെടുത്തൽ.',
+  p3na: 'നവലിന്റെ കുറിപ്പടി ഒരു കാര്യത്തിൽ തുടങ്ങുന്നു. അഞ്ചെണ്ണം ഒരുമിച്ച് തുടർന്നുപോകാൻ പ്രയാസമാണ്.',
+  p3nb: 'മനക്കരുത്ത് മാത്രം മങ്ങിപ്പോകും. കുറിപ്പടി ഒരു പ്ലാനും ട്രിഗറും പകരക്കാരനും രേഖപ്പെടുത്തലും ചേർക്കുന്നു.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: '31 പഠനങ്ങളുടെ ഒരു അവലോകനത്തിൽ, പഞ്ചസാര ഏകദേശം ഒരു മണിക്കൂർ മനസ്സ് തെളിയിച്ചു.',
+  p4r2: 'വ്യായാമം വിഷാദവും ഉത്കണ്ഠയും കുറയ്ക്കുമെന്ന് ആയിരത്തിലേറെ പരീക്ഷണങ്ങൾ കാണിക്കുന്നു.',
+  p4r3: 'അസൂയ ഒരിക്കലും ആരെയും സഹായിക്കില്ല.',
+  p4r4: 'കഫീൻ നിർത്തുമ്പോൾ പലർക്കും കുറച്ചു ദിവസം തലവേദന വരാറുണ്ട്.',
+  p4w1: 'തെറ്റ്. പഞ്ചസാര മനസ്സ് തെളിയിച്ചില്ല; ഒരു മണിക്കൂറിനുള്ളിൽ ആളുകൾക്ക് കൂടുതൽ ക്ഷീണം തോന്നി.',
+  p4w2: 'ശരി. ഏറ്റവും നന്നായി തെളിയിക്കപ്പെട്ട ശീലങ്ങളിലൊന്നാണിത്. കഠിനമായ പരിശീലനത്തിന് മുൻപ്, പ്രത്യേകിച്ച് രോഗമുണ്ടെങ്കിൽ, ഡോക്ടറോട് ചോദിക്കൂ.',
+  p4w3: 'തെറ്റ്. ഒപ്പം കയറാനുള്ള നല്ല അസൂയ, പരീക്ഷണങ്ങളിൽ ആളുകളെ കൂടുതൽ പരിശ്രമിപ്പിച്ചു.',
+  p4w4: 'ശരി. നിർത്തുമ്പോഴുള്ള തലവേദന സാധാരണമാണ്, ദിവസങ്ങൾക്കുള്ളിൽ മാറും. എങ്കിലും കാപ്പി കുടിക്കുന്നവരിൽ വിഷാദം അല്പം കുറവാണ്; ദീർഘകാല ചിത്രം വ്യക്തമല്ല.',
+});
+const PRACTICE = [
+  { id: 'p-swap', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 1, L('p1y'), [L('p1na'), null, L('p1nc')]) },
+  { id: 'p-single', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 0, L('p2y'), [null, L('p2nb'), L('p2nc')]) },
+  { id: 'p-habit', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 2, L('p3y'), [L('p3na'), L('p3nb'), null]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['f'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['t'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['f'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['t'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('almanack:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>
