@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Happiness is learned · The Almanack of Naval Ravikant, Chapter 11">
+<meta property="og:description" content="A 9-minute animated lesson in English and Malayalam that opens Part 2: why happiness may be a skill you practise, what Naval means by 'nothing missing', and what the science says about genes, life events and meditation.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/ch11/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<title>Happiness is learned · The Almanack of Naval Ravikant</title>
+<meta name="description" content="An animated, narrated lesson on The Almanack of Naval Ravikant: happiness as a learnable skill, personal definitions, happiness as nothing missing, the trap of positive thinking, neutral reality, the tiny self, and science checks on genes, life events, mind-wandering and meditation. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'സന്തോഷം പഠിച്ചെടുക്കുന്നതാണ് · The Almanack of Naval Ravikant';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/ymu.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/almanack/ch11/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Happiness is learned', kicker: 'PART 2 · HAPPINESS · CHAPTER 11', sub: 'Why being happy may be less a gift you’re born with, and more a skill you practise',
+  credit: 'A study companion to The Almanack of Naval Ravikant, by Eric Jorgenson',
+  partBig: 'Part 2', happyBig: 'Happiness',
+  b_intro: 'Title', b_scale: 'From 3 to 9', b_personal: 'Whose happiness?', b_missing: 'Nothing missing', b_q1: 'Quick check',
+  b_positive: 'Not positive thinking', b_nature: 'Reality is neutral', b_check: 'Science check', b_q2: 'Quick check',
+  b_small: 'A tiny self', b_check2: 'Science check', b_habits: 'Peace, practised', b_q3: 'Quick check',
+  b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  naval: 'Naval', howQ: '“How happy are you?”', scaleL: 'a scale of 1 to 10', young: 'younger self: 2–3', goodday: 'good day: 4',
+  value: 'didn’t even value it', nine: 'today: 9', money: 'money: a small part', decide: 'deciding it matters most', work: 'working at it for years',
+  born: 'born with it?', skill: 'a skill', fit: 'like fitness, or eating well',
+  qDie: '“What happens when we die?”', qHappy: '“Should I be happy?”', personal: 'personal answers',
+  nisha: 'Nisha · Kozhikode', flow: 'flow', hour: '1 hour = 1 minute', faisal: 'Faisal · Dubai', satisfied: 'satisfaction',
+  umma: 'Umma · Malappuram', content: 'contentment', change: 'his own definition: still changing',
+  default: 'a default state', something: 'what’s left when nothing feels missing', machines: 'survival machines: judging, wanting',
+  need1: 'a bigger flat', need2: 'a better car', shafeeq: 'Shafeeq · Sharjah', past: 'back: regret', future: 'forward: plans',
+  silence: 'inner silence', contentM: 'content',
+  positive: 'positive thinking?', opposite: 'its opposite, hidden inside', happy: 'happy', sad: 'sad', beautiful: 'beautiful', plain: 'plain',
+  tao: 'Tao Te Ching · an old Chinese book', fewer: 'fewer desires', kappad: 'Kappad beach · Kozhikode', phone: 'reaches for the phone',
+  holding: 'holding on → the moment slips',
+  nature: 'nature: no happy, no sad', cause: 'cause → effect', rain: 'rain on a wedding · Kochi', ruin: '“Ruined!”',
+  farmer: 'a farmer · Palakkad', bless: '“A blessing!”', same: 'the same rain', choice: 'a choice', practise: 'start practising',
+  outside: '“nothing outside you sets your feelings”?',
+  sci: 'Science check', inh: 'inherited, or learned?', twins: 'twin studies', people: '≈ 56,000 people', third: 'genes ≈ a third of the differences',
+  germany: 'Germany · Britain', jobless: 'unemployment', disability: 'disability', lower: 'less happy, for years',
+  strong: '“nothing outside counts”', tooS: 'too strong', trials: '39 trials', gratitude: 'gratitude · kindness', little: 'a little',
+  all: 'genes · life · practice: all play a part', slow: 'real, but slow',
+  tiny: 'the self is tiny', centre: 'the centre of everything?', bend: 'bend to your wishes', speck: 'a speck',
+  castle: 'a sand castle', tide: 'the tide takes it', child: 'a child in a puddle: wholly there', firefly: 'a firefly’s blink',
+  job: 'reading it well: your job', wont: 'the world: mostly fixed', you: 'you can',
+  pinged: 'pinged on their phones', people2: '≈ 2,250 people', wandered: 'mind wandering', half: '≈ 47% of the time',
+  less: 'less happy while wandering', little2: 'helps, but surprisingly little', light: 'light dumbbell', barbell: 'loaded barbell',
+  trials2: '47 trials', anxiety: 'anxiety ↓', depression: 'depression ↓', better: 'no better than exercise', real: 'real help, not armour',
+  peace: 'peace', accept: 'accepting what is', rearr: 'rearranging the world', control: 'let go of what you can’t control',
+  identity: 'hold identity lightly', quiet: 'quiet the chatter', politics: 'skip politics', unhappy: 'avoid unhappy company',
+  happyP: 'seek happy people', philo: 'read philosophy', meditate: 'meditate',
+  walk: 'a walk at Jumeirah', call: 'a call to Umma', mute: 'group chat: muted', baseline: 'baseline: up, week by week',
+  w1: 'Happiness may be a skill, built slowly like fitness, not simply inherited.',
+  w2: 'For Naval, it’s what remains when nothing feels missing: fewer desires, more presence.',
+  w3: 'Events are neutral until the mind reads them, though real hardships still count.',
+  w4: 'Genes, life and practice all play a part. Small daily habits lift the baseline.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'സന്തോഷം പഠിച്ചെടുക്കുന്നതാണ്', kicker: 'ഭാഗം 2 · സന്തോഷം · അധ്യായം 11',
+  sub: 'സന്തോഷം: ജന്മനാ കിട്ടുന്ന സമ്മാനമല്ല, പരിശീലിച്ചെടുക്കാവുന്ന കഴിവ്',
+  credit: 'The Almanack of Naval Ravikant · എറിക് ജോർഗൻസൻ · പഠനസഹായി',
+  partBig: 'ഭാഗം 2', happyBig: 'സന്തോഷം',
+  b_intro: 'തലക്കെട്ട്', b_scale: '3-ൽ നിന്ന് 9-ലേക്ക്', b_personal: 'ആരുടെ സന്തോഷം?', b_missing: 'ഒന്നിനും കുറവില്ലാതെ', b_q1: 'ചെറിയ പരിശോധന',
+  b_positive: 'പോസിറ്റീവ് ചിന്തയല്ല', b_nature: 'യാഥാർഥ്യം നിഷ്പക്ഷം', b_check: 'ശാസ്ത്രീയ പരിശോധന', b_q2: 'ചെറിയ പരിശോധന',
+  b_small: 'ചെറിയൊരു സ്വയം', b_check2: 'ശാസ്ത്രീയ പരിശോധന', b_habits: 'സമാധാനം, പരിശീലനത്തിലൂടെ', b_q3: 'ചെറിയ പരിശോധന',
+  b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  naval: 'നവൽ', howQ: '“എത്ര സന്തോഷമുണ്ട്?”', scaleL: 'അളവ്: 1 മുതൽ 10 വരെ', young: 'അന്ന്: 2–3', goodday: 'നല്ല ദിവസം: 4',
+  value: 'വില കൊടുത്തിരുന്നില്ല', nine: 'ഇന്ന്: 9', money: 'പണം: ചെറിയ പങ്ക്', decide: 'തീരുമാനം: സന്തോഷം ആദ്യം', work: 'പരിശ്രമം, വർഷങ്ങളോളം',
+  born: 'ജന്മനാ കിട്ടുന്നതോ?', skill: 'കഴിവ്', fit: 'ഫിറ്റ്നസ് പോലെ, ഭക്ഷണശീലം പോലെ',
+  qDie: '“മരിച്ചാൽ എന്ത് സംഭവിക്കും?”', qHappy: '“ഞാൻ സന്തോഷിക്കണോ?”', personal: 'ഓരോരുത്തർക്കും ഓരോ ഉത്തരം',
+  nisha: 'നിഷ · കോഴിക്കോട്', flow: 'ലയം', hour: '1 മണിക്കൂർ = 1 മിനിറ്റ്', faisal: 'ഫൈസൽ · ദുബായ്', satisfied: 'സംതൃപ്തി',
+  umma: 'ഉമ്മ · മലപ്പുറം', content: 'ഉള്ളതിൽ തൃപ്തി', change: 'നിർവചനം: ഇപ്പോഴും മാറുന്നു',
+  default: 'സ്വാഭാവിക അവസ്ഥ', something: 'എന്തോ കുറവ് എന്ന തോന്നൽ മാറുമ്പോൾ', machines: 'അതിജീവന യന്ത്രങ്ങൾ: വിലയിരുത്തൽ, ആഗ്രഹം',
+  need1: 'വലിയ ഫ്ലാറ്റ്', need2: 'നല്ല കാർ', shafeeq: 'ഷഫീഖ് · ഷാർജ', past: 'പിന്നോട്ട്: ഖേദം', future: 'മുന്നോട്ട്: ആസൂത്രണം',
+  silence: 'ഉള്ളിലെ നിശ്ശബ്ദത', contentM: 'തൃപ്തി',
+  positive: 'പോസിറ്റീവ് ചിന്ത?', opposite: 'വിപരീതം ഉള്ളിൽ ഒളിഞ്ഞിരിക്കുന്നു', happy: 'സന്തോഷം', sad: 'ദുഃഖം', beautiful: 'സുന്ദരം', plain: 'സാധാരണം',
+  tao: 'താവോ തേ ചിങ് · പഴയ ചൈനീസ് ഗ്രന്ഥം', fewer: 'കുറഞ്ഞ ആഗ്രഹങ്ങൾ', kappad: 'കാപ്പാട് കടപ്പുറം · കോഴിക്കോട്', phone: 'ഫോൺ എടുക്കുന്നു',
+  holding: 'പിടിച്ചുവയ്ക്കൽ → നിമിഷം വഴുതുന്നു',
+  nature: 'പ്രകൃതി: സന്തോഷമില്ല, ദുഃഖമില്ല', cause: 'കാരണം → ഫലം', rain: 'കല്യാണദിവസം · കൊച്ചി · മഴ', ruin: '“നശിച്ചു!”',
+  farmer: 'കർഷകൻ · പാലക്കാട്', bless: '“അനുഗ്രഹം!”', same: 'മഴ ഒന്നുതന്നെ', choice: 'തിരഞ്ഞെടുപ്പ്', practise: 'പരിശീലനം തുടങ്ങാം',
+  outside: '“പുറത്തുള്ള ഒന്നും വികാരങ്ങളെ നിശ്ചയിക്കില്ല”?',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', inh: 'പാരമ്പര്യമോ, പഠിച്ചെടുക്കുന്നതോ?', twins: 'ഇരട്ടകളിലെ പഠനങ്ങൾ', people: '≈ 56,000 ആളുകൾ', third: 'മൂന്നിലൊന്ന് വ്യത്യാസം ≈ ജീനുകൾ',
+  germany: 'ജർമനി · ബ്രിട്ടൻ', jobless: 'തൊഴിലില്ലായ്മ', disability: 'വൈകല്യം', lower: 'കുറഞ്ഞുതന്നെ, വർഷങ്ങളോളം',
+  strong: '“പുറത്തുള്ള ഒന്നിനും പങ്കില്ല”', tooS: 'അതിരുകടന്നത്', trials: '39 പരീക്ഷണങ്ങൾ', gratitude: 'നന്ദി · ദയ', little: 'അൽപം കൂടി',
+  all: 'ജീനുകൾ · ജീവിതം · പരിശീലനം: എല്ലാറ്റിനും പങ്ക്', slow: 'യഥാർഥം, പക്ഷേ പതുക്കെ',
+  tiny: 'ചെറുതാണ് സ്വയം', centre: 'എല്ലാറ്റിന്റെയും കേന്ദ്രം?', bend: 'ആഗ്രഹത്തിനൊത്ത് വളയണം', speck: 'പൊടിത്തരി',
+  castle: 'മണൽക്കൊട്ടാരം', tide: 'തിരമാല കൊണ്ടുപോകും', child: 'കുട്ടി: പൂർണമായും ഇവിടെ', firefly: 'മിന്നാമിനുങ്ങിന്റെ മിന്നൽ',
+  job: 'വായിക്കൽ: നിങ്ങളുടെ ചുമതല', wont: 'ലോകം: മിക്കവാറും ഉറച്ചത്', you: 'നിങ്ങൾക്ക് വളയാം',
+  pinged: 'ഫോണിലൂടെ ഇടയ്ക്കിടെ ചോദ്യം', people2: '≈ 2,250 ആളുകൾ', wandered: 'മനസ്സ് അലയുന്നു', half: '≈ 47% സമയം',
+  less: 'സന്തോഷം കുറവ്, അലയുമ്പോൾ', little2: 'അത്ഭുതകരമാംവിധം കുറച്ച്', light: 'ചെറിയ ഡംബെൽ', barbell: 'ബാർബെൽ, ഭാരം നിറച്ചത്',
+  trials2: '47 പരീക്ഷണങ്ങൾ', anxiety: 'ഉത്കണ്ഠ ↓', depression: 'വിഷാദം ↓', better: 'വ്യായാമത്തേക്കാൾ മെച്ചമല്ല', real: 'യഥാർഥ സഹായം, കവചമല്ല',
+  peace: 'സമാധാനം', accept: 'സ്വീകരിക്കൽ: ഉള്ളതിനെ', rearr: 'ലോകം മാറ്റിയൊരുക്കൽ', control: 'നിയന്ത്രിക്കാനാവാത്തത്: വിട്ടുകളയൂ',
+  identity: 'സ്വത്വം: അയച്ചുപിടിക്കൂ', quiet: 'ബഹളം കുറയ്ക്കൂ', politics: 'രാഷ്ട്രീയം ഒഴിവാക്കൂ', unhappy: 'അസന്തുഷ്ടരുടെ കൂട്ട് വേണ്ട',
+  happyP: 'സന്തോഷമുള്ളവരെ തേടൂ', philo: 'തത്വചിന്ത വായിക്കൂ', meditate: 'ധ്യാനിക്കൂ',
+  walk: 'ജുമൈറയിൽ ഒരു നടത്തം', call: 'ഉമ്മയ്ക്ക് ഒരു വിളി', mute: 'ഗ്രൂപ്പ് ചാറ്റ്: മ്യൂട്ട്', baseline: 'അടിസ്ഥാന നില: ആഴ്ച തോറും മുകളിലേക്ക്',
+  w1: 'സന്തോഷം ഒരു കഴിവാകാം: ഫിറ്റ്നസ് പോലെ പതുക്കെ വളർത്തുന്നത്, വെറുതെ പാരമ്പര്യമായി കിട്ടുന്നതല്ല.',
+  w2: 'നവലിന്, ഒന്നിനും കുറവില്ലെന്ന് തോന്നുമ്പോൾ ബാക്കിയാകുന്നതാണ് സന്തോഷം: കുറഞ്ഞ ആഗ്രഹങ്ങൾ, കൂടുതൽ ഈ നിമിഷം.',
+  w3: 'മനസ്സ് വായിക്കുംവരെ സംഭവങ്ങൾ നിഷ്പക്ഷമാണ്; എങ്കിലും യഥാർഥ ദുരിതങ്ങൾക്ക് പങ്കുണ്ട്.',
+  w4: 'ജീനുകൾക്കും ജീവിതത്തിനും പരിശീലനത്തിനും പങ്കുണ്ട്. ചെറിയ ദൈനംദിന ശീലങ്ങൾ അടിസ്ഥാന നില ഉയർത്തും.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 11, title: L('title'), minutes: LANG === 'ml' ? 11 : 9, language: LANG, next: '../index.html#contents' };
+
+/* ---------- meaning colours (style.json look.meaning) ---------- */
+const WEALTH = EV.gold, MONEY = '#7cc79d', STATUS = '#e2694f', TIME = '#5fb3cf', SCI = '#9c84d8', SAD = EV.sad;
+
+/* ---------- chapter helpers (prefixed a11 to stay clear of engine globals) ---------- */
+// A label that fades in at t (beat clock, always a mark).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+const a11Ground = (p, y = 760, fill = '#0c1114') => {
+  mk('rect', { x: -10, y, width: 1620, height: 900 - y + 20, fill }, p);
+  path(p, `M0 ${y}H1600`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+};
+const a11Faisal = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#2f5f8f', '#21466b');
+const a11Shafeeq = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#a8553f', '#7f3e2d');
+const a11Man = (p, o, top = '#5a6470', topD = '#434b55') => evRecolor(evPerson(p, { kind: 'm', ...o }), top, topD);
+const a11Woman = (p, o, top, topD, scarf) => { const P = evRecolor(evPerson(p, { kind: 'f', ...o }), top, topD); if (scarf) evScarf(P, scarf); return P; };
+function a11Icon(p, x, y, color = EV.dim, s = 1, o = 1) {
+  const g = G(p, { x, y, s, o });
+  g._head = mk('circle', { cx: 0, cy: -46, r: 14, fill: color }, g);
+  g._body = path(g, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: color });
+  return g;
+}
+// A rounded tag with a label, centred on (x, y); Malayalam is measured at full size; maxPill caps the width.
+function a11Pill(p, key, x, y, { color = EV.gold, size = 30, fill = '#151d21', ink = EV.goldHi, minW = 160, o = 0, maxPill = 1400 } = {}) {
+  const g = G(p, { x, y, o });
+  const w = Math.min(maxPill, Math.max(minW, evW(L(key), size) + 64));
+  mk('rect', { x: -w / 2, y: -32, width: w, height: 60, rx: 30, fill, stroke: color, 'stroke-width': 2 }, g);
+  evText(g, L(key), { x: 0, y: 8, size, fill: ink, maxW: w - 34 });
+  g._w = w;
+  return g;
+}
+function a11Phone(p, { x = 0, y = 0, s = 1, o = 1, w = 150, h = 280 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 22, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 3 }, g);
+  mk('rect', { x: -w / 2 + 10, y: -h / 2 + 26, width: w - 20, height: h - 52, rx: 6, fill: '#142026' }, g);
+  mk('rect', { x: -18, y: -h / 2 + 10, width: 36, height: 6, rx: 3, fill: '#2b3632' }, g);
+  return g;
+}
+const a11Cross = (p, x, y, color = STATUS, s = 1) => put(path(p, 'M-13 -13L13 13M13 -13L-13 13', { stroke: color, 'stroke-width': 5 }, { d: 0 }), { x, y, s });
+// Science-check frame and tag on #scene, kept across panels inside the beat.
+function a11Sci(m, D) {
+  const keep = G(scene);
+  hide(keep, D - .45, .4);
+  prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+  const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+  draw(fr, m('sci'), 1);
+  const tag = G(keep, { x: 200, y: 60, o: 0 });
+  const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+  mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+  evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+  show(tag, m('sci'), .4);
+}
+// A tilted verdict stamp.
+function a11Stamp(p, key, x, y, t, color = SCI) {
+  const g = G(p, { x, y, o: 0, r: -7 });
+  const sw = Math.max(240, evW(L(key), 30) + 50);
+  mk('rect', { x: -sw / 2, y: -30, width: sw, height: 60, rx: 8, fill: 'none', stroke: color, 'stroke-width': 4 }, g);
+  evText(g, L(key), { x: 0, y: 11, size: 30, weight: 700, fill: color, maxW: sw - 30 });
+  put(g, { s: 1.5 }); tw(g, { o: 1, s: 1 }, t, .4, back);
+  return g;
+}
+// A gift box with a ribbon, centred on (0,0).
+function a11Gift(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -60, y: -40, width: 120, height: 90, rx: 4, fill: '#5a2f3a', stroke: EV.gold, 'stroke-width': 2 }, g);
+  mk('rect', { x: -68, y: -60, width: 136, height: 26, rx: 4, fill: '#6e3a47', stroke: EV.gold, 'stroke-width': 2 }, g);
+  path(g, 'M-8 -60V50M8 -60V50', { stroke: EV.goldHi, 'stroke-width': 4 });
+  path(g, 'M0 -60Q-40 -100 -30 -70Q-24 -58 0 -60Q24 -58 30 -70Q40 -100 0 -60Z', { fill: EV.goldHi });
+  return g;
+}
+// A dumbbell centred on (0,0), horizontal.
+function a11Dumbbell(p, { x = 0, y = 0, s = 1, o = 1, r = 0 } = {}) {
+  const g = G(p, { x, y, s, o, r });
+  path(g, 'M-40 0H40', { stroke: EV.dim, 'stroke-width': 8 });
+  [-1, 1].forEach(k => mk('rect', { x: k > 0 ? 30 : -48, y: -22, width: 18, height: 44, rx: 4, fill: '#3a3f3a', stroke: EV.gold, 'stroke-width': 2 }, g));
+  return g;
+}
+// A loaded barbell centred on (0,0).
+function a11Barbell(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-170 0H170', { stroke: EV.dim, 'stroke-width': 9 });
+  [-1, 1].forEach(k => [0, 1, 2].forEach(i => mk('rect', { x: k * (110 + i * 20) - 9, y: -50 + i * 6, width: 18, height: 100 - i * 12, rx: 4, fill: '#2b3030', stroke: STATUS, 'stroke-width': 2 }, g)));
+  return g;
+}
+// A small scooter, wheels on y = 0.
+function a11Scooter(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  [-55, 55].forEach(cx => { mk('circle', { cx, cy: -22, r: 22, fill: '#151d21', stroke: EV.dim, 'stroke-width': 5 }, g); });
+  path(g, 'M-70 -40Q-60 -70 -10 -66H30L48 -110H64L56 -40Q20 -30 -70 -40Z', { fill: '#2f5f8f', stroke: EV.gold, 'stroke-width': 2 });
+  mk('rect', { x: -50, y: -84, width: 54, height: 16, rx: 6, fill: '#1b2226' }, g);
+  mk('rect', { x: -48, y: -128, width: 50, height: 42, rx: 6, fill: '#c9894a', stroke: '#8a5a2c', 'stroke-width': 2 }, g);
+  return g;
+}
+// A tea glass, base at (0,0).
+function a11Tea(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-16 0L-20 -46H20L16 0Z', { fill: '#b8792f', stroke: EV.ink, 'stroke-width': 2, 'stroke-opacity': .6 });
+  path(g, 'M-6 -56Q-12 -66 -4 -76M6 -56Q0 -66 8 -76', { stroke: EV.dim, 'stroke-width': 2, opacity: .6 });
+  return g;
+}
+// A small clock face whose hand angle is set from outside (g._hand).
+function a11Clock(p, x, y, r = 50, color = TIME) {
+  const g = G(p, { x, y });
+  mk('circle', { cx: 0, cy: 0, r, fill: '#10171b', stroke: color, 'stroke-width': 3 }, g);
+  for (let i = 0; i < 12; i++) { const a = i * Math.PI / 6; path(g, `M${(Math.sin(a) * r * .8).toFixed(1)} ${(-Math.cos(a) * r * .8).toFixed(1)}L${(Math.sin(a) * r * .92).toFixed(1)} ${(-Math.cos(a) * r * .92).toFixed(1)}`, { stroke: color, 'stroke-width': 2, opacity: .6 }); }
+  g._hand = G(g);
+  path(g._hand, `M0 6V${-r * .74}`, { stroke: EV.goldHi, 'stroke-width': 4 });
+  return g;
+}
+// Yin-yang of radius r centred on (0,0).
+function a11YinYang(p, { x = 0, y = 0, r = 120, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('circle', { cx: 0, cy: 0, r, fill: '#1b2a3a', stroke: EV.gold, 'stroke-width': 3 }, g);
+  path(g, `M0 ${-r}A${r} ${r} 0 0 1 0 ${r}A${r / 2} ${r / 2} 0 0 1 0 0A${r / 2} ${r / 2} 0 0 0 0 ${-r}Z`, { fill: EV.goldHi });
+  mk('circle', { cx: 0, cy: -r / 2, r: r * .14, fill: '#1b2a3a' }, g);
+  mk('circle', { cx: 0, cy: r / 2, r: r * .14, fill: EV.goldHi }, g);
+  return g;
+}
+// A rain cloud centred on (0,0).
+function a11Cloud(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  [[-170, 20, 70], [-80, -20, 95], [40, -30, 105], [150, 10, 80], [0, 40, 90], [-120, 50, 60], [110, 50, 66]].forEach(([cx, cy, r]) => mk('circle', { cx, cy, r, fill: '#2a3038' }, g));
+  return g;
+}
+// A wedding pandal (two poles, a garland), base at (0,0), width 260.
+function a11Pandal(p, { x = 0, y = 0, o = 1 } = {}) {
+  const g = G(p, { x, y, o });
+  path(g, 'M-130 0V-300M130 0V-300M-150 -300H150', { stroke: '#8a6a44', 'stroke-width': 8 });
+  path(g, 'M-130 -290Q0 -200 130 -290', { stroke: '#2b7c3a', 'stroke-width': 4 });
+  for (let i = 0; i <= 8; i++) { const u = i / 8, xx = -130 + 260 * u, yy = -290 + 90 * 4 * u * (1 - u) * .97; mk('circle', { cx: xx, cy: yy, r: 9, fill: i % 2 ? '#e8a23a' : '#f0c24a' }, g); }
+  return g;
+}
+// A sand castle, base at (0,0).
+function a11Castle(p, { x = 0, y = 0, s = 1 } = {}) {
+  const g = G(p, { x, y, s });
+  path(g, 'M-110 0V-80H-90V-96H-70V-80H-40V-130H-28V-146H-10V-130H10V-146H28V-130H40V-80H70V-96H90V-80H110V0Z', { fill: '#b89a62', stroke: '#e8cf86', 'stroke-width': 2, 'stroke-opacity': .5 });
+  mk('rect', { x: -14, y: -40, width: 28, height: 40, rx: 12, fill: '#6e5a34' }, g);
+  path(g, 'M0 -146V-176L22 -168L0 -160', { stroke: EV.ink, 'stroke-width': 2, fill: STATUS });
+  return g;
+}
+// A simple face, centred on (0,0): mood 'smile' or 'flat'.
+function a11Face(p, x, y, mood, color, r = 34) {
+  const g = G(p, { x, y });
+  mk('circle', { cx: 0, cy: 0, r, fill: '#10171b', stroke: color, 'stroke-width': 3 }, g);
+  mk('circle', { cx: -r * .32, cy: -r * .18, r: 3.5, fill: color }, g);
+  mk('circle', { cx: r * .32, cy: -r * .18, r: 3.5, fill: color }, g);
+  path(g, mood === 'smile' ? `M${-r * .4} ${r * .22}Q0 ${r * .62} ${r * .4} ${r * .22}` : `M${-r * .36} ${r * .36}H${r * .36}`, { stroke: color, 'stroke-width': 3 });
+  return g;
+}
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    tw(g, { o: 1 }, .1, .6, out);
+    // a new day over the backwaters: the sun rises through the whole title
+    const sun = G(g, { x: 800, y: 700 });
+    evGlow(sun, 0, 0, 320, 'Warm', .75);
+    mk('circle', { cx: 0, cy: 0, r: 78, fill: '#f3d68a' }, sun);
+    prog(q => { const t = q * D; put(sun, { y: 700 - 230 * io(evU(t, m('part'), Math.max(4, D - 1.2 - m('part')))) }); }, 0, D, lin);
+    mk('rect', { x: -10, y: 600, width: 1620, height: 310, fill: '#0a1013' }, g);
+    path(g, 'M0 600H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .5 });
+    const refl = G(g, { o: 0 });
+    [[620, 150], [642, 110], [664, 76], [686, 44]].forEach(([y, w]) => path(refl, `M${800 - w} ${y}H${800 + w}`, { stroke: '#f3d68a', 'stroke-width': 4, opacity: .5 }));
+    prog(q => { const t = q * D; put(refl, { o: .9 * io(evU(t, m('happy'), 2.5)) }); }, 0, D, lin);
+    // a coconut palm on the bank and a vallam on the water
+    const palm = G(g, { x: 170, y: 600 });
+    path(palm, 'M0 0Q-10 -120 30 -250', { stroke: '#2a2a22', 'stroke-width': 14 });
+    ['M30 -250Q90 -280 150 -230', 'M30 -250Q80 -220 120 -160', 'M30 -250Q-30 -290 -90 -240', 'M30 -250Q-20 -220 -50 -160', 'M30 -250Q40 -310 90 -330'].forEach(d => path(palm, d, { stroke: '#2a2f26', 'stroke-width': 10 }));
+    evBoat(g, { x: 1270, y: 640, s: .4 });
+    // "Part 2 · Happiness" arrives large, then settles into the kicker
+    const big = evText(g, L('partBig'), { x: 800, y: 330, size: 130, font: SERIF, weight: 600, fill: EV.gold, o: 0 });
+    put(big, { y: 352 }); tw(big, { o: 1, y: 330 }, m('part'), .6, out); tw(big, { o: 0 }, m('chap'), .5);
+    const hb = evText(g, L('happyBig'), { x: 800, y: 450, size: 84, font: SERIF, italic: true, fill: EV.ink, o: 0 });
+    tw(hb, { o: 1 }, m('happy'), .6); tw(hb, { o: 0 }, m('chap'), .5);
+    const kk = evText(g, L('kicker'), { x: 800, y: 150, size: 26, fill: EV.gold, weight: 500, ls: '6', o: 0 });
+    show(kk, m('chap'), .5);
+    draw(path(g, 'M620 182H980', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .6 }, { d: 0 }), m('chap'), .8);
+    const ti = evText(g, L('title'), { x: 800, y: 280, size: 84, font: SERIF, weight: 600, maxW: 1420, o: 0 });
+    put(ti, { y: 300 }); tw(ti, { y: 280, o: 1 }, m('title'), .7, out);
+    const sub = evText(scene, L('sub'), { x: 800, y: 765, size: 34, fill: EV.dim, o: 0, maxW: 1380, font: SERIF, italic: true });
+    put(sub, { y: 785 }); tw(sub, { y: 765, o: 1 }, m('sub'), .7, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 835, size: 24, fill: '#7a7466', o: 0, maxW: 1400 });
+    show(cr, m('sub'), 1);
+    tw(g, { o: 0 }, D - .6, .5); hide(sub, D - .6, .5); hide(cr, D - .6, .5);
+  }],
+
+  ['scale', 'b_scale', (m, D) => {
+    const p = panel(0);
+    // Naval and the question he once waved away
+    const nv = a11Icon(p, 250, 600, EV.dim, 2.4);
+    lab(p, 'naval', 250, 660, m('how'), { size: 28, fill: EV.ink, weight: 600 });
+    const bb = evBubble(p, L('howQ'), { x: 330, y: 420, w: 400, size: 28 });
+    tw(bb, { o: 1, s: 1 }, m('how'), .4, back);
+    tw(bb, { o: 0, x: 180 }, m('scale'), .6);
+    // the 1–10 gauge (faint track opens the beat)
+    const BASE = 750, U = 56, GX = 640;
+    const gg = G(p, { o: .25 });
+    mk('rect', { x: GX, y: BASE - 10 * U, width: 40, height: 10 * U, rx: 8, fill: '#151d21', stroke: EV.faint, 'stroke-width': 2 }, gg);
+    for (let i = 1; i <= 10; i++) T(gg, String(i), { x: GX - 22, y: BASE - i * U + 36, size: 22, fill: EV.dim, anchor: 'end', font: SANS });
+    tw(gg, { o: 1 }, m('scale'), .4);
+    lab(p, 'scaleL', GX + 20, BASE + 50, m('scale'), { size: 26, fill: EV.dim });
+    const fill = mk('rect', { x: GX + 4, y: BASE, width: 32, height: 0, rx: 6, fill: '#8a8270' }, p);
+    let lastC = '';
+    prog(q => { const t = q * D;
+      const lv = 2.5 * io(evU(t, m('two'), .8)) + 1.5 * io(evU(t, m('four'), .4)) - 1.5 * io(evU(t, m('value'), .5)) + 6.5 * io(evU(t, m('nine'), 1.2));
+      const h = Math.max(0, lv * U - 4); fill.setAttribute('height', h); fill.setAttribute('y', BASE - h);
+      const c = lv > 6 ? EV.goldHi : '#8a8270'; if (c !== lastC) { fill.setAttribute('fill', c); lastC = c; } }, 0, D, lin);
+    lab(p, 'young', GX + 70, BASE - 2.5 * U + 10, m('two'), { size: 28, fill: EV.ink, anchor: 'start' });
+    lab(p, 'goodday', GX + 70, BASE - 4 * U + 10, m('four'), { size: 26, fill: EV.dim, anchor: 'start' });
+    lab(p, 'value', GX + 70, BASE - 1 * U + 6, m('value'), { size: 26, fill: EV.dim, anchor: 'start', italic: true, font: SERIF });
+    lab(p, 'nine', GX + 70, BASE - 9 * U + 10, m('nine'), { size: 34, fill: EV.goldHi, weight: 600, anchor: 'start' });
+    const gl = evGlow(p, 250, 520, 150, 'Gold', 0);
+    p.insertBefore(gl, nv);
+    tw(gl, { o: .9 }, m('nine'), .8);
+    tw(nv._head, { c_fill: EV.goldHi }, m('nine'), .6); tw(nv._body, { c_fill: EV.gold }, m('nine'), .6);
+    // what lifted it: a thin slice of money, a thick slab of practice
+    const CX = 1110;
+    const segs = [[MONEY, 40, 'money'], [WEALTH, 170, 'decide'], [EV.goldHi, 170, 'work']];
+    let y0 = BASE;
+    const rects = segs.map(([c, h, k]) => { const r = mk('rect', { x: CX, y: y0, width: 70, height: 0, fill: c }, p); const yy = y0; y0 -= h; return [r, yy, h, k]; });
+    prog(q => { const t = q * D; rects.forEach(([r, yy, h, k]) => { const hh = h * io(evU(t, m(k), .6)); r.setAttribute('height', hh); r.setAttribute('y', yy - hh); }); }, 0, D, lin);
+    lab(p, 'money', CX + 95, BASE - 10, m('money'), { size: 28, fill: MONEY, anchor: 'start', maxW: 380 });
+    lab(p, 'decide', CX + 95, BASE - 115, m('decide'), { size: 28, fill: WEALTH, anchor: 'start', maxW: 380 });
+    lab(p, 'work', CX + 95, BASE - 285, m('work'), { size: 28, fill: EV.goldHi, anchor: 'start', maxW: 380 });
+    // born with it, or a skill you train?
+    const q2 = panel(m('born'));
+    put(q2, { o: 0 }); show(q2, m('born'), .4);
+    a11Ground(q2, 760);
+    a11Gift(q2, { x: 430, y: 520, s: 1.5 });
+    lab(q2, 'born', 430, 680, m('born'), { size: 34, fill: EV.ink, weight: 600 });
+    draw(a11Cross(q2, 430, 515, STATUS, 4), m('skill') + .2, .4);
+    const fz = a11Faisal(q2, { x: 1110, y: 760, s: .72 });
+    evBreathe(fz, D);
+    const db = a11Dumbbell(fz.armR._lo, { x: 0, y: 84, s: .55, r: 90 });
+    void db;
+    prog(qq => { const t = qq * D, k = evU(t, m('born') + .5, .4), c = t > m('born') + .5 ? .5 - .5 * Math.cos((t - m('born') - .5) * Math.PI * 2 / 1.8) : 0;
+      put(fz.armR, { r: -12 * k }); put(fz.armR._lo, { r: -(20 + 120 * c) * k }); }, 0, D, lin);
+    evMood(fz, 'smile', m('skill'));
+    const sk = a11Pill(q2, 'skill', 1110, 300, { size: 40, color: WEALTH, minW: 220 });
+    put(sk, { s: .7 }); tw(sk, { o: 1, s: 1 }, m('skill'), .45, back);
+    lab(q2, 'fit', 1110, 390, m('fit'), { size: 30, fill: EV.ink, maxW: 700 });
+  }],
+
+  ['personal', 'b_personal', (m, D) => {
+    const p = panel(0);
+    a11Ground(p, 760);
+    const mo = a11Woman(p, { x: 560, y: 760, s: .7 }, '#6f4a7a', '#4f3458', '#3a2f4a');
+    const kid = evPerson(p, { kind: 'f', x: 720, y: 760, s: .38 });
+    evBreathe(mo, D); evBreathe(kid, D, 1, 1.1);
+    put(kid.head, { r: -10 });
+    evMood(mo, 'smile', m('mother'));
+    const b1 = evBubble(p, L('qDie'), { x: 900, y: 560, w: 420, size: 28 });
+    tw(b1, { o: 1, s: 1 }, m('die'), .4, back);
+    const b2 = evBubble(p, L('qHappy'), { x: 1150, y: 370, w: 380, size: 28 });
+    tw(b2, { o: 1, s: 1 }, m('should'), .4, back);
+    evMood(kid, 'ask', m('die'));
+    lab(p, 'personal', 800, 140, m('personal'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    // three people, three answers
+    const q = panel(m('nisha'));
+    put(q, { o: 0 }); show(q, m('nisha'), .4);
+    a11Ground(q, 720);
+    const cols = [290, 800, 1310];
+    const glows = [cols[0], cols[1] - 40, cols[2] - 30].map(x => evGlow(q, x, 560, 170, 'Gold', 0));
+    const ni = evPerson(q, { kind: 'f', x: cols[0], y: 720, s: .62 });
+    const fz = a11Faisal(q, { x: cols[1] - 40, y: 720, s: .62 });
+    const um = a11Woman(q, { x: cols[2] - 30, y: 720, s: .62 }, '#d9cfb8', '#b0a68f', '#e8e4d8');
+    [ni, fz, um].forEach((P, i) => evBreathe(P, D, 1, .8 + i * .1));
+    lab(q, 'nisha', cols[0], 775, m('nisha'), { size: 26, weight: 600 });
+    lab(q, 'flow', cols[0], 140, m('flow'), { size: 44, font: SERIF, weight: 600, fill: EV.goldHi });
+    tw(glows[0], { o: .8 }, m('flow'), .6);
+    evMood(ni, 'smile', m('flow'));
+    const ck = a11Clock(q, cols[0], 250, 52);
+    prog(qq => { const t = qq * D; put(ck._hand, { r: 360 * 3 * io(evU(t, m('hour'), 1.6)) }); }, 0, D, lin);
+    lab(q, 'hour', cols[0], 345, m('hour'), { size: 24, fill: TIME });
+    lab(q, 'faisal', cols[1], 775, m('faisal'), { size: 26, weight: 600 });
+    lab(q, 'satisfied', cols[1], 140, m('satisfied'), { size: 44, font: SERIF, weight: 600, fill: EV.goldHi });
+    tw(glows[1], { o: .8 }, m('satisfied'), .6);
+    evMood(fz, 'smile', m('satisfied'));
+    const sc = a11Scooter(q, { x: cols[1] + 110, y: 720, s: .8, o: 0 });
+    show(sc, m('satisfied'), .4);
+    const moon = G(q, { x: cols[1], y: 260, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 40, fill: '#e8dcb5' }, moon); mk('circle', { cx: 16, cy: -10, r: 36, fill: '#080c0f' }, moon);
+    show(moon, m('satisfied'), .5);
+    lab(q, 'umma', cols[2], 775, m('umma'), { size: 26, weight: 600 });
+    lab(q, 'content', cols[2], 140, m('content'), { size: 44, font: SERIF, weight: 600, fill: EV.goldHi });
+    tw(glows[2], { o: .8 }, m('content'), .6);
+    evMood(um, 'smile', m('content'));
+    const tea = a11Tea(q, { x: cols[2] + 90, y: 600, o: 0 });
+    show(tea, m('content'), .4);
+    // rain arrives over the verandah
+    const rn = path(q, '', { stroke: TIME, 'stroke-width': 2, opacity: .6 });
+    prog(qq => { const t = qq * D, k = evU(t, m('rainU'), .6); if (k <= 0) { rn.setAttribute('d', ''); return; }
+      let d = ''; for (let i = 0; i < 18; i++) { const x = cols[2] - 160 + i * 19, y = 210 + ((t * 260 + i * 37) % 130); d += `M${x} ${y.toFixed(1)}l-5 18`; }
+      rn.setAttribute('d', d); put(rn, { o: k }); }, 0, D, lin);
+    lab(q, 'change', 800, 850, m('change'), { size: 28, fill: EV.dim, italic: true, font: SERIF, maxW: 1100 });
+  }],
+
+  ['missing', 'b_missing', (m, D) => {
+    const p = panel(0);
+    a11Ground(p, 790);
+    const sf = a11Shafeeq(p, { x: 800, y: 790, s: .8 });
+    evBreathe(sf, D);
+    lab(p, 'default', 800, 95, m('default'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    lab(p, 'something', 800, 150, m('something'), { size: 30, fill: EV.dim, maxW: 1150 });
+    lab(p, 'machines', 800, 215, m('machines'), { size: 28, fill: EV.ink, maxW: 1100 });
+    const n1 = evBubble(p, L('need1'), { x: 600, y: 470, w: 320, size: 28, tail: 'right', edge: STATUS });
+    const n2 = evBubble(p, L('need2'), { x: 1000, y: 470, w: 320, size: 28, edge: STATUS });
+    tw(n1, { o: 1, s: 1 }, m('need1'), .4, back); tw(n2, { o: 1, s: 1 }, m('need2'), .4, back);
+    evMood(sf, 'tense', m('need1'));
+    lab(p, 'shafeeq', 800, 845, m('shafeeq'), { size: 28, weight: 600 });
+    // the mind runs back and forward; the head turns with it
+    const aL = G(p, { o: 0 }), aR = G(p, { o: 0 });
+    path(aL, 'M690 600H330', { stroke: SAD, 'stroke-width': 5 }); evHead(aL, 326, 600, 180, SAD, 1.3);
+    path(aR, 'M910 600H1270', { stroke: TIME, 'stroke-width': 5 }); evHead(aR, 1274, 600, 0, TIME, 1.3);
+    show(aL, m('past'), .4); show(aR, m('future'), .4);
+    lab(p, 'past', 470, 650, m('past'), { size: 30, fill: SAD, weight: 600 });
+    lab(p, 'future', 1130, 650, m('future'), { size: 30, fill: TIME, weight: 600 });
+    evMood(sf, 'worried', m('past'));
+    prog(q => { const t = q * D; put(sf.head, { r: -14 * io(evU(t, m('past'), .4)) + 28 * io(evU(t, m('future'), .5)) - 14 * io(evU(t, m('stops'), .6)) }); }, 0, D, lin);
+    // nothing missing: the running stops
+    [n1, n2].forEach(b => tw(b, { o: 0, s: .6 }, m('stops'), .5));
+    [aL, aR].forEach(a => tw(a, { o: 0 }, m('stops'), .5));
+    evMood(sf, 'calm', m('stops'));
+    const gl = evGlow(p, 800, 560, 190, 'Gold', 0);
+    p.insertBefore(gl, sf.g);
+    tw(gl, { o: .9 }, m('silence'), 1);
+    lab(p, 'silence', 800, 340, m('silence'), { size: 42, font: SERIF, italic: true, fill: EV.goldHi });
+    evMood(sf, 'smile', m('content'));
+    lab(p, 'contentM', 800, 400, m('content'), { size: 34, fill: WEALTH, weight: 600 });
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    const p = panel(0);
+    a11Ground(p, 430);
+    const rs = a11Man(p, { x: 330, y: 430, s: .5 }, '#5d6b3f', '#45502e');
+    evBreathe(rs, D); evMood(rs, 'worried', .4);
+    const st = G(p, { x: 345, y: 330 });
+    path(st, 'M0 -14L4 -4L14 -4L6 3L9 13L0 7L-9 13L-6 3L-14 -4L-4 -4Z', { fill: EV.goldHi });
+    const th = evThought(p, { x: 560, y: 340, w: 300, h: 160, o: 1 });
+    const tower = G(th._in);
+    mk('rect', { x: -50, y: -60, width: 100, height: 120, fill: '#1b2226', stroke: EV.gold, 'stroke-width': 2 }, tower);
+    for (let r = 0; r < 4; r++) for (let c = 0; c < 3; c++) mk('rect', { x: -38 + c * 28, y: -50 + r * 28, width: 18, height: 16, fill: '#e8cf86', opacity: .6 }, tower);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-missing', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 1, L('q1y'), [L('q1na'), null, L('q1nc')]),
+  }], done) }],
+
+  ['positive', 'b_positive', (m, D) => {
+    const p = panel(0);
+    lab(p, 'positive', 800, 95, m('positive'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    const yy = a11YinYang(p, { x: 800, y: 390, r: 140, o: 0 });
+    put(yy, { s: .4 }); tw(yy, { o: 1, s: 1 }, m('opposite'), .6, back);
+    prog(q => { const t = q * D; put(yy, { r: 40 * Math.max(0, t - m('opposite')) }); }, 0, D, lin);
+    lab(p, 'opposite', 800, 600, m('opposite'), { size: 30, fill: EV.ink, maxW: 900 });
+    lab(p, 'happy', 420, 360, m('happy'), { size: 48, font: SERIF, weight: 600, fill: EV.goldHi });
+    lab(p, 'sad', 420, 450, m('sad'), { size: 48, font: SERIF, weight: 600, fill: SAD });
+    lab(p, 'beautiful', 1180, 360, m('beautiful'), { size: 48, font: SERIF, weight: 600, fill: EV.goldHi });
+    lab(p, 'plain', 1180, 450, m('plain'), { size: 48, font: SERIF, weight: 600, fill: EV.dim });
+    lab(p, 'tao', 800, 670, m('tao'), { size: 28, fill: EV.dim, maxW: 900 });
+    const fw = a11Pill(p, 'fewer', 800, 780, { size: 36, color: WEALTH, minW: 300 });
+    put(fw, { y: 800 }); tw(fw, { o: 1, y: 780 }, m('fewer'), .45, out);
+    // Kappad beach at sunset: grabbing the moment loses it
+    const q = panel(m('kappad'));
+    put(q, { o: 0 }); show(q, m('kappad'), .4);
+    const sun = G(q, { x: 1170, y: 440 });
+    evGlow(sun, 0, 0, 230, 'Warm', .8);
+    mk('circle', { cx: 0, cy: 0, r: 66, fill: '#f0a35e' }, sun);
+    prog(qq => { const t = qq * D; put(sun, { y: 420 + 150 * io(evU(t, m('kappad'), D - m('kappad'))) + 60 * io(evU(t, m('holding'), D - m('holding'))) }); }, 0, D, lin);
+    mk('rect', { x: -10, y: 560, width: 1620, height: 220, fill: '#0b1a22' }, q);
+    path(q, 'M0 560H1600', { stroke: '#f0a35e', 'stroke-width': 1.5, opacity: .5 });
+    mk('rect', { x: -10, y: 780, width: 1620, height: 130, fill: '#2a2418' }, q);
+    const ni = evPerson(q, { kind: 'f', x: 560, y: 800, s: .75 });
+    evBreathe(ni, D);
+    evMood(ni, 'smile', m('kappad'));
+    const ph = a11Phone(ni.armR._lo, { x: 0, y: 100, s: .2, o: 0 });
+    show(ph, m('phone'), .3);
+    evArm(ni, 1, -150, -10, m('phone'), .5);
+    lab(q, 'kappad', 560, 860, m('kappad'), { size: 28, weight: 600, fill: EV.ink });
+    lab(q, 'phone', 700, 440, m('phone'), { size: 30, fill: EV.ink, anchor: 'start' });
+    evMood(ni, 'worried', m('holding'));
+    lab(q, 'holding', 800, 160, m('holding'), { size: 40, font: SERIF, italic: true, fill: EV.goldHi, maxW: 1200 });
+  }],
+
+  ['nature', 'b_nature', (m, D) => {
+    const p = panel(0);
+    lab(p, 'nature', 800, 110, m('nature'), { size: 46, font: SERIF, weight: 600, fill: EV.gold, maxW: 1200 });
+    // a line of dominoes: cause and effect, all the way down
+    const N = 12, X0 = 400, DX = 76, BY = 470;
+    const spark = evGlow(p, X0 - 70, BY - 60, 70, 'Warm', 0);
+    path(p, `M${X0 - 40} ${BY}H${X0 + DX * N}`, { stroke: EV.faint, 'stroke-width': 3 });
+    const doms = Array.from({ length: N }, (_, i) => { const g = G(p, { x: X0 + i * DX + 18, y: BY }); mk('rect', { x: -18, y: -120, width: 18, height: 120, rx: 3, fill: '#1b2226', stroke: EV.gold, 'stroke-width': 2 }, g); return g; });
+    prog(q => { const t = q * D; put(spark, { o: .9 * evU(t, m('cause'), .3) * (1 - evU(t, m('cause') + 1.2, 1)) });
+      doms.forEach((g, i) => put(g, { r: 34 * io(evU(t, m('cause') + .2 + i * .16, .25)) })); }, 0, D, lin);
+    lab(p, 'cause', 800, 560, m('cause'), { size: 36, fill: EV.ink, weight: 600 });
+    // the same rain, read two ways
+    const q = panel(m('rain'));
+    put(q, { o: 0 }); show(q, m('rain'), .4);
+    a11Ground(q, 760);
+    a11Cloud(q, { x: 800, y: 170, s: 1.15 });
+    lab(q, 'rain', 800, 190, m('rain'), { size: 30, fill: EV.ink, weight: 600, maxW: 520 });
+    const rn = path(q, '', { stroke: TIME, 'stroke-width': 2, opacity: .45 });
+    prog(qq => { const t = qq * D; let d = ''; for (let i = 0; i < 46; i++) { const x = 240 + i * 25, y = 250 + ((t * 300 + i * 61) % 260); d += `M${x} ${y.toFixed(1)}l-6 22`; } rn.setAttribute('d', d); put(rn, { o: 1 - .6 * evU(t, m('choice'), .8) }); }, 0, D, lin);
+    a11Pandal(q, { x: 330, y: 760 });
+    const au = a11Woman(q, { x: 330, y: 760, s: .6 }, '#8a2f3a', '#64222a', '#c9a84c');
+    evBreathe(au, D);
+    const br = evBubble(q, L('ruin'), { x: 420, y: 470, w: 260, size: 30, edge: SAD });
+    tw(br, { o: 1, s: 1 }, m('ruin'), .4, back);
+    evMood(au, 'sad', m('ruin'));
+    // paddy and the farmer
+    let pd = '';
+    for (let i = 0; i < 22; i++) { const x = 1090 + i * 19; pd += `M${x} 760Q${x - 6} 735 ${x - 10} 712M${x} 760Q${x + 4} 732 ${x + 9} 716`; }
+    path(q, pd, { stroke: '#4f9a5a', 'stroke-width': 3 });
+    const fm = a11Man(q, { x: 1290, y: 760, s: .6 }, '#3f7a52', '#2c573a');
+    evBreathe(fm, D, 1, .8);
+    lab(q, 'farmer', 1290, 815, m('farmer'), { size: 26, weight: 600 });
+    const bl = evBubble(q, L('bless'), { x: 1180, y: 470, w: 300, size: 30, tail: 'right', edge: MONEY });
+    tw(bl, { o: 1, s: 1 }, m('bless'), .4, back);
+    evMood(fm, 'smile', m('bless'));
+    lab(q, 'same', 800, 560, m('same'), { size: 44, font: SERIF, italic: true, fill: EV.goldHi });
+    const ch = a11Pill(q, 'choice', 800, 650, { size: 32, color: WEALTH, minW: 220 });
+    put(ch, { y: 670 }); tw(ch, { o: 1, y: 650 }, m('choice'), .45, out);
+    lab(q, 'practise', 800, 730, m('practise'), { size: 30, fill: EV.ink });
+    lab(q, 'outside', 800, 840, m('outside'), { size: 30, fill: SCI, weight: 600, maxW: 820 });
+  }],
+
+  ['check', 'b_check', (m, D) => {
+    const p = panel(0);
+    a11Sci(m, D);
+    lab(p, 'inh', 800, 140, m('inh'), { size: 42, font: SERIF, italic: true, fill: EV.ink });
+    // twins and the genes bar
+    const tA = a11Icon(p, 290, 340, SCI, 1.3, 0), tB = a11Icon(p, 370, 340, SCI, 1.3, 0);
+    show(tA, m('twins'), .4); show(tB, m('twins'), .4);
+    lab(p, 'twins', 330, 395, m('twins'), { size: 30, weight: 600 });
+    lab(p, 'people', 330, 440, m('people'), { size: 26, fill: EV.dim });
+    const bar = G(p, { o: 0 });
+    mk('rect', { x: 150, y: 480, width: 360, height: 44, rx: 6, fill: '#151d21', stroke: EV.faint, 'stroke-width': 2 }, bar);
+    show(bar, m('people'), .4);
+    const gb = mk('rect', { x: 150, y: 480, width: 0, height: 44, rx: 6, fill: SCI }, p);
+    prog(q => { const t = q * D; gb.setAttribute('width', 360 * .36 * io(evU(t, m('third'), .7))); }, 0, D, lin);
+    const tp = evPara(p, L('third'), { x: 330, y: 570, size: 26, maxW: 380, fill: SCI, o: 0, weight: 600 });
+    show(tp, m('third'), .45);
+    // two long surveys: after some events, many stay lower
+    lab(p, 'germany', 770, 225, m('germany'), { size: 28, weight: 600, maxW: 420 });
+    const OX = 610, OY = 520;
+    const ax = path(p, `M${OX} 260V${OY}H${OX + 330}`, { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 });
+    draw(ax, m('germany'), .5);
+    const base = path(p, `M${OX + 10} 320H${OX + 330}`, { stroke: EV.dim, 'stroke-width': 2, 'stroke-dasharray': '6 6', opacity: .7 }, { d: 0 });
+    draw(base, m('germany'), .6);
+    const l1 = path(p, `M${OX + 10} 322H${OX + 140}L${OX + 170} 430Q${OX + 230} 390 ${OX + 330} 384`, { stroke: TIME, 'stroke-width': 4 }, { d: 0 });
+    const l2 = path(p, `M${OX + 10} 318H${OX + 150}L${OX + 180} 470Q${OX + 240} 440 ${OX + 330} 436`, { stroke: STATUS, 'stroke-width': 4 }, { d: 0 });
+    draw(l1, m('jobless'), .9); draw(l2, m('disability'), .9);
+    lab(p, 'jobless', OX + 345, 390, m('jobless'), { size: 22, fill: TIME, anchor: 'start', maxW: 150 });
+    lab(p, 'disability', OX + 345, 444, m('disability'), { size: 22, fill: STATUS, anchor: 'start', maxW: 150 });
+    lab(p, 'lower', 775, 575, m('lower'), { size: 26, fill: EV.ink, maxW: 420 });
+    lab(p, 'strong', 650, 665, m('strong'), { size: 28, italic: true, font: SERIF, fill: EV.dim, maxW: 360 });
+    a11Stamp(p, 'tooS', 930, 662, m('tooS'));
+    // thirty-nine trials: a small lift
+    lab(p, 'trials', 1290, 225, m('trials'), { size: 28, weight: 600 });
+    const sq = [];
+    for (let i = 0; i < 39; i++) { const c = mk('rect', { x: 1110 + (i % 13) * 28, y: 255 + Math.floor(i / 13) * 32, width: 20, height: 24, rx: 3, fill: '#1d1830', stroke: SCI, 'stroke-width': 1.5 }, p); put(c, { o: 0 }); sq.push([c, m('trials') + i * .015, .25]); }
+    evSeq(sq, D);
+    lab(p, 'gratitude', 1290, 400, m('gratitude'), { size: 26, fill: EV.ink });
+    const bA = mk('rect', { x: 1235, y: 540, width: 46, height: 0, fill: EV.faint }, p), bB = mk('rect', { x: 1300, y: 540, width: 46, height: 0, fill: SCI }, p);
+    prog(q => { const t = q * D, u = io(evU(t, m('gratitude'), .5)), v = io(evU(t, m('little'), .7)); bA.setAttribute('height', 80 * u); bA.setAttribute('y', 540 - 80 * u); const h = 80 * u + 16 * v; bB.setAttribute('height', h); bB.setAttribute('y', 540 - h); }, 0, D, lin);
+    lab(p, 'little', 1290, 585, m('little'), { size: 28, fill: SCI, weight: 600 });
+    lab(p, 'all', 800, 750, m('all'), { size: 36, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1300 });
+    lab(p, 'slow', 800, 805, m('slow'), { size: 30, fill: EV.ink });
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    a11Ground(p, 430);
+    const an = a11Woman(p, { x: 330, y: 430, s: .5 }, '#b8862f', '#8f6620');
+    evBreathe(an, D); evMood(an, 'worried', .4);
+    const fr = G(p, { x: 820, y: 260 });
+    mk('rect', { x: -150, y: -110, width: 300, height: 220, rx: 6, fill: '#10171b', stroke: EV.gold, 'stroke-width': 4 }, fr);
+    a11Icon(fr, -50, 70, EV.dim, 1.6); a11Icon(fr, 50, 70, EV.dim, 1.6);
+    evDNA(p, { x: 1260, y: 260, w: 280, amp: 34, turns: 3, color: SCI });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-genes', prompt: [L('q2p')],
+    build: choice([[L('q2a')], [L('q2b')], [L('q2c')]], 1, L('q2y'), [L('q2na'), null, L('q2nc')]),
+  }], done) }],
+
+  ['small', 'b_small', (m, D) => {
+    const p = panel(0);
+    lab(p, 'tiny', 800, 95, m('tiny'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    // stars come out as the self shrinks
+    let sd = '';
+    for (let i = 0; i < 60; i++) { const x = 80 + ((i * 263) % 1440), y = 150 + ((i * 151) % 600); sd += `M${x - 2} ${y}a2 2 0 1 0 4 0a2 2 0 1 0 -4 0`; }
+    const stars = path(p, sd, { fill: EV.ink });
+    put(stars, { o: 0 });
+    // the giant self and the world it wants to bend
+    const me = a11Icon(p, 600, 800, EV.dim, 5);
+    const gl = evGlow(p, 600, 600, 260, 'Gold', 0);
+    p.insertBefore(gl, me);
+    const globe = G(p, { x: 1060, y: 520, o: 0 });
+    const disc = mk('ellipse', { cx: 0, cy: 0, rx: 110, ry: 110, fill: '#14303a', stroke: TIME, 'stroke-width': 3 }, globe);
+    const mer = mk('ellipse', { cx: 0, cy: 0, rx: 50, ry: 110, fill: 'none', stroke: TIME, 'stroke-width': 2, opacity: .6 }, globe);
+    path(globe, 'M-110 0H110M-96 -54H96M-96 54H96', { stroke: TIME, 'stroke-width': 2, opacity: .6 });
+    show(globe, m('centre'), .5);
+    tw(me._head, { c_fill: EV.goldHi }, m('centre'), .5); tw(me._body, { c_fill: EV.gold }, m('centre'), .5);
+    tw(gl, { o: .8 }, m('centre'), .6);
+    lab(p, 'centre', 600, 330, m('centre'), { size: 34, fill: EV.ink, weight: 600 });
+    const push = G(p, { o: 0 });
+    path(push, 'M760 520H900', { stroke: STATUS, 'stroke-width': 6 }); evHead(push, 904, 520, 0, STATUS, 1.6);
+    show(push, m('bend'), .3);
+    prog(q => { const t = q * D, u = io(evU(t, m('bend'), .8)) * (1 - io(evU(t, m('speck'), .6)));
+      disc.setAttribute('rx', 110 - 36 * u); mer.setAttribute('rx', 50 - 20 * u);
+      const k = io(evU(t, m('speck'), 1.6));
+      put(me, { s: 5 - 4.7 * k, x: 600 + 200 * k, y: 800 - 230 * k }); put(gl, { x: 600 + 200 * k, y: 600 - 40 * k, s: 1 - .8 * k });
+      put(stars, { o: .7 * k }); }, 0, D, lin);
+    const bl_ = lab(p, 'bend', 1060, 700, m('bend'), { size: 32, fill: STATUS, weight: 600 });
+    hide(bl_, m('speck'), .5);
+    tw(globe, { o: 0 }, m('speck'), .6); tw(push, { o: 0 }, m('speck'), .4);
+    lab(p, 'speck', 800, 650, m('speck'), { size: 34, font: SERIF, italic: true, fill: EV.goldHi });
+    // the beach: a castle, the tide, a child in a puddle, a firefly
+    const q = panel(m('castle'));
+    put(q, { o: 0 }); show(q, m('castle'), .4);
+    let sk = '';
+    for (let i = 0; i < 40; i++) { const x = 60 + ((i * 331) % 1480), y = 260 + ((i * 97) % 260); sk += `M${x - 2} ${y}a2 2 0 1 0 4 0a2 2 0 1 0 -4 0`; }
+    path(q, sk, { fill: EV.ink, opacity: .5 });
+    mk('rect', { x: -10, y: 560, width: 1620, height: 90, fill: '#0b1a22' }, q);
+    mk('rect', { x: -10, y: 640, width: 1620, height: 270, fill: '#2a2418' }, q);
+    const cs = a11Castle(q, { x: 380, y: 760 });
+    lab(q, 'castle', 380, 820, m('castle'), { size: 28, weight: 600 });
+    const wave = path(q, '', { fill: '#1d4a5a', opacity: .9 });
+    prog(qq => { const t = qq * D, u = evU(t, m('tide'), 1.6), a = Math.sin(u * Math.PI), y = 640 + 150 * a;
+      wave.setAttribute('d', u > 0 && u < 1 ? `M-10 640H700Q640 ${y} 520 ${y}Q400 ${y + 20} 200 ${y}Q80 ${y - 10} -10 ${y}Z` : '');
+      put(cs, { s: 1 - .75 * io(evU(t, m('tide') + .5, .9)) }); }, 0, D, lin);
+    lab(q, 'tide', 380, 520, m('tide'), { size: 30, fill: TIME, weight: 600 });
+    // a child in a monsoon puddle
+    mk('ellipse', { cx: 1000, cy: 764, rx: 130, ry: 22, fill: '#1c3440', stroke: TIME, 'stroke-width': 2 }, q);
+    const kid = evPerson(q, { kind: 'f', x: 1000, y: 764, s: .36 });
+    evBreathe(kid, D, 1.5, 1.2);
+    evArm(kid, -1, 120, 20, m('child'), .4); evArm(kid, 1, -120, -20, m('child'), .4);
+    evMood(kid, 'smile', m('child'));
+    const rip = [0, 1, 2].map(() => mk('ellipse', { cx: 1000, cy: 764, rx: 10, ry: 3, fill: 'none', stroke: TIME, 'stroke-width': 2 }, q));
+    prog(qq => { const t = qq * D; rip.forEach((r, i) => { const v = t - m('child') - i * .5; if (v < 0) { put(r, { o: 0 }); return; } const u = (v % 1.5) / 1.5; r.setAttribute('rx', 30 + 120 * u); r.setAttribute('ry', 6 + 18 * u); put(r, { o: 1 - u }); }); }, 0, D, lin);
+    lab(q, 'child', 1000, 830, m('child'), { size: 26, fill: EV.ink, maxW: 520 });
+    const ff = G(q, { x: 1360, y: 300 });
+    const ffg = evGlow(ff, 0, 0, 60, 'Warm', 0);
+    const ffd = evDot(ff, 0, 0, 7, '#f6e58d', 0);
+    prog(qq => { const t = qq * D, v = t - m('firefly'), b = v < 0 ? 0 : Math.max(0, Math.sin(Math.min(1, v / 1.2) * Math.PI)); put(ffg, { o: b }); put(ffd, { o: v < 0 ? 0 : .35 + .65 * b }); put(ff, { x: 1360 + 20 * Math.max(0, Math.min(v, 3)) }); }, 0, D, lin);
+    lab(q, 'firefly', 1380, 380, m('firefly'), { size: 26, fill: EV.goldHi });
+    lab(q, 'job', 800, 110, m('job'), { size: 38, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1200 });
+    const w1 = a11Pill(q, 'wont', 560, 200, { size: 28, color: TIME, ink: EV.ink, minW: 260 });
+    put(w1, { y: 220 }); tw(w1, { o: 1, y: 200 }, m('wont'), .45, out);
+    const w2 = a11Pill(q, 'you', 1060, 200, { size: 30, color: WEALTH, minW: 220 });
+    put(w2, { y: 220 }); tw(w2, { o: 1, y: 200 }, m('you'), .45, out);
+  }],
+
+  ['check2', 'b_check2', (m, D) => {
+    const p = panel(0);
+    a11Sci(m, D);
+    // pinged through the day
+    const ph = a11Phone(p, { x: 270, y: 290, s: .62 });
+    const rings = [0, 1, 2].map(() => mk('circle', { cx: 270, cy: 290, r: 60, fill: 'none', stroke: SCI, 'stroke-width': 2.5 }, p));
+    prog(q => { const t = q * D; rings.forEach((r, i) => { const v = t - m('pinged') - i * .35; if (v < 0 || v > 3) { put(r, { o: 0 }); return; } const u = (v % 1) ; r.setAttribute('r', 70 + 50 * u); put(r, { o: (1 - u) * .8 }); }); }, 0, D, lin);
+    void ph;
+    lab(p, 'pinged', 300, 445, m('pinged'), { size: 26, fill: EV.ink, maxW: 380 });
+    lab(p, 'people2', 300, 490, m('people'), { size: 26, fill: EV.dim });
+    // the share of moments spent wandering
+    mk('circle', { cx: 680, cy: 290, r: 105, fill: '#151d21', stroke: EV.faint, 'stroke-width': 2 }, p);
+    const pie = path(p, '', { fill: SCI });
+    prog(q => { const t = q * D, u = .469 * io(evU(t, m('half'), .8)); if (u <= 0) { pie.setAttribute('d', ''); return; }
+      const a = u * Math.PI * 2, x = 680 + 105 * Math.sin(a), y = 290 - 105 * Math.cos(a);
+      pie.setAttribute('d', `M680 290V185A105 105 0 ${u > .5 ? 1 : 0} 1 ${x.toFixed(1)} ${y.toFixed(1)}Z`); }, 0, D, lin);
+    lab(p, 'wandered', 680, 445, m('wandered'), { size: 26, fill: EV.ink });
+    lab(p, 'half', 680, 490, m('half'), { size: 26, fill: SCI, weight: 600 });
+    const f1 = a11Face(p, 930, 250, 'smile', EV.goldHi), f2 = a11Face(p, 930, 350, 'flat', SCI);
+    put(f1, { o: 0 }); put(f2, { o: 0 });
+    show(f1, m('less'), .4); show(f2, m('less'), .4);
+    lab(p, 'less', 930, 445, m('less'), { size: 24, fill: EV.ink, maxW: 260 });
+    // a light dumbbell, then a loaded barbell
+    lab(p, 'little2', 1300, 160, m('little'), { size: 28, italic: true, font: SERIF, fill: EV.ink, maxW: 420 });
+    const db = a11Dumbbell(p, { x: 1200, y: 330, s: 1.1, o: 0 });
+    show(db, m('light'), .4);
+    lab(p, 'light', 1200, 445, m('light'), { size: 22, fill: EV.dim, maxW: 180 });
+    const ic = a11Icon(p, 1400, 420, EV.dim, 1.4);
+    const bar = a11Barbell(p, { x: 1400, y: 180, s: .5, o: 0 });
+    prog(q => { const t = q * D, v = t - m('barbell'); if (v < 0) { put(bar, { o: 0 }); return; }
+      const u = Math.min(1, v / .5), bounce = v > .5 ? 8 * Math.exp(-(v - .5) * 6) * Math.abs(Math.sin((v - .5) * 14)) : 0;
+      put(bar, { o: 1, y: 180 + 150 * u * u - bounce }); }, 0, D, lin);
+    tw(ic._head, { c_fill: STATUS }, m('barbell') + .5, .2); tw(ic._body, { c_fill: STATUS }, m('barbell') + .5, .2);
+    lab(p, 'barbell', 1400, 480, m('barbell'), { size: 22, fill: STATUS, maxW: 230 });
+    // forty-seven trials: modest drops, no better than exercise
+    path(p, 'M120 540H1480', { stroke: EV.faint, 'stroke-width': 1.5 });
+    lab(p, 'trials2', 260, 650, m('trials'), { size: 30, weight: 600 });
+    const rows = [['anxiety', 610], ['depression', 680]];
+    const bars = rows.map(([k, y]) => {
+      lab(p, k, 600, y + 9, m(k), { size: 24, fill: EV.ink, anchor: 'end', maxW: 200 });
+      const a = mk('rect', { x: 620, y: y - 16, width: 0, height: 30, rx: 5, fill: EV.faint }, p);
+      const b = mk('rect', { x: 620, y: y - 16, width: 0, height: 30, rx: 5, fill: SCI }, p);
+      return [a, b, k];
+    });
+    prog(q => { const t = q * D; bars.forEach(([a, b, k]) => { const u = io(evU(t, m(k), .5)), v = io(evU(t, m(k) + .4, .6)); a.setAttribute('width', 300 * u); b.setAttribute('width', 300 * u - 60 * v); }); }, 0, D, lin);
+    lab(p, 'better', 1220, 655, m('better'), { size: 28, fill: EV.ink, weight: 600, maxW: 480 });
+    a11Stamp(p, 'real', 800, 775, m('real'));
+  }],
+
+  ['habits', 'b_habits', (m, D) => {
+    const p = panel(0);
+    const gl = evGlow(p, 800, 90, 220, 'Gold', 0);
+    tw(gl, { o: .6 }, m('peace'), .8);
+    lab(p, 'peace', 800, 110, m('peace'), { size: 54, font: SERIF, weight: 600, fill: EV.gold });
+    lab(p, 'accept', 560, 180, m('accept'), { size: 30, fill: MONEY, weight: 600, maxW: 460 });
+    const rr = lab(p, 'rearr', 1060, 180, m('rearr'), { size: 30, fill: EV.dim, maxW: 460 });
+    void rr;
+    const rw = Math.min(460, evW(L('rearr'), ML ? 30 * .88 : 30));
+    draw(path(p, `M${1060 - rw / 2 - 6} 170H${1060 + rw / 2 + 6}`, { stroke: STATUS, 'stroke-width': 3 }, { d: 0 }), m('rearr') + .3, .4);
+    lab(p, 'control', 800, 250, m('control'), { size: 28, fill: EV.ink, italic: true, font: SERIF, maxW: 1100 });
+    // Naval's list, one tile per item
+    const items = [['identity', 290, 370], ['quiet', 630, 370], ['politics', 970, 370], ['unhappy', 1310, 370], ['happyP', 460, 480], ['philo', 800, 480], ['meditate', 1140, 480]];
+    const mk_ = { happyP: 'happy' };
+    items.forEach(([k, x, y]) => {
+      const avoid = k === 'politics' || k === 'unhappy';
+      const g = a11Pill(p, k, x, y, { size: 24, color: avoid ? STATUS : WEALTH, ink: EV.ink, minW: 220, maxPill: 320 });
+      put(g, { y: y + 20 }); tw(g, { o: 1, y }, m(mk_[k] || k), .4, out);
+    });
+    // Faisal's own version in Dubai
+    const q = panel(m('walk'));
+    put(q, { o: 0 }); show(q, m('walk'), .4);
+    a11Ground(q, 760);
+    const fz = a11Faisal(q, { x: 260, y: 760, s: .72 });
+    evBreathe(fz, D);
+    evMood(fz, 'smile', m('baseline'));
+    const ic = [];
+    const w = G(q, { x: 520, y: 300, o: 0 });
+    path(w, 'M-40 14Q-20 0 0 14Q20 28 40 14', { stroke: TIME, 'stroke-width': 4 });
+    [[-22, -14], [4, -24], [26, -12]].forEach(([x, y]) => mk('ellipse', { cx: x, cy: y, rx: 6, ry: 10, fill: EV.goldHi }, w));
+    ic.push([w, 'walk']);
+    const c = a11Phone(q, { x: 520, y: 430, s: .3, o: 0 }); ic.push([c, 'call']);
+    const mt = G(q, { x: 520, y: 560, o: 0 });
+    mk('rect', { x: -40, y: -28, width: 80, height: 52, rx: 12, fill: '#151d21', stroke: EV.dim, 'stroke-width': 3 }, mt);
+    path(mt, 'M-44 30L44 -34', { stroke: STATUS, 'stroke-width': 4 });
+    ic.push([mt, 'mute']);
+    ic.forEach(([g, k]) => show(g, m(k), .4));
+    lab(q, 'walk', 590, 310, m('walk'), { size: 28, fill: EV.ink, anchor: 'start', maxW: 380 });
+    lab(q, 'call', 590, 440, m('call'), { size: 28, fill: EV.ink, anchor: 'start', maxW: 380 });
+    lab(q, 'mute', 590, 570, m('mute'), { size: 28, fill: EV.ink, anchor: 'start', maxW: 380 });
+    // the baseline creeps up, week by week
+    const OX = 1040, OY = 680, W = 440, H = 340;
+    path(q, `M${OX} ${OY - H}V${OY}H${OX + W}`, { stroke: EV.dim, 'stroke-width': 3 });
+    for (let i = 1; i <= 8; i++) path(q, `M${OX + i * W / 8} ${OY - 6}V${OY + 6}`, { stroke: EV.dim, 'stroke-width': 2 });
+    const cv = path(q, '', { stroke: WEALTH, 'stroke-width': 5 });
+    const val = u => .2 + .45 * u + .05 * Math.sin(u * 23);
+    prog(qq => { const t = qq * D, u = evU(t, m('walk') + .3, Math.max(1, D - m('walk') - 1)); if (u <= 0) { cv.setAttribute('d', ''); return; }
+      let d = ''; for (let i = 0; i <= 50; i++) { const v = u * i / 50; d += (i ? 'L' : 'M') + (OX + W * v).toFixed(1) + ' ' + (OY - H * val(v)).toFixed(1); } cv.setAttribute('d', d); }, 0, D, lin);
+    lab(q, 'baseline', OX + W / 2, OY + 60, m('baseline'), { size: 30, fill: WEALTH, weight: 600, maxW: 560 });
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    a11Ground(p, 430);
+    const fz = a11Faisal(p, { x: 330, y: 430, s: .5 });
+    evBreathe(fz, D); evMood(fz, 'ask', .4);
+    const cal = G(p, { x: 900, y: 250 });
+    mk('rect', { x: -170, y: -130, width: 340, height: 260, rx: 10, fill: '#10171b', stroke: EV.gold, 'stroke-width': 3 }, cal);
+    for (let r = 0; r < 4; r++) for (let c = 0; c < 7; c++) { const x = -150 + c * 44, y = -90 + r * 52; mk('rect', { x, y, width: 36, height: 40, rx: 4, fill: '#151d21' }, cal); if (r * 7 + c < 20) path(cal, `M${x + 8} ${y + 20}L${x + 15} ${y + 28}L${x + 29} ${y + 12}`, { stroke: MONEY, 'stroke-width': 3 }); }
+    a11Dumbbell(p, { x: 1260, y: 260, s: 1.6 });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-baseline', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 2, L('q3y'), [L('q3na'), L('q3nb'), null]),
+  }], done) }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    evText(p, L('b_wrap'), { x: 800, y: 130, size: 52, font: SERIF, weight: 600, fill: EV.gold });
+    const cols = [WEALTH, EV.goldHi, TIME, SCI];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -30, y: 260 + i * 150, o: 0 });
+      mk('circle', { cx: 200, cy: -10, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: 200, y: 1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 260, y: 0, size: 36, maxW: 1150, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Rasheed, a bank officer in Doha, finally gets the promotion he wanted. A week later he is restless again: now he “needs” a bigger flat. By Naval’s definition, why isn’t he happy?',
+  q1a: 'The promotion was too small to count.',
+  q1b: 'A new feeling that something is missing has replaced the old one.',
+  q1c: 'He hasn’t had enough positive thoughts yet.',
+  q1y: 'Right. For Naval, happiness is what’s there when nothing feels missing. Each new want starts the mind running again.',
+  q1na: 'A bigger promotion would bring the next want just as fast. The size of the win isn’t the problem.',
+  q1nc: 'Naval says happiness isn’t about piling up positive thoughts. It’s about fewer wants.',
+  q2p: 'Anjali in Thrissur says: “My parents were always gloomy, so I’m stuck being gloomy.” What does the evidence suggest?',
+  q2a: 'She’s right: genes fix happiness for life.',
+  q2b: 'Genes are linked to about a third of the differences between people; life and practice still move it.',
+  q2c: 'Genes have nothing to do with happiness.',
+  q2y: 'Right. Twin studies put genes at roughly a third of the differences. A tendency, not a sentence.',
+  q2na: 'Twin studies say about a third, not all of it. Life events and habits still shift well-being.',
+  q2nc: 'That goes too far the other way: genes are linked to roughly a third of the differences.',
+  q3p: 'Faisal wants a higher happiness baseline. Which plan fits this chapter best?',
+  q3a: 'Buy the new phone he wants; the lift will last.',
+  q3b: 'Wait until his rent, job and family are all perfect.',
+  q3c: 'Keep a few small daily practices for months, like a gym routine.',
+  q3y: 'Right. Naval’s baseline rose slowly, the way fitness does: small habits, kept up.',
+  q3na: 'A purchase fills one “missing” feeling, then the next want arrives. The lift fades.',
+  q3nb: 'Waiting for a perfect outside world puts happiness off forever. Peace comes mostly from acceptance.',
+  p1p: 'In Naval’s current view, what is happiness?',
+  p1a: 'A steady stream of positive thoughts.',
+  p1b: 'Getting each thing you want, one by one.',
+  p1c: 'What remains when the feeling that something is missing fades.',
+  p1y: 'Yes. He calls it a default state: when nothing feels missing, the mind goes quiet.',
+  p1na: 'Naval says every positive thought hides its opposite. Piling them up isn’t the point.',
+  p1nb: 'Each want that is met makes room for the next one, and the mind keeps running.',
+  p2p: 'Rain falls on a wedding in Kochi. The bride’s aunt calls the day ruined; a farmer in Palakkad calls it a blessing. What does this show, in Naval’s terms?',
+  p2a: 'The event is neutral; the meaning comes from how each mind reads it.',
+  p2b: 'Rain is simply bad luck for weddings.',
+  p2c: 'Farmers are happier people.',
+  p2y: 'Right. Reality is neutral. The reading is where choice, and practice, come in.',
+  p2nb: 'That is one reading. For the farmer, the very same rain is good news.',
+  p2nc: 'It isn’t about who is happier in general. Both see the same rain and read it differently.',
+  p3p: 'Why does Naval say seeing yourself as small helps?',
+  p3a: 'You stop caring about anything at all.',
+  p3b: 'You stop expecting the whole world to bend to your wishes.',
+  p3c: 'Small people have fewer problems.',
+  p3y: 'Yes. With no script for how life must go, there is less to be unhappy about. Like a child, you can simply be there.',
+  p3na: 'He doesn’t mean careless: every second is precious. You only drop the demand that life obey you.',
+  p3nc: 'It’s not about size or status. It’s about expectations: the world mostly won’t bend.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'Twin studies link genes to roughly a third of the differences in well-being between people.',
+  p4r2: 'Long unemployment or a serious disability never lowers happiness for more than a few weeks.',
+  p4r3: 'In one study, people were less happy while their minds wandered.',
+  p4r4: 'A 2014 review found meditation works far better than exercise or other active treatments.',
+  p4w1: 'True. A 2015 review of about 56,000 people put it near 36%.',
+  p4w2: 'False. Long surveys in Germany and Britain found many people stayed less happy for years.',
+  p4w3: 'True. About 2,250 people were asked through the day; wandering minds went with lower mood, even during dull tasks.',
+  p4w4: 'False. It found modest help for anxiety and depression, and no evidence that it beat other active treatments.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'ദോഹയിലെ ബാങ്ക് ഉദ്യോഗസ്ഥനായ റഷീദിന്, ആഗ്രഹിച്ച പ്രമോഷൻ ഒടുവിൽ കിട്ടുന്നു. ഒരാഴ്ച കഴിഞ്ഞപ്പോൾ വീണ്ടും അസ്വസ്ഥത: ഇപ്പോൾ അവന് ഒരു വലിയ ഫ്ലാറ്റ് “വേണം”. നവലിന്റെ നിർവചനപ്രകാരം, അവൻ എന്തുകൊണ്ട് സന്തോഷവാനല്ല?',
+  q1a: 'പ്രമോഷൻ കണക്കിലെടുക്കാൻ മാത്രം വലുതായിരുന്നില്ല.',
+  q1b: 'എന്തോ കുറവുണ്ട് എന്ന പുതിയൊരു തോന്നൽ പഴയതിന്റെ സ്ഥാനത്ത് വന്നു.',
+  q1c: 'അവന് ഇതുവരെ വേണ്ടത്ര പോസിറ്റീവ് ചിന്തകൾ ഉണ്ടായിട്ടില്ല.',
+  q1y: 'ശരി. നവലിന്, ഒന്നിനും കുറവില്ലെന്ന് തോന്നുമ്പോഴുള്ളതാണ് സന്തോഷം. ഓരോ പുതിയ ആഗ്രഹവും മനസ്സിനെ വീണ്ടും ഓടിക്കുന്നു.',
+  q1na: 'വലിയ പ്രമോഷനും അടുത്ത ആഗ്രഹത്തെ അതേ വേഗത്തിൽ കൊണ്ടുവരും. നേട്ടത്തിന്റെ വലിപ്പമല്ല പ്രശ്നം.',
+  q1nc: 'പോസിറ്റീവ് ചിന്തകൾ കൂട്ടിവയ്ക്കലല്ല സന്തോഷം എന്ന് നവൽ പറയുന്നു. ആഗ്രഹങ്ങൾ കുറയ്ക്കലാണ്.',
+  q2p: 'തൃശ്ശൂരിലെ അഞ്ജലി പറയുന്നു: “എന്റെ മാതാപിതാക്കൾ എപ്പോഴും വിഷാദത്തിലായിരുന്നു, അതുകൊണ്ട് ഞാനും അങ്ങനെതന്നെ ആയിരിക്കും.” തെളിവുകൾ എന്ത് സൂചിപ്പിക്കുന്നു?',
+  q2a: 'അവൾ പറയുന്നത് ശരിയാണ്: ജീനുകൾ ജീവിതകാലം മുഴുവൻ സന്തോഷം നിശ്ചയിക്കുന്നു.',
+  q2b: 'ആളുകൾക്കിടയിലെ വ്യത്യാസങ്ങളുടെ ഏകദേശം മൂന്നിലൊന്ന് ജീനുകളുമായി ബന്ധപ്പെട്ടതാണ്; ജീവിതവും പരിശീലനവും ഇപ്പോഴും അതിനെ മാറ്റുന്നു.',
+  q2c: 'ജീനുകൾക്ക് സന്തോഷവുമായി ഒരു ബന്ധവുമില്ല.',
+  q2y: 'ശരി. ഇരട്ടകളിലെ പഠനങ്ങൾ ജീനുകളെ വ്യത്യാസങ്ങളുടെ ഏകദേശം മൂന്നിലൊന്നിൽ വയ്ക്കുന്നു. ഒരു ചായ്‌വാണ്, വിധിയല്ല.',
+  q2na: 'ഇരട്ടകളിലെ പഠനങ്ങൾ പറയുന്നത് ഏകദേശം മൂന്നിലൊന്ന്, മുഴുവനുമല്ല. ജീവിത സംഭവങ്ങളും ശീലങ്ങളും ഇപ്പോഴും സന്തോഷത്തെ മാറ്റുന്നു.',
+  q2nc: 'അത് മറുവശത്തേക്ക് അതിരുകടക്കലാണ്: വ്യത്യാസങ്ങളുടെ ഏകദേശം മൂന്നിലൊന്ന് ജീനുകളുമായി ബന്ധപ്പെട്ടതാണ്.',
+  q3p: 'ഫൈസലിന് സന്തോഷത്തിന്റെ അടിസ്ഥാന നില ഉയർത്തണം. ഈ അധ്യായത്തിന് ഏറ്റവും ചേരുന്ന പദ്ധതി ഏത്?',
+  q3a: 'ആഗ്രഹിക്കുന്ന പുതിയ ഫോൺ വാങ്ങുക; ആ ഉന്മേഷം നിലനിൽക്കും.',
+  q3b: 'വാടകയും ജോലിയും കുടുംബവും എല്ലാം തികഞ്ഞതാകുന്നതുവരെ കാത്തിരിക്കുക.',
+  q3c: 'ജിമ്മിലെ ഒരു ദിനചര്യ പോലെ, ചെറിയ ചില ദൈനംദിന ശീലങ്ങൾ മാസങ്ങളോളം തുടരുക.',
+  q3y: 'ശരി. ഫിറ്റ്നസ് പോലെ പതുക്കെയാണ് നവലിന്റെ അടിസ്ഥാന നില ഉയർന്നത്: ചെറിയ ശീലങ്ങൾ, മുടങ്ങാതെ.',
+  q3na: 'ഒരു വാങ്ങൽ ഒരു “കുറവ്” നികത്തും, പിന്നെ അടുത്ത ആഗ്രഹം വരും. ആ ഉന്മേഷം മങ്ങിപ്പോകും.',
+  q3nb: 'പുറംലോകം തികഞ്ഞതാകാൻ കാത്തിരുന്നാൽ സന്തോഷം എന്നേക്കും നീളും. സമാധാനം മിക്കവാറും വരുന്നത് സ്വീകരിക്കലിൽ നിന്നാണ്.',
+  p1p: 'നവലിന്റെ ഇപ്പോഴത്തെ കാഴ്ചപ്പാടിൽ, സന്തോഷം എന്താണ്?',
+  p1a: 'പോസിറ്റീവ് ചിന്തകളുടെ ഒരു നിലയ്ക്കാത്ത ഒഴുക്ക്.',
+  p1b: 'ആഗ്രഹിക്കുന്നതെല്ലാം ഒന്നൊന്നായി നേടൽ.',
+  p1c: 'എന്തോ കുറവുണ്ട് എന്ന തോന്നൽ മാഞ്ഞുപോകുമ്പോൾ ബാക്കിയാകുന്നത്.',
+  p1y: 'അതെ. അദ്ദേഹം അതിനെ സ്വാഭാവിക അവസ്ഥ എന്ന് വിളിക്കുന്നു: ഒന്നിനും കുറവില്ലെന്ന് തോന്നുമ്പോൾ മനസ്സ് ശാന്തമാകും.',
+  p1na: 'ഓരോ പോസിറ്റീവ് ചിന്തയിലും അതിന്റെ വിപരീതം ഒളിഞ്ഞിരിക്കുന്നു എന്നാണ് നവൽ പറയുന്നത്. അവ കൂട്ടിവയ്ക്കലല്ല കാര്യം.',
+  p1nb: 'നിറവേറുന്ന ഓരോ ആഗ്രഹവും അടുത്തതിന് ഇടമൊരുക്കും, മനസ്സ് ഓടിക്കൊണ്ടേയിരിക്കും.',
+  p2p: 'കൊച്ചിയിൽ ഒരു കല്യാണത്തിന് മഴ പെയ്യുന്നു. വധുവിന്റെ അമ്മായി ആ ദിവസം നശിച്ചു എന്ന് പറയുന്നു; പാലക്കാട്ടെ ഒരു കർഷകൻ അതിനെ അനുഗ്രഹം എന്ന് വിളിക്കുന്നു. നവലിന്റെ ഭാഷയിൽ ഇത് എന്ത് കാണിക്കുന്നു?',
+  p2a: 'സംഭവം നിഷ്പക്ഷമാണ്; ഓരോ മനസ്സും അത് വായിക്കുന്ന രീതിയിൽ നിന്നാണ് അർഥം.',
+  p2b: 'കല്യാണങ്ങൾക്ക് മഴ ദൗർഭാഗ്യമാണ്.',
+  p2c: 'കർഷകർ കൂടുതൽ സന്തോഷമുള്ളവരാണ്.',
+  p2y: 'ശരി. യാഥാർഥ്യം നിഷ്പക്ഷമാണ്. വായനയിലാണ് തിരഞ്ഞെടുപ്പും പരിശീലനവും വരുന്നത്.',
+  p2nb: 'അത് ഒരു വായന മാത്രമാണ്. കർഷകന്, അതേ മഴ നല്ല വാർത്തയാണ്.',
+  p2nc: 'പൊതുവെ ആരാണ് കൂടുതൽ സന്തോഷമുള്ളവർ എന്നതല്ല കാര്യം. രണ്ടുപേരും ഒരേ മഴ കാണുന്നു, വ്യത്യസ്തമായി വായിക്കുന്നു.',
+  p3p: 'സ്വയം ചെറുതായി കാണുന്നത് സഹായിക്കും എന്ന് നവൽ പറയുന്നത് എന്തുകൊണ്ട്?',
+  p3a: 'ഒന്നിനെക്കുറിച്ചും പിന്നെ ശ്രദ്ധിക്കേണ്ടതില്ല.',
+  p3b: 'ലോകം മുഴുവൻ നിങ്ങളുടെ ആഗ്രഹത്തിനൊത്ത് വളയണം എന്ന പ്രതീക്ഷ മാറുന്നു.',
+  p3c: 'ചെറിയ ആളുകൾക്ക് പ്രശ്നങ്ങൾ കുറവാണ്.',
+  p3y: 'അതെ. ജീവിതം എങ്ങനെ പോകണം എന്ന തിരക്കഥയില്ലെങ്കിൽ, അസന്തോഷത്തിന് കാരണം കുറയും. ഒരു കുട്ടിയെപ്പോലെ, വെറുതെ അവിടെ ആയിരിക്കാം.',
+  p3na: 'അശ്രദ്ധ എന്നല്ല അർഥം: ഓരോ നിമിഷവും വിലപ്പെട്ടതാണ്. ജീവിതം നിങ്ങളെ അനുസരിക്കണം എന്ന വാശി മാത്രം ഉപേക്ഷിക്കുന്നു.',
+  p3nc: 'വലിപ്പമോ പദവിയോ അല്ല കാര്യം. പ്രതീക്ഷകളാണ്: ലോകം മിക്കവാറും വളയില്ല.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'ആളുകൾക്കിടയിലെ സന്തോഷവ്യത്യാസങ്ങളുടെ ഏകദേശം മൂന്നിലൊന്ന് ജീനുകളുമായി ബന്ധപ്പെട്ടതാണെന്ന് ഇരട്ടകളിലെ പഠനങ്ങൾ കാണിക്കുന്നു.',
+  p4r2: 'ദീർഘകാല തൊഴിലില്ലായ്മയോ ഗുരുതരമായ വൈകല്യമോ ഏതാനും ആഴ്ചയിൽ കൂടുതൽ സന്തോഷം കുറയ്ക്കില്ല.',
+  p4r3: 'ഒരു പഠനത്തിൽ, മനസ്സ് അലയുമ്പോൾ ആളുകൾക്ക് സന്തോഷം കുറവായിരുന്നു.',
+  p4r4: 'വ്യായാമത്തേക്കാളും മറ്റ് സജീവ ചികിത്സകളേക്കാളും ധ്യാനം വളരെ മെച്ചമാണെന്ന് 2014-ലെ ഒരു അവലോകനം കണ്ടെത്തി.',
+  p4w1: 'ശരി. ഏകദേശം 56,000 പേരെ ഉൾക്കൊള്ളിച്ച 2015-ലെ ഒരു അവലോകനം അത് ഏകദേശം 36% ആയി കണക്കാക്കി.',
+  p4w2: 'തെറ്റ്. ജർമനിയിലെയും ബ്രിട്ടനിലെയും ദീർഘ സർവേകളിൽ, പലരും വർഷങ്ങളോളം സന്തോഷം കുറഞ്ഞവരായി തുടർന്നു.',
+  p4w3: 'ശരി. ഏകദേശം 2,250 പേരോട് ദിവസം മുഴുവൻ ചോദിച്ചു; അലയുന്ന മനസ്സിനൊപ്പം സന്തോഷം കുറവായിരുന്നു, മടുപ്പുള്ള ജോലികളിൽ പോലും.',
+  p4w4: 'തെറ്റ്. ഉത്കണ്ഠയ്ക്കും വിഷാദത്തിനും മിതമായ സഹായം കണ്ടു; മറ്റ് സജീവ ചികിത്സകളേക്കാൾ മെച്ചമാണെന്നതിന് തെളിവ് കണ്ടില്ല.',
+});
+const PRACTICE = [
+  { id: 'p-default', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 2, L('p1y'), [L('p1na'), L('p1nb'), null]) },
+  { id: 'p-neutral', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 0, L('p2y'), [null, L('p2nb'), L('p2nc')]) },
+  { id: 'p-small', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 1, L('p3y'), [L('p3na'), null, L('p3nc')]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['t'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['f'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('almanack:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>

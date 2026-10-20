@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Learn to love reading · The Almanack of Naval Ravikant, Chapter 10">
+<meta property="og:description" content="A 9-minute animated lesson in English and Malayalam: why a love of reading beats any reading list, how to read many books and finish few, and how to build a base no book can shake.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/ch10/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<title>Learn to love reading · The Almanack of Naval Ravikant</title>
+<meta name="description" content="An animated, narrated lesson on The Almanack of Naval Ravikant: the love of reading, the daily habit, skimming and dropping books, rereading and teaching, a solid foundation, originals first, old problems and old books, with two science checks. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'വായനയെ സ്നേഹിക്കാൻ പഠിക്കൂ · The Almanack of Naval Ravikant';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/ymu.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/almanack/ch10/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Learn to love reading', kicker: 'PART 1 · WEALTH · CHAPTER 10', sub: 'Why a love of reading beats any reading list, and how to build a base no book can shake',
+  credit: 'A study companion to The Almanack of Naval Ravikant, by Eric Jorgenson',
+  b_intro: 'Title', b_alex: 'A pocket Alexandria', b_love: 'Enjoy first', b_habit: 'The daily habit', b_check: 'Science check', b_q1: 'Quick check',
+  b_stuck: 'Stuck on page 212', b_keep: 'Reread, then teach', b_q2: 'Quick check', b_found: 'Your foundation', b_origin: 'Go to the source',
+  b_old: 'Old problems, old books', b_check2: 'Science check', b_q3: 'Quick check', b_bridge: 'End of Part 1', b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  love: 'love of reading: a superpower', library: 'Library of Alexandria · Egypt', brk: 'a 10-minute break · Dubai',
+  means: 'the means to learn: everywhere', want: 'the wish to learn: rare',
+  home: 'grandparents’ home · India', magazines: 'old magazines', comics: 'comics, storybooks', nobody: 'nobody chose for him',
+  junk: 'junk food for the mind', enjoy: 'enjoy first → the love follows', adil: 'Adil · Kozhikode', football: 'football stories',
+  bio: 'biographies', science: 'science',
+  hours: '1–2 hours a day', habit: 'the habit > the book list', workout: 'the best workout?', cricket: 'cricket with friends · Al Qusais',
+  plan: 'a perfect gym plan, never used', books: 'read the ones you can’t wait to open', race: 'not a race', slower: 'great book → read it slowly',
+  sci: 'Science check', claim: '“1–2 hours a day → the top 1 in 10 million”', most: '“most people: a minute a day”',
+  survey: 'American Time Use Survey · 2023', given: 'on a given day', c16: '16 in 100', c16b: '· read for pleasure', c8: '8 · an hour or more',
+  twelve: '≈ 1 in 12', nothing: '84 · read nothing that day', ten: '1 in 10 million?', one: 'one life ≠ proof', verdict: 'a rare habit, not 1 in 10 million',
+  two: 'two habits, pulling apart', short: 'short attention', finish: 'finish every book', quit: 'quit books altogether',
+  post: 'a book = a post you can drop', many: '10–20', skip: 'skip the dull parts', middle: 'start in the middle', out: 'out it goes',
+  vanity: 'counting books = vanity', point: 'one point + examples', gist: 'got the gist? close it',
+  reread: 'read again and again', hundred: '100 great books, deeply', you: 'the great ones for you', before: 'read it before? good',
+  explain: 'explain it to someone', save: '“Save first, then spend.”', teach: 'teach it → remember it better',
+  wellread: 'well-read ≠ wise', wrong: 'weak books, jumbled order', forwards: 'WhatsApp forwards', judges: 'judges new ideas by it',
+  tilts: 'a shaky base tilts it all', maths: 'maths · 2 + 2 = 4', hard: 'hard sciences', econ: 'basic economics',
+  logic: 'logic + maths → no book scares you',
+  source: 'go to the source', darwin: 'Darwin, 1859', smith: 'Adam Smith, 1776', retell: 'each retelling adds spin',
+  originals: 'originals first', machine: 'a learning machine', out2: 'never out of ways to earn',
+  older: 'old problem → old answer', drive: 'drive', code: 'code', recent: 'recent books', calm: 'calm', body: 'body',
+  values: 'values', family: 'family', survived: 'still read after 2,000 years', filtered: 'sifted by millions of readers',
+  old2: 'old ≠ always better', blood: 'bloodletting', three: '~3,000 years', egypt: 'Egypt', late: 'late 1800s', wrong2: 'mostly wrong',
+  count: 'counting who recovered', vaccines: 'vaccines', anti: 'antibiotics', walk: 'a daily walk', sleep: 'good sleep',
+  verdict2: 'a good place to look, not proof', test: 'test it',
+  thoughts: 'thoughts loop too', careful: 'careful what you read', part1: 'PART 1 · WEALTH', peace: 'peace of mind', strong: 'a strong body',
+  love2: 'love at home', sells: 'no shop sells them', earn: 'you earn them, day by day', part2: 'PART 2 · HAPPINESS',
+  w1: 'A love of reading is the superpower. Start with what you enjoy; the habit matters more than the list.',
+  w2: 'Read many, finish few, and reread the best. Drop a book once you have its point, and teach what you learn.',
+  w3: 'Build a solid base: maths, science, basic economics, and the originals before the retellings.',
+  w4: 'Old problems, old books. But test old health advice like anything else.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'വായനയെ സ്നേഹിക്കാൻ പഠിക്കൂ', kicker: 'ഭാഗം 1 · സമ്പത്ത് · അധ്യായം 10',
+  sub: 'ഏത് വായനപ്പട്ടികയെക്കാളും വലുത് വായനയോടുള്ള ഇഷ്ടം; ഒരു പുസ്തകവും ഇളക്കാത്ത അടിത്തറയും',
+  credit: 'The Almanack of Naval Ravikant · എറിക് ജോർഗൻസൻ · പഠനസഹായി',
+  b_intro: 'തലക്കെട്ട്', b_alex: 'പോക്കറ്റിലെ അലക്സാണ്ട്രിയ', b_love: 'ആദ്യം ഇഷ്ടം', b_habit: 'ദിവസേനയുള്ള ശീലം', b_check: 'ശാസ്ത്രീയ പരിശോധന', b_q1: 'ചെറിയ പരിശോധന',
+  b_stuck: 'പേജ് 212-ൽ കുടുങ്ങി', b_keep: 'വീണ്ടും വായിക്കൂ, പഠിപ്പിക്കൂ', b_q2: 'ചെറിയ പരിശോധന', b_found: 'നിങ്ങളുടെ അടിത്തറ', b_origin: 'ഉറവിടത്തിലേക്ക്',
+  b_old: 'പഴയ പ്രശ്നം, പഴയ പുസ്തകം', b_check2: 'ശാസ്ത്രീയ പരിശോധന', b_q3: 'ചെറിയ പരിശോധന', b_bridge: 'ഒന്നാം ഭാഗം തീരുന്നു', b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  love: 'വായനയോടുള്ള സ്നേഹം: സൂപ്പർപവർ', library: 'അലക്സാണ്ട്രിയ ഗ്രന്ഥശാല · ഈജിപ്ത്', brk: 'ദുബായ് · 10 മിനിറ്റ് ഇടവേള',
+  means: 'പഠിക്കാനുള്ള വഴികൾ: എല്ലായിടത്തും', want: 'പഠിക്കാനുള്ള ആഗ്രഹം: അപൂർവം',
+  home: 'മുത്തച്ഛന്റെ വീട് · ഇന്ത്യ', magazines: 'പഴയ മാസികകൾ', comics: 'കോമിക്സ്, കഥപ്പുസ്തകങ്ങൾ', nobody: 'ആരും നിർബന്ധിച്ചില്ല',
+  junk: 'മനസ്സിനുള്ള ജങ്ക് ഫുഡ്', enjoy: 'ആദ്യം ഇഷ്ടം → പിന്നെ സ്നേഹം', adil: 'ആദിൽ · കോഴിക്കോട്', football: 'ഫുട്ബോൾ കഥകൾ',
+  bio: 'ജീവചരിത്രങ്ങൾ', science: 'ശാസ്ത്രം',
+  hours: '1–2 മണിക്കൂർ · ദിവസവും', habit: 'ശീലം > പുസ്തകപ്പട്ടിക', workout: 'ഏറ്റവും നല്ല വ്യായാമം?', cricket: 'ക്രിക്കറ്റ്, കൂട്ടുകാരുമൊത്ത് · അൽ ഖുസൈസ്',
+  plan: 'ഗംഭീര ജിം പ്ലാൻ, ഉപയോഗമില്ല', books: 'തുറക്കാൻ കൊതിക്കുന്നവ വായിക്കൂ', race: 'മത്സരയോട്ടമല്ല', slower: 'നല്ല പുസ്തകം → പതുക്കെ',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', claim: '“ദിവസം 1–2 മണിക്കൂർ → കോടിയിൽ ഒരാൾ”', most: '“മിക്കവരും: ദിവസം ഒരു മിനിറ്റ്”',
+  survey: 'അമേരിക്കൻ ടൈം യൂസ് സർവേ · 2023', given: 'ഏതെങ്കിലും ഒരു ദിവസം', c16: '100-ൽ 16', c16b: '· ഇഷ്ടത്തിന് വായിച്ചു', c8: '8 · ഒരു മണിക്കൂറോ അതിലേറെയോ',
+  twelve: '≈ 12-ൽ ഒരാൾ', nothing: '84 · ഒന്നും വായിച്ചില്ല', ten: 'കോടിയിൽ ഒരാൾ?', one: 'ഒരാളുടെ ജീവിതം ≠ തെളിവ്', verdict: 'അപൂർവ ശീലം, കോടിയിൽ ഒന്നല്ല',
+  two: 'രണ്ട് ശീലങ്ങൾ, രണ്ട് വഴിക്ക്', short: 'ശ്രദ്ധ കുറഞ്ഞു', finish: 'എല്ലാ പുസ്തകവും മുഴുവൻ', quit: 'പുസ്തകവായന നിർത്തി',
+  post: 'പുസ്തകം = വിട്ടുകളയാവുന്ന പോസ്റ്റ്', many: '10–20', skip: 'മുഷിപ്പുള്ളത് ചാടിക്കടക്കും', middle: 'നടുവിൽ നിന്ന് തുടങ്ങും', out: 'പുറത്ത്',
+  vanity: 'തീർത്തവയുടെ എണ്ണം = പൊങ്ങച്ചം', point: 'ഒരു കാര്യം + ഉദാഹരണങ്ങൾ', gist: 'സാരം കിട്ടിയോ? അടയ്ക്കൂ',
+  reread: 'വീണ്ടും വീണ്ടും വായിക്കും', hundred: '100 മഹത്തായ പുസ്തകങ്ങൾ, ആഴത്തിൽ', you: 'നിങ്ങൾക്ക് പറ്റിയവ', before: 'മുൻപ് വായിച്ചതോ? നല്ലത്',
+  explain: 'പഠിച്ചത് വിശദീകരിക്കൂ', save: '“ആദ്യം മിച്ചം, ശേഷം ചെലവ്.”', teach: 'പഠിപ്പിച്ചാൽ → നന്നായി ഓർക്കും',
+  wellread: 'ധാരാളം വായന ≠ ബുദ്ധി', wrong: 'തെറ്റായവ, തെറ്റായ ക്രമത്തിൽ', forwards: 'വാട്സാപ്പ് ഫോർവേഡുകൾ', judges: 'പുതിയ ആശയങ്ങൾ അതുവെച്ച് അളക്കും',
+  tilts: 'ഇളകുന്ന അടിത്തറ → എല്ലാം ചരിയും', maths: 'ഗണിതം · 2 + 2 = 4', hard: 'ഫിസിക്സ്, കെമിസ്ട്രി', econ: 'അടിസ്ഥാന സാമ്പത്തികശാസ്ത്രം',
+  logic: 'യുക്തി + ഗണിതം → ഒരു പുസ്തകവും പേടിപ്പിക്കില്ല',
+  source: 'ഉറവിടത്തിലേക്ക്', darwin: 'ഡാർവിൻ, 1859', smith: 'ആഡം സ്മിത്ത്, 1776', retell: 'ഓരോ പുനരാഖ്യാനവും ചായ്‌വ് ചേർക്കും',
+  originals: 'മൂലകൃതികൾ ആദ്യം', machine: 'ഒരു പഠനയന്ത്രം', out2: 'സമ്പാദിക്കാനുള്ള വഴികൾ തീരില്ല',
+  older: 'പഴയ പ്രശ്നം → പഴയ പരിഹാരം', drive: 'ഡ്രൈവിങ്', code: 'കോഡിങ്', recent: 'പുതിയ പുസ്തകങ്ങൾ', calm: 'ശാന്തത', body: 'ശരീരം',
+  values: 'മൂല്യങ്ങൾ', family: 'കുടുംബം', survived: '2,000 വർഷം അതിജീവിച്ചു', filtered: 'ദശലക്ഷം വായനക്കാർ അരിച്ചെടുത്തു',
+  old2: 'പഴയത് ≠ എപ്പോഴും മെച്ചം', blood: 'രക്തം ഒഴുക്കൽ', three: '~3,000 വർഷം', egypt: 'ഈജിപ്ത്', late: '19-ാം നൂറ്റാണ്ടിന്റെ അവസാനം', wrong2: 'മിക്കതിനും തെറ്റ്',
+  count: 'ആര് സുഖപ്പെട്ടു എന്ന് എണ്ണി', vaccines: 'വാക്സിനുകൾ', anti: 'ആന്റിബയോട്ടിക്കുകൾ', walk: 'നടത്തം', sleep: 'നല്ല ഉറക്കം',
+  verdict2: 'പഴയത്: നോക്കാനുള്ള ഇടം, തെളിവല്ല', test: 'പരീക്ഷിക്കൂ',
+  thoughts: 'ചിന്തകളും ചുറ്റിത്തിരിയും', careful: 'ശ്രദ്ധിച്ച് വായിക്കൂ', part1: 'ഭാഗം 1 · സമ്പത്ത്', peace: 'മനസ്സമാധാനം', strong: 'ആരോഗ്യമുള്ള ശരീരം',
+  love2: 'വീട്ടിൽ സ്നേഹം', sells: 'ഒരു കടയിലും കിട്ടില്ല', earn: 'ദിവസം തോറും നേടിയെടുക്കണം', part2: 'ഭാഗം 2 · സന്തോഷം',
+  w1: 'വായനയോടുള്ള സ്നേഹമാണ് സൂപ്പർപവർ. ഇഷ്ടമുള്ളതിൽ തുടങ്ങൂ; പട്ടികയെക്കാൾ പ്രധാനം ശീലമാണ്.',
+  w2: 'പലതും തുടങ്ങൂ, കുറച്ച് തീർക്കൂ, മികച്ചവ വീണ്ടും വായിക്കൂ. സാരം കിട്ടിയാൽ അടയ്ക്കൂ, പഠിച്ചത് പഠിപ്പിക്കൂ.',
+  w3: 'ഉറച്ച അടിത്തറ പണിയൂ: ഗണിതം, ശാസ്ത്രം, അടിസ്ഥാന സാമ്പത്തികശാസ്ത്രം, പുനരാഖ്യാനങ്ങൾക്ക് മുൻപ് മൂലകൃതികൾ.',
+  w4: 'പഴയ പ്രശ്നങ്ങൾക്ക് പഴയ പുസ്തകങ്ങൾ. പക്ഷേ പഴയ ആരോഗ്യോപദേശവും പരീക്ഷിച്ചുനോക്കൂ.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 10, title: L('title'), minutes: LANG === 'ml' ? 11 : 9, language: LANG, next: '../index.html#contents' };
+
+/* ---------- meaning colours (style.json look.meaning) ---------- */
+const WEALTH = EV.gold, MONEY = '#7cc79d', STATUS = '#e2694f', TIME = '#5fb3cf', SCI = '#9c84d8';
+const SPINES = ['#7a3b26', '#2b5f6f', '#6f5a2a', '#3e5a3a', '#5a3a5e', '#8a6a44', '#34506f', '#6f3a3a'];
+
+/* ---------- chapter helpers (prefixed a10 to stay clear of engine globals) ---------- */
+// A label that fades in at t (beat clock, always a mark).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+const a10Ground = (p, y = 760, fill = '#0c1114') => {
+  mk('rect', { x: -10, y, width: 1620, height: 900 - y + 20, fill }, p);
+  path(p, `M0 ${y}H1600`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+};
+const a10Faisal = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#2f5f8f', '#21466b');
+const a10Hiba = (p, o) => { const P = evRecolor(evPerson(p, { kind: 'f', ...o }), '#b8862f', '#8f6620'); evScarf(P, '#3a2f4a'); return P; };
+const a10Sana = (p, o) => evRecolor(evPerson(p, { kind: 'f', ...o }), '#c0607e', '#94465f');
+const a10Shafeeq = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#a8553f', '#7f3e2d');
+const a10Man = (p, o, top = '#5a6470', topD = '#434b55') => evRecolor(evPerson(p, { kind: 'm', ...o }), top, topD);
+function a10Icon(p, x, y, color = EV.dim, s = 1, o = 1) {
+  const g = G(p, { x, y, s, o });
+  g._head = mk('circle', { cx: 0, cy: -46, r: 14, fill: color }, g);
+  g._body = path(g, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: color });
+  return g;
+}
+// A rounded tag with a label, centred on (x, y); Malayalam is measured at full size.
+function a10Pill(p, key, x, y, { color = EV.gold, size = 30, fill = '#151d21', ink = EV.goldHi, minW = 140, o = 0 } = {}) {
+  const g = G(p, { x, y, o });
+  const w = Math.max(minW, evW(L(key), size) + 56);
+  mk('rect', { x: -w / 2, y: -30, width: w, height: 56, rx: 28, fill, stroke: color, 'stroke-width': 2 }, g);
+  evText(g, L(key), { x: 0, y: 8, size, fill: ink, maxW: w - 28 });
+  g._w = w;
+  return g;
+}
+function a10Phone(p, { x = 0, y = 0, s = 1, o = 1, w = 150, h = 280 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 22, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 3 }, g);
+  g._bg = mk('rect', { x: -w / 2 + 10, y: -h / 2 + 26, width: w - 20, height: h - 52, rx: 6, fill: '#142026' }, g);
+  mk('rect', { x: -18, y: -h / 2 + 10, width: 36, height: 6, rx: 3, fill: '#2b3632' }, g);
+  g._scr = G(g);
+  return g;
+}
+const a10Tick = (p, x, y, color = MONEY, s = 1) => put(path(p, 'M-14 0L-4 11L16 -12', { stroke: color, 'stroke-width': 5 }, { d: 0 }), { x, y, s });
+const a10Cross = (p, x, y, color = STATUS, s = 1) => put(path(p, 'M-13 -13L13 13M13 -13L-13 13', { stroke: color, 'stroke-width': 5 }, { d: 0 }), { x, y, s });
+// Science-check frame and tag on #scene, kept across panels inside the beat.
+function a10Sci(m, D) {
+  const keep = G(scene);
+  hide(keep, D - .45, .4);
+  prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+  const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+  draw(fr, m('sci'), 1);
+  const tag = G(keep, { x: 200, y: 60, o: 0 });
+  const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+  mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+  evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+  show(tag, m('sci'), .4);
+}
+// A tilted verdict stamp.
+function a10Stamp(p, key, x, y, t, color = SCI, size = 30) {
+  const g = G(p, { x, y, o: 0, r: -4 });
+  const sw = Math.max(240, evW(L(key), size, SANS, 700) + 56);
+  mk('rect', { x: -sw / 2, y: -32, width: sw, height: 62, rx: 8, fill: 'none', stroke: color, 'stroke-width': 4 }, g);
+  evText(g, L(key), { x: 0, y: 11, size, weight: 700, fill: color, maxW: sw - 30 });
+  put(g, { s: 1.5 }); tw(g, { o: 1, s: 1 }, t, .4, back);
+  return g;
+}
+// An open book, centred on (0,0); g._num is an optional page-number slot.
+function a10Book(p, { x = 0, y = 0, s = 1, o = 1, edge = EV.gold, paper = '#e8e4d8' } = {}) {
+  const g = G(p, { x, y, s, o });
+  g._pg = path(g, 'M0 -60Q-60 -80 -130 -64V64Q-60 48 0 68Q60 48 130 64V-64Q60 -80 0 -60Z', { fill: paper, stroke: edge, 'stroke-width': 3 });
+  path(g, 'M0 -60V68', { stroke: '#8f8a7a', 'stroke-width': 2 });
+  let d = '';
+  for (let i = 0; i < 5; i++) { d += `M-110 ${-36 + i * 20}Q-60 ${-46 + i * 20} -16 ${-38 + i * 20}`; d += `M16 ${-38 + i * 20}Q60 ${-46 + i * 20} 110 ${-36 + i * 20}`; }
+  path(g, d, { stroke: '#8f8a7a', 'stroke-width': 2 });
+  return g;
+}
+// A closed book seen from the side (a spine), base-centre at (0,0).
+function a10Spine(p, x, y, w, h, color, o = 1) {
+  const g = G(p, { x, y, o });
+  mk('rect', { x: -w / 2, y: -h, width: w, height: h, rx: 3, fill: color, stroke: '#080c0f', 'stroke-width': 1.5 }, g);
+  path(g, `M${-w / 2 + 3} ${-h + 12}H${w / 2 - 3}M${-w / 2 + 3} -12H${w / 2 - 3}`, { stroke: EV.goldHi, 'stroke-width': 1.5, opacity: .55 });
+  return g;
+}
+// A book lying flat (a slab), centred on (0,0).
+function a10Slab(p, x, y, w, h, color, o = 1) {
+  const g = G(p, { x, y, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 4, fill: color, stroke: '#080c0f', 'stroke-width': 1.5 }, g);
+  mk('rect', { x: w / 2 - 14, y: -h / 2 + 3, width: 10, height: h - 6, rx: 2, fill: '#e8e4d8', opacity: .75 }, g);
+  return g;
+}
+// The columned front of an ancient library, base at (0,0).
+function a10Library(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -200, y: -20, width: 400, height: 20, fill: '#1b2226', stroke: EV.goldLo, 'stroke-width': 2 }, g);
+  mk('rect', { x: -180, y: -38, width: 360, height: 18, fill: '#1b2226', stroke: EV.goldLo, 'stroke-width': 2 }, g);
+  for (let i = 0; i < 6; i++) mk('rect', { x: -156 + i * 58, y: -218, width: 26, height: 180, fill: '#20292d', stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .6 }, g);
+  for (let i = 0; i < 5; i++) for (let j = 0; j < 4; j++) mk('circle', { cx: -114 + i * 58, cy: -56 - j * 18, r: 7, fill: '#d9c49a', opacity: .8 }, g);
+  mk('rect', { x: -186, y: -240, width: 372, height: 22, fill: '#1b2226', stroke: EV.gold, 'stroke-width': 2 }, g);
+  path(g, 'M-196 -240L0 -318L196 -240Z', { fill: '#151d21', stroke: EV.gold, 'stroke-width': 2.5 });
+  return g;
+}
+// A small school building with a flag, base at (0,0).
+function a10School(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -120, y: -150, width: 240, height: 150, fill: '#1b2226', stroke: '#3a3f3a', 'stroke-width': 3 }, g);
+  path(g, 'M-140 -150L0 -220L140 -150Z', { fill: '#7a3b26', stroke: '#a3543a', 'stroke-width': 3 });
+  for (let i = 0; i < 3; i++) mk('rect', { x: -96 + i * 70, y: -120, width: 44, height: 40, fill: '#0b1720', stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .5 }, g);
+  mk('rect', { x: -22, y: -64, width: 44, height: 64, fill: '#3a2f27' }, g);
+  path(g, 'M0 -220V-280', { stroke: EV.dim, 'stroke-width': 3 });
+  path(g, 'M0 -280L40 -268L0 -256Z', { fill: STATUS });
+  return g;
+}
+// A clock face with two hands (g._h, g._m rotate), centred on (0,0).
+function a10Clock(p, { x = 0, y = 0, r = 60, o = 1, color = TIME } = {}) {
+  const g = G(p, { x, y, o });
+  mk('circle', { cx: 0, cy: 0, r, fill: '#10171b', stroke: color, 'stroke-width': 4 }, g);
+  for (let i = 0; i < 12; i++) { const a = i * Math.PI / 6; path(g, `M${(Math.sin(a) * r * .8).toFixed(1)} ${(-Math.cos(a) * r * .8).toFixed(1)}L${(Math.sin(a) * r * .92).toFixed(1)} ${(-Math.cos(a) * r * .92).toFixed(1)}`, { stroke: color, 'stroke-width': 2.5 }); }
+  g._h = G(g); path(g._h, `M0 6V${-r * .5}`, { stroke: EV.ink, 'stroke-width': 5 });
+  g._m = G(g); path(g._m, `M0 8V${-r * .75}`, { stroke: EV.ink, 'stroke-width': 3 });
+  mk('circle', { cx: 0, cy: 0, r: 5, fill: color }, g);
+  return g;
+}
+const HEART = 'M0 30C-40 2 -52 -26 -28 -38C-12 -46 -2 -36 0 -28C2 -36 12 -46 28 -38C52 -26 40 2 0 30Z';
+const NOTE = 'M-8 0a10 8 -20 1 0 0.1 0ZM2 -3V-48L24 -40V-30L2 -38';
+// A gear with n teeth, centred on (0,0).
+function a10Gear(p, { x = 0, y = 0, r = 50, n = 10, color = WEALTH, o = 1 } = {}) {
+  const g = G(p, { x, y, o });
+  let d = '';
+  for (let i = 0; i < n * 2; i++) { const a = i * Math.PI / n, a2 = (i + 1) * Math.PI / n, R = i % 2 ? r : r + 12;
+    d += (i ? 'L' : 'M') + (Math.cos(a) * R).toFixed(1) + ' ' + (Math.sin(a) * R).toFixed(1) + 'L' + (Math.cos(a2) * R).toFixed(1) + ' ' + (Math.sin(a2) * R).toFixed(1); }
+  path(g, d + 'Z', { fill: '#151d21', stroke: color, 'stroke-width': 3 });
+  mk('circle', { cx: 0, cy: 0, r: r * .35, fill: 'none', stroke: color, 'stroke-width': 3 }, g);
+  return g;
+}
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    evGlow(g, 800, 520, 260, 'Gold', .35);
+    // an open book whose pages keep turning, one clock
+    const bk = a10Book(g, { x: 800, y: 530, s: 1.3 });
+    const flap = path(bk, '', { fill: '#d9d4c6', stroke: EV.gold, 'stroke-width': 2.5 });
+    prog(q => { const t = q * D, u = (t * .32) % 1, k = Math.cos(Math.min(1, u * 1.6) * Math.PI), lift = Math.sin(Math.min(1, u * 1.6) * Math.PI) * 14;
+      flap.setAttribute('d', u * 1.6 >= 1 ? '' : `M0 -60Q${(60 * k).toFixed(1)} ${(-80 - lift).toFixed(1)} ${(130 * k).toFixed(1)} ${(-64 - lift).toFixed(1)}V${(64 - lift).toFixed(1)}Q${(60 * k).toFixed(1)} ${(48 - lift).toFixed(1)} 0 68Z`); }, 0, D, lin);
+    evText(g, L('kicker'), { x: 800, y: 150, size: 26, fill: EV.gold, weight: 500, ls: ML ? undefined : '6' });
+    const ti = evText(g, L('title'), { x: 800, y: 250, size: 84, font: SERIF, weight: 600, maxW: 1420, o: 0 });
+    tw(g, { o: 1 }, .15, .9, out);
+    put(ti, { y: 270 }); tw(ti, { y: 250, o: 1 }, m('title'), .7, out);
+    const sub = evText(scene, L('sub'), { x: 800, y: 765, size: 34, fill: EV.dim, o: 0, maxW: 1380, font: SERIF, italic: true });
+    put(sub, { y: 785 }); tw(sub, { y: 765, o: 1 }, m('sub'), .7, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 835, size: 24, fill: '#7a7466', o: 0, maxW: 1400 });
+    show(cr, m('sub'), 1);
+    tw(g, { o: 0 }, D - .6, .5); hide(sub, D - .6, .5); hide(cr, D - .6, .5);
+  }],
+
+  ['alex', 'b_alex', (m, D) => {
+    const p = panel(0);
+    lab(p, 'love', 800, 95, m('love'), { size: 44, font: SERIF, weight: 600, fill: EV.gold, maxW: 1300 });
+    a10Ground(p, 620);
+    const lib = a10Library(p, { x: 360, y: 620, s: .95, o: 0 });
+    show(lib, .3, .5);
+    const lgl = evGlow(p, 360, 480, 170, 'Gold', 0);
+    p.insertBefore(lgl, lib);
+    tw(lgl, { o: .6 }, m('library'), .6);
+    lab(p, 'library', 360, 675, m('library'), { size: 28, fill: EV.ink, weight: 600, maxW: 560 });
+    // Faisal on his break, phone in hand
+    const fz = a10Faisal(p, { x: 1180, y: 620, s: .55, o: 0 });
+    show(fz.g, m('faisal'), .4);
+    evBreathe(fz, D);
+    evArm(fz, -1, 40, -95, m('pocket'), .5);
+    const ph = a10Phone(p, { x: 1100, y: 470, s: .32, o: 0 });
+    show(ph, m('pocket'), .4);
+    lab(p, 'brk', 1180, 675, m('break'), { size: 28, fill: TIME, maxW: 560 });
+    // books stream out of the library into the phone: one clock from "pocket"
+    const N = 9, flyers = Array.from({ length: N }, (_, i) => a10Spine(p, 0, 0, 22, 34, SPINES[i % SPINES.length], 0));
+    prog(q => { const t = q * D; flyers.forEach((f, i) => { const t0 = m('pocket') + .3 + i * .28, u = evU(t, t0, 1.1), a = 1 - u, e = io(u);
+      const x = a * a * 470 + 2 * a * u * 800 + u * u * 1100, y = a * a * 430 + 2 * a * u * 250 + u * u * 470;
+      put(f, { x, y: y + 17, o: u <= 0 || u >= 1 ? 0 : Math.min(1, u * 6, (1 - u) * 6), s: 1 - .5 * e }); }); }, 0, D, lin);
+    prog(q => { const t = q * D, n = Math.min(N, Math.max(0, Math.floor((t - m('pocket') - .3 - 1.1) / .28) + 1)); ph._bg.setAttribute('fill', n > 0 ? '#1d3440' : '#142026'); }, 0, D, lin);
+    // the means are everywhere; the wish is rare
+    const row = [];
+    for (let i = 0; i < 26; i++) row.push([a10Spine(p, 170 + i * 22, 760, 18, 40 + (i * 7) % 16, SPINES[(i * 3) % SPINES.length], 0), m('means') + i * .03, .3]);
+    evSeq(row, D);
+    lab(p, 'means', 450, 815, m('means'), { size: 32, fill: EV.ink, weight: 600, maxW: 680 });
+    const spark = G(p, { x: 1180, y: 735, o: 0 });
+    evGlow(spark, 0, 0, 50, 'Warm', .9);
+    path(spark, HEART, { fill: STATUS });
+    put(spark.lastChild, { s: .55 });
+    show(spark, m('want'), .4);
+    prog(q => { const t = q * D; put(spark, { s: t < m('want') ? 1 : 1 + .12 * Math.sin((t - m('want')) * 3) }); }, 0, D, lin);
+    lab(p, 'want', 1180, 815, m('want'), { size: 32, fill: EV.goldHi, weight: 600, maxW: 680 });
+  }],
+
+  ['love', 'b_love', (m, D) => {
+    const p = panel(0);
+    // a grandparents' home: a roofline over a floor (opens the beat)
+    a10Ground(p, 640);
+    const roof = path(p, 'M150 400L450 270L750 400', { stroke: '#a3543a', 'stroke-width': 5 }, { d: 0 });
+    draw(roof, .3, .7);
+    lab(p, 'home', 450, 365, m('home'), { size: 26, fill: EV.ink, maxW: 420 });
+    const boy = evPerson(p, { kind: 'm', x: 300, y: 640, s: .4, o: 0 });
+    evRecolor(boy, '#d9c49a', '#b3a07a');
+    show(boy.g, m('boy'), .4);
+    evBreathe(boy, D);
+    // magazines in a stack, comics beside them
+    const mags = [];
+    for (let i = 0; i < 6; i++) mags.push([a10Slab(p, 460, 630 - i * 14, 110, 12, SPINES[i % 4 + 2], 0), m('magazines') + i * .05, .3]);
+    evSeq(mags, D);
+    lab(p, 'magazines', 460, 520, m('magazines'), { size: 26, fill: EV.ink, maxW: 260 });
+    const cm = G(p, { x: 640, y: 560, o: 0 });
+    mk('rect', { x: -50, y: -60, width: 100, height: 120, rx: 6, fill: '#2b5f6f', stroke: EV.goldHi, 'stroke-width': 2 }, cm);
+    path(cm, 'M-34 -40H34V-4H6L-6 10V-4H-34Z', { fill: '#efe6d2' });
+    mk('circle', { cx: 0, cy: 34, r: 12, fill: STATUS }, cm);
+    tw(cm, { o: 1, r: -6 }, m('comics'), .4);
+    lab(p, 'comics', 640, 470, m('comics'), { size: 26, fill: EV.ink, maxW: 300 });
+    lab(p, 'nobody', 450, 715, m('nobody'), { size: 30, fill: EV.ink, weight: 600, maxW: 620 });
+    lab(p, 'junk', 450, 770, m('junk'), { size: 30, fill: EV.dim, italic: true, font: SERIF, maxW: 620 });
+    // the advice, with a heart that grows
+    const hg = G(p, { x: 1170, y: 520, o: 0 });
+    evGlow(hg, 0, 0, 160, 'Warm', .7);
+    const ht = path(hg, HEART, { fill: STATUS });
+    show(hg, m('enjoy'), .4);
+    prog(q => { const t = q * D; put(ht, { s: 1.4 + 1.2 * out(evU(t, m('enjoy'), 1.6)) }); }, 0, D, lin);
+    lab(p, 'enjoy', 1170, 310, m('enjoy'), { size: 40, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 720 });
+    // Nisha's class: Adil climbs a stair of books
+    const q2 = panel(m('adil'));
+    put(q2, { o: 0 }); show(q2, m('adil'), .4);
+    a10Ground(q2, 780);
+    const ni = evPerson(q2, { kind: 'f', x: 200, y: 780, s: .62 });
+    evBreathe(ni, D); evMood(ni, 'smile', m('science'));
+    const steps = [[820, 640, 'football', SPINES[1]], [1080, 500, 'bio', SPINES[2]], [1340, 360, 'science', SPINES[4]]];
+    steps.forEach(([x, top, k, c], i) => {
+      const blk = G(q2, { o: i ? 0 : 1 });
+      const nb = Math.round((780 - top) / 20);
+      for (let j = 0; j < nb; j++) a10Slab(blk, x, 770 - j * 20, 230 - (j % 2) * 10, 18, j % 3 ? c : SPINES[(i + j) % SPINES.length]);
+      if (i) show(blk, m(k), .4);
+      lab(q2, k, x, 835, m(k), { size: 28, fill: i === 2 ? EV.goldHi : EV.ink, weight: 600, maxW: 250 });
+    });
+    const ad = evPerson(q2, { kind: 'm', x: 480, y: 780, s: .38 });
+    evRecolor(ad, '#e8e4d8', '#bdb7a6');
+    evBreathe(ad, D, 1, 1.1);
+    evMood(ad, 'tense', m('adil')); evMood(ad, 'smile', m('football'));
+    lab(q2, 'adil', 480, 835, m('adil'), { size: 28, weight: 600, maxW: 260 });
+    // hops from the floor onto each step in turn (one clock)
+    const hops = [[480, 780], [820, 640], [1080, 500], [1340, 360]], ht2 = [m('football'), m('bio'), m('science')];
+    const ah = G(q2, { o: 0 }); evGlow(ah, 0, 0, 60, 'Warm', .8); path(ah, HEART, { fill: STATUS });
+    prog(q => { const t = q * D; let x = hops[0][0], y = hops[0][1];
+      ht2.forEach((t0, i) => { const u = io(evU(t, t0 + .2, .7)); if (u > 0) { const [x0, y0] = hops[i], [x1, y1] = hops[i + 1]; x = x0 + (x1 - x0) * u; y = y0 + (y1 - y0) * u - Math.sin(u * Math.PI) * 60; } });
+      put(ad.g, { x, y });
+      const k = ht2.reduce((a, t0) => a + io(evU(t, t0 + .2, .7)), 0);
+      put(ah, { x, y: y - 200, o: Math.min(1, k * 2), s: .5 + .25 * k }); }, 0, D, lin);
+  }],
+
+  ['habit', 'b_habit', (m, D) => {
+    const p = panel(0);
+    // a clock whose hands sweep, from "hours"
+    const ck = a10Clock(p, { x: 200, y: 190, r: 62, o: 0 });
+    show(ck, .3, .4);
+    prog(q => { const t = q * D, u = Math.max(0, t - m('hours')); put(ck._m, { r: u * 140 }); put(ck._h, { r: 60 + u * 12 }); }, 0, D, lin);
+    lab(p, 'hours', 300, 205, m('hours', .25), { size: 38, fill: TIME, weight: 600, anchor: 'start' });
+    // a week of days, each with its book
+    const days = G(p, { o: 0 }); show(days, .3, .4);
+    const ticks = [];
+    for (let i = 0; i < 7; i++) {
+      const x = 860 + i * 92;
+      mk('rect', { x: x - 36, y: 140, width: 72, height: 80, rx: 8, fill: '#10171b', stroke: EV.faint, 'stroke-width': 2 }, days);
+      const b = a10Spine(p, x, 205, 26, 50, SPINES[i], 0);
+      ticks.push([b, m('habit') + i * .1, .3]);
+    }
+    evSeq(ticks, D);
+    lab(p, 'habit', 1136, 275, m('habit'), { size: 32, fill: WEALTH, weight: 600, maxW: 680 });
+    lab(p, 'workout', 800, 375, m('workout'), { size: 40, font: SERIF, weight: 600, fill: EV.ink });
+    // the plan nobody follows vs the game he looks forward to
+    const cb = G(p, { x: 430, y: 560, o: 0 });
+    mk('rect', { x: -80, y: -100, width: 160, height: 200, rx: 8, fill: '#151d21', stroke: EV.dim, 'stroke-width': 3 }, cb);
+    mk('rect', { x: -30, y: -112, width: 60, height: 22, rx: 4, fill: EV.dim }, cb);
+    path(cb, 'M-56 -60H56M-56 -30H56M-56 0H56M-56 30H56M-56 60H30', { stroke: EV.faint, 'stroke-width': 4 });
+    tw(cb, { o: .7 }, m('plan'), .4);
+    draw(a10Cross(p, 430, 560, STATUS, 3), m('plan') + .3, .4);
+    lab(p, 'plan', 430, 705, m('plan'), { size: 28, fill: EV.dim, maxW: 520 });
+    const fz = a10Faisal(p, { x: 1150, y: 650, s: .46, o: 0 });
+    show(fz.g, m('cricket'), .4);
+    evBreathe(fz, D); evMood(fz, 'smile', m('cricket'));
+    const bat = G(fz.armR._lo, { x: 0, y: 78 });
+    path(bat, 'M-6 0L-10 120H10L6 0Z', { fill: '#d9b46a', stroke: '#8a6a44', 'stroke-width': 2 });
+    prog(q => { const t = q * D, v = t - m('cricket') - .4; put(fz.armR, { r: v > 0 ? -50 * Math.max(0, Math.sin(Math.min(v, 1.2) * Math.PI / 1.2)) : 0 }); }, 0, D, lin);
+    const ball = evDot(p, 1260, 560, 10, STATUS, 0);
+    prog(q => { const t = q * D, u = evU(t, m('cricket') + .9, 1.2); put(ball, { o: u > 0 && u < 1 ? 1 : 0, x: 1250 + 260 * u, y: 560 - 160 * Math.sin(u * Math.PI) }); }, 0, D, lin);
+    lab(p, 'cricket', 1150, 705, m('cricket'), { size: 28, fill: WEALTH, weight: 600, maxW: 560 });
+    lab(p, 'books', 800, 790, m('books'), { size: 34, font: SERIF, italic: true, fill: EV.goldHi, maxW: 1200 });
+    lab(p, 'race', 560, 850, m('race'), { size: 30, fill: EV.ink, weight: 600 });
+    lab(p, 'slower', 1040, 850, m('slower'), { size: 30, fill: WEALTH, weight: 600, maxW: 520 });
+  }],
+
+  ['check', 'b_check', (m, D) => {
+    const p = panel(0);
+    a10Sci(m, D);
+    lab(p, 'claim', 800, 165, m('claim'), { size: 38, font: SERIF, italic: true, fill: EV.ink, maxW: 1200 });
+    lab(p, 'most', 800, 222, m('most'), { size: 28, fill: EV.dim, italic: true, maxW: 1000 });
+    lab(p, 'survey', 340, 300, m('survey'), { size: 28, fill: SCI, weight: 600, maxW: 520 });
+    // a hundred people on a given day
+    const dots = [];
+    for (let i = 0; i < 100; i++) dots.push(mk('circle', { cx: 178 + (i % 10) * 36, cy: 360 + Math.floor(i / 10) * 36, r: 12, fill: '#2a2c27' }, p));
+    const grid = G(p); dots.forEach(d => grid.append(d)); put(grid, { o: 0 });
+    show(grid, m('given'), .45);
+    lab(p, 'given', 340, 730, m('given'), { size: 26, fill: EV.dim });
+    const READ = [3, 7, 12, 18, 24, 31, 36, 42, 49, 55, 58, 63, 71, 77, 84, 92], HOUR = [7, 18, 31, 42, 55, 63, 77, 92];
+    READ.forEach((k, i) => tw(dots[k], { c_fill: SCI }, m('sixteen') + i * .02, .3));
+    HOUR.forEach((k, i) => tw(dots[k], { c_fill: EV.goldHi }, m('hour') + i * .03, .3));
+    lab(p, 'c16', 640, 380, m('sixteen'), { size: 32, fill: SCI, weight: 600, anchor: 'start' });
+    lab(p, 'c16b', 652 + evW(L('c16'), 32, SANS, 600), 380, m('pleasure'), { size: 32, fill: SCI, weight: 600, anchor: 'start' });
+    lab(p, 'c8', 640, 445, m('hour'), { size: 32, fill: EV.goldHi, weight: 600, anchor: 'start', maxW: 780 });
+    lab(p, 'twelve', 640, 505, m('twelve', .3), { size: 30, fill: EV.ink, anchor: 'start', maxW: 780 });
+    lab(p, 'nothing', 640, 570, m('nothing'), { size: 30, fill: EV.dim, anchor: 'start', maxW: 780 });
+    const tn = lab(p, 'ten', 640, 640, m('ten'), { size: 32, fill: STATUS, weight: 600, anchor: 'start' });
+    const tnw = evW(L('ten'), 32, SANS, 600);
+    draw(path(p, `M630 628H${(650 + tnw).toFixed(0)}`, { stroke: STATUS, 'stroke-width': 4 }, { d: 0 }), m('ten') + .3, .4);
+    void tn;
+    lab(p, 'one', 640, 705, m('one'), { size: 30, fill: EV.ink, anchor: 'start', maxW: 780 });
+    a10Stamp(p, 'verdict', 800, 790, m('verdict'), SCI, 32);
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    const p = panel(0);
+    a10Ground(p, 430);
+    const rz = a10Man(p, { x: 330, y: 430, s: .5 }, '#3e6a5a', '#2c4c40');
+    evBreathe(rz, D); evMood(rz, 'worried', .4);
+    // the borrowed classics (dim, tall) and a cricket story he'd love (bright)
+    for (let i = 0; i < 6; i++) a10Slab(p, 840, 418 - i * 26, 200 - (i % 2) * 14, 24, '#3a3f3a');
+    const cb = G(p, { x: 1180, y: 300 });
+    evGlow(cb, 0, 0, 120, 'Gold', .6);
+    a10Book(cb, { s: .7 });
+    mk('circle', { cx: 0, cy: 0, r: 14, fill: STATUS, stroke: '#efe6d2', 'stroke-width': 2 }, cb);
+    evText(p, '?', { x: 1010, y: 220, size: 60, weight: 700, fill: EV.gold });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-enjoy', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 1, L('q1y'), [L('q1na'), null, L('q1nc')]),
+  }], done) }],
+
+  ['stuck', 'b_stuck', (m, D) => {
+    const p = panel(0);
+    lab(p, 'two', 800, 100, m('two'), { size: 44, font: SERIF, weight: 600, fill: EV.gold, maxW: 1200 });
+    // a tug of war over a book: the phone on one side, school on the other
+    const ph = a10Phone(p, { x: 260, y: 430, s: .62, o: 0 });
+    show(ph, .3, .4);
+    const sc = a10School(p, { x: 1330, y: 520, s: .8, o: 0 });
+    show(sc, .3, .4);
+    const ropeL = path(p, '', { stroke: TIME, 'stroke-width': 4 }), ropeR = path(p, '', { stroke: STATUS, 'stroke-width': 4 });
+    const bk = a10Book(p, { x: 800, y: 430, s: .9 });
+    const pnum = T(bk, '212', { x: 104, y: 56, size: 18, fill: '#5a574e', anchor: 'end', font: SANS, o: 0 });
+    show(pnum, m('page'), .3);
+    prog(q => { const t = q * D;
+      const a = io(evU(t, m('short'), .5)), b = io(evU(t, m('finish'), .5));
+      const x = 800 - 40 * a + 40 * b + (b > 0 ? 6 * Math.sin(t * 9) * (1 - evU(t, m('quit'), .4)) : 0);
+      put(bk, { x });
+      ropeL.setAttribute('d', `M300 430L${(x - 118).toFixed(1)} 430`); ropeR.setAttribute('d', `M${(x + 118).toFixed(1)} 430L1220 430`);
+      put(ropeL, { o: Math.min(1, evU(t, .3, .4)) * (1 - evU(t, m('quit'), .4)) }); put(ropeR, { o: Math.min(1, evU(t, .3, .4)) * (1 - evU(t, m('quit'), .4)) }); }, 0, D, lin);
+    lab(p, 'short', 260, 610, m('short'), { size: 30, fill: TIME, weight: 600, maxW: 400 });
+    lab(p, 'finish', 1330, 610, m('finish'), { size: 30, fill: STATUS, weight: 600, maxW: 420 });
+    // stuck: dust settles and a cobweb is drawn across the corner
+    tw(bk._pg, { c_fill: '#8f8a7a' }, m('quit'), .8);
+    draw(path(p, 'M690 350Q740 370 760 410M690 350Q730 400 720 440M690 350L780 370M705 370Q725 380 718 400', { stroke: '#cfc8b6', 'stroke-width': 1.5 }, { d: 0 }), m('quit') + .2, .8);
+    lab(p, 'quit', 800, 560, m('quit'), { size: 34, fill: EV.dim, weight: 600, italic: true, font: SERIF });
+    // the fix: many books, dropped freely
+    const q2 = panel(m('post'));
+    put(q2, { o: 0 }); show(q2, m('post'), .4);
+    lab(q2, 'post', 800, 100, m('post'), { size: 42, font: SERIF, weight: 600, fill: EV.gold, maxW: 1300 });
+    const fan = [];
+    for (let i = 0; i < 14; i++) fan.push([a10Spine(q2, 215 + i * 90, 330, 46, 110 + (i * 13) % 40, SPINES[i % SPINES.length], 0), m('many') + i * .05, .3]);
+    evSeq(fan, D);
+    lab(q2, 'many', 800, 390, m('many'), { size: 40, fill: EV.goldHi, weight: 700 });
+    // skip: an arc hops over pages
+    const sk = G(q2, { x: 350, y: 530, o: 0 });
+    a10Slab(sk, 0, 20, 200, 30, SPINES[1]);
+    path(sk, 'M-80 0Q0 -90 80 0', { stroke: EV.goldHi, 'stroke-width': 4 });
+    evHead(sk, 80, 0, 50, EV.goldHi, 1);
+    show(sk, m('skip'), .4);
+    lab(q2, 'skip', 350, 610, m('skip'), { size: 28, fill: EV.ink, maxW: 420 });
+    // the middle: an open book with a marker in its fold
+    const md = G(q2, { x: 800, y: 520, o: 0 });
+    a10Book(md, { s: .55 });
+    path(md, 'M0 -30V40', { stroke: STATUS, 'stroke-width': 6 });
+    show(md, m('middle'), .4);
+    lab(q2, 'middle', 800, 610, m('middle'), { size: 28, fill: EV.ink, maxW: 420 });
+    // out it goes: a book slides away and fades
+    const ob = a10Spine(q2, 1200, 560, 46, 110, SPINES[5]);
+    prog(q => { const t = q * D, u = io(evU(t, m('out'), .8)); put(ob, { x: 1200 + 180 * u, r: 30 * u, o: 1 - .85 * u }); }, 0, D, lin);
+    lab(q2, 'out', 1250, 610, m('out'), { size: 28, fill: STATUS, weight: 600 });
+    // vanity: a counter that climbs, then is struck out
+    const cnt = evText(q2, '0', { x: 420, y: 740, size: 56, fill: EV.dim, weight: 700, o: 0 });
+    show(cnt, m('vanity'), .3);
+    evCount(cnt, t => Math.round(48 * io(evU(t, m('vanity'), .4))), D);
+    draw(path(q2, 'M360 722H480', { stroke: STATUS, 'stroke-width': 5 }, { d: 0 }), m('vanity') + .45, .3);
+    lab(q2, 'vanity', 420, 800, m('vanity'), { size: 30, fill: EV.ink, weight: 600, maxW: 560 });
+    // one point, then examples
+    const pts = [];
+    const big = evDot(q2, 900, 725, 22, EV.goldHi); put(big, { s: 0 }); pts.push([big, m('point'), .35, 's']);
+    for (let i = 0; i < 8; i++) { const d = evDot(q2, 960 + i * 40, 725, 9, EV.dim); put(d, { s: 0 }); pts.push([d, m('point') + .6 + i * .12, .25, 's']); }
+    evSeq(pts, D);
+    lab(q2, 'point', 1080, 790, m('point'), { size: 28, fill: EV.ink, maxW: 520 });
+    lab(q2, 'gist', 1080, 850, m('gist'), { size: 30, fill: WEALTH, weight: 600, maxW: 520 });
+  }],
+
+  ['keep', 'b_keep', (m, D) => {
+    const p = panel(0);
+    // many books in, a few out: a funnel (opens the beat)
+    const top = G(p, { o: 0 }); show(top, .3, .4);
+    for (let i = 0; i < 20; i++) a10Spine(top, 190 + i * 22, 190, 18, 40 + (i * 11) % 18, SPINES[i % SPINES.length]);
+    path(top, 'M170 210L340 400H460L630 210', { stroke: EV.faint, 'stroke-width': 3 });
+    const few = G(p, { o: 0 });
+    [360, 400, 440].forEach((x, i) => a10Spine(few, x, 470, 34, 60, i === 1 ? EV.goldHi : WEALTH));
+    show(few, m('reread'), .4);
+    const loop = G(p, { x: 400, y: 440, o: 0 });
+    path(loop, 'M-110 0A110 50 0 1 1 0 50', { stroke: EV.goldHi, 'stroke-width': 4 });
+    evHead(loop, 0, 50, 180, EV.goldHi, 1.1);
+    show(loop, m('reread'), .4);
+    prog(q => { const t = q * D - m('reread'); put(loop, { r: t > 0 ? -t * 50 : 0 }); }, 0, D, lin);
+    lab(p, 'reread', 400, 560, m('reread'), { size: 30, fill: EV.goldHi, weight: 600, maxW: 560 });
+    lab(p, 'hundred', 400, 620, m('hundred'), { size: 28, fill: EV.ink, maxW: 600 });
+    lab(p, 'you', 400, 675, m('you'), { size: 28, fill: WEALTH, maxW: 600 });
+    // déjà vu: an open book with a loop beside it
+    const dv = G(p, { x: 1160, y: 210, o: 0 });
+    a10Book(dv, { s: .62 });
+    show(dv, m('before'), .4);
+    draw(a10Tick(p, 1290, 210, MONEY, 1.3), m('before') + .5, .3);
+    lab(p, 'before', 1160, 305, m('before'), { size: 28, fill: EV.ink, maxW: 600 });
+    // Faisal explains it to his roommate
+    a10Ground(p, 790);
+    const fz = a10Faisal(p, { x: 960, y: 790, s: .5 }), rm = a10Man(p, { x: 1350, y: 790, s: .5 }, '#7a5a3a', '#5a4229');
+    evBreathe(fz, D); evBreathe(rm, D, 1, .8);
+    lab(p, 'explain', 1160, 400, m('explain'), { size: 32, fill: WEALTH, weight: 600, maxW: 640 });
+    evMood(fz, 'smile', m('room')); evArm(fz, 1, -50, -40, m('room'), .5);
+    const bb = evBubble(p, L('save'), { x: 1040, y: 575, w: 330, size: 24 });
+    tw(bb, { o: 1, s: 1 }, m('room'), .4, back);
+    evMood(rm, 'smile', m('teach'));
+    const gl = evGlow(p, 1350, 560, 70, 'Gold', 0);
+    tw(gl, { o: .9 }, m('teach'), .5);
+    lab(p, 'teach', 1160, 850, m('teach'), { size: 30, fill: SCI, weight: 600, maxW: 700 });
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    a10Ground(p, 430);
+    const sn = a10Sana(p, { x: 330, y: 430, s: .5 });
+    evBreathe(sn, D); evMood(sn, 'ask', .4);
+    a10Book(p, { x: 900, y: 290, s: .85 });
+    // chapters read so far: 3 of 12
+    for (let i = 0; i < 12; i++) mk('rect', { x: 760 + i * 26, y: 390, width: 20, height: 14, rx: 3, fill: i < 3 ? WEALTH : '#2a2c27' }, p);
+    evText(p, '?', { x: 1260, y: 300, size: 60, weight: 700, fill: EV.gold });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-gist', prompt: [L('q2p')],
+    build: choice([[L('q2a')], [L('q2b')], [L('q2c')]], 1, L('q2y'), [L('q2na'), null, L('q2nc')]),
+  }], done) }],
+
+  ['found', 'b_found', (m, D) => {
+    const p = panel(0);
+    lab(p, 'wellread', 800, 95, m('wellread'), { size: 44, font: SERIF, weight: 600, fill: EV.gold });
+    lab(p, 'wrong', 800, 150, m('wrong'), { size: 30, fill: EV.dim, maxW: 900 });
+    path(p, 'M800 210V800', { stroke: EV.faint, 'stroke-width': 2 });
+    // Shafeeq's tower: a cracked base of forwards, books piled on it (the base opens the beat)
+    const sf = a10Shafeeq(p, { x: 150, y: 770, s: .45 });
+    evBreathe(sf, D);
+    const tower = G(p, { x: 450, y: 740 });
+    const base = G(tower, { o: 0 });
+    mk('rect', { x: -150, y: -30, width: 300, height: 60, rx: 6, fill: '#3a2420', stroke: STATUS, 'stroke-width': 3 }, base);
+    path(base, 'M-60 -30L-44 -4L-58 12L-40 30M70 -30L58 0L74 30', { stroke: STATUS, 'stroke-width': 2.5 });
+    show(base, .3, .4);
+    const pile = G(tower);
+    const sl = [];
+    for (let i = 0; i < 6; i++) sl.push([a10Slab(pile, (i % 2 ? 8 : -6), -52 - i * 40, 230 - (i % 3) * 16, 36, SPINES[i % SPINES.length], 0), m('base') + i * .08, .3]);
+    evSeq(sl, D);
+    prog(q => { const t = q * D, u = io(evU(t, m('tilts'), 1.4)); put(pile, { r: -9 * u + (u > 0 ? .6 * Math.sin(t * 2.4) : 0) }); }, 0, D, lin);
+    lab(p, 'forwards', 450, 805, m('forwards'), { size: 28, fill: STATUS, weight: 600, maxW: 420 });
+    // a new idea arrives and is judged against the base
+    const idea = a10Slab(p, 450, 260, 150, 34, EV.goldHi, 0);
+    prog(q => { const t = q * D, u = io(evU(t, m('judges'), .8)), b = io(evU(t, m('judges') + .9, .6));
+      put(idea, { o: Math.min(1, u * 4) * (1 - b * .7), y: 260 + 150 * u - 60 * b, x: 450 - 120 * b, r: -30 * b }); }, 0, D, lin);
+    lab(p, 'judges', 450, 230, m('judges'), { size: 28, fill: EV.ink, maxW: 620 });
+    lab(p, 'tilts', 450, 855, m('tilts'), { size: 28, fill: STATUS, italic: true, font: SERIF, maxW: 640 });
+    // a solid base: maths, hard sciences, basic economics, then a straight pile
+    const R = [['maths', 740], ['hard', 690], ['econ', 640]];
+    R.forEach(([k, y], i) => {
+      const b = a10Slab(p, 1000, y, 300, 46, [TIME, SCI, MONEY][i], 0);
+      put(b, { y: y - 30 }); tw(b, { o: 1, y }, m(k), .45, out);
+      lab(p, k, 1170, y + 10, m(k), { size: 26, fill: EV.ink, weight: 600, anchor: 'start', maxW: 370 });
+    });
+    const sp = [];
+    for (let i = 0; i < 5; i++) sp.push([a10Slab(p, 1000, 582 - i * 40, 220, 36, SPINES[(i + 3) % SPINES.length], 0), m('logic') + i * .08, .3]);
+    evSeq(sp, D);
+    lab(p, 'logic', 1180, 855, m('logic'), { size: 30, fill: EV.goldHi, weight: 600, maxW: 700 });
+  }],
+
+  ['origin', 'b_origin', (m, D) => {
+    const p = panel(0);
+    // a spring and a river that runs downhill, clear to muddy (the spring opens the beat)
+    const spr = G(p, { x: 220, y: 230, o: 0 });
+    path(spr, 'M-70 30Q-60 -20 0 -26Q60 -20 70 30Z', { fill: '#2a2c27', stroke: EV.dim, 'stroke-width': 2 });
+    mk('ellipse', { cx: 0, cy: 22, rx: 40, ry: 10, fill: TIME }, spr);
+    show(spr, .3, .4);
+    const SEG = ['M220 250C320 300 420 300 520 330', 'M520 330C620 360 700 360 800 400', 'M800 400C900 440 980 450 1080 490', 'M1080 490C1180 530 1260 540 1360 580', 'M1360 580C1420 600 1480 610 1540 620'];
+    const MUD = ['#5fb3cf', '#5f9fae', '#6f8a7a', '#7a7058', '#7a5a3a'];
+    const segs = SEG.map((d, i) => path(p, d, { stroke: TIME, 'stroke-width': 12 + i * 5 }, { d: 0 }));
+    prog(q => { const t = q * D; segs.forEach((s, i) => put(s, { d: evU(t, m('source') + i * .25, .3) })); }, 0, D, lin);
+    segs.forEach((s, i) => tw(s, { c_stroke: MUD[i] }, m('mud') + i * .06, .5));
+    lab(p, 'source', 380, 150, m('source'), { size: 40, font: SERIF, weight: 600, fill: EV.gold, anchor: 'start' });
+    const db = a10Book(p, { x: 260, y: 400, s: .45, o: 0 }); show(db, m('darwin'), .4);
+    lab(p, 'darwin', 260, 475, m('darwin'), { size: 28, fill: EV.ink, weight: 600 });
+    const sb = a10Book(p, { x: 520, y: 450, s: .45, o: 0 }); show(sb, m('smith'), .4);
+    lab(p, 'smith', 520, 525, m('smith'), { size: 28, fill: EV.ink, weight: 600 });
+    // retellings along the river, each a little murkier
+    const rt = [];
+    [[800, 330], [1080, 420], [1360, 510]].forEach(([x, y], i) => rt.push([a10Spine(p, x, y, 30, 54, ['#6f8a7a', '#7a7058', '#7a5a3a'][i], 0), m('retell') + i * .12, .3]));
+    evSeq(rt, D);
+    lab(p, 'retell', 1080, 665, m('retell'), { size: 30, fill: EV.dim, maxW: 640 });
+    lab(p, 'originals', 390, 600, m('originals'), { size: 34, fill: TIME, weight: 600, maxW: 560 });
+    // a learning machine
+    const gr = a10Gear(p, { x: 560, y: 760, r: 46, o: 0 });
+    show(gr, m('machine'), .4);
+    prog(q => { const t = q * D, a = t < m('machine') ? 0 : (t - m('machine')) * 40 + Math.max(0, t - m('speed')) * 160; put(gr, { r: a }); }, 0, D, lin);
+    lab(p, 'machine', 640, 745, m('machine'), { size: 34, fill: WEALTH, weight: 600, anchor: 'start' });
+    lab(p, 'out2', 640, 805, m('out'), { size: 30, fill: EV.ink, anchor: 'start', maxW: 820 });
+  }],
+
+  ['old', 'b_old', (m, D) => {
+    const p = panel(0);
+    lab(p, 'older', 800, 100, m('older'), { size: 44, font: SERIF, weight: 600, fill: EV.gold, maxW: 1300 });
+    // a 2,000-year line (opens the beat)
+    const X = y => 200 + (y / 2025) * 1200;
+    const ax = G(p, { o: 0 }); show(ax, .3, .4);
+    path(ax, `M${X(0)} 500H${X(2025)}`, { stroke: EV.dim, 'stroke-width': 3 });
+    [0, 500, 1000, 1500, 2025].forEach(y => { path(ax, `M${X(y)} 490V510`, { stroke: EV.dim, 'stroke-width': 3 }); T(ax, String(y), { x: X(y), y: 540, size: 20, fill: EV.dim, anchor: 'middle', font: SANS }); });
+    // new problems near today
+    [['drive', 1235, 420], ['code', 1435, 420]].forEach(([k, x, y]) => { const g = a10Pill(p, k, x, y, { color: TIME, ink: EV.ink, size: 26, minW: 130 }); put(g, { y: y + 18 }); tw(g, { o: 1, y }, m(k), .4, out); });
+    lab(p, 'recent', 1370, 345, m('recent'), { size: 30, fill: TIME, weight: 600 });
+    // ancient problems at the far end
+    [['calm', 290, 420], ['body', 470, 420], ['values', 290, 340], ['family', 470, 340]].forEach(([k, x, y]) => { const g = a10Pill(p, k, x, y, { color: WEALTH, ink: EV.goldHi, size: 28, minW: 150 }); put(g, { y: y + 18 }); tw(g, { o: 1, y }, m(k), .4, out); });
+    // books through time: most last a short while, a few run all the way to today
+    const B = [[40, 2025], [120, 260], [210, 380], [300, 2025], [420, 520], [530, 700], [650, 760], [700, 2025], [820, 1000], [900, 1050], [1050, 1240], [1150, 1300], [1300, 1420], [1450, 1560], [1600, 1720], [1750, 1850]];
+    const bars = B.map(([a, b], i) => mk('rect', { x: X(a), y: 566 + i * 10, width: 0, height: 7, rx: 3, fill: b === 2025 ? EV.goldHi : '#6a675e' }, p));
+    prog(q => { const t = q * D; B.forEach(([a, b], i) => { const u = io(evU(t, m('survived') + i * .05, 1)), f = evU(t, m('filtered'), .6);
+      bars[i].setAttribute('width', ((X(b) - X(a)) * u).toFixed(1)); bars[i].setAttribute('opacity', b === 2025 ? 1 : 1 - .75 * f); }); }, 0, D, lin);
+    lab(p, 'survived', 800, 760, m('survived'), { size: 32, fill: EV.goldHi, weight: 600 });
+    lab(p, 'filtered', 800, 820, m('filtered'), { size: 30, fill: EV.ink, maxW: 1000 });
+  }],
+
+  ['check2', 'b_check2', (m, D) => {
+    const p = panel(0);
+    a10Sci(m, D);
+    lab(p, 'old2', 800, 160, m('old'), { size: 42, font: SERIF, weight: 600, fill: EV.ink });
+    // three thousand years of bloodletting, to scale
+    const X = y => 200 + ((y + 1000) / 3025) * 1200;
+    const ax = path(p, `M${X(-1000)} 330H${X(2025)}`, { stroke: EV.faint, 'stroke-width': 2 });
+    void ax;
+    lab(p, 'blood', X(-1000), 280, m('blood'), { size: 32, fill: STATUS, weight: 600, anchor: 'start' });
+    const bar = mk('rect', { x: X(-1000), y: 318, width: 0, height: 24, rx: 5, fill: STATUS }, p);
+    prog(q => { const t = q * D; bar.setAttribute('width', ((X(1880) - X(-1000)) * io(evU(t, m('three'), 1.6))).toFixed(1)); }, 0, D, lin);
+    lab(p, 'egypt', X(-1000), 385, m('egypt'), { size: 26, fill: EV.dim, anchor: 'start' });
+    lab(p, 'three', 760, 385, m('three', .3), { size: 28, fill: EV.ink, weight: 600 });
+    lab(p, 'late', X(1880), 385, m('late', .3), { size: 26, fill: EV.dim, anchor: 'end' });
+    lab(p, 'wrong2', X(1880) - 50, 280, m('wrong'), { size: 30, fill: STATUS, weight: 600, anchor: 'end' });
+    draw(a10Cross(p, X(1880) + 4, 270, STATUS, 1.1), m('wrong') + .2, .3);
+    // counting who recovered: tally marks
+    const tl = G(p, { x: X(1880) - 90, y: 445, o: 0 });
+    path(tl, 'M0 -18V18M14 -18V18M28 -18V18M42 -18V18M-6 12L48 -12', { stroke: SCI, 'stroke-width': 4 });
+    show(tl, m('count'), .3);
+    lab(p, 'count', X(1880) - 110, 458, m('count'), { size: 28, fill: SCI, weight: 600, anchor: 'end' });
+    // the young wins
+    [['vaccines', 1796, 540], ['anti', 1940, 600]].forEach(([k, y0, y]) => {
+      const b = mk('rect', { x: X(y0), y: y - 12, width: 0, height: 24, rx: 5, fill: EV.goldHi }, p);
+      prog(q => { const t = q * D; b.setAttribute('width', ((X(2025) - X(y0)) * io(evU(t, m(k), .6))).toFixed(1)); }, 0, D, lin);
+      lab(p, k, X(y0) - 20, y + 10, m(k), { size: 28, fill: EV.goldHi, weight: 600, anchor: 'end' });
+    });
+    // old advice that holds up when tested
+    [['walk', 420], ['sleep', 720]].forEach(([k, x]) => { const g = a10Pill(p, k, x, 640, { color: WEALTH, ink: EV.goldHi, size: 28 }); put(g, { y: 658 }); tw(g, { o: 1, y: 640 }, m(k), .4, out); draw(a10Tick(p, x + g._w / 2 + 26, 640, MONEY, 1.1), m(k) + .3, .3); });
+    a10Stamp(p, 'verdict2', 800, 760, m('verdict'), SCI, 30);
+    lab(p, 'test', 800, 830, m('test'), { size: 30, fill: EV.ink, weight: 600 });
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    a10Ground(p, 430);
+    const hb = a10Hiba(p, { x: 330, y: 430, s: .5 });
+    evBreathe(hb, D); evMood(hb, 'ask', .4);
+    a10Phone(p, { x: 850, y: 290, s: .7 });
+    a10Book(p, { x: 1200, y: 290, s: .75, paper: '#d9c49a' });
+    evText(p, '?', { x: 1025, y: 300, size: 60, weight: 700, fill: EV.gold });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-older', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 2, L('q3y'), [L('q3na'), L('q3nb'), null]),
+  }], done) }],
+
+  ['bridge', 'b_bridge', (m, D) => {
+    const p = panel(0);
+    // a head with a tune circling it (opens the beat)
+    const hd = a10Icon(p, 400, 600, EV.dim, 4.2, 0);
+    show(hd, .3, .4);
+    const notes = G(p, { x: 400, y: 290, o: 0 });
+    for (let i = 0; i < 4; i++) { const a = i * Math.PI / 2; put(path(notes, NOTE, { fill: EV.goldHi, stroke: EV.goldHi, 'stroke-width': 2 }), { x: Math.cos(a) * 140, y: Math.sin(a) * 30 }); }
+    show(notes, m('song'), .4);
+    prog(q => { const t = q * D - m('song'); [...notes.children].forEach((n, i) => { const a = i * Math.PI / 2 + Math.max(0, t) * 1.4; put(n, { x: Math.cos(a) * 140, y: Math.sin(a) * 30 }); }); }, 0, D, lin);
+    tw(hd._head, { c_fill: EV.ink }, m('thoughts'), .4); tw(hd._body, { c_fill: EV.ink }, m('thoughts'), .4);
+    lab(p, 'thoughts', 400, 680, m('thoughts'), { size: 30, fill: EV.ink, weight: 600 });
+    lab(p, 'careful', 400, 745, m('careful'), { size: 36, font: SERIF, italic: true, fill: EV.goldHi, maxW: 620 });
+    path(p, 'M800 160V800', { stroke: EV.faint, 'stroke-width': 2 });
+    // the end of Part 1, and three things no money buys
+    const c1 = G(p, { x: 1180, y: 190, o: 0 });
+    const w1 = Math.max(360, evW(L('part1'), 30, SANS, 600) + 70);
+    mk('rect', { x: -w1 / 2, y: -36, width: w1, height: 72, rx: 10, fill: '#151d21', stroke: EV.gold, 'stroke-width': 2.5 }, c1);
+    evText(c1, L('part1'), { x: 0, y: 11, size: 30, weight: 600, fill: EV.goldHi });
+    show(c1, m('part'), .4);
+    const ic1 = G(p, { x: 920, y: 420, o: 0 });
+    evGlow(ic1, 0, 0, 80, 'Warm', .8); mk('circle', { cx: 0, cy: 0, r: 22, fill: '#ffe2a0' }, ic1);
+    show(ic1, m('peace'), .4);
+    const ic2 = evBody(p, { x: 1160, y: 425, s: .36, o: 0 }); show(ic2, m('strong'), .4);
+    const ic3 = G(p, { x: 1420, y: 470, o: 0 });
+    path(ic3, 'M-70 0V-80L0 -130L70 -80V0Z', { fill: '#1b2226', stroke: EV.gold, 'stroke-width': 3 });
+    put(path(ic3, HEART, { fill: STATUS }), { y: -50, s: .7 });
+    show(ic3, m('love'), .4);
+    lab(p, 'peace', 920, 545, m('peace'), { size: 25, fill: EV.ink, weight: 600, maxW: 210 });
+    lab(p, 'strong', 1160, 545, m('strong'), { size: 25, fill: EV.ink, weight: 600, maxW: 210 });
+    lab(p, 'love2', 1420, 545, m('love'), { size: 25, fill: EV.ink, weight: 600, maxW: 210 });
+    const tag = G(p, { x: 1000, y: 650, o: 0 });
+    path(tag, 'M-40 -22H30L50 0L30 22H-40Z', { fill: '#151d21', stroke: EV.dim, 'stroke-width': 2.5 });
+    mk('circle', { cx: 28, cy: 0, r: 5, fill: EV.dim }, tag);
+    show(tag, m('sells'), .3);
+    draw(a10Cross(p, 1000, 650, STATUS, 1.6), m('sells') + .3, .3);
+    lab(p, 'sells', 1070, 660, m('sells'), { size: 28, fill: EV.dim, anchor: 'start', maxW: 440 });
+    lab(p, 'earn', 1180, 740, m('earn'), { size: 34, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 680 });
+    // Part 2 opens
+    const q2 = panel(m('happy'));
+    put(q2, { o: 0 }); show(q2, m('happy'), .4);
+    evGlow(q2, 800, 450, 300, 'Gold', .4);
+    lab(q2, 'part2', 800, 470, m('happy'), { size: 64, font: SERIF, weight: 600, fill: EV.goldHi });
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    evText(p, L('b_wrap'), { x: 800, y: 130, size: 52, font: SERIF, weight: 600, fill: EV.gold });
+    const cols = [WEALTH, EV.goldHi, MONEY, SCI];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -30, y: 260 + i * 150, o: 0 });
+      mk('circle', { cx: 200, cy: -10, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: 200, y: 1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 260, y: 0, size: 36, maxW: 1150, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Riyas wants to start reading, but the “must-read” classics a friend lent him bore him. He loves cricket. What would Naval suggest?',
+  q1a: 'Push through the classics first. Reading should feel like a duty.',
+  q1b: 'Start with cricket books and stories he enjoys, and let the love of reading grow.',
+  q1c: 'Wait until he has a free month to read seriously.',
+  q1y: 'Right. Enjoy first, and the habit follows. Harder books come later, once he loves to read.',
+  q1na: 'Forcing it is how many people learn to hate reading. Naval says start with what you enjoy.',
+  q1nc: 'The habit is built a little every day, not in one free month.',
+  q2p: 'Sana is three chapters into a business bestseller. She has the main idea, and the rest is example after example. What does the chapter suggest?',
+  q2a: 'Finish it, or the money was wasted.',
+  q2b: 'Put it down: she has the gist. Pick up the next book.',
+  q2c: 'Start it again from page one.',
+  q2y: 'Right. Many non-fiction books make one point. Once you have it, move on; counting finished books is vanity.',
+  q2na: 'The money is spent either way. Her time is what she can still save.',
+  q2nc: 'Rereading is for the few great books that speak to you, not one that keeps repeating itself.',
+  q3p: 'Hiba wants to learn two things: how to run Instagram ads for her café, and how to stay calm when a busy day goes wrong. Using “old problem, old answer”, which plan fits?',
+  q3a: 'An old classic for both.',
+  q3b: 'The latest viral posts for both.',
+  q3c: 'A recent guide for the ads, and an old, well-tested book for staying calm.',
+  q3y: 'Right. Instagram ads are a new problem, so read something recent. Staying calm is ancient, and old wisdom on it has been filtered longest.',
+  q3na: 'Instagram didn’t exist when the old books were written. A new problem needs a recent answer.',
+  q3nb: 'Viral posts are the least filtered reading there is. Staying calm is an old problem with old, tested answers.',
+  p1p: 'Junaid has read dozens of books by one diet influencer, and now rejects any idea that disagrees with them. What is the chapter’s diagnosis?',
+  p1a: 'He hasn’t read enough. He needs more books by the same author.',
+  p1b: 'His base was built from weak ideas first, and now it judges everything new.',
+  p1c: 'Reading is the problem. He should stop.',
+  p1y: 'Yes. Well-read is not the same as wise. Rebuild the base on what holds up: maths, science, the basics.',
+  p1na: 'More of the same only thickens a shaky base. The order and the quality matter.',
+  p1nc: 'Reading isn’t the problem. Reading the wrong things first is.',
+  p2p: 'Anwar wants to understand how markets set prices. By Naval’s advice, where should he start?',
+  p2a: 'A viral video of someone’s hot take on the economy.',
+  p2b: 'Today’s business news.',
+  p2c: 'Adam Smith, or a basic economics textbook.',
+  p2y: 'Yes. Go to the source and the basics first; the retellings make sense later.',
+  p2na: 'A hot take is a retelling of a retelling, with spin added at each step.',
+  p2nb: 'News is today’s noise. Build the base first, then judge the news against it.',
+  p3p: 'Faisal read a chapter on saving money. What is most likely to make it stick?',
+  p3a: 'Explain it to his roommate in his own words.',
+  p3b: 'Add it to his count of finished books.',
+  p3c: 'Buy three more books on saving.',
+  p3y: 'Yes. Teaching makes you understand. Students who explain a lesson out loud remember it better later.',
+  p3nb: 'A count of finished books says nothing about what stuck.',
+  p3nc: 'More books can help later, but explaining it is what locks this one in.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'In 2023, on a given day, about 16 in 100 Americans read for pleasure.',
+  p4r2: 'Reading an hour a day puts you among the top one in ten million.',
+  p4r3: 'Bloodletting lasted about 3,000 years, so surviving that long proves a health idea works.',
+  p4r4: 'Students who teach a lesson out loud tend to remember it better on a later test.',
+  p4w1: 'True. That is from the American Time Use Survey; half of those readers read an hour or more.',
+  p4w2: 'False. About 1 in 12 Americans reads an hour or more on a given day. Rare, but nowhere near 1 in 10 million.',
+  p4w3: 'False. Bloodletting passed the filter of time and was still wrong for most illnesses. Old is a place to look, not proof.',
+  p4w4: 'True. Studies of learning by teaching found that students who explained a lesson remembered it better later.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'റിയാസിന് വായിച്ചുതുടങ്ങണം, പക്ഷേ ഒരു കൂട്ടുകാരൻ കൊടുത്ത “വായിച്ചിരിക്കേണ്ട” ക്ലാസിക്കുകൾ അവന് മുഷിപ്പാണ്. അവന് ക്രിക്കറ്റ് ഇഷ്ടമാണ്. നവൽ എന്ത് പറയും?',
+  q1a: 'ആദ്യം ക്ലാസിക്കുകൾ കഷ്ടപ്പെട്ട് തീർക്കൂ. വായന ഒരു കടമ പോലെ തോന്നണം.',
+  q1b: 'ഇഷ്ടമുള്ള ക്രിക്കറ്റ് പുസ്തകങ്ങളിലും കഥകളിലും തുടങ്ങൂ; വായനയോടുള്ള സ്നേഹം വളരട്ടെ.',
+  q1c: 'ഗൗരവമായി വായിക്കാൻ ഒരു മാസം ഒഴിവ് കിട്ടുന്നതുവരെ കാത്തിരിക്കൂ.',
+  q1y: 'ശരി. ആദ്യം ഇഷ്ടം, പിന്നാലെ ശീലം. വായന ഇഷ്ടമായ ശേഷം കട്ടിയുള്ള പുസ്തകങ്ങൾ വരും.',
+  q1na: 'നിർബന്ധിച്ചാണ് പലരും വായന വെറുക്കാൻ പഠിക്കുന്നത്. ഇഷ്ടമുള്ളതിൽ തുടങ്ങാനാണ് നവൽ പറയുന്നത്.',
+  q1nc: 'ശീലം പണിയുന്നത് ദിവസവും കുറേശ്ശെയാണ്, ഒരു ഒഴിവുമാസത്തിലല്ല.',
+  q2p: 'ഒരു ബിസിനസ് ബെസ്റ്റ്സെല്ലറിന്റെ മൂന്ന് അധ്യായം സന വായിച്ചു. പ്രധാന ആശയം കിട്ടി; ബാക്കി ഉദാഹരണത്തിന് മേൽ ഉദാഹരണം. ഈ അധ്യായം എന്ത് പറയുന്നു?',
+  q2a: 'മുഴുവൻ വായിക്കൂ, ഇല്ലെങ്കിൽ കൊടുത്ത പണം പാഴാകും.',
+  q2b: 'അടച്ചുവെക്കൂ: സാരം കിട്ടി. അടുത്ത പുസ്തകം എടുക്കൂ.',
+  q2c: 'ഒന്നാം പേജ് മുതൽ വീണ്ടും തുടങ്ങൂ.',
+  q2y: 'ശരി. പല നോൺ-ഫിക്ഷൻ പുസ്തകങ്ങളും ഒരു കാര്യമേ പറയൂ. അത് കിട്ടിയാൽ മുന്നോട്ട് പോകൂ; തീർത്ത പുസ്തകങ്ങളുടെ എണ്ണം പൊങ്ങച്ചമാണ്.',
+  q2na: 'പണം എങ്ങനെയായാലും പോയി. ഇനിയും ലാഭിക്കാവുന്നത് അവളുടെ സമയമാണ്.',
+  q2nc: 'വീണ്ടും വായന, നിങ്ങളോട് സംസാരിക്കുന്ന ചുരുക്കം മഹത്തായ പുസ്തകങ്ങൾക്കാണ്; സ്വയം ആവർത്തിക്കുന്ന ഒന്നിനല്ല.',
+  q3p: 'ഹിബയ്ക്ക് രണ്ട് കാര്യം പഠിക്കണം: കഫേയ്ക്ക് ഇൻസ്റ്റഗ്രാം പരസ്യം ചെയ്യുന്നത് എങ്ങനെ, തിരക്കുള്ള ദിവസം കാര്യങ്ങൾ പാളുമ്പോൾ ശാന്തയായിരിക്കുന്നത് എങ്ങനെ. “പഴയ പ്രശ്നം, പഴയ പരിഹാരം” അനുസരിച്ച് ഏത് പദ്ധതി ചേരും?',
+  q3a: 'രണ്ടിനും ഒരു പഴയ ക്ലാസിക്.',
+  q3b: 'രണ്ടിനും ഏറ്റവും പുതിയ വൈറൽ പോസ്റ്റുകൾ.',
+  q3c: 'പരസ്യത്തിന് ഒരു പുതിയ ഗൈഡ്; ശാന്തതയ്ക്ക് കാലം പരീക്ഷിച്ച ഒരു പഴയ പുസ്തകം.',
+  q3y: 'ശരി. ഇൻസ്റ്റഗ്രാം പരസ്യം പുതിയ പ്രശ്നമാണ്, അതിന് പുതിയത് വായിക്കൂ. ശാന്തത പുരാതന പ്രശ്നമാണ്; അതിലെ പഴയ ജ്ഞാനമാണ് ഏറ്റവും കൂടുതൽ അരിച്ചെടുക്കപ്പെട്ടത്.',
+  q3na: 'പഴയ പുസ്തകങ്ങൾ എഴുതുമ്പോൾ ഇൻസ്റ്റഗ്രാം ഉണ്ടായിരുന്നില്ല. പുതിയ പ്രശ്നത്തിന് പുതിയ ഉത്തരം വേണം.',
+  q3nb: 'ഏറ്റവും കുറവ് അരിച്ചെടുത്ത വായനയാണ് വൈറൽ പോസ്റ്റുകൾ. ശാന്തത പഴയ പ്രശ്നമാണ്, പരീക്ഷിച്ച പഴയ ഉത്തരങ്ങളുണ്ട്.',
+  p1p: 'ഒരു ഡയറ്റ് ഇൻഫ്ലുവൻസറുടെ ഡസൻകണക്കിന് പുസ്തകങ്ങൾ ജുനൈദ് വായിച്ചു. ഇപ്പോൾ അവരോട് യോജിക്കാത്ത ഏത് ആശയവും അവൻ തള്ളിക്കളയുന്നു. അധ്യായത്തിന്റെ നിർണയം എന്താണ്?',
+  p1a: 'വായന പോരാ. അതേ എഴുത്തുകാരന്റെ കൂടുതൽ പുസ്തകങ്ങൾ വേണം.',
+  p1b: 'ദുർബലമായ ആശയങ്ങളിൽ നിന്നാണ് അവന്റെ അടിത്തറ ആദ്യം പണിതത്; ഇപ്പോൾ അത് എല്ലാ പുതിയതിനെയും അളക്കുന്നു.',
+  p1c: 'വായനയാണ് പ്രശ്നം. അവൻ നിർത്തണം.',
+  p1y: 'അതെ. ധാരാളം വായന ബുദ്ധിക്ക് തുല്യമല്ല. ഉറച്ചതിൽ അടിത്തറ വീണ്ടും പണിയൂ: ഗണിതം, ശാസ്ത്രം, അടിസ്ഥാനങ്ങൾ.',
+  p1na: 'അതേതരം കൂടുതൽ വായിച്ചാൽ ഇളകുന്ന അടിത്തറ കട്ടിയാകുകയേ ഉള്ളൂ. ക്രമവും ഗുണമേന്മയുമാണ് പ്രധാനം.',
+  p1nc: 'വായനയല്ല പ്രശ്നം. തെറ്റായത് ആദ്യം വായിച്ചതാണ്.',
+  p2p: 'വിപണിയിൽ വില എങ്ങനെ നിശ്ചയിക്കപ്പെടുന്നു എന്ന് അൻവറിന് മനസ്സിലാക്കണം. നവലിന്റെ ഉപദേശം അനുസരിച്ച് എവിടെ തുടങ്ങണം?',
+  p2a: 'സാമ്പത്തികരംഗത്തെക്കുറിച്ച് ഒരാളുടെ ചൂടൻ അഭിപ്രായമുള്ള ഒരു വൈറൽ വീഡിയോ.',
+  p2b: 'ഇന്നത്തെ ബിസിനസ് വാർത്തകൾ.',
+  p2c: 'ആഡം സ്മിത്ത്, അല്ലെങ്കിൽ ഒരു അടിസ്ഥാന സാമ്പത്തികശാസ്ത്ര പാഠപുസ്തകം.',
+  p2y: 'അതെ. ആദ്യം ഉറവിടവും അടിസ്ഥാനവും; പുനരാഖ്യാനങ്ങൾ പിന്നീട് മനസ്സിലാകും.',
+  p2na: 'ചൂടൻ അഭിപ്രായം ഒരു പുനരാഖ്യാനത്തിന്റെ പുനരാഖ്യാനമാണ്; ഓരോ ഘട്ടത്തിലും ചായ്‌വ് കൂടും.',
+  p2nb: 'വാർത്ത ഇന്നത്തെ ബഹളമാണ്. ആദ്യം അടിത്തറ പണിയൂ, പിന്നെ വാർത്തയെ അതുവെച്ച് അളക്കൂ.',
+  p3p: 'സമ്പാദ്യത്തെക്കുറിച്ച് ഫൈസൽ ഒരു അധ്യായം വായിച്ചു. അത് മനസ്സിൽ ഉറയ്ക്കാൻ ഏറ്റവും സഹായിക്കുന്നത് എന്ത്?',
+  p3a: 'സ്വന്തം വാക്കുകളിൽ റൂംമേറ്റിന് വിശദീകരിച്ചുകൊടുക്കുക.',
+  p3b: 'തീർത്ത പുസ്തകങ്ങളുടെ എണ്ണത്തിൽ ഒന്ന് കൂട്ടുക.',
+  p3c: 'സമ്പാദ്യത്തെക്കുറിച്ച് മൂന്ന് പുസ്തകം കൂടി വാങ്ങുക.',
+  p3y: 'അതെ. പഠിപ്പിക്കുമ്പോൾ മനസ്സിലാക്കാതെ വയ്യ. ഒരു പാഠം ഉറക്കെ വിശദീകരിക്കുന്ന വിദ്യാർഥികൾ പിന്നീട് അത് നന്നായി ഓർക്കുന്നു.',
+  p3nb: 'തീർത്ത പുസ്തകങ്ങളുടെ എണ്ണം, എന്ത് മനസ്സിൽ നിന്നു എന്നതിനെക്കുറിച്ച് ഒന്നും പറയുന്നില്ല.',
+  p3nc: 'കൂടുതൽ പുസ്തകങ്ങൾ പിന്നീട് സഹായിക്കാം; പക്ഷേ ഇത് ഉറപ്പിക്കുന്നത് വിശദീകരിക്കലാണ്.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: '2023-ൽ, ഏതെങ്കിലും ഒരു ദിവസം, നൂറിൽ ഏകദേശം 16 അമേരിക്കക്കാർ ഇഷ്ടത്തിന് വായിച്ചു.',
+  p4r2: 'ദിവസം ഒരു മണിക്കൂർ വായിച്ചാൽ നിങ്ങൾ കോടിയിൽ ഒരാളാകും.',
+  p4r3: 'ബ്ലഡ്‌ലെറ്റിങ് ഏകദേശം 3,000 വർഷം നിലനിന്നു; അത്രയും കാലം നിലനിന്നാൽ ഒരു ആരോഗ്യ ആശയം ഫലിക്കുമെന്ന് തെളിയും.',
+  p4r4: 'ഒരു പാഠം ഉറക്കെ പഠിപ്പിക്കുന്ന വിദ്യാർഥികൾ പിന്നീടുള്ള പരീക്ഷയിൽ അത് നന്നായി ഓർക്കാറുണ്ട്.',
+  p4w1: 'ശരി. അമേരിക്കൻ ടൈം യൂസ് സർവേയിൽ നിന്നാണ് ഇത്; ആ വായനക്കാരിൽ പകുതിപ്പേർ ഒരു മണിക്കൂറോ അതിലേറെയോ വായിച്ചു.',
+  p4w2: 'തെറ്റ്. ഏതെങ്കിലും ഒരു ദിവസം ഏകദേശം 12-ൽ ഒരു അമേരിക്കക്കാരൻ ഒരു മണിക്കൂറോ അതിലേറെയോ വായിക്കുന്നു. അപൂർവം, പക്ഷേ കോടിയിൽ ഒന്നിന്റെ അടുത്തുപോലുമില്ല.',
+  p4w3: 'തെറ്റ്. കാലത്തിന്റെ അരിപ്പ കടന്നിട്ടും മിക്ക രോഗങ്ങൾക്കും ബ്ലഡ്‌ലെറ്റിങ് തെറ്റായിരുന്നു. പഴയത് നോക്കാനുള്ള ഇടമാണ്, തെളിവല്ല.',
+  p4w4: 'ശരി. പഠിപ്പിച്ച് പഠിക്കുന്നതിനെക്കുറിച്ചുള്ള പഠനങ്ങളിൽ, പാഠം വിശദീകരിച്ച വിദ്യാർഥികൾ പിന്നീട് അത് നന്നായി ഓർത്തു.',
+});
+const PRACTICE = [
+  { id: 'p-foundation', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 1, L('p1y'), [L('p1na'), null, L('p1nc')]) },
+  { id: 'p-source', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 2, L('p2y'), [L('p2na'), L('p2nb'), null]) },
+  { id: 'p-teach', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 0, L('p3y'), [null, L('p3nb'), L('p3nc')]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['f'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['t'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('almanack:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>
