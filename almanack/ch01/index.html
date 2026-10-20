@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Wealth isn't money · The Almanack of Naval Ravikant, Chapter 1">
+<meta property="og:description" content="A 9-minute animated lesson in English and Malayalam: wealth, money and status are three different games, and only one keeps earning while you sleep.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/ch01/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<title>Wealth isn't money · The Almanack of Naval Ravikant</title>
+<meta name="description" content="An animated, narrated lesson on the opening ideas of The Almanack of Naval Ravikant: wealth versus money versus status, renting your time, and productizing yourself. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'സമ്പത്ത് പണമല്ല · The Almanack of Naval Ravikant';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/ymu.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/almanack/ch01/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Wealth isn’t money', kicker: 'PART 1 · WEALTH · CHAPTER 1', sub: 'Three words we mix up, and the one that can set you free',
+  credit: 'A study companion to The Almanack of Naval Ravikant, by Eric Jorgenson',
+  b_intro: 'Title', b_street: 'A bold claim', b_tread: 'Working hard', b_three: 'Three words', b_money: 'Money', b_wealth: 'Wealth',
+  b_q1: 'Quick check', b_status: 'Status', b_pie: 'A bigger pie', b_rent: 'Renting your time', b_check: 'Science check',
+  b_q2: 'Quick check', b_wants: 'What society wants', b_scale: 'At scale', b_prod: 'Productize yourself', b_q3: 'Quick check',
+  b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  naval: 'Naval Ravikant', library: 'a public library', claim: 'A bold claim', street: 'a strange street', years: '5–10 years', again: 'rich again',
+  skill: 'a skill', learn: 'and skills can be learned',
+  faisal: 'Faisal', malappuram: 'from Malappuram', dubai: 'Dubai', hours: '12 hours a day · 6 days a week', orders: 'orders today',
+  earnings: 'AED earned', stop: 'parks the bike: earnings stop', eighty: '80 hours a week', notRich: 'can still mean never rich',
+  what: 'what you work on', who: 'who you work with', when: 'when you move', direction: 'the right direction',
+  wealth: 'Wealth', money: 'Money', status: 'Status', games: 'three different games',
+  dirhams: 'dirhams', did: 'You helped someone tonight…', owe: '…so the world owes you a favour back.',
+  friday: 'Friday', exchange: 'exchange house', home: 'Malappuram', mother: 'his mother', builder: 'builder', grocer: 'grocer', school: 'school fees',
+  moves: 'Money moves time and work from one person to another.',
+  define: 'Wealth keeps earning while you sleep.', midnight: 'midnight', zero: 'AED 0', app: 'delivery app', appOrders: 'orders tonight',
+  kitchen: 'kitchen', shop: 'uncle’s shop', rent: 'rent', assets: 'assets', moneyIs: 'Money pays for things.', wealthIs: 'Wealth produces them, around the clock.',
+  q1p: 'Sort each one: wealth, money or status?',
+  q1r1: 'Rent from a flat you own in Thrissur', q1r2: 'Faisal’s pay for this month’s deliveries',
+  q1r3: 'Arriving at a family wedding in the biggest car', q1r4: 'An app you built that takes bookings overnight',
+  q1w1: 'Wealth: the flat earns rent whether you are awake or not.', q1w2: 'Money: payment for hours already worked.',
+  q1w3: 'Status: it ranks you against others and earns nothing.', q1w4: 'Wealth: code that keeps working while you sleep.',
+  wedding: 'a cousin’s wedding', car: 'the biggest car', ladder: 'a ladder with fixed rungs', shafeeq: 'Shafeeq', up: '+1', down: '−1',
+  zeroSum: 'zero-sum: +1 − 1 = 0',
+  carpenter: 'carpenter', table: 'table', buyer: 'buyer', both: 'both better off', pie: 'the pie grows', positive: 'positive-sum: + and +',
+  attack: 'status players attack builders', honest: 'Wealth made honestly is nothing to be ashamed of.',
+  renting: 'Renting out your time', earn: 'earnings', time: 'time', sleeps: 'asleep', leave: 'leave home', retires: 'retired',
+  equity: 'equity', own: 'Own a piece of something.',
+  sci: 'Science check', rule: 'Is that rule really true?', partly: 'Partly true',
+  spend: 'Spend less than you earn', grow: 'Put the difference into things that grow', nurse: 'nurse', twenty: '20 years',
+  fair: 'Renting your time alone won’t make you rich.', turn: 'Turn part of it into ownership.',
+  streetClaim: 'The street claim', edu: 'good education', english: 'fluent English', network: 'strong network',
+  confident: 'A confident claim, not a guarantee.',
+  wants: 'Build what people want, before anyone knows how.', eighties: '1980s', draft: 'bank draft by post', weeks: 'weeks',
+  counter: 'exchange counter', days: '1–2 days', phone: 'phone app', seconds: 'seconds', built: 'builders rewarded', normal: 'now it’s just normal',
+  kerala: 'Kerala',
+  one: 'one person', scale: 'at scale', thousands: '{n} people', code: 'code', media: 'media', copied: 'copied at almost no cost',
+  prod: 'Productize', yourself: 'yourself', nisha: 'Nisha, teacher, Kozhikode', class: 'one evening class at a time',
+  yourselfTag: 'yourself: her way, her name, her reputation', record: 'recorded', productize: 'productize', buy: 'bought at any hour',
+  sleepsN: 'even while she sleeps', authentic: '1. Does this come from the real me?', scaling: '2. Can it grow without more of my hours?',
+  w1: 'Making money is a skill you can learn.',
+  w2: 'Money moves value between people. Status is a ladder. Wealth earns while you sleep.',
+  w3: 'Renting your time alone won’t make you wealthy: turn part of it into ownership.',
+  w4: 'Build what people want before anyone knows how, in a way only you can, and let it reach many.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'സമ്പത്ത് പണമല്ല', kicker: 'ഭാഗം 1 · സമ്പത്ത് · അധ്യായം 1', sub: 'നമ്മൾ കൂട്ടിക്കുഴയ്ക്കുന്ന മൂന്ന് വാക്കുകൾ, നമ്മളെ സ്വതന്ത്രരാക്കുന്ന ഒന്ന്',
+  credit: 'എറിക് ജോർഗൻസന്റെ The Almanack of Naval Ravikant എന്ന പുസ്തകത്തിന്റെ പഠനസഹായി',
+  b_intro: 'തലക്കെട്ട്', b_street: 'ഒരു വലിയ അവകാശവാദം', b_tread: 'കഠിനാധ്വാനം', b_three: 'മൂന്ന് വാക്കുകൾ', b_money: 'പണം', b_wealth: 'സമ്പത്ത്',
+  b_q1: 'ചെറിയ പരിശോധന', b_status: 'സ്റ്റാറ്റസ്', b_pie: 'വലുതാകുന്ന കേക്ക്', b_rent: 'സമയം വാടകയ്ക്ക്', b_check: 'ശാസ്ത്രീയ പരിശോധന',
+  b_q2: 'ചെറിയ പരിശോധന', b_wants: 'സമൂഹത്തിന് വേണ്ടത്', b_scale: 'വലിയ തോതിൽ', b_prod: 'സ്വയം ഉൽപ്പന്നമാക്കുക', b_q3: 'ചെറിയ പരിശോധന',
+  b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  naval: 'നവൽ രവികാന്ത്', library: 'ഒരു പൊതു ലൈബ്രറി', claim: 'ഒരു വലിയ അവകാശവാദം', street: 'ഏതെങ്കിലും തെരുവ്', years: '5–10 വർഷം', again: 'വീണ്ടും സമ്പന്നൻ',
+  skill: 'ഒരു കഴിവ്', learn: 'കഴിവ് പഠിച്ചെടുക്കാം',
+  faisal: 'ഫൈസൽ', malappuram: 'മലപ്പുറംകാരൻ', dubai: 'ദുബായ്', hours: 'ദിവസം 12 മണിക്കൂർ · ആഴ്ചയിൽ 6 ദിവസം', orders: 'ഇന്നത്തെ ഓർഡറുകൾ',
+  earnings: 'കിട്ടിയ ദിർഹം', stop: 'ബൈക്ക് നിർത്തി: വരുമാനം നിന്നു', eighty: 'ആഴ്ചയിൽ 80 മണിക്കൂർ', notRich: 'എന്നിട്ടും സമ്പന്നനാകണമെന്നില്ല',
+  what: 'എന്ത് ചെയ്യണം', who: 'ആരോടൊപ്പം', when: 'എപ്പോൾ', direction: 'ശരിയായ ദിശ',
+  wealth: 'സമ്പത്ത്', money: 'പണം', status: 'സ്റ്റാറ്റസ്', games: 'മൂന്ന് വ്യത്യസ്ത കളികൾ',
+  dirhams: 'ദിർഹം', did: 'ഇന്ന് രാത്രി നീ ഒരാളെ സഹായിച്ചു…', owe: '…അതുകൊണ്ട് ലോകം നിനക്ക് ഒരു ഉപകാരം തിരിച്ചുതരാനുണ്ട്.',
+  friday: 'വെള്ളിയാഴ്ച', exchange: 'എക്സ്ചേഞ്ച്', home: 'മലപ്പുറം', mother: 'ഉമ്മ', builder: 'കെട്ടിടപ്പണിക്കാരൻ', grocer: 'പലചരക്ക് കട', school: 'സ്കൂൾ ഫീസ്',
+  moves: 'പണം സമയവും അധ്വാനവും ഒരാളിൽ നിന്ന് മറ്റൊരാളിലേക്ക് നീക്കുന്നു.',
+  define: 'ഉറങ്ങുമ്പോഴും സമ്പാദിക്കുന്നതാണ് സമ്പത്ത്.', midnight: 'അർധരാത്രി', zero: 'AED 0', app: 'ഡെലിവറി ആപ്പ്', appOrders: 'ഇന്ന് രാത്രിയിലെ ഓർഡറുകൾ',
+  kitchen: 'അടുക്കള', shop: 'മാമയുടെ കട', rent: 'വാടക', assets: 'ആസ്തികൾ', moneyIs: 'പണം കൊണ്ട് വാങ്ങുന്നു.', wealthIs: 'സമ്പത്ത് രാവും പകലും ഉണ്ടാക്കുന്നു.',
+  q1p: 'ഓരോന്നും തരംതിരിക്കൂ: സമ്പത്തോ, പണമോ, സ്റ്റാറ്റസോ?',
+  q1r1: 'തൃശ്ശൂരിൽ സ്വന്തമായുള്ള ഫ്ലാറ്റിൽ നിന്നുള്ള വാടക', q1r2: 'ഈ മാസത്തെ ഡെലിവറികൾക്ക് ഫൈസലിന് കിട്ടിയ കൂലി',
+  q1r3: 'കുടുംബക്കല്യാണത്തിന് ഏറ്റവും വലിയ കാറിൽ എത്തുന്നത്', q1r4: 'രാത്രി മുഴുവൻ ബുക്കിങ്ങുകൾ എടുക്കുന്ന, നിങ്ങൾ ഉണ്ടാക്കിയ ഒരു ആപ്പ്',
+  q1w1: 'സമ്പത്ത്: നിങ്ങൾ ഉണർന്നിരുന്നാലും ഇല്ലെങ്കിലും ഫ്ലാറ്റ് വാടക നേടുന്നു.', q1w2: 'പണം: ചെയ്തുകഴിഞ്ഞ മണിക്കൂറുകൾക്കുള്ള കൂലി.',
+  q1w3: 'സ്റ്റാറ്റസ്: മറ്റുള്ളവരുമായി താരതമ്യം ചെയ്യുന്നു, ഒന്നും സമ്പാദിക്കുന്നില്ല.', q1w4: 'സമ്പത്ത്: നിങ്ങൾ ഉറങ്ങുമ്പോഴും പ്രവർത്തിക്കുന്ന കോഡ്.',
+  wedding: 'ഒരു ബന്ധുവിന്റെ കല്യാണം', car: 'ഏറ്റവും വലിയ കാർ', ladder: 'എണ്ണം തികഞ്ഞ പടികളുള്ള ഏണി', shafeeq: 'ഷഫീഖ്', up: '+1', down: '−1',
+  zeroSum: 'സീറോ-സം: +1 − 1 = 0',
+  carpenter: 'ആശാരി', table: 'മേശ', buyer: 'വാങ്ങുന്നയാൾ', both: 'രണ്ടുപേർക്കും നേട്ടം', pie: 'കേക്ക് വലുതാകുന്നു', positive: 'പോസിറ്റീവ്-സം: + ഉം + ഉം',
+  attack: 'സ്റ്റാറ്റസ് കളിക്കാർ ഉണ്ടാക്കുന്നവരെ ആക്രമിക്കുന്നു', honest: 'സത്യസന്ധമായി ഉണ്ടാക്കിയ സമ്പത്തിൽ ലജ്ജിക്കാൻ ഒന്നുമില്ല.',
+  renting: 'സമയം വാടകയ്ക്ക് കൊടുക്കുന്നു', earn: 'വരുമാനം', time: 'കാലം', sleeps: 'ഉറക്കം', leave: 'നാട്ടിൽ ലീവ്', retires: 'വിരമിച്ചു',
+  equity: 'ഇക്വിറ്റി', own: 'നിങ്ങൾ എന്തെങ്കിലും സ്വന്തമാക്കണം.',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', rule: 'ആ നിയമം ശരിക്കും ശരിയാണോ?', partly: 'ഭാഗികമായി ശരി',
+  spend: 'വരുമാനത്തേക്കാൾ കുറച്ച് ചെലവാക്കുക', grow: 'ബാക്കി വളരുന്ന കാര്യങ്ങളിൽ ഇടുക', nurse: 'നഴ്സ്', twenty: '20 വർഷം',
+  fair: 'സമയം വാടകയ്ക്ക് കൊടുക്കൽ മാത്രം സമ്പന്നനാക്കില്ല.', turn: 'അതിന്റെ ഒരു ഭാഗം ഉടമസ്ഥതയാക്കൂ.',
+  streetClaim: 'തെരുവ് അവകാശവാദം', edu: 'നല്ല വിദ്യാഭ്യാസം', english: 'നല്ല ഇംഗ്ലീഷ്', network: 'ശക്തമായ ബന്ധവലയം',
+  confident: 'ആത്മവിശ്വാസമുള്ള അവകാശവാദം, ഉറപ്പല്ല.',
+  wants: 'ആളുകൾക്ക് വേണ്ടത്, മറ്റാർക്കും അറിയുന്നതിന് മുൻപേ ഉണ്ടാക്കൂ.', eighties: '1980-കൾ', draft: 'തപാലിൽ ബാങ്ക് ഡ്രാഫ്റ്റ്', weeks: 'ആഴ്ചകൾ',
+  counter: 'എക്സ്ചേഞ്ച് കൗണ്ടർ', days: '1–2 ദിവസം', phone: 'ഫോൺ ആപ്പ്', seconds: 'നിമിഷങ്ങൾ', built: 'കണ്ടെത്തിയവർക്ക് പ്രതിഫലം', normal: 'ഇപ്പോൾ വെറും സാധാരണം',
+  kerala: 'കേരളം',
+  one: 'ഒരാൾ', scale: 'വലിയ തോതിൽ', thousands: '{n} പേർ', code: 'കോഡ്', media: 'മീഡിയ', copied: 'ഏതാണ്ട് ചെലവില്ലാതെ പകർത്താം',
+  prod: 'ഉൽപ്പന്നമാക്കുക', yourself: 'നിങ്ങളെത്തന്നെ', nisha: 'നിഷ, അധ്യാപിക, കോഴിക്കോട്', class: 'ഒരു സായാഹ്ന ക്ലാസ്, പിന്നെ അടുത്തത്',
+  yourselfTag: 'നിങ്ങൾ: അവരുടെ രീതി, പേര്, വിശ്വാസ്യത', record: 'റെക്കോർഡ് ചെയ്തു', productize: 'ഉൽപ്പന്നമാക്കൽ', buy: 'ഏത് സമയത്തും വാങ്ങുന്നു',
+  sleepsN: 'അവർ ഉറങ്ങുമ്പോൾ പോലും', authentic: '1. ഇത് ശരിക്കും എന്നിൽ നിന്നാണോ?', scaling: '2. എന്റെ കൂടുതൽ മണിക്കൂറില്ലാതെ വളരുമോ?',
+  w1: 'പണമുണ്ടാക്കൽ പഠിച്ചെടുക്കാവുന്ന ഒരു കഴിവാണ്.',
+  w2: 'പണം ആളുകൾക്കിടയിൽ മൂല്യം നീക്കുന്നു. സ്റ്റാറ്റസ് ഒരു ഏണി. ഉറങ്ങുമ്പോഴും സമ്പാദിക്കുന്നതാണ് സമ്പത്ത്.',
+  w3: 'സമയം വാടകയ്ക്ക് കൊടുക്കൽ മാത്രം സമ്പന്നനാക്കില്ല: അതിന്റെ ഒരു ഭാഗം ഉടമസ്ഥതയാക്കൂ.',
+  w4: 'ആളുകൾക്ക് വേണ്ടത് മറ്റാരും അറിയും മുൻപേ, നിങ്ങളുടെ രീതിയിൽ ഉണ്ടാക്കൂ; അത് ഒരുപാട് പേരിലേക്ക് എത്തട്ടെ.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 1, title: L('title'), minutes: LANG === 'ml' ? 11 : 9, language: LANG, next: '../index.html#contents' };
+const fmt = (k, n) => L(k).replace('{n}', n);
+
+/* ---------- meaning colours (style.json look.meaning) ---------- */
+const WEALTH = EV.gold, MONEY = '#7cc79d', STATUS = '#e2694f', TIME = '#5fb3cf', SCI = '#9c84d8';
+
+/* ---------- chapter helpers (prefixed a1 to stay clear of engine globals) ---------- */
+// A label that fades in at t (beat clock, always a mark).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+const a1Ground = (p, y = 760, fill = '#0c1114') => {
+  mk('rect', { x: -10, y, width: 1620, height: 900 - y + 20, fill }, p);
+  path(p, `M0 ${y}H1600`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+};
+// Faisal: the man puppet in a navy rider's jacket.
+const a1Faisal = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#2f5f8f', '#21466b');
+// A banknote centred on (0,0).
+function a1Note(p, { x = 0, y = 0, s = 1, o = 1, color = MONEY, label = 'AED' } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -58, y: -30, width: 116, height: 60, rx: 6, fill: '#173126', stroke: color, 'stroke-width': 2.5 }, g);
+  mk('circle', { cx: 0, cy: 0, r: 16, fill: 'none', stroke: color, 'stroke-width': 2 }, g);
+  T(g, label, { x: -36, y: -12, size: 13, fill: color, weight: 600, anchor: 'middle', font: SANS });
+  return g;
+}
+const a1Coin = (p, x, y, r = 16, color = WEALTH, o = 1) => {
+  const g = G(p, { x, y, o });
+  mk('circle', { cx: 0, cy: 0, r, fill: color }, g);
+  mk('circle', { cx: 0, cy: 0, r: r * .68, fill: 'none', stroke: '#080c0f', 'stroke-width': 2, opacity: .4 }, g);
+  return g;
+};
+// A gold sapling: trunk and branches drawn on, coins on the tips. Returns { g, parts: [[el, start offset, dur, key]] }.
+function a1Tree(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o }), parts = [];
+  const trunk = path(g, 'M0 0C4 -50 -6 -96 0 -150', { stroke: WEALTH, 'stroke-width': 7 }, { d: 0 });
+  parts.push([trunk, 0, .7, 'd']);
+  const br = [[-1, -70, -80, -118], [1, -96, 74, -150], [-1, -124, -58, -196], [1, -138, 38, -214], [0, -150, -4, -222]];
+  br.forEach(([sd, y0, x1, y1], i) => {
+    const b = path(g, `M0 ${y0}Q${x1 * .4} ${(y0 + y1) / 2 - 10} ${x1} ${y1}`, { stroke: WEALTH, 'stroke-width': 4 }, { d: 0 });
+    parts.push([b, .45 + i * .12, .5, 'd']);
+    const c = a1Coin(g, x1, y1, 15, EV.goldHi, 1); put(c, { s: 0 });
+    parts.push([c, .9 + i * .12, .45, 's']);
+  });
+  path(g, 'M-60 0H60', { stroke: EV.goldLo, 'stroke-width': 3, opacity: .7 });
+  g._parts = parts;
+  return g;
+}
+// A delivery scooter with Faisal riding (side view, wheels at y=0). Wheels are groups that spin.
+function a1Rider(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  const wheel = cx => {
+    const w = G(g, { x: cx, y: -34 });
+    mk('circle', { cx: 0, cy: 0, r: 34, fill: '#11161a', stroke: '#3a3f3a', 'stroke-width': 8 }, w);
+    path(w, 'M-20 0H20M0 -20V20', { stroke: EV.gold, 'stroke-width': 2, opacity: .7 });
+    return w;
+  };
+  g._w = [wheel(-92), wheel(96)];
+  path(g, 'M-120 -50Q-110 -96 -40 -100L40 -96Q70 -94 86 -60L120 -46Q128 -40 118 -34H-118Z', { fill: '#1d2a30', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .6 });
+  path(g, 'M70 -94L104 -176', { stroke: '#8f9ea4', 'stroke-width': 7 });                  // steering column
+  path(g, 'M92 -180H124', { stroke: '#8f9ea4', 'stroke-width': 7 });
+  mk('rect', { x: -176, y: -210, width: 104, height: 96, rx: 8, fill: '#16343a', stroke: EV.gold, 'stroke-width': 2.5 }, g);  // delivery box
+  path(g, 'M-176 -176H-72', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .5 });
+  // rider
+  path(g, 'M-34 -108L-6 -60L36 -58L48 -18', { stroke: '#28303f', 'stroke-width': 22 });   // leg
+  path(g, 'M-38 -110L-6 -206', { stroke: '#2f5f8f', 'stroke-width': 40 });               // jacket
+  path(g, 'M-14 -190L50 -172L98 -176', { stroke: '#2f5f8f', 'stroke-width': 15 });        // arm
+  mk('circle', { cx: 100, cy: -176, r: 9, fill: EV.skinM }, g);
+  mk('circle', { cx: 6, cy: -238, r: 26, fill: EV.skinM }, g);
+  path(g, 'M-24 -240Q-24 -276 8 -276Q38 -276 36 -244L30 -236H-20Z', { fill: '#1b2226', stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .6 });  // helmet
+  path(g, 'M20 -250H38', { stroke: '#5fb3cf', 'stroke-width': 5, opacity: .8 });          // visor
+  return g;
+}
+// Generic city skyline period of width W (towers and one spire), baseline at y=0.
+function a1Skyline(p, W = 1600, { color = '#121a1f', edge = '#2b3632', spire = true } = {}) {
+  const g = G(p);
+  const B = [[0, 160, 120], [130, 240, 90], [230, 190, 140], [380, 310, 70], [460, 220, 110], [580, 150, 160], [750, 270, 90], [850, 200, 130],
+    [990, 330, 80], [1080, 180, 150], [1240, 260, 100], [1350, 210, 120], [1480, 170, 120]];
+  B.forEach(([bx, h, w]) => {
+    const x = bx * W / 1600;
+    mk('rect', { x, y: -h, width: w, height: h, fill: color, stroke: edge, 'stroke-width': 2 }, g);
+    for (let wy = -h + 24; wy < -20; wy += 34) for (let wx = x + 16; wx < x + w - 14; wx += 30)
+      if (((wx * 7 + wy * 3) % 5) < 2) mk('rect', { x: wx, y: wy, width: 8, height: 12, fill: EV.goldHi, opacity: .35 }, g);
+  });
+  if (spire) path(g, `M${700 * W / 1600} 0L${716 * W / 1600} -380L${720 * W / 1600} -470L${724 * W / 1600} -380L${740 * W / 1600} 0Z`, { fill: color, stroke: edge, 'stroke-width': 2 });
+  return g;
+}
+// A Kerala house with a sloping tiled roof, base at y=0.
+function a1House(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -110, y: -120, width: 220, height: 120, fill: '#1b2226', stroke: '#3a3f3a', 'stroke-width': 3 }, g);
+  path(g, 'M-150 -110L0 -200L150 -110Z', { fill: '#7a3b26', stroke: '#a3543a', 'stroke-width': 3 });
+  path(g, 'M-120 -128L120 -128M-90 -146L90 -146M-60 -164L60 -164', { stroke: '#a3543a', 'stroke-width': 2, opacity: .6 });
+  mk('rect', { x: -26, y: -76, width: 52, height: 76, fill: '#3a2f27' }, g);
+  mk('rect', { x: -86, y: -90, width: 40, height: 34, fill: '#0b1720', stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .5 }, g);
+  mk('rect', { x: 46, y: -90, width: 40, height: 34, fill: '#0b1720', stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .5 }, g);
+  path(g, 'M170 0C150 -60 196 -110 180 -170M180 -170C150 -190 130 -176 120 -160M180 -170C210 -194 228 -180 238 -166M180 -170C176 -204 196 -214 206 -210', { stroke: '#4f7a4a', 'stroke-width': 5 });  // coconut palm
+  return g;
+}
+// A phone, centred on (0,0), with a screen group g._scr (clipped to the screen by its size).
+function a1Phone(p, { x = 0, y = 0, s = 1, o = 1, w = 150, h = 280 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 22, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 3 }, g);
+  mk('rect', { x: -w / 2 + 10, y: -h / 2 + 26, width: w - 20, height: h - 52, rx: 6, fill: '#142026' }, g);
+  mk('rect', { x: -18, y: -h / 2 + 10, width: 36, height: 6, rx: 3, fill: '#2b3632' }, g);
+  g._scr = G(g);
+  return g;
+}
+// A small person icon (head and shoulders) centred on its feet.
+function a1Icon(p, x, y, color = EV.dim, s = 1, o = 1) {
+  const g = G(p, { x, y, s, o });
+  mk('circle', { cx: 0, cy: -46, r: 14, fill: color }, g);
+  path(g, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: color });
+  return g;
+}
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    evGlow(g, 800, 480, 230, 'Gold', .4);
+    const tree = a1Tree(g, { x: 800, y: 610, s: 1.15 });
+    evSeq(tree._parts.map(([e, t0, d, k]) => [e, m('title') + t0, d, k]), D);
+    // the coins glint in turn, one clock from the title
+    const coins = tree._parts.filter(q => q[3] === 's').map(q => q[0]);
+    prog(q => { const t = q * D - m('title') - 1.6; coins.forEach((c, i) => { const u = ((t * .45 + i / coins.length) % 1 + 1) % 1; put(c.firstChild, { o: t < 0 ? 1 : .75 + .25 * Math.cos(u * Math.PI * 2) }); }); }, 0, D, lin);
+    const k = evText(g, L('kicker'), { x: 800, y: 150, size: 26, fill: EV.gold, weight: 500, ls: '6' });
+    const ti = evText(g, L('title'), { x: 800, y: 250, size: 96, font: SERIF, weight: 600, maxW: 1360, o: 0 });
+    tw(g, { o: 1 }, .15, .9, out);
+    put(ti, { y: 270 }); tw(ti, { y: 250, o: 1 }, m('title'), .7, out);
+    const sub = evText(scene, L('sub'), { x: 800, y: 730, size: 38, fill: EV.dim, o: 0, maxW: 1300, font: SERIF, italic: true });
+    put(sub, { y: 750 }); tw(sub, { y: 730, o: 1 }, m('sub'), .7, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 822, size: 24, fill: '#7a7466', o: 0, maxW: 1400 });
+    show(cr, m('sub'), 1);
+    tw(g, { o: 0 }, D - .6, .5); hide(sub, D - .6, .5); hide(cr, D - .6, .5);
+    void k;
+  }],
+
+  ['street', 'b_street', (m, D) => {
+    const p = panel(0);
+    // the boy in the library
+    const lib = G(p);
+    const shelf = G(lib, { x: 120, y: 260 });
+    mk('rect', { x: 0, y: 0, width: 300, height: 420, fill: '#11181c', stroke: '#3a3324', 'stroke-width': 6 }, shelf);
+    [100, 200, 300].forEach(yy => path(shelf, `M0 ${yy}H300`, { stroke: '#3a3324', 'stroke-width': 6 }));
+    const spines = ['#7a3b26', '#2b7c78', '#c9a84c', '#3f6f95', '#6f4a7a', '#a3543a', '#4f7a4a'];
+    for (let r = 0; r < 4; r++) for (let i = 0; i < 11; i++) mk('rect', { x: 12 + i * 25, y: r * 100 + 22 + (i % 3) * 6, width: 18, height: 72 - (i % 3) * 6, fill: spines[(i + r * 3) % 7], opacity: .75 }, shelf);
+    evGlow(lib, 520, 300, 140, 'Warm', .7);
+    path(lib, 'M520 200V240M500 240H540L530 262H510Z', { stroke: '#d9b46a', 'stroke-width': 3, fill: '#d9b46a' });
+    const boy = evPerson(lib, { kind: 'm', x: 560, y: 760, s: .62 });
+    evRecolor(boy, '#c9c3b2', '#9d9686');
+    mk('rect', { x: 34, y: -30, width: 46, height: 34, rx: 3, fill: '#3f6f95', stroke: EV.gold, 'stroke-width': 1.5 }, boy.armR._lo);
+    evArm(boy, 1, -40, -60, 0, .01);
+    evBreathe(boy, D);
+    a1Ground(lib, 760);
+    lab(lib, 'naval', 560, 815, .3, { size: 28, fill: EV.dim });
+    lab(lib, 'library', 270, 225, m('library'), { size: 30, fill: EV.goldHi });
+    tw(lib, { o: 0 }, m('claim'), .6);
+    // the claim
+    lab(p, 'claim', 800, 120, m('claim'), { size: 46, font: SERIF, fill: EV.gold, italic: true });
+    // the street: buildings, a road, the man dropped onto it
+    const st = G(p, { o: 0 });
+    tw(st, { o: 1 }, m('claim'), .6);
+    const sky = G(st, { x: 160, y: 640 });
+    a1Skyline(sky, 760, { spire: false });
+    mk('rect', { x: 100, y: 640, width: 880, height: 120, fill: '#0e1418' }, st);
+    for (let x = 130; x < 960; x += 90) path(st, `M${x} 700H${x + 46}`, { stroke: EV.dim, 'stroke-width': 4, opacity: .5 });
+    const man = evPerson(p, { kind: 'm', x: 540, y: -460, s: .78 });
+    evRecolor(man, '#3a4048', '#2a2f35');
+    tw(man.g, { y: 760 }, m('drop'), .9, back);
+    evMood(man, 'calm', 0, .01);
+    lab(p, 'street', 540, 810, m('drop'), { size: 28, fill: EV.dim });
+    // five to ten years: a calendar flips its years on one clock, a gold glow rises
+    const cal = G(p, { x: 820, y: 330, o: 0 });
+    mk('rect', { x: -70, y: -60, width: 140, height: 130, rx: 10, fill: '#141b1f', stroke: EV.gold, 'stroke-width': 2.5 }, cal);
+    mk('rect', { x: -70, y: -60, width: 140, height: 34, rx: 10, fill: EV.goldLo }, cal);
+    const yr = T(cal, '1', { x: 0, y: 44, size: 56, fill: EV.ink, weight: 600, anchor: 'middle', font: SANS });
+    show(cal, m('years'), .4);
+    evCount(yr, t => Math.max(1, Math.min(10, 1 + Math.floor((t - m('years')) * 3.2))), D);
+    lab(p, 'years', 820, 450, m('years'), { size: 34, fill: EV.goldHi, weight: 600 });
+    const halo = evGlow(p, 540, 560, 210, 'Gold', 0);
+    p.insertBefore(halo, man.g);
+    tw(halo, { o: .9 }, m('years'), 1.4);
+    evMood(man, 'smile', m('years'), .5);
+    lab(p, 'again', 820, 495, m('wealthy'), { size: 28, fill: EV.dim, italic: true, font: SERIF });
+    // the skill card
+    const card = G(p, { x: 1260, y: 470, o: 0 });
+    mk('rect', { x: -230, y: -200, width: 460, height: 400, rx: 18, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .6 }, card);
+    tw(card, { o: 1 }, m('skill'), .45);
+    const sk = evText(card, L('skill'), { x: 0, y: -90, size: 70, font: SERIF, weight: 600, fill: EV.gold, o: 0 });
+    show(sk, m('skill'), .4);
+    mk('rect', { x: -170, y: -30, width: 340, height: 22, rx: 11, fill: '#23251f' }, card);
+    const bar = put(mk('rect', { x: -170, y: -30, width: 340, height: 22, rx: 11, fill: EV.gold }, card), { s: 1 });
+    bar.setAttribute('transform-origin', '-170 -19');
+    prog(q => { const t = q * D; bar.setAttribute('width', 340 * io(evU(t, m('skill'), 2.2)) + 0.01); }, 0, D, lin);
+    const book = G(card, { y: 90, o: 0 });
+    path(book, 'M0 -36Q-50 -50 -96 -36V40Q-50 26 0 40Z', { fill: '#16343a', stroke: EV.gold, 'stroke-width': 2 });
+    path(book, 'M0 -36Q50 -50 96 -36V40Q50 26 0 40Z', { fill: '#16343a', stroke: EV.gold, 'stroke-width': 2 });
+    show(book, m('learn'), .4);
+    lab(card, 'learn', 0, 172, m('learn'), { size: 30, fill: EV.ink, maxW: 420 });
+  }],
+
+  ['treadmill', 'b_tread', (m, D) => {
+    const p = panel(0);
+    // one clock for the ride: steady speed until he parks, then a 1.2 s ease to a stop
+    const V = 320, ts = m('stop'), R = 1.2;
+    const dist = t => t < ts ? V * t : V * ts + V * Math.min(R, t - ts) * (1 - Math.min(R, t - ts) / (2 * R));
+    const far = G(p, { x: 0, y: 560 });
+    const farIn = G(far);
+    a1Skyline(farIn, 1600); put(G(farIn, { x: 1600 }), {}); a1Skyline(farIn.lastChild, 1600);
+    mk('rect', { x: -10, y: 560, width: 1620, height: 200, fill: '#0e1418' }, p);
+    path(p, 'M0 560H1600M0 742H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+    const dashes = G(p, { y: 652 });
+    for (let x = -100; x < 1800; x += 120) path(dashes, `M${x} 0H${x + 64}`, { stroke: EV.dim, 'stroke-width': 5, opacity: .55 });
+    const bike = a1Rider(p, { x: 520, y: 700, s: 1 });
+    prog(q => {
+      const t = q * D, d = dist(t);
+      put(dashes, { x: -(d % 120) });
+      put(farIn, { x: -((d * .18) % 1600) });
+      bike._w.forEach(w => put(w, { r: d / 34 * 57.3 }));
+      put(bike, { y: 700 + (t < ts ? Math.sin(t * 9) * 1.6 : 0) });
+    }, 0, D, lin);
+    a1Ground(p, 760);
+    lab(p, 'faisal', 520, 336, m('faisal'), { size: 36, weight: 600 });
+    lab(p, 'malappuram', 520, 376, m('malappuram'), { size: 26, fill: EV.dim });
+    lab(p, 'dubai', 1180, 120, m('dubai'), { size: 52, font: SERIF, fill: EV.gold, italic: true });
+    // hours card: a clock that spins and a delivery count, both on one clock from the mark, frozen when he parks
+    const hc = G(p, { x: 1180, y: 300, o: 0 });
+    show(hc, m('hours'), .4);
+    evText(hc, L('hours'), { x: 0, y: -100, size: 28, fill: TIME, maxW: 640 });
+    mk('circle', { cx: -170, cy: 0, r: 52, fill: 'none', stroke: TIME, 'stroke-width': 3 }, hc);
+    const hand = path(G(hc, { x: -170 }), 'M0 0V-40', { stroke: TIME, 'stroke-width': 4 });
+    const cnt = T(hc, '0', { x: 80, y: 18, size: 64, fill: EV.ink, weight: 600, anchor: 'middle', font: SANS });
+    evText(hc, L('orders'), { x: 80, y: 58, size: 24, fill: EV.dim });
+    const run = t => Math.max(0, Math.min(t, ts) - m('hours'));
+    prog(q => put(hand.parentNode, { r: run(q * D) * 240 }), 0, D, lin);
+    evCount(cnt, t => 23 + Math.floor(run(t) * 1.4), D);
+    // earnings bar grows only while he rides
+    const eb = G(p, { x: 120, y: 150, o: 0 });
+    show(eb, m('hours'), .4);
+    evText(eb, L('earnings'), { x: 0, y: 0, size: 26, fill: MONEY, anchor: 'start' });
+    mk('rect', { x: 0, y: 16, width: 520, height: 18, rx: 9, fill: '#1a231f' }, eb);
+    const eBar = mk('rect', { x: 0, y: 16, width: 1, height: 18, rx: 9, fill: MONEY }, eb);
+    prog(q => eBar.setAttribute('width', 30 + run(q * D) * 26), 0, D, lin);
+    const stopL = lab(p, 'stop', 120, 96, m('stop'), { size: 28, fill: STATUS, anchor: 'start' });
+    tw(eBar, { c_fill: '#4d6a5a' }, m('stop'), .5);
+    // eighty hours: the counters fade; the claim takes their place
+    tw(hc, { o: 0 }, m('eighty'), .25); tw(eb, { o: 0 }, m('eighty'), .25); hide(stopL, m('eighty'), .25);
+    const e80 = lab(p, 'eighty', 1180, 330, m('eighty', .25), { size: 54, font: SERIF, weight: 600, fill: TIME });
+    const nr = lab(p, 'notRich', 1180, 390, m('never'), { size: 32, fill: EV.ink, italic: true, font: SERIF });
+    // what, who, when: three pills under the road
+    [['what', 330], ['who', 800], ['when', 1270]].forEach(([k, x]) => {
+      const g = G(p, { x, y: 830, o: 0 });
+      const w = Math.max(210, evW(L(k), ML ? 26 : 30) + 70);
+      mk('rect', { x: -w / 2, y: -34, width: w, height: 60, rx: 30, fill: '#151d21', stroke: EV.gold, 'stroke-width': 2 }, g);
+      evText(g, L(k), { x: 0, y: 6, size: 30, fill: EV.goldHi });
+      put(g, { y: 850 }); tw(g, { o: 1, y: 830 }, m(k), .45, out);
+    });
+    // direction: a compass needle swings and settles on a gold star
+    hide(e80, m('direction'), .25); hide(nr, m('direction'), .25);
+    const cp = G(p, { x: 1180, y: 250, o: 0 });
+    show(cp, m('direction'), .4);
+    mk('circle', { cx: 0, cy: 0, r: 70, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2.5 }, cp);
+    const needle = G(cp);
+    path(needle, 'M0 -58L10 0L0 10L-10 0Z', { fill: EV.goldHi });
+    path(needle, 'M0 58L10 0L0 -10L-10 0Z', { fill: '#3a3f3a' });
+    prog(q => { const v = q * D - m('direction'); put(needle, { r: v < 0 ? -120 : 45 - 165 * Math.exp(-v * 2.2) * Math.cos(v * 7) }); }, 0, D, lin);
+    const star = G(p, { x: 1330, y: 120, o: 0 });
+    path(star, 'M0 -22L6 -6L22 -6L9 4L14 20L0 10L-14 20L-9 4L-22 -6L-6 -6Z', { fill: EV.goldHi });
+    show(star, m('direction'), .5);
+    lab(p, 'direction', 1180, 370, m('direction', .25), { size: 30, fill: EV.goldHi });
+  }],
+
+  ['three', 'b_three', (m, D) => {
+    const p = panel(0);
+    const ghosts = [320, 800, 1280].map(x => { const g = G(p, { x, y: 470, o: 0 }); mk('rect', { x: -200, y: -230, width: 400, height: 440, rx: 22, fill: 'none', stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '8 10' }, g); show(g, .3, .5); return g; });
+    void ghosts;
+    const card = (x, key, col, t) => {
+      const g = G(p, { x, y: 470, o: 0 });
+      mk('rect', { x: -200, y: -230, width: 400, height: 440, rx: 22, fill: '#10171b', stroke: col, 'stroke-width': 2.5 }, g);
+      evGlow(g, 0, -60, 150, key === 'wealth' ? 'Gold' : key === 'money' ? 'calm' : 'anger', .35);
+      evText(g, L(key), { x: 0, y: 150, size: 58, font: SERIF, weight: 600, fill: col });
+      put(g, { y: 500, s: .94 }); tw(g, { o: 1, y: 470, s: 1 }, t, .5, out);
+      return g;
+    };
+    const cw = card(320, 'wealth', WEALTH, m('wealth'));
+    const tr = a1Tree(cw, { x: 0, y: 60, s: .9 });
+    evSeq(tr._parts.map(([e, t0, d, k]) => [e, m('wealth') + t0 * .7, d, k]), D);
+    const cm = card(800, 'money', MONEY, m('money'));
+    const n1 = a1Note(cm, { x: -14, y: -54, s: 1.3 }), n2 = a1Note(cm, { x: 14, y: -30, s: 1.3 });
+    put(n1, { r: -8 }); put(n2, { r: 6 });
+    const cs = card(1280, 'status', STATUS, m('status'));
+    path(cs, 'M-60 40V-170M60 40V-170', { stroke: STATUS, 'stroke-width': 6 });
+    [-130, -80, -30, 20].forEach(y => path(cs, `M-60 ${y}H60`, { stroke: STATUS, 'stroke-width': 5 }));
+    path(cs, 'M-26 -186L-34 -214L-14 -200L0 -222L14 -200L34 -214L26 -186Z', { fill: EV.goldHi });
+    // three games: the cards turn slightly apart and a caption lands
+    tw(cw, { r: -3 }, m('games'), .6); tw(cs, { r: 3 }, m('games'), .6);
+    const gm = lab(p, 'games', 800, 800, m('games'), { size: 40, font: SERIF, italic: true, fill: EV.dim });
+    tw(gm, { y: 790 }, m('games'), .6, out);
+  }],
+
+  ['money', 'b_money', (m, D) => {
+    const p = panel(0);
+    a1Ground(p, 760);
+    // a building door, Faisal hands over dinner, the customer pays
+    const door = G(p, { x: 1130, y: 760 });
+    mk('rect', { x: -110, y: -420, width: 220, height: 420, fill: '#141b1f', stroke: '#2b3632', 'stroke-width': 6 }, door);
+    mk('circle', { cx: -88, cy: -210, r: 7, fill: EV.gold }, door);
+    const cus = evPerson(p, { kind: 'f', x: 1030, y: 760, s: .92 });
+    evRecolor(cus, '#6f4a7a', '#4f3458');
+    const fz = a1Faisal(p, { x: 620, y: 760, s: .92 });
+    evBreathe(fz, D); evBreathe(cus, D, 1, .8);
+    const bag = G(p, { x: 700, y: 520 });
+    mk('rect', { x: -32, y: -26, width: 64, height: 56, rx: 6, fill: '#3a2f27', stroke: EV.gold, 'stroke-width': 1.5 }, bag);
+    path(bag, 'M-16 -26Q0 -48 16 -26', { stroke: EV.gold, 'stroke-width': 2 });
+    evArm(fz, 1, -50, -20, 0, .01);
+    evArm(fz, 1, -78, -6, m('deliver'), .6);
+    tw(bag, { x: 930 }, m('deliver'), .9, io);
+    evArm(cus, -1, 60, 10, m('deliver') + .5, .5);
+    evMood(cus, 'smile', m('dirhams'));
+    const note = a1Note(p, { x: 940, y: 520, s: .9, o: 0, label: 'AED' });
+    tw(note, { o: 1 }, m('dirhams'), .3);
+    tw(note, { x: 700, y: 500 }, m('dirhams'), .9, io);
+    evMood(fz, 'smile', m('did'));
+    lab(p, 'dirhams', 735, 456, m('dirhams'), { size: 30, fill: MONEY });
+    // the note becomes a thank-you note from society
+    const big = G(p, { x: 800, y: 210, o: 0 });
+    mk('rect', { x: -470, y: -110, width: 940, height: 210, rx: 14, fill: '#122019', stroke: MONEY, 'stroke-width': 2.5 }, big);
+    mk('circle', { cx: -390, cy: -10, r: 46, fill: 'none', stroke: MONEY, 'stroke-width': 2.5 }, big);
+    T(big, 'AED', { x: -390, y: 2, size: 26, fill: MONEY, weight: 600, anchor: 'middle', font: SANS });
+    tw(big, { o: 1 }, m('did'), .5);
+    const l1 = evText(big, L('did'), { x: 60, y: -26, size: 36, font: SERIF, italic: true, fill: EV.ink, o: 0, maxW: 720 });
+    const l2 = evText(big, L('owe'), { x: 60, y: 46, size: 36, font: SERIF, italic: true, fill: MONEY, o: 0, maxW: 720 });
+    show(l1, m('did'), .45); show(l2, m('owe'), .45);
+    // Friday: the money goes home
+    const q = panel(m('friday'));
+    put(q, { o: 0 }); show(q, m('friday'), .4);
+    const sea = G(q);
+    mk('rect', { x: -10, y: 560, width: 1620, height: 360, fill: 'url(#evSea)' }, sea);
+    path(sea, 'M0 560H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+    const dxb = G(q, { x: 70, y: 560, s: .42 }); a1Skyline(dxb, 1100);
+    lab(q, 'dubai', 300, 610, m('friday'), { size: 28, fill: EV.dim });
+    lab(q, 'friday', 300, 150, m('friday'), { size: 44, font: SERIF, italic: true, fill: EV.gold });
+    const ex = G(q, { x: 560, y: 470, o: 0 });
+    mk('rect', { x: -80, y: -60, width: 160, height: 90, rx: 8, fill: '#141b1f', stroke: MONEY, 'stroke-width': 2.5 }, ex);
+    mk('rect', { x: -96, y: 30, width: 192, height: 20, rx: 4, fill: '#23302a' }, ex);
+    path(ex, 'M-50 -20H50M-50 4H20', { stroke: MONEY, 'stroke-width': 3, opacity: .7 });
+    show(ex, m('exchange'), .4);
+    lab(q, 'exchange', 560, 556, m('exchange'), { size: 28, fill: MONEY });
+    mk('rect', { x: 860, y: 560, width: 760, height: 70, fill: '#14201a' }, q);
+    path(q, 'M860 560H1600', { stroke: '#4f7a4a', 'stroke-width': 2, opacity: .6 });
+    a1House(q, { x: 1130, y: 560, s: .9 });
+    lab(q, 'home', 1130, 610, m('home'), { size: 30, fill: EV.goldHi });
+    const flight = path(q, 'M560 440C700 230 950 230 1090 390', { stroke: MONEY, 'stroke-width': 2, 'stroke-dasharray': '8 10', opacity: .6 }, { d: 0 });
+    draw(flight, m('exchange'), 1.2);
+    const fn = a1Note(q, { x: 300, y: 450, s: .7, o: 0, label: 'AED' });
+    tw(fn, { o: 1 }, m('friday'), .3);
+    tw(fn, { x: 560, y: 450 }, m('friday'), Math.max(.5, m('exchange') - m('friday')), io);
+    const fl = flight.getTotalLength();
+    const fly = Math.max(.6, m('home') - m('exchange') - .1);
+    prog(qq => { const pt = flight.getPointAtLength(qq * fl); put(fn, { x: pt.x, y: pt.y, r: (1 - qq) * -8 }); }, m('exchange') + .1, fly, io);
+    const rupee = a1Note(q, { x: 1090, y: 390, s: .7, o: 0, label: '₹' });
+    tw(fn, { o: 0 }, m('home'), .3); tw(rupee, { o: 1 }, m('home'), .3);
+    // Umma pays the builder, the grocer and the school fees
+    const um = evPerson(q, { kind: 'f', x: 930, y: 560, s: .55, o: 0 });
+    evRecolor(um, '#4a3f5e', '#352c45'); evScarf(um, '#e8dcc8');
+    show(um.g, m('mother'), .45);
+    tw(rupee, { x: 960, y: 450, o: 0 }, m('mother'), .7, io);
+    lab(q, 'mother', 930, 664, m('mother'), { size: 28 });
+    const dest = [['builder', 1420, 250], ['grocer', 1420, 400], ['school', 1420, 550]];
+    dest.forEach(([k, x, y]) => {
+      const ic = G(q, { x, y, o: 0 });
+      mk('circle', { cx: 0, cy: 0, r: 46, fill: '#10171b', stroke: MONEY, 'stroke-width': 2 }, ic);
+      if (k === 'builder') path(ic, 'M-22 14H22M-14 14V-6H14V14M-22 -6L0 -24L22 -6', { stroke: MONEY, 'stroke-width': 3 });
+      if (k === 'grocer') path(ic, 'M-22 -10H22L16 18H-16ZM-10 -10Q-10 -26 0 -26Q10 -26 10 -10', { stroke: MONEY, 'stroke-width': 3 });
+      if (k === 'school') path(ic, 'M-24 -6L0 -18L24 -6L0 6ZM-14 0V14Q0 22 14 14V0', { stroke: MONEY, 'stroke-width': 3 });
+      show(ic, m(k), .35);
+      lab(q, k, x, y + 78, m(k), { size: 26, fill: EV.ink });
+      const c = a1Coin(q, 960, 450, 12, MONEY, 0);
+      tw(c, { o: 1 }, m(k), .2);
+      tw(c, { x, y }, m(k), .8, io);
+      tw(c, { o: 0 }, m(k) + .8, .3);
+    });
+    const mv = evText(q, L('moves'), { x: 800, y: 850, size: 38, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 1400 });
+    show(mv, m('moves'), .6);
+  }],
+
+  ['wealth', 'b_wealth', (m, D) => {
+    const p = panel(0);
+    mk('rect', { x: -10, y: -10, width: 1620, height: 920, fill: 'url(#evSky)' }, p);
+    evGlow(p, 120, 110, 120, 'Gold', .3);
+    mk('circle', { cx: 120, cy: 110, r: 26, fill: '#e8dcb5', opacity: .85 }, p);
+    const hd = evText(p, L('define'), { x: 800, y: 120, size: 50, font: SERIF, weight: 600, fill: EV.gold, o: 0, maxW: 1150 });
+    show(hd, m('define'), .5);
+    // midnight: a clock; its hand runs through the night on one clock from the mark
+    const ck = G(p, { x: 260, y: 300, o: 0 });
+    show(ck, m('midnight'), .4);
+    mk('circle', { cx: 0, cy: 0, r: 56, fill: '#10171b', stroke: TIME, 'stroke-width': 3 }, ck);
+    for (let i = 0; i < 12; i++) path(ck, `M0 -50V-42`, { stroke: TIME, 'stroke-width': 3, transform: `rotate(${i * 30})` });
+    const hh = path(G(ck), 'M0 4V-30', { stroke: EV.ink, 'stroke-width': 5 }), mh = path(G(ck), 'M0 4V-44', { stroke: TIME, 'stroke-width': 3 });
+    prog(q => { const v = Math.max(0, q * D - m('midnight')); put(mh.parentNode, { r: v * 90 }); put(hh.parentNode, { r: v * 7.5 }); }, 0, D, lin);
+    lab(p, 'midnight', 260, 400, m('midnight'), { size: 28, fill: TIME });
+    // Faisal asleep: earnings at zero
+    const bed = G(p, { x: 260, y: 640, o: 0 });
+    show(bed, m('midnight'), .5);
+    mk('rect', { x: -160, y: -30, width: 320, height: 46, rx: 10, fill: '#2a2320' }, bed);
+    mk('rect', { x: -160, y: -58, width: 80, height: 30, rx: 12, fill: '#d6d0bf' }, bed);
+    path(bed, 'M-160 16V44M160 16V44', { stroke: '#2a2320', 'stroke-width': 10 });
+    mk('circle', { cx: -118, cy: -64, r: 22, fill: EV.skinM }, bed);
+    path(bed, 'M-140 -66Q-140 -90 -116 -88Q-96 -86 -98 -70Q-112 -80 -140 -66Z', { fill: EV.hair });
+    path(bed, 'M-126 -60Q-120 -56 -114 -60', { stroke: '#1a0f0a', 'stroke-width': 2.5 });
+    path(bed, 'M-96 -30Q-90 -78 -40 -76Q60 -82 140 -64Q156 -60 156 -30Z', { fill: '#2f5f8f', stroke: EV.gold, 'stroke-width': 1.4, 'stroke-opacity': .35 });
+    const zz = G(bed, { x: -120, y: -110 });
+    const zs = [0, 1, 2].map(i => T(zz, 'z', { x: i * 18, y: -i * 22, size: 22 + i * 6, fill: TIME, weight: 600, anchor: 'middle', font: SANS, o: 0 }));
+    prog(q => { const t = q * D - m('midnight'); zs.forEach((z, i) => put(z, { o: t < 0 ? 0 : .3 + .7 * Math.max(0, Math.sin(t * 2 - i * .8)) })); }, 0, D, lin);
+    const zero = lab(p, 'zero', 260, 740, m('zero'), { size: 44, weight: 600, fill: MONEY });
+    tw(zero, { c_fill: '#4d6a5a' }, m('zero') + .4, .6);
+    // the app keeps taking orders
+    const ph = a1Phone(p, { x: 660, y: 470, o: 0 });
+    show(ph, m('app'), .4);
+    const oc = T(ph._scr, '0', { x: 0, y: -60, size: 34, fill: EV.ink, weight: 600, anchor: 'middle', font: SANS });
+    const oCap = evText(ph._scr, L('appOrders'), { x: 0, y: -24, size: 15, fill: EV.dim, maxW: 120, o: 0 });
+    show(oCap, m('orders'), .4);
+    evCount(oc, t => t < m('app') ? 1204 : 1204 + (t - m('app')) * 37, D, evNum);
+    const pings = [0, 1, 2, 3].map(i => { const c = G(ph._scr, { x: 0, y: 30 + i * 0, o: 0 }); mk('rect', { x: -52, y: -16, width: 104, height: 32, rx: 8, fill: '#1f2f2a', stroke: MONEY, 'stroke-width': 1.5 }, c); path(c, 'M-36 0H20', { stroke: MONEY, 'stroke-width': 3, opacity: .7 }); return c; });
+    prog(q => { const t = q * D - m('app'); pings.forEach((c, i) => { const u = ((t * .7 + i / 4) % 1 + 1) % 1; put(c, { y: 100 - u * 110, o: t < 0 ? 0 : Math.sin(u * Math.PI) }); }); }, 0, D, lin);
+    lab(p, 'app', 660, 650, m('app'), { size: 28 });
+    // the kitchen keeps cooking
+    const kt = G(p, { x: 1000, y: 520, o: 0 });
+    show(kt, m('kitchen'), .4);
+    mk('rect', { x: -110, y: 0, width: 220, height: 90, rx: 8, fill: '#1b2226', stroke: '#3a3f3a', 'stroke-width': 3 }, kt);
+    path(kt, 'M-70 0V-40H70V0M-80 -40H80', { stroke: EV.gold, 'stroke-width': 4 });
+    evGlow(kt, 0, 90, 70, 'Warm', .8);
+    const steam = [0, 1, 2].map(i => path(kt, `M${-36 + i * 36} -50Q${-46 + i * 36} -80 ${-36 + i * 36} -100Q${-26 + i * 36} -120 ${-36 + i * 36} -140`, { stroke: EV.dim, 'stroke-width': 4, opacity: 0 }));
+    prog(q => { const t = q * D - m('kitchen'); steam.forEach((s, i) => { const u = ((t * .6 + i / 3) % 1 + 1) % 1; put(s, { y: -u * 30, o: t < 0 ? 0 : .6 * Math.sin(u * Math.PI) }); }); }, 0, D, lin);
+    lab(p, 'kitchen', 1000, 650, m('kitchen'), { size: 28 });
+    // the uncle's shop earns rent with nobody at the counter
+    const sh = G(p, { x: 1350, y: 610, o: 0 });
+    show(sh, m('shop'), .4);
+    mk('rect', { x: -110, y: -190, width: 220, height: 190, fill: '#1b2226', stroke: '#3a3f3a', 'stroke-width': 3 }, sh);
+    path(sh, 'M-126 -190L-110 -230H110L126 -190Z', { fill: '#7a3b26' });
+    for (let y = -170; y < -10; y += 16) path(sh, `M-90 ${y}H90`, { stroke: '#3a3f3a', 'stroke-width': 3 });
+    lab(p, 'shop', 1350, 650, m('shop'), { size: 28 });
+    const jar = G(p, { x: 1500, y: 560, o: 0 });
+    path(jar, 'M-28 -40V30Q-28 44 -14 44H14Q28 44 28 30V-40', { stroke: WEALTH, 'stroke-width': 3, fill: '#141b1f' });
+    show(jar, m('rent'), .3);
+    const rc = [0, 1, 2].map(() => a1Coin(p, 1500, 470, 10, WEALTH, 0));
+    prog(q => { const t = q * D - m('rent'); rc.forEach((c, i) => { const u = ((t * .8 + i / 3) % 1 + 1) % 1; put(c, { y: 470 + u * 100, o: t < 0 ? 0 : Math.min(1, Math.sin(u * Math.PI) * 2) }); }); }, 0, D, lin);
+    lab(p, 'rent', 1500, 450, m('rent'), { size: 26, fill: WEALTH });
+    // assets: one bracket over the three
+    const br = path(p, 'M560 700V720H1540V700', { stroke: WEALTH, 'stroke-width': 3 }, { d: 0 });
+    draw(br, m('assets'), .6);
+    lab(p, 'assets', 1050, 765, m('assets'), { size: 36, font: SERIF, weight: 600, fill: WEALTH });
+    const ml_ = evText(p, L('moneyIs'), { x: 790, y: 855, size: 32, font: SERIF, italic: true, fill: MONEY, o: 0, maxW: 640, anchor: 'end' });
+    const wl = evText(p, L('wealthIs'), { x: 810, y: 855, size: 32, font: SERIF, italic: true, fill: WEALTH, o: 0, maxW: 700, anchor: 'start' });
+    show(ml_, m('moneyIs'), .5); show(wl, m('wealthIs'), .5);
+  }],
+
+  ['q1', 'b_q1', () => { panel(0); }, { ask: done => quiz(SCREEN, [{
+    id: 'c-three', prompt: [L('q1p')], build: grid([
+      { parts: [L('q1r1')], ans: ['w'], why: L('q1w1') },
+      { parts: [L('q1r2')], ans: ['m'], why: L('q1w2') },
+      { parts: [L('q1r3')], ans: ['s'], why: L('q1w3') },
+      { parts: [L('q1r4')], ans: ['w'], why: L('q1w4') },
+    ], [['w', L('wealth'), WEALTH, 'W'], ['m', L('money'), MONEY, 'M'], ['s', L('status'), STATUS, 'S']], { multi: false, text: true }),
+  }], done) }],
+
+  ['status', 'b_status', (m, D) => {
+    const p = panel(0);
+    lab(p, 'status', 800, 110, m('status'), { size: 54, font: SERIF, weight: 600, fill: STATUS });
+    // the wedding: string lights twinkle on one clock from the mark, cars line up
+    const wd = G(p, { o: 0 });
+    show(wd, m('wedding'), .5);
+    const bulbs = [];
+    for (let i = 0; i <= 18; i++) { const x = 70 + i * 38, y = 200 + Math.sin(i / 18 * Math.PI) * 50; bulbs.push(evDot(wd, x, y, 6, i % 2 ? EV.goldHi : '#e78fa8')); }
+    path(wd, 'M70 200Q412 300 754 200', { stroke: EV.dim, 'stroke-width': 1.5, opacity: .5 });
+    prog(q => { const t = q * D - m('wedding'); bulbs.forEach((b, i) => put(b, { o: t < 0 ? 1 : .35 + .65 * (.5 + .5 * Math.sin(t * 3 + i * 1.3)) })); }, 0, D, lin);
+    path(wd, 'M90 300V700M734 300V700M60 300H764', { stroke: '#3a3324', 'stroke-width': 8 });
+    lab(p, 'wedding', 412, 350, m('wedding'), { size: 30, fill: EV.goldHi });
+    a1Ground(p, 740);
+    const car = (x, w, col, o) => { const g = G(p, { x, y: 730, o }); path(g, `M${-w / 2} -6V${-w * .16}L${-w * .36} ${-w * .2}L${-w * .24} ${-w * .36}H${w * .2}L${w * .34} ${-w * .2}L${w / 2} ${-w * .16}V-6Z`, { fill: col }); [-w * .3, w * .3].forEach(cx => mk('circle', { cx, cy: 0, r: w * .09, fill: '#11161a', stroke: '#555', 'stroke-width': 3 }, g)); return g; };
+    const c1 = car(200, 170, '#3a4048', 0), c2 = car(390, 170, '#4a3f5e', 0), cB = car(600, 260, '#8a7a5a', 0);
+    show(c1, m('wedding'), .5); show(c2, m('wedding'), .5); show(cB, m('wedding'), .5);
+    const hl = evGlow(p, 600, 660, 150, 'anger', 0);
+    p.insertBefore(hl, cB);
+    tw(hl, { o: 1 }, m('car'), .6);
+    pulse(cB, m('car'), 1.08);
+    lab(p, 'car', 600, 800, m('car'), { size: 28, fill: STATUS });
+    // the ladder: fixed rungs, one person per rung
+    const LX = 1180, rungs = [230, 350, 470, 590, 710];
+    const ld = G(p);
+    const rails = path(ld, `M${LX - 90} 160V770M${LX + 90} 160V770`, { stroke: STATUS, 'stroke-width': 6 }, { d: 0 });
+    draw(rails, m('ladder'), .7);
+    const rg = rungs.map(y => { const r = path(ld, `M${LX - 90} ${y}H${LX + 90}`, { stroke: STATUS, 'stroke-width': 5 }, { d: 0 }); draw(r, m('ladder') + .3, .4); return r; });
+    void rg;
+    const folk = rungs.map((y, i) => a1Icon(p, LX, y - 4, i === 2 ? EV.dim : '#5a564c', .8, 0));
+    folk.forEach(f => show(f, m('ladder') + .5, .4));
+    lab(p, 'ladder', LX, 830, m('ladder'), { size: 28, fill: EV.dim });
+    const sf = folk[2], above = folk[1];
+    tw(sf.firstChild, { c_fill: EV.goldHi }, m('shafeeq'), .4); tw(sf.lastChild, { c_fill: EV.goldHi }, m('shafeeq'), .4);
+    const sn = lab(p, 'shafeeq', LX + 130, 470, m('shafeeq'), { size: 30, fill: EV.goldHi, anchor: 'start' });
+    tw(sf, { y: rungs[1] - 4, x: LX - 40 }, m('up'), .7, io);
+    tw(sn, { y: 350 }, m('up'), .7, io);
+    tw(above, { x: LX + 40 }, m('up'), .4);
+    lab(p, 'up', LX - 150, 350, m('up'), { size: 34, weight: 600, fill: EV.good });
+    tw(above, { y: rungs[2] - 4 }, m('down'), .7, io);
+    tw(above.firstChild, { c_fill: STATUS }, m('down'), .4); tw(above.lastChild, { c_fill: STATUS }, m('down'), .4);
+    lab(p, 'down', LX + 150, 480, m('down'), { size: 34, weight: 600, fill: STATUS, anchor: 'start' });
+    const zs = evText(p, L('zeroSum'), { x: LX, y: 880, size: 34, weight: 600, fill: STATUS, o: 0, maxW: 760 });
+    show(zs, m('zero'), .5);
+  }],
+
+  ['pie', 'b_pie', (m, D) => {
+    const p = panel(0);
+    a1Ground(p, 760);
+    const ws = G(p, { o: 0 });
+    path(ws, 'M90 640H430M110 640V760M410 640V760', { stroke: '#4a3d2c', 'stroke-width': 8 });
+    [0, 1, 2].forEach(i => mk('rect', { x: 120 + i * 20, y: 600 - i * 14, width: 260 - i * 40, height: 14, rx: 3, fill: '#7a5a3a', opacity: .8 }, ws));
+    show(ws, .3, .5);
+    const cp = evPerson(p, { kind: 'm', x: 260, y: 760, s: .9, o: 0 });
+    evRecolor(cp, '#7a5a3a', '#5a4028');
+    show(cp.g, m('carpenter'), .45);
+    evBreathe(cp, D);
+    lab(p, 'carpenter', 260, 812, m('carpenter'), { size: 28, fill: EV.dim });
+    const tb = G(p, { x: 450, y: 760, o: 0 });
+    path(tb, 'M-80 -120H80M-80 -132H80V-112H-80ZM-64 -112V0M64 -112V0', { stroke: '#a37a4a', 'stroke-width': 10, fill: '#7a5a3a' });
+    show(tb, m('table'), .45);
+    const tl = lab(p, 'table', 450, 600, m('table'), { size: 28, fill: EV.dim });
+    const by = evPerson(p, { kind: 'f', x: 820, y: 760, s: .9, o: 0 });
+    show(by.g, m('buyer'), .45);
+    evBreathe(by, D, 1, .8);
+    lab(p, 'buyer', 820, 812, m('buyer'), { size: 28, fill: EV.dim });
+    tw(tb, { x: 640 }, m('buyer') + .2, 1, io); tw(tl, { x: 640 }, m('buyer') + .2, 1, io);
+    const nt = a1Note(p, { x: 760, y: 470, s: .8, o: 0 });
+    tw(nt, { o: 1 }, m('cash'), .3);
+    tw(nt, { x: 330, y: 450 }, m('cash'), .9, io);
+    const bo = lab(p, 'both', 540, 270, m('both'), { size: 32, fill: EV.good });
+    hide(bo, m('attack'), .3);
+    [260, 820].forEach(x => { const pl = evText(p, '+', { x, y: 360, size: 64, weight: 600, fill: EV.good, o: 0 }); put(pl, { s: 0 }); tw(pl, { o: 1, s: 1 }, m('both'), .45, back); });
+    evMood(cp, 'smile', m('both')); evMood(by, 'smile', m('both'));
+    // the pie grows: slices keep their shares, the whole gets bigger
+    const pie = G(p, { x: 1260, y: 420, o: 0 });
+    show(pie, m('pie'), .4);
+    const slices = G(pie);
+    const sl = (a0, a1, col) => { const r = 140, x0 = Math.cos(a0) * r, y0 = Math.sin(a0) * r, x1 = Math.cos(a1) * r, y1 = Math.sin(a1) * r; return path(slices, `M0 0L${x0} ${y0}A${r} ${r} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${x1} ${y1}Z`, { fill: col, stroke: '#080c0f', 'stroke-width': 4 }); };
+    sl(-Math.PI / 2, .4, WEALTH); sl(.4, 2.4, '#a8913f'); sl(2.4, Math.PI * 1.5, '#7d6a35');
+    prog(q => { const t = q * D; put(slices, { s: .8 + .55 * out(evU(t, m('pie'), 2.4)) }); }, 0, D, lin);
+    lab(p, 'pie', 1260, 660, m('pie'), { size: 30, fill: WEALTH });
+    lab(p, 'positive', 1260, 710, m('positive'), { size: 30, fill: EV.good, weight: 600 });
+    // status players throw stones at the builder
+    const st = G(p, { o: 0 });
+    show(st, m('attack'), .4);
+    const thr = [[600, 120], [700, 100], [800, 130]];
+    thr.forEach(([x, y]) => a1Icon(st, x, y + 40, STATUS, .6));
+    const darts = thr.map(([x, y], i) => { const d = path(p, `M${x} ${y + 20}Q${(x + 300) / 2} ${y - 40} ${310 + i * 10} ${400}`, { stroke: STATUS, 'stroke-width': 3, 'stroke-dasharray': '10 10', opacity: .8 }, { d: 0 }); return d; });
+    evSeq(darts.map((d, i) => [d, m('attack') + i * .15, .6, 'd']), D);
+    lab(p, 'attack', 700, 60, m('attack'), { size: 28, fill: STATUS });
+    evMood(cp, 'worried', m('attack') + .3);
+    hide(st, m('honest'), .5); darts.forEach(d => hide(d, m('honest'), .5));
+    evMood(cp, 'smile', m('honest'));
+    const hn = evText(p, L('honest'), { x: 800, y: 865, size: 36, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 1400 });
+    show(hn, m('honest'), .6);
+  }],
+
+  ['rent', 'b_rent', (m, D) => {
+    const p = panel(0);
+    const tt = lab(p, 'renting', 230, 110, m('renting'), { size: 46, font: SERIF, weight: 600, fill: TIME, anchor: 'start' });
+    const clk = G(p, { x: 170, y: 95, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 30, fill: 'none', stroke: TIME, 'stroke-width': 3 }, clk);
+    path(clk, 'M0 0V-20M0 0L14 8', { stroke: TIME, 'stroke-width': 3 });
+    show(clk, .3, .4);
+    // axes
+    const X0 = 200, Y0 = 760, X1 = 1420, Y1 = 210;
+    const ax = path(p, `M${X0} ${Y1}V${Y0}H${X1}`, { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 });
+    draw(ax, m('draw'), .8);
+    lab(p, 'earn', X0 - 20, Y1 + 10, m('earn'), { size: 26, fill: EV.dim, anchor: 'end' });
+    lab(p, 'time', X1, Y0 + 44, m('time'), { size: 26, fill: EV.dim, anchor: 'end' });
+    // Faisal's wage: rises on riding days, flat in sleep, flat on leave, flat for good after retiring
+    const pts = [[X0, Y0]]; let x = X0, y = Y0;
+    const ride = () => { x += 44; y -= 22; pts.push([x, y]); }, rest = w => { x += w; pts.push([x, y]); };
+    const marks = {};
+    ride(); marks.sleep0 = x; rest(36); marks.sleep1 = x;
+    for (let i = 0; i < 4; i++) { ride(); rest(36); }
+    marks.leave0 = x; rest(170); marks.leave1 = x;
+    for (let i = 0; i < 4; i++) { ride(); rest(36); }
+    marks.ret0 = x; rest(X1 - 40 - x); marks.ret1 = x;
+    const cum = [0]; for (let i = 1; i < pts.length; i++) cum.push(cum[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+    const total = cum[cum.length - 1];
+    const fAt = xx => { for (let i = 1; i < pts.length; i++) if (pts[i][0] >= xx) { const k = (xx - pts[i - 1][0]) / Math.max(1e-6, pts[i][0] - pts[i - 1][0]); return (cum[i - 1] + k * (cum[i] - cum[i - 1])) / total; } return 1; };
+    const wage = path(p, 'M' + pts.map(q => q.join(' ')).join('L'), { stroke: MONEY, 'stroke-width': 5 }, { d: 0 });
+    tw(wage, { d: fAt(marks.sleep0) }, m('rides'), .8, lin);
+    tw(wage, { d: fAt(marks.leave0) }, m('sleeps'), Math.max(.6, m('leave') - m('sleeps') - .1), lin);
+    tw(wage, { d: fAt(marks.ret0) }, m('leave'), Math.max(.6, m('retires') - m('leave') - .1), lin);
+    tw(wage, { d: 1 }, m('retires'), .8, lin);
+    const yAt = xx => { for (let i = 1; i < pts.length; i++) if (pts[i][0] >= xx) return pts[i][1]; return y; };
+    const moon = G(p, { x: (marks.sleep0 + marks.sleep1) / 2, y: yAt(marks.sleep1) - 60, o: 0 });
+    path(moon, 'M8 -16A18 18 0 1 0 8 16A14 14 0 1 1 8 -16Z', { fill: '#e8dcb5' });
+    show(moon, m('sleeps'), .4);
+    lab(p, 'sleeps', (marks.sleep0 + marks.sleep1) / 2, yAt(marks.sleep1) - 96, m('sleeps'), { size: 24, fill: EV.dim });
+    const pl = G(p, { x: (marks.leave0 + marks.leave1) / 2, y: yAt(marks.leave1) - 60, o: 0 });
+    path(pl, 'M-30 0L30 -4L36 0L30 4ZM-4 -2L-16 -22H-8L10 -2ZM-4 2L-16 22H-8L10 2ZM-28 -1L-34 -12H-28L-20 -1Z', { fill: TIME });
+    show(pl, m('leave'), .4);
+    lab(p, 'leave', (marks.leave0 + marks.leave1) / 2, yAt(marks.leave1) - 96, m('leave'), { size: 24, fill: EV.dim });
+    lab(p, 'retires', (marks.ret0 + X1 - 40) / 2, yAt(marks.ret1) - 30, m('retires'), { size: 26, fill: EV.dim });
+    // equity: a gold curve that keeps climbing through the flats
+    const eq = [];
+    for (let i = 0; i <= 60; i++) { const u = i / 60, ex = X0 + u * (X1 - 40 - X0), ey = Y0 - 40 - 420 * (Math.exp(u * 2.1) - 1) / (Math.exp(2.1) - 1); eq.push(`${ex.toFixed(1)} ${ey.toFixed(1)}`); }
+    const eqL = path(p, 'M' + eq.join('L'), { stroke: WEALTH, 'stroke-width': 6 }, { d: 0 });
+    tw(eqL, { d: .35 }, m('owning'), Math.max(.8, m('climbing') - m('owning')), lin);
+    tw(eqL, { d: 1 }, m('climbing'), 1.6, io);
+    const eqLen = eqL.getTotalLength(), tip = f => eqL.getPointAtLength(f * eqLen);
+    const eqLab = lab(p, 'equity', 0, 0, m('equity'), { size: 36, font: SERIF, weight: 600, fill: WEALTH, anchor: 'end' });
+    prog(q => { const t = q * D, f = t < m('climbing') ? .35 * Math.min(1, evU(t, m('owning'), Math.max(.8, m('climbing') - m('owning')))) : .35 + .65 * io(evU(t, m('climbing'), 1.6)); const pt = tip(Math.max(.02, f)); put(eqLab, { x: pt.x - 14, y: pt.y - 26 }); }, 0, D, lin);
+    tw(tt, { c_fill: STATUS }, m('rentTime'), .4);
+    const own = evText(p, L('own'), { x: X1 - 30, y: 190, size: 40, font: SERIF, weight: 600, italic: true, fill: EV.goldHi, o: 0, maxW: 640, anchor: 'end' });
+    show(own, m('own'), .5);
+  }],
+
+  ['check', 'b_check', (m, D) => {
+    const p = panel(0);
+    // the frame and tag stay for the whole beat, across both panels
+    const keep = G(scene);
+    hide(keep, D - .45, .4);
+    prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+    const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+    draw(fr, m('sci'), 1);
+    const tag = G(keep, { x: 200, y: 60, o: 0 });
+    const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+    mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+    evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+    show(tag, m('sci'), .4);
+    lab(p, 'rule', 800, 160, m('rule'), { size: 40, font: SERIF, italic: true, fill: EV.ink, maxW: 1200 });
+    const stamp = G(p, { x: 1300, y: 210, o: 0, r: -8 });
+    const sw = Math.max(240, evW(L('partly'), 30) + 50);
+    mk('rect', { x: -sw / 2, y: -30, width: sw, height: 60, rx: 8, fill: 'none', stroke: SCI, 'stroke-width': 4 }, stamp);
+    evText(stamp, L('partly'), { x: 0, y: 11, size: 30, weight: 700, fill: SCI });
+    put(stamp, { s: 1.5 }); tw(stamp, { o: 1, s: 1 }, m('partly'), .4, back);
+    // the two habits
+    const row = (key, y, t, icon) => {
+      const g = G(p, { x: 140, y, o: 0 });
+      mk('circle', { cx: 0, cy: 0, r: 34, fill: '#10171b', stroke: WEALTH, 'stroke-width': 2 }, g);
+      icon(g);
+      evPara(g, L(key), { x: 60, y: 10 - (ML ? 0 : 0), size: 32, maxW: 560, anchor: 'start', weight: 500 });
+      put(g, { x: 110 }); tw(g, { o: 1, x: 140 }, t, .45, out);
+      return g;
+    };
+    row('spend', 320, m('spend'), g => path(g, 'M-16 -10H16V12H-16ZM-16 -2H8', { stroke: WEALTH, 'stroke-width': 3 }));
+    row('grow', 440, m('grow'), g => path(g, 'M0 14V-10M0 -2Q-14 -6 -14 -18Q0 -18 0 -6M0 -8Q14 -12 14 -22Q0 -22 0 -10', { stroke: WEALTH, 'stroke-width': 3 }));
+    // the nurse and twenty years of monthly slices that grow
+    const nu = evPerson(p, { kind: 'f', x: 960, y: 620, s: .6, o: 0 });
+    evRecolor(nu, '#d6d9d2', '#a4a8a0');
+    show(nu.g, m('nurse'), .45);
+    lab(p, 'nurse', 960, 660, m('nurse'), { size: 26, fill: EV.dim });
+    const bars = [];
+    for (let i = 0; i < 20; i++) { const h = 14 + 230 * (Math.exp(i / 19 * 2) - 1) / (Math.exp(2) - 1); bars.push(put(mk('rect', { x: 1060 + i * 22, y: 600 - h, width: 16, height: h, rx: 3, fill: WEALTH }, p), { o: 0 })); }
+    evSeq(bars.map((b, i) => [b, m('twenty') + i * .09, .3]), D);
+    lab(p, 'twenty', 1280, 640, m('twenty'), { size: 26, fill: WEALTH });
+    // the fairer rule
+    const fc = G(p, { x: 800, y: 760, o: 0 });
+    mk('rect', { x: -620, y: -60, width: 1240, height: 120, rx: 14, fill: '#14121c', stroke: SCI, 'stroke-width': 2 }, fc);
+    show(fc, m('fair'), .4);
+    lab(fc, 'fair', 0, -12, m('fair'), { size: 34, font: SERIF, weight: 600, maxW: 1160 });
+    lab(fc, 'turn', 0, 36, m('turn'), { size: 30, fill: EV.goldHi, maxW: 1160 });
+    // the street claim, on the same clock
+    const q = panel(m('street'));
+    put(q, { o: 0 }); show(q, m('street'), .4);
+    lab(q, 'streetClaim', 800, 190, m('street'), { size: 48, font: SERIF, italic: true, fill: EV.ink });
+    const man = evPerson(q, { kind: 'm', x: 800, y: 640, s: .7, o: 0 });
+    evRecolor(man, '#3a4048', '#2a2f35');
+    show(man.g, m('street'), .45);
+    [['edu', 400, 380], ['english', 1200, 380], ['network', 800, 720]].forEach(([k, x, y]) => {
+      const g = G(q, { x, y, o: 0 });
+      const w = Math.max(260, evW(L(k), ML ? 27 : 30) + 70);
+      mk('rect', { x: -w / 2, y: -34, width: w, height: 64, rx: 32, fill: '#16131f', stroke: SCI, 'stroke-width': 2 }, g);
+      evText(g, L(k), { x: 0, y: 9, size: 30, fill: EV.ink });
+      put(g, { s: .8 }); tw(g, { o: 1, s: 1 }, m(k), .4, back);
+      const ln = path(q, `M800 470L${x} ${y}`, { stroke: SCI, 'stroke-width': 2, opacity: .5 }, { d: 0 });
+      q.insertBefore(ln, q.firstChild);
+      draw(ln, m(k), .4);
+    });
+    const cf = evText(q, L('confident'), { x: 800, y: 810, size: 38, font: SERIF, italic: true, fill: SCI, o: 0, maxW: 1300 });
+    show(cf, m('confident'), .5);
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    a1Ground(p, 560);
+    const fz = a1Faisal(p, { x: 800, y: 560, s: .9 });
+    evBreathe(fz, D); evMood(fz, 'ask', .4);
+    const th = evThought(p, { x: 900, y: 230, w: 300, h: 150, dx: 120, o: 0 });
+    show(th, .4, .4);
+    const t1 = evText(th._in, '?', { x: 0, y: 18, size: 64, weight: 600, fill: EV.gold });
+    void t1;
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-first', prompt: [L('q2p')],
+    build: choice([[L('q2a')], [L('q2b')], [L('q2c')]], 2, L('q2y'), [L('q2na'), L('q2nb'), null]),
+  }], done) }],
+
+  ['wants', 'b_wants', (m, D) => {
+    const p = panel(0);
+    const hd = evText(p, L('wants'), { x: 800, y: 105, size: 42, font: SERIF, weight: 600, fill: EV.gold, o: 0, maxW: 1400 });
+    show(hd, m('wants'), .5);
+    // two ends: Dubai on the left, a Kerala house on the right
+    const dx = G(p, { x: 40, y: 780, s: .3 }); a1Skyline(dx, 1000);
+    lab(p, 'dubai', 190, 820, .3, { size: 24, fill: EV.dim });
+    const hs = a1House(p, { x: 1440, y: 780, s: .55 });
+    void hs;
+    lab(p, 'kerala', 1440, 820, .3, { size: 24, fill: EV.dim });
+    // three lanes, each with its own trip time; coins loop along them on one clock from their mark
+    const lanes = [
+      { y: 260, k0: 'eighties', icon: 'draft', end: 'weeks', trip: 7 },
+      { y: 440, k0: null, icon: 'counter', end: 'days', trip: 2.2 },
+      { y: 620, k0: null, icon: 'phone', end: 'seconds', trip: .55 },
+    ];
+    const live = [];
+    lanes.forEach(L_ => {
+      const ln = path(p, `M320 ${L_.y}H1280`, { stroke: EV.dim, 'stroke-width': 2, 'stroke-dasharray': '6 12', opacity: .5 }, { d: 0 });
+      const t0 = m(L_.k0 || L_.icon);
+      draw(ln, t0, .6);
+      if (L_.k0) lab(p, L_.k0, 230, L_.y + 12, m(L_.k0), { size: 30, fill: EV.goldHi, anchor: 'end' });
+      const ic = G(p, { x: 800, y: L_.y, o: 0 });
+      mk('rect', { x: -60, y: -42, width: 120, height: 84, rx: 12, fill: '#10171b', stroke: MONEY, 'stroke-width': 2 }, ic);
+      if (L_.icon === 'draft') path(ic, 'M-40 -24H40V24H-40ZM-40 -24L0 4L40 -24', { stroke: MONEY, 'stroke-width': 3 });
+      if (L_.icon === 'counter') path(ic, 'M-40 10H40M-30 10V-24H30V10M-14 -10H14', { stroke: MONEY, 'stroke-width': 3 });
+      if (L_.icon === 'phone') { mk('rect', { x: -16, y: -30, width: 32, height: 60, rx: 6, fill: 'none', stroke: MONEY, 'stroke-width': 3 }, ic); path(ic, 'M-4 20H4', { stroke: MONEY, 'stroke-width': 3 }); }
+      show(ic, m(L_.icon), .4);
+      lab(p, L_.icon, 800, L_.y + 76, m(L_.icon), { size: 26, fill: EV.ink });
+      lab(p, L_.end, 1300, L_.y + 12, m(L_.end), { size: 30, fill: TIME, anchor: 'start', weight: 600 });
+      const c = a1Coin(p, 320, L_.y, 13, MONEY, 0);
+      live.push({ c, t0, trip: L_.trip, y: L_.y, ic });
+    });
+    prog(q => {
+      const t = q * D;
+      live.forEach(({ c, t0, trip }) => {
+        if (t < t0 + .3) { put(c, { o: 0 }); return; }
+        const u = ((t - t0 - .3) / trip) % 1;
+        put(c, { x: 320 + u * 960, o: Math.min(1, u * 12, (1 - u) * 12) });
+      });
+    }, 0, D, lin);
+    // the builders were rewarded: a gold star over each step
+    const stars = live.map(({ y }) => { const s = G(p, { x: 880, y: y - 40, o: 0 }); path(s, 'M0 -16L5 -5L16 -5L7 3L10 15L0 8L-10 15L-7 3L-16 -5L-5 -5Z', { fill: EV.goldHi }); put(s, { s: 0 }); return s; });
+    evSeq(stars.map((s, i) => [s, m('built') + i * .15, .45, 's']), D);
+    stars.forEach((s, i) => tw(s, { o: 1 }, m('built') + i * .15, .2));
+    lab(p, 'built', 800, 180, m('built'), { size: 28, fill: EV.goldHi });
+    // once it works, it's normal: the icons settle to grey
+    live.forEach(({ ic }) => tw(ic.firstChild, { c_stroke: '#4d4a42' }, m('normal'), .8));
+    const nm = evText(p, L('normal'), { x: 800, y: 735, size: 34, font: SERIF, italic: true, fill: EV.dim, o: 0, maxW: 900 });
+    show(nm, m('normal'), .6);
+  }],
+
+  ['scale', 'b_scale', (m, D) => {
+    const p = panel(0);
+    const one = G(p, { x: 230, y: 330, o: 0 });
+    a1Icon(one, 0, 60, EV.ink, 1.6);
+    evGlow(one, 0, -70, 60, 'Gold', .9);
+    path(one, 'M-14 -86Q-22 -110 0 -118Q22 -110 14 -86ZM-8 -80H8', { stroke: EV.goldHi, 'stroke-width': 3, fill: 'none' });
+    show(one, m('one'), .4);
+    lab(p, 'one', 230, 440, m('one'), { size: 28 });
+    const sc = evText(p, L('scale'), { x: 1000, y: 120, size: 60, font: SERIF, weight: 600, fill: EV.gold, o: 0 });
+    show(sc, m('scale'), .5);
+    // a thousand people: 25 rows of 40, one path per row, revealed row by row on one clock
+    const frame_ = path(p, 'M540 170H1460V730H540Z', { stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '8 10' }, { d: 0 });
+    draw(frame_, .3, .8);
+    const grid_ = G(p, { x: 1000, y: 450 });
+    const rows = [];
+    for (let r = 0; r < 25; r++) {
+      let d = '';
+      for (let c = 0; c < 40; c++) { const x = -450 + c * 23, y = -270 + r * 22; d += `M${x - 6} ${y}a6 6 0 1 0 12 0a6 6 0 1 0 -12 0`; }
+      rows.push(put(path(grid_, d, { fill: EV.dim, stroke: 'none' }), { o: 0 }));
+    }
+    evSeq(rows.map((r, i) => [r, m('thousands') + i * .06, .25]), D);
+    const cnt = T(p, '', { x: 1000, y: 790, size: 40, fill: EV.ink, weight: 600, anchor: 'middle', font: SANS });
+    evCount(cnt, t => t < m('thousands') ? '' : t < m('millions') ? fmt('thousands', evNum(Math.min(1000, Math.ceil(evU(t, m('thousands'), 1.5) * 1000)))) : fmt('thousands', evNum(Math.min(1e6, 1000 + Math.ceil(io(evU(t, m('millions'), 1.6)) * 999000)))), D, v => v);
+    // millions: the grid shrinks into a dense field
+    const defs = document.getElementById('evDefs');
+    if (!defs.querySelector('#a1Dots')) { const pt = mk('pattern', { id: 'a1Dots', width: 9, height: 9, patternUnits: 'userSpaceOnUse' }, defs); mk('circle', { cx: 4.5, cy: 4.5, r: 2.2, fill: EV.dim }, pt); }
+    const field = put(mk('rect', { x: 540, y: 170, width: 920, height: 560, fill: 'url(#a1Dots)' }, p), { o: 0 });
+    p.insertBefore(field, grid_);
+    tw(grid_, { s: .14 }, m('millions'), 1.2, io);
+    tw(field, { o: .9 }, m('millions') + .3, 1, io);
+    rows.forEach(r => tw(r, { c_fill: EV.goldHi }, m('millions'), .6));
+    // code and media copy themselves
+    const mkIcon = (x, kind) => {
+      const g = G(p, { x, y: 660, o: 0 });
+      mk('rect', { x: -60, y: -44, width: 120, height: 88, rx: 12, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2.5 }, g);
+      if (kind === 'code') evText(g, '</>', { x: 0, y: 14, size: 40, fill: EV.goldHi, weight: 600 });
+      else path(g, 'M-12 -20L22 0L-12 20Z', { fill: EV.goldHi });
+      return g;
+    };
+    const ci = mkIcon(150, 'code'), mi = mkIcon(330, 'media');
+    show(ci, m('code'), .4); show(mi, m('media'), .4);
+    lab(p, 'code', 150, 740, m('code'), { size: 26 });
+    lab(p, 'media', 330, 740, m('media'), { size: 26 });
+    const copies = [];
+    [150, 330].forEach(x0 => { for (let k = 1; k <= 4; k++) { const c = G(p, { x: x0, y: 660, o: 0 }); mk('rect', { x: -60, y: -44, width: 120, height: 88, rx: 12, fill: 'none', stroke: EV.gold, 'stroke-width': 1.5 }, c); p.insertBefore(c, ci); copies.push([c, x0, k]); } });
+    prog(q => { const t = q * D; copies.forEach(([c, x0, k]) => { const u = io(evU(t, m('copied') + k * .1, .6)); put(c, { x: x0 + k * 10 * u, y: 660 - k * 34 * u, o: u * (.7 - k * .12) }); }); }, 0, D, lin);
+    lab(p, 'copied', 240, 820, m('copied'), { size: 28, fill: EV.goldHi, maxW: 440 });
+  }],
+
+  ['productize', 'b_prod', (m, D) => {
+    const p = panel(0);
+    const w1 = evText(p, L('prod'), { x: 800, y: 125, size: 64, font: SERIF, weight: 600, fill: EV.gold, o: 0, anchor: ML ? 'middle' : 'end' });
+    const w2 = evText(p, L('yourself'), { x: ML ? 800 : 820, y: ML ? 190 : 125, size: 64, font: SERIF, weight: 600, fill: EV.ink, o: 0, anchor: ML ? 'middle' : 'start', italic: true });
+    if (ML) { put(w1, { y: 190 }); put(w2, { y: 115 }); }
+    show(w1, m('prodW'), .5); show(w2, m('yourselfW'), .5);
+    a1Ground(p, 760);
+    // Nisha and her whiteboard
+    const ni = evPerson(p, { kind: 'f', x: 230, y: 760, s: .85, o: 0 });
+    show(ni.g, m('nisha'), .45);
+    evBreathe(ni, D);
+    const wb = G(p, { x: 480, y: 360, o: 0 });
+    mk('rect', { x: -150, y: -90, width: 300, height: 180, rx: 6, fill: '#e8e4d8', stroke: '#8f9ea4', 'stroke-width': 4 }, wb);
+    T(wb, 'مرحبا', { x: 0, y: 22, size: 64, fill: '#1f5e5b', anchor: 'middle', font: 'serif' });
+    show(wb, m('nisha'), .45);
+    evArm(ni, 1, -70, -30, m('nisha') + .3, .5);
+    lab(p, 'nisha', 290, 815, m('nisha'), { size: 26, fill: EV.dim, maxW: 520 });
+    // one evening class at a time: batches come and go on one clock
+    const seats = [0, 1, 2, 3, 4].map(i => a1Icon(p, 420 + i * 60, 740, EV.dim, .75, 0));
+    prog(q => { const t = q * D - m('class'); seats.forEach((s, i) => { if (t < 0 || t > m('record') - m('class')) { put(s, { o: t < 0 ? 0 : Math.max(0, 1 - (t - (m('record') - m('class'))) * 2) }); return; } const u = (t / 2.6) % 1; put(s, { o: Math.min(1, u * 8 - i * .4, (1 - u) * 8) }); }); }, 0, D, lin);
+    lab(p, 'class', 540, 610, m('class'), { size: 26, fill: TIME, maxW: 400 });
+    const yt = G(p, { x: 400, y: 870, o: 0 });
+    const ytw = Math.min(720, evW(L('yourselfTag'), ML ? 24 : 28) + 60);
+    mk('rect', { x: -ytw / 2, y: -30, width: ytw, height: 52, rx: 26, fill: '#151d21', stroke: EV.gold, 'stroke-width': 2 }, yt);
+    evText(yt, L('yourselfTag'), { x: 0, y: 4, size: 28, fill: EV.goldHi, maxW: ytw - 30 });
+    show(yt, m('yourself'), .45);
+    // recorded once, copied out to many
+    const ph = a1Phone(p, { x: 820, y: 430, s: .8, o: 0 });
+    const rec = evDot(ph._scr, 0, 0, 16, '#e2694f', 0);
+    show(ph, m('record'), .4);
+    prog(q => { const t = q * D - m('record'); put(rec, { o: t < 0 ? 0 : .5 + .5 * Math.sin(t * 5) }); }, 0, D, lin);
+    lab(p, 'record', 820, 580, m('record'), { size: 26, fill: EV.dim });
+    const cards = [];
+    for (let k = 0; k < 9; k++) {
+      const c = G(p, { x: 820, y: 430, o: 0 });
+      mk('rect', { x: -56, y: -38, width: 112, height: 76, rx: 10, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2 }, c);
+      path(c, 'M-10 -14L14 0L-10 14Z', { fill: EV.goldHi });
+      cards.push([c, 1060 + (k % 3) * 140, 300 + Math.floor(k / 3) * 120, k]);
+    }
+    prog(q => { const t = q * D; cards.forEach(([c, x, y, k]) => { const u = io(evU(t, m('productize') + k * .12, .55)); put(c, { x: 820 + (x - 820) * u, y: 430 + (y - 430) * u, o: u }); }); }, 0, D, lin);
+    lab(p, 'productize', 1200, 230, m('productize'), { size: 34, font: SERIF, weight: 600, fill: EV.gold });
+    // bought at any hour: chips pop over the cards, one clock from the mark
+    const chips = cards.map(([, x, y], i) => { const g = G(p, { x: x + 40, y: y - 40, o: 0 }); mk('circle', { cx: 0, cy: 0, r: 16, fill: MONEY }, g); T(g, i % 2 ? '₹' : 'AED', { x: 0, y: 5, size: i % 2 ? 18 : 10, fill: '#0b1510', weight: 700, anchor: 'middle', font: SANS }); return g; });
+    prog(q => { const t = q * D - m('buy'); chips.forEach((c, i) => { const v = ((t - i * .37) % 2.4 + 2.4) % 2.4; put(c, { o: t < i * .37 ? 0 : v < .9 ? Math.sin(v / .9 * Math.PI) : 0, s: t < 0 ? .6 : .6 + .5 * Math.min(1, v / .3) }); }); }, 0, D, lin);
+    lab(p, 'buy', 1200, 650, m('buy'), { size: 28, fill: MONEY });
+    const mo = G(p, { x: 120, y: 280, o: 0 });
+    path(mo, 'M10 -24A28 28 0 1 0 10 24A22 22 0 1 1 10 -24Z', { fill: '#e8dcb5' });
+    show(mo, m('sleeps'), .5);
+    evMood(ni, 'calm', m('sleeps'));
+    lab(p, 'sleepsN', 1200, 695, m('sleeps'), { size: 26, fill: EV.dim, italic: true, font: SERIF });
+    // the two questions
+    hide(yt, m('authentic') - .1, .3);
+    const a = evText(p, L('authentic'), { x: 1040, y: 790, size: 34, font: SERIF, weight: 600, fill: EV.goldHi, o: 0, anchor: 'start', maxW: 520 });
+    const b = evText(p, L('scaling'), { x: 1040, y: 845, size: 34, font: SERIF, weight: 600, fill: EV.goldHi, o: 0, anchor: 'start', maxW: 520 });
+    put(a, { x: 1020 }); put(b, { x: 1020 });
+    tw(a, { o: 1, x: 1040 }, m('authentic'), .45, out); tw(b, { o: 1, x: 1040 }, m('scaling'), .45, out);
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    a1Ground(p, 560);
+    const ni = evPerson(p, { kind: 'f', x: 800, y: 560, s: .9 });
+    evBreathe(ni, D); evMood(ni, 'ask', .4);
+    const th = evThought(p, { x: 900, y: 230, w: 300, h: 150, dx: 120, o: 0 });
+    show(th, .4, .4);
+    evText(th._in, '?', { x: 0, y: 18, size: 64, weight: 600, fill: EV.gold });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-product', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 1, L('q3y'), [L('q3na'), null, L('q3nc')]),
+  }], done) }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    evText(p, L('b_wrap'), { x: 800, y: 130, size: 52, font: SERIF, weight: 600, fill: EV.gold });
+    const cols = [EV.goldHi, MONEY, WEALTH, EV.goldHi];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -30, y: 260 + i * 150, o: 0 });
+      mk('circle', { cx: 200, cy: -10, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: 200, y: 1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 260, y: 0, size: 36, maxW: 1150, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q2p: 'Faisal wants to stop depending only on his hours. Which first step fits this chapter best?',
+  q2a: 'Ride four extra hours every day.', q2b: 'Lease a bigger car so the family sees he is doing well.',
+  q2c: 'Set aside part of every month’s pay and buy a share in something that earns.',
+  q2y: 'Yes. That turns some of his rented time into ownership, which keeps working on his flat days.',
+  q2na: 'That is still rented time: the line goes flat again the moment he stops.',
+  q2nb: 'That is the status game. It costs money every month and earns nothing.',
+  q3p: 'Which of these is closest to “productize yourself”?',
+  q3a: 'Nisha adds two more evening batches.',
+  q3b: 'A home cook in Thrissur films her family’s recipes and sells the series under her own name.',
+  q3c: 'A rider copies a famous creator’s videos word for word.',
+  q3y: 'Right. It is authentically hers, and a recording scales to buyers she will never meet.',
+  q3na: 'More batches are more of her own hours. Nothing new scales.',
+  q3nc: 'A copy is not “yourself”. Nobody can beat you at being you, but anyone can out-copy a copy.',
+  p1p: 'Shafeeq says, “I’ll know I’m wealthy when everyone at weddings asks about my car.” Which game is he playing?',
+  p1a: 'The status game.', p1b: 'The wealth game.', p1c: 'The money game.',
+  p1y: 'Yes. He is measuring himself against others: a ladder where someone has to go down for him to go up.',
+  p1nb: 'Wealth is what earns while you sleep. A car people admire earns nothing.',
+  p1nc: 'Money is a record of who owes whom. He is talking about rank, not payment.',
+  p2p: 'Which one keeps earning while its owner sleeps?',
+  p2a: 'An extra overtime shift.', p2b: 'A share in a bakery that ships orders every night.', p2c: 'A gold watch for the next family function.',
+  p2y: 'Right. A share of a working business is equity: it earns whether the owner is awake or not.',
+  p2na: 'Overtime is still rented time. It stops when the shift ends.',
+  p2nc: 'A watch might be admired, but it produces nothing.',
+  p3p: 'A young engineer in Sharjah keeps fixing building cooling systems one call at a time. Which plan best fits “productize yourself”?',
+  p3a: 'Copy the style of the most popular YouTuber in her field exactly.',
+  p3b: 'Turn her own fault-finding method into a small app that building managers across the Gulf can use.',
+  p3c: 'Take a second job at weekends.',
+  p3y: 'Yes. It is her own knowledge (yourself) packaged so that it scales without her (productize).',
+  p3na: 'Copying someone else is not authentic, and it puts her in direct competition.',
+  p3nc: 'A second job is more rented time.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'Nobody can ever build wealth from a salary.',
+  p4r2: 'When you trade money, you are really trading other people’s time and work.',
+  p4r3: 'Status games are positive-sum: everyone can move up together.',
+  p4r4: 'Naval’s claim that he would be rich again within 5–10 years on any street is a proven rule.',
+  p4w1: 'False. Many salaried people build wealth by saving part of their pay and investing it in things that grow.',
+  p4w2: 'True. Money is a record of who owes whom for time and work.',
+  p4w3: 'False. Status is a ladder with fixed rungs: one person’s rise is another’s fall.',
+  p4w4: 'False. It is one confident man’s claim, helped by his education, English and network. Not a tested rule.',
+});
+Object.assign(TXT.ml, {
+  q2p: 'മണിക്കൂറുകളെ മാത്രം ആശ്രയിക്കുന്നത് നിർത്താൻ ഫൈസൽ ആഗ്രഹിക്കുന്നു. ഈ അധ്യായത്തിന് ഏറ്റവും ചേരുന്ന ആദ്യ ചുവട് ഏത്?',
+  q2a: 'ദിവസവും നാല് മണിക്കൂർ കൂടുതൽ ബൈക്ക് ഓടിക്കുക.', q2b: 'കുടുംബം കാണാൻ ഒരു വലിയ കാർ ലീസിന് എടുക്കുക.',
+  q2c: 'ഓരോ മാസത്തെ കൂലിയിൽ നിന്നും ഒരു പങ്ക് മാറ്റിവെച്ച്, വരുമാനമുണ്ടാക്കുന്ന ഒന്നിൽ ഓഹരി വാങ്ങുക.',
+  q2y: 'അതെ. വാടകയ്ക്ക് കൊടുത്ത സമയത്തിന്റെ ഒരു ഭാഗം ഉടമസ്ഥതയാകുന്നു; അവൻ നിർത്തുന്ന ദിവസങ്ങളിലും അത് പ്രവർത്തിക്കും.',
+  q2na: 'അതും വാടകയ്ക്ക് കൊടുത്ത സമയം തന്നെ: നിർത്തുന്ന നിമിഷം വര വീണ്ടും പരക്കും.',
+  q2nb: 'അത് സ്റ്റാറ്റസ് കളിയാണ്. എല്ലാ മാസവും പണം ചെലവാകും, ഒന്നും സമ്പാദിക്കില്ല.',
+  q3p: '“സ്വയം ഉൽപ്പന്നമാക്കുക” എന്നതിനോട് ഏറ്റവും അടുത്തത് ഏത്?',
+  q3a: 'നിഷ രണ്ട് സായാഹ്ന ബാച്ചുകൾ കൂടി എടുക്കുന്നു.',
+  q3b: 'തൃശ്ശൂരിലെ ഒരു വീട്ടമ്മ തന്റെ കുടുംബത്തിലെ പാചകക്കുറിപ്പുകൾ വീഡിയോയാക്കി സ്വന്തം പേരിൽ വിൽക്കുന്നു.',
+  q3c: 'ഒരു റൈഡർ പ്രശസ്തനായ ഒരു ക്രിയേറ്ററുടെ വീഡിയോകൾ വാക്കിന് വാക്ക് പകർത്തുന്നു.',
+  q3y: 'ശരി. അത് അവരുടെ സ്വന്തമാണ്, ഒരിക്കലും കാണാത്ത വാങ്ങുന്നവരിലേക്ക് റെക്കോർഡിങ് വളരുന്നു.',
+  q3na: 'കൂടുതൽ ബാച്ചുകൾ എന്നാൽ അവരുടെ കൂടുതൽ മണിക്കൂറുകൾ. പുതുതായി ഒന്നും വളരുന്നില്ല.',
+  q3nc: 'ഒരു പകർപ്പ് “നിങ്ങൾ” അല്ല. നിങ്ങളാകുന്നതിൽ ആർക്കും നിങ്ങളെ തോൽപ്പിക്കാനാകില്ല, പക്ഷേ ഒരു പകർപ്പിനെ ആർക്കും മറികടക്കാം.',
+  p1p: 'ഷഫീഖ് പറയുന്നു, “കല്യാണങ്ങളിൽ എല്ലാവരും എന്റെ കാറിനെക്കുറിച്ച് ചോദിക്കുമ്പോൾ ഞാൻ സമ്പന്നനായി എന്ന് എനിക്കറിയാം.” അവൻ ഏത് കളിയാണ് കളിക്കുന്നത്?',
+  p1a: 'സ്റ്റാറ്റസ് കളി.', p1b: 'സമ്പത്തിന്റെ കളി.', p1c: 'പണത്തിന്റെ കളി.',
+  p1y: 'അതെ. അവൻ മറ്റുള്ളവരുമായി സ്വയം അളക്കുന്നു: അവൻ കയറണമെങ്കിൽ മറ്റൊരാൾ ഇറങ്ങേണ്ട ഒരു ഏണി.',
+  p1nb: 'ഉറങ്ങുമ്പോഴും സമ്പാദിക്കുന്നതാണ് സമ്പത്ത്. ആളുകൾ പുകഴ്ത്തുന്ന ഒരു കാർ ഒന്നും സമ്പാദിക്കുന്നില്ല.',
+  p1nc: 'ആര് ആർക്ക് കടപ്പെട്ടിരിക്കുന്നു എന്നതിന്റെ കണക്കാണ് പണം. അവൻ സംസാരിക്കുന്നത് സ്ഥാനത്തെക്കുറിച്ചാണ്.',
+  p2p: 'ഉടമ ഉറങ്ങുമ്പോഴും സമ്പാദിച്ചുകൊണ്ടിരിക്കുന്നത് ഏത്?',
+  p2a: 'ഒരു അധിക ഓവർടൈം ഷിഫ്റ്റ്.', p2b: 'എല്ലാ രാത്രിയും ഓർഡറുകൾ അയയ്ക്കുന്ന ഒരു ബേക്കറിയിലെ ഓഹരി.', p2c: 'അടുത്ത കുടുംബച്ചടങ്ങിനായി ഒരു സ്വർണ്ണ വാച്ച്.',
+  p2y: 'ശരി. പ്രവർത്തിക്കുന്ന ഒരു ബിസിനസിലെ ഓഹരി ഇക്വിറ്റിയാണ്: ഉടമ ഉണർന്നിരുന്നാലും ഇല്ലെങ്കിലും അത് സമ്പാദിക്കുന്നു.',
+  p2na: 'ഓവർടൈമും വാടകയ്ക്ക് കൊടുത്ത സമയമാണ്. ഷിഫ്റ്റ് തീരുമ്പോൾ അത് നിൽക്കും.',
+  p2nc: 'വാച്ച് പുകഴ്ത്തപ്പെട്ടേക്കാം, പക്ഷേ അത് ഒന്നും ഉണ്ടാക്കുന്നില്ല.',
+  p3p: 'ഷാർജയിലെ ഒരു യുവ എഞ്ചിനീയർ കെട്ടിടങ്ങളിലെ കൂളിങ് സംവിധാനങ്ങൾ ഓരോ കോളായി ശരിയാക്കുന്നു. “സ്വയം ഉൽപ്പന്നമാക്കുക” എന്നതിന് ഏറ്റവും ചേരുന്ന പ്ലാൻ ഏത്?',
+  p3a: 'തന്റെ മേഖലയിലെ ഏറ്റവും പ്രശസ്തനായ യൂട്യൂബറുടെ ശൈലി അതേപടി പകർത്തുക.',
+  p3b: 'തകരാർ കണ്ടെത്താനുള്ള തന്റെ സ്വന്തം രീതി, ഗൾഫിലെ ബിൽഡിങ് മാനേജർമാർക്ക് ഉപയോഗിക്കാവുന്ന ഒരു ചെറിയ ആപ്പാക്കുക.',
+  p3c: 'വാരാന്ത്യങ്ങളിൽ രണ്ടാമതൊരു ജോലി എടുക്കുക.',
+  p3y: 'അതെ. അത് അവരുടെ സ്വന്തം അറിവാണ് (നിങ്ങൾ), അവരില്ലാതെ വളരുന്ന രീതിയിൽ (ഉൽപ്പന്നമാക്കൽ).',
+  p3na: 'മറ്റൊരാളെ പകർത്തുന്നത് സ്വന്തമല്ല, നേരിട്ടുള്ള മത്സരത്തിലേക്കും നയിക്കും.',
+  p3nc: 'രണ്ടാമത്തെ ജോലി കൂടുതൽ വാടക-സമയമാണ്.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'ശമ്പളത്തിൽ നിന്ന് ആർക്കും ഒരിക്കലും സമ്പത്ത് ഉണ്ടാക്കാനാകില്ല.',
+  p4r2: 'പണം കൈമാറുമ്പോൾ, ശരിക്കും നമ്മൾ മറ്റുള്ളവരുടെ സമയവും അധ്വാനവുമാണ് കൈമാറുന്നത്.',
+  p4r3: 'സ്റ്റാറ്റസ് കളികൾ പോസിറ്റീവ്-സം ആണ്: എല്ലാവർക്കും ഒരുമിച്ച് മുകളിലേക്ക് കയറാം.',
+  p4r4: 'ഏത് തെരുവിലും 5–10 വർഷത്തിനുള്ളിൽ വീണ്ടും സമ്പന്നനാകും എന്ന നവലിന്റെ അവകാശവാദം തെളിയിക്കപ്പെട്ട നിയമമാണ്.',
+  p4w1: 'തെറ്റ്. ഒരുപാട് ശമ്പളക്കാർ കൂലിയുടെ ഒരു ഭാഗം മാറ്റിവെച്ച് വളരുന്ന കാര്യങ്ങളിൽ നിക്ഷേപിച്ച് സമ്പത്ത് ഉണ്ടാക്കുന്നു.',
+  p4w2: 'ശരി. സമയത്തിനും അധ്വാനത്തിനും ആര് ആർക്ക് കടപ്പെട്ടിരിക്കുന്നു എന്നതിന്റെ കണക്കാണ് പണം.',
+  p4w3: 'തെറ്റ്. സ്റ്റാറ്റസ് എണ്ണം തികഞ്ഞ പടികളുള്ള ഏണിയാണ്: ഒരാളുടെ കയറ്റം മറ്റൊരാളുടെ ഇറക്കം.',
+  p4w4: 'തെറ്റ്. വിദ്യാഭ്യാസവും ഇംഗ്ലീഷും ബന്ധവലയവും ഉള്ള ഒരാളുടെ ആത്മവിശ്വാസമുള്ള അവകാശവാദമാണ്. പരീക്ഷിക്കപ്പെട്ട നിയമമല്ല.',
+});
+const PRACTICE = [
+  { id: 'p-status', prompt: [L('p1p')], build: choice([[L('p1b')], [L('p1a')], [L('p1c')]], 1, L('p1y'), [L('p1nb'), null, L('p1nc')]) },
+  { id: 'p-sleep', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 1, L('p2y'), [L('p2na'), null, L('p2nc')]) },
+  { id: 'p-product', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3c')], [L('p3b')]], 2, L('p3y'), [L('p3na'), L('p3nc'), null]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['f'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['t'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['f'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['f'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('almanack:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>

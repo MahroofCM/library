@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Almanack of Naval Ravikant · YMU study book</title>
+<meta name="description" content="Animated, narrated lessons on the ideas in The Almanack of Naval Ravikant, in English and Malayalam, with stories from Kerala and the Gulf: how wealth is built, how judgment is learned, and how happiness is practised.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="The Almanack of Naval Ravikant · animated study book">
+<meta property="og:description" content="Short animated lessons in English and Malayalam, set in Kerala and the Gulf. Chapter 1: wealth isn’t money.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080c0f'/%3E%3Cpath d='M32 52V22M32 36L20 26M32 30L44 20M18 52H46' fill='none' stroke='%23c9a84c' stroke-width='3.5' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='24' r='4' fill='%23e8cf86'/%3E%3Ccircle cx='45' cy='18' r='4' fill='%23e8cf86'/%3E%3Ccircle cx='32' cy='17' r='4' fill='%23e8cf86'/%3E%3C/svg%3E">
+<script>
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+})();
+</script>
+<link rel="stylesheet" href="lib/units.css">
+<link rel="stylesheet" href="lib/contents.css">
+<script src="lib/units.js"></script>
+<script src="lib/contents.js"></script>
+<script src="unit-art.js"></script>
+<link rel="expect" href="#ch01" blocking="render">
+<style>
+@font-face { font-family: "Cormorant Garamond"; src: url("lib/fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Cormorant Garamond"; src: url("lib/fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Cormorant Garamond"; src: url("lib/fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("lib/fonts/outfit-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("lib/fonts/outfit-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("lib/fonts/outfit-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Noto Sans Malayalam"; src: url("lib/fonts/noto-sans-malayalam-malayalam-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Noto Sans Malayalam"; src: url("lib/fonts/noto-sans-malayalam-malayalam-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Noto Serif Malayalam"; src: url("lib/fonts/noto-serif-malayalam-malayalam-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+:root {
+  --page: #05080a; --board: #080c0f; --panel: #10171b; --edge: #2a2b26;
+  --chalk: #efe6d2; --dim: #9d9686; --faint: #4d4a42; --task: #c9a84c; --quiz: #c9a84c; --good: #7cc79d;
+  --ui: "Outfit", "Noto Sans Malayalam", "Avenir Next", Arial, sans-serif;
+  --book: "Cormorant Garamond", "Noto Serif Malayalam", Georgia, serif;
+  --top-bg: rgba(8, 12, 15, .9); --top-line: #1f211d; --lift: rgba(0, 0, 0, .5);
+  color-scheme: dark;
+}
+:root:lang(ml) { --ui: "Noto Sans Malayalam", "Outfit", sans-serif; --book: "Noto Serif Malayalam", "Cormorant Garamond", serif; }
+#cover { background: radial-gradient(60% 55% at 50% 42%, rgba(201, 168, 76, .09), rgba(0, 0, 0, 0) 70%), #080c0f; }
+#cover h1 { font-weight: 600; letter-spacing: -.01em; }
+#cover h1 i { color: var(--task); font-weight: 500; }
+#cover .kicker { letter-spacing: .22em; }
+:root:lang(ml) #cover .kicker, :root:lang(ml) .unit h2 .label, :root:lang(ml) .meta { letter-spacing: 0; }
+#cover .lede { max-width: 34em; }
+.chalk span { color: rgba(201, 168, 76, .2); font-family: var(--book); font-style: italic; }
+.treemark { display: block; margin: 0 auto 14px; width: min(150px, 34vw); overflow: visible; }
+.treemark path { fill: none; stroke: #c9a84c; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1;
+  animation: tm-draw 1.6s cubic-bezier(.16, 1, .3, 1) calc(.2s + var(--i) * .12s) forwards; }
+.treemark circle { fill: #e8cf86; transform-box: fill-box; transform-origin: center; transform: scale(0);
+  animation: tm-pop .5s cubic-bezier(.34, 1.56, .64, 1) calc(1.2s + var(--i) * .12s) forwards, tm-glint 4.5s ease-in-out calc(2.4s + var(--i) * .6s) infinite; }
+@keyframes tm-draw { to { stroke-dashoffset: 0; } }
+@keyframes tm-pop { to { transform: scale(1); } }
+@keyframes tm-glint { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+@media (prefers-reduced-motion: reduce) { .treemark path { animation: none; stroke-dashoffset: 0; } .treemark circle { animation: none; transform: none; } }
+.soon { max-width: 1100px; margin: 8px auto 56px; padding: 0 20px; color: var(--dim); font-size: 15px; line-height: 1.6; }
+.soon b { color: var(--chalk); font-weight: 600; }
+.langsw { display: inline-flex; gap: 2px; padding: 4px; border-radius: 999px; border: 1px solid #2c2b25; background: rgba(16, 22, 25, .8); margin-top: 22px; }
+.langsw button { border: 0; background: transparent; color: var(--dim); font: 500 15px var(--ui); padding: 7px 16px; border-radius: 999px; cursor: pointer;
+  transition: background-color 180ms cubic-bezier(.16, 1, .3, 1), color 180ms, transform 140ms cubic-bezier(.16, 1, .3, 1); }
+.langsw button[aria-pressed="true"] { background: #c9a84c; color: #120f06; font-weight: 600; }
+.langsw button:active { transform: scale(.96); }
+.langsw .ml { font-family: "Noto Sans Malayalam", sans-serif; }
+.credit { color: var(--faint); font-size: 13px; margin-top: 26px; max-width: 34em; line-height: 1.5; }
+</style>
+</head>
+<body>
+<section id="cover">
+  <div class="chalk" aria-hidden="true">
+    <span style="left:7%;top:13%;--d:1.6">wealth earns while you sleep</span>
+    <span style="right:8%;top:17%;--d:1.9">productize yourself</span>
+    <span style="left:5%;bottom:20%;--d:2.2">play long-term games</span>
+    <span style="right:6%;bottom:15%;--d:2.5">happiness is a skill</span>
+  </div>
+  <svg class="treemark" viewBox="0 0 120 110" aria-hidden="true">
+    <path pathLength="1" style="--i:0" d="M60 104C62 80 56 56 60 30"/>
+    <path pathLength="1" style="--i:1" d="M60 70Q40 64 26 48"/><path pathLength="1" style="--i:2" d="M60 56Q80 48 94 30"/>
+    <path pathLength="1" style="--i:3" d="M60 44Q46 30 40 14"/><path pathLength="1" style="--i:4" d="M30 104H90"/>
+    <circle style="--i:1" cx="26" cy="46" r="6"/><circle style="--i:2" cx="95" cy="28" r="6"/><circle style="--i:3" cx="40" cy="12" r="6"/><circle style="--i:4" cx="60" cy="27" r="6"/>
+  </svg>
+  <svg class="mascot draw" id="guide" width="0" height="0" hidden></svg>
+  <p class="kicker" id="kick">The Young Maker Universe · an animated study book</p>
+  <h1 id="ttl">The Almanack of <i>Naval Ravikant</i></h1>
+  <p class="lede" id="lede">Short animated lessons on how wealth is really built, how good judgment is learned, and why happiness is a skill you can practise. Told through stories from Kerala and the Gulf, narrated in English and Malayalam.</p>
+  <div class="acts">
+    <a class="btn go" href="#contents" data-t="open">Open the book<svg viewBox="0 0 16 16"><path d="M6 2.5 11.5 8 6 13.5 4.6 12.1 8.7 8 4.6 3.9z"/></svg></a>
+    <a class="btn quiet" id="resume" hidden></a>
+  </div>
+  <div class="langsw" role="group" aria-label="Language"><button data-l="en">English</button><button class="ml" data-l="ml">മലയാളം</button></div>
+  <p class="meta" id="meta"></p>
+  <p class="credit" id="credit">An independent study companion to <i>The Almanack of Naval Ravikant: A Guide to Wealth and Happiness</i> by Eric Jorgenson (2020), which gathers Naval Ravikant’s ideas. Explanations, stories, examples and pictures here are original. The book itself is free at navalmanack.com.</p>
+</section>
+<main id="contents">
+  <header class="top">
+    <a class="home" href="#book" aria-label="Back to the cover" data-t-label="toCover"><svg class="mascot" id="guideSmall" width="0" height="0" hidden></svg><strong>The Almanack of <i>Naval Ravikant</i></strong></a>
+    <span class="prog" id="prog"></span>
+  </header>
+  <div id="units"></div>
+  <p class="soon" id="soon"><b>More chapters are on the way.</b> Next up: finding your specific knowledge, long-term games, leverage, judgment, and then the whole of Part 2 on happiness.</p>
+</main>
+<script>
+const ML = document.documentElement.lang === 'ml';
+if (ML) {
+  document.title = 'The Almanack of Naval Ravikant · മലയാളം';
+  document.getElementById('kick').textContent = 'ദി യംഗ് മേക്കർ യൂണിവേഴ്സ് · ആനിമേറ്റഡ് പഠന പുസ്തകം';
+  document.getElementById('lede').textContent = 'സമ്പത്ത് ശരിക്കും എങ്ങനെ ഉണ്ടാകുന്നു, നല്ല തീരുമാനശേഷി എങ്ങനെ പഠിക്കാം, സന്തോഷം എന്തുകൊണ്ട് പരിശീലിക്കാവുന്ന ഒരു കഴിവാണ് എന്നതിനെക്കുറിച്ചുള്ള ചെറിയ ആനിമേറ്റഡ് പാഠങ്ങൾ. കേരളത്തിലെയും ഗൾഫിലെയും കഥകളിലൂടെ, ഇംഗ്ലീഷിലും മലയാളത്തിലും.';
+  document.getElementById('credit').textContent = 'എറിക് ജോർഗൻസൺ സമാഹരിച്ച The Almanack of Naval Ravikant: A Guide to Wealth and Happiness (2020) എന്ന പുസ്തകത്തിന്റെ സ്വതന്ത്ര പഠനസഹായി. ഇതിലെ വിശദീകരണങ്ങളും കഥകളും ഉദാഹരണങ്ങളും ചിത്രങ്ങളും മൗലികമാണ്. പുസ്തകം navalmanack.com-ൽ സൗജന്യമായി ലഭ്യമാണ്.';
+  document.getElementById('soon').innerHTML = '<b>കൂടുതൽ അധ്യായങ്ങൾ വരുന്നു.</b> അടുത്തത്: നിങ്ങളുടെ സ്വന്തം അറിവ് കണ്ടെത്തൽ, ദീർഘകാല കളികൾ, ലിവറേജ്, തീരുമാനശേഷി, പിന്നെ സന്തോഷത്തെക്കുറിച്ചുള്ള രണ്ടാം ഭാഗം മുഴുവനും.';
+}
+document.querySelectorAll('.langsw button').forEach(b => {
+  b.setAttribute('aria-pressed', String((b.dataset.l === 'ml') === ML));
+  b.onclick = () => { try { localStorage.setItem('almanack:lang', b.dataset.l); } catch (e) {} location.href = location.pathname + '?lang=' + b.dataset.l + location.hash; };
+});
+const C = (en, ml, me, mm) => [ML ? ml : en, ML ? mm : me];
+Contents.book({
+  start: { unit: 1, chapter: 1 },
+  units: [
+    [ML ? 'സമ്പത്ത് ഉണ്ടാക്കൽ' : 'Building wealth', [
+      C('Wealth isn’t money', 'സമ്പത്ത് പണമല്ല', 9, 11)]],
+  ],
+  hues: ['#c9a84c'],
+});
+</script>
+</body>
+</html>
