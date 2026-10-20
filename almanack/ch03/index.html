@@ -1,0 +1,1043 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Long games, your own name · The Almanack of Naval Ravikant, Chapter 3">
+<meta property="og:description" content="A 9-minute animated lesson in English and Malayalam: why trust and reputation compound like interest, and why putting your own name on your work is worth the risk.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/ch03/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<title>Long games, your own name · The Almanack of Naval Ravikant</title>
+<meta name="description" content="An animated, narrated lesson on The Almanack of Naval Ravikant: playing long games with people you trust, compounding reputation, going all in, and taking accountability under your own name. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'ദീർഘകാല കളികൾ, സ്വന്തം പേര് · The Almanack of Naval Ravikant';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/ymu.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/almanack/ch03/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Long games, your own name', kicker: 'PART 1 · WEALTH · CHAPTER 3', sub: 'Why trust grows like interest, and why your name is worth the risk',
+  credit: 'A study companion to The Almanack of Naval Ravikant, by Eric Jorgenson',
+  b_intro: 'Title', b_compound: 'Compound interest', b_trust: 'Ten years of trust', b_loop: 'Kindness that compounds', b_q1: 'Quick check',
+  b_waste: '99% of effort', b_allin: 'Go all in', b_check: 'Science check', b_q2: 'Quick check', b_name: 'Your own name',
+  b_lev: 'Leverage needs trust', b_edges: 'Both ways', b_fear: 'Failing in public', b_captain: 'Paid last', b_check2: 'Science check',
+  b_q3: 'Quick check', b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  interest: 'interest', slow: 'slowly at first, then fast', rel: 'relationships', rep: 'reputation', know: 'knowledge', stay: 'stay in the game',
+  rasheed: 'Rasheed', kozhikode: 'Kozhikode', joseph: 'Joseph', deira: 'Deira, Dubai', year: 'year {n}',
+  contract: 'contract · lab test · lawyer', call: 'phone call', trustL: 'trust',
+  round: 'rounds up', fee: 'port fee', pays: 'pays it himself', pick: 'first pick', loopL: 'feeds the next',
+  intend: 'not what they intend', doL: 'what they do', actions: 'actions show up on the scale',
+  n99: 'effort: 99% wasted', rivers: 'rivers', formula: 'formula', hindi: 'Hindi grammar', learning: 'as learning: nothing wasted',
+  goal: 'where you ended up', slice: 'tiny slice paid off',
+  nisha: 'Nisha', tuition: 'tuition', bank: 'bank exam', physics: 'physics degree', arabic: 'spoken Arabic', drop: 'drop it',
+  decades: 'for decades', allin: 'go all in',
+  sci: 'Science check', measured: '99% wasted: measured?', figure: 'a figure of speech', scots: 'Scottish: sample for 2 years',
+  english: 'English: choose on day one', match: 'better matched', tc: 'What about trust compounding?', holds: 'holds up',
+  axelrod: 'Axelrod’s tournaments', coop: 'cooperate first, then repay', ebay: 'eBay', eight: '+8%', edge: 'a steady edge on every deal',
+  account: 'Accountability', ameen: 'Ameen', sharjah: 'Sharjah', logo: 'their logo', own: 'his own name', brand: 'AMEEN COOLING',
+  resp: 'responsibility', equity: 'equity', lev: 'leverage',
+  levT: 'leverage', code: 'code · media: build it yourself', given: 'given to you', people: 'people', money: 'money', trustN: 'trust',
+  adds: 'every honest job adds', helpers2: 'two helpers', credit30: '30 days’ credit',
+  bothL: 'both ways', five: 'five-star review', august: 'August', angry: 'angry review', creditL: 'credit', blame: 'blame',
+  noreason: 'no reason to try harder', noway: 'no way for anyone to trust you',
+  public: 'in public', shafeeq: 'Shafeeq', what: 'What if it fails?', everyone: 'Everyone will know.', naval: 'Naval',
+  known: 'startups · investing', philo: 'philosophy', ending: '“You’re ending your career.”', power: 'gain real power',
+  captain: 'captain', helpers: 'helpers', supplier: 'supplier', rent: 'rent', last: 'paid last', smaller: 'smaller than we fear?',
+  q: 'Is the downside really small?', depends: 'depends where you live', us: 'America', fresh: 'fresh start', india: 'India',
+  criminal: 'criminal offence', uae: 'UAE', nocrime: 'not a crime since 2022', seize: 'seize your assets',
+  judged: 'others judging us: stress peaks', size: 'size the risk', never: 'never sign a cheque you can’t cover',
+  w1: 'Trust, reputation and skill compound like interest: pick long-term people, and stay.',
+  w2: 'What you do, not what you mean, decides whether a relationship grows.',
+  w3: 'Explore widely, then go all in on the few things worth decades.',
+  w4: 'Put your name on your work: it earns trust and leverage. Size the risk to where you live.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'ദീർഘകാല കളികൾ, സ്വന്തം പേര്', kicker: 'ഭാഗം 1 · സമ്പത്ത് · അധ്യായം 3', sub: 'വിശ്വാസം പലിശ പോലെ വളരുന്നത് എന്തുകൊണ്ട്, സ്വന്തം പേരിൽ റിസ്ക് എടുക്കുന്നത് എന്തിന്',
+  credit: 'The Almanack of Naval Ravikant · എറിക് ജോർഗൻസൻ · പഠനസഹായി',
+  b_intro: 'തലക്കെട്ട്', b_compound: 'കൂട്ടുപലിശ', b_trust: 'പത്ത് വർഷത്തെ വിശ്വാസം', b_loop: 'വളരുന്ന നന്മ', b_q1: 'ചെറിയ പരിശോധന',
+  b_waste: 'പ്രയത്നത്തിന്റെ 99%', b_allin: 'മുഴുവനായി ഇറങ്ങൂ', b_check: 'ശാസ്ത്രീയ പരിശോധന', b_q2: 'ചെറിയ പരിശോധന', b_name: 'സ്വന്തം പേര്',
+  b_lev: 'ലിവറേജിന് വിശ്വാസം വേണം', b_edges: 'ഇരുവശവും', b_fear: 'എല്ലാവരുടെയും മുന്നിൽ', b_captain: 'അവസാനം കിട്ടുന്നയാൾ', b_check2: 'ശാസ്ത്രീയ പരിശോധന',
+  b_q3: 'ചെറിയ പരിശോധന', b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  interest: 'പലിശ', slow: 'ആദ്യം പതുക്കെ, പിന്നെ അതിവേഗം', rel: 'ബന്ധങ്ങൾ', rep: 'സൽപ്പേര്', know: 'അറിവ്', stay: 'പിടിച്ചുനിൽക്കുക',
+  rasheed: 'റഷീദ്', kozhikode: 'കോഴിക്കോട്', joseph: 'ജോസഫ്', deira: 'ദെയ്റ, ദുബായ്', year: 'വർഷം {n}',
+  contract: 'കരാർ · ലാബ് ടെസ്റ്റ് · വക്കീൽ', call: 'ഫോൺ കോൾ', trustL: 'വിശ്വാസം',
+  round: 'മേലോട്ട് റൗണ്ട്', fee: 'പോർട്ട് ഫീസ്', pays: 'സ്വന്തം കീശയിൽ നിന്ന്', pick: 'ആദ്യ തിരഞ്ഞെടുപ്പ്', loopL: 'അടുത്തതിന് വളം',
+  intend: 'ഉദ്ദേശിക്കുന്നതല്ല', doL: 'ചെയ്യുന്നതാണ്', actions: 'പ്രവൃത്തികൾ മാത്രം തുലാസിൽ',
+  n99: 'പ്രയത്നത്തിന്റെ 99%', rivers: 'നദികൾ', formula: 'ഫോർമുല', hindi: 'ഹിന്ദി വ്യാകരണം', learning: 'പഠനം: ഒന്നും പാഴല്ല',
+  goal: 'എത്തിച്ചേർന്ന ഇടം', slice: 'ഒരു ചെറിയ കഷണം മാത്രം',
+  nisha: 'നിഷ', tuition: 'ട്യൂഷൻ', bank: 'ബാങ്ക് പരീക്ഷ', physics: 'ഫിസിക്സ് ബിരുദം', arabic: 'സംസാര അറബി', drop: 'ഉപേക്ഷിക്കൂ',
+  decades: 'പതിറ്റാണ്ടുകളോളം', allin: 'മുഴുവനായി ഇറങ്ങൂ',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', measured: '99% പാഴ്: ആരെങ്കിലും അളന്നോ?', figure: 'പറച്ചിൽ രീതി മാത്രം', scots: 'സ്കോട്ട്ലൻഡ്: 2 വർഷം പല വിഷയങ്ങൾ',
+  english: 'ഇംഗ്ലണ്ട്: ആദ്യ ദിവസം തന്നെ', match: 'കൂടുതൽ നല്ല പൊരുത്തം', tc: 'വിശ്വാസം കൂട്ടുപലിശ പോലെ?', holds: 'നന്നായി നിലനിൽക്കുന്നു',
+  axelrod: 'ആക്സൽറോഡിന്റെ മത്സരങ്ങൾ', coop: 'ആദ്യം സഹകരിക്കുക, പിന്നെ തിരിച്ചുചെയ്യുക', ebay: 'ഇബേ', eight: '+8%', edge: 'ഓരോ ഇടപാടിലും സ്ഥിരം മുൻതൂക്കം',
+  account: 'ഉത്തരവാദിത്തം', ameen: 'അമീൻ', sharjah: 'ഷാർജ', logo: 'അവരുടെ ലോഗോ', own: 'സ്വന്തം പേര്', brand: 'AMEEN COOLING',
+  resp: 'ഉത്തരവാദിത്തം', equity: 'ഇക്വിറ്റി', lev: 'ലിവറേജ്',
+  levT: 'ലിവറേജ്', code: 'കോഡ് · മീഡിയ: സ്വയം ഉണ്ടാക്കാം', given: 'മറ്റുള്ളവർ തരേണ്ടത്', people: 'ആളുകൾ', money: 'പണം', trustN: 'വിശ്വാസം',
+  adds: 'ഓരോ ജോലിയും ചേരുന്നു', helpers2: 'രണ്ട് സഹായികൾ', credit30: '30 ദിവസത്തെ ക്രെഡിറ്റ്',
+  bothL: 'ഇരുവശവും മൂർച്ച', five: 'ഫൈവ് സ്റ്റാർ റിവ്യൂ', august: 'ഓഗസ്റ്റ്', angry: 'ദേഷ്യം നിറഞ്ഞ റിവ്യൂ', creditL: 'ക്രെഡിറ്റ്', blame: 'പഴി',
+  noreason: 'കൂടുതൽ ശ്രമിക്കാൻ കാരണമില്ല', noway: 'ആർക്കും വിശ്വസിക്കാൻ വഴിയില്ല',
+  public: 'എല്ലാവരുടെയും മുന്നിൽ', shafeeq: 'ഷഫീഖ്', what: 'പൊളിഞ്ഞാലോ?', everyone: 'എല്ലാവരും അറിയും.', naval: 'നവൽ',
+  known: 'സ്റ്റാർട്ടപ്പുകൾ · നിക്ഷേപം', philo: 'തത്വചിന്ത', ending: '“കരിയർ നശിപ്പിക്കുകയാണ്”', power: 'യഥാർത്ഥ ശക്തി',
+  captain: 'കപ്പിത്താൻ', helpers: 'സഹായികൾ', supplier: 'സപ്ലയർ', rent: 'വാടക', last: 'ഏറ്റവും അവസാനം', smaller: 'ഭയക്കുന്നതിനേക്കാൾ ചെറുത്?',
+  q: 'നഷ്ടസാധ്യത ശരിക്കും ചെറുതാണോ?', depends: 'നിങ്ങൾ എവിടെ ജീവിക്കുന്നു?', us: 'അമേരിക്ക', fresh: 'പുതിയ തുടക്കം', india: 'ഇന്ത്യ',
+  criminal: 'ക്രിമിനൽ കുറ്റം', uae: 'യുഎഇ', nocrime: '2022 മുതൽ കുറ്റകൃത്യമല്ല', seize: 'സ്വത്ത് പിടിച്ചെടുക്കാം',
+  judged: 'മറ്റുള്ളവർ വിലയിരുത്തുമ്പോൾ: സ്ട്രെസ് കൂടുന്നു', size: 'റിസ്കിന്റെ വലിപ്പം നോക്കൂ', never: 'തിരിച്ചടയ്ക്കാനാകാത്ത ചെക്കിൽ ഒപ്പിടരുത്',
+  w1: 'വിശ്വാസവും സൽപ്പേരും കഴിവും പലിശ പോലെ വളരുന്നു: ദീർഘകാലം കൂടെ നിൽക്കുന്നവരെ തിരഞ്ഞെടുക്കൂ, കൂടെ നിൽക്കൂ.',
+  w2: 'ഉദ്ദേശിക്കുന്നതല്ല, ചെയ്യുന്നതാണ് ഒരു ബന്ധം വളരുമോ എന്ന് തീരുമാനിക്കുന്നത്.',
+  w3: 'ധാരാളം പരീക്ഷിക്കൂ, പിന്നെ പതിറ്റാണ്ടുകൾ മൂല്യമുള്ള ചുരുക്കം കാര്യങ്ങളിൽ മുഴുവനായി ഇറങ്ങൂ.',
+  w4: 'ജോലിയിൽ സ്വന്തം പേര് വെക്കൂ: അത് വിശ്വാസവും ലിവറേജും നേടിത്തരും. റിസ്ക് നിങ്ങളുടെ നാടിന് ചേർന്നതാകട്ടെ.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 3, title: L('title'), minutes: LANG === 'ml' ? 11 : 9, language: LANG, next: '../index.html#contents' };
+const fmt = (k, n) => L(k).replace('{n}', n);
+
+/* ---------- meaning colours (style.json look.meaning) ---------- */
+const WEALTH = EV.gold, MONEY = '#7cc79d', STATUS = '#e2694f', TIME = '#5fb3cf', SCI = '#9c84d8';
+
+/* ---------- chapter helpers (prefixed a3 to stay clear of engine globals) ---------- */
+// A label that fades in at t (beat clock, always a mark).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+const a3Ground = (p, y = 760, fill = '#0c1114') => {
+  mk('rect', { x: -10, y, width: 1620, height: 900 - y + 20, fill }, p);
+  path(p, `M0 ${y}H1600`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+};
+const a3Coin = (p, x, y, r = 16, color = WEALTH, o = 1) => {
+  const g = G(p, { x, y, o });
+  mk('circle', { cx: 0, cy: 0, r, fill: color }, g);
+  mk('circle', { cx: 0, cy: 0, r: r * .68, fill: 'none', stroke: '#080c0f', 'stroke-width': 2, opacity: .4 }, g);
+  return g;
+};
+function a3Note(p, { x = 0, y = 0, s = 1, o = 1, color = MONEY, label = 'AED' } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -58, y: -30, width: 116, height: 60, rx: 6, fill: '#173126', stroke: color, 'stroke-width': 2.5 }, g);
+  mk('circle', { cx: 0, cy: 0, r: 16, fill: 'none', stroke: color, 'stroke-width': 2 }, g);
+  T(g, label, { x: -36, y: -12, size: 13, fill: color, weight: 600, anchor: 'middle', font: SANS });
+  return g;
+}
+function a3Skyline(p, W = 1600, { color = '#121a1f', edge = '#2b3632', spire = true } = {}) {
+  const g = G(p);
+  const B = [[0, 160, 120], [130, 240, 90], [230, 190, 140], [380, 310, 70], [460, 220, 110], [580, 150, 160], [750, 270, 90], [850, 200, 130],
+    [990, 330, 80], [1080, 180, 150], [1240, 260, 100], [1350, 210, 120], [1480, 170, 120]];
+  B.forEach(([bx, h, w]) => {
+    const x = bx * W / 1600;
+    mk('rect', { x, y: -h, width: w, height: h, fill: color, stroke: edge, 'stroke-width': 2 }, g);
+    for (let wy = -h + 24; wy < -20; wy += 34) for (let wx = x + 16; wx < x + w - 14; wx += 30)
+      if (((wx * 7 + wy * 3) % 5) < 2) mk('rect', { x: wx, y: wy, width: 8, height: 12, fill: EV.goldHi, opacity: .35 }, g);
+  });
+  if (spire) path(g, `M${700 * W / 1600} 0L${716 * W / 1600} -380L${720 * W / 1600} -470L${724 * W / 1600} -380L${740 * W / 1600} 0Z`, { fill: color, stroke: edge, 'stroke-width': 2 });
+  return g;
+}
+function a3Phone(p, { x = 0, y = 0, s = 1, o = 1, w = 150, h = 280 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 22, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 3 }, g);
+  mk('rect', { x: -w / 2 + 10, y: -h / 2 + 26, width: w - 20, height: h - 52, rx: 6, fill: '#142026' }, g);
+  mk('rect', { x: -18, y: -h / 2 + 10, width: 36, height: 6, rx: 3, fill: '#2b3632' }, g);
+  g._scr = G(g);
+  return g;
+}
+function a3Icon(p, x, y, color = EV.dim, s = 1, o = 1) {
+  const g = G(p, { x, y, s, o });
+  mk('circle', { cx: 0, cy: -46, r: 14, fill: color }, g);
+  path(g, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: color });
+  return g;
+}
+const a3Star = (p, x, y, r = 16, fill = EV.goldHi, o = 1) => {
+  const k = r / 16, pts = [];
+  for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, rr = (i % 2 ? 6.5 : 16) * k; pts.push(`${(Math.cos(a) * rr).toFixed(1)} ${(Math.sin(a) * rr).toFixed(1)}`); }
+  return put(path(p, 'M' + pts.join('L') + 'Z', { fill }), { x, y, o });
+};
+// A rounded tag with a label, centred on (x, y).
+function a3Pill(p, key, x, y, { color = EV.gold, size = 30, fill = '#151d21', ink = EV.goldHi, minW = 200, o = 0 } = {}) {
+  const g = G(p, { x, y, o });
+  const w = Math.max(minW, evW(L(key), ML ? size * .88 : size) + 64);
+  mk('rect', { x: -w / 2, y: -32, width: w, height: 60, rx: 30, fill, stroke: color, 'stroke-width': 2 }, g);
+  evText(g, L(key), { x: 0, y: 8, size, fill: ink, maxW: w - 30 });
+  g._w = w;
+  return g;
+}
+// A Kozhikode godown: long tiled roof, wooden shutters, sacks at the door. Base at y = 0.
+function a3Godown(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -150, y: -170, width: 300, height: 170, fill: '#1b2226', stroke: '#3a3f3a', 'stroke-width': 3 }, g);
+  path(g, 'M-180 -160L-120 -230H120L180 -160Z', { fill: '#7a3b26', stroke: '#a3543a', 'stroke-width': 3 });
+  path(g, 'M-160 -178H160M-140 -198H140M-124 -216H124', { stroke: '#a3543a', 'stroke-width': 2, opacity: .6 });
+  mk('rect', { x: -56, y: -120, width: 112, height: 120, fill: '#2a211b', stroke: '#4a3a2c', 'stroke-width': 3 }, g);
+  for (let yy = -110; yy < 0; yy += 14) path(g, `M-50 ${yy}H50`, { stroke: '#4a3a2c', 'stroke-width': 2 });
+  [-110, 100].forEach(sx => a3Sack(g, { x: sx, y: 0, s: .7 }));
+  return g;
+}
+// A jute sack sitting on (0,0).
+function a3Sack(p, { x = 0, y = 0, s = 1, o = 1, star = false } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-40 0Q-50 -40 -34 -74L-20 -86Q0 -92 20 -86L34 -74Q50 -40 40 0Z', { fill: '#8a6a3e', stroke: '#c9a26a', 'stroke-width': 2 });
+  path(g, 'M-22 -84Q0 -74 22 -84', { stroke: '#5a4028', 'stroke-width': 4 });
+  path(g, 'M-28 -40H28M-30 -20H30', { stroke: '#6a4f2e', 'stroke-width': 2, opacity: .7 });
+  if (star) a3Star(g, 0, -44, 15, EV.goldHi);
+  return g;
+}
+// A balance: stand at (0,0) up to the beam pivot at (0,-260); g._beam rotates, its pans hang from the ends.
+function a3Scale(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-70 0H70M0 0V-260', { stroke: EV.gold, 'stroke-width': 6 });
+  mk('circle', { cx: 0, cy: -260, r: 10, fill: EV.goldHi }, g);
+  const beam = G(g, { y: -260 });
+  path(beam, 'M-180 0H180', { stroke: EV.gold, 'stroke-width': 6 });
+  const pan = side => {
+    const pg = G(beam, { x: side * 180 });
+    path(pg, 'M0 0L-60 110M0 0L60 110', { stroke: EV.dim, 'stroke-width': 2 });
+    path(pg, 'M-76 110Q0 150 76 110Z', { fill: '#2a2c27', stroke: EV.gold, 'stroke-width': 2.5 });
+    return pg;
+  };
+  g._beam = beam; g._L = pan(-1); g._R = pan(1);
+  return g;
+}
+// A work van seen from the side, nose to the left, wheels on y = 0. g._side is the panel for paint (centre (40,-110)).
+function a3Van(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-280 -40V-150Q-276 -196 -230 -210L-150 -232H270Q290 -232 290 -212V-40Z', { fill: '#dfe3e2', stroke: '#9aa3a3', 'stroke-width': 3 });
+  path(g, 'M-262 -150L-214 -200H-150V-150Z', { fill: '#1c2a31', stroke: '#9aa3a3', 'stroke-width': 2 });
+  path(g, 'M-140 -40V-220', { stroke: '#b6bdbd', 'stroke-width': 2 });
+  mk('rect', { x: -296, y: -60, width: 600, height: 24, rx: 6, fill: '#3a3f3a' }, g);
+  [-190, 200].forEach(cx => {
+    mk('circle', { cx, cy: -20, r: 40, fill: '#11161a', stroke: '#3a3f3a', 'stroke-width': 8 }, g);
+    mk('circle', { cx, cy: -20, r: 12, fill: '#8f9ea4' }, g);
+  });
+  g._side = G(g, { x: 70, y: -136 });
+  return g;
+}
+// A dhow from the side, hull centred on (0,0), with a lateen sail.
+function a3Dhow(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-230 -40Q-200 40 -90 46H110Q210 40 250 -60L210 -40Q160 8 90 12H-90Q-170 8 -200 -46Z', { fill: '#3a2a1e', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .55 });
+  path(g, 'M-200 -46Q-170 4 -90 8H90Q160 6 210 -40', { stroke: '#6a4f2e', 'stroke-width': 3 });
+  path(g, 'M0 8V-250', { stroke: '#6a4f2e', 'stroke-width': 7 });
+  path(g, 'M-170 -60L60 -270Q90 -150 10 -40Z', { fill: '#d8ccb0', stroke: '#a89a7a', 'stroke-width': 2, opacity: .92 });
+  return g;
+}
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    evGlow(g, 800, 500, 260, 'Gold', .35);
+    // eight bars that compound, a gold curve over their tops, and a name plate under them
+    const X0 = 520, base = 620, bars = [];
+    for (let i = 0; i < 8; i++) {
+      const h = 18 * Math.pow(1.42, i);
+      bars.push([put(mk('rect', { x: X0 + i * 72, y: base - h, width: 46, height: h, rx: 4, fill: i < 7 ? '#7d6a35' : WEALTH }, g), { o: 0 }), m('title') + i * .12, .4]);
+    }
+    evSeq(bars, D);
+    const pts = []; for (let i = 0; i <= 40; i++) { const u = i / 40, xx = X0 + 23 + u * 7 * 72, h = 18 * Math.pow(1.42, u * 7); pts.push(`${xx.toFixed(1)} ${(base - h - 18).toFixed(1)}`); }
+    const cv = path(g, 'M' + pts.join('L'), { stroke: EV.goldHi, 'stroke-width': 4 }, { d: 0 });
+    draw(cv, m('title') + .3, 1.5);
+    path(g, `M${X0 - 30} ${base}H${X0 + 8 * 72}`, { stroke: EV.gold, 'stroke-width': 2, opacity: .5 });
+    const k = evText(g, L('kicker'), { x: 800, y: 150, size: 26, fill: EV.gold, weight: 500, ls: '6' });
+    const ti = evText(g, L('title'), { x: 800, y: 250, size: 92, font: SERIF, weight: 600, maxW: 1400, o: 0 });
+    tw(g, { o: 1 }, .15, .9, out);
+    put(ti, { y: 270 }); tw(ti, { y: 250, o: 1 }, m('title'), .7, out);
+    const sub = evText(scene, L('sub'), { x: 800, y: 720, size: 36, fill: EV.dim, o: 0, maxW: 1360, font: SERIF, italic: true });
+    put(sub, { y: 740 }); tw(sub, { y: 720, o: 1 }, m('sub'), .7, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 822, size: 24, fill: '#7a7466', o: 0, maxW: 1400 });
+    show(cr, m('sub'), 1);
+    tw(g, { o: 0 }, D - .6, .5); hide(sub, D - .6, .5); hide(cr, D - .6, .5);
+    void k;
+  }],
+
+  ['compound', 'b_compound', (m, D) => {
+    const p = panel(0);
+    // the bank: ten stacks of coins that each grow on the last
+    const bk = G(p, { o: 0 }); show(bk, .3, .5);
+    path(bk, 'M150 640H700', { stroke: EV.dim, 'stroke-width': 3 });
+    path(bk, 'M300 230L420 180L540 230Z', { fill: 'none', stroke: EV.gold, 'stroke-width': 2.5 });
+    path(bk, 'M330 240V300M380 240V300M460 240V300M510 240V300M300 306H540', { stroke: EV.gold, 'stroke-width': 2.5, opacity: .6 });
+    lab(p, 'interest', 420, 150, m('interest'), { size: 46, font: SERIF, weight: 600, fill: WEALTH });
+    const cols = [], hs = [];
+    for (let i = 0; i < 10; i++) {
+      const h = 22 * Math.pow(1.33, i);
+      const c = G(p, { x: 180 + i * 52, y: 640, o: 0 });
+      mk('rect', { x: 0, y: -Math.min(h, 300), width: 38, height: Math.min(h, 300), rx: 4, fill: i ? '#a8913f' : WEALTH }, c);
+      for (let yy = -14; yy > -Math.min(h, 300); yy -= 14) path(c, `M2 ${yy}H36`, { stroke: '#080c0f', 'stroke-width': 1.5, opacity: .35 });
+      cols.push([c, m('earns') + i * .14, .35]);
+      hs.push(Math.min(h, 300));
+    }
+    evSeq(cols, D);
+    const cp = hs.map((h, i) => `${180 + i * 52 + 19} ${640 - h - 14}`);
+    const cur = path(p, 'M' + cp.join('L'), { stroke: EV.goldHi, 'stroke-width': 4 }, { d: 0 });
+    draw(cur, m('curve'), 1.1);
+    lab(p, 'slow', 440, 700, m('slow'), { size: 30, fill: EV.dim, italic: true, font: SERIF, maxW: 560 });
+    // three cards: the same curve in relationships, reputation and knowledge
+    const card = (key, y, icon) => {
+      const g = G(p, { x: 1180, y, o: 0 });
+      mk('rect', { x: -330, y: -64, width: 660, height: 128, rx: 16, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .6 }, g);
+      mk('circle', { cx: -260, cy: 0, r: 38, fill: 'none', stroke: WEALTH, 'stroke-width': 2.5 }, g);
+      icon(G(g, { x: -260 }));
+      evText(g, L(key), { x: -196, y: 12, size: 36, anchor: 'start', fill: EV.ink, maxW: 300 });
+      const mc = path(g, 'M150 40C210 40 250 30 290 -48', { stroke: WEALTH, 'stroke-width': 4 }, { d: 0 });
+      put(g, { x: 1210 }); tw(g, { o: 1, x: 1180 }, m(key), .45, out);
+      draw(mc, m(key) + .2, .7);
+      return g;
+    };
+    card('rel', 230, g => { mk('circle', { cx: -9, cy: 0, r: 14, fill: 'none', stroke: EV.goldHi, 'stroke-width': 3 }, g); mk('circle', { cx: 9, cy: 0, r: 14, fill: 'none', stroke: EV.goldHi, 'stroke-width': 3 }, g); });
+    card('rep', 400, g => a3Star(g, 0, 2, 20));
+    card('know', 570, g => { path(g, 'M0 -14Q-12 -20 -22 -14V16Q-12 10 0 16Z', { fill: 'none', stroke: EV.goldHi, 'stroke-width': 2.5 }); path(g, 'M0 -14Q12 -20 22 -14V16Q12 10 0 16Z', { fill: 'none', stroke: EV.goldHi, 'stroke-width': 2.5 }); });
+    // stay: a long road of years, a runner who keeps going
+    const rd = path(p, 'M860 790H1500', { stroke: TIME, 'stroke-width': 3, 'stroke-dasharray': '10 10' }, { d: 0 });
+    draw(rd, m('stay'), .6);
+    const run = a3Icon(p, 860, 786, EV.goldHi, .6, 0);
+    show(run, m('stay'), .3);
+    prog(q => { const v = q * D - m('stay'); put(run, { x: 860 + 600 * Math.min(1, Math.max(0, v) / 3.2) }); }, 0, D, lin);
+    lab(p, 'stay', 1180, 850, m('stay'), { size: 32, fill: TIME, weight: 600 });
+  }],
+
+  ['trust', 'b_trust', (m, D) => {
+    const p = panel(0);
+    a3Ground(p, 760);
+    // Kozhikode on the left, Deira on the right
+    a3Godown(p, { x: 230, y: 760, s: .9 });
+    lab(p, 'kozhikode', 230, 520, m('kozhikode'), { size: 30, fill: EV.goldHi });
+    const ra = evPerson(p, { kind: 'm', x: 440, y: 760, s: .72, o: 0 });
+    evRecolor(ra, '#e8e4d8', '#b8b2a2'); evBreathe(ra, D);
+    show(ra.g, m('rasheed'), .4);
+    lab(p, 'rasheed', 440, 812, m('rasheed'), { size: 30, weight: 600 });
+    const dx = G(p, { x: 1100, y: 760, s: .32 }); a3Skyline(dx, 1500);
+    lab(p, 'deira', 1390, 520, m('deira'), { size: 30, fill: EV.goldHi });
+    const jo = evPerson(p, { kind: 'm', x: 1250, y: 760, s: .72, o: 0 });
+    evRecolor(jo, '#7a3b4a', '#5a2a36'); evBreathe(jo, D, 1, .8);
+    show(jo.g, m('joseph'), .4);
+    lab(p, 'joseph', 1250, 812, m('joseph'), { size: 30, weight: 600 });
+    // the year counter runs from year 1 to year 10 between the two marks
+    const yc = T(p, '', { x: 800, y: 140, size: 44, fill: TIME, weight: 600, anchor: 'middle', font: SANS, o: 0 });
+    show(yc, m('first'), .4);
+    evCount(yc, t => fmt('year', t < m('ten') ? Math.max(1, Math.min(9, 1 + Math.floor((t - m('first') - .8) / Math.max(.3, (m('ten') - m('first') - .8) / 9)))) : 10), D, v => v);
+    // the paper stack: thick in year one, shrinking to a phone call by year ten
+    const st = G(p, { x: 800, y: 420, o: 0 });
+    for (let i = 0; i < 7; i++) mk('rect', { x: -110 + i * 4, y: -120 + i * 10, width: 200, height: 150, rx: 4, fill: i % 2 ? '#e8e4d8' : '#d6d0bf', stroke: '#8f8a7a', 'stroke-width': 1.5 }, st);
+    path(st, 'M-70 -60H60M-70 -36H60M-70 -12H30', { stroke: '#6a6556', 'stroke-width': 3, transform: 'translate(24 60)' });
+    show(st, m('contract'), .4);
+    const cl = lab(p, 'contract', 800, 590, m('contract'), { size: 28, fill: EV.dim, maxW: 560 });
+    tw(st, { s: .2, o: 0, y: 470 }, m('ten'), .9, io);
+    hide(cl, m('ten'), .4);
+    const ph = a3Phone(p, { x: 800, y: 430, s: .62, o: 0 });
+    path(ph._scr, 'M-22 -10Q-20 -30 0 -30Q20 -30 22 -10L14 -4L6 -16H-6L-14 -4Z', { fill: MONEY });
+    put(ph, { s: .4 }); tw(ph, { o: 1, s: .62 }, m('call'), .45, back);
+    lab(p, 'call', 800, 590, m('call'), { size: 30, fill: EV.ink });
+    // shipments go back and forth all along, on one clock from the first year
+    const route = path(p, 'M470 470Q800 60 1180 470', { stroke: EV.gold, 'stroke-width': 2, 'stroke-dasharray': '6 10', opacity: .45 }, { d: 0 });
+    draw(route, m('first'), .8);
+    const rl = route.getTotalLength();
+    const sk = a3Sack(p, { x: 470, y: 470, s: .35, o: 0 });
+    prog(q => { const t = q * D - m('first') - .6; if (t < 0) { put(sk, { o: 0 }); return; } const u = (t / 2.6) % 1, pt = route.getPointAtLength(u * rl); put(sk, { x: pt.x, y: pt.y + 10, o: Math.min(1, u * 8, (1 - u) * 8) }); }, 0, D, lin);
+    // trust bar fills across the decade, and glows when it is named
+    const tb = G(p, { x: 800, y: 690, o: 0 });
+    show(tb, m('first'), .4);
+    mk('rect', { x: -220, y: -12, width: 440, height: 24, rx: 12, fill: '#23251f' }, tb);
+    const fill = mk('rect', { x: -220, y: -12, width: 1, height: 24, rx: 12, fill: WEALTH }, tb);
+    prog(q => { const t = q * D; fill.setAttribute('width', 6 + 434 * io(evU(t, m('first'), Math.max(1, m('ten') - m('first') + .6)))); }, 0, D, lin);
+    lab(p, 'trustL', 800, 650, m('trust'), { size: 34, font: SERIF, weight: 600, fill: WEALTH });
+    const gl = evGlow(p, 800, 690, 160, 'Gold', 0); p.insertBefore(gl, tb);
+    tw(gl, { o: .9 }, m('trust'), .6);
+    evMood(ra, 'smile', m('call')); evMood(jo, 'smile', m('call'));
+  }],
+
+  ['loop', 'b_loop', (m, D) => {
+    const p = panel(0);
+    a3Ground(p, 760);
+    const ra = evPerson(p, { kind: 'm', x: 220, y: 760, s: .76 });
+    evRecolor(ra, '#e8e4d8', '#b8b2a2'); evBreathe(ra, D);
+    const jo = evPerson(p, { kind: 'm', x: 1380, y: 760, s: .76 });
+    evRecolor(jo, '#7a3b4a', '#5a2a36'); evBreathe(jo, D, 1, .8);
+    // the scale with sacks on both pans
+    const sc = a3Scale(p, { x: 800, y: 760 });
+    a3Sack(sc._L, { y: 128, s: .55 }); a3Sack(sc._R, { y: 128, s: .55 });
+    prog(q => { const t = q * D; const r = t < m('round') ? 0 : -4 * out(evU(t, m('round'), .6)); put(sc._beam, { r }); put(sc._L, { r: -r }); put(sc._R, { r: -r }); }, 0, D, lin);
+    // rounds up: half a kilo floats to Rasheed's side
+    const hk = G(p, { x: 980, y: 520, o: 0 });
+    mk('rect', { x: -60, y: -26, width: 120, height: 52, rx: 26, fill: WEALTH }, hk);
+    T(hk, '+½ kg', { x: 0, y: 9, size: 26, fill: '#120f08', weight: 700, anchor: 'middle', font: SANS });
+    tw(hk, { o: 1 }, m('round'), .3);
+    tw(hk, { x: 220, y: 400 }, m('round') + .3, 1, io);
+    lab(p, 'round', 220, 345, m('round'), { size: 30, fill: WEALTH });
+    // a port fee that Joseph pays himself
+    const rc = G(p, { x: 1380, y: 390, o: 0 });
+    mk('rect', { x: -90, y: -50, width: 180, height: 100, rx: 6, fill: '#e8e4d8' }, rc);
+    evText(rc, L('fee'), { x: 0, y: -14, size: 24, fill: '#3a3324', weight: 600, maxW: 160 });
+    path(rc, 'M-60 16H60M-60 32H20', { stroke: '#8f8a7a', 'stroke-width': 3 });
+    show(rc, m('fee'), .4);
+    const tick = G(rc, { x: 58, y: 24, o: 0, r: -10 });
+    mk('circle', { cx: 0, cy: 0, r: 26, fill: 'none', stroke: MONEY, 'stroke-width': 4 }, tick);
+    path(tick, 'M-12 0L-3 10L14 -10', { stroke: MONEY, 'stroke-width': 5 });
+    put(tick, { s: 1.6 }); tw(tick, { o: 1, s: 1 }, m('pays'), .4, back);
+    lab(p, 'pays', 1380, 300, m('pays'), { size: 28, fill: MONEY, maxW: 380 });
+    evMood(ra, 'smile', m('pays'));
+    // first pick of the harvest travels to Joseph
+    const fp = a3Sack(p, { x: 300, y: 700, s: .7, o: 0, star: true });
+    const arc = path(p, 'M300 700Q760 150 1220 700', { stroke: 'none' });
+    const al = arc.getTotalLength();
+    tw(fp, { o: 1 }, m('pick'), .3);
+    prog(q => { const pt = arc.getPointAtLength(q * al); put(fp, { x: pt.x, y: pt.y }); }, m('pick') + .2, 1.6, io);
+    lab(p, 'pick', 1190, 600, m('pick'), { size: 28, fill: EV.goldHi, maxW: 250 });
+    evMood(jo, 'smile', m('pick'));
+    // the loop: kindness goes round, one clock from the mark
+    const lp = G(p, { o: 0 }); show(lp, m('loop'), .4);
+    path(lp, 'M560 330Q420 520 560 710', { stroke: WEALTH, 'stroke-width': 4 });
+    path(lp, 'M1040 710Q1180 520 1040 330', { stroke: WEALTH, 'stroke-width': 4 });
+    evHead(lp, 560, 710, 60, WEALTH); evHead(lp, 1040, 330, -120, WEALTH);
+    const dots = [0, 1, 2].map(() => evDot(p, 800, 520, 9, EV.goldHi, 0));
+    prog(q => { const t = q * D - m('loop'); dots.forEach((d, i) => { if (t < 0) { put(d, { o: 0 }); return; } const a = (t * .45 + i / 3) * Math.PI * 2; put(d, { x: 800 + Math.cos(a) * 320, y: 520 + Math.sin(a) * 195, o: t < m('intend') - m('loop') ? .9 : .25 }); }); }, 0, D, lin);
+    const ll = lab(p, 'loopL', 800, 260, m('loop'), { size: 34, font: SERIF, italic: true, fill: WEALTH });
+    // intentions versus actions
+    hide(ll, m('intend'), .3); tw(lp, { o: .25 }, m('intend'), .4);
+    const it = lab(p, 'intend', 520, 860, m('intend'), { size: 32, fill: EV.dim, maxW: 520 });
+    const sw = Math.min(520, evW(L('intend'), ML ? 28 : 32) + 20);
+    const strike = path(p, `M${520 - sw / 2} 849H${520 + sw / 2}`, { stroke: STATUS, 'stroke-width': 3 }, { d: 0 });
+    draw(strike, m('do'), .4);
+    void it;
+    lab(p, 'doL', 1080, 860, m('do'), { size: 34, fill: EV.goldHi, weight: 600, maxW: 520 });
+    lab(p, 'actions', 800, 260, m('actions'), { size: 34, font: SERIF, italic: true, fill: EV.goldHi, maxW: 760 });
+    const ag = evGlow(p, 800, 600, 220, 'Gold', 0); p.insertBefore(ag, sc);
+    tw(ag, { o: 1 }, m('actions'), .6);
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    const p = panel(0);
+    a3Ground(p, 430);
+    const ra = evPerson(p, { kind: 'm', x: 420, y: 430, s: .5 });
+    evRecolor(ra, '#e8e4d8', '#b8b2a2'); evBreathe(ra, D); evMood(ra, 'ask', .4);
+    const sc = a3Scale(p, { x: 800, y: 430, s: .6 });
+    a3Sack(sc._L, { y: 128, s: .55 }); a3Sack(sc._R, { y: 128, s: .55 });
+    put(sc._beam, { r: 5 }); put(sc._L, { r: -5 }); put(sc._R, { r: -5 });
+    const mk_ = G(p, { x: 1180, y: 170, o: 0 });
+    mk('rect', { x: -60, y: -26, width: 120, height: 52, rx: 26, fill: STATUS }, mk_);
+    T(mk_, '−½ kg', { x: 0, y: 9, size: 26, fill: '#1a0c08', weight: 700, anchor: 'middle', font: SANS });
+    show(mk_, .4, .4);
+    const ph = a3Phone(p, { x: 1180, y: 320, s: .5, o: 0 });
+    path(ph._scr, 'M0 22C-36 -6 -26 -36 0 -20C26 -36 36 -6 0 22Z', { fill: '#e78fa8' });
+    show(ph, .4, .4);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-compound', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 1, L('q1y'), [L('q1na'), null, L('q1nc')]),
+  }], done) }],
+
+  ['waste', 'b_waste', (m, D) => {
+    const p = panel(0);
+    // a hundred squares of effort, revealed row by row on one clock
+    const GX = 150, GY = 210, C = 40;
+    const rows = [];
+    for (let r = 0; r < 10; r++) {
+      let d = '';
+      for (let c = 0; c < 10; c++) if (!(r === 9 && c === 9)) d += `M${GX + c * C} ${GY + r * C}h32v32h-32Z`;
+      rows.push(put(path(p, d, { fill: '#3d3b35', stroke: 'none' }), { o: 0 }));
+    }
+    evSeq(rows.map((r, i) => [r, m('ninety') + i * .07, .3]), D);
+    const fr = path(p, `M${GX - 14} ${GY - 14}H${GX + 10 * C + 6}V${GY + 10 * C + 6}H${GX - 14}Z`, { stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '8 10' }, { d: 0 });
+    draw(fr, .3, .8);
+    const one = put(mk('rect', { x: GX + 9 * C, y: GY + 9 * C, width: 32, height: 32, fill: '#3d3b35' }, p), { o: 0 });
+    tw(one, { o: 1 }, m('ninety') + .3, .3);
+    lab(p, 'n99', 346, 160, m('ninety'), { size: 44, font: SERIF, weight: 600, fill: EV.ink, maxW: 480 });
+    // school: rivers, a formula, Hindi grammar
+    const item = (key, x, draw_) => {
+      const g = G(p, { x, y: 300, o: 0 });
+      mk('rect', { x: -95, y: -75, width: 190, height: 150, rx: 10, fill: '#e8e4d8', stroke: '#8f8a7a', 'stroke-width': 2 }, g);
+      draw_(g);
+      put(g, { r: -4, s: .8 }); tw(g, { o: 1, r: 0, s: 1 }, m(key), .45, back);
+      lab(p, key, x, 420, m(key), { size: 30, fill: EV.ink });
+      return g;
+    };
+    item('rivers', 860, g => { path(g, 'M-70 -40Q-30 -60 0 -30Q30 0 70 -20M-60 30Q-20 0 10 30Q40 50 70 30', { stroke: '#3f6f95', 'stroke-width': 4 }); });
+    item('formula', 1110, g => { T(g, 'a² + b² = c²', { x: 0, y: 12, size: 30, fill: '#2a2c27', weight: 600, anchor: 'middle', font: '"Cormorant Garamond",serif' }); });
+    item('hindi', 1360, g => { path(g, 'M-50 -40H50M-50 -10H50M-50 20H30M-50 50H10', { stroke: '#7a3b26', 'stroke-width': 4 }); });
+    // as learning, it all fed into you
+    const lr = path(p, 'M860 470Q1110 560 1360 470', { stroke: TIME, 'stroke-width': 3 }, { d: 0 });
+    draw(lr, m('learning'), .6);
+    lab(p, 'learning', 1110, 570, m('learning'), { size: 32, fill: TIME, maxW: 620 });
+    // measured against the goal: a flag, and one square that paid off
+    const fl = G(p, { x: 1110, y: 720, o: 0 });
+    path(fl, 'M0 60V-60', { stroke: EV.dim, 'stroke-width': 4 });
+    path(fl, 'M0 -60L70 -40L0 -20Z', { fill: WEALTH });
+    show(fl, m('goal'), .4);
+    lab(p, 'goal', 1110, 830, m('goal'), { size: 30, fill: EV.ink });
+    rows.forEach(r => tw(r, { c_fill: '#24231f' }, m('slice'), .6));
+    tw(one, { c_fill: WEALTH }, m('slice'), .5);
+    const og = evGlow(p, GX + 9 * C + 16, GY + 9 * C + 16, 70, 'Gold', 0);
+    tw(og, { o: 1 }, m('slice'), .5);
+    const ln = path(p, `M${GX + 9 * C + 40} ${GY + 9 * C + 16}Q800 700 1100 690`, { stroke: WEALTH, 'stroke-width': 3, 'stroke-dasharray': '8 8' }, { d: 0 });
+    draw(ln, m('slice'), .8);
+    lab(p, 'slice', 346, 700, m('slice'), { size: 32, fill: WEALTH, weight: 600, maxW: 480 });
+  }],
+
+  ['allin', 'b_allin', (m, D) => {
+    const p = panel(0);
+    a3Ground(p, 780);
+    const ni = evPerson(p, { kind: 'f', x: 180, y: 780, s: .8, o: 0 });
+    show(ni.g, m('nisha'), .45); evBreathe(ni, D);
+    lab(p, 'nisha', 180, 835, m('nisha'), { size: 30, weight: 600 });
+    // four paths out from Nisha
+    const ends = [['tuition', 190], ['bank', 340], ['physics', 490], ['arabic', 640]];
+    const br = ends.map(([k, y]) => {
+      const b = path(p, `M290 470C520 470 600 ${y} 800 ${y}`, { stroke: EV.dim, 'stroke-width': 4 }, { d: 0 });
+      draw(b, m(k), .6);
+      const n = evDot(p, 800, y, 14, k === 'arabic' ? WEALTH : EV.dim, 0);
+      show(n, m(k) + .2, .3);
+      const t = lab(p, k, 834, y + 10, m(k), { size: 32, anchor: 'start', fill: k === 'arabic' ? EV.goldHi : EV.ink, maxW: 300 });
+      return { b, n, t, k };
+    });
+    // drop what leads nowhere: three paths grey out and get a cross
+    br.filter(o => o.k !== 'arabic').forEach(o => {
+      tw(o.b, { c_stroke: '#2e2d29' }, m('drop'), .5); tw(o.t, { c_fill: '#5a564c' }, m('drop'), .5); tw(o.n, { c_fill: '#2e2d29' }, m('drop'), .5);
+      const y = ends.find(e => e[0] === o.k)[1];
+      const x = path(p, `M690 ${y - 16}L722 ${y + 16}M722 ${y - 16}L690 ${y + 16}`, { stroke: STATUS, 'stroke-width': 4 }, { d: 0 });
+      draw(x, m('drop'), .35);
+    });
+    lab(p, 'drop', 560, 120, m('drop'), { size: 32, fill: STATUS, weight: 600 });
+    // for decades, all in: Arabic thickens to gold and its curve compounds across the years
+    const ar = br[3];
+    tw(ar.b, { c_stroke: WEALTH, 'a_stroke-width': 9 }, m('allin'), .6);
+    const yrs = path(p, 'M1120 700H1520', { stroke: TIME, 'stroke-width': 3, 'stroke-dasharray': '8 10' }, { d: 0 });
+    draw(yrs, m('decades'), .7);
+    lab(p, 'decades', 1320, 750, m('decades'), { size: 30, fill: TIME });
+    const pts = []; for (let i = 0; i <= 40; i++) { const u = i / 40; pts.push(`${(1120 + u * 400).toFixed(1)} ${(640 - 420 * (Math.exp(u * 2.4) - 1) / (Math.exp(2.4) - 1)).toFixed(1)}`); }
+    const cv = path(p, 'M' + pts.join('L'), { stroke: WEALTH, 'stroke-width': 6 }, { d: 0 });
+    draw(cv, m('allin'), 2, io);
+    lab(p, 'allin', 1300, 170, m('allin'), { size: 44, font: SERIF, weight: 600, fill: WEALTH });
+    evMood(ni, 'smile', m('allin'));
+  }],
+
+  ['check', 'b_check', (m, D) => {
+    const p = panel(0);
+    // the frame and tag stay for the whole beat, across both panels
+    const keep = G(scene);
+    hide(keep, D - .45, .4);
+    prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+    const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+    draw(fr, m('sci'), 1);
+    const tag = G(keep, { x: 200, y: 60, o: 0 });
+    const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+    mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+    evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+    show(tag, m('sci'), .4);
+    lab(p, 'measured', 720, 170, m('measured'), { size: 44, font: SERIF, italic: true, fill: EV.ink, maxW: 900 });
+    const stamp = G(p, { x: 1310, y: 210, o: 0, r: -7 });
+    const sw = Math.max(260, evW(L('figure'), 30) + 50);
+    mk('rect', { x: -sw / 2, y: -30, width: sw, height: 60, rx: 8, fill: 'none', stroke: SCI, 'stroke-width': 4 }, stamp);
+    evText(stamp, L('figure'), { x: 0, y: 11, size: 30, weight: 700, fill: SCI, maxW: sw - 30 });
+    put(stamp, { s: 1.5 }); tw(stamp, { o: 1, s: 1 }, m('figure'), .4, back);
+    // Scotland versus England: sample first, or choose on day one
+    const row = (key, y, col, len, t) => {
+      lab(p, key, 150, y + 10, t, { size: 32, anchor: 'start', fill: EV.ink, maxW: 620 });
+      const pathL = G(p, { x: 820, y, o: 0 });
+      // a path: a few wiggles (sampling) or a straight line
+      if (key === 'scots') path(pathL, 'M0 0C30 -40 60 40 90 0S150 -40 180 0', { stroke: col, 'stroke-width': 4 });
+      else path(pathL, 'M0 0H180', { stroke: col, 'stroke-width': 4 });
+      show(pathL, t, .4);
+      const bar = mk('rect', { x: 1040, y: y - 16, width: 0, height: 32, rx: 8, fill: col }, p);
+      prog(q => { bar.setAttribute('width', len * io(evU(q * D, m('match'), 1.2))); }, 0, D, lin);
+    };
+    row('scots', 380, TIME, 400, m('scots'));
+    row('english', 500, EV.dim, 340, m('english'));
+    lab(p, 'match', 1240, 600, m('match'), { size: 32, fill: TIME, weight: 600 });
+    // trust compounding, on the same clock: a second panel
+    const q = panel(m('tc'));
+    put(q, { o: 0 }); show(q, m('tc'), .4);
+    lab(q, 'tc', 720, 170, m('tc'), { size: 44, font: SERIF, italic: true, fill: EV.ink, maxW: 900 });
+    const st2 = G(q, { x: 1310, y: 210, o: 0, r: -7 });
+    const sw2 = Math.max(240, evW(L('holds'), 30) + 50);
+    mk('rect', { x: -sw2 / 2, y: -30, width: sw2, height: 60, rx: 8, fill: 'none', stroke: SCI, 'stroke-width': 4 }, st2);
+    evText(st2, L('holds'), { x: 0, y: 11, size: 30, weight: 700, fill: SCI, maxW: sw2 - 30 });
+    put(st2, { s: 1.5 }); tw(st2, { o: 1, s: 1 }, m('holds'), .4, back);
+    // Axelrod: two players trading moves, again and again
+    const ax = G(q, { o: 0 }); show(ax, m('axelrod'), .4);
+    a3Icon(ax, 290, 520, EV.ink, 1.3); a3Icon(ax, 610, 520, EV.ink, 1.3);
+    const balls = [0, 1].map(i => evDot(q, 290, 450, 10, i ? WEALTH : MONEY, 0));
+    prog(qq => { const t = qq * D - m('coop'); balls.forEach((b, i) => { if (t < 0) { put(b, { o: 0 }); return; } const u = ((t / 1.4) + i * .5) % 1, dir = Math.floor((t / 1.4) + i * .5) % 2; const x = dir ? 610 - 320 * u : 290 + 320 * u; put(b, { x, y: 440 - Math.sin(u * Math.PI) * 50, o: 1 }); }); }, 0, D, lin);
+    lab(q, 'axelrod', 450, 320, m('axelrod'), { size: 32, fill: EV.goldHi, maxW: 560 });
+    lab(q, 'coop', 450, 620, m('coop'), { size: 30, fill: EV.ink, maxW: 600 });
+    // eBay: the same postcard, two sellers
+    const pc = (x, t, star) => {
+      const g = G(q, { x, y: 470, o: 0 });
+      mk('rect', { x: -90, y: -64, width: 180, height: 128, rx: 6, fill: '#e8e4d8', stroke: '#8f8a7a', 'stroke-width': 2 }, g);
+      path(g, 'M-70 30L-30 -10L0 20L30 -20L70 30Z', { fill: '#3f6f95', opacity: .8 });
+      mk('rect', { x: 46, y: -54, width: 32, height: 38, fill: 'none', stroke: STATUS, 'stroke-width': 2 }, g);
+      if (star) a3Star(g, -60, -36, 14, EV.gold);
+      show(g, t, .4);
+      return g;
+    };
+    pc(1000, m('ebay'), false); pc(1250, m('ebay'), true);
+    lab(q, 'ebay', 1125, 330, m('ebay'), { size: 34, fill: EV.goldHi, weight: 600 });
+    const e8 = evText(q, L('eight'), { x: 1250, y: 600, size: 44, weight: 700, fill: MONEY, o: 0 });
+    put(e8, { s: .6 }); tw(e8, { o: 1, s: 1 }, m('eight'), .4, back);
+    lab(q, 'edge', 800, 760, m('edge'), { size: 36, font: SERIF, italic: true, fill: SCI, maxW: 1200 });
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    a3Ground(p, 430);
+    const ni = evPerson(p, { kind: 'f', x: 330, y: 430, s: .5 });
+    evBreathe(ni, D); evMood(ni, 'ask', .4);
+    [['tuition', 110], ['bank', 190], ['physics', 270], ['arabic', 350]].forEach(([k, y]) => {
+      path(p, `M400 290C560 290 620 ${y} 800 ${y}`, { stroke: k === 'arabic' ? WEALTH : EV.dim, 'stroke-width': k === 'arabic' ? 6 : 3 });
+      evDot(p, 800, y, 11, k === 'arabic' ? WEALTH : EV.dim);
+      evText(p, L(k), { x: 830, y: y + 9, size: 28, anchor: 'start', fill: k === 'arabic' ? EV.goldHi : EV.dim, maxW: 300 });
+    });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-allin', prompt: [L('q2p')],
+    build: choice([[L('q2a')], [L('q2b')], [L('q2c')]], 1, L('q2y'), [L('q2na'), null, L('q2nc')]),
+  }], done) }],
+
+  ['name', 'b_name', (m, D) => {
+    const p = panel(0);
+    a3Ground(p, 760);
+    lab(p, 'account', 800, 120, m('account'), { size: 56, font: SERIF, weight: 600, fill: EV.gold });
+    const sky = G(p, { x: 560, y: 760, s: .42, o: .7 }); a3Skyline(sky, 2200, { spire: false });
+    lab(p, 'sharjah', 1420, 260, m('sharjah'), { size: 32, fill: EV.dim, italic: true, font: SERIF });
+    const am = evPerson(p, { kind: 'm', x: 250, y: 760, s: .82, o: 0 });
+    evRecolor(am, '#3f6f95', '#2c5170'); evBreathe(am, D);
+    show(am.g, m('ameen'), .45);
+    lab(p, 'ameen', 250, 815, m('ameen'), { size: 30, weight: 600 });
+    const van = a3Van(p, { x: 960, y: 760, s: 1 });
+    // their logo: a blue snowflake badge
+    const lg = G(van._side, { o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 52, fill: '#2c5170', stroke: '#9aa3a3', 'stroke-width': 3 }, lg);
+    path(lg, 'M0 -34V34M-30 -17L30 17M-30 17L30 -17', { stroke: '#e8e4d8', 'stroke-width': 5 });
+    show(lg, m('logo'), .4);
+    const tl = lab(p, 'logo', 1030, 470, m('logo'), { size: 30, fill: EV.dim });
+    // his own name: the badge fades, the name is painted on
+    hide(lg, m('own'), .4); hide(tl, m('own'), .3);
+    lab(p, 'own', 1030, 470, m('own', .1), { size: 32, fill: EV.goldHi, weight: 600 });
+    const nm = T(van._side, L('brand'), { x: 0, y: -2, size: 44, fill: '#1f5e5b', weight: 700, anchor: 'middle', font: '"Outfit",sans-serif', o: 0 });
+    const num = T(van._side, '☎ 05• ••• ••••', { x: 0, y: 40, size: 26, fill: '#3a3f3a', weight: 600, anchor: 'middle', font: '"Outfit",sans-serif', o: 0 });
+    show(nm, m('brand'), .5); show(num, m('brand') + .3, .4);
+    evMood(am, 'smile', m('brand'));
+    // what society gives back
+    [['resp', 520], ['equity', 900], ['lev', 1240]].forEach(([k, x]) => {
+      const pl = a3Pill(p, k, x, 855, { color: WEALTH, size: 30 });
+      put(pl, { y: 875 }); tw(pl, { o: 1, y: 855 }, m(k), .45, out);
+    });
+  }],
+
+  ['leverage', 'b_lev', (m, D) => {
+    const p = panel(0);
+    lab(p, 'levT', 800, 110, m('leverage'), { size: 54, font: SERIF, weight: 600, fill: EV.gold });
+    // the name plate in the middle, with a ring of trust around it
+    const pl = G(p, { x: 800, y: 450 });
+    mk('rect', { x: -150, y: -40, width: 300, height: 80, rx: 10, fill: '#dfe3e2', stroke: '#9aa3a3', 'stroke-width': 3 }, pl);
+    T(pl, 'AMEEN COOLING', { x: 0, y: 12, size: 32, fill: '#1f5e5b', weight: 700, anchor: 'middle', font: '"Outfit",sans-serif' });
+    mk('circle', { cx: 800, cy: 450, r: 140, fill: 'none', stroke: '#23251f', 'stroke-width': 12 }, p);
+    const ring = path(p, 'M800 310A140 140 0 1 1 799.9 310', { stroke: WEALTH, 'stroke-width': 12 }, { d: 0 });
+    // code and media you can build yourself
+    const cm = G(p, { x: 300, y: 230, o: 0 });
+    mk('rect', { x: -140, y: -40, width: 120, height: 80, rx: 12, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2 }, cm);
+    evText(cm, '</>', { x: -80, y: 12, size: 34, fill: EV.goldHi, weight: 600 });
+    mk('rect', { x: 20, y: -40, width: 120, height: 80, rx: 12, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2 }, cm);
+    path(cm, 'M68 -18L100 0L68 18Z', { fill: EV.goldHi });
+    show(cm, m('code'), .4);
+    lab(p, 'code', 300, 320, m('code'), { size: 26, fill: EV.dim, maxW: 460 });
+    lab(p, 'given', 800, 250, m('given'), { size: 32, fill: EV.ink, italic: true, font: SERIF });
+    // people and money: waiting at the sides until the name is trusted
+    const ppl = G(p, { x: 260, y: 560, o: 0 });
+    const folk = [-60, 0, 60].map(dx => a3Icon(ppl, dx, 30, EV.dim, .9));
+    show(ppl, m('people'), .4);
+    lab(p, 'people', 260, 650, m('people'), { size: 30, fill: EV.ink });
+    const mn = G(p, { x: 1340, y: 560, o: 0 });
+    a3Note(mn, { x: -20, y: -6, s: 1 }); a3Note(mn, { x: 20, y: 14, s: 1 });
+    show(mn, m('money'), .4);
+    lab(p, 'money', 1340, 650, m('money'), { size: 30, fill: MONEY });
+    const a1 = path(p, 'M360 540Q520 500 650 470', { stroke: EV.dim, 'stroke-width': 3, 'stroke-dasharray': '8 8' }, { d: 0 });
+    const a2 = path(p, 'M1240 540Q1080 500 950 470', { stroke: MONEY, 'stroke-width': 3, 'stroke-dasharray': '8 8' }, { d: 0 });
+    draw(a1, m('trust'), .6); draw(a2, m('trust'), .6);
+    lab(p, 'trustN', 800, 695, m('trust'), { size: 32, font: SERIF, weight: 600, fill: WEALTH });
+    // every honest job adds: ticks pop around the ring as it fills, one clock from the mark
+    const ticks = [];
+    for (let i = 0; i < 8; i++) { const a = -Math.PI / 2 + (i + 1) / 9 * Math.PI * 2; const g = G(p, { x: 800 + Math.cos(a) * 178, y: 450 + Math.sin(a) * 178, o: 0 }); mk('circle', { cx: 0, cy: 0, r: 15, fill: '#10171b', stroke: MONEY, 'stroke-width': 2 }, g); path(g, 'M-7 0L-2 6L8 -6', { stroke: MONEY, 'stroke-width': 3 }); ticks.push([g, m('adds') + i * .3, .3]); }
+    evSeq(ticks, D);
+    prog(q => { const t = q * D; put(ring, { d: .12 * io(evU(t, m('trust'), .5)) + .8 * io(evU(t, m('adds'), 2.6)) }); }, 0, D, lin);
+    lab(p, 'adds', 800, 860, m('adds'), { size: 30, fill: EV.ink });
+    // two helpers join, and a parts dealer gives credit
+    [folk[0], folk[2]].forEach((f, i) => { tw(f.firstChild, { c_fill: EV.goldHi }, m('helpers'), .3); tw(f.lastChild, { c_fill: EV.goldHi }, m('helpers'), .3); tw(f, { x: 210 + i * 70, y: 170 }, m('helpers'), .9, io); });
+    lab(p, 'helpers2', 505, 790, m('helpers'), { size: 28, fill: EV.goldHi });
+    const bx = G(p, { x: 1180, y: 740, o: 0 });
+    mk('rect', { x: -44, y: -36, width: 88, height: 72, rx: 6, fill: '#3a2f27', stroke: EV.gold, 'stroke-width': 2 }, bx);
+    path(bx, 'M-44 -10H44M0 -36V-10', { stroke: EV.gold, 'stroke-width': 2 });
+    show(bx, m('credit'), .4);
+    tw(bx, { x: 1040 }, m('credit'), .8, io);
+    lab(p, 'credit30', 1040, 815, m('credit'), { size: 28, fill: MONEY });
+  }],
+
+  ['edges', 'b_edges', (m, D) => {
+    const p = panel(0);
+    // a blade with two edges: gold on one side, rust on the other
+    const bl = G(p, { x: 800, y: 190, o: 0 });
+    path(bl, 'M-260 0L-220 -22H220L260 0L220 22H-220Z', { fill: '#2a2c27' });
+    path(bl, 'M-260 0L-220 -22H220L260 0', { stroke: WEALTH, 'stroke-width': 4 });
+    path(bl, 'M-260 0L-220 22H220L260 0', { stroke: STATUS, 'stroke-width': 4 });
+    put(bl, { s: .8 }); tw(bl, { o: 1, s: 1 }, m('both'), .45, back);
+    lab(p, 'bothL', 800, 120, m('both'), { size: 40, font: SERIF, italic: true, fill: EV.ink });
+    // two phones, two reviews, the same name on both
+    const review = (x, t, n, col) => {
+      const ph = a3Phone(p, { x, y: 470, w: 220, h: 300, o: 0 });
+      evText(ph._scr, 'Ameen Cooling', { x: 0, y: -80, size: 22, fill: EV.ink, weight: 600 });
+      for (let i = 0; i < 5; i++) a3Star(ph._scr, -64 + i * 32, -30, 13, i < n ? col : '#2b3632');
+      path(ph._scr, 'M-70 20H70M-70 44H40M-70 68H56', { stroke: '#2b3632', 'stroke-width': 6 });
+      show(ph, t, .4);
+      return ph;
+    };
+    review(420, m('five'), 5, WEALTH);
+    lab(p, 'five', 420, 670, m('five'), { size: 28, fill: EV.ink });
+    const sun = G(p, { x: 1420, y: 330, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 34, fill: '#f0a35e' }, sun);
+    for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4, c = Math.cos(a), s_ = Math.sin(a); path(sun, `M${(s_ * 46).toFixed(1)} ${(-c * 46).toFixed(1)}L${(s_ * 62).toFixed(1)} ${(-c * 62).toFixed(1)}`, { stroke: '#f0a35e', 'stroke-width': 4 }); }
+    show(sun, m('august'), .4);
+    lab(p, 'august', 1420, 420, m('august'), { size: 28, fill: '#f0a35e' });
+    review(1100, m('angry'), 1, STATUS);
+    lab(p, 'angry', 1100, 670, m('angry'), { size: 28, fill: EV.ink });
+    lab(p, 'creditL', 420, 740, m('credit'), { size: 40, font: SERIF, weight: 600, fill: WEALTH });
+    lab(p, 'blame', 1100, 740, m('blame'), { size: 40, font: SERIF, weight: 600, fill: STATUS });
+    // without accountability: no reason, no way
+    const nr = lab(p, 'noreason', 420, 845, m('noreason'), { size: 28, fill: EV.dim, maxW: 560 });
+    const nw = lab(p, 'noway', 1100, 845, m('noway'), { size: 28, fill: EV.dim, maxW: 600 });
+    void nr; void nw;
+  }],
+
+  ['fear', 'b_fear', (m, D) => {
+    const p = panel(0);
+    a3Ground(p, 760);
+    // Ameen in the spotlight, the whole family watching
+    const spot = evGlow(p, 300, 620, 240, 'Warm', 0);
+    tw(spot, { o: 1 }, m('public'), .5);
+    const am = evPerson(p, { kind: 'm', x: 300, y: 760, s: .8 });
+    evRecolor(am, '#3f6f95', '#2c5170'); evBreathe(am, D);
+    lab(p, 'public', 300, 160, m('public'), { size: 40, font: SERIF, italic: true, fill: EV.goldHi });
+    const eyes = [560, 640, 720].map((x, i) => { const g = G(p, { x, y: 830 - (i % 2) * 20, o: 0 }); a3Icon(g, 0, 40, '#3a3f3a', .8); return g; });
+    eyes.forEach(e => show(e, m('public'), .4));
+    // the family group chat
+    const ph = a3Phone(p, { x: 1060, y: 440, w: 520, h: 560, o: 0 });
+    show(ph, m('shafeeq'), .4);
+    mk('rect', { x: -250, y: -254, width: 500, height: 56, fill: '#1f3a33' }, ph._scr);
+    mk('circle', { cx: -210, cy: -226, r: 16, fill: '#7cc79d' }, ph._scr);
+    const bub = (y, key, t, w) => {
+      const g = G(ph._scr, { x: -230, y, o: 0 });
+      mk('rect', { x: 0, y: -34, width: w, height: 68, rx: 14, fill: '#22302b' }, g);
+      evText(g, L(key), { x: 24, y: 10, size: 30, anchor: 'start', fill: EV.ink, maxW: w - 40 });
+      put(g, { y: y + 20 }); tw(g, { o: 1, y }, t, .4, out);
+      return g;
+    };
+    const nmL = evText(ph._scr, L('shafeeq'), { x: -226, y: -120, size: 24, anchor: 'start', fill: '#7cc79d', weight: 600, o: 0 });
+    show(nmL, m('shafeeq'), .4);
+    bub(-70, 'what', m('what'), 380);
+    bub(30, 'everyone', m('everyone'), 380);
+    evMood(am, 'worried', m('what'));
+    // Naval, on the same clock: a second panel
+    const q = panel(m('naval'));
+    put(q, { o: 0 }); show(q, m('naval'), .4);
+    const nv = G(q, { x: 330, y: 560 });
+    evGlow(nv, 0, -60, 150, 'Gold', 0);
+    a3Icon(nv, 0, 60, EV.ink, 2.2);
+    const pw = nv.firstChild;
+    lab(q, 'naval', 330, 680, m('naval'), { size: 32, weight: 600 });
+    const k1 = a3Pill(q, 'known', 330, 300, { color: EV.dim, ink: EV.ink, size: 28 });
+    show(k1, m('known'), .4);
+    const k2 = a3Pill(q, 'philo', 330, 210, { color: WEALTH, size: 30 });
+    put(k2, { y: 230 }); tw(k2, { o: 1, y: 210 }, m('philo'), .45, out);
+    const warn = [0, 1, 2].map(i => {
+      const g = G(q, { x: 1060 + (i - 1) * 40, y: 300 + i * 130, o: 0 });
+      const w = Math.min(640, evW(L('ending'), ML ? 26 : 30) + 60);
+      mk('rect', { x: -w / 2, y: -38, width: w, height: 76, rx: 14, fill: '#2a1a16', stroke: STATUS, 'stroke-width': 2 }, g);
+      evText(g, L('ending'), { x: 0, y: 10, size: 30, fill: STATUS, maxW: w - 30, italic: true, font: SERIF });
+      return [g, m('ending') + i * .2, .35];
+    });
+    // the warnings arrive in turn, then dim when the power is named: one clock for both
+    prog(qq => { const t = qq * D; warn.forEach(([g, t0, d]) => put(g, { o: io(evU(t, t0, d)) * (1 - .75 * io(evU(t, m('power'), .5))) })); }, 0, D, lin);
+    tw(pw, { o: 1 }, m('power'), .6);
+    lab(q, 'power', 800, 820, m('power'), { size: 44, font: SERIF, weight: 600, fill: WEALTH });
+  }],
+
+  ['captain', 'b_captain', (m, D) => {
+    const p = panel(0);
+    mk('rect', { x: -10, y: -10, width: 1620, height: 920, fill: 'url(#evSky)' }, p);
+    mk('rect', { x: -10, y: 600, width: 1620, height: 320, fill: 'url(#evSea)' }, p);
+    path(p, 'M0 600H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+    // the dhow tilts and settles lower on one clock from the mark; the crew leave, the captain last
+    const sh = a3Dhow(p, { x: 820, y: 600 });
+    const crew = [-120, -60, 60].map(dx => a3Icon(sh, dx, 2, EV.dim, .7));
+    const cap = a3Icon(sh, 140, -6, EV.goldHi, .8);
+    prog(q => { const v = Math.max(0, q * D - m('captain')); put(sh, { r: -6 * io(Math.min(1, v / 4)), y: 600 + 40 * io(Math.min(1, v / 4)) }); }, 0, D, lin);
+    const raft = G(p, { x: 360, y: 640 });
+    path(raft, 'M-100 0Q0 30 100 0L80 20H-80Z', { fill: '#4a3a2c', stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .5 });
+    const onRaft = crew.map((c, i) => { hide(c, m('captain') + i * .25, .3); return [a3Icon(raft, -60 + i * 40, -2, EV.dim, .7, 0), m('captain') + i * .25, .3]; });
+    evSeq(onRaft, D);
+    lab(p, 'captain', 960, 240, m('captain'), { size: 40, font: SERIF, italic: true, fill: EV.goldHi });
+    pulse(cap, m('captain'), 1.15);
+    // in business: the payout queue on a bad year
+    const q = panel(m('helpers'));
+    put(q, { o: 0 }); show(q, m('helpers'), .4);
+    const box = G(q, { x: 210, y: 470 });
+    mk('rect', { x: -80, y: -60, width: 160, height: 120, rx: 10, fill: '#10171b', stroke: MONEY, 'stroke-width': 2.5 }, box);
+    path(box, 'M-80 -20H80', { stroke: MONEY, 'stroke-width': 2 });
+    const dest = [['helpers', 560], ['supplier', 860], ['rent', 1160], ['last', 1430]];
+    dest.forEach(([k, x], i) => {
+      const g = G(q, { x, y: 470, o: 0 });
+      T(g, String(i + 1), { x: 0, y: -110, size: 30, fill: EV.dim, weight: 600, anchor: 'middle', font: SANS });
+      if (k === 'helpers') { a3Icon(g, -26, 40, EV.ink, .9); a3Icon(g, 26, 40, EV.ink, .9); }
+      if (k === 'supplier') { mk('rect', { x: -46, y: -36, width: 92, height: 76, rx: 6, fill: '#3a2f27', stroke: EV.gold, 'stroke-width': 2 }, g); path(g, 'M-46 -8H46M0 -36V-8', { stroke: EV.gold, 'stroke-width': 2 }); }
+      if (k === 'rent') { path(g, 'M-50 40V-20L0 -56L50 -20V40Z', { fill: '#1b2226', stroke: '#3a3f3a', 'stroke-width': 3 }); mk('rect', { x: -14, y: 6, width: 28, height: 34, fill: '#3a2f27' }, g); }
+      if (k === 'last') a3Icon(g, 0, 40, '#3f6f95', 1.2);
+      show(g, m(k), .4);
+      lab(q, k, x, 580, m(k), { size: 30, fill: k === 'last' ? STATUS : EV.ink, weight: k === 'last' ? 600 : 500 });
+      const c = a3Coin(q, 210, 450, k === 'last' ? 9 : 15, k === 'last' ? '#4d6a5a' : MONEY, 0);
+      tw(c, { o: 1 }, m(k), .2);
+      tw(c, { x, y: 380 }, m(k) + .2, .9, io);
+    });
+    lab(q, 'smaller', 800, 760, m('smaller'), { size: 40, font: SERIF, italic: true, fill: EV.dim });
+  }],
+
+  ['check2', 'b_check2', (m, D) => {
+    const p = panel(0);
+    const keep = G(scene);
+    hide(keep, D - .45, .4);
+    prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+    const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+    draw(fr, m('sci'), 1);
+    const tag = G(keep, { x: 200, y: 60, o: 0 });
+    const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+    mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+    evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+    show(tag, m('sci'), .4);
+    lab(p, 'q', 680, 160, m('q'), { size: 42, font: SERIF, italic: true, fill: EV.ink, maxW: 860 });
+    const stamp = G(p, { x: 1300, y: 200, o: 0, r: -7 });
+    const sw = Math.max(260, evW(L('depends'), 28) + 50);
+    mk('rect', { x: -sw / 2, y: -30, width: sw, height: 60, rx: 8, fill: 'none', stroke: SCI, 'stroke-width': 4 }, stamp);
+    evText(stamp, L('depends'), { x: 0, y: 10, size: 28, weight: 700, fill: SCI, maxW: sw - 30 });
+    put(stamp, { s: 1.5 }); tw(stamp, { o: 1, s: 1 }, m('depends'), .4, back);
+    // three places, three different downsides
+    const col = (key, x, t) => {
+      const g = G(p, { x, y: 440, o: 0 });
+      mk('rect', { x: -220, y: -150, width: 440, height: 300, rx: 16, fill: '#14121c', stroke: SCI, 'stroke-width': 2, 'stroke-opacity': .7 }, g);
+      evText(g, L(key), { x: 0, y: -98, size: 38, font: SERIF, weight: 600, fill: EV.ink });
+      put(g, { y: 460 }); tw(g, { o: 1, y: 440 }, t, .45, out);
+      return g;
+    };
+    const cheque = (g, x, y, col_) => { const c = G(g, { x, y }); mk('rect', { x: -70, y: -30, width: 140, height: 60, rx: 4, fill: '#e8e4d8' }, c); path(c, 'M-56 -10H20M-56 8H0M20 14Q40 0 56 14', { stroke: '#6a6556', 'stroke-width': 2.5 }); if (col_) path(c, 'M-60 -26L60 26', { stroke: col_, 'stroke-width': 4 }); return c; };
+    const us = col('us', 330, m('us'));
+    const sun = G(us, { y: -10 }); path(sun, 'M-60 30H60M-40 30A40 40 0 0 1 40 30', { stroke: MONEY, 'stroke-width': 4 });
+    lab(us, 'fresh', 0, 90, m('fresh'), { size: 32, fill: MONEY, weight: 600 });
+    const ind = col('india', 800, m('india'));
+    cheque(ind, 0, -10, STATUS);
+    lab(ind, 'criminal', 0, 90, m('criminal'), { size: 32, fill: STATUS, weight: 600, maxW: 400 });
+    const uae = col('uae', 1270, m('uae'));
+    cheque(uae, 0, -24, null);
+    lab(uae, 'nocrime', 0, 52, m('nocrime'), { size: 28, fill: MONEY, maxW: 400 });
+    lab(uae, 'seize', 0, 100, m('seize'), { size: 28, fill: STATUS, maxW: 400 });
+    // the fear is real; size the risk
+    lab(p, 'judged', 800, 680, m('judged'), { size: 32, fill: EV.ink, maxW: 1300 });
+    lab(p, 'size', 800, 750, m('size'), { size: 40, font: SERIF, weight: 600, fill: EV.goldHi });
+    lab(p, 'never', 800, 805, m('never'), { size: 30, fill: EV.ink, maxW: 1300 });
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    a3Ground(p, 400);
+    const am = evPerson(p, { kind: 'm', x: 380, y: 400, s: .5 });
+    evRecolor(am, '#3f6f95', '#2c5170'); evBreathe(am, D); evMood(am, 'ask', .4);
+    const van = a3Van(p, { x: 980, y: 400, s: .62 });
+    T(van._side, 'AMEEN COOLING', { x: 0, y: -2, size: 44, fill: '#1f5e5b', weight: 700, anchor: 'middle', font: '"Outfit",sans-serif' });
+    const th = evThought(p, { x: 450, y: 225, w: 200, h: 100, dx: 50, o: 0 });
+    show(th, .4, .4);
+    evText(th._in, '?', { x: 0, y: 16, size: 48, weight: 600, fill: EV.gold });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-account', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 1, L('q3y'), [L('q3na'), null, L('q3nc')]),
+  }], done) }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    evText(p, L('b_wrap'), { x: 800, y: 130, size: 52, font: SERIF, weight: 600, fill: EV.gold });
+    const cols = [WEALTH, EV.goldHi, TIME, EV.goldHi];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -30, y: 260 + i * 150, o: 0 });
+      mk('circle', { cx: 200, cy: -10, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: 200, y: 1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 260, y: 0, size: 36, maxW: 1150, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Rasheed’s new buyer in Muscat sends a warm thank-you message after every shipment, but always pays for half a kilo less than he takes. Will this relationship compound?',
+  q1a: 'Yes. His intentions are clearly good.',
+  q1b: 'No. What he does keeps taking a little, so trust has nothing to grow on.',
+  q1c: 'Yes, as long as they sign a thicker contract every year.',
+  q1y: 'Right. The kind words are intentions; the short weight is the action, and only actions build trust.',
+  q1na: 'Warm messages are intentions. The half kilo he keeps is what he actually does, and that is what counts.',
+  q1nc: 'Contracts stand in for trust; they don’t grow it. Rasheed and Joseph got rid of the thick contract because trust replaced it.',
+  q2p: 'Nisha’s spoken Arabic course is taking off. She still gives her weekends to tuition and keeps paying for bank-exam coaching “just in case”. What fits this chapter?',
+  q2a: 'Give all four equal time, forever.',
+  q2b: 'Go all in on Arabic, and drop what she now knows won’t lead anywhere.',
+  q2c: 'Regret the earlier years as pure waste.',
+  q2y: 'Yes. She has found the slice worth decades: now it gets her full effort, so it can compound.',
+  q2na: 'Spread evenly, nothing gets decades of compounding. Exploring was for the search, and the search is over.',
+  q2nc: 'They were not wasted as learning: they shaped her and helped her find Arabic. They only missed in the goal sense.',
+  q3p: 'Which move takes on accountability in this chapter’s sense?',
+  q3a: 'Ameen goes back to working under his old company’s logo, so no one can blame him.',
+  q3b: 'Ameen keeps his name and number on the van, and answers personally for every job.',
+  q3c: 'Ameen signs a large security cheque for a loan he can’t cover, to look bold.',
+  q3y: 'Right. His name is on the work: he takes the credit and the blame, and that is how trust and leverage come.',
+  q3na: 'Safe from blame, but also invisible: no name, no credibility, no leverage.',
+  q3nc: 'That is not accountability, it is a gamble. In India a bounced cheque can be a criminal case; in the UAE the holder can still seize assets. Size the risk.',
+  p1p: 'Which one shows compound interest in a relationship?',
+  p1a: 'Switching suppliers every month for the cheapest price.',
+  p1b: 'Working with the same fair partner for ten years, so a deal now takes one phone call.',
+  p1c: 'Signing a longer contract with a stranger.',
+  p1y: 'Yes. Ten years of fair dealing built trust, and trust makes every new deal faster and cheaper.',
+  p1na: 'Starting over every month means trust never gets the years it needs to compound.',
+  p1nc: 'A longer contract is still paperwork in place of trust. Trust has to be earned by actions over time.',
+  p2p: 'A compressor Ameen fitted fails, and the customer posts an angry review naming Ameen Cooling. What does accountability look like?',
+  p2a: 'Blame the parts supplier in a public reply.',
+  p2b: 'Paint over his name so the review cannot follow him.',
+  p2c: 'Own the mistake, fix it, and keep his name on the work.',
+  p2y: 'Right. Credit and blame come together. Owning a failure honestly is what makes a name trustworthy.',
+  p2na: 'Passing the blame tells every reader his name cannot be relied on.',
+  p2nb: 'Removing his name removes the risk, and the credibility and leverage with it.',
+  p3p: 'Why do labour and capital, unlike code and media, depend so much on your name?',
+  p3a: 'Because other people must choose to give them to you, and they give them to names they trust.',
+  p3b: 'Because they can only come from working longer hours.',
+  p3c: 'Because banks lend the same amount to anyone who asks.',
+  p3y: 'Yes. People decide to work with you, and money is trusted to you. Both follow credibility.',
+  p3nb: 'Longer hours are your own time. Labour and capital are other people’s, given to you.',
+  p3nc: 'Lenders and partners look closely at your record. That record is your name.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'Studies have measured that exactly 99% of effort is wasted.',
+  p4r2: 'People cooperate more when they expect to deal with each other again.',
+  p4r3: 'In India today, a bounced cheque can still lead to a criminal case.',
+  p4r4: 'Failing under your own name carries the same small risk everywhere in the world.',
+  p4w1: 'False. Ninety-nine percent is a figure of speech. Sampling widely can even lead to better-matched careers.',
+  p4w2: 'True. In repeated games, as in Axelrod’s tournaments, strategies that cooperate first and repay in kind do best.',
+  p4w3: 'True. Under Section 138 of the Negotiable Instruments Act, a bounced cheque is a criminal offence.',
+  p4w4: 'False. It depends on the country: fresh-start bankruptcy in the US, criminal cheque cases in India, civil asset seizure in the UAE.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'മസ്കത്തിലെ റഷീദിന്റെ പുതിയ ഇടപാടുകാരൻ ഓരോ ലോഡിനും ശേഷം സ്നേഹം നിറഞ്ഞ നന്ദി സന്ദേശം അയയ്ക്കും, പക്ഷേ എടുത്തതിനേക്കാൾ അര കിലോ കുറച്ചേ എപ്പോഴും പണം തരൂ. ഈ ബന്ധം കൂട്ടുപലിശ പോലെ വളരുമോ?',
+  q1a: 'വളരും. അയാളുടെ ഉദ്ദേശ്യം നല്ലതാണല്ലോ.',
+  q1b: 'ഇല്ല. അയാൾ ചെയ്യുന്നത് എപ്പോഴും കുറച്ച് എടുക്കലാണ്; വിശ്വാസത്തിന് വളരാൻ ഒന്നുമില്ല.',
+  q1c: 'വളരും, എല്ലാ വർഷവും കൂടുതൽ കട്ടിയുള്ള കരാർ ഒപ്പിട്ടാൽ.',
+  q1y: 'ശരി. നല്ല വാക്കുകൾ ഉദ്ദേശ്യമാണ്; കുറയുന്ന തൂക്കമാണ് പ്രവൃത്തി. പ്രവൃത്തികൾ മാത്രമേ വിശ്വാസം പണിയൂ.',
+  q1na: 'സ്നേഹസന്ദേശങ്ങൾ ഉദ്ദേശ്യം മാത്രം. അയാൾ കൈക്കലാക്കുന്ന അര കിലോയാണ് അയാൾ യഥാർത്ഥത്തിൽ ചെയ്യുന്നത്, അതാണ് കണക്കിൽ വരുന്നത്.',
+  q1nc: 'കരാർ വിശ്വാസത്തിന് പകരം നിൽക്കുന്നു, അതിനെ വളർത്തുന്നില്ല. വിശ്വാസം വന്നപ്പോഴാണ് റഷീദും ജോസഫും കട്ടിയുള്ള കരാർ ഒഴിവാക്കിയത്.',
+  q2p: 'നിഷയുടെ സംസാര അറബി കോഴ്സ് ക്ലിക്കായി. എന്നിട്ടും വാരാന്ത്യങ്ങൾ ട്യൂഷന് കൊടുക്കുന്നു, “ഒരുപക്ഷേ വേണ്ടിവന്നാലോ” എന്ന് കരുതി ബാങ്ക് പരീക്ഷാ കോച്ചിങ്ങിനും പണം അടയ്ക്കുന്നു. ഈ അധ്യായത്തിന് ചേരുന്നത് ഏത്?',
+  q2a: 'നാലിനും എന്നെന്നേക്കും ഒരേ സമയം കൊടുക്കുക.',
+  q2b: 'അറബിയിൽ മുഴുവനായി ഇറങ്ങുക; എങ്ങുമെത്തില്ലെന്ന് ഇപ്പോൾ അറിയാവുന്നവ ഉപേക്ഷിക്കുക.',
+  q2c: 'മുൻവർഷങ്ങൾ മുഴുവൻ പാഴായെന്ന് ഖേദിക്കുക.',
+  q2y: 'അതെ. പതിറ്റാണ്ടുകൾ മൂല്യമുള്ള കഷണം അവർ കണ്ടെത്തി. ഇനി അതിന് മുഴുവൻ പ്രയത്നവും കൊടുക്കാം, അത് കൂടിക്കൂടി വളരും.',
+  q2na: 'എല്ലാറ്റിനും തുല്യമായി വീതിച്ചാൽ, ഒന്നിനും പതിറ്റാണ്ടുകളുടെ വളർച്ച കിട്ടില്ല. പരീക്ഷിക്കൽ തിരയുന്ന കാലത്തേക്കായിരുന്നു; തിരച്ചിൽ കഴിഞ്ഞു.',
+  q2nc: 'പഠനം എന്ന നിലയിൽ അവ പാഴായില്ല: അവ അവരെ രൂപപ്പെടുത്തി, അറബി കണ്ടെത്താൻ സഹായിച്ചു. ലക്ഷ്യത്തിന്റെ കണക്കിൽ മാത്രമാണ് അവ ഫലം തരാതിരുന്നത്.',
+  q3p: 'ഈ അധ്യായം പറയുന്ന അർഥത്തിൽ ഉത്തരവാദിത്തം ഏറ്റെടുക്കുന്നത് ഏത്?',
+  q3a: 'ആരും കുറ്റപ്പെടുത്താതിരിക്കാൻ, അമീൻ പഴയ കമ്പനിയുടെ ലോഗോയ്ക്ക് കീഴിലേക്ക് തിരിച്ചുപോകുന്നു.',
+  q3b: 'അമീൻ വാനിൽ സ്വന്തം പേരും നമ്പറും നിലനിർത്തുന്നു, ഓരോ ജോലിക്കും നേരിട്ട് ഉത്തരം പറയുന്നു.',
+  q3c: 'ധൈര്യശാലിയായി തോന്നിക്കാൻ, തിരിച്ചടയ്ക്കാനാകാത്ത ഒരു ലോണിന് അമീൻ വലിയൊരു സെക്യൂരിറ്റി ചെക്ക് ഒപ്പിടുന്നു.',
+  q3y: 'ശരി. ജോലിയിൽ അവന്റെ പേരുണ്ട്: ക്രെഡിറ്റും പഴിയും അവൻ ഏറ്റെടുക്കുന്നു. അങ്ങനെയാണ് വിശ്വാസവും ലിവറേജും വരുന്നത്.',
+  q3na: 'പഴിയിൽ നിന്ന് രക്ഷപ്പെടാം, പക്ഷേ ആരും കാണില്ല: പേരില്ലെങ്കിൽ വിശ്വാസ്യതയില്ല, ലിവറേജുമില്ല.',
+  q3nc: 'അത് ഉത്തരവാദിത്തമല്ല, ചൂതാട്ടമാണ്. ഇന്ത്യയിൽ ചെക്ക് മടങ്ങിയാൽ ക്രിമിനൽ കേസാകാം; യുഎഇയിൽ ചെക്ക് കൈവശമുള്ളയാൾക്ക് സ്വത്ത് പിടിച്ചെടുക്കാം. റിസ്കിന്റെ വലിപ്പം നോക്കൂ.',
+  p1p: 'ഒരു ബന്ധത്തിലെ കൂട്ടുപലിശ കാണിക്കുന്നത് ഏത്?',
+  p1a: 'ഏറ്റവും കുറഞ്ഞ വിലയ്ക്കായി എല്ലാ മാസവും സപ്ലയറെ മാറ്റുന്നത്.',
+  p1b: 'പത്ത് വർഷമായി ഒരേ ന്യായക്കാരനായ പങ്കാളിയോടൊപ്പം ജോലി ചെയ്യുന്നത്; ഇപ്പോൾ ഒരു ഡീലിന് ഒരു ഫോൺ കോൾ മതി.',
+  p1c: 'അപരിചിതനുമായി കൂടുതൽ നീണ്ട കരാർ ഒപ്പിടുന്നത്.',
+  p1y: 'അതെ. പത്ത് വർഷത്തെ ന്യായമായ ഇടപാട് വിശ്വാസം പണിതു. വിശ്വാസം ഓരോ പുതിയ ഡീലിനെയും വേഗത്തിലും ചെലവുകുറച്ചും ആക്കുന്നു.',
+  p1na: 'എല്ലാ മാസവും പുതുതായി തുടങ്ങിയാൽ, വിശ്വാസത്തിന് വളരാൻ വേണ്ട വർഷങ്ങൾ ഒരിക്കലും കിട്ടില്ല.',
+  p1nc: 'നീണ്ട കരാറും വിശ്വാസത്തിന് പകരമുള്ള കടലാസ് മാത്രം. വിശ്വാസം കാലക്രമേണ പ്രവൃത്തികൾ കൊണ്ട് നേടണം.',
+  p2p: 'അമീൻ ഘടിപ്പിച്ച ഒരു കംപ്രസർ കേടാകുന്നു. ഉപഭോക്താവ് അമീൻ കൂളിങ്ങിന്റെ പേരെടുത്ത് ദേഷ്യം നിറഞ്ഞ ഒരു റിവ്യൂ ഇടുന്നു. ഉത്തരവാദിത്തം എങ്ങനെയായിരിക്കും?',
+  p2a: 'പൊതു മറുപടിയിൽ പാർട്സ് സപ്ലയറെ കുറ്റപ്പെടുത്തുക.',
+  p2b: 'റിവ്യൂ പിന്തുടരാതിരിക്കാൻ വാനിലെ പേര് മായ്ച്ചുകളയുക.',
+  p2c: 'തെറ്റ് ഏറ്റുപറയുക, ശരിയാക്കുക, ജോലിയിൽ സ്വന്തം പേര് നിലനിർത്തുക.',
+  p2y: 'ശരി. ക്രെഡിറ്റും പഴിയും ഒരുമിച്ചാണ് വരുന്നത്. ഒരു പരാജയം സത്യസന്ധമായി ഏറ്റെടുക്കുന്നതാണ് ഒരു പേരിനെ വിശ്വസനീയമാക്കുന്നത്.',
+  p2na: 'പഴി മറ്റൊരാളിലേക്ക് മാറ്റുന്നത്, അവന്റെ പേരിനെ ആശ്രയിക്കാനാകില്ലെന്ന് വായിക്കുന്ന എല്ലാവരോടും പറയുന്നു.',
+  p2nb: 'പേര് മാറ്റിയാൽ റിസ്ക് പോകും; അതോടൊപ്പം വിശ്വാസ്യതയും ലിവറേജും.',
+  p3p: 'കോഡിനെയും മീഡിയയെയും പോലെയല്ലാതെ, അധ്വാനവും മൂലധനവും നിങ്ങളുടെ പേരിനെ ഇത്ര ആശ്രയിക്കുന്നത് എന്തുകൊണ്ട്?',
+  p3a: 'കാരണം മറ്റുള്ളവർ അവ നിങ്ങൾക്ക് തരാൻ തീരുമാനിക്കണം; അവർ അത് കൊടുക്കുന്നത് വിശ്വസിക്കുന്ന പേരുകൾക്കാണ്.',
+  p3b: 'കാരണം കൂടുതൽ മണിക്കൂർ ജോലി ചെയ്താൽ മാത്രമേ അവ വരൂ.',
+  p3c: 'കാരണം ചോദിക്കുന്ന ആർക്കും ബാങ്കുകൾ ഒരേ തുക കടം കൊടുക്കും.',
+  p3y: 'അതെ. ആളുകൾ നിങ്ങളോടൊപ്പം ജോലി ചെയ്യാൻ തീരുമാനിക്കുന്നു, പണം നിങ്ങളെ വിശ്വസിച്ച് ഏൽപ്പിക്കുന്നു. രണ്ടും വിശ്വാസ്യതയെ പിന്തുടരുന്നു.',
+  p3nb: 'കൂടുതൽ മണിക്കൂറുകൾ നിങ്ങളുടെ സ്വന്തം സമയമാണ്. അധ്വാനവും മൂലധനവും മറ്റുള്ളവരുടേതാണ്, നിങ്ങൾക്ക് തരുന്നതാണ്.',
+  p3nc: 'കടം തരുന്നവരും പങ്കാളികളും നിങ്ങളുടെ ചരിത്രം ശ്രദ്ധിച്ചുനോക്കും. ആ ചരിത്രമാണ് നിങ്ങളുടെ പേര്.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'പ്രയത്നത്തിന്റെ കൃത്യം 99% പാഴാണെന്ന് പഠനങ്ങൾ അളന്നിട്ടുണ്ട്.',
+  p4r2: 'വീണ്ടും ഇടപാട് നടത്തുമെന്ന് പ്രതീക്ഷിക്കുമ്പോൾ ആളുകൾ കൂടുതൽ സഹകരിക്കുന്നു.',
+  p4r3: 'ഇന്ന് ഇന്ത്യയിൽ, ചെക്ക് മടങ്ങിയാൽ ഇപ്പോഴും ക്രിമിനൽ കേസാകാം.',
+  p4r4: 'സ്വന്തം പേരിൽ പരാജയപ്പെടുന്നതിന് ലോകത്ത് എല്ലായിടത്തും ഒരേ ചെറിയ റിസ്കാണ്.',
+  p4w1: 'തെറ്റ്. തൊണ്ണൂറ്റൊമ്പത് ശതമാനം ഒരു പറച്ചിൽ രീതിയാണ്. പലതും പരീക്ഷിക്കുന്നത് കൂടുതൽ ചേരുന്ന കരിയറിലേക്ക് പോലും നയിക്കാം.',
+  p4w2: 'ശരി. ആക്സൽറോഡിന്റെ മത്സരങ്ങളിലെന്ന പോലെ, ആവർത്തിക്കുന്ന കളികളിൽ ആദ്യം സഹകരിച്ച് അതേ നാണയത്തിൽ തിരിച്ചുകൊടുക്കുന്ന രീതികളാണ് ജയിക്കുന്നത്.',
+  p4w3: 'ശരി. നെഗോഷ്യബിൾ ഇൻസ്ട്രുമെന്റ്സ് ആക്ടിലെ 138-ാം വകുപ്പ് പ്രകാരം ചെക്ക് മടങ്ങുന്നത് ക്രിമിനൽ കുറ്റമാണ്.',
+  p4w4: 'തെറ്റ്. നാടിനെ ആശ്രയിച്ചിരിക്കും: അമേരിക്കയിൽ പുതിയ തുടക്കം, ഇന്ത്യയിൽ ചെക്ക് കേസ് ക്രിമിനൽ, യുഎഇയിൽ സിവിൽ നടപടിയിലൂടെ സ്വത്ത് പിടിച്ചെടുക്കൽ.',
+});
+const PRACTICE = [
+  { id: 'p-long', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 1, L('p1y'), [L('p1na'), null, L('p1nc')]) },
+  { id: 'p-own', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 2, L('p2y'), [L('p2na'), L('p2nb'), null]) },
+  { id: 'p-lever', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 0, L('p3y'), [null, L('p3nb'), L('p3nc')]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['f'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['t'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['t'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['f'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('almanack:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>
