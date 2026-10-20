@@ -70,7 +70,7 @@ function evText(p, str, { x = 0, y = 0, size = 34, fill = EV.ink, anchor = 'midd
   if (maxW) { const w = evW(str, size, font, weight); if (w > maxW) size *= maxW / w; }
   const t = T(p, str, { x, y, size, fill, font, weight, anchor, o });
   if (italic && !ML) t.setAttribute('font-style', 'italic');
-  if (ls) t.setAttribute('letter-spacing', ls);
+  if (ls && !ML) t.setAttribute('letter-spacing', ls);   // spacing splits Malayalam letter clusters
   return t;
 }
 // Wrapped paragraph: lines broken on spaces to fit maxW. Returns a group with ._h (height).

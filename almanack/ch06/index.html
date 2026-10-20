@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Work that feels like play, and luck · The Almanack of Naval Ravikant, Chapter 6">
+<meta property="og:description" content="A 10-minute animated lesson in English and Malayalam: why play beats grind, what real retirement means, why lifestyle creep traps you, and four kinds of luck, from pure chance to luck you build.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/ch06/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<title>Work that feels like play, and luck · The Almanack of Naval Ravikant</title>
+<meta name="description" content="An animated, narrated lesson on work and luck from The Almanack of Naval Ravikant: the games of life, a new idea of retirement, authenticity, the craving for money, and four kinds of luck. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'കളി പോലെ തോന്നുന്ന ജോലി, ഭാഗ്യം · The Almanack of Naval Ravikant';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/ymu.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/almanack/ch06/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Work that feels like play, and luck', kicker: 'PART 1 · WEALTH · CHAPTER 6', sub: 'Why play beats grind, what real retirement means, and four kinds of luck',
+  credit: 'A study companion to The Almanack of Naval Ravikant, by Eric Jorgenson',
+  b_intro: 'Title', b_history: 'Working for yourself', b_games: 'The games of life', b_retire: 'Real retirement', b_q1: 'Quick check',
+  b_auth: 'Be authentic', b_play: 'Work as play', b_check: 'Science check', b_lust: 'The craving', b_q2: 'Quick check', b_ride: 'Join early',
+  b_univ: 'A thousand lives', b_luck: 'Kinds of luck', b_diver: 'Luck that finds you', b_destiny: 'Character and reputation', b_q3: 'Quick check',
+  b_network: 'Networking', b_trust: 'Whom to trust', b_check2: 'Science check', b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  hunt: 'hunting and gathering, no boss', farm: 'farming: landlords and labourers', factory: 'factories: a taller ladder',
+  internet: 'the internet', own: 'work for yourself', fail: 'fail at your own venture, but try',
+  learns: 'learns to stand on their own feet', companies: 'nearly as many companies as people',
+  needed: 'needed it: learned to make money', problems: 'problems over money', games: 'games, one after another',
+  school: 'school', social: 'social', money: 'money', status: 'status', treadmill: 'hedonic treadmill', see: 'see the games as games, step off',
+  freedom: 'freedom from money worries', sixty: 'sixty-five and a pension', trading: 'trading today for some imagined later', someday: 'later',
+  feels: 'today feels whole on its own', roads: 'three roads there', r1: 'savings', cover: 'covers what you spend',
+  nothing: 'spending close to nothing, like a monk', love: 'work you love', today: 'today',
+  competition: 'the competition trap', authentic: 'be authentic', loveIt: 'you love doing it', hiba: 'Hiba, Thrissur',
+  calligraphy: 'Malayalam and Arabic calligraphy', matched: 'matched to what people want', wedding: 'wedding cards',
+  leverage: 'leverage: a printer, an online shop', name: 'her name on every card', nameCard: 'HIBA', risk: 'risk: hers', reward: 'reward: hers too',
+  art: 'Art: done for its own sake', side: 'side effect: money', desperate: 'desperate: any business at all', tech: 'technology and science',
+  looks: 'looks like work to others,', playL: 'feels like play to him', grinding: 'grinding: stops at night', keeps: 'playing: keeps going',
+  all: 'not all or nothing', shift: 'shift a little each year',
+  sci: 'Science check', q_play: '“Does play beat grind?”', review: 'a review: 40 years of studies', enjoy: 'enjoy the work itself',
+  quality: 'quality', pay: 'pay and bonuses', quantity: 'quantity', edge: 'a real edge', sixteen: '16-hour days?',
+  wk1: '35–40 h a week', wk2: '55+ h a week', stroke: 'stroke risk: about a third higher', sleep: 'sleep and rest: still needed, even for play',
+  moneyL: 'money: nothing wrong with it', craving: 'the craving does harm', bottom: 'no bottom', fear: 'fear of losing it',
+  shafeeq: 'Shafeeq, Dubai', faisal: 'Faisal', payL: 'pay', spendL: 'spending', climbs: 'spending climbs with pay', gap: 'the gap keeps widening',
+  lifestyle: 'hold your lifestyle fixed', lumps: 'big lumps, not a trickle', freedomL: 'freedom comes first',
+  takes: 'takes off: customers want it', join: 'join a young company', promoted: 'promoted early', infopark: 'Infopark, Kochi',
+  arun: 'Arun', people: 'the people around you', lead: 'they lead teams, start companies', remember: 'and they remember Arun',
+  luck: 'Luck', without: 'rich without needing luck', thousand: 'a thousand versions of your life', fifty: 'fifty: a gambler’s luck',
+  allL: 'all of them: a plan', four: 'four kinds of luck',
+  blind: 'blind luck', hustle: 'hustle', spotting: 'spotting it', raffle: 'raffle: pure chance', clicks: 'clicks: a restaurant’s deliveries',
+  nisha: 'Nisha, teacher', english: 'spoken English?', opening: 'an opening: her field',
+  fourth: 'fourth: the strangest kind', character: 'a character, a skill, a name', looking: 'luck comes looking for you',
+  beypore: 'off Beypore', wreck: 'an old wreck', deep: 'too deep', salim: 'Salim, the diver', share: 'they share the find',
+  fisher: 'fisherman', salimS: 'Salim', salims: 'Salim’s luck: he built it',
+  feeling: 'it stops feeling like luck', char: 'character', destiny: 'destiny', deira: 'Deira gold souk', yusuf: 'Yusuf: keeps his word',
+  two: 'two traders, no trust', him: 'trust him', cut: 'a cut', long: 'long games: a bigger pie, together', short: 'short games: grab a slice',
+  networking: 'networking?', waste: 'a waste of time', hundred: 'a hundred cards, no deals', make: 'make something people want',
+  show: 'show your craft', practising: 'keep practising it', find: 'the right people find you', orders: 'orders',
+  trust: 'trust: who gets close?', honest: 'I’m totally honest!', thumb: 'a rule of thumb, not a lab finding', sharks: 'sharks live among sharks',
+  warns: 'warns once', back: 'steps back', failings: 'your own failings: no hiding them', respect: 'self-respect',
+  closer: 'the closer someone comes,', higher: 'the higher their values must be', you: 'you',
+  q_luck: '“Can you make your own luck?”', wiseman: 'Richard Wiseman: count the photos', stop: 'STOP COUNTING: THERE ARE 43',
+  lucky: 'lucky: spotted it far more often', noticing: 'noticing is a skill', model: 'a computer model of careers',
+  talent: 'talent →', success: 'success', luckiest: 'the luckiest, fairly talented', most: 'the most talented',
+  raise: 'skill and character raise your odds', guarantee: 'no guarantee of destiny',
+  w1: 'Real retirement is when today feels complete: through savings, low spending, or work you love.',
+  w2: 'Do what you love, map it to what people want, add leverage and your name, and you’re hard to compete with.',
+  w3: 'Want freedom, not more money: keep your lifestyle fixed as your income grows.',
+  w4: 'Luck comes in four kinds. Build skill, character and a good name, so opportunity comes looking for you.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'കളി പോലെ തോന്നുന്ന ജോലി, ഭാഗ്യം', kicker: 'ഭാഗം 1 · സമ്പത്ത് · അധ്യായം 6', sub: 'കഠിനാധ്വാനത്തേക്കാൾ കളി മുന്നിലാകുന്നതിന്റെ രഹസ്യം, ശരിക്കുള്ള റിട്ടയർമെന്റ്, നാല് തരം ഭാഗ്യം',
+  credit: 'The Almanack of Naval Ravikant · എറിക് ജോർഗൻസൻ · പഠനസഹായി',
+  b_intro: 'തലക്കെട്ട്', b_history: 'സ്വന്തമായി ജോലി', b_games: 'ജീവിതത്തിലെ കളികൾ', b_retire: 'ശരിക്കുള്ള റിട്ടയർമെന്റ്', b_q1: 'ചെറിയ പരിശോധന',
+  b_auth: 'തനിമ', b_play: 'കളിയായ ജോലി', b_check: 'ശാസ്ത്രീയ പരിശോധന', b_lust: 'ആർത്തി', b_q2: 'ചെറിയ പരിശോധന', b_ride: 'നേരത്തേ ചേരൂ',
+  b_univ: 'ആയിരം ജീവിതങ്ങൾ', b_luck: 'ഭാഗ്യത്തിന്റെ തരങ്ങൾ', b_diver: 'തേടിവരുന്ന ഭാഗ്യം', b_destiny: 'സ്വഭാവവും സൽപ്പേരും', b_q3: 'ചെറിയ പരിശോധന',
+  b_network: 'നെറ്റ്‌വർക്കിങ്', b_trust: 'ആരെ വിശ്വസിക്കാം', b_check2: 'ശാസ്ത്രീയ പരിശോധന', b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  hunt: 'വേട്ടയാടലും ശേഖരിക്കലും, ബോസില്ല', farm: 'കൃഷി: ജന്മിയും പണിക്കാരും', factory: 'ഫാക്ടറി: കൂടുതൽ ഉയർന്ന ഏണി',
+  internet: 'ഇന്റർനെറ്റ്', own: 'സ്വന്തമായി ജോലി', fail: 'സ്വന്തം സംരംഭത്തിൽ തോറ്റാലും ശ്രമിക്കൂ',
+  learns: 'സ്വന്തം കാലിൽ നിൽക്കാൻ പഠിക്കുന്നു', companies: 'കമ്പനികൾ, ഏതാണ്ട് മനുഷ്യരോളം',
+  needed: 'ആവശ്യമായിരുന്നു: പണമുണ്ടാക്കാൻ പഠിച്ചു', problems: 'പ്രശ്നങ്ങൾ, പണത്തേക്കാൾ', games: 'കളികൾ, ഒന്നിനു പുറകെ ഒന്ന്',
+  school: 'സ്കൂൾ', social: 'സൗഹൃദം', money: 'പണം', status: 'സ്റ്റാറ്റസ്', treadmill: 'ഹെഡോണിക് ട്രെഡ്മിൽ', see: 'കണ്ടാൽ, ഇറങ്ങാം',
+  freedom: 'സ്വാതന്ത്ര്യം, പണത്തിന്റെ ആധിയിൽ നിന്ന്', sixty: 'അറുപത്തഞ്ചും പെൻഷനും', trading: 'ഇന്നിനെ പണയം വെക്കൽ', someday: 'എന്നോ',
+  feels: 'ഇന്ന് തന്നെ പൂർണം', roads: 'മൂന്ന് വഴികൾ', r1: 'ജോലി ചെയ്യാതെ വരുമാനം', cover: 'ചെലവിന് തികയും',
+  nothing: 'ചെലവ് ഏതാണ്ട് പൂജ്യം, സന്യാസിയെപ്പോലെ', love: 'ഇഷ്ടമുള്ള ജോലി', today: 'ഇന്ന്',
+  competition: 'മത്സരക്കെണി', authentic: 'തനിമയോടെ നിൽക്കൂ', loveIt: 'അത് ചെയ്യാൻ ഇഷ്ടം', hiba: 'ഹിബ, തൃശ്ശൂർ',
+  calligraphy: 'കാലിഗ്രഫി: മലയാളം, അറബിക്', matched: 'ആളുകൾക്ക് വേണ്ടതുമായി ചേർത്തു', wedding: 'കല്യാണക്കുറികൾ',
+  leverage: 'ലിവറേജ്: പ്രിന്റർ, ഓൺലൈൻ ഷോപ്പ്', name: 'പേര്, ഓരോ കാർഡിലും', nameCard: 'ഹിബ', risk: 'റിസ്ക്: അവളുടേത്', reward: 'നേട്ടവും അവളുടേത്',
+  art: 'കല: അതിനുവേണ്ടി മാത്രം ചെയ്യുന്നത്', side: 'ഉപോൽപ്പന്നം: പണം', desperate: 'വല്ലാത്ത കൊതി: ഏത് ബിസിനസും', tech: 'ടെക്നോളജി, ശാസ്ത്രം',
+  looks: 'ജോലിയായി തോന്നുന്നത് മറ്റുള്ളവർക്ക്,', playL: 'കളി, അദ്ദേഹത്തിന്', grinding: 'കഷ്ടപ്പെടുന്നയാൾ: രാത്രി നിർത്തും', keeps: 'കളിക്കുന്നയാൾ: തുടരും',
+  all: 'എല്ലാം അല്ലെങ്കിൽ ഒന്നുമില്ല, എന്നല്ല', shift: 'കളിയിലേക്ക്, ഓരോ വർഷവും അൽപ്പം',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', q_play: '“കളി കഠിനാധ്വാനത്തെ തോൽപ്പിക്കുമോ?”', review: 'അവലോകനം: 40 വർഷത്തെ പഠനങ്ങൾ', enjoy: 'ആസ്വദിച്ച് ജോലി',
+  quality: 'ഗുണമേന്മ', pay: 'ശമ്പളം, ബോണസ്', quantity: 'അളവ്', edge: 'യഥാർത്ഥ മുൻതൂക്കം', sixteen: 'പതിനാറ് മണിക്കൂർ?',
+  wk1: 'ആഴ്ചയിൽ 35–40 മണിക്കൂർ', wk2: 'ആഴ്ചയിൽ 55+ മണിക്കൂർ', stroke: 'സ്ട്രോക്ക് സാധ്യത: ഏകദേശം മൂന്നിലൊന്ന് കൂടുതൽ', sleep: 'ഉറക്കവും വിശ്രമവും: കളിക്കും വേണം',
+  moneyL: 'പണത്തിൽ തെറ്റില്ല', craving: 'ആർത്തിയാണ് ദോഷം', bottom: 'അടിത്തട്ടില്ല', fear: 'നഷ്ടപ്പെടുമോ എന്ന പേടി',
+  shafeeq: 'ഷഫീഖ്, ദുബായ്', faisal: 'ഫൈസൽ', payL: 'ശമ്പളം', spendL: 'ചെലവ്', climbs: 'ശമ്പളത്തിനൊപ്പം ചെലവും കയറുന്നു', gap: 'വിടവ് വലുതാകുന്നു',
+  lifestyle: 'ജീവിതശൈലി ഉയർത്തരുത്', lumps: 'വലിയ തുകകളായി, ഇറ്റിറ്റല്ല', freedomL: 'സ്വാതന്ത്ര്യം ഒന്നാമത്',
+  takes: 'കുതിച്ചുയരുന്നു: ഉപഭോക്താക്കൾക്ക് വേണം', join: 'അതിൽ ചേരൂ', promoted: 'നേരത്തേ പ്രൊമോഷൻ', infopark: 'ഇൻഫോപാർക്ക്, കൊച്ചി',
+  arun: 'അരുൺ', people: 'ചുറ്റുമുള്ള ആളുകൾ', lead: 'നയിക്കുന്നു, കമ്പനികൾ തുടങ്ങുന്നു', remember: 'ഓർക്കുന്നു, അരുണിനെ',
+  luck: 'ഭാഗ്യം', without: 'ഭാഗ്യത്തെ ആശ്രയിക്കാതെ', thousand: 'ആയിരം പതിപ്പുകൾ', fifty: 'അമ്പതെണ്ണത്തിൽ: ചൂതാട്ടഭാഗ്യം',
+  allL: 'എല്ലാറ്റിലും: ഒരു പ്ലാൻ', four: 'നാല് തരം ഭാഗ്യം',
+  blind: 'വെറും യാദൃച്ഛികം', hustle: 'ഓടിനടന്ന് പരിശ്രമം', spotting: 'തിരിച്ചറിയൽ', raffle: 'നറുക്കെടുപ്പ്: വെറും യാദൃച്ഛികം', clicks: 'ക്ലിക്കായി: റെസ്റ്റോറന്റിന്റെ ഡെലിവറി',
+  nisha: 'നിഷ, ടീച്ചർ', english: 'സ്പോക്കൺ ഇംഗ്ലീഷ്?', opening: 'അവസരം: അവളുടെ മേഖല',
+  fourth: 'നാലാമത്തേത്: ഏറ്റവും വിചിത്രം', character: 'സ്വഭാവം, കഴിവ്, പേര്', looking: 'തേടിവരുന്ന ഭാഗ്യം',
+  beypore: 'ബേപ്പൂരിന് അടുത്ത്', wreck: 'പഴയ കപ്പലിന്റെ അവശിഷ്ടം', deep: 'ആഴത്തിൽ', salim: 'സലീം, മുങ്ങൽ വിദഗ്ധൻ', share: 'പങ്കുവെക്കുന്നു',
+  fisher: 'മീൻപിടുത്തക്കാരൻ', salimS: 'സലീം', salims: 'സലീമിന്റെ ഭാഗ്യം: അവൻ പണിതത്',
+  feeling: 'ഭാഗ്യമായി തോന്നില്ല', char: 'സ്വഭാവം', destiny: 'വിധി', deira: 'ദേര ഗോൾഡ് സൂഖ്', yusuf: 'യൂസുഫ്: വാക്ക് പാലിക്കുന്നയാൾ',
+  two: 'പരസ്പരം വിശ്വാസമില്ലാത്ത രണ്ടുപേർ', him: 'അദ്ദേഹത്തെ വിശ്വാസം', cut: 'കമ്മീഷൻ', long: 'ദീർഘകാല കളികൾ: ഒരുമിച്ച് വലിയ കേക്ക്', short: 'ഹ്രസ്വകാല കളികൾ: സ്വന്തം കഷണം',
+  networking: 'നെറ്റ്‌വർക്കിങ്?', waste: 'സമയം പാഴാക്കൽ', hundred: 'നൂറ് കാർഡുകൾ, ഇടപാടില്ല', make: 'ആളുകൾക്ക് വേണ്ടത് ഉണ്ടാക്കൂ',
+  show: 'കരവിരുത് കാണിക്കൂ', practising: 'പരിശീലിച്ചുകൊണ്ടേയിരിക്കൂ', find: 'ശരിയായ ആളുകൾ കണ്ടെത്തും', orders: 'ഓർഡറുകൾ',
+  trust: 'വിശ്വാസം: ആര് അടുത്തുവരും?', honest: 'സത്യസന്ധൻ ഞാൻ തന്നെ!', thumb: 'ഏകദേശ നിയമം, ലാബ് കണ്ടെത്തലല്ല', sharks: 'സ്രാവുകൾ, സ്രാവുകൾക്കിടയിൽ',
+  warns: 'ഒരിക്കൽ മുന്നറിയിപ്പ്', back: 'അകലം പാലിക്കും', failings: 'സ്വന്തം വീഴ്ചകൾ ഒളിപ്പിക്കാനാവില്ല', respect: 'ആത്മാഭിമാനം',
+  closer: 'അടുത്തുവരുന്തോറും,', higher: 'ഉയർന്ന മൂല്യങ്ങൾ വേണം', you: 'നിങ്ങൾ',
+  q_luck: '“ഭാഗ്യം സ്വയം ഉണ്ടാക്കാമോ?”', wiseman: 'റിച്ചാർഡ് വൈസ്മാൻ: ഫോട്ടോകൾ എണ്ണൂ', stop: 'എണ്ണുന്നത് നിർത്തൂ: 43 ഫോട്ടോകളുണ്ട്',
+  lucky: 'ഭാഗ്യവാന്മാർ: വളരെക്കൂടുതൽ കണ്ടെത്തി', noticing: 'ശ്രദ്ധിക്കൽ ഒരു കഴിവാണ്', model: 'കരിയറുകളുടെ കമ്പ്യൂട്ടർ മോഡൽ',
+  talent: 'കഴിവ് →', success: 'വിജയം', luckiest: 'ഭേദപ്പെട്ട കഴിവ്, ഏറ്റവും ഭാഗ്യം', most: 'ഏറ്റവും കഴിവുള്ളവർ',
+  raise: 'കഴിവും സ്വഭാവവും സാധ്യത കൂട്ടും', guarantee: 'വിധി ഉറപ്പില്ല',
+  w1: 'ഇന്ന് തന്നെ പൂർണമായി തോന്നുന്നതാണ് യഥാർത്ഥ റിട്ടയർമെന്റ്: സമ്പാദ്യം, കുറഞ്ഞ ചെലവ്, അല്ലെങ്കിൽ ഇഷ്ടമുള്ള ജോലി വഴി.',
+  w2: 'ഇഷ്ടമുള്ളത് ചെയ്യൂ, അതിനെ ആളുകൾക്ക് വേണ്ടതുമായി ചേർക്കൂ, ലിവറേജും സ്വന്തം പേരും ചേർക്കൂ: നിങ്ങളോട് മത്സരിക്കാൻ പ്രയാസമാകും.',
+  w3: 'കൂടുതൽ പണമല്ല, സ്വാതന്ത്ര്യം ആഗ്രഹിക്കൂ: വരുമാനം കൂടുമ്പോഴും ജീവിതശൈലി ഉയർത്താതിരിക്കൂ.',
+  w4: 'ഭാഗ്യം നാല് തരത്തിൽ വരും. കഴിവും സ്വഭാവവും നല്ല പേരും പണിതെടുക്കൂ, അവസരങ്ങൾ നിങ്ങളെ തേടിവരും.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 6, title: L('title'), minutes: LANG === 'ml' ? 12 : 10, language: LANG, next: '../index.html#contents' };
+
+/* ---------- meaning colours (style.json look.meaning) and this chapter's own ---------- */
+const WEALTH = EV.gold, MONEY = '#7cc79d', STATUS = '#e2694f', TIME = '#5fb3cf', SCI = '#9c84d8';
+const PLAY = '#e78fa8', LUCK = '#6fc3b8';
+
+/* ---------- chapter helpers (prefixed a6 to stay clear of engine globals) ---------- */
+// A label that fades in at t (beat clock, always a mark).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+const a6Ground = (p, y = 760, fill = '#0c1114') => {
+  mk('rect', { x: -10, y, width: 1620, height: 900 - y + 20, fill }, p);
+  path(p, `M0 ${y}H1600`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+};
+const a6Faisal = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#2f5f8f', '#21466b');
+const a6Shafeeq = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#8a4a32', '#6a3624');
+const a6Hiba = (p, o) => { const P = evRecolor(evPerson(p, { kind: 'f', ...o }), '#6a3d5a', '#4f2c43'); evScarf(P, '#2b2440'); return P; };
+// A small person icon (head and shoulders) standing on (x, y).
+function a6Icon(p, x, y, color = EV.dim, s = 1, o = 1) {
+  const g = G(p, { x, y, s, o });
+  mk('circle', { cx: 0, cy: -46, r: 14, fill: color }, g);
+  path(g, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: color });
+  return g;
+}
+const a6Coin = (p, x, y, r = 16, col = WEALTH, o = 1) => {
+  const g = G(p, { x, y, o });
+  mk('circle', { cx: 0, cy: 0, r, fill: '#1a1710', stroke: col, 'stroke-width': 3 }, g);
+  mk('circle', { cx: 0, cy: 0, r: r * .5, fill: 'none', stroke: col, 'stroke-width': 1.5, opacity: .7 }, g);
+  return g;
+};
+// A phone, centred on (0,0), with a screen group g._scr.
+function a6Phone(p, { x = 0, y = 0, s = 1, o = 1, w = 150, h = 280 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 22, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 3 }, g);
+  mk('rect', { x: -w / 2 + 10, y: -h / 2 + 26, width: w - 20, height: h - 52, rx: 6, fill: '#142026' }, g);
+  mk('rect', { x: -18, y: -h / 2 + 10, width: 36, height: 6, rx: 3, fill: '#2b3632' }, g);
+  g._scr = G(g);
+  return g;
+}
+// A pill-shaped tag with text, centred on (x, y); revealed with a small pop at t.
+function a6Tag(p, key, x, y, t, { col = EV.gold, size = 30, fill = '#151d21', ink = EV.goldHi, minW = 200, maxW = 700 } = {}) {
+  const g = G(p, { x, y, o: 0 });
+  const w = Math.min(maxW, Math.max(minW, evW(L(key), size * (ML ? .88 : 1)) + 64));
+  mk('rect', { x: -w / 2, y: -size * 1.05, width: w, height: size * 2.1, rx: size * 1.05, fill, stroke: col, 'stroke-width': 2.5 }, g);
+  evText(g, L(key), { x: 0, y: size * .36, size, fill: ink, weight: 600, maxW: w - 40 });
+  put(g, { s: .85 }); tw(g, { o: 1, s: 1 }, t, .45, back);
+  return g;
+}
+const a6Star = (p, x, y, s = 1, o = 1, fill = EV.goldHi) => { const g = G(p, { x, y, s, o }); path(g, 'M0 -16L5 -5L16 -5L7 3L10 15L0 8L-10 15L-7 3L-16 -5L-5 -5Z', { fill }); return g; };
+const a6Heart = (p, x, y, s = 1, fill = PLAY, o = 1) => put(path(p, 'M0 26C-46 -6 -34 -46 0 -22C34 -46 46 -6 0 26Z', { fill }), { x, y, s, o });
+// A kite (play) centred on (0,0), with a tail.
+function a6Kite(p, { x = 0, y = 0, s = 1, o = 1, col = PLAY } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M0 -110L80 0L0 130L-80 0Z', { fill: '#2a1720', stroke: col, 'stroke-width': 4 });
+  path(g, 'M0 -110V130M-80 0H80', { stroke: col, 'stroke-width': 2, opacity: .7 });
+  path(g, 'M0 130Q-30 180 10 220Q50 260 10 310', { stroke: col, 'stroke-width': 2.5, opacity: .8 });
+  [[-8, 182], [24, 236], [14, 290]].forEach(([bx, by]) => path(g, `M${bx - 12} ${by - 8}L${bx + 12} ${by + 8}M${bx - 12} ${by + 8}L${bx + 12} ${by - 8}`, { stroke: EV.goldHi, 'stroke-width': 4 }));
+  return g;
+}
+// A die showing six, centred on (0,0).
+function a6Die(p, { x = 0, y = 0, s = 1, o = 1, n = 6 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -70, y: -70, width: 140, height: 140, rx: 22, fill: '#e9e1cf', stroke: EV.gold, 'stroke-width': 3 }, g);
+  const P6 = { 6: [[-34, -36], [-34, 0], [-34, 36], [34, -36], [34, 0], [34, 36]], 5: [[-34, -34], [34, -34], [0, 0], [-34, 34], [34, 34]], 1: [[0, 0]] };
+  P6[n].forEach(([cx, cy]) => mk('circle', { cx, cy, r: 11, fill: '#14100c' }, g));
+  return g;
+}
+// The science-check frame and tag, on `scene` so they survive panel changes inside the beat.
+function a6Sci(m, D) {
+  const keep = G(scene);
+  hide(keep, D - .45, .4);
+  prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+  const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+  draw(fr, m('sci'), 1);
+  const tag = G(keep, { x: 200, y: 60, o: 0 });
+  const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+  mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+  evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+  show(tag, m('sci'), .4);
+}
+function a6Stamp(p, key, x, y, t, col = SCI) {
+  const st = G(p, { x, y, o: 0, r: -6 });
+  const sw = Math.max(220, evW(L(key), 30) + 50);
+  mk('rect', { x: -sw / 2, y: -30, width: sw, height: 60, rx: 8, fill: 'none', stroke: col, 'stroke-width': 4 }, st);
+  evText(st, L(key), { x: 0, y: 11, size: 30, weight: 700, fill: col, maxW: sw - 30 });
+  put(st, { s: 1.5 }); tw(st, { o: 1, s: 1 }, t, .4, back);
+  return st;
+}
+// Seeded random numbers, so every replay draws the same picture.
+const a6Rand = seed => () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
+// Small line icons drawn around (0,0).
+const IC6 = {
+  coin: (g, c) => { mk('circle', { cx: 0, cy: 0, r: 17, fill: 'none', stroke: c, 'stroke-width': 3 }, g); path(g, 'M0 -9V9M-5 -5H4Q7 -5 7 -2Q7 1 0 1Q-7 1 -7 4Q-7 7 -4 7H5', { stroke: c, 'stroke-width': 2 }); },
+  brush: (g, c) => { path(g, 'M-18 18L10 -10', { stroke: c, 'stroke-width': 6 }); path(g, 'M10 -10Q18 -22 26 -24Q24 -14 12 -6Z', { fill: c }); },
+  atom: (g, c) => { mk('circle', { cx: 0, cy: 0, r: 6, fill: c }, g); [0, 60, -60].forEach(r => put(mk('ellipse', { cx: 0, cy: 0, rx: 30, ry: 11, fill: 'none', stroke: c, 'stroke-width': 2.5 }, g), { r })); },
+  car: (g, c) => { path(g, 'M-34 6V-6L-22 -20H18L32 -6V6Z', { fill: '#1b2226', stroke: c, 'stroke-width': 3 }); [-18, 18].forEach(x => mk('circle', { cx: x, cy: 8, r: 8, fill: '#0e1316', stroke: c, 'stroke-width': 3 }, g)); },
+  flat: (g, c) => { mk('rect', { x: -22, y: -46, width: 44, height: 56, fill: '#141b1f', stroke: c, 'stroke-width': 3 }, g); for (let r = 0; r < 3; r++) [-10, 4].forEach(x => mk('rect', { x, y: -38 + r * 16, width: 7, height: 9, fill: c, opacity: .6 }, g)); },
+  lock: (g, c) => { mk('rect', { x: -20, y: -6, width: 40, height: 32, rx: 5, fill: '#1b2226', stroke: c, 'stroke-width': 3 }, g); path(g, 'M-12 -6V-16Q-12 -30 0 -30Q12 -30 12 -16V-6', { stroke: c, 'stroke-width': 3 }); },
+  truck: (g, c) => { path(g, 'M-40 10V-22H8V10ZM8 10V-10H26L36 2V10Z', { fill: '#1b2226', stroke: c, 'stroke-width': 3 }); [-24, 24].forEach(x => mk('circle', { cx: x, cy: 14, r: 7, fill: '#0e1316', stroke: c, 'stroke-width': 3 }, g)); },
+  shop: (g, c) => { path(g, 'M-24 14V-8H24V14ZM-28 -8L-22 -22H22L28 -8Z', { fill: '#1b2226', stroke: c, 'stroke-width': 2.5 }); mk('rect', { x: -6, y: 0, width: 12, height: 14, fill: c, opacity: .6 }, g); },
+};
+</script>
+<script>
+'use strict';
+</script>
+</body>
+</html>

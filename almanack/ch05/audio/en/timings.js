@@ -470,7 +470,9 @@ window.TIMINGS = {
    "q2": 14.684,
    "partly": 16.474,
    "people": 17.632,
+   "ppl": 18.934,
    "heart": 20.829,
+   "risk": 22.092,
    "most": 24.737,
    "grewless": 26.197,
    "yes": 27.921
@@ -523,16 +525,16 @@ window.TIMINGS = {
   ]
  },
  "big3": {
-  "dur": 25.248,
+  "dur": 26.184,
   "marks": {
-   "three": 2.684,
-   "where": 4.461,
-   "who": 5.605,
-   "what": 6.697,
-   "week": 8.829,
-   "ten": 14.118,
-   "year": 18.434,
-   "no": 23.342
+   "three": 2.711,
+   "where": 4.474,
+   "who": 5.934,
+   "what": 7.487,
+   "week": 9.776,
+   "ten": 15.066,
+   "year": 19.382,
+   "no": 24.289
   },
   "cues": [
    [
@@ -541,30 +543,30 @@ window.TIMINGS = {
    ],
    [
     2.013,
-    "Naval names three big decisions: where you live, who you're with, and what you do."
+    "Naval names three big decisions: the city you settle in, the partner you choose, and the work you do."
    ],
    [
-    7.711,
+    8.658,
     "Yet we often make them in a week."
    ],
    [
-    9.763,
+    10.711,
     "Faisal took his Dubai visa in five days, for a life he may live for ten years."
    ],
    [
-    15.382,
+    16.329,
     "For a choice that lasts a decade, Naval says spend a year or two deciding."
    ],
    [
-    20.408,
+    21.355,
     "Visit."
    ],
    [
-    21.224,
+    22.171,
     "Ask people living that life."
    ],
    [
-    23.026,
+    23.974,
     "And say no to almost everything else."
    ]
   ]
@@ -631,7 +633,7 @@ window.TIMINGS = {
   ]
  },
  "wrap": {
-  "dur": 23.544,
+  "dur": 23.088,
   "marks": {
    "w1": 1.013,
    "w2": 7.434,
@@ -657,7 +659,7 @@ window.TIMINGS = {
    ],
    [
     17.789,
-    "Take real time over where you live, who you're with and what you do, and skip status games."
+    "Take real time over your city, your partner and your work, and skip status games."
    ]
   ]
  },
