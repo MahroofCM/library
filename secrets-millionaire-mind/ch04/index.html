@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080c0f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="What You Saw · Secrets of the Millionaire Mind, Chapter 4">
+<meta property="og:description" content="An animated, narrated lesson in English and Malayalam: the money habits we copy from our parents, and how to choose our own. With plain science checks.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/ch04/">
+<meta name="twitter:card" content="summary_large_image">
+<title>What You Saw · Secrets of the Millionaire Mind</title>
+<meta name="description" content="Chapter 4 of a YMU study of Secrets of the Millionaire Mind: modeling, the money habits we watched at home, and three steps to choose our own way. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('mm:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('mm:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'നിങ്ങൾ കണ്ടത് · Secrets of the Millionaire Mind';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/mm.js"></script>
+<script>
+'use strict';
+
+
+/* ---------- words on screen (narration lives in content/secrets-millionaire-mind/ch04/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'What You Saw', kicker: 'PART ONE · CHAPTER 4', sub: 'How the money habits you watched at home became your own',
+  credit: 'A YMU study of Secrets of the Millionaire Mind by T. Harv Eker',
+  b_intro: 'Title', b_recall: 'The eye', b_home: 'Your home', b_copy: 'Copy machines', b_pot: 'Two small pots', b_builder: 'Up and down',
+  b_q1: 'Quick check', b_abu: 'Abu', b_hard: 'Hard times', b_rainy: 'Rainy days', b_opposite: 'The opposite', b_q2: 'Quick check',
+  b_root: 'Why money?', b_why: 'New roots', b_q3: 'Quick check', b_steps: 'Three steps', b_declare: 'Your way', b_wrap: 'Summary',
+  b_prac: 'Chapter practice', b_fin: 'Finished',
+  sci: 'Science check', heardL: 'what we heard', sawL: 'what we saw', livedL: 'what we lived through', watchL: 'children learn by watching',
+  ummaL: 'Umma', uppaL: 'Uppa',
+  spend: 'spenders', save: 'savers', invest: 'investors', tin: 'cash in the rice tin', risk: 'risk takers', safe: 'played it safe',
+  steady: 'steady income', bursts: 'income in bursts', joy: 'joy', fights: 'fights',
+  thenL: 'Malappuram · then', nowL: 'Dubai · now', countL: 'counts every note twice', sameL: 'the same, twenty years later',
+  toldL: 'nobody told him', watchedL: 'he watched',
+  supL: 'Well supported', modelL: 'Parents’ example is one of the main ways children learn about money.',
+  cite1: 'LeBaron & Kelley, Journal of Family and Economic Issues, 2021 (review)',
+  parentsL: 'parents', workL: 'jobs', lessonsL: '+ school lessons', cite2: 'First-year university students, Shim et al., 2010. Bars not to scale.',
+  sajnaL: 'Sajna · Kozhikode', whyL: 'Why two small pots?', ummaSaysL: 'That’s how Umma did it.', mySaysL: 'That’s how MY Umma did it.',
+  ummammaL: 'Ummamma, 90', potSaysL: 'My pot was small, mole!', reasonL: 'the reason is gone, the habit stays', tooL: 'money habits too',
+  builderL: 'his builder father', borrowedL: 'all borrowed', tightL: 'money tight', soldL: 'houses sold', generousL: 'generous',
+  landL: 'new land', authorL: 'the author, grown up', madeL: 'made money', lostL: 'lost it', tenL: 'nearly 10 years',
+  replayL: 'his father’s pattern, replayed',
+  abuL: 'Abu · Thrissur, 62', degreesL: 'degrees', coursesL: 'courses', bizL: 'businesses', emptyL: 'ended empty',
+  foolishL: 'Am I just foolish?', seventiesL: 'Uppa · Gulf, 1970s', againL: 'empty-handed, again and again', fileL: 'Uppa’s file',
+  fortuneL: 'In the book: sudden wealth', storyL: 'a story', studyL: 'a study', realL: 'The insight is real: family patterns can repeat.',
+  knowL: 'Knowledge works better when no old file pulls the other way.',
+  hardL: 'hard times', spendAllL: 'spend it all, fast', hoardL: 'hoard every coin', rainyL: 'for a rainy day',
+  bookL: 'In the book', bringsL: 'rainy-day saving brings rainy days?', joyfulL: 'save for a joyful day',
+  notL: 'Not shown', reasonRow: 'No study finds that your reason for saving brings the event.',
+  dontL: 'don’t save', doL: 'save', billsL: 'trouble paying bills', threeL: '≈ 3 ×', cite3: 'CFPB, Making Ends Meet survey, 2020',
+  emergencyRow: 'People with an emergency fund report less money stress.', lessL: 'less stress', cite4: 'Vanguard survey of 12,000+ investors, 2025',
+  joyfulRow: 'Naming the fund for a happy goal is fine too.',
+  kochiL: 'Kochi', neverL: 'I’ll never be like you! I’ll be rich!', fuelL: 'anger as fuel', chainL: 'money chained to anger',
+  pushL: 'pushing money away', brokeL: 'broke, and still angry', poorlyL: 'Parents careless with money: the opposite may help',
+  wiselyL: 'Parents wise with money: rebelling can cost you',
+  whyBig: 'Why?', fearL: 'fear', angerL: 'anger', proveL: 'proving yourself', changesL: 'fear changes shape',
+  never2L: 'I’ll never have enough.', loseL: 'What if I lose it all?', enoughL: 'never enough inside',
+  partlyL: 'Partly supported', samplesRow: 'A review of 259 samples: putting money and possessions at the centre of life goes with lower well-being.',
+  cite5: 'Dittmar, Bond, Hurst & Kasser, 2014 (meta-analysis)', lowerL: 'lower well-being, on average',
+  modestRow: 'The link is modest, and it doesn’t prove cause.', warmRow: 'Teens who rank money highest more often had less warm care at home.',
+  cite6: 'Kasser, Ryan, Zax & Sameroff, 1995', purposeL: 'purpose', givingL: 'giving', joyL2: 'joy', oldRootsL: 'old roots', newRootsL: 'new roots',
+  awareL: 'Awareness', underL: 'Understanding', apartL: 'Separating', same2L: '= same', oppL: '≠ opposite',
+  costL: '− what it cost me', givenL: '+ what it gave me', theirL: 'their way', notmeL: 'It isn’t me', chooseL: 'I choose',
+  heartL: 'hand on heart', decl1: 'I watched their way with money, and I honour them.', decl2: 'Today, I choose my own way.',
+  noticeL: 'notice the old pull', workL2: 'back to work',
+  w1: 'We copy the money habits we watch at home, often without knowing why.',
+  w2: 'Some of us repeat a parent’s pattern. Some rebel into the opposite.',
+  w3: 'Money chased out of fear, anger or the need to prove yourself rarely brings peace.',
+  w4: 'Awareness, understanding and separating let you choose your own way. A rainy-day fund is still wise.',
+  practice: 'Chapter practice', sameQ: 'same', oppQ: 'opposite',
+});
+Object.assign(TXT.ml, {
+  title: 'നിങ്ങൾ കണ്ടത്', kicker: 'ഒന്നാം ഭാഗം · അധ്യായം 4', sub: 'വീട്ടിൽ കണ്ടുവളർന്ന പണശീലങ്ങൾ എങ്ങനെ നിങ്ങളുടേതായി എന്ന്',
+  credit: 'ടി. ഹാർവ് എക്കറുടെ Secrets of the Millionaire Mind എന്ന പുസ്തകത്തിന്റെ YMU പഠനം',
+  b_intro: 'തലക്കെട്ട്', b_recall: 'കണ്ണ്', b_home: 'നിങ്ങളുടെ വീട്', b_copy: 'കോപ്പി മെഷീനുകൾ', b_pot: 'രണ്ട് ചെറിയ പാത്രങ്ങൾ', b_builder: 'കയറ്റിറക്കം',
+  b_q1: 'ചെറിയ പരിശോധന', b_abu: 'അബു', b_hard: 'കഷ്ടകാലം', b_rainy: 'ആപത്ത് കാലം', b_opposite: 'നേരെ വിപരീതം', b_q2: 'ചെറിയ പരിശോധന',
+  b_root: 'എന്തിന് പണം?', b_why: 'പുതിയ വേരുകൾ', b_q3: 'ചെറിയ പരിശോധന', b_steps: 'മൂന്ന് പടികൾ', b_declare: 'എന്റെ വഴി', b_wrap: 'ചുരുക്കം',
+  b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', heardL: 'നമ്മൾ കേട്ടത്', sawL: 'നമ്മൾ കണ്ടത്', livedL: 'നമ്മൾ അനുഭവിച്ചത്', watchL: 'കുട്ടികൾ നോക്കിനിന്ന് പഠിക്കുന്നു',
+  ummaL: 'ഉമ്മ', uppaL: 'ഉപ്പ',
+  spend: 'ചെലവാക്കുന്നവർ', save: 'മിച്ചം പിടിക്കുന്നവർ', invest: 'നിക്ഷേപിച്ചവർ', tin: 'അരിപ്പാത്രത്തിൽ പണം', risk: 'റിസ്ക് എടുത്തവർ', safe: 'സുരക്ഷിതമായി നിന്നവർ',
+  steady: 'സ്ഥിര വരുമാനം', bursts: 'ഇടയ്ക്കിടെ മാത്രം', joy: 'സന്തോഷം', fights: 'വഴക്കുകൾ',
+  thenL: 'മലപ്പുറം · അന്ന്', nowL: 'ദുബായ് · ഇന്ന്', countL: 'ഓരോ നോട്ടും രണ്ടുവട്ടം എണ്ണും', sameL: 'ഇരുപത് വർഷം കഴിഞ്ഞും അതുതന്നെ',
+  toldL: 'ആരും പറഞ്ഞിട്ടില്ല', watchedL: 'കണ്ടുപഠിച്ചു',
+  supL: 'നല്ല തെളിവുണ്ട്', modelL: 'കുട്ടികൾ പണത്തെക്കുറിച്ച് പഠിക്കുന്ന പ്രധാന വഴികളിൽ ഒന്ന് മാതാപിതാക്കളുടെ മാതൃകയാണ്.',
+  cite1: 'ലെബറോൺ & കെല്ലി, Journal of Family and Economic Issues, 2021 (അവലോകനം)',
+  parentsL: 'മാതാപിതാക്കൾ', workL: 'ജോലി', lessonsL: '+ സ്കൂളിലെ ക്ലാസുകൾ', cite2: 'ഒന്നാം വർഷ വിദ്യാർത്ഥികൾ, ഷിം തുടങ്ങിയവർ, 2010. ബാറുകൾ അളവിലല്ല.',
+  sajnaL: 'സജ്ന · കോഴിക്കോട്', whyL: 'എന്തിനാ രണ്ട് ചെറിയ പാത്രം?', ummaSaysL: 'ഉമ്മ അങ്ങനെയാ ചെയ്തിരുന്നത്.', mySaysL: 'എന്റെ ഉമ്മ അങ്ങനെയാ ചെയ്തിരുന്നത്.',
+  ummammaL: 'ഉമ്മാമ്മ, 90', potSaysL: 'എന്റെ കലം ചെറുതായിരുന്നു മോളേ!', reasonL: 'കാരണം പോയി, ശീലം ബാക്കി', tooL: 'പണശീലങ്ങളും',
+  builderL: 'ബിൽഡറായ ഉപ്പ', borrowedL: 'എല്ലാം കടം', tightL: 'ഞെരുക്കം', soldL: 'വീടുകൾ വിറ്റു', generousL: 'ഉദാരൻ',
+  landL: 'പുതിയ സ്ഥലം', authorL: 'മുതിർന്ന ഗ്രന്ഥകാരൻ', madeL: 'പണം ഉണ്ടാക്കി', lostL: 'നഷ്ടപ്പെടുത്തി', tenL: 'ഏതാണ്ട് 10 വർഷം',
+  replayL: 'ഉപ്പയുടെ രീതി, ആവർത്തിച്ച്',
+  abuL: 'അബു · തൃശ്ശൂർ, 62', degreesL: 'ബിരുദങ്ങൾ', coursesL: 'കോഴ്സുകൾ', bizL: 'ബിസിനസ്സുകൾ', emptyL: 'കാലിയായി',
+  foolishL: 'ഞാൻ ഒരു മണ്ടനാണോ?', seventiesL: 'ഉപ്പ · ഗൾഫ്, 1970കൾ', againL: 'പലവട്ടം വെറുംകയ്യോടെ', fileL: 'ഉപ്പയുടെ ഫയൽ',
+  fortuneL: 'പുസ്തകത്തിൽ: പെട്ടെന്നുള്ള സമ്പത്ത്', storyL: 'കഥ', studyL: 'പഠനം', realL: 'ഉൾക്കാഴ്ച സത്യമാണ്: കുടുംബരീതികൾ ആവർത്തിക്കാം.',
+  knowL: 'പഴയ ഫയൽ എതിരെ വലിക്കാത്തപ്പോൾ അറിവ് നന്നായി പ്രവർത്തിക്കും.',
+  hardL: 'കഷ്ടകാലം', spendAllL: 'എല്ലാം വേഗം ചെലവാക്കും', hoardL: 'ഓരോ നാണയവും പൂഴ്ത്തും', rainyL: 'ആപത്ത് കാലത്തേക്ക്',
+  bookL: 'പുസ്തകത്തിൽ', bringsL: 'ആപത്തിന് കരുതിയാൽ ആപത്ത് വരുമോ?', joyfulL: 'സന്തോഷദിനത്തിനായി കരുതൂ',
+  notL: 'തെളിവില്ല', reasonRow: 'കരുതിവെക്കുന്നതിന്റെ കാരണം ആ സംഭവത്തെ വിളിച്ചുവരുത്തുമെന്ന് ഒരു പഠനവും കണ്ടെത്തിയിട്ടില്ല.',
+  dontL: 'മിച്ചം വെക്കാത്തവർ', doL: 'വെക്കുന്നവർ', billsL: 'ബില്ലടയ്ക്കാൻ ബുദ്ധിമുട്ട്', threeL: '≈ 3 ×', cite3: 'CFPB, Making Ends Meet സർവേ, 2020',
+  emergencyRow: 'എമർജൻസി ഫണ്ട് ഉള്ളവർക്ക് പണത്തെക്കുറിച്ചുള്ള ടെൻഷൻ കുറവാണ്.', lessL: 'ടെൻഷൻ കുറവ്', cite4: 'വാൻഗാർഡ്, 12,000+ നിക്ഷേപകരുടെ സർവേ, 2025',
+  joyfulRow: 'ഫണ്ടിന് സന്തോഷമുള്ള ലക്ഷ്യത്തിന്റെ പേരിടുന്നതും നല്ലതാണ്.',
+  kochiL: 'കൊച്ചി', neverL: 'ഞാൻ ഒരിക്കലും നിങ്ങളെപ്പോലെ ആവില്ല! ഞാൻ പണക്കാരനാകും!', fuelL: 'ദേഷ്യം ഇന്ധനം', chainL: 'പണം ദേഷ്യവുമായി ചങ്ങലയിൽ',
+  pushL: 'പണത്തെ തള്ളിക്കളയൽ', brokeL: 'കയ്യിൽ ഒന്നുമില്ല, ദേഷ്യം ബാക്കി', poorlyL: 'മാതാപിതാക്കൾ പണം മോശമായി നോക്കിയെങ്കിൽ: വിപരീതം സഹായിക്കാം',
+  wiselyL: 'അവർ ബുദ്ധിപൂർവം നോക്കിയെങ്കിൽ: എതിർപ്പിന് വില കൊടുക്കും',
+  whyBig: 'എന്തിന്?', fearL: 'ഭയം', angerL: 'ദേഷ്യം', proveL: 'തെളിയിക്കാനുള്ള വാശി', changesL: 'ഭയം രൂപം മാറുന്നു',
+  never2L: 'എനിക്ക് ഒരിക്കലും തികയില്ല.', loseL: 'എല്ലാം പോയാലോ?', enoughL: 'ഉള്ളിൽ എന്നും പോരാ',
+  partlyL: 'ഒരു ഭാഗം ശരി', samplesRow: '259 സാമ്പിളുകളുടെ അവലോകനം: പണവും വസ്തുക്കളും ജീവിതകേന്ദ്രമാക്കുന്നവർക്ക് മനസ്സുഖം കുറവ്.',
+  cite5: 'ഡിറ്റ്മാർ, ബോണ്ട്, ഹേഴ്സ്റ്റ് & കാസർ, 2014 (മെറ്റാ-അനാലിസിസ്)', lowerL: 'ശരാശരി മനസ്സുഖം കുറവ്',
+  modestRow: 'ആ ബന്ധം ചെറുതാണ്, കാരണമാണെന്ന് തെളിയിക്കുന്നില്ല.', warmRow: 'പണത്തിന് ഏറ്റവും വില കൽപ്പിക്കുന്ന കൗമാരക്കാർക്ക് വീട്ടിൽ സ്നേഹപരിചരണം പലപ്പോഴും കുറവായിരുന്നു.',
+  cite6: 'കാസർ, റയാൻ, സാക്സ് & സമെറോഫ്, 1995', purposeL: 'ലക്ഷ്യം', givingL: 'കൊടുക്കൽ', joyL2: 'സന്തോഷം', oldRootsL: 'പഴയ വേരുകൾ', newRootsL: 'പുതിയ വേരുകൾ',
+  awareL: 'തിരിച്ചറിവ്', underL: 'മനസ്സിലാക്കൽ', apartL: 'വേർതിരിക്കൽ', same2L: '= അതുപോലെ', oppL: '≠ വിപരീതം',
+  costL: '− എന്ത് നഷ്ടപ്പെടുത്തി', givenL: '+ എന്ത് തന്നു', theirL: 'അവരുടെ വഴി', notmeL: 'ഇത് ഞാനല്ല', chooseL: 'ഞാൻ തിരഞ്ഞെടുക്കുന്നു',
+  heartL: 'കൈ നെഞ്ചിൽ', decl1: 'പണത്തോടുള്ള അവരുടെ വഴി ഞാൻ കണ്ടുവളർന്നു, അവരെ ഞാൻ ആദരിക്കുന്നു.', decl2: 'ഇന്ന്, എന്റെ വഴി ഞാൻ തിരഞ്ഞെടുക്കുന്നു.',
+  noticeL: 'പഴയ വലി ശ്രദ്ധിക്കൂ', workL2: 'പണിയിലേക്ക്',
+  w1: 'വീട്ടിൽ കണ്ട പണശീലങ്ങൾ നമ്മൾ പകർത്തുന്നു, പലപ്പോഴും കാരണമറിയാതെ.',
+  w2: 'ചിലർ മാതാപിതാക്കളുടെ രീതി ആവർത്തിക്കും. ചിലർ നേരെ വിപരീതമാകും.',
+  w3: 'ഭയം, ദേഷ്യം, തെളിയിക്കാനുള്ള വാശി, ഇവയിൽ നിന്ന് ഓടിക്കുന്ന പണം അപൂർവമായേ സമാധാനം തരൂ.',
+  w4: 'തിരിച്ചറിവ്, മനസ്സിലാക്കൽ, വേർതിരിക്കൽ: സ്വന്തം വഴി തിരഞ്ഞെടുക്കാൻ. എമർജൻസി ഫണ്ട് ഇപ്പോഴും ബുദ്ധിയാണ്.',
+  practice: 'അധ്യായ പരിശീലനം', sameQ: 'അതുപോലെ', oppQ: 'വിപരീതം',
+});
+Object.assign(TRANSLATIONS.ml, { hintMove: ' നീക്കൂ, ', hintChooseOrClick: ' തിരഞ്ഞെടുക്കൂ, അല്ലെങ്കിൽ തൊടൂ', helpChoose: 'ഉത്തരം തിരഞ്ഞെടുക്കൂ' });
+
+const CHAPTER = { number: 4, title: L('title'), minutes: ML ? 10 : 8, language: LANG, next: '../ch05/' };
+
+/* ---------- chapter helpers (prefix c4) ---------- */
+const stat = e => { e.setAttribute('data-static', '1'); return e; };
+function c4Floor(p, y = 800) {
+  mk('rect', { x: 0, y, width: 1600, height: 900 - y, fill: MM.floor }, p);
+  path(p, `M0 ${y}H1600`, { stroke: MM.gold, 'stroke-width': 1.5, opacity: .25 });
+}
+function c4Row(m, card, kind, str, mark, y, { x = 52, maxW, size = 28 } = {}) {
+  const g = G(card, { x, y });
+  const col = kind === 'ok' ? MM.good : kind === 'no' ? MM.bad : MM.gold;
+  if (kind === 'ok') path(g, 'M-14 0L-4 10L14 -12', { stroke: col, 'stroke-width': 4.5 });
+  else if (kind === 'no') path(g, 'M-11 -11L11 11M11 -11L-11 11', { stroke: col, 'stroke-width': 4.5 });
+  else mmDot(g, 0, 0, 7, col);
+  const t = mmPara(g, str, { x: 34, y: 10, size, maxW: maxW || card._w - x - 70, anchor: 'start', weight: 400 });
+  g._h = t._h;
+  mmCue(m, g, mark, 'rise', { dy: 10 });
+  return g;
+}
+function c4ChipL(p, str, color, x, y, o = {}) { const c = mmChip(p, str, color, { ...o, x: 0, y }); put(c, { x: x + c._w / 2 }); return c; }
+function c4Strike(p, c, t, color = MM.bad) {
+  const x = st(c).x, y = st(c).y;
+  const s = path(p, `M${x - c._w / 2 - 6} ${y + 10}L${x + c._w / 2 + 6} ${y - 10}`, { stroke: color, 'stroke-width': 4 }, { d: 0 });
+  draw(s, t, .35);
+  return s;
+}
+const C4EAR = 'M8 -40C34 -40 46 -18 42 4C38 26 18 28 14 44C10 58 -6 60 -14 50M-4 -14C10 -24 26 -14 22 2C18 14 6 12 6 22';
+const C4EYE = 'M-48 0Q0 -40 48 0Q0 40 -48 0Z';
+const C4BOLT = 'M8 -46L-22 6H2L-8 46L24 -8H0Z';
+const C4_HEAD = 'M70 230C70 190 76 160 96 140C150 100 168 40 160 -20C150 -120 70 -200 -30 -200C-140 -200 -200 -120 -196 -30C-194 10 -210 30 -222 54C-228 66 -218 74 -206 76C-206 96 -200 104 -196 108C-204 116 -200 128 -190 130C-194 150 -184 170 -150 168C-120 166 -100 170 -96 200V230';
+// A heard / saw / lived badge (same look as ch03 and ch05). The eye's pupil is ._pupil (move it to look around).
+function c4Badge(p, k, { x = 0, y = 0, r = 118, s = 1, o = 1, label = true } = {}) {
+  const g = G(p, { x, y, s, o });
+  mmGlow(g, 0, 0, r * 1.45, k, .7);
+  mk('circle', { cx: 0, cy: 0, r, fill: '#10171b', stroke: MM[k], 'stroke-width': 4 }, g);
+  const d = { heard: C4EAR, saw: C4EYE, lived: C4BOLT }[k];
+  g._icon = path(g, d, { stroke: MM[k], 'stroke-width': 5, fill: k === 'lived' ? 'rgba(240,163,94,.15)' : 'none' });
+  put(g._icon, { s: r / 118 });
+  if (k === 'saw') g._pupil = mmDot(g, 0, 0, 14 * r / 118, MM.saw);
+  if (label) g._label = mmText(g, L(k + 'L'), { x: 0, y: r + 72, size: 36, fill: MM[k], font: SERIF, weight: 600, maxW: 380 });
+  return g;
+}
+// Kerala room: back wall, optional doorway on the left, a window with night outside.
+function c4Room(p, { door = true, win = 1180 } = {}) {
+  const g = G(p);
+  mk('rect', { x: 0, y: 0, width: 1600, height: 800, fill: MM.wall }, g);
+  c4Floor(g, 800);
+  const w = G(g, { x: win, y: 230 });
+  mk('rect', { x: 0, y: 0, width: 200, height: 200, rx: 6, fill: '#0a1622', stroke: '#2b3632', 'stroke-width': 6 }, w);
+  path(w, 'M100 0V200M0 100H200', { stroke: '#2b3632', 'stroke-width': 5 });
+  mmDot(w, 150, 46, 12, '#e9e0c8', .6);
+  if (door) path(g, 'M380 800V300H600V800', { stroke: MM.wood, 'stroke-width': 10, fill: '#120d0a' });
+  return g;
+}
+function c4Coin(p, x, y, r = 12, o = 1) {
+  const c = G(p, { x, y, o });
+  mk('circle', { cx: 0, cy: 0, r, fill: MM.gold, stroke: MM.goldHi, 'stroke-width': 2 }, c);
+  return c;
+}
+// A banknote centred at (0,0).
+function c4Note(p, { x = 0, y = 0, r = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, r, s, o });
+  path(g, 'M-34 -18H34V18H-34Z', { fill: '#7fae86', stroke: '#2f5a3a', 'stroke-width': 2 });
+  mk('circle', { cx: 0, cy: 0, r: 9, fill: 'none', stroke: '#2f5a3a', 'stroke-width': 2 }, g);
+  return g;
+}
+// A small cooking pot (degchi), base at (0,0).
+function c4Pot(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-44 0Q-48 -46 -40 -56H40Q48 -46 44 0Z', { fill: '#8a8f94', stroke: MM.goldHi, 'stroke-width': 2 });
+  path(g, 'M-48 -58H48', { stroke: '#c9ccce', 'stroke-width': 6 });
+  path(g, 'M-58 -46H-44M44 -46H58', { stroke: '#8a8f94', 'stroke-width': 6 });
+  return g;
+}
+// A round memory vignette (warm light), centre (x, y).
+function c4Vignette(p, x, y, r) {
+  const v = G(p, { x, y });
+  mk('circle', { cx: 0, cy: 0, r, fill: '#1a140f', stroke: MM.gold, 'stroke-width': 2.5 }, v);
+  mmGlow(v, 0, -20, r * .85, 'Warm', .5);
+  path(v, `M${-r + 6} ${r * .6}H${r - 6}`, { stroke: MM.gold, 'stroke-width': 1.5, opacity: .3 });
+  return v;
+}
+// Brows and flush only, for people whose mouth runs on mmTalk (one clock per property).
+function c4Brow(P, mood, t0, d = .35) {
+  const M_ = MOODS[mood];
+  tw(P.browL, { r: M_.b, y: -64 + M_.by }, t0, d);
+  tw(P.browR, { r: -M_.b, y: -64 + M_.by }, t0, d);
+  tw(P.flush, { o: M_.f }, t0, d * 2);
+}
+// Notes held in a hand; the top note flips on the beat clock from t0 (counting), ._top is that note.
+function c4CountNotes(P, D, t0, { side = 1 } = {}) {
+  const lo = (side > 0 ? P.armR : P.armL)._lo;
+  const h = G(lo, { x: 0, y: 92 });
+  [0, 1, 2].forEach(i => c4Note(h, { y: i * -3, s: .7 }));
+  const top = c4Note(h, { y: -9, s: .7 });
+  mmClock(D, t => put(top, { r: t < t0 ? 0 : -40 * Math.max(0, Math.sin((t - t0) * 5)) }));
+  return h;
+}
+const c4Poly = pts => 'M' + pts.map(([x, y]) => `${x} ${y}`).join('L');
+// The author's yo-yo after "ten": three more cycles, period 280, from x0.
+const C4YOYO = (() => { const pts = [[660, 740]]; for (let i = 0; i < 3; i++) { const x = 660 + i * 280; pts.push([x + 90, 560], [x + 140, 560], [x + 230, 740], [x + 280, 740]); } return pts; })();
+const C4TOP = [[380, 250], [470, 340], [700, 340], [790, 150], [980, 150], [1070, 340], [1260, 340]];
+// A cloud centred at (0,0).
+function c4Cloud(p, { x = 0, y = 0, s = 1, o = 1, fill = '#2b3338' } = {}) {
+  const g = G(p, { x, y, s, o });
+  [[-70, 10, 50], [-20, -20, 64], [44, -6, 56], [90, 16, 40]].forEach(([cx, cy, r]) => mk('circle', { cx, cy, r, fill, stroke: MM.dim, 'stroke-width': 2, 'stroke-opacity': .4 }, g));
+  mk('rect', { x: -110, y: 10, width: 220, height: 46, rx: 22, fill }, g);
+  return g;
+}
+function c4Sun(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4; path(g, `M${Math.cos(a) * 34} ${Math.sin(a) * 34}L${Math.cos(a) * 50} ${Math.sin(a) * 50}`, { stroke: MM.goldHi, 'stroke-width': 4 }); }
+  mk('circle', { cx: 0, cy: 0, r: 26, fill: MM.goldHi }, g);
+  return g;
+}
+function c4Jar(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-60 -140V50Q-60 80 -30 80H30Q60 80 60 50V-140', { stroke: MM.goldHi, 'stroke-width': 4, fill: 'rgba(16,23,27,.6)' });
+  g._lvl = mk('rect', { x: -54, y: 74, width: 108, height: 0, fill: MM.gold, opacity: .85 }, g);
+  path(g, 'M-70 -150H70', { stroke: MM.goldHi, 'stroke-width': 6 });
+  return g;
+}
+function c4Flame(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M0 40Q-36 20 -26 -16Q-18 -36 -4 -60Q0 -30 14 -24Q30 -14 28 10Q26 34 0 40Z', { fill: MM.emotion, stroke: '#f3a07f', 'stroke-width': 2 });
+  path(g, 'M0 34Q-14 22 -8 4Q-2 -8 4 -18Q8 -2 14 6Q16 24 0 34Z', { fill: '#f6c35a' });
+  return g;
+}
+function c4Step(p, i, key, col, x, y, m, mark) {
+  const g = G(p, { x, y });
+  mk('circle', { cx: 0, cy: 0, r: 30, fill: '#10171b', stroke: col, 'stroke-width': 3 }, g);
+  T(g, String(i + 1), { x: 0, y: 10, size: 28, fill: col, weight: 600, anchor: 'middle', font: SANS });
+  mmText(g, L(key), { x: 44, y: 11, size: 30, fill: MM.ink, anchor: 'start', maxW: 330 });
+  if (m) mmCue(m, g, mark, 'pop');
+  return g;
+}
+const C4STEPC = [MM.saw, MM.gold, MM.lived];
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    mmDefs();
+    const g = panel(0);
+    put(g, { o: 0 }); tw(g, { o: 1 }, .1, .6);
+    mmGlow(g, 800, 470, 380, 'saw', .35);
+    const eye = G(g, { x: 800, y: 520, s: 3.6, o: .22 });
+    const ep = path(eye, C4EYE, { stroke: MM.saw, 'stroke-width': 2, fill: 'none' }, { d: 0 });
+    const pu = mmDot(eye, 0, 0, 12, MM.saw, 0);
+    mmClock(D, t => { put(ep, { d: io(mmU(t, .3, 1.4)) }); put(pu, { o: io(mmU(t, 1.4, .4)), x: 10 * Math.sin(t * 1.3) }); });
+    stat(mmText(g, L('kicker'), { x: 800, y: 205, size: 26, fill: MM.saw, weight: 500, ls: ML ? undefined : '6' }));
+    mmSay(m, g, L('title'), 'title', { x: 800, y: 330, size: 96, font: SERIF, weight: 600, maxW: 1380, how: 'rise' });
+    mmSay(m, g, L('sub'), 'sub', { x: 800, y: 700, size: 38, fill: MM.dim, maxW: 1300, font: SERIF, italic: true, how: 'rise' });
+    const cr = stat(mmText(g, L('credit'), { x: 800, y: 790, size: 26, fill: '#6f6a5c', o: 0 }));
+    show(cr, m('sub', .45), .8);
+    tw(g, { o: 0 }, D - .6, .5);
+  }],
+
+  ['recall', 'b_recall', (m, D) => {
+    const p = panel(0);
+    const fr = G(p); put(fr, { o: 0 }); tw(fr, { o: 1 }, .1, .4);
+    [400, 800, 1200].forEach(x => mk('circle', { cx: x, cy: 400, r: 118, fill: 'none', stroke: MM.faint, 'stroke-width': 2, 'stroke-dasharray': '8 8' }, fr));
+    const B = {};
+    [['heard', 400], ['saw', 800], ['lived', 1200]].forEach(([k, x]) => { B[k] = c4Badge(p, k, { x, y: 400 }); mmCue(m, B[k], k, 'pop'); });
+    // today: the eye. The others step back; the eye grows and starts to look around (one clock from "watching")
+    tw(B.heard, { o: .25, x: 330 }, m('eye'), .6); tw(B.lived, { o: .25, x: 1270 }, m('eye'), .6);
+    tw(B.saw, { s: 1.3 }, m('eye'), .6, back);
+    tw(B.saw._label, { o: 0 }, m('eye'), .3);
+    mmClock(D, t => { const u = mmU(t, m('watching'), .3); put(B.saw._pupil, { x: u * 26 * Math.sin((t - m('watching')) * 2.2), y: u * 6 * Math.sin((t - m('watching')) * 3.1) }); });
+    mmSay(m, p, L('watchL'), 'watching', { x: 800, y: 680, size: 44, fill: MM.saw, font: SERIF, weight: 600, maxW: 1100 });
+  }],
+
+  ['home', 'b_home', (m, D) => {
+    const p = panel(0);
+    const room = G(p); put(room, { o: 0 }); tw(room, { o: 1 }, .1, .5);
+    c4Room(room, { door: false, win: 1220 });
+    const U = mmPerson(room, { kind: 'f', x: 1200, y: 800, s: .8 }), F = mmPerson(room, { kind: 'm', x: 1420, y: 800, s: .8 });
+    mmBreathe(U, D); mmBreathe(F, D, 1.1, .8);
+    stat(mmText(room, L('ummaL'), { x: 1200, y: 850, size: 26, fill: MM.dim }));
+    stat(mmText(room, L('uppaL'), { x: 1420, y: 850, size: 26, fill: MM.dim }));
+    // each question as a pair: left chip, right chip, on their words
+    const pairs = [['spend', 'save'], ['invest', 'tin'], ['risk', 'safe'], ['steady', 'bursts'], ['joy', 'fights']];
+    pairs.forEach(([a, b], i) => {
+      const y = 150 + i * 120, ca = i === 4 ? MM.good : MM.saw, cb = i === 4 ? MM.bad : MM.saw;
+      const A = mmChip(p, L(a), ca, { x: 250, y, size: 30 }), Bc = mmChip(p, L(b), cb, { x: 720, y, size: 30 });
+      mmCue(m, A, a, 'pop'); mmCue(m, Bc, b, 'pop');
+      const dl = path(p, `M${250 + A._w / 2 + 16} ${y}H${720 - Bc._w / 2 - 16}`, { stroke: MM.faint, 'stroke-width': 2, 'stroke-dasharray': '6 10' }, { d: 0 });
+      mmCue(m, dl, b, 'draw', { dur: .5 });
+    });
+    const gl = mmGlow(room, 1310, 560, 220, 'Warm', 0); gl.setAttribute('data-mark', 'joy'); tw(gl, { o: .7 }, m('joy'), .5); tw(gl, { o: 0 }, m('fights'), .4);
+    mmMood(U, 'smile', m('joy'), .3); mmMood(F, 'smile', m('joy'), .3);
+    mmMood(U, 'hurt', m('fights'), .3); mmMood(F, 'angry', m('fights'), .3);
+  }],
+
+  ['copy', 'b_copy', (m, D) => {
+    const p = panel(0);
+    const sc = G(p); put(sc, { o: 0 }); tw(sc, { o: 1 }, .1, .5);
+    const box = (x, warm) => { const g = G(sc, { x, y: 90 }); path(g, 'M0 0H700V640H0Z', { fill: warm ? '#15110d' : '#0e1519', stroke: MM.saw, 'stroke-width': 2.5 }); mmGlow(g, 350, 300, 300, warm ? 'Warm' : 'saw', warm ? .35 : .18); path(g, 'M0 600H700', { stroke: MM.gold, 'stroke-width': 1.5, opacity: .3 }); return g; };
+    const Lb = box(60, true), Rb = box(840, false);
+    // supermarket shelves on the right
+    [150, 260, 370].forEach(y => { path(Rb, `M420 ${y}H680`, { stroke: MM.wood, 'stroke-width': 6 }); [0, 1, 2, 3, 4].forEach(i => mk('rect', { x: 432 + i * 50, y: y - 46, width: 36, height: 44, rx: 4, fill: ['#c9a84c', '#e2694f', '#7cc79d', '#5fb3cf', '#9c84d8'][(i + y / 10) % 5 | 0], opacity: .55 }, Rb)); });
+    stat(mmText(sc, L('thenL'), { x: 410, y: 70, size: 26, fill: MM.dim }));
+    stat(mmText(sc, L('nowL'), { x: 1190, y: 70, size: 26, fill: MM.dim }));
+    const F = mmPerson(Lb, { kind: 'm', x: 250, y: 600, s: .78 });
+    mmBreathe(F, D); mmArm(F, 1, 25, 85, .01, .01);
+    c4CountNotes(F, D, m('count'));
+    const K = mmPerson(Lb, { kind: 'k', x: 470, y: 600, s: .82 });
+    mmMood(K, 'ask', 0, .01); mmBreathe(K, D, 1, 1.2);
+    mmSay(m, sc, L('countL'), 'count', { x: 410, y: 715, size: 26, fill: MM.ink, maxW: 640 });
+    const Sh = mmPerson(Rb, { kind: 'm', x: 250, y: 600, s: .78 });
+    mmCue(m, Sh.g, 'dubai', 'fade');
+    mmBreathe(Sh, D); mmArm(Sh, 1, 25, 85, .01, .01);
+    c4CountNotes(Sh, D, m('same'));
+    mmSay(m, sc, L('sameL'), 'same', { x: 1190, y: 715, size: 26, fill: MM.saw, maxW: 640 });
+    // a gaze line from the child to Uppa's hands
+    const gz = path(Lb, 'M450 300Q380 270 320 330', { stroke: MM.saw, 'stroke-width': 3, 'stroke-dasharray': '6 8' }, { d: 0 });
+    mmCue(m, gz, 'watched', 'draw', { dur: .5 });
+    mmSay(m, sc, L('toldL'), 'told', { x: 560, y: 820, size: 34, fill: MM.dim, font: SERIF, italic: true });
+    mmSay(m, sc, L('watchedL'), 'watched', { x: 1040, y: 820, size: 38, fill: MM.saw, font: SERIF, weight: 600 });
+    // science check
+    tw(sc, { o: .2 }, m('sci'), .6);
+    const card = mmSci(p, { x: 760, y: 90, w: 780, h: 720, title: L('sci') });
+    mmCue(m, card, 'sci', 'rise', { dy: 30 });
+    mmCue(m, c4ChipL(card, L('supL'), MM.good, 52, 130, { size: 28, solid: true }), 'sup', 'pop');
+    const r1 = c4Row(m, card, 'ok', L('modelL'), 'model', 215);
+    const ci = stat(mmText(card, L('cite1'), { x: 86, y: 225 + r1._h + 6, size: 20, fill: MM.dim, anchor: 'start', maxW: 660, o: 0 }));
+    show(ci, m('model', .5), .5);
+    const base = 640, bar = (x, h0, h, col, lab, mark, y0 = 0) => {
+      const g = G(card);
+      mk('rect', { x, y: base - y0 - h, width: 130, height: h, rx: 6, fill: col }, g);
+      mmText(g, L(lab), { x: x + 65, y: lab === 'lessonsL' ? base + 66 : base + 34, size: 24, fill: MM.ink, maxW: 240 });
+      mmCue(m, g, mark, 'rise', { dy: 14 });
+      return g;
+    };
+    path(card, `M90 ${base}H520`, { stroke: MM.dim, 'stroke-width': 2 });
+    bar(130, 0, 220, MM.saw, 'parentsL', 'parents');
+    bar(330, 0, 70, '#6c7a80', 'workL', 'work');
+    bar(330, 0, 60, '#4c585d', 'lessonsL', 'lessons', 74);
+    const c2 = stat(mmPara(card, L('cite2'), { x: 540, y: base - 90, size: 20, fill: MM.dim, anchor: 'start', maxW: 200, o: 0 }));
+    show(c2, Math.max(m('parents'), m('lessons')) + .5, .5);
+  }],
+
+  ['pot', 'b_pot', (m, D) => {
+    const p = panel(0);
+    const k = G(p); put(k, { o: 0 }); tw(k, { o: 1 }, .1, .5);
+    mk('rect', { x: 0, y: 0, width: 1800, height: 800, fill: '#120e0b' }, k);
+    mk('rect', { x: 1600, y: 800, width: 200, height: 100, fill: MM.floor }, k);
+    c4Floor(k, 800);
+    mmGlow(k, 420, 420, 360, 'Warm', .4);
+    // stove counter
+    path(k, 'M140 620H760V800H140Z', { fill: '#2a2320', stroke: MM.gold, 'stroke-width': 1.5, 'stroke-opacity': .35 });
+    path(k, 'M130 620H770', { stroke: MM.gold, 'stroke-width': 3, opacity: .6 });
+    const pots = [c4Pot(k, { x: 330, y: 620 }), c4Pot(k, { x: 560, y: 620 })];
+    pots.forEach(pt => mmCue(m, pt, 'two', 'pop'));
+    // steam from both pots on one clock
+    const steam = [0, 1, 2, 3].map(i => path(k, 'M0 0', { stroke: '#e9e0c8', 'stroke-width': 3, opacity: 0 }));
+    mmClock(D, t => steam.forEach((s_, i) => {
+      if (t < m('two')) return put(s_, { o: 0 });
+      const x = (i < 2 ? 330 : 560) + (i % 2 ? 16 : -16), u = ((t - m('two')) * .5 + i * .27) % 1;
+      s_.setAttribute('d', `M${x} ${560 - u * 90}q12 -18 0 -36q-12 -18 0 -36`);
+      put(s_, { o: .35 * Math.sin(u * Math.PI) });
+    }));
+    const Sj = mmPerson(k, { kind: 'f', x: 880, y: 800, s: .8 }), Hb = mmPerson(k, { kind: 'r', x: 1110, y: 800, s: .8 });
+    mmBreathe(Sj, D); mmBreathe(Hb, D, 1.1, .8);
+    mmArm(Sj, -1, -30, -40, 0, .01);
+    stat(mmText(k, L('sajnaL'), { x: 880, y: 850, size: 24, fill: MM.dim }));
+    const b1 = mmBubble(k, L('whyL'), { x: 1180, y: 330, w: 380, size: 28, o: 1, tail: 'left' });
+    mmCue(m, b1, 'why', 'pop'); mmTalk(Hb, m('why'), m('why', 1.2), D); c4Brow(Hb, 'ask', m('why'), .3);
+    hide(b1, m('umma', .1), .3);
+    const b2 = mmBubble(k, L('ummaSaysL'), { x: 1000, y: 330, w: 400, size: 28, o: 1, tail: 'left' });
+    mmCue(m, b2, 'umma', 'pop'); mmTalk(Sj, m('umma'), m('umma', 1.5), D);
+    hide(b2, m('my'), .3);
+    // memory chain on the right: Umma, then Ummamma, each in a vignette
+    const v1 = c4Vignette(p, 1330, 360, 150);
+    const U = mmPerson(v1, { kind: 'f', x: 0, y: 92, s: .45 }); mmBreathe(U, D);
+    mmCue(m, v1, 'my', 'fade', { dur: .4 });
+    tw(k, { x: -120, o: .6 }, m('my'), .6);
+    const b3 = mmBubble(p, L('mySaysL'), { x: 1150, y: 200, w: 440, size: 26, o: 1, tail: 'right' });
+    mmCue(m, b3, 'my', 'pop', { off: .1 }); mmTalk(U, m('my'), m('my', 1.6), D);
+    hide(b3, m('ummamma'), .3);
+    tw(v1, { x: 1060, y: 220, s: .7 }, m('ummamma'), .6);
+    const v2 = c4Vignette(p, 1330, 470, 170);
+    const Gm = mmPerson(v2, { kind: 'g', x: -40, y: 104, s: .5 }); mmBreathe(Gm, D, .8, .6);
+    mmCue(m, v2, 'ummamma', 'fade', { dur: .4 });
+    mmSay(m, p, L('ummammaL'), 'ummamma', { x: 1330, y: 680, size: 26, fill: MM.goldHi, font: SERIF, italic: true, off: .2 });
+    const tiny = c4Pot(v2, { x: 70, y: 104, s: .5 });
+    mmCue(m, tiny, 'pot', 'pop');
+    mmTalk(Gm, m('pot'), m('pot', 1.6), D, 'smile');
+    const b4 = mmBubble(p, L('potSaysL'), { x: 1200, y: 290, w: 460, size: 28, o: 1, tail: 'right', italic: true, font: SERIF });
+    mmCue(m, b4, 'pot', 'pop');
+    pulse(tiny, m('pot', .5), 1.5);
+    // the reason fades, the habit stays
+    hide(b4, m('reason'), .4);
+    mmSay(m, p, L('reasonL'), 'reason', { x: 450, y: 180, size: 40, fill: MM.ink, font: SERIF, italic: true, maxW: 780 });
+    mmSay(m, p, L('tooL'), 'too', { x: 450, y: 250, size: 34, fill: MM.saw, font: SERIF, weight: 600, how: 'pop' });
+  }],
+
+  ['builder', 'b_builder', (m, D) => {
+    const p = panel(0);
+    const gr = G(p); put(gr, { o: 0 }); tw(gr, { o: 1 }, .1, .5);
+    // a money line over time: x is time, y is money; the line is drawn by one clock as each word comes
+    path(gr, 'M200 450H1500', { stroke: MM.dim, 'stroke-width': 2, 'stroke-dasharray': '4 8', opacity: .6 });
+    c4Coin(gr, 170, 260, 16);
+    const Fa = mmPerson(p, { kind: 'm', x: 160, y: 860, s: .55 });
+    const hat = path(Fa.head, 'M-36 -80Q-34 -108 0 -110Q34 -108 36 -80Z', { fill: '#e8b23c' });
+    mmBreathe(Fa, D);
+    mmCue(m, Fa.g, 'builder', 'fade');
+    mmSay(m, p, L('builderL'), 'builder', { x: 160, y: 892, size: 22, fill: MM.dim, maxW: 260 });
+    const top = path(p, c4Poly(C4TOP), { stroke: MM.saw, 'stroke-width': 5 }, { d: 0 });
+    const keysTop = ['borrowed', 'tight', 'sold', 'generous', 'land'];
+    const dTop = [0, .17, .34, .62, .8, 1];
+    mmClock(D, t => { let d = 0; keysTop.forEach((k_, i) => { if (t >= m(k_)) d = Math.max(d, dTop[i] + (dTop[i + 1] - dTop[i]) * io(mmU(t, m(k_), 1))); }); put(top, { d }); });
+    top.setAttribute('data-mark', 'borrowed');
+    const lab = (k_, x, y, col = MM.ink, extra = {}) => mmSay(m, p, L(k_ + 'L'), k_, { x, y, size: 26, fill: col, maxW: 230, ...extra });
+    lab('borrowed', 420, 220, MM.bad); lab('tight', 585, 380, MM.bad);
+    lab('sold', 885, 300, MM.good); lab('generous', 885, 120, MM.good); lab('land', 1120, 300, MM.dim);
+    // a house that appears and sells on its words
+    const house = G(p, { x: 885, y: 230, s: .7 });
+    path(house, 'M-40 0V-50L0 -80L40 -50V0Z', { fill: '#10171b', stroke: MM.gold, 'stroke-width': 3 });
+    mmCue(m, house, 'sold', 'pop');
+    // the son grows up: the same shape again below, lighter, from one clock on "made"
+    tw(gr, { o: .4 }, m('made'), .5);
+    const S2 = mmPerson(p, { kind: 'r', x: 560, y: 860, s: .5 });
+    mmCue(m, S2.g, 'made', 'fade'); mmBreathe(S2, D);
+    mmSay(m, p, L('authorL'), 'made', { x: 560, y: 892, size: 22, fill: MM.dim, maxW: 280, off: .1 });
+    const yo = path(p, c4Poly(C4YOYO), { stroke: MM.saw, 'stroke-width': 4, opacity: .85 }, { d: 0 });
+    yo.setAttribute('data-mark', 'made');
+    mmClock(D, t => put(yo, { d: .33 * io(mmU(t, m('made'), .5)) + .67 * io(mmU(t, m('ten'), 2.2)) }));
+    mmSay(m, p, L('madeL'), 'made', { x: 750, y: 530, size: 24, fill: MM.good, off: .2 });
+    mmSay(m, p, L('lostL'), 'lost', { x: 860, y: 790, size: 24, fill: MM.bad });
+    mmSay(m, p, L('tenL'), 'ten', { x: 1310, y: 520, size: 26, fill: MM.dim });
+    // the match: the father's shape slides down onto the son's
+    // the match: both lines turn gold together, the same pattern
+    tw(gr, { o: 1 }, m('replay'), .4);
+    [top, yo].forEach(l_ => tw(l_, { c_stroke: MM.goldHi }, m('replay'), .5));
+    mmSay(m, p, L('replayL'), 'replay', { x: 1000, y: 470, size: 38, fill: MM.goldHi, font: SERIF, weight: 600, maxW: 900 });
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    const p = panel(0);
+    const g = G(p, { o: 0 }); show(g, .2, .5);
+    path(g, c4Poly(C4TOP).replace(/(\d+) (\d+)/g, (a, x, y) => `${x} ${+y - 60}`), { stroke: MM.saw, 'stroke-width': 5 });
+    path(g, c4Poly(C4YOYO).replace(/(\d+) (\d+)/g, (a, x, y) => `${x} ${+y - 250}`), { stroke: MM.saw, 'stroke-width': 4, opacity: .7 });
+  }, { ask: done => quiz(BAND, [{ id: 'c-yoyo', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 1, L('q1y'), [L('q1na'), null, L('q1nc')]) }], done) }],
+
+  ['abu', 'b_abu', (m, D) => {
+    const p = panel(0);
+    const sc = G(p); put(sc, { o: 0 }); tw(sc, { o: 1 }, .1, .5);
+    c4Room(sc, { door: false, win: 1250 });
+    // shelf of courses and certificates
+    path(sc, 'M120 330H620M120 470H620', { stroke: MM.wood, 'stroke-width': 7 });
+    const A = mmPerson(sc, { kind: 'u', x: 840, y: 800, s: .82 });
+    mmBreathe(A, D);
+    mmCue(m, A.g, 'abu', 'fade', { dur: .4 });
+    mmSay(m, sc, L('abuL'), 'abu', { x: 840, y: 850, size: 26, fill: MM.dim });
+    const certs = [0, 1].map(i => { const c = G(sc, { x: 190 + i * 110, y: 270 }); path(c, 'M-40 -50H40V50H-40Z', { fill: '#e9e0c8', stroke: MM.gold, 'stroke-width': 3 }); path(c, 'M-24 -20H24M-24 0H24M-14 20H14', { stroke: '#8f845f', 'stroke-width': 3 }); return c; });
+    certs.forEach(c => mmCue(m, c, 'degrees', 'pop'));
+    mmSay(m, sc, L('degreesL'), 'degrees', { x: 245, y: 385, size: 24, fill: MM.ink });
+    const books = G(sc, { x: 440, y: 470 });
+    [0, 1, 2, 3, 4, 5, 6].forEach(i => mk('rect', { x: -100 + i * 28, y: -100 + (i % 3) * 8, width: 24, height: 100 - (i % 3) * 8, fill: ['#9c84d8', '#5fb3cf', '#c9a84c', '#7cc79d', '#e2694f', '#c98a3e', '#8fb8c8'][i], opacity: .7 }, books));
+    mmCue(m, books, 'courses', 'pop');
+    mmSay(m, sc, L('coursesL'), 'courses', { x: 440, y: 515, size: 24, fill: MM.ink });
+    // a dozen businesses: small shop fronts, each lights up then goes dark on "empty" (one clock)
+    const shops = [...Array(12)].map((_, i) => { const s_ = G(sc, { x: 140 + (i % 6) * 84, y: 610 + Math.floor(i / 6) * 90 }); path(s_, 'M-32 30V-14L0 -34L32 -14V30Z', { fill: '#10171b', stroke: MM.gold, 'stroke-width': 2 }); s_._w = mk('rect', { x: -12, y: -6, width: 24, height: 22, fill: MM.goldHi }, s_); return s_; });
+    shops[0].setAttribute('data-mark', 'businesses'); shops.slice(1).forEach(s_ => s_.setAttribute('data-stagger', 'businesses'));
+    mmClock(D, t => shops.forEach((s_, i) => { put(s_, { o: io(mmU(t, m('businesses') + i * .08, .25)) }); s_._w.setAttribute('opacity', (1 - .85 * mmU(t, m('empty') + i * .1, .3)).toFixed(2)); }));
+    mmSay(m, sc, L('bizL'), 'businesses', { x: 350, y: 790, size: 24, fill: MM.ink, maxW: 300 });
+    mmSay(m, sc, L('emptyL'), 'empty', { x: 350, y: 570, size: 26, fill: MM.bad, maxW: 300 });
+    mmMood(A, 'sad', m('empty'), .4);
+    const fb = mmBubble(sc, L('foolishL'), { x: 1020, y: 380, w: 360, size: 28, o: 1, tail: 'left', italic: true, font: SERIF });
+    mmCue(m, fb, 'foolish', 'pop');
+    hide(fb, m('seventies'), .3);
+    // the memory: his father in the Gulf, the 1970s
+    const v = c4Vignette(p, 1230, 380, 220);
+    mmCue(m, v, 'seventies', 'fade', { dur: .5 });
+    const dune = path(v, 'M-214 120Q-100 70 0 110Q100 60 214 110V132H-214Z', { fill: '#3a2c1c' });
+    c4Sun(v, { x: 120, y: -110, s: .8 });
+    const Fu = mmPerson(v, { kind: 'm', x: -30, y: 132, s: .55 });
+    mmMood(Fu, 'worried', 0, .01); mmBreathe(Fu, D);
+    const bag = G(Fu.armR._lo, { x: 0, y: 100 }); path(bag, 'M-16 0H16V30H-16Z', { fill: '#5a3d26', stroke: MM.gold, 'stroke-width': 1.5 });
+    const sL = mmSay(m, p, L('seventiesL'), 'seventies', { x: 1230, y: 640, size: 28, fill: MM.goldHi, font: SERIF, italic: true, off: .2 });
+    mmClock(D, t => { const u = mmU(t, m('again'), .2); put(Fu.g, { x: -30 + u * 40 * Math.sin((t - m('again')) * 2) }); });
+    const aL = mmSay(m, p, L('againL'), 'again', { x: 1230, y: 685, size: 26, fill: MM.ink, maxW: 440 });
+    // the file in Abu's head is his father's
+    const fl = mmFile(p, L('fileL'), { x: 840, y: 200, s: .55, color: MM.saw, w: 300, h: 190, size: 26 });
+    mmCue(m, fl, 'father', 'pop');
+    const ln = path(p, 'M840 440V270', { stroke: MM.saw, 'stroke-width': 3 }, { d: 0 });
+    mmCue(m, ln, 'father', 'draw', { dur: .4 });
+    mmMood(A, 'ask', m('father'), .4);
+    // science check
+    tw(sc, { o: .15 }, m('sci'), .5); hide(v, m('sci'), .5); hide(fl, m('sci'), .4); hide(ln, m('sci'), .4); hide(sL, m('sci'), .4); hide(aL, m('sci'), .4);
+    const card = mmSci(p, { x: 380, y: 140, w: 840, h: 560, title: L('sci') });
+    mmCue(m, card, 'sci', 'rise', { dy: 30 });
+    mmCue(m, c4ChipL(card, L('fortuneL'), MM.gold, 52, 135, { size: 27 }), 'fortune', 'pop');
+    const sA = c4ChipL(card, L('storyL'), MM.gold, 52, 250, { size: 32, solid: true });
+    mmCue(m, sA, 'story', 'pop');
+    mmCue(m, mmText(card, '≠', { x: 52 + sA._w + 40, y: 262, size: 44, fill: MM.ink, weight: 600 }), 'study', 'fade');
+    mmCue(m, c4ChipL(card, L('studyL'), MM.sci, 52 + sA._w + 80, 250, { size: 32 }), 'study', 'pop');
+    c4Row(m, card, 'ok', L('realL'), 'real', 370, { size: 30 });
+    c4Row(m, card, 'q', L('knowL'), 'knowledge', 470, { size: 30 });
+  }],
+
+  ['hard', 'b_hard', (m, D) => {
+    const p = panel(0);
+    const top = G(p); put(top, { o: 0 }); tw(top, { o: 1 }, .1, .5);
+    // hard times: a storm cloud over one root that splits into two paths
+    const cl = c4Cloud(top, { x: 800, y: 150, s: 1.1 });
+    const rain = [...Array(10)].map((_, i) => path(top, 'M0 0', { stroke: MM.heard, 'stroke-width': 2.5, opacity: 0 }));
+    mmClock(D, t => rain.forEach((r, i) => { const u = (t * .9 + i / 10) % 1, x = 690 + i * 24; r.setAttribute('d', `M${x} ${215 + u * 90}l-6 18`); put(r, { o: .7 * Math.sin(u * Math.PI) * mmU(t, .2, .5) }); }));
+    mmSay(m, p, L('hardL'), 'hardT', { x: 800, y: 70, size: 34, fill: MM.dim, font: SERIF, italic: true, off: .2 });
+    const fork = path(p, 'M800 330V400M800 400Q800 440 560 460M800 400Q800 440 1040 460', { stroke: MM.saw, 'stroke-width': 3 }, { d: 0 });
+    draw(fork, .4, .8);
+    // left: a spender, notes flying off his hands (one clock from "spend")
+    const Sp = mmPerson(p, { kind: 'm', x: 420, y: 820, s: .72 });
+    mmCue(m, Sp.g, 'spend', 'fade'); mmBreathe(Sp, D);
+    mmArm(Sp, 1, -120, -20, m('spend'), .4); mmMood(Sp, 'smile', m('spend'), .3);
+    const fly = [0, 1, 2, 3, 4].map(() => c4Note(p, { s: .7, o: 0 }));
+    mmClock(D, t => fly.forEach((n, i) => { if (t < m('spend', .3)) return put(n, { o: 0 }); const u = ((t - m('spend') - .3) * .45 + i / 5) % 1; put(n, { x: 470 + u * 260, y: 470 - u * 140 + Math.sin(u * 9 + i) * 18, r: u * 300, o: Math.sin(u * Math.PI) * (1 - mmU(t, m('brings'), .4)) }); }));
+    mmSay(m, p, L('spendAllL'), 'spend', { x: 420, y: 865, size: 28, fill: MM.ink });
+    // right: a saver with a jar that fills
+    const Hd = mmPerson(p, { kind: 'g', x: 1080, y: 820, s: .72 });
+    mmCue(m, Hd.g, 'hoard', 'fade'); mmBreathe(Hd, D, .8, .6); mmMood(Hd, 'worried', m('hoard'), .3);
+    const jar = c4Jar(p, { x: 1280, y: 700, s: .8 });
+    mmCue(m, jar, 'hoard', 'rise');
+    mmClock(D, t => { const h = 120 * io(mmU(t, m('hoard', .3), 3)); jar._lvl.setAttribute('height', h); jar._lvl.setAttribute('y', 74 - h); });
+    mmSay(m, p, L('hoardL'), 'hoard', { x: 1080, y: 865, size: 28, fill: MM.ink });
+    mmSay(m, p, L('rainyL'), 'rainy', { x: 1280, y: 560, size: 26, fill: MM.heard, maxW: 260 });
+    // the book's claim, in a gold chip at the top right
+    const bk = c4ChipL(p, L('bookL'), MM.gold, 940, 300, { size: 22, solid: true });
+    mmCue(m, bk, 'brings', 'pop');
+    const ch = mmPara(p, L('bringsL'), { x: 940, y: 360, size: 28, maxW: 560, anchor: 'start', fill: MM.ink });
+    mmCue(m, ch, 'brings', 'fade');
+    tw(top, { o: 0 }, m('brings'), .4); hide(fork, m('brings'), .4);
+    const sun = c4Sun(p, { x: 1220, y: 130 });
+    mmCue(m, sun, 'joyful', 'pop');
+    mmSay(m, p, L('joyfulL'), 'joyful', { x: 1220, y: 230, size: 28, fill: MM.goldHi, font: SERIF, weight: 600 });
+  }],
+
+  ['rainy', 'b_rainy', (m, D) => {
+    const p = panel(0);
+    const bg = G(p); put(bg, { o: 0 }); tw(bg, { o: 1 }, .1, .4);
+    const cl = c4Cloud(bg, { x: 230, y: 230, s: .8, o: .6 });
+    const jar = c4Jar(bg, { x: 230, y: 640, s: .9 });
+    jar._lvl.setAttribute('height', 90); jar._lvl.setAttribute('y', -16);
+    const card = mmSci(p, { x: 480, y: 70, w: 1060, h: 780, title: L('sci') });
+    mmCue(m, card, 'sci', 'rise', { dy: 30 });
+    mmCue(m, c4ChipL(card, L('notL'), MM.bad, 52, 130, { size: 28, solid: true }), 'not', 'pop');
+    c4Row(m, card, 'no', L('reasonRow'), 'reason', 210, { size: 29 });
+    // bills: don't save vs save, one bar three times the other (illustrative)
+    const ax = G(card, { x: 90, y: 470 });
+    path(ax, 'M0 0H440', { stroke: MM.dim, 'stroke-width': 2 });
+    const bar = (x, h, col, lab, mark) => { const g = G(ax); mk('rect', { x, y: -h, width: 120, height: h, rx: 6, fill: col }, g); mmText(g, L(lab), { x: x + 60, y: 36, size: 24, fill: MM.ink, maxW: 200 }); mmCue(m, g, mark, 'rise', { dy: 12 }); return g; };
+    bar(260, 50, MM.good, 'doL', 'three');
+    bar(60, 150, MM.bad, 'dontL', 'three');
+    mmSay(m, ax, L('threeL'), 'three', { x: 120, y: -170, size: 34, fill: MM.bad, weight: 600, off: .2 });
+    mmSay(m, ax, L('billsL'), 'three', { x: 470, y: -100, size: 24, fill: MM.dim, anchor: 'start', maxW: 200, para: true, off: .3 });
+    const c3_ = stat(mmText(card, L('cite3'), { x: 90, y: 545, size: 20, fill: MM.dim, anchor: 'start', maxW: 520, o: 0 }));
+    show(c3_, m('three', .6), .5);
+    const r2 = c4Row(m, card, 'ok', L('emergencyRow'), 'emergency', 610, { maxW: 560, size: 28 });
+    const c4_ = stat(mmText(card, L('cite4'), { x: 86, y: 620 + r2._h + 6, size: 20, fill: MM.dim, anchor: 'start', maxW: 560, o: 0 }));
+    show(c4_, m('emergency', .6), .5);
+    // stress gauge on the right, needle drops on "less"
+    const gg = G(card, { x: 840, y: 520 });
+    mmCue(m, gg, 'emergency', 'fade');
+    path(gg, 'M-110 0A110 110 0 0 1 110 0', { stroke: MM.line, 'stroke-width': 18 });
+    path(gg, 'M-110 0A110 110 0 0 1 -55 -95', { stroke: MM.good, 'stroke-width': 18 });
+    path(gg, 'M55 -95A110 110 0 0 1 110 0', { stroke: MM.bad, 'stroke-width': 18 });
+    const nd = G(gg, { r: 60 }); path(nd, 'M0 0V-96', { stroke: MM.ink, 'stroke-width': 5 }); mk('circle', { cx: 0, cy: 0, r: 10, fill: MM.ink }, gg);
+    tw(nd, { r: -55 }, m('less'), .9, back);
+    mmSay(m, gg, L('lessL'), 'less', { x: 0, y: 50, size: 28, fill: MM.good });
+    c4Row(m, card, 'ok', L('joyfulRow'), 'joyful', 735, { size: 26 });
+    const sun = c4Sun(bg, { x: 330, y: 200, s: .7 });
+    mmCue(m, sun, 'joyful', 'pop');
+  }],
+
+  ['opposite', 'b_opposite', (m, D) => {
+    const p = panel(0);
+    const room = G(p); put(room, { o: 0 }); tw(room, { o: 1 }, .1, .5);
+    c4Room(room, { door: true, win: 1250 });
+    // the door: open (a thin leaf against the frame) until "slams", then shut
+    const openLeaf = path(room, 'M380 300L430 320V780L380 800Z', { fill: '#3a2a1c', stroke: MM.wood, 'stroke-width': 3 });
+    const dl = G(room, { x: 380, y: 300, o: 0 }); path(dl, 'M0 0H220V500H0Z', { fill: '#3a2a1c', stroke: MM.wood, 'stroke-width': 4 }); mmDot(dl, 190, 260, 8, MM.gold);
+    dl.setAttribute('data-mark', 'slams'); tw(dl, { o: 1 }, m('slams'), .08); tw(openLeaf, { o: 0 }, m('slams'), .08);
+    const pr = mmPerson(p, { kind: 'f', x: 900, y: 800, s: .78 }), pf = mmPerson(p, { kind: 'm', x: 1110, y: 800, s: .78 });
+    mmBreathe(pr, D); mmBreathe(pf, D, 1.1, .8); mmMood(pr, 'worried', 0, .01); mmMood(pf, 'tense', 0, .01);
+    // the teenager: on the parents' side at first, then runs to the door
+    const Tn = mmPerson(p, { kind: 'k', x: 740, y: 800, s: 1.2 });
+    mmBreathe(Tn, D, 1, 1.2); mmMood(Tn, 'angry', m('opposite', .5), .4);
+    mmWalk(Tn, 740, 500, Math.max(.5, m('slams') - 1.4), m('slams') - .1, 40);
+    hide(Tn.g, m('slams') - .25, .2);
+    // an arrow pointing away from the parents: the opposite
+    const ar = mmArrow(p, 900, 330, 620, 330, MM.saw, 4);
+    mmArrowIn(ar, m('opposite'));
+    ar._line.setAttribute('data-mark', 'opposite');
+    hide(ar, m('slams'), .3);
+    mmClock(D, t => { const u = t > m('slams') ? Math.max(0, 1 - (t - m('slams')) / .6) : 0; put(dl, { x: 380 + Math.sin(t * 60) * 6 * u }); });
+    const bang = mmText(p, '!', { x: 330, y: 360, size: 80, fill: MM.emotion, weight: 700 });
+    mmCue(m, bang, 'slams', 'pop');
+    hide(bang, m('slams', 1), .3);
+    const sh = mmBubble(p, L('neverL'), { x: 760, y: 360, w: 480, size: 30, o: 1, tail: 'left', edge: MM.emotion });
+    mmCue(m, sh, 'never', 'pop');
+    hide(sh, m('fuel'), .3);
+    // anger as fuel, chained to money
+    tw(room, { o: .35 }, m('fuel'), .5); hide(pr.g, m('fuel'), .4); hide(pf.g, m('fuel'), .4);
+    const fl = G(p, { x: 900, y: 360 });
+    const flIn = c4Flame(fl, { s: 1.6 });
+    mmCue(m, fl, 'fuel', 'pop');
+    mmClock(D, t => put(flIn, { s: 1.6 + .06 * Math.sin(t * 9) }));
+    mmSay(m, p, L('fuelL'), 'fuel', { x: 900, y: 470, size: 30, fill: MM.emotion });
+    const cn = G(p, { x: 1240, y: 360 }); mk('circle', { cx: 0, cy: 0, r: 46, fill: MM.gold, stroke: MM.goldHi, 'stroke-width': 3 }, cn);
+    mmCue(m, cn, 'anger', 'pop');
+    const links = [0, 1, 2, 3].map(i => { const l_ = mk('ellipse', { cx: 990 + i * 52, cy: 360, rx: 28, ry: 12, fill: 'none', stroke: MM.dim, 'stroke-width': 4 }, p); put(l_, { o: 0 }); return l_; });
+    links[0].setAttribute('data-mark', 'anger'); links.slice(1).forEach(l_ => l_.setAttribute('data-stagger', 'anger'));
+    mmClock(D, t => links.forEach((l_, i) => put(l_, { o: io(mmU(t, m('anger') + .1 + i * .12, .2)) * (1 - mmU(t, m('push', .4), .4)) })));
+    mmSay(m, p, L('chainL'), 'anger', { x: 1070, y: 300, size: 26, fill: MM.ink, off: .3, maxW: 420 });
+    // pushing the money away: coins roll out of the frame (one clock)
+    const cs = [0, 1, 2].map(() => c4Coin(p, 0, 0, 14, 0));
+    mmClock(D, t => cs.forEach((c, i) => { if (t < m('push')) return put(c, { o: 0 }); const u = Math.min(1, (t - m('push') - i * .4) / 1.6); put(c, { x: 1240 + Math.max(0, u) * 330, y: 600 + 160 * Math.max(0, u) ** 2, o: u < 0 ? 0 : 1 - u }); }));
+    tw(cn, { x: 1500, o: 0 }, m('push', .5), 1.2, io);
+    mmSay(m, p, L('pushL'), 'push', { x: 1250, y: 560, size: 26, fill: MM.ink });
+    mmSay(m, p, L('brokeL'), 'broke', { x: 900, y: 660, size: 32, fill: MM.bad, font: SERIF, weight: 600 });
+    // rebelling isn't always bad: two short lines at the top
+    tw(fl, { o: .35 }, m('poorly'), .4);
+    const r1 = c4Row(m, p, 'ok', L('poorlyL'), 'poorly', 120, { x: 300, maxW: 1100, size: 30 });
+    const r2 = c4Row(m, p, 'no', L('wiselyL'), 'wisely', 200, { x: 300, maxW: 1100, size: 30 });
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    const g = G(p, { o: 0 }); show(g, .2, .5);
+    const P1 = mmPerson(g, { kind: 'm', x: 520, y: 600, s: .7 }), P2 = mmPerson(g, { kind: 'k', x: 760, y: 600, s: .95 });
+    mmBreathe(P1, D); mmBreathe(P2, D, 1, 1.2);
+    mmText(g, L('sameQ'), { x: 640, y: 170, size: 36, fill: MM.saw, font: SERIF, weight: 600 });
+    const P3 = mmPerson(g, { kind: 'm', x: 1000, y: 600, s: .7 }), P4 = mmPerson(g, { kind: 'k', x: 1200, y: 600, s: .95 });
+    mmBreathe(P3, D); mmBreathe(P4, D, 1, 1.2); mmMood(P4, 'angry', 0, .01);
+    mmText(g, L('oppQ'), { x: 1100, y: 170, size: 36, fill: MM.emotion, font: SERIF, weight: 600 });
+  }, { ask: done => quiz(BAND, [{ id: 'c-sameopp', prompt: [L('q2p')], build: grid([
+    { parts: [L('q2r1')], ans: ['s'], why: L('q2w1') },
+    { parts: [L('q2r2')], ans: ['o'], why: L('q2w2') },
+    { parts: [L('q2r3')], ans: ['s'], why: L('q2w3') },
+  ], [['s', L('sameQ'), MM.saw, '1'], ['o', L('oppQ'), MM.emotion, '2']], { multi: false, text: true }) }], done) }],
+
+  ['root', 'b_root', (m, D) => {
+    const p = panel(0);
+    const tr = G(p); put(tr, { o: 0 }); tw(tr, { o: 1 }, .1, .5);
+    // a coin-tree: money in the branches, roots below the ground line
+    path(tr, 'M0 520H1600', { stroke: MM.gold, 'stroke-width': 1.5, opacity: .3 });
+    mk('rect', { x: 0, y: 520, width: 1600, height: 380, fill: '#0b0f11' }, tr);
+    path(tr, 'M800 520V300M800 380Q740 330 680 310M800 350Q860 300 930 290', { stroke: MM.wood, 'stroke-width': 18 });
+    [[680, 300], [760, 240], [840, 230], [930, 280], [800, 190]].forEach(([x, y]) => c4Coin(tr, x, y, 22));
+    const q = mmText(p, L('whyBig'), { x: 800, y: 120, size: 72, fill: MM.goldHi, font: SERIF, weight: 600 });
+    mmCue(m, q, 'why', 'pop');
+    const roots = [['fear', 'M800 520Q760 600 560 700', 560, 740], ['anger', 'M800 520V720', 800, 760], ['prove', 'M800 520Q840 600 1040 700', 1040, 740]];
+    S.c4roots = roots.map(([k, d, x, y]) => {
+      const r = path(p, d, { stroke: MM.emotion, 'stroke-width': 8 }, { d: 0 });
+      mmCue(m, r, k, 'draw', { dur: .5 });
+      mmSay(m, p, L(k + 'L'), k, { x, y, size: 32, fill: MM.emotion, weight: 600, maxW: 340 });
+      return r;
+    });
+    // fear changes shape: one bubble rewrites itself
+    const b1 = mmBubble(p, L('never2L'), { x: 380, y: 300, w: 400, size: 28, o: 1, tail: 'right', italic: true, font: SERIF });
+    mmCue(m, b1, 'never', 'pop'); hide(b1, m('lose'), .3);
+    const b2 = mmBubble(p, L('loseL'), { x: 1220, y: 300, w: 400, size: 28, o: 1, tail: 'left', italic: true, font: SERIF });
+    mmCue(m, b2, 'lose', 'pop');
+    mmSay(m, p, L('changesL'), 'changes', { x: 380, y: 400, size: 30, fill: MM.ink, font: SERIF, italic: true });
+    // never enough: coins drop into a bottomless cup (one clock)
+    const cup = G(p, { x: 1330, y: 600 });
+    mmCue(m, cup, 'enough', 'fade');
+    path(cup, 'M-60 -40L-40 70M60 -40L40 70', { stroke: MM.goldHi, 'stroke-width': 4 });
+    const drops = [0, 1, 2].map(() => c4Coin(cup, 0, 0, 10, 0));
+    mmClock(D, t => drops.forEach((c, i) => { if (t < m('enough')) return put(c, { o: 0 }); const u = ((t - m('enough')) * .7 + i / 3) % 1; put(c, { y: -90 + u * 240, o: Math.sin(u * Math.PI) }); }));
+    mmSay(m, p, L('enoughL'), 'enough', { x: 1330, y: 740, size: 28, fill: MM.bad, off: .2 });
+  }],
+
+  ['why', 'b_why', (m, D) => {
+    const p = panel(0);
+    const tr = G(p); put(tr, { o: 0 }); tw(tr, { o: 1 }, .1, .4);
+    // the tree from the last beat, small on the left; its roots get replaced at the end
+    const tg = G(tr, { x: 20, y: 140, s: .65 });
+    path(tg, 'M0 520H900', { stroke: MM.gold, 'stroke-width': 1.5, opacity: .3 });
+    path(tg, 'M450 520V300M450 380Q390 330 330 310M450 350Q510 300 580 290', { stroke: MM.wood, 'stroke-width': 18 });
+    [[330, 300], [410, 240], [490, 230], [580, 280], [450, 190]].forEach(([x, y]) => c4Coin(tg, x, y, 22));
+    const oldR = G(tg); ['M450 520Q410 600 210 700', 'M450 520V720', 'M450 520Q490 600 690 700'].forEach(d => path(oldR, d, { stroke: MM.emotion, 'stroke-width': 8 }));
+    const card = mmSci(p, { x: 640, y: 70, w: 900, h: 760, title: L('sci') });
+    mmCue(m, card, 'sci', 'rise', { dy: 30 });
+    mmCue(m, c4ChipL(card, L('partlyL'), MM.gold, 52, 130, { size: 28, solid: true }), 'partly', 'pop');
+    const r1 = c4Row(m, card, 'ok', L('samplesRow'), 'samples', 215, { size: 28 });
+    const ci = stat(mmText(card, L('cite5'), { x: 86, y: 225 + r1._h + 6, size: 20, fill: MM.dim, anchor: 'start', maxW: 760, o: 0 }));
+    show(ci, m('samples', .6), .5);
+    // a small slope: well-being falls a little as money-centredness rises
+    const ax = G(card, { x: 110, y: 520 });
+    path(ax, 'M0 0H300M0 0V-130', { stroke: MM.dim, 'stroke-width': 2 });
+    mmCue(m, ax, 'centre', 'fade');
+    const sl = path(ax, 'M10 -100L290 -60', { stroke: MM.saw, 'stroke-width': 5 }, { d: 0 });
+    mmCue(m, sl, 'lower', 'draw', { dur: .6 });
+    mmSay(m, ax, L('lowerL'), 'lower', { x: 320, y: -60, size: 24, fill: MM.saw, anchor: 'start', maxW: 200, para: true, off: .3 });
+    c4Row(m, card, 'q', L('modestRow'), 'modest', 570, { size: 27 });
+    const r3 = c4Row(m, card, 'ok', L('warmRow'), 'warm', 650, { size: 27 });
+    const c6_ = stat(mmText(card, L('cite6'), { x: 86, y: 660 + r3._h + 4, size: 20, fill: MM.dim, anchor: 'start', maxW: 760, o: 0 }));
+    show(c6_, m('warm', .6), .5);
+    // new roots: the old red roots fade, three green ones grow
+    tw(oldR, { o: .15 }, m('purpose'), .5);
+    [['purpose', 'M450 520Q410 600 210 700', 210], ['giving', 'M450 520V720', 450], ['joy', 'M450 520Q490 600 690 700', 690]].forEach(([k, d, x]) => {
+      const r = path(tg, d, { stroke: MM.logic, 'stroke-width': 9 }, { d: 0 });
+      mmCue(m, r, k, 'draw', { dur: .4 });
+      mmSay(m, tg, L(k === 'joy' ? 'joyL2' : k + 'L'), k, { x, y: 760, size: 40, fill: MM.logic, weight: 600, maxW: 300 });
+    });
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    const g = G(p, { o: 0 }); show(g, .2, .5);
+    c4Room(g, { door: false, win: 1180 });
+    const F = mmPerson(g, { kind: 'r', x: 330, y: 800, s: .9 }); mmMood(F, 'sad', 0, .01); mmBreathe(F, D);
+    [[160, 640], [500, 640], [220, 480], [440, 480]].forEach(([x, y]) => c4Coin(g, x, y, 18));
+  }, { ask: done => quiz({ x: 640, y: 70, w: 900, cls: 'side' }, [{ id: 'c-root', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 2, L('q3y'), [L('q3na'), L('q3nb'), null]) }], done) }],
+
+  ['steps', 'b_steps', (m, D) => {
+    const p = panel(0);
+    const nb = G(p, { x: 100, y: 110 });
+    put(nb, { o: 0 }); tw(nb, { o: 1 }, .1, .5);
+    path(nb, 'M0 0H700V560H0Z', { fill: '#e9e0c8', stroke: MM.gold, 'stroke-width': 2 });
+    for (let i = 0; i < 9; i++) path(nb, `M30 ${80 + i * 56}H670`, { stroke: '#b8ad90', 'stroke-width': 1.5 });
+    path(nb, 'M70 0V560', { stroke: '#d08a7a', 'stroke-width': 2 });
+    const ink = (str, mark, x, y, col = '#2a2318', size = 30) => mmSay(m, nb, str, mark, { x, y, size, fill: col, anchor: 'start', font: SERIF, weight: 600, maxW: 580 });
+    // the three step markers down the right
+    const S3 = [['awareL', 'aware'], ['underL', 'under'], ['apartL', 'apart']].map(([k, mk_], i) => c4Step(p, i, k, C4STEPC[i], 900, 160 + i * 150, m, mk_));
+    // 1 awareness: Umma and Uppa columns, same / opposite marks
+    ink(L('ummaL') + ' · ' + L('uppaL'), 'aware', 90, 70, '#5b3d8a');
+    ink(L('same2L'), 'same', 100, 150, '#2f6a45');
+    ink(L('oppL'), 'opposite', 360, 150, '#9c3b2b');
+    // 2 understanding: cost and gift
+    ink(L('costL'), 'cost', 100, 300, '#9c3b2b', 28);
+    ink(L('givenL'), 'given', 100, 360, '#2f6a45', 28);
+    // 3 separating: a file held apart from the head
+    const hd = G(p, { x: 1400, y: 640, s: .42 });
+    path(hd, C4_HEAD, { stroke: MM.gold, 'stroke-width': 7, fill: 'rgba(16,23,27,.7)' });
+    mmCue(m, hd, 'apart', 'fade');
+    const fl = mmFile(p, L('theirL'), { x: 1360, y: 620, s: .35, color: MM.saw, w: 300, h: 190, size: 26 });
+    fl.setAttribute('data-mark', 'their');
+    put(fl, { o: 0 }); tw(fl, { o: 1 }, m('their'), .3); tw(fl, { x: 1060, y: 640, s: .55 }, m('their', .1), .9, io);
+    const gap = path(p, 'M1220 540V740', { stroke: MM.lived, 'stroke-width': 3, 'stroke-dasharray': '8 8' }, { d: 0 });
+    mmCue(m, gap, 'notme', 'draw', { dur: .4 });
+    mmSay(m, p, L('notmeL'), 'notme', { x: 1220, y: 800, size: 32, fill: MM.lived, font: SERIF, weight: 600, how: 'pop' });
+    ink(L('chooseL') + ' ✓', 'choose', 100, 480, '#2f6a45', 34);
+  }],
+
+  ['declare', 'b_declare', (m, D) => {
+    const p = panel(0);
+    const P = mmPerson(p, { kind: 'm', x: 330, y: 860, s: 1.25 });
+    mmBreathe(P, D); mmMood(P, 'calm', 0, .01);
+    put(P.g, { o: 0 }); tw(P.g, { o: 1 }, .1, .5);
+    mmGlow(p, 330, 420, 300, 'saw', .3);
+    mmArm(P, 1, 30, 110, m('heart'), .6);
+    const hg = G(P.torso, { x: 16, y: -96, o: 0 }); path(hg, MM_HEART, { fill: MM.gold }); put(hg, { s: .6 });
+    mmCue(m, hg, 'heart', 'pop', { off: .3 });
+    mmSay(m, p, L('heartL'), 'heart', { x: 330, y: 895, size: 26, fill: MM.gold });
+    mmSay(m, p, L('decl1'), 'decl', { x: 1050, y: 230, size: 44, fill: MM.goldHi, font: SERIF, weight: 600, para: true, maxW: 860 });
+    mmSay(m, p, L('decl2'), 'decl2', { x: 1050, y: 420, size: 52, fill: MM.ink, font: SERIF, weight: 600, para: true, maxW: 860 });
+    // the old pull: a faint dashed tug at his back, noticed and let go (one clock from "notice")
+    const tug = path(p, 'M60 520Q160 520 250 560', { stroke: MM.saw, 'stroke-width': 3, 'stroke-dasharray': '8 8' });
+    put(tug, { o: 0 }); tug.setAttribute('data-mark', 'notice');
+    mmClock(D, t => put(tug, { o: .8 * mmU(t, m('notice'), .3) * (1 - mmU(t, m('work'), .4)) }));
+    const nL = c4ChipL(p, L('noticeL'), MM.saw, 700, 620, { size: 28 });
+    mmCue(m, nL, 'notice', 'pop');
+    mmMood(P, 'smile', m('notice', .8), .4);
+    const wL = c4ChipL(p, '→ ' + L('workL2'), MM.good, 700, 710, { size: 28, solid: true });
+    mmCue(m, wL, 'work', 'pop');
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    const tt = stat(mmText(p, L('b_wrap'), { x: 200, y: 150, size: 54, font: SERIF, weight: 600, fill: MM.saw, anchor: 'start', o: 0 }));
+    show(tt, .2, .6);
+    const cols = [MM.saw, MM.gold, MM.emotion, MM.good];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: 0, y: 290 + i * 150 });
+      mk('circle', { cx: 230, cy: -12, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 3 }, g);
+      T(g, String(i + 1), { x: 230, y: -1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = mmPara(g, L(k), { x: 290, y: 0, size: 36, maxW: 1100, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      mmCue(m, g, k, 'rise', { dy: 0 });
+      put(g, { x: -16 }); tw(g, { x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Why did the author’s money keep rising and crashing for nearly ten years?',
+  q1a: 'He kept picking the wrong business partners', q1b: 'He was replaying the up-and-down pattern he watched in his father', q1c: 'The economy was bad every year',
+  q1y: 'Right. He had watched his father’s boom-and-bust years, and without knowing it he rebuilt the same shape.',
+  q1na: 'He blamed partners and businesses too, at first. The pattern was the real link.',
+  q1nc: 'Ten years of the same shape, through good and bad economies, points to something inside: a copied pattern.',
+  q2p: 'Same as a parent, or the opposite? Sort each one.',
+  q2r1: 'Riyas checks his bank balance three times a day, just like his Umma did',
+  q2r2: 'Nadia’s parents fought over debts; she grew up angry and now refuses any loan, even a good one',
+  q2r3: 'Hashim’s Uppa paid cash for everything; Hashim won’t use a credit card either',
+  q2w1: 'Same: a habit watched and copied.', q2w2: 'Opposite: rebellion born of anger. Notice it can cost her good chances too.', q2w3: 'Same: the father’s way, carried on.',
+  q3p: 'Faisal earns well in Abu Dhabi. He works to prove to relatives he is not the “failure” they once called him. He still feels empty. Why?',
+  q3a: 'His salary is still too small', q3b: 'He hasn’t invested well enough yet', q3c: 'His root is a need to prove himself, and money can’t fill that',
+  q3y: 'Yes. When the root is proving yourself, no amount feels like enough. The work is on the root.',
+  q3na: 'More salary would change the number, not the feeling. The root stays.',
+  q3nb: 'Better investing may help his money, but not the reason he is chasing it.',
+  p1p: 'Lubna keeps all her savings in cash at home and never invests, just like her parents. In this chapter’s steps, what comes first?',
+  p1a: 'Tell herself “it isn’t me” and move on', p1b: 'Write down her parents’ money habits and where she is the same', p1c: 'Put everything into shares tomorrow',
+  p1y: 'Awareness first: write down the pattern and where it shows up in her.', p1na: 'Separating comes third. First she needs to see the pattern clearly.',
+  p1nc: 'A sudden swing to the opposite is still being run by the pattern. Start with awareness.',
+  p2p: 'What does Sajna’s two-pot story teach?',
+  p2a: 'Old family ways are always wrong', p2b: 'Habits can outlive their reason, so ask where a habit came from', p2c: 'Only grandparents’ habits matter',
+  p2y: 'Right. Ummamma had a good reason; the reason left, the habit stayed. Money habits can work the same way.',
+  p2na: 'Many family ways are wise. The point is to know why you do them.', p2nc: 'Habits come from anyone we watched: parents, grandparents, others.',
+  p3p: 'Which of these is modeling, something you saw?',
+  p3a: 'Hearing “money is dirty” again and again', p3b: 'Watching Uppa count the notes twice before paying', p3c: 'Your family shop burning down when you were eight',
+  p3y: 'Yes. Modeling is what you watched and copied.', p3na: 'That is something you heard: verbal programming (chapter 3).', p3nc: 'That is something you lived through: a specific incident (chapter 5).',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'Children’s money habits are shaped partly by watching their parents.',
+  p4r2: 'Saving “for a rainy day” makes rainy days more likely.',
+  p4r3: 'Having emergency savings is linked to less money stress.',
+  p4r4: 'Studies show that once people spot their parents’ pattern, they get rich within two years.',
+  p4w1: 'True. Family research counts parents’ example among the main ways children learn about money.',
+  p4w2: 'False. No study shows that. Savers have fewer problems paying bills, not more.',
+  p4w3: 'True. Surveys find people with an emergency fund report less financial stress.',
+  p4w4: 'False. That comes from success stories, not studies. Change takes time and practice.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'ഏതാണ്ട് പത്ത് വർഷം ഗ്രന്ഥകാരന്റെ പണം കയറിയും ഇറങ്ങിയും നിന്നത് എന്തുകൊണ്ട്?',
+  q1a: 'അദ്ദേഹം തെറ്റായ പങ്കാളികളെ തിരഞ്ഞെടുത്തു', q1b: 'ഉപ്പയിൽ കണ്ട കയറ്റിറക്ക രീതി അദ്ദേഹം ആവർത്തിക്കുകയായിരുന്നു', q1c: 'എല്ലാ വർഷവും സമ്പദ്‌വ്യവസ്ഥ മോശമായിരുന്നു',
+  q1y: 'ശരി. ഉപ്പയുടെ കയറ്റിറക്കങ്ങൾ കണ്ടാണ് വളർന്നത്; അറിയാതെ അതേ രൂപം അദ്ദേഹം വീണ്ടും പണിതു.',
+  q1na: 'ആദ്യം അദ്ദേഹവും പങ്കാളികളെയും ബിസിനസ്സിനെയും പഴിച്ചു. യഥാർത്ഥ കണ്ണി ആ രീതിയായിരുന്നു.',
+  q1nc: 'നല്ലതും മോശവുമായ കാലങ്ങളിൽ പത്ത് വർഷം ഒരേ രൂപം: ഉള്ളിലെ ഒരു പകർത്തിയ രീതിയിലേക്കാണ് അത് വിരൽ ചൂണ്ടുന്നത്.',
+  q2p: 'മാതാപിതാക്കളെപ്പോലെയോ, നേരെ വിപരീതമോ? ഓരോന്നും തരംതിരിക്കൂ.',
+  q2r1: 'ഉമ്മ ചെയ്തിരുന്നതുപോലെ, റിയാസ് ദിവസം മൂന്നുവട്ടം ബാങ്ക് ബാലൻസ് നോക്കും',
+  q2r2: 'കടത്തെച്ചൊല്ലി നാദിയയുടെ മാതാപിതാക്കൾ വഴക്കിട്ടിരുന്നു; ദേഷ്യത്തോടെ വളർന്ന അവൾ ഇന്ന് ഒരു ലോണും എടുക്കില്ല, നല്ലതുപോലും',
+  q2r3: 'ഹാഷിമിന്റെ ഉപ്പ എല്ലാം കാശ് കൊടുത്താണ് വാങ്ങിയിരുന്നത്; ഹാഷിമും ക്രെഡിറ്റ് കാർഡ് ഉപയോഗിക്കില്ല',
+  q2w1: 'അതുപോലെ: കണ്ട് പകർത്തിയ ശീലം.', q2w2: 'വിപരീതം: ദേഷ്യത്തിൽ നിന്നുള്ള എതിർപ്പ്. നല്ല അവസരങ്ങളും അതിന് നഷ്ടപ്പെടുത്താം.', q2w3: 'അതുപോലെ: ഉപ്പയുടെ വഴി തുടരുന്നു.',
+  q3p: 'ഫൈസലിന് അബുദാബിയിൽ നല്ല ശമ്പളമുണ്ട്. ഒരിക്കൽ “തോറ്റവൻ” എന്ന് വിളിച്ച ബന്ധുക്കൾക്ക് മുന്നിൽ തെളിയിക്കാനാണ് അയാൾ പണിയെടുക്കുന്നത്. എന്നിട്ടും ശൂന്യത. എന്തുകൊണ്ട്?',
+  q3a: 'ശമ്പളം ഇപ്പോഴും കുറവാണ്', q3b: 'ഇതുവരെ നന്നായി നിക്ഷേപിച്ചിട്ടില്ല', q3c: 'വേര് തെളിയിക്കാനുള്ള വാശിയാണ്, പണത്തിന് അത് നിറയ്ക്കാനാവില്ല',
+  q3y: 'അതെ. വേര് സ്വയം തെളിയിക്കലാകുമ്പോൾ, എത്ര കിട്ടിയാലും പോരാ എന്ന് തോന്നും. മാറ്റേണ്ടത് വേരിനെയാണ്.',
+  q3na: 'ശമ്പളം കൂടിയാൽ സംഖ്യ മാറും, തോന്നൽ മാറില്ല. വേര് അതുപോലെ നിൽക്കും.',
+  q3nb: 'നല്ല നിക്ഷേപം പണത്തെ സഹായിച്ചേക്കാം, പക്ഷേ അയാൾ പണത്തിന് പിന്നാലെ ഓടുന്ന കാരണത്തെ അല്ല.',
+  p1p: 'മാതാപിതാക്കളെപ്പോലെ, ലുബ്ന സമ്പാദ്യം മുഴുവൻ വീട്ടിൽ കാശായി സൂക്ഷിക്കുന്നു, ഒരിക്കലും നിക്ഷേപിക്കില്ല. ഈ അധ്യായത്തിലെ പടികളിൽ ആദ്യം എന്ത്?',
+  p1a: '“ഇത് ഞാനല്ല” എന്ന് പറഞ്ഞ് മുന്നോട്ട് പോകുക', p1b: 'മാതാപിതാക്കളുടെ പണശീലങ്ങളും താൻ എവിടെ അതുപോലെയാണെന്നും എഴുതുക', p1c: 'നാളെത്തന്നെ എല്ലാം ഷെയറിലിടുക',
+  p1y: 'ആദ്യം തിരിച്ചറിവ്: ആ രീതിയും അത് തന്നിൽ എവിടെ കാണുന്നു എന്നും എഴുതുക.', p1na: 'വേർതിരിക്കൽ മൂന്നാമത്തെ പടിയാണ്. ആദ്യം ആ രീതി വ്യക്തമായി കാണണം.',
+  p1nc: 'പെട്ടെന്ന് നേരെ വിപരീതത്തിലേക്ക് ചാടുന്നതും ആ രീതിയുടെ നിയന്ത്രണത്തിലാണ്. തിരിച്ചറിവിൽ തുടങ്ങൂ.',
+  p2p: 'സജ്നയുടെ രണ്ട് പാത്രങ്ങളുടെ കഥ എന്ത് പഠിപ്പിക്കുന്നു?',
+  p2a: 'കുടുംബത്തിലെ പഴയ രീതികളെല്ലാം തെറ്റാണ്', p2b: 'കാരണം പോയാലും ശീലം ബാക്കിയാകും, അതുകൊണ്ട് ഒരു ശീലം എവിടെ നിന്ന് വന്നു എന്ന് ചോദിക്കണം', p2c: 'ഉമ്മാമ്മമാരുടെ ശീലങ്ങൾ മാത്രമാണ് പ്രധാനം',
+  p2y: 'ശരി. ഉമ്മാമ്മയ്ക്ക് നല്ലൊരു കാരണമുണ്ടായിരുന്നു; കാരണം പോയി, ശീലം നിന്നു. പണശീലങ്ങളും അങ്ങനെയാകാം.',
+  p2na: 'കുടുംബത്തിലെ പല രീതികളും ബുദ്ധിയുള്ളതാണ്. എന്തിന് ചെയ്യുന്നു എന്ന് അറിയുന്നതാണ് കാര്യം.', p2nc: 'നമ്മൾ നോക്കിനിന്ന ആരിൽ നിന്നും ശീലങ്ങൾ വരാം.',
+  p3p: 'ഇവയിൽ ഏതാണ് മോഡലിംഗ്, അതായത് നിങ്ങൾ കണ്ടത്?',
+  p3a: '“പണം അഴുക്കാണ്” എന്ന് വീണ്ടും വീണ്ടും കേൾക്കുന്നത്', p3b: 'കൊടുക്കും മുൻപ് ഉപ്പ നോട്ടുകൾ രണ്ടുവട്ടം എണ്ണുന്നത് കാണുന്നത്', p3c: 'എട്ടാം വയസ്സിൽ കുടുംബത്തിന്റെ കട കത്തിപ്പോയത്',
+  p3y: 'അതെ. നോക്കിനിന്ന് പകർത്തുന്നതാണ് മോഡലിംഗ്.', p3na: 'അത് കേട്ടതാണ്: വെർബൽ പ്രോഗ്രാമിംഗ് (അധ്യായം 3).', p3nc: 'അത് അനുഭവിച്ചതാണ്: ഒരു പ്രത്യേക സംഭവം (അധ്യായം 5).',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'മാതാപിതാക്കളെ നോക്കിനിൽക്കുന്നതിലൂടെയും കുട്ടികളുടെ പണശീലങ്ങൾ രൂപപ്പെടുന്നു.',
+  p4r2: '“ആപത്ത് കാലത്തേക്ക്” കരുതിവെച്ചാൽ ആപത്തുകൾ കൂടുതൽ വരും.',
+  p4r3: 'എമർജൻസി സമ്പാദ്യം ഉള്ളത് പണത്തെക്കുറിച്ചുള്ള ടെൻഷൻ കുറയുന്നതുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു.',
+  p4r4: 'മാതാപിതാക്കളുടെ രീതി തിരിച്ചറിഞ്ഞാൽ രണ്ട് വർഷത്തിനുള്ളിൽ ആളുകൾ പണക്കാരാകുമെന്ന് പഠനങ്ങൾ കാണിക്കുന്നു.',
+  p4w1: 'ശരി. കുട്ടികൾ പണത്തെക്കുറിച്ച് പഠിക്കുന്ന പ്രധാന വഴികളിൽ ഒന്നായി കുടുംബ ഗവേഷണം മാതാപിതാക്കളുടെ മാതൃകയെ കാണുന്നു.',
+  p4w2: 'തെറ്റ്. ഒരു പഠനവും അങ്ങനെ കാണിക്കുന്നില്ല. മിച്ചം വെക്കുന്നവർക്ക് ബില്ലടയ്ക്കാൻ ബുദ്ധിമുട്ട് കുറവാണ്.',
+  p4w3: 'ശരി. എമർജൻസി ഫണ്ട് ഉള്ളവർക്ക് സാമ്പത്തിക ടെൻഷൻ കുറവാണെന്ന് സർവേകൾ കാണിക്കുന്നു.',
+  p4w4: 'തെറ്റ്. അത് വിജയകഥകളിൽ നിന്നാണ്, പഠനങ്ങളിൽ നിന്നല്ല. മാറ്റത്തിന് സമയവും പരിശീലനവും വേണം.',
+});
+const PRACTICE = [
+  { id: 'p-first', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 1, L('p1y'), [L('p1na'), null, L('p1nc')]) },
+  { id: 'p-pots', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 1, L('p2y'), [L('p2na'), null, L('p2nc')]) },
+  { id: 'p-model', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 1, L('p3y'), [L('p3na'), null, L('p3nc')]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['t'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['f'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'mm-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('mm:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'mm-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (ML ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+mmDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '500 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '500 30px "Noto Serif Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit', '600 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>

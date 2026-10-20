@@ -1,9 +1,9 @@
 SECRETS OF THE MILLIONAIRE MIND · YMU animated study book (English + Malayalam)
-Pilot: Chapter 3, "Your Money Blueprint". A static website: no server code, no database, no build step.
+Six chapters (the introduction and Part One of the book). A static website: no server code, no database, no build step.
 
 LINKS TO SEND
   Whole book:     https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/
-  Chapter 3:      https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/ch03/
+  One chapter:    https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/ch01/ ... /ch06/
   In Malayalam:   add ?lang=ml   e.g. .../ch03/?lang=ml      In English: ?lang=en
   The reader's language choice is remembered on their phone.
 

@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080c0f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="The Inner Game · Secrets of the Millionaire Mind, Chapter 1">
+<meta property="og:description" content="An animated, narrated lesson in English and Malayalam: why two people can learn the same thing and get opposite results. With plain science checks.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/ch01/">
+<meta name="twitter:card" content="summary_large_image">
+<title>The Inner Game · Secrets of the Millionaire Mind</title>
+<meta name="description" content="Chapter 1 of a YMU study of Secrets of the Millionaire Mind: testing ideas on your own life, tools versus the toolbox, unlearning and letting go. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('mm:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('mm:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'ഉള്ളിലെ കളി · Secrets of the Millionaire Mind';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/mm.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/secrets-millionaire-mind/ch01/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'The Inner Game', kicker: 'INTRODUCTION · CHAPTER 1', sub: 'Why two people can learn the same thing, and get opposite results',
+  credit: 'A YMU study of Secrets of the Millionaire Mind by T. Harv Eker',
+  b_intro: 'Title', b_doubt: 'Test it yourself', b_gap: 'Two worlds', b_ajmal: 'Ajmal', b_fear: 'Underneath', b_uncle: 'Haris ikka',
+  b_copy: 'Copy their thinking?', b_turn: 'One more try', b_q1: 'Quick check', b_seminar: 'Same room', b_toolbox: 'The toolbox',
+  b_q2: 'Quick check', b_law: 'A law?', b_unlearn: 'Unlearning', b_letgo: 'Let go', b_q3: 'Quick check', b_yourturn: 'Your turn',
+  b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  sci: 'Science check',
+  dontL: 'Don’t just take my word for it.', testL: 'test it on your own life',
+  tryL: 'try', trackL: 'track', keepL: 'keep', dropL: 'drop',
+  supportedL: 'Well supported', monitorL: 'People who track their progress reach their goals more often.',
+  writtenL: 'Even more so when they write it down.', cite1: 'Harkin and colleagues, Psychological Bulletin, 2016: 138 studies',
+  wantL: 'wanting', achieveL: 'achieving', booksL: 'books', videosL: 'videos', courseL: 'courses', burstL: 'a short burst', normalL: 'back to normal',
+  partlyL: 'Partly true', intendL: 'Intentions turn into action only about half the time.', cite2: 'Sheeran, 2002; Sheeran and Webb, 2016',
+  helpL: 'Money courses help a little, on average.', fadeL: 'But the effect tends to fade.',
+  monthsL: 'about 20 months', cite3: 'Kaiser and colleagues, 2022 (76 trials); Fernandes, Lynch and Netemeyer, 2014',
+  ajmalL: 'Ajmal · Kochi', potentialL: 'potential', shop1L: 'phone shop', shop2L: 'cloud kitchen', shop3L: 'online store',
+  fineL: 'others: doing fine', balL: 'account',
+  fearL: 'underneath: fear', failL: 'fear of failing', succeedL: 'fear of succeeding, then losing it all', storyL: 'my story', haveL: 'I have potential.',
+  harisL: 'Haris ikka', shopsL: 'supermarkets in the Gulf',
+  ifnotL: 'If things aren’t going the way you’d like…', knowL: '…there’s something you don’t know yet.',
+  alikeL: 'People who do well with money tend to think alike.', copyL: 'Learn how they think.', stayL: 'the words stay',
+  halfrL: 'Half right', survL: 'survivorship bias', fewL: 'a few make it', restL: 'the rest thought the same, and failed', nobodyL: 'nobody asks them',
+  bothL: 'cause can run both ways', thinkL: 'thinking', moneyL: 'money', fullL: 'money worries cloud thinking',
+  farmL: 'better on thinking tests', cite4: 'Mani and colleagues, Science, 2013: sugarcane farmers in India, after harvest vs before',
+  caterL: 'home catering', catchL: 'catching his thoughts', oldL: 'This will fail too.', trueL: 'True, or an old habit?', ordersL: 'orders',
+  alqL: 'Workshop · Al Qusais, Dubai', nishaL: 'Nisha', faisalL: 'Faisal', sameL: 'same slides, same notes', sixL: 'six months later',
+  doubledL: 'clients ×2', muchL: 'not much changed',
+  skillsL: 'skills', stratL: 'strategies', outerL: 'the outer game', innerL: 'the toolbox', innergL: 'the inner game', holeL: 'a hole', fixL: 'fix the box',
+  nothingL: 'Blueprint not set? Nothing you learn or do will matter much.', lawL: 'LAW',
+  notshownL: 'Not shown', storyxL: 'the author’s story', lettersL: 'students’ letters', anecL: 'Those are anecdotes.',
+  compareL: 'No comparison group.', didntL: 'People it didn’t help rarely write in.', outermL: 'The outer game matters too:',
+  c1L: 'skills', c2L: 'savings', c3L: 'health', c4L: 'luck', bothgL: 'both games count',
+  learnL: 'learning', unlearnL: 'unlearning', sulL: 'sulaimani, full', freshL: 'fresh tea', spillsL: 'spills over', emptyL: 'empty some of the old',
+  hereL: 'exactly where you are today',
+  stuckL: 'stuck', letgoL: 'let go', oldwaysL: 'old ways', newwaysL: 'new ways', resultsL: 'results, in time',
+  toolsL: 'My tools', coursesI: ['courses', 'skills', 'certificates'], thoughtsL: 'Thoughts that show up',
+  t1L: 'I’ll start when I’m ready.', t2L: 'People like me don’t do this.', pickL: 'one idea', weeksL: 'four weeks', judgeL: 'judge by your own results',
+  w1: 'Test every idea on your own life: try it, track it, keep what works.',
+  w2: 'Wanting and achieving are different worlds; a course alone often fades.',
+  w3: 'Skills are the tools, your mind is the toolbox. Both games count.',
+  w4: 'Much of the work is unlearning. Let go of old ways to make room for new ones.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'ഉള്ളിലെ കളി', kicker: 'ആമുഖം · അധ്യായം 1', sub: 'ഒരേ കാര്യം പഠിച്ച രണ്ടുപേർക്ക് എന്തുകൊണ്ട് വിപരീത ഫലം കിട്ടുന്നു',
+  credit: 'ടി. ഹാർവ് എക്കറുടെ Secrets of the Millionaire Mind എന്ന പുസ്തകത്തിന്റെ YMU പഠനം',
+  b_intro: 'തലക്കെട്ട്', b_doubt: 'സ്വയം പരീക്ഷിക്കൂ', b_gap: 'രണ്ട് ലോകങ്ങൾ', b_ajmal: 'അജ്മൽ', b_fear: 'ഉള്ളിൽ', b_uncle: 'ഹാരിസ് ഇക്ക',
+  b_copy: 'ചിന്ത പകർത്താമോ?', b_turn: 'ഒരിക്കൽ കൂടി', b_q1: 'ചെറിയ പരിശോധന', b_seminar: 'ഒരേ മുറി', b_toolbox: 'ടൂൾബോക്സ്',
+  b_q2: 'ചെറിയ പരിശോധന', b_law: 'നിയമമോ?', b_unlearn: 'മറക്കൽ', b_letgo: 'പിടി വിടൂ', b_q3: 'ചെറിയ പരിശോധന', b_yourturn: 'നിങ്ങളുടെ ഊഴം',
+  b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  sci: 'ശാസ്ത്രീയ പരിശോധന',
+  dontL: 'എന്റെ വാക്ക് അങ്ങനെയങ്ങ് വിശ്വസിക്കേണ്ട.', testL: 'സ്വന്തം ജീവിതത്തിൽ പരീക്ഷിക്കൂ',
+  tryL: 'ചെയ്തുനോക്കൂ', trackL: 'കുറിച്ചുവെക്കൂ', keepL: 'നിലനിർത്തൂ', dropL: 'ഉപേക്ഷിക്കൂ',
+  supportedL: 'നല്ല തെളിവുണ്ട്', monitorL: 'പുരോഗതി ശ്രദ്ധിക്കുന്നവർ ലക്ഷ്യത്തിലെത്താൻ സാധ്യത കൂടുതൽ.',
+  writtenL: 'എഴുതിവെക്കുമ്പോൾ ഇനിയും കൂടുതൽ.', cite1: 'ഹാർക്കിനും സഹപ്രവർത്തകരും, Psychological Bulletin, 2016: 138 പഠനങ്ങൾ',
+  wantL: 'ആഗ്രഹിക്കൽ', achieveL: 'നേടൽ', booksL: 'പുസ്തകങ്ങൾ', videosL: 'വീഡിയോകൾ', courseL: 'കോഴ്സുകൾ', burstL: 'ചെറിയ ആവേശം', normalL: 'പഴയപടി',
+  partlyL: 'ഒരു ഭാഗം ശരി', intendL: 'ഉദ്ദേശ്യങ്ങൾ പ്രവൃത്തിയാകുന്നത് ഏകദേശം പകുതി തവണ മാത്രം.', cite2: 'ഷീരൻ, 2002; ഷീരനും വെബ്ബും, 2016',
+  helpL: 'ശരാശരി, പണ കോഴ്സുകൾ കുറച്ചൊക്കെ സഹായിക്കുന്നു.', fadeL: 'പക്ഷേ ആ ഫലം പതുക്കെ മങ്ങും.',
+  monthsL: 'ഏകദേശം 20 മാസം', cite3: 'കൈസറും സഹപ്രവർത്തകരും, 2022 (76 പരീക്ഷണങ്ങൾ); ഫെർണാണ്ടസ്, ലിഞ്ച്, നെറ്റെമെയർ, 2014',
+  ajmalL: 'അജ്മൽ · കൊച്ചി', potentialL: 'കഴിവ്', shop1L: 'ഫോൺ ഷോപ്പ്', shop2L: 'ക്ലൗഡ് കിച്ചൺ', shop3L: 'ഓൺലൈൻ സ്റ്റോർ',
+  fineL: 'മറ്റുള്ളവർ: നന്നായി പോകുന്നു', balL: 'അക്കൗണ്ട്',
+  fearL: 'ഉള്ളിൽ: ഭയം', failL: 'പരാജയപ്പെടുമോ എന്ന ഭയം', succeedL: 'ജയിച്ചിട്ട് എല്ലാം നഷ്ടപ്പെടുമോ എന്ന ഭയം', storyL: 'എന്റെ കഥ', haveL: 'എനിക്ക് കഴിവുണ്ട്.',
+  harisL: 'ഹാരിസ് ഇക്ക', shopsL: 'ഗൾഫിലെ സൂപ്പർമാർക്കറ്റുകൾ',
+  ifnotL: 'കാര്യങ്ങൾ നീ ആഗ്രഹിക്കുന്ന പോലെ നടക്കുന്നില്ലെങ്കിൽ…', knowL: '…നിനക്ക് ഇനിയും അറിയാത്ത എന്തോ ഉണ്ട്.',
+  alikeL: 'പണത്തിൽ നന്നായി പോകുന്നവർ മിക്കവാറും ഒരുപോലെ ചിന്തിക്കുന്നു.', copyL: 'അവർ എങ്ങനെ ചിന്തിക്കുന്നു എന്ന് പഠിക്ക്.', stayL: 'വാക്കുകൾ മനസ്സിൽ തങ്ങി',
+  halfrL: 'പകുതി ശരി', survL: 'സർവൈവർഷിപ്പ് ബയസ്', fewL: 'കുറച്ചുപേർ വിജയിക്കുന്നു', restL: 'ബാക്കിയുള്ളവരും അങ്ങനെ ചിന്തിച്ചു, പരാജയപ്പെട്ടു', nobodyL: 'അവരോട് ആരും ചോദിക്കുന്നില്ല',
+  bothL: 'കാരണം രണ്ട് വഴിക്കും ഒഴുകാം', thinkL: 'ചിന്ത', moneyL: 'പണം', fullL: 'പണത്തിന്റെ ആധി ചിന്തയെ മൂടും',
+  farmL: 'ചിന്താ ടെസ്റ്റിൽ മികച്ച സ്കോർ', cite4: 'മണിയും സഹപ്രവർത്തകരും, Science, 2013: ഇന്ത്യയിലെ കരിമ്പ് കർഷകർ, വിളവെടുപ്പിന് മുൻപും ശേഷവും',
+  caterL: 'വീട്ടിൽ നിന്നുള്ള കാറ്ററിംഗ്', catchL: 'ചിന്തകളെ പിടികൂടുന്നു', oldL: 'ഇതും പൊളിയും.', trueL: 'സത്യമോ, പഴയ ശീലമോ?', ordersL: 'ഓർഡറുകൾ',
+  alqL: 'വർക്ക്ഷോപ്പ് · അൽ ഖുസൈസ്, ദുബായ്', nishaL: 'നിഷ', faisalL: 'ഫൈസൽ', sameL: 'ഒരേ സ്ലൈഡുകൾ, ഒരേ നോട്ടുകൾ', sixL: 'ആറ് മാസം കഴിഞ്ഞ്',
+  doubledL: 'ക്ലയന്റുകൾ ×2', muchL: 'കാര്യമായ മാറ്റമില്ല',
+  skillsL: 'കഴിവുകൾ', stratL: 'തന്ത്രങ്ങൾ', outerL: 'പുറത്തെ കളി', innerL: 'ടൂൾബോക്സ്', innergL: 'ഉള്ളിലെ കളി', holeL: 'ഓട്ട', fixL: 'പെട്ടി ശരിയാക്കൂ',
+  nothingL: 'ബ്ലൂപ്രിന്റ് സെറ്റല്ലെങ്കിൽ? പഠിക്കുന്നതോ ചെയ്യുന്നതോ ഒന്നും കാര്യമാകില്ല.', lawL: 'നിയമം',
+  notshownL: 'തെളിയിച്ചിട്ടില്ല', storyxL: 'ഗ്രന്ഥകാരന്റെ കഥ', lettersL: 'വിദ്യാർത്ഥികളുടെ കത്തുകൾ', anecL: 'അവയെല്ലാം അനുഭവകഥകളാണ്.',
+  compareL: 'താരതമ്യം ചെയ്യാൻ ഗ്രൂപ്പില്ല.', didntL: 'ഫലം കിട്ടാത്തവർ കത്തെഴുതാറില്ല.', outermL: 'പുറത്തെ കളിയും പ്രധാനമാണ്:',
+  c1L: 'കഴിവ്', c2L: 'സമ്പാദ്യം', c3L: 'ആരോഗ്യം', c4L: 'ഭാഗ്യം', bothgL: 'രണ്ട് കളിയും പ്രധാനം',
+  learnL: 'പഠിക്കൽ', unlearnL: 'പഠിച്ചത് മറക്കൽ', sulL: 'നിറഞ്ഞ സുലൈമാനി', freshL: 'പുതിയ ചായ', spillsL: 'തുളുമ്പുന്നു', emptyL: 'പഴയതിൽ കുറച്ച് ഒഴിച്ചുകളയൂ',
+  hereL: 'ഇന്ന് നിൽക്കുന്ന ഇടത്ത് കൃത്യമായി',
+  stuckL: 'കുടുങ്ങി', letgoL: 'പിടി വിടൂ', oldwaysL: 'പഴയ രീതികൾ', newwaysL: 'പുതിയ രീതികൾ', resultsL: 'ഫലം, സമയമെടുത്ത്',
+  toolsL: 'എന്റെ ഉപകരണങ്ങൾ', coursesI: ['കോഴ്സുകൾ', 'കഴിവുകൾ', 'സർട്ടിഫിക്കറ്റുകൾ'], thoughtsL: 'മനസ്സിൽ വരുന്ന ചിന്തകൾ',
+  t1L: 'റെഡിയാകുമ്പോൾ തുടങ്ങാം.', t2L: 'എന്നെപ്പോലുള്ളവർക്ക് ഇതൊന്നും പറ്റില്ല.', pickL: 'ഒരു ആശയം', weeksL: 'നാലാഴ്ച', judgeL: 'സ്വന്തം ഫലം നോക്കി വിധിയെഴുതൂ',
+  w1: 'ഓരോ ആശയവും സ്വന്തം ജീവിതത്തിൽ പരീക്ഷിക്കൂ: ചെയ്തുനോക്കൂ, കുറിച്ചുവെക്കൂ, ഫലിക്കുന്നത് നിലനിർത്തൂ.',
+  w2: 'ആഗ്രഹിക്കലും നേടലും രണ്ട് ലോകങ്ങളാണ്; കോഴ്സ് മാത്രം കൊണ്ടുള്ള ആവേശം പലപ്പോഴും മങ്ങും.',
+  w3: 'കഴിവുകൾ ഉപകരണങ്ങൾ, മനസ്സ് ടൂൾബോക്സ്. രണ്ട് കളിയും പ്രധാനം.',
+  w4: 'വലിയ ഭാഗം പഠിച്ചത് മറക്കലാണ്. പുതിയതിന് ഇടം കിട്ടാൻ പഴയ രീതികൾ വിടൂ.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+Object.assign(TRANSLATIONS.ml, { hintMove: ' നീക്കൂ, ', hintChooseOrClick: ' തിരഞ്ഞെടുക്കൂ, അല്ലെങ്കിൽ തൊടൂ', helpChoose: 'ഉത്തരം തിരഞ്ഞെടുക്കൂ' });
+
+const CHAPTER = { number: 1, title: L('title'), minutes: ML ? 10 : 8, language: LANG, next: '../ch02/' };
+
+/* ---------- chapter helpers (prefix c1) ---------- */
+const stat = e => { e.setAttribute('data-static', '1'); return e; };
+function c1Floor(p, y = 820) {
+  mk('rect', { x: 0, y, width: 1600, height: 900 - y, fill: MM.floor }, p);
+  path(p, `M0 ${y}H1600`, { stroke: MM.gold, 'stroke-width': 1.5, opacity: .25 });
+}
+function c1Wall(p, y = 820) { mk('rect', { x: 0, y: 0, width: 1600, height: y, fill: MM.wall }, p); c1Floor(p, y); }
+// A row inside a science card: a tick, cross or dot and a wrapped line, left-anchored at (x, y).
+function c1Row(m, card, kind, str, mark, y, { x = 52, maxW, size = 29 } = {}) {
+  const g = G(card, { x, y });
+  const col = kind === 'ok' ? MM.good : kind === 'no' ? MM.bad : MM.gold;
+  if (kind === 'ok') path(g, 'M-14 0L-4 10L14 -12', { stroke: col, 'stroke-width': 4.5 });
+  else if (kind === 'no') path(g, 'M-11 -11L11 11M11 -11L-11 11', { stroke: col, 'stroke-width': 4.5 });
+  else mmDot(g, 0, 0, 7, col);
+  const t = mmPara(g, str, { x: 34, y: 10, size, maxW: maxW || card._w - x - 70, anchor: 'start', weight: 400 });
+  g._h = t._h;
+  mmCue(m, g, mark, 'rise', { dy: 10 });
+  return g;
+}
+function c1ChipL(p, str, color, x, y, o = {}) { const c = mmChip(p, str, color, { ...o, x: 0, y }); put(c, { x: x + c._w / 2 }); return c; }
+function c1Strike(p, c, t, color = MM.bad) {
+  const x = st(c).x, y = st(c).y, w = c._w || 160;
+  const s = path(p, `M${x - w / 2 - 6} ${y + 12}L${x + w / 2 + 6} ${y - 12}`, { stroke: color, 'stroke-width': 4 }, { d: 0 });
+  draw(s, t, .35);
+  return s;
+}
+// A two-line speech bubble: line 1 on one mark, line 2 on another. Tail at the bottom left.
+function c1Bubble2(m, p, l1, l2, mk1, mk2, { x, y, w = 600, tail = 'left' }) {
+  const g = G(p, { x, y });
+  const a = mmPara(g, l1, { x: 0, y: 0, size: 30, maxW: w - 60, weight: 500 });
+  const b = mmPara(g, l2, { x: 0, y: a._h + 6, size: 30, maxW: w - 60, weight: 500, fill: MM.goldHi });
+  const h = a._h + b._h + 50, top = -38;
+  const bg = path(null, mmBoxD(w, h, 26), { fill: '#151d21', stroke: MM.gold, 'stroke-width': 2, 'stroke-opacity': .75 });
+  put(bg, { y: top + h / 2 });
+  g.insertBefore(bg, g.firstChild);
+  const tx = tail === 'left' ? -w / 2 + 70 : w / 2 - 70, dx = tail === 'left' ? -40 : 40;
+  const tl = path(g, `M${tx} ${top + h - 2}L${tx + dx} ${top + h + 40}L${tx + (tail === 'left' ? 40 : -40)} ${top + h - 2}Z`, { fill: '#151d21', stroke: MM.gold, 'stroke-width': 2, 'stroke-opacity': .75 });
+  g.insertBefore(tl, bg.nextSibling);
+  mmCue(m, g, mk1, 'pop');
+  mmCue(m, b, mk2, 'fade');
+  return g;
+}
+// The carpenter's toolbox, drawn around its bottom centre. ._in (tools sit here, behind the front), ._hole, ._patch, ._glow.
+function c1Toolbox(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  g._glow = mmGlow(g, 0, -90, 300, 'Gold', 0);
+  path(g, 'M-120 -150V-225Q-120 -238 -106 -238H106Q120 -238 120 -225V-150', { stroke: MM.goldHi, 'stroke-width': 10, fill: 'none' });
+  path(g, 'M-230 -160H230V0H-230Z', { fill: '#24180f', stroke: MM.gold, 'stroke-width': 3 });
+  g._in = G(g);
+  const f = G(g);
+  path(f, 'M-242 -110H242L232 0H-232Z', { fill: '#4a3420', stroke: MM.gold, 'stroke-width': 3 });
+  [-70, -40].forEach(yy => path(f, `M-220 ${yy}Q-60 ${yy - 8} 220 ${yy + 4}`, { stroke: '#3a281a', 'stroke-width': 3 }));
+  g._hole = G(f, { x: 30, y: -24, o: 0 });
+  path(g._hole, 'M-60 -10L-34 -30L-6 -20L22 -34L58 -12L44 18L10 24L-30 20Z', { fill: '#05080a', stroke: MM.bad, 'stroke-width': 2.5 });
+  g._patch = G(f, { x: 30, y: -24, o: 0 });
+  path(g._patch, mmBoxD(150, 76, 8), { fill: MM.goldLo, stroke: MM.goldHi, 'stroke-width': 2.5 });
+  [[-60, -26], [60, -26], [-60, 26], [60, 26]].forEach(([a, b]) => mmDot(g._patch, a, b, 5, MM.goldHi));
+  return g;
+}
+const c1Ghost = (p, x, y, s = 1) => { const g = G(p, { x, y, s }); path(g, 'M-230 -160H230V0H-230Z', { stroke: MM.faint, 'stroke-width': 2, 'stroke-dasharray': '8 8' }); return g; };
+function c1Hammer(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-7 -40L-9 110H9L7 -40Z', { fill: '#a87b4a', stroke: '#6b4a2a', 'stroke-width': 2 });
+  path(g, 'M-50 -70H34Q46 -70 46 -58V-40H-50Q-62 -55 -50 -70Z', { fill: '#9aa3a6', stroke: '#e6eef0', 'stroke-width': 2 });
+  return g;
+}
+function c1Spanner(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-8 -40V100Q-8 112 0 112Q8 112 8 100V-40Z', { fill: '#9aa3a6', stroke: '#e6eef0', 'stroke-width': 2 });
+  path(g, 'M-26 -48Q-30 -86 0 -90Q30 -86 26 -48Q14 -36 0 -36Q-14 -36 -26 -48ZM-10 -88V-60H10V-88Z', { fill: '#9aa3a6', stroke: '#e6eef0', 'stroke-width': 2, 'fill-rule': 'evenodd' });
+  return g;
+}
+// A small shop front with a glyph: 'phone' | 'kitchen' | 'online' | 'cater'.
+function c1Shop(p, kind, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-75 -55H75V55H-75Z', { fill: '#12191d', stroke: MM.gold, 'stroke-width': 2.5 });
+  path(g, 'M-82 -55H82L72 -80H-72Z', { fill: '#5a2a24', stroke: MM.gold, 'stroke-width': 2 });
+  const s_ = { stroke: MM.goldHi, 'stroke-width': 3, fill: 'none' };
+  if (kind === 'phone') { path(g, mmBoxD(34, 60, 6), s_); mmDot(g, 0, 22, 3, MM.goldHi); }
+  if (kind === 'kitchen') { path(g, 'M-34 0H34V24Q34 36 22 36H-22Q-34 36 -34 24ZM-44 0H44M-12 -12Q-6 -26 -12 -38M12 -12Q18 -26 12 -38', s_); }
+  if (kind === 'online') { path(g, 'M-40 -26H40V18H-40ZM-52 30H52', s_); path(g, 'M-6 -14L10 10L2 8L-2 18', s_); }
+  if (kind === 'cater') { path(g, 'M-26 -30H26V36H-26ZM-26 -8H26M-26 14H26M-10 -40H10', s_); }
+  return g;
+}
+function c1Cert(p, x, y) {
+  const g = G(p, { x, y });
+  path(g, 'M-62 -44H62V44H-62Z', { fill: '#e9e0c8', stroke: MM.gold, 'stroke-width': 4 });
+  path(g, 'M-40 -22H40M-44 -6H44M-30 8H30', { stroke: '#8f845f', 'stroke-width': 2.5 });
+  mmDot(g, 36, 26, 10, '#b5341f');
+  return g;
+}
+// A tiny figure for the crowd: head and shoulders, drawn around its feet.
+function c1Mini(p, x, y) {
+  const g = G(p, { x, y, o: 0 });
+  g._b = path(g, 'M-14 0V-22Q-14 -34 0 -34Q14 -34 14 -22V0Z', { fill: '#10171b', stroke: MM.gold, 'stroke-width': 2 });
+  g._h = mk('circle', { cx: 0, cy: -44, r: 9, fill: '#10171b', stroke: MM.gold, 'stroke-width': 2 }, g);
+  return g;
+}
+// Monkey seen from the side, facing right, feet at (0,0). Its reaching arm is drawn by the beat clock.
+function c1Monkey(p, { x = 0, y = 0, s = 1 } = {}) {
+  const g = G(p, { x, y, s });
+  const fur = '#7a5232', face = '#d6a77a';
+  path(g, 'M-60 -40Q-130 -60 -120 -150Q-112 -190 -80 -180', { stroke: fur, 'stroke-width': 10, fill: 'none' });
+  mk('ellipse', { cx: -20, cy: -70, rx: 56, ry: 62, fill: fur, stroke: MM.gold, 'stroke-width': 1.6, 'stroke-opacity': .35 }, g);
+  path(g, 'M-50 -20L-58 0M10 -20L18 0', { stroke: fur, 'stroke-width': 16 });
+  const h = G(g, { x: 20, y: -150 });
+  mk('circle', { cx: -34, cy: -10, r: 14, fill: fur }, h);
+  mk('circle', { cx: 0, cy: 0, r: 44, fill: fur, stroke: MM.gold, 'stroke-width': 1.6, 'stroke-opacity': .35 }, h);
+  mk('ellipse', { cx: 14, cy: 8, rx: 28, ry: 26, fill: face }, h);
+  mmDot(h, 6, -2, 4.5, '#1a0f0a'); mmDot(h, 26, -2, 4.5, '#1a0f0a');
+  path(h, 'M8 20Q18 26 30 20', { stroke: '#3a1c14', 'stroke-width': 3 });
+  g._head = h;
+  return g;
+}
+// A coconut cut open to show the sweet inside, centred at (0,0), the hole at the top right.
+function c1Coconut(p, { x = 0, y = 0, s = 1 } = {}) {
+  const g = G(p, { x, y, s });
+  mk('ellipse', { cx: 0, cy: 0, rx: 92, ry: 80, fill: '#1d140d' }, g);
+  g._sweet = mmDot(g, 6, 34, 22, '#f2b84b');
+  mmDot(g._sweet, -6, -6, 5, '#ffe7a8');
+  g._shell = path(g, 'M-24 -78Q-92 -76 -92 0Q-92 80 0 80Q92 80 92 0Q92 -50 46 -72', { stroke: '#6b4a2a', 'stroke-width': 18, fill: 'none' });
+  return g;
+}
+// A glass of sulaimani, base at (0,0): the tea is redrawn each frame from its level (0..300).
+function c1Glass(p, { x = 0, y = 0 } = {}) {
+  const g = G(p, { x, y });
+  g._tea = path(g, 'M0 0', { fill: '#b8641e', opacity: .9 });
+  path(g, 'M-90 -300L-70 0H70L90 -300', { stroke: '#e6eef0', 'stroke-width': 4, fill: 'rgba(230,238,240,.06)' });
+  g._lemon = G(g, { x: 30, y: -270 });
+  mk('circle', { cx: 0, cy: 0, r: 22, fill: '#e8d94a', stroke: '#c9b830', 'stroke-width': 3 }, g._lemon);
+  path(g._lemon, 'M0 -18V18M-18 0H18M-13 -13L13 13M13 -13L-13 13', { stroke: '#c9b830', 'stroke-width': 1.5 });
+  g._level = h => {
+    const k = h / 300, xw = 70 + 20 * k;
+    g._tea.setAttribute('d', `M-70 0H70L${xw.toFixed(1)} ${(-h).toFixed(1)}H${(-xw).toFixed(1)}Z`);
+    put(g._lemon, { y: -Math.max(14, h - 16) });
+  };
+  return g;
+}
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    mmDefs();
+    const g = panel(0);
+    put(g, { o: 0 }); tw(g, { o: 1 }, .1, .6);
+    mmGlow(g, 800, 480, 380, 'Gold', .32);
+    const tb = c1Toolbox(g, { x: 800, y: 640, s: 1.25, o: 0 });
+    mmClock(D, t => put(tb, { o: .2 * io(mmU(t, m('title'), 1.2)) }));
+    stat(mmText(g, L('kicker'), { x: 800, y: 205, size: 26, fill: MM.gold, weight: 500, ls: ML ? undefined : '6' }));
+    mmSay(m, g, L('title'), 'title', { x: 800, y: 340, size: 96, font: SERIF, weight: 600, maxW: 1380, how: 'rise' });
+    mmSay(m, g, L('sub'), 'sub', { x: 800, y: 700, size: 38, fill: MM.dim, maxW: 1300, font: SERIF, italic: true, how: 'rise' });
+    const cr = stat(mmText(g, L('credit'), { x: 800, y: 790, size: 26, fill: '#6f6a5c', o: 0 }));
+    show(cr, m('sub', .45), .8);
+    tw(g, { o: 0 }, D - .6, .5);
+  }],
+
+  ['doubt', 'b_doubt', (m, D) => {
+    const p = panel(0);
+    const sc = G(p); put(sc, { o: 0 }); tw(sc, { o: 1 }, .1, .5);
+    mmGlow(sc, 380, 380, 300, 'Gold', .25);
+    // an open book on a lectern
+    const bk = G(sc, { x: 380, y: 520 });
+    path(bk, 'M-200 -20Q-100 -60 0 -20Q100 -60 200 -20V110Q100 70 0 110Q-100 70 -200 110Z', { fill: '#e9e0c8', stroke: MM.gold, 'stroke-width': 3 });
+    path(bk, 'M0 -20V110', { stroke: '#b8ad90', 'stroke-width': 2 });
+    for (let i = 0; i < 4; i++) { path(bk, `M-170 ${10 + i * 22}Q-100 ${-14 + i * 22} -30 ${8 + i * 22}`, { stroke: '#b8ad90', 'stroke-width': 2 }); path(bk, `M30 ${8 + i * 22}Q100 ${-14 + i * 22} 170 ${10 + i * 22}`, { stroke: '#b8ad90', 'stroke-width': 2 }); }
+    path(bk, 'M-40 110L-70 330H70L40 110', { fill: '#2a2320', stroke: MM.wood, 'stroke-width': 4 });
+    const bb = mmBubble(p, L('dontL'), { x: 300, y: 430, w: 520, size: 32, o: 1, italic: true, font: SERIF });
+    mmCue(m, bb, 'dont', 'pop');
+    // the test loop: try, track, keep or drop
+    const cx = 1150, cy = 470, R = 210;
+    const ring = mk('circle', { cx, cy, r: R, fill: 'none', stroke: MM.goldLo, 'stroke-width': 3, 'stroke-dasharray': '10 10' }, p);
+    put(ring, { o: 0 }); ring.setAttribute('data-mark', 'test'); show(ring, m('test'), .5);
+    mmSay(m, p, L('testL'), 'test', { x: cx, y: cy - 10, size: 32, fill: MM.goldHi, font: SERIF, weight: 600, maxW: 190, para: true });
+    const nodes = [['try', 0, MM.gold], ['track', 1, MM.sci], ['keep', 2, MM.good], ['drop', 3, MM.bad]];
+    const ang = [-90, 0, 90, 180];
+    const lit = {};
+    nodes.forEach(([k, i, col]) => {
+      const a = ang[i] * Math.PI / 180, x = cx + R * Math.cos(a), y = cy + R * Math.sin(a);
+      const n = mmNode(p, L(k + 'L'), col, { x, y, w: 200, h: 80, size: 30 });
+      mmCue(m, n, k, 'pop');
+      lit[k] = n;
+    });
+    // one clock: a dot runs the loop after "keep", and each node's ring lights as it passes
+    const dot = mmDot(p, 0, 0, 10, MM.goldHi, 0);
+    mmClock(D, t => {
+      const t0 = m('drop', .4);
+      if (t < t0) return put(dot, { o: 0 });
+      const u = ((t - t0) / 3) % 1, a = (-90 + u * 360) * Math.PI / 180;
+      put(dot, { x: cx + R * Math.cos(a), y: cy + R * Math.sin(a), o: Math.min(1, (t - t0) * 3) * (1 - mmU(t, m('sci'), .4)) });
+      nodes.forEach(([k, i]) => put(lit[k]._ring, { o: Math.max(0, 1 - Math.abs(((u * 4 - i + 4.5) % 4) - .5) * 2) * (1 - mmU(t, m('sci'), .4)) }));
+    });
+    // science check: the loop steps aside
+    [sc, bb].forEach(e => tw(e, { o: .2 }, m('sci'), .6));
+    const card = mmSci(p, { x: 120, y: 150, w: 720, h: 600, title: L('sci') });
+    mmCue(m, card, 'sci', 'rise', { dy: 30 });
+    mmCue(m, c1ChipL(card, L('supportedL'), MM.good, 52, 135, { size: 28, solid: true }), 'supported', 'pop');
+    const r1 = c1Row(m, card, 'ok', L('monitorL'), 'monitor', 240);
+    const ci = stat(mmText(card, L('cite1'), { x: 86, y: 250 + r1._h + 6, size: 20, fill: MM.dim, anchor: 'start', maxW: 590, o: 0 }));
+    show(ci, m('monitor', .5), .5);
+    c1Row(m, card, 'ok', L('writtenL'), 'written', 420);
+    // a notebook with ticks: the written record
+    const nb = G(card, { x: 360, y: 540 });
+    mmCue(m, nb, 'written', 'fade');
+    path(nb, 'M-140 -50H140V50H-140Z', { fill: '#e9e0c8', stroke: MM.gold, 'stroke-width': 2 });
+    const tk = [0, 1, 2, 3, 4].map(i => { const g = G(nb, { x: -100 + i * 50, y: 0, o: 0 }); path(g, 'M-12 0L-3 10L14 -12', { stroke: '#2f7a4d', 'stroke-width': 5 }); return g; });
+    mmClock(D, t => tk.forEach((g, i) => put(g, { o: io(mmU(t, m('written') + .4 + i * .3, .25)) })));
+  }],
+
+  ['gap', 'b_gap', (m, D) => {
+    const p = panel(0);
+    const sc = G(p); put(sc, { o: 0 }); tw(sc, { o: 1 }, .1, .5);
+    mk('rect', { x: 0, y: 0, width: 1600, height: 900, fill: 'url(#mmNight)' }, sc);
+    // two cliffs with a gap between them
+    path(sc, 'M0 900V560Q200 540 560 560L620 900Z', { fill: '#141c21', stroke: MM.gold, 'stroke-width': 2, 'stroke-opacity': .5 });
+    path(sc, 'M1600 900V560Q1400 540 1040 560L980 900Z', { fill: '#141c21', stroke: MM.gold, 'stroke-width': 2, 'stroke-opacity': .5 });
+    const W = G(p);
+    mmSay(m, W, L('wantL'), 'want', { x: 290, y: 640, size: 40, fill: MM.ink, font: SERIF, weight: 600 });
+    mmSay(m, W, L('achieveL'), 'achieve', { x: 1310, y: 640, size: 40, fill: MM.goldHi, font: SERIF, weight: 600 });
+    const flag = G(W, { x: 1310, y: 556 }); path(flag, 'M0 0V-120', { stroke: MM.dim, 'stroke-width': 4 }); path(flag, 'M0 -120L60 -104L0 -88Z', { fill: MM.gold });
+    mmCue(m, flag, 'achieve', 'rise');
+    // what we have tried, stacked on our side
+    const items = [['books', 150], ['videos', 290], ['course', 430]];
+    items.forEach(([k, x], i) => {
+      const g = G(W, { x, y: 520 });
+      if (k === 'books') { path(g, 'M-50 0V-24H50V0ZM-44 -24V-46H44V-24ZM-50 -46V-68H40V-46Z', { fill: '#5a3d26', stroke: MM.gold, 'stroke-width': 2 }); }
+      if (k === 'videos') { path(g, mmBoxD(110, 70, 10), { fill: '#12191d', stroke: MM.heard, 'stroke-width': 3 }); put(g.lastChild, { y: -36 }); path(g, 'M-10 -50L14 -36L-10 -22Z', { fill: MM.heard }); }
+      if (k === 'course') { path(g, 'M-50 -40L0 -64L50 -40L0 -16Z', { fill: '#1d2a30', stroke: MM.gold, 'stroke-width': 2.5 }); path(g, 'M30 -30V-6', { stroke: MM.gold, 'stroke-width': 3 }); }
+      mmCue(m, g, k, 'pop');
+      mmSay(m, W, L(k + 'L'), k, { x, y: i % 2 ? 412 : 440, size: 26, fill: MM.dim, off: .1, maxW: 160 });
+    });
+    // a short burst of energy that drops back: one clock from "burst"
+    const mx = 800, my = 520;
+    path(W, `M${mx - 150} ${my}H${mx + 150}`, { stroke: MM.line, 'stroke-width': 3 });
+    const line = path(W, 'M0 0', { stroke: MM.lived, 'stroke-width': 5, fill: 'none' });
+    line.setAttribute('data-mark', 'burst');
+    mmClock(D, t => {
+      const t0 = m('burst'), t1 = m('normal');
+      if (t < t0) return line.setAttribute('d', 'M0 0');
+      const n = 40, pts = [];
+      const reach = mmU(t, t0, 1.2);
+      for (let i = 0; i <= n; i++) {
+        const u = i / n; if (u > reach) break;
+        const tt = t0 + u * (t1 + .6 - t0);
+        const h = 200 * Math.exp(-((tt - t0 - .6) ** 2) / .25) * (tt < t1 + .6 ? 1 : 0);
+        pts.push(`${(mx - 150 + u * 300).toFixed(1)} ${(my - h).toFixed(1)}`);
+      }
+      line.setAttribute('d', 'M' + pts.join('L'));
+    });
+    mmSay(m, W, L('burstL'), 'burst', { x: mx, y: 270, size: 30, fill: MM.lived, how: 'pop' });
+    mmSay(m, W, L('normalL'), 'normal', { x: mx + 160, y: my + 50, size: 28, fill: MM.dim, anchor: 'end' });
+    // science check
+    tw(W, { o: .15 }, m('sci'), .6); tw(sc, { o: .4 }, m('sci'), .6);
+    const card = mmSci(p, { x: 230, y: 70, w: 1140, h: 770, title: L('sci') });
+    mmCue(m, card, 'sci', 'rise', { dy: 30 });
+    mmCue(m, c1ChipL(card, L('partlyL'), MM.gold, 52, 135, { size: 28, solid: true }), 'partly', 'pop');
+    const r1 = c1Row(m, card, 'ok', L('intendL'), 'intend', 240, { maxW: 980 });
+    const ci2 = stat(mmText(card, L('cite2'), { x: 86, y: 250 + r1._h + 4, size: 20, fill: MM.dim, anchor: 'start', o: 0 }));
+    show(ci2, m('intend', .5), .5);
+    // half of the intenders act: ten dots, five turn gold, from one clock
+    const dots = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => mmDot(card, 120 + i * 60, 360, 16, MM.faint, 0));
+    dots[0].setAttribute('data-mark', 'intend'); dots.slice(1).forEach(d => d.setAttribute('data-stagger', 'intend'));
+    mmClock(D, t => dots.forEach((d, i) => { const u = mmU(t, m('intend') + .3 + i * .08, .2); put(d, { o: u }); d.setAttribute('fill', i % 2 === 0 && t > m('intend', 1.4) ? MM.gold : MM.faint); }));
+    c1Row(m, card, 'ok', L('helpL'), 'help', 450, { maxW: 980 });
+    c1Row(m, card, 'no', L('fadeL'), 'fade', 520, { maxW: 980 });
+    // the effect over time: a curve that sinks toward zero, drawn on "fade"
+    const ax = G(card, { x: 120, y: 720 });
+    path(ax, 'M0 0H700M0 0V-120', { stroke: MM.dim, 'stroke-width': 2 });
+    const cv = path(ax, 'M0 -110C120 -100 240 -40 420 -16S620 -6 700 -4', { stroke: MM.good, 'stroke-width': 5, fill: 'none' }, { d: 0 });
+    mmCue(m, cv, 'fade', 'draw', { dur: 2.2 });
+    const tick = G(ax, { x: 560 }); path(tick, 'M0 10V-60', { stroke: MM.gold, 'stroke-width': 3, 'stroke-dasharray': '6 6' });
+    mmCue(m, tick, 'months', 'fade');
+    mmSay(m, ax, L('monthsL'), 'months', { x: 560, y: 40, size: 26, fill: MM.gold });
+    const ci3 = stat(mmPara(card, L('cite3'), { x: 870, y: 650, size: 20, fill: MM.dim, anchor: 'start', maxW: 240, o: 0 }));
+    show(ci3, m('months', .5), .5);
+  }],
+
+  ['ajmal', 'b_ajmal', (m, D) => {
+    const p = panel(0);
+    const room = G(p); put(room, { o: 0 }); tw(room, { o: 1 }, .1, .5);
+    c1Wall(room, 820);
+    const A = S.ajmal = mmPerson(p, { kind: 'm', x: 300, y: 820, s: .85 });
+    mmCue(m, A.g, 'ajmal', 'fade', { dur: .4 });
+    mmBreathe(A, D);
+    mmSay(m, p, L('ajmalL'), 'ajmal', { x: 300, y: 862, size: 26, fill: MM.dim });
+    // the wall of certificates, one clock from "certificates"
+    const certs = [[600, 150], [760, 150], [920, 150], [600, 280], [760, 280], [920, 280]].map(([x, y]) => c1Cert(p, x, y));
+    certs[0].setAttribute('data-mark', 'certs'); certs.slice(1).forEach(c => c.setAttribute('data-stagger', 'certs'));
+    mmClock(D, t => certs.forEach((c, i) => { const u = mmU(t, m('certs') + i * .25, .35); put(c, { o: u, s: .6 + .4 * back(u) }); }));
+    mmCue(m, c1ChipL(p, L('potentialL'), MM.gold, 200, 410, { size: 30, solid: true }), 'potential', 'pop');
+    mmMood(A, 'smile', m('potential'), .3);
+    // three shops, each struck when he moves on
+    const shops = [['shop1', 'phone', 640], ['shop2', 'kitchen', 880], ['shop3', 'online', 1120]].map(([k, kind, x]) => {
+      const s = c1Shop(p, kind, { x, y: 560 });
+      mmCue(m, s, k, 'pop');
+      mmSay(m, p, L(k + 'L'), k, { x, y: 660, size: 26, fill: MM.ink, maxW: 200, off: .1 });
+      s._w = 170;
+      return s;
+    });
+    shops.forEach((s, i) => { const k = c1Strike(p, s, m('quit') + i * .35); if (i === 0) k.setAttribute('data-mark', 'quit'); else k.setAttribute('data-stagger', 'quit'); });
+    mmMood(A, 'ask', m('quit'), .3);
+    // others in the same business
+    const fr = G(p, { x: 1370, y: 760 });
+    mmCue(m, fr, 'fine', 'fade');
+    [-40, 40].forEach(dx => { const f = c1Mini(fr, dx, 0); put(f, { o: 1, s: 1.4 }); f._b.setAttribute('stroke', MM.good); f._h.setAttribute('stroke', MM.good); });
+    path(fr, 'M90 -20V-80M74 -64L90 -84L106 -64', { stroke: MM.good, 'stroke-width': 4 });
+    mmSay(m, p, L('fineL'), 'fine', { x: 1370, y: 800, size: 26, fill: MM.good, maxW: 300 });
+    // and his account
+    const bk = G(p, { x: 1330, y: 290 });
+    mmCue(m, bk, 'account', 'rise');
+    path(bk, mmBoxD(360, 180, 22), { fill: '#10171b', stroke: MM.gold, 'stroke-width': 2.4 });
+    stat(mmText(bk, L('balL'), { x: -150, y: -36, size: 26, fill: MM.dim, anchor: 'start' }));
+    T(bk, '₹ 1,240', { x: -150, y: 46, size: 58, fill: MM.bad, weight: 600, font: '"Outfit",sans-serif', anchor: 'start' });
+    mmMood(A, 'sad', m('account', .3), .4);
+  }],
+
+  ['fear', 'b_fear', (m, D) => {
+    const p = panel(0);
+    const sc = G(p); put(sc, { o: 0 }); tw(sc, { o: 1 }, .1, .5);
+    mk('rect', { x: 0, y: 0, width: 1600, height: 820, fill: 'url(#mmNight)' }, sc);
+    c1Floor(sc, 820);
+    const w = G(sc, { x: 130, y: 160 });
+    mk('rect', { x: 0, y: 0, width: 220, height: 220, rx: 6, fill: '#0a1218', stroke: '#2b3632', 'stroke-width': 6 }, w);
+    path(w, 'M110 0V220M0 110H220', { stroke: '#2b3632', 'stroke-width': 5 });
+    mmGlow(w, 60, 60, 70, 'Gold', .3); mk('circle', { cx: 60, cy: 60, r: 18, fill: '#efe6d2', opacity: .8 }, w);
+    const A = mmPerson(sc, { kind: 'm', x: 330, y: 820, s: .85 });
+    mmBreathe(A, D, 1, .6); mmMood(A, 'worried', 0, .01);
+    // the layers underneath, from the outside in, each ring drawn on its word
+    const cx = 1050, cy = 480;
+    mmSay(m, p, L('fearL'), 'fear', { x: cx, y: 110, size: 40, fill: MM.emotion, font: SERIF, weight: 600 });
+    const ringD = r => `M${cx} ${cy - r}A${r} ${r} 0 1 1 ${cx - .1} ${cy - r}Z`;
+    const r1 = path(p, ringD(330), { stroke: MM.emotion, 'stroke-width': 3, fill: 'rgba(226,105,79,.05)' }, { d: 0 });
+    mmCue(m, r1, 'fail', 'draw', { dur: .8 });
+    mmSay(m, p, L('failL'), 'fail', { x: cx, y: cy - 330 + 56, size: 30, fill: MM.emotion, maxW: 420, off: .1 });
+    const r2 = path(p, ringD(225), { stroke: MM.emotion, 'stroke-width': 3, fill: 'rgba(226,105,79,.08)' }, { d: 0 });
+    mmCue(m, r2, 'succeed', 'draw', { dur: .8 });
+    mmSay(m, p, L('succeedL'), 'succeed', { x: cx, y: cy - 225 + 66, size: 28, fill: '#f08a72', maxW: 360, para: true, off: .1 });
+    const core = G(p, { x: cx, y: cy + 50 });
+    mmCue(m, core, 'story', 'pop');
+    mmGlow(core, 0, 0, 160, 'Gold', .5);
+    mk('circle', { cx: 0, cy: 0, r: 100, fill: '#10171b', stroke: MM.gold, 'stroke-width': 4 }, core);
+    mmText(core, L('storyL'), { x: 0, y: 12, size: 34, fill: MM.goldHi, font: SERIF, weight: 600, maxW: 170 });
+    const bb = mmBubble(p, L('haveL'), { x: 400, y: 380, w: 380, size: 32, o: 1, italic: true, font: SERIF });
+    mmCue(m, bb, 'have', 'pop');
+    pulse(core, m('have', .4), 1.08);
+  }],
+
+  ['uncle', 'b_uncle', (m, D) => {
+    const p = panel(0);
+    const sc = G(p); put(sc, { o: 0 }); tw(sc, { o: 1 }, .1, .5);
+    c1Wall(sc, 820);
+    // a Kerala sit-out: tiled eave and two pillars
+    path(sc, 'M0 0H1600V60L1540 90H60L0 60Z', { fill: '#9a3f2c', stroke: MM.gold, 'stroke-width': 1.5, 'stroke-opacity': .4 });
+    for (let i = 0; i < 16; i++) path(sc, `M${i * 100 + 30} 60V88`, { stroke: '#7a2f20', 'stroke-width': 4 });
+    [110, 1490].forEach(x => path(sc, `M${x - 22} 90H${x + 22}V820H${x - 22}Z`, { fill: '#e6dcc4', stroke: MM.gold, 'stroke-width': 1.5, 'stroke-opacity': .5 }));
+    const H = mmPerson(sc, { kind: 'u', x: 430, y: 820, s: .9 });
+    mmMood(H, 'smile', 0, .01); mmBreathe(H, D);
+    const A = mmPerson(sc, { kind: 'm', x: 1180, y: 820, s: .85 });
+    mmMood(A, 'calm', 0, .01); mmBreathe(A, D, 1, 1.1);
+    mmSay(m, p, L('harisL'), 'haris', { x: 430, y: 862, size: 26, fill: MM.dim });
+    // what he built: a supermarket in a memory circle
+    const v = G(p, { x: 330, y: 250 });
+    mmCue(m, v, 'shops', 'fade', { dur: .5 });
+    mk('circle', { cx: 0, cy: 0, r: 120, fill: '#15110d', stroke: MM.gold, 'stroke-width': 2.5 }, v);
+    path(v, 'M-70 30V-30H70V30ZM-80 -30L-60 -60H60L80 -30M-50 30V0H-20V30M10 -10H50V14H10Z', { fill: 'none', stroke: MM.goldHi, 'stroke-width': 3 });
+    const shl = mmSay(m, p, L('shopsL'), 'shops', { x: 330, y: 410, size: 26, fill: MM.goldHi, maxW: 300, off: .2 });
+    hide(v, m('ifnot'), .4); hide(shl, m('ifnot'), .4);
+    // his advice, two lines at a time
+    const b1 = c1Bubble2(m, p, L('ifnotL'), L('knowL'), 'ifnot', 'know', { x: 790, y: 250, w: 640 });
+    tw(b1, { o: 0 }, m('alike'), .4);
+    const b2 = c1Bubble2(m, p, L('alikeL'), L('copyL'), 'alike', 'copy', { x: 790, y: 250, w: 640 });
+    mmTalk(H, m('ifnot'), m('know', 2.2), D, 'smile');
+    mmTalk(H, m('alike'), m('copy', 1.3), D, 'smile');
+    mmMood(A, 'smile', m('laughs'), .3);
+    // the words drift into his head and stay
+    tw(b2, { o: .0, s: .25, x: 1180, y: 420 }, m('stay'), 1, io);
+    const dot = mmGlow(A.head, 0, -60, 70, 'Gold', 0);
+    tw(dot, { o: 1 }, m('stay', .8), .6);
+    mmSay(m, p, L('stayL'), 'stay', { x: 1180, y: 330, size: 30, fill: MM.gold, font: SERIF, italic: true, off: .3 });
+  }],
+
+  ['copy', 'b_copy', (m, D) => {
+    const p = panel(0);
+    const card = mmSci(p, { x: 60, y: 70, w: 1480, h: 800, title: L('sci') });
+    mmCue(m, card, 'sci', 'rise', { dy: 30 });
+    const ghost = G(p, { o: 0 }); tw(ghost, { o: 1 }, .1, .3); hide(ghost, .5, .3);
+    path(ghost, 'M60 70H1540V870H60Z', { stroke: MM.faint, 'stroke-width': 2, 'stroke-dasharray': '8 8' });
+    const tw_ = mmW(L('sci'), ML ? 26.4 : 30, SANS, 600);
+    mmCue(m, c1ChipL(card, L('halfrL'), MM.gold, 82 + tw_ + 34, 52, { size: 26, solid: true }), 'halfr', 'pop');
+    path(card, 'M740 120V760', { stroke: MM.line, 'stroke-width': 2 });
+    // trap 1: survivorship bias
+    mmSay(m, card, L('survL'), 'surv', { x: 370, y: 170, size: 38, fill: MM.ink, font: SERIF, weight: 600 });
+    const crowd = [];
+    for (let r = 0; r < 5; r++) for (let c = 0; c < 8; c++) crowd.push(c1Mini(card, 100 + c * 77 + (r % 2) * 20, 270 + r * 84));
+    crowd[0].setAttribute('data-mark', 'crowd'); crowd.slice(1).forEach(f => f.setAttribute('data-stagger', 'crowd'));
+    const few = new Set([5, 18, 33]);
+    mmClock(D, t => {
+      const tf = m('few'), tr = m('rest');
+      crowd.forEach((f, i) => {
+        const a = mmU(t, m('crowd') + i * .02, .3);
+        const win = few.has(i);
+        const up = win ? io(mmU(t, tf, .5)) : 0, down = win ? 0 : io(mmU(t, tr, .6));
+        put(f, { o: a * (1 - .7 * down), s: 1 + .45 * up, y: 270 + Math.floor(i / 8) * 84 - 10 * up });
+        const col = win && t >= tf ? MM.good : !win && t >= tr ? MM.bad : MM.gold;
+        if (f._c !== col) { f._b.setAttribute('stroke', col); f._h.setAttribute('stroke', col); f._c = col; }
+      });
+    });
+    mmSay(m, card, L('fewL'), 'few', { x: 370, y: 690, size: 28, fill: MM.good, maxW: 620 });
+    mmSay(m, card, L('restL'), 'rest', { x: 370, y: 735, size: 26, fill: MM.bad, maxW: 620 });
+    mmSay(m, card, L('nobodyL'), 'nobody', { x: 370, y: 778, size: 26, fill: MM.dim, maxW: 620, italic: true, font: SERIF });
+    // trap 2: cause runs both ways
+    mmSay(m, card, L('bothL'), 'both', { x: 1110, y: 170, size: 36, fill: MM.ink, font: SERIF, weight: 600, maxW: 680 });
+    const n1 = mmNode(card, L('thinkL'), MM.gold, { x: 930, y: 330, w: 230, h: 90 });
+    mmCue(m, n1, 'think', 'pop');
+    const n2 = mmNode(card, L('moneyL'), MM.goldHi, { x: 1290, y: 330, w: 230, h: 90 });
+    mmCue(m, n2, 'money2', 'pop');
+    const a1 = mmArrow(card, 1050, 308, 1170, 308, MM.gold);
+    a1._line.setAttribute('data-mark', 'money2'); mmArrowIn(a1, m('money2', .2));
+    const a2 = mmArrow(card, 1170, 352, 1050, 352, MM.emotion);
+    a2._line.setAttribute('data-mark', 'full'); mmArrowIn(a2, m('full', .2));
+    mmSay(m, card, L('fullL'), 'full', { x: 1110, y: 440, size: 28, fill: MM.emotion, maxW: 660 });
+    // the sugarcane study: same farmers, tested before and after the harvest money came in
+    const cane = G(card, { x: 830, y: 560 });
+    mmCue(m, cane, 'farm', 'fade');
+    [0, 22, 44].forEach(dx => { path(cane, `M${dx} 40V-60`, { stroke: '#7cc79d', 'stroke-width': 7 }); path(cane, `M${dx} -20Q${dx + 26} -40 ${dx + 40} -30`, { stroke: '#7cc79d', 'stroke-width': 4 }); });
+    mmCue(m, c1ChipL(card, L('farmL'), MM.sci, 920, 560, { size: 28 }), 'farm', 'pop');
+    const ci = stat(mmPara(card, L('cite4'), { x: 920, y: 640, size: 21, fill: MM.dim, anchor: 'start', maxW: 520, o: 0 }));
+    show(ci, m('farm', .5), .5);
+  }, { lead: false }],
+
+  ['turn', 'b_turn', (m, D) => {
+    const p = panel(0);
+    const sc = G(p); put(sc, { o: 0 }); tw(sc, { o: 1 }, .1, .5);
+    c1Wall(sc, 820);
+    path(sc, 'M80 640H560V820H80Z', { fill: '#2a2320', stroke: MM.gold, 'stroke-width': 1.5, 'stroke-opacity': .35 });
+    [[150, 640], [200, 640]].forEach(([x, y]) => { const t = G(sc, { x, y }); [0, 1, 2].forEach(i => path(t, `M-20 ${-i * 30}V${-i * 30 - 26}H20V${-i * 30}Z`, { fill: '#9aa3a6', stroke: '#e6eef0', 'stroke-width': 1.5 })); });
+    const A = mmPerson(p, { kind: 'm', x: 380, y: 820, s: .85 });
+    mmBreathe(A, D); mmMood(A, 'calm', 0, .01);
+    // old shops dim away; one sign rises
+    const olds = G(p, { o: .35 });
+    [['phone', 120], ['kitchen', 260], ['online', 400]].forEach(([k, x]) => c1Shop(olds, k, { x, y: 140, s: .6 }));
+    tw(olds, { o: 0, y: -30 }, m('one'), .6);
+    const one = G(p, { x: 120, y: 280 });
+    mmCue(m, one, 'one', 'pop');
+    mk('circle', { cx: 0, cy: 0, r: 40, fill: MM.gold }, one);
+    T(one, '1', { x: 0, y: 15, size: 44, fill: '#0b0e10', weight: 700, anchor: 'middle', font: SANS });
+    const sign = G(p, { x: 360, y: 280 });
+    mmCue(m, sign, 'cater', 'rise');
+    path(sign, mmBoxD(380, 90, 14), { fill: '#5a2a24', stroke: MM.goldHi, 'stroke-width': 3 });
+    mmText(sign, L('caterL'), { x: 0, y: 12, size: 34, fill: MM.ink, font: SERIF, weight: 600, maxW: 340 });
+    // catching a thought
+    mmSay(m, p, L('catchL'), 'catch', { x: 790, y: 200, size: 32, fill: MM.gold, font: SERIF, italic: true, maxW: 440 });
+    mmMood(A, 'ask', m('catch'), .3);
+    const tb = mmBubble(p, L('oldL'), { x: 660, y: 420, w: 400, size: 32, o: 1, italic: true, font: SERIF, edge: MM.bad });
+    mmCue(m, tb, 'old', 'pop');
+    const q = c1ChipL(p, L('trueL'), MM.gold, 600, 500, { size: 30, solid: true });
+    mmCue(m, q, 'true', 'pop');
+    const x1 = path(p, 'M490 395L830 325', { stroke: MM.bad, 'stroke-width': 4 }, { d: 0 });
+    x1.setAttribute('data-mark', 'true'); draw(x1, m('true', .4), .35);
+    tw(tb, { o: .35 }, m('true', .8), .5);
+    mmMood(A, 'smile', m('orders'), .4);
+    // orders, month by month: bars grow from one clock that starts on "orders"
+    const ax = G(p, { x: 1080, y: 760 });
+    mmCue(m, ax, 'orders', 'fade');
+    path(ax, 'M0 0H440M0 0V-420', { stroke: MM.dim, 'stroke-width': 2 });
+    const hs = [40, 60, 70, 100, 120, 160, 200, 250, 300];
+    const bars = hs.map((h, i) => { const b = mk('rect', { x: 14 + i * 47, y: 0, width: 32, height: 0, rx: 4, fill: MM.good }, ax); return b; });
+    mmClock(D, t => bars.forEach((b, i) => { const u = io(mmU(t, m('orders') + .3 + i * .3, .4)); b.setAttribute('height', (hs[i] * u).toFixed(1)); b.setAttribute('y', (-hs[i] * u).toFixed(1)); }));
+    mmSay(m, ax, L('ordersL'), 'orders', { x: 220, y: 50, size: 30, fill: MM.good, off: .1 });
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    const p = panel(0);
+    const g = G(p, { o: 0 }); show(g, .1, .5);
+    c1Floor(g, 640);
+    const A = mmPerson(g, { kind: 'm', x: 330, y: 640, s: .62 });
+    mmBreathe(A, D); mmMood(A, 'smile', 0, .01);
+    const sign = G(g, { x: 330, y: 300 });
+    path(sign, mmBoxD(340, 80, 14), { fill: '#5a2a24', stroke: MM.goldHi, 'stroke-width': 3 });
+    stat(mmText(sign, L('caterL'), { x: 0, y: 11, size: 30, fill: MM.ink, font: SERIF, weight: 600, maxW: 300 }));
+    [['phone', 820], ['kitchen', 1020], ['online', 1220]].forEach(([k, x]) => {
+      const s = c1Shop(g, k, { x, y: 380, s: .8 });
+      put(s, { o: .45 });
+      path(g, `M${x - 80} 420L${x + 80} 340`, { stroke: MM.bad, 'stroke-width': 4 });
+    });
+  }, { ask: done => quiz(BAND, [{ id: 'c-change', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 1, L('q1y'), [L('q1na'), null, L('q1nc')]) }], done) }],
+
+  ['seminar', 'b_seminar', (m, D) => {
+    const p = panel(0);
+    const sc = G(p); put(sc, { o: 0 }); tw(sc, { o: 1 }, .1, .5);
+    c1Wall(sc, 820);
+    const scr = G(sc, { x: 800, y: 200 });
+    path(scr, mmBoxD(560, 230, 10), { fill: '#e9e0c8', stroke: '#3a3830', 'stroke-width': 8 });
+    const sl = G(scr);
+    path(sl, 'M-200 60L-120 20L-40 34L40 -20L120 -6L200 -60', { stroke: MM.heard, 'stroke-width': 5, fill: 'none' });
+    path(sl, 'M-220 -80H-40M-220 -56H-100', { stroke: '#8f845f', 'stroke-width': 6 });
+    mmSay(m, p, L('alqL'), 'alq', { x: 800, y: 360, size: 28, fill: MM.dim, maxW: 640 });
+    const N = mmPerson(p, { kind: 'f', x: 520, y: 820, s: .8 });
+    const F = mmPerson(p, { kind: 'r', x: 1080, y: 820, s: .8 });
+    [N, F].forEach(P => { mmBreathe(P, D); mmMood(P, 'calm', 0, .01); });
+    mmCue(m, N.g, 'nisha', 'fade', { dur: .35 }); mmCue(m, F.g, 'faisal', 'fade', { dur: .35 });
+    mmSay(m, p, L('nishaL'), 'nisha', { x: 520, y: 862, size: 28, fill: MM.ink });
+    mmSay(m, p, L('faisalL'), 'faisal', { x: 1080, y: 862, size: 28, fill: MM.ink });
+    // the same notes in both hands
+    [N, F].forEach(P => { const nb = G(P.armR._lo, { x: 0, y: 96 }); path(nb, mmBoxD(60, 76, 6), { fill: '#e9e0c8', stroke: MM.heard, 'stroke-width': 3 }); mmCue(m, nb, 'same', 'pop'); mmArm(P, 1, 20, 70, m('same'), .4); });
+    mmSay(m, p, L('sameL'), 'same', { x: 800, y: 560, size: 30, fill: MM.heard, maxW: 300, para: true });
+    // six months later: the screen turns into a calendar page
+    const cal = G(p, { x: 800, y: 200 });
+    mmCue(m, cal, 'six', 'fade');
+    path(cal, mmBoxD(560, 230, 10), { fill: '#10171b', stroke: MM.gold, 'stroke-width': 4 });
+    mmText(cal, L('sixL'), { x: 0, y: 16, size: 46, fill: MM.goldHi, font: SERIF, weight: 600, maxW: 500 });
+    // two bars above each head: before and after, one clock
+    const bars = (x, h1, mark, col) => {
+      const g = G(p, { x, y: 480 });
+      mmCue(m, g, mark, 'fade', { dur: .3 });
+      path(g, 'M-70 0H70', { stroke: MM.dim, 'stroke-width': 2 });
+      const a = mk('rect', { x: -50, y: -50, width: 40, height: 50, rx: 4, fill: MM.dim }, g);
+      const b = mk('rect', { x: 10, y: -50, width: 40, height: 50, rx: 4, fill: col }, g);
+      mmClock(D, t => { const h = 50 + (h1 - 50) * io(mmU(t, m(mark, .2), .8)); b.setAttribute('height', h.toFixed(1)); b.setAttribute('y', (-h).toFixed(1)); });
+      return g;
+    };
+    bars(520, 100, 'doubled', MM.good);
+    mmSay(m, p, L('doubledL'), 'doubled', { x: 610, y: 450, size: 30, fill: MM.good, anchor: 'start' });
+    mmMood(N, 'smile', m('doubled'), .3);
+    bars(1080, 53, 'much', MM.gold);
+    mmSay(m, p, L('muchL'), 'much', { x: 1170, y: 450, size: 28, fill: MM.dim, anchor: 'start', maxW: 300 });
+    mmMood(F, 'worried', m('much'), .3);
+  }],
+
+  ['toolbox', 'b_toolbox', (m, D) => {
+    const p = panel(0);
+    const gh = c1Ghost(p, 800, 640, 1.2); put(gh, { o: 0 }); tw(gh, { o: 1 }, .1, .4); hide(gh, m('box', .3), .3);
+    const B = S.box = c1Toolbox(p, { x: 800, y: 640, s: 1.2 });
+    mmCue(m, B, 'box', 'pop');
+    const ham = c1Hammer(B._in, { x: -110, y: -330, o: 0 }), spn = c1Spanner(B._in, { x: 110, y: -330, o: 0 });
+    ham.setAttribute('data-mark', 'skills'); spn.setAttribute('data-mark', 'strat');
+    // each tool: appears on its word and drops in; falls through the hole; comes back once the box is fixed. One clock.
+    const toolY = (t, ta) => {
+      const th = m('hole', .3), tf = m('fix', .4);
+      if (t < th) { const u = out(mmU(t, ta + .3, .6)); return [mmU(t, ta, .25), -330 + 170 * u, 0]; }
+      if (t < tf) { const u = mmU(t, th, .9); return [1 - mmU(t, th + .5, .4), -160 + 520 * u * u, 30 * u]; }
+      const u = out(mmU(t, tf, .7)); return [mmU(t, tf, .25), -330 + 170 * u, 0];
+    };
+    mmClock(D, t => {
+      [[ham, m('skills'), -110], [spn, m('strat'), 110]].forEach(([e, ta, x]) => { const [o, y, r] = toolY(t, ta); put(e, { o, y, x, r: x < 0 ? -r : r }); });
+    });
+    mmSay(m, p, L('skillsL'), 'skills', { x: 640, y: 230, size: 32, fill: MM.heard, anchor: 'end' });
+    mmSay(m, p, L('stratL'), 'strat', { x: 960, y: 230, size: 32, fill: MM.heard, anchor: 'start' });
+    const oc = mmChip(p, L('outerL'), MM.heard, { x: 800, y: 110, size: 30 });
+    mmCue(m, oc, 'outer', 'pop');
+    tw(B._glow, { o: .7 }, m('inner'), .6);
+    mmSay(m, p, L('innerL'), 'inner', { x: 1120, y: 560, size: 34, fill: MM.gold, font: SERIF, weight: 600, anchor: 'start' });
+    mmCue(m, c1ChipL(p, L('innergL'), MM.gold, 1120, 625, { size: 30, solid: true }), 'innerg', 'pop');
+    mmCue(m, B._hole, 'hole', 'pop');
+    const hl = mmSay(m, p, L('holeL'), 'hole', { x: 480, y: 700, size: 32, fill: MM.bad, anchor: 'end' });
+    hide(B._hole, m('fix', .3), .3);
+    mmCue(m, B._patch, 'fix', 'pop');
+    hide(hl, m('fix'), .3);
+    mmSay(m, p, L('fixL'), 'fix', { x: 480, y: 760, size: 32, fill: MM.good, anchor: 'end' });
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    const B = c1Toolbox(p, { x: 800, y: 330, s: .8, o: 0 });
+    show(B, .1, .5);
+    c1Hammer(B._in, { x: -110, y: -160 }); c1Spanner(B._in, { x: 110, y: -160 });
+    put(B._patch, { o: 1 });
+  }, { ask: done => quiz(BAND, [{ id: 'c-toolbox', prompt: [L('q2p')], build: grid([
+    { parts: [L('q2r1')], ans: ['t'], why: L('q2w1') },
+    { parts: [L('q2r2')], ans: ['b'], why: L('q2w2') },
+    { parts: [L('q2r3')], ans: ['t'], why: L('q2w3') },
+    { parts: [L('q2r4')], ans: ['b'], why: L('q2w4') },
+  ], [['t', L('q2t'), MM.heard, '1'], ['b', L('q2b'), MM.gold, '2']], { multi: false, text: true }) }], done) }],
+
+  ['law', 'b_law', (m, D) => {
+    const p = panel(0);
+    const tab = G(p, { x: 300, y: 470 });
+    put(tab, { o: 0 }); tw(tab, { o: 1 }, .1, .5);
+    path(tab, 'M-200 -260Q-200 -320 -140 -320H140Q200 -320 200 -260V280H-200Z', { fill: '#3a3d40', stroke: '#8a8f92', 'stroke-width': 4 });
+    path(tab, 'M-170 -240H170', { stroke: '#55595c', 'stroke-width': 3 });
+    const cl = mmSay(m, tab, L('nothingL'), 'nothing', { x: 0, y: -180, size: 34, fill: MM.ink, font: SERIF, weight: 600, maxW: 330, para: true });
+    const stp = G(tab, { x: 0, y: 180, r: -12 });
+    path(stp, mmBoxD(240, 100, 14), { fill: 'none', stroke: MM.bad, 'stroke-width': 7 });
+    mmText(stp, L('lawL'), { x: 0, y: 20, size: 56, fill: MM.bad, weight: 700, maxW: 210 });
+    mmCue(m, stp, 'law', 'pop');
+    tw(tab, { o: .35 }, m('sci'), .6);
+    const card = mmSci(p, { x: 560, y: 70, w: 980, h: 800, title: L('sci') });
+    mmCue(m, card, 'sci', 'rise', { dy: 30 });
+    mmCue(m, c1ChipL(card, L('notshownL'), MM.bad, 52, 135, { size: 28, solid: true }), 'notshown', 'pop');
+    const sx = c1ChipL(card, L('storyxL'), MM.gold, 52, 235, { size: 28 });
+    mmCue(m, sx, 'storyx', 'pop');
+    const lt = c1ChipL(card, L('lettersL'), MM.gold, 52 + sx._w + 24, 235, { size: 28 });
+    mmCue(m, lt, 'letters', 'pop');
+    // envelopes drift in behind the letters chip, one clock
+    const env = [0, 1, 2].map(i => { const g = G(card, { o: 0 }); path(g, 'M-26 -18H26V18H-26ZM-26 -18L0 4L26 -18', { fill: '#e9e0c8', stroke: MM.gold, 'stroke-width': 2 }); return g; });
+    const ex = 52 + sx._w + 24 + lt._w + 50;
+    mmClock(D, t => env.forEach((g, i) => { const u = out(mmU(t, m('letters') + .2 + i * .25, .5)); put(g, { o: u, x: ex + i * 40, y: 235 - 30 * (1 - u) }); }));
+    env[0].setAttribute('data-mark', 'letters');
+    c1Row(m, card, 'q', L('anecL'), 'anec', 330);
+    c1Row(m, card, 'no', L('compareL'), 'compare', 410);
+    c1Row(m, card, 'no', L('didntL'), 'didnt', 490);
+    mmSay(m, card, L('outermL'), 'outerm', { x: 52, y: 600, size: 30, fill: MM.heard, anchor: 'start', maxW: 880 });
+    let cx = 52;
+    ['c1', 'c2', 'c3', 'c4'].forEach(k => { const c = c1ChipL(card, L(k + 'L'), MM.heard, cx, 670, { size: 28 }); cx += c._w + 18; mmCue(m, c, k, 'pop'); });
+    mmCue(m, c1ChipL(card, L('bothgL'), MM.good, 52, 750, { size: 30, solid: true }), 'both', 'pop');
+  }],
+
+  ['unlearn', 'b_unlearn', (m, D) => {
+    const p = panel(0);
+    const sc = G(p); put(sc, { o: 0 }); tw(sc, { o: 1 }, .1, .5);
+    c1Wall(sc, 760);
+    path(sc, 'M620 760H1260', { stroke: MM.wood, 'stroke-width': 12 });
+    const Gl = c1Glass(p, { x: 940, y: 754 });
+    const lw = mmSay(m, p, L('learnL'), 'learn', { x: 330, y: 300, size: 50, fill: MM.dim, font: SERIF, weight: 600 });
+    const stk = path(p, 'M200 290H460', { stroke: MM.bad, 'stroke-width': 5 }, { d: 0 });
+    stk.setAttribute('data-mark', 'unlearn'); draw(stk, m('unlearn', .2), .4);
+    mmSay(m, p, L('unlearnL'), 'unlearn', { x: 330, y: 410, size: 58, fill: MM.goldHi, font: SERIF, weight: 600, how: 'pop', maxW: 520 });
+    mmSay(m, p, L('sulL'), 'sulaimani', { x: 940, y: 820, size: 30, fill: MM.ink, maxW: 400 });
+    // the kettle comes in on "fresh" and tips; the stream, level and spill all come from one clock
+    const kw = G(p, { x: 1180, y: 250 });
+    mmCue(m, kw, 'fresh', 'fade', { dur: .3 });
+    const kt = G(kw);
+    path(kt, 'M-60 40V-30Q-60 -60 0 -60Q60 -60 60 -30V40Z', { fill: '#7a7468', stroke: MM.goldHi, 'stroke-width': 2 });
+    path(kt, 'M-60 -10Q-100 -10 -116 -40', { stroke: '#7a7468', 'stroke-width': 10 });
+    path(kt, 'M30 -40Q90 -40 70 20', { stroke: '#7a7468', 'stroke-width': 8, fill: 'none' });
+    mmSay(m, p, L('freshL'), 'fresh', { x: 1290, y: 360, size: 30, fill: MM.goldHi, anchor: 'start', off: .1 });
+    const stream = path(p, 'M0 0', { stroke: '#b8641e', 'stroke-width': 7, fill: 'none', opacity: .9 });
+    const drops = [0, 1, 2, 3].map(() => mmDot(p, 0, 0, 7, '#b8641e', 0));
+    const pud = put(mk('ellipse', { cx: 0, cy: 0, rx: 1, ry: 1, fill: '#b8641e', opacity: .7 }, p), { x: 1060, y: 758 });
+    const tf = m('fresh', .3), te = m('empty'), tr = te + 1.6;
+    const pourOn = t => (t > tf + .4 && t < te) || (t > tr && t < tr + 1.6);
+    mmClock(D, t => {
+      const tip = Math.max(io(mmU(t, tf, .4)) * (1 - io(mmU(t, te - .3, .3))), io(mmU(t, tr - .4, .4)) * (1 - io(mmU(t, tr + 1.6, .4))));
+      put(kt, { r: -40 * tip });
+      const on = pourOn(t);
+      const sx = 1180 - 116 * Math.cos(40 * tip * Math.PI / 180) + 10, sy = 250 - 40 + 70 * tip;
+      stream.setAttribute('d', on ? `M${sx.toFixed(1)} ${sy.toFixed(1)}Q${(sx - 60).toFixed(1)} ${(sy + 60).toFixed(1)} 960 480` : 'M0 0');
+      let lv = 290;
+      if (t > te) lv = 290 - 150 * io(mmU(t, te, 1));
+      if (t > tr) lv = 140 + 140 * io(mmU(t, tr, 1.5));
+      Gl._level(lv);
+      const spill = t > m('spills') && t < te + .6;
+      drops.forEach((d, i) => { const u = ((t - m('spills')) * .8 + i / 4) % 1; put(d, { x: 1032 + u * 18, y: 454 + u * 300, o: spill ? Math.sin(u * Math.PI) : 0 }); });
+      const pr = 60 * io(mmU(t, m('spills', .4), 2));
+      pud.setAttribute('rx', Math.max(1, pr).toFixed(1)); pud.setAttribute('ry', Math.max(1, pr * .18).toFixed(1));
+    });
+    mmSay(m, p, L('spillsL'), 'spills', { x: 1110, y: 700, size: 30, fill: MM.bad, anchor: 'start' });
+    mmSay(m, p, L('emptyL'), 'empty', { x: 330, y: 540, size: 34, fill: MM.ink, font: SERIF, italic: true, maxW: 560 });
+    mmSay(m, p, L('hereL'), 'here', { x: 330, y: 640, size: 32, fill: MM.gold, maxW: 560 });
+  }],
+
+  ['letgo', 'b_letgo', (m, D) => {
+    const p = panel(0);
+    const sc = G(p); put(sc, { o: 0 }); tw(sc, { o: 1 }, .1, .5);
+    mk('rect', { x: 0, y: 0, width: 1600, height: 820, fill: 'url(#mmDusk)' }, sc);
+    c1Floor(sc, 820);
+    const tree = G(sc, { x: 180, y: 820 });
+    path(tree, 'M0 0Q-20 -260 30 -560', { stroke: '#5a4a32', 'stroke-width': 26 });
+    ['M30 -560Q-80 -600 -160 -540', 'M30 -560Q140 -620 220 -560', 'M30 -560Q-10 -650 -80 -680', 'M30 -560Q90 -660 160 -660'].forEach(d => path(tree, d, { stroke: '#2f5a3a', 'stroke-width': 14 }));
+    const cw = G(p, { x: 960, y: 740 });
+    mmCue(m, cw, 'coconut', 'pop');
+    const Cn = c1Coconut(cw, {});
+    const mw = G(p);
+    mmCue(m, mw, 'monkey', 'fade', { dur: .5 });
+    const Mk = c1Monkey(mw, { x: 640, y: 820 });
+    // the arm: shoulder to hand, its length and the hand's grip from one clock
+    const arm = path(mw, 'M0 0', { stroke: '#7a5232', 'stroke-width': 16, fill: 'none' });
+    const open = G(mw), fist = G(mw);
+    mk('circle', { cx: 0, cy: 0, r: 13, fill: '#d6a77a' }, open);
+    path(open, 'M6 -10L20 -18M10 -2L24 -4M8 6L22 12', { stroke: '#d6a77a', 'stroke-width': 5 });
+    mk('circle', { cx: 0, cy: 0, r: 17, fill: '#d6a77a', stroke: '#a77a4a', 'stroke-width': 2 }, fist);
+    const tg = m('grabs'), ts = m('stuck'), tl = m('letgo');
+    mmClock(D, t => {
+      const tug = t > ts && t < tl ? Math.sin((t - ts) * 9) * 14 : 0;
+      const hop = io(mmU(t, tl + .5, .9));
+      const mx = 640 - 30 * mmU(t, ts, .3) * (1 - mmU(t, tl, .3)) + tug - 160 * hop, my = 820 - 60 * Math.sin(Math.PI * hop);
+      put(Mk, { x: mx, y: my });
+      const sx = mx + 40, sy = my - 100;
+      const hx = 945, hy = 700;
+      const reach = t < tl ? out(mmU(t, tg - .6, .6)) : 1 - io(mmU(t, tl + .2, .4));
+      const dx = hx - sx, dy = hy - sy;
+      const k = .25 + .75 * reach, ex = sx + dx * k, ey = sy + dy * k;
+      arm.setAttribute('d', `M${sx.toFixed(1)} ${sy.toFixed(1)}L${ex.toFixed(1)} ${ey.toFixed(1)}`);
+      const grip = t > tg && t < tl + .15;
+      put(open, { x: ex, y: ey, o: grip ? 0 : 1 }); put(fist, { x: ex, y: ey, o: grip ? 1 : 0 });
+      put(Cn._sweet, { o: grip ? 0 : 1 });
+      put(Cn, { x: tug * .5, r: tug * .4 });
+    });
+    const stl = mmSay(m, p, L('stuckL'), 'stuck', { x: 960, y: 590, size: 36, fill: MM.bad, font: SERIF, weight: 600 });
+    hide(stl, m('letgo', .3), .4);
+    mmSay(m, p, L('letgoL'), 'letgo', { x: 620, y: 470, size: 44, fill: MM.goldHi, font: SERIF, weight: 600, how: 'pop' });
+    const ow = c1ChipL(p, L('oldwaysL'), MM.dim, 1180, 300, { size: 30 });
+    mmCue(m, ow, 'oldways', 'pop');
+    c1Strike(p, ow, m('newways'), MM.dim);
+    mmCue(m, c1ChipL(p, L('newwaysL'), MM.good, 1180, 390, { size: 30, solid: true }), 'newways', 'pop');
+    const tk = [0, 1, 2, 3, 4].map(i => { const g = G(p, { x: 1200 + i * 50, y: 470, o: 0 }); path(g, 'M-12 0L-3 10L14 -12', { stroke: MM.good, 'stroke-width': 4.5 }); return g; });
+    tk[0].setAttribute('data-mark', 'results'); tk.slice(1).forEach(g => g.setAttribute('data-stagger', 'results'));
+    mmClock(D, t => tk.forEach((g, i) => put(g, { o: io(mmU(t, m('results') + .2 + i * .35, .25)) })));
+    mmSay(m, p, L('resultsL'), 'results', { x: 1180, y: 535, size: 28, fill: MM.good, anchor: 'start' });
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    const g = G(p, { o: 0 }); show(g, .1, .5);
+    c1Floor(g, 640);
+    const Cn = c1Coconut(g, { x: 900, y: 580, s: .75 }); put(Cn._sweet, { o: 0 });
+    c1Monkey(g, { x: 660, y: 640, s: .75 });
+    path(g, 'M690 565L882 548', { stroke: '#7a5232', 'stroke-width': 13 });
+    mk('circle', { cx: 886, cy: 548, r: 14, fill: '#d6a77a' }, g);
+  }, { ask: done => quiz(BAND, [{ id: 'c-letgo', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 1, L('q3y'), [L('q3na'), null, L('q3nc')]) }], done) }],
+
+  ['yourturn', 'b_yourturn', (m, D) => {
+    const p = panel(0);
+    const nb = G(p, { x: 80, y: 100 });
+    put(nb, { o: 0 }); tw(nb, { o: 1 }, .1, .5);
+    path(nb, 'M0 0H760V600H0Z', { fill: '#e9e0c8', stroke: MM.gold, 'stroke-width': 2 });
+    for (let i = 0; i < 9; i++) path(nb, `M20 ${110 + i * 56}H740`, { stroke: '#b8ad90', 'stroke-width': 1.5 });
+    const mid = path(nb, 'M380 30V580', { stroke: '#d08a7a', 'stroke-width': 3 }, { d: 0 });
+    draw(mid, .5, .8);
+    mmSay(m, nb, L('toolsL'), 'tools', { x: 190, y: 80, size: 32, fill: '#2a2318', font: SERIF, weight: 700, maxW: 330 });
+    const items = L('coursesI');
+    const it = items.map((s, i) => mmText(nb, '• ' + s, { x: 40, y: 166 + i * 56, size: 28, fill: '#2a2318', anchor: 'start', maxW: 320, o: 0 }));
+    it[0].setAttribute('data-mark', 'courses'); it.slice(1).forEach(e => e.setAttribute('data-stagger', 'courses'));
+    mmClock(D, t => it.forEach((e, i) => put(e, { o: io(mmU(t, m('courses') + i * .45, .3)) })));
+    mmSay(m, nb, L('thoughtsL'), 'thoughts', { x: 570, y: 80, size: 30, fill: '#2a2318', font: SERIF, weight: 700, maxW: 340 });
+    mmSay(m, nb, L('t1L'), 't1', { x: 400, y: 160, size: 27, fill: '#9c3b2b', anchor: 'start', font: SERIF, italic: true, maxW: 330, para: true });
+    mmSay(m, nb, L('t2L'), 't2', { x: 400, y: 280, size: 27, fill: '#9c3b2b', anchor: 'start', font: SERIF, italic: true, maxW: 330, para: true });
+    // one idea, four weeks of ticks
+    const pk = c1ChipL(p, L('pickL'), MM.gold, 930, 160, { size: 32, solid: true });
+    mmCue(m, pk, 'pick', 'pop');
+    const grid_ = G(p, { x: 960, y: 260 });
+    mmCue(m, grid_, 'weeks', 'fade');
+    const cells = [];
+    for (let w = 0; w < 4; w++) for (let d = 0; d < 7; d++) {
+      path(grid_, `M${d * 70} ${w * 80}h56v56h-56Z`, { fill: '#10171b', stroke: MM.goldLo, 'stroke-width': 2 });
+      const tk = G(grid_, { x: d * 70 + 28, y: w * 80 + 30, o: 0 }); path(tk, 'M-12 0L-3 10L14 -12', { stroke: MM.good, 'stroke-width': 4.5 });
+      cells.push(tk);
+    }
+    mmClock(D, t => cells.forEach((c, i) => put(c, { o: io(mmU(t, m('weeks', .3) + i * .1, .15)) })));
+    mmSay(m, p, L('weeksL'), 'weeks', { x: 1200, y: 600, size: 30, fill: MM.good });
+    mmCue(m, c1ChipL(p, L('judgeL'), MM.good, 930, 680, { size: 30 }), 'judge', 'pop');
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    const tt = stat(mmText(p, L('b_wrap'), { x: 200, y: 150, size: 54, font: SERIF, weight: 600, fill: MM.gold, anchor: 'start', o: 0 }));
+    show(tt, .2, .6);
+    const cols = [MM.sci, MM.lived, MM.gold, MM.good];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: 0, y: 290 + i * 150 });
+      mk('circle', { cx: 230, cy: -12, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 3 }, g);
+      T(g, String(i + 1), { x: 230, y: -1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = mmPara(g, L(k), { x: 290, y: 0, size: 36, maxW: 1100, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      mmCue(m, g, k, 'rise', { dy: 0 });
+      put(g, { x: -16 }); tw(g, { x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'What changed in Ajmal’s second try?',
+  q1a: 'He found a more exciting business idea', q1b: 'He committed to one business and questioned his old thoughts', q1c: 'He finished one more certificate course',
+  q1y: 'Right. Same man, same skills. What changed was his commitment and how he handled his own thoughts.',
+  q1na: 'Chasing the shinier idea was his old pattern. This time he stayed with one.',
+  q1nc: 'He already had plenty of certificates. The change was on the inside.',
+  q2p: 'Tool or toolbox? Sort each one.',
+  q2t: 'tool (outer game)', q2b: 'toolbox (inner game)',
+  q2r1: 'A sales script from a workshop', q2r2: 'The belief “money never stays with me”', q2r3: 'Excel and accounting skills', q2r4: 'Quitting whenever things get hard',
+  q2w1: 'A tool: a skill you can learn and use.', q2w2: 'Toolbox: a belief about yourself and money.',
+  q2w3: 'A tool: a learnable skill.', q2w4: 'Toolbox: a habit of thought that decides whether the tools get used.',
+  q3p: 'What is the coconut story really about?',
+  q3a: 'Monkeys are greedy animals', q3b: 'Holding on to old ways can keep us stuck; we have to let go to move on', q3c: 'Never trust a free sweet',
+  q3y: 'Yes. The monkey is free the moment it opens its fist. Old ways of thinking work the same way.',
+  q3na: 'It is not about monkeys. What keeps it stuck is its own grip.',
+  q3nc: 'The trap only works because the monkey won’t let go. The lesson is about our grip, not the sweet.',
+  p1p: 'Safa has done three online courses on starting a baking business, but hasn’t begun. Each time, she thinks: “I’m not ready yet.” Using this chapter, what is the most useful first move?',
+  p1a: 'Sign up for a fourth course', p1b: 'Notice the “not ready” thought, and test one small step for a few weeks', p1c: 'Wait until she feels fully confident',
+  p1y: 'Right. The tools are there. The work is on the toolbox: catch the thought, then test and track.',
+  p1na: 'More tools won’t help if the same thought stops her using them.', p1nc: 'Waiting for the feeling is how the “not ready” thought keeps winning.',
+  p2p: 'Two cousins take the same trading course in Sharjah. One profits, the other loses. What does the toolbox idea suggest?',
+  p2a: 'The course was useless', p2b: 'The difference may lie in what each brought inside: beliefs and habits', p2c: 'The winner simply got better tools',
+  p2y: 'Yes. Same tools, different toolboxes. Though skill, savings and luck can play a part too.',
+  p2na: 'One cousin profited, so the course wasn’t worthless to everyone.', p2nc: 'They got the very same tools. Look at what was different inside.',
+  p3p: 'A successful relative says: “Think like me and you’ll be rich too.” What is the fairest response?',
+  p3a: 'Copy everything he does', p3b: 'Learn from him, but remember people who thought the same way and failed are rarely heard from', p3c: 'Ignore him completely',
+  p3y: 'Right. Learn, but watch for survivorship bias: the successes speak, the failures stay quiet.',
+  p3na: 'That ignores everyone who thought the same and didn’t make it.', p3nc: 'He may have real lessons. The point is to weigh them fairly.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'Tracking your progress, especially in writing, helps people reach their goals.',
+  p4r2: 'On average, money courses have no effect at all.',
+  p4r3: 'Letters from happy students prove that a method works.',
+  p4r4: 'Intentions turn into action only about half the time.',
+  p4w1: 'True. A review of 138 studies found monitoring progress helps, more so when it is recorded.',
+  p4w2: 'False. They help a little on average, but the effect tends to fade over time.',
+  p4w3: 'False. Testimonials are anecdotes: no comparison group, and those it didn’t help rarely write.',
+  p4w4: 'True. Reviews of intention studies find people act on their intentions about half the time.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'അജ്മലിന്റെ രണ്ടാമത്തെ ശ്രമത്തിൽ എന്താണ് മാറിയത്?',
+  q1a: 'കൂടുതൽ ആവേശമുള്ള ഒരു ബിസിനസ് ആശയം കിട്ടി', q1b: 'ഒരൊറ്റ ബിസിനസിൽ ഉറച്ചുനിന്നു, പഴയ ചിന്തകളെ ചോദ്യം ചെയ്തു', q1c: 'ഒരു സർട്ടിഫിക്കറ്റ് കോഴ്സ് കൂടി പൂർത്തിയാക്കി',
+  q1y: 'ശരി. അതേ ആൾ, അതേ കഴിവുകൾ. മാറിയത് ഉറച്ച തീരുമാനവും സ്വന്തം ചിന്തകളെ കൈകാര്യം ചെയ്ത രീതിയുമാണ്.',
+  q1na: 'തിളക്കമുള്ള പുതിയ ആശയത്തിന് പിന്നാലെ പോകുന്നതായിരുന്നു പഴയ രീതി. ഇത്തവണ അവൻ ഒന്നിൽ നിന്നു.',
+  q1nc: 'സർട്ടിഫിക്കറ്റുകൾ ഇഷ്ടം പോലെ ഉണ്ടായിരുന്നു. മാറ്റം ഉള്ളിലായിരുന്നു.',
+  q2p: 'ഉപകരണമോ ടൂൾബോക്സോ? ഓരോന്നും തരംതിരിക്കൂ.',
+  q2t: 'ഉപകരണം (പുറത്തെ കളി)', q2b: 'ടൂൾബോക്സ് (ഉള്ളിലെ കളി)',
+  q2r1: 'ഒരു വർക്ക്ഷോപ്പിൽ നിന്ന് കിട്ടിയ സെയിൽസ് സ്ക്രിപ്റ്റ്', q2r2: '“എന്റെ കയ്യിൽ പണം നിൽക്കില്ല” എന്ന വിശ്വാസം', q2r3: 'എക്സലും അക്കൗണ്ടിംഗും അറിയാവുന്നത്', q2r4: 'ബുദ്ധിമുട്ട് വരുമ്പോഴെല്ലാം ഉപേക്ഷിക്കുന്ന ശീലം',
+  q2w1: 'ഉപകരണം: പഠിച്ച് ഉപയോഗിക്കാവുന്ന ഒരു കഴിവ്.', q2w2: 'ടൂൾബോക്സ്: തന്നെക്കുറിച്ചും പണത്തെക്കുറിച്ചുമുള്ള ഒരു വിശ്വാസം.',
+  q2w3: 'ഉപകരണം: പഠിക്കാവുന്ന കഴിവ്.', q2w4: 'ടൂൾബോക്സ്: ഉപകരണങ്ങൾ ഉപയോഗിക്കുമോ എന്ന് തീരുമാനിക്കുന്ന ഒരു ചിന്താശീലം.',
+  q3p: 'തേങ്ങയുടെ കഥ ശരിക്കും എന്തിനെക്കുറിച്ചാണ്?',
+  q3a: 'കുരങ്ങന്മാർ ആർത്തിയുള്ളവരാണ്', q3b: 'പഴയ രീതികളിൽ മുറുകെപ്പിടിച്ചാൽ നമ്മൾ കുടുങ്ങും; മുന്നോട്ട് പോകാൻ പിടി വിടണം', q3c: 'വെറുതെ കിട്ടുന്ന മധുരം ഒരിക്കലും വിശ്വസിക്കരുത്',
+  q3y: 'അതെ. മുഷ്ടി തുറക്കുന്ന നിമിഷം കുരങ്ങൻ സ്വതന്ത്രനാണ്. പഴയ ചിന്താരീതികളും അങ്ങനെതന്നെ.',
+  q3na: 'ഇത് കുരങ്ങനെക്കുറിച്ചല്ല. അതിനെ കുടുക്കുന്നത് സ്വന്തം പിടിയാണ്.',
+  q3nc: 'കുരങ്ങൻ പിടി വിടാത്തതുകൊണ്ട് മാത്രമാണ് കെണി ഫലിക്കുന്നത്. പാഠം നമ്മുടെ പിടിയെക്കുറിച്ചാണ്, മധുരത്തെക്കുറിച്ചല്ല.',
+  p1p: 'ബേക്കിംഗ് ബിസിനസ് തുടങ്ങാൻ സഫ മൂന്ന് ഓൺലൈൻ കോഴ്സുകൾ ചെയ്തു, പക്ഷേ ഇതുവരെ തുടങ്ങിയിട്ടില്ല. ഓരോ തവണയും അവൾ ചിന്തിക്കും: “ഞാൻ ഇനിയും റെഡിയായിട്ടില്ല.” ഈ അധ്യായം അനുസരിച്ച്, ഏറ്റവും ഉപകാരപ്രദമായ ആദ്യ നീക്കം?',
+  p1a: 'നാലാമതൊരു കോഴ്സിന് ചേരുക', p1b: '“റെഡിയായിട്ടില്ല” എന്ന ചിന്ത ശ്രദ്ധിച്ച്, ഒരു ചെറിയ പടി കുറച്ചാഴ്ച പരീക്ഷിക്കുക', p1c: 'പൂർണ്ണ ആത്മവിശ്വാസം വരുന്നതുവരെ കാത്തിരിക്കുക',
+  p1y: 'ശരി. ഉപകരണങ്ങൾ കയ്യിലുണ്ട്. പണി ടൂൾബോക്സിലാണ്: ചിന്തയെ പിടികൂടൂ, പിന്നെ പരീക്ഷിച്ച് കുറിച്ചുവെക്കൂ.',
+  p1na: 'അതേ ചിന്ത അവയെ ഉപയോഗിക്കാൻ സമ്മതിക്കുന്നില്ലെങ്കിൽ കൂടുതൽ ഉപകരണങ്ങൾ സഹായിക്കില്ല.', p1nc: 'ആ തോന്നലിനായി കാത്തിരിക്കുന്നതാണ് “റെഡിയായിട്ടില്ല” എന്ന ചിന്ത ജയിക്കുന്ന വഴി.',
+  p2p: 'രണ്ട് കസിൻസ് ഷാർജയിൽ ഒരേ ട്രേഡിംഗ് കോഴ്സ് ചെയ്യുന്നു. ഒരാൾക്ക് ലാഭം, മറ്റേയാൾക്ക് നഷ്ടം. ടൂൾബോക്സ് ആശയം എന്ത് സൂചിപ്പിക്കുന്നു?',
+  p2a: 'കോഴ്സ് ഉപയോഗമില്ലാത്തതായിരുന്നു', p2b: 'വ്യത്യാസം ഓരോരുത്തരും ഉള്ളിൽ കൊണ്ടുവന്നതിലാകാം: വിശ്വാസങ്ങളും ശീലങ്ങളും', p2c: 'ജയിച്ചയാൾക്ക് നല്ല ഉപകരണങ്ങൾ കിട്ടി',
+  p2y: 'അതെ. ഒരേ ഉപകരണങ്ങൾ, വ്യത്യസ്ത ടൂൾബോക്സുകൾ. എങ്കിലും കഴിവും സമ്പാദ്യവും ഭാഗ്യവും പങ്കുവഹിക്കാം.',
+  p2na: 'ഒരാൾക്ക് ലാഭം കിട്ടി, അതുകൊണ്ട് കോഴ്സ് എല്ലാവർക്കും ഉപയോഗശൂന്യമായിരുന്നില്ല.', p2nc: 'അവർക്ക് കിട്ടിയത് ഒരേ ഉപകരണങ്ങളാണ്. ഉള്ളിലെ വ്യത്യാസം നോക്കൂ.',
+  p3p: 'വിജയിച്ച ഒരു ബന്ധു പറയുന്നു: “എന്നെപ്പോലെ ചിന്തിച്ചാൽ നീയും പണക്കാരനാകും.” ഏറ്റവും ന്യായമായ പ്രതികരണം?',
+  p3a: 'അദ്ദേഹം ചെയ്യുന്നതെല്ലാം അതേപടി പകർത്തുക', p3b: 'അദ്ദേഹത്തിൽ നിന്ന് പഠിക്കുക, പക്ഷേ അതേപോലെ ചിന്തിച്ച് പരാജയപ്പെട്ടവരെ നമ്മൾ കേൾക്കാറില്ലെന്ന് ഓർക്കുക', p3c: 'അദ്ദേഹത്തെ പൂർണ്ണമായി അവഗണിക്കുക',
+  p3y: 'ശരി. പഠിക്കൂ, പക്ഷേ സർവൈവർഷിപ്പ് ബയസ് ശ്രദ്ധിക്കൂ: വിജയങ്ങൾ സംസാരിക്കും, പരാജയങ്ങൾ നിശ്ശബ്ദമായിരിക്കും.',
+  p3na: 'അതേപോലെ ചിന്തിച്ച് വിജയിക്കാത്ത എല്ലാവരെയും അത് മറക്കുന്നു.', p3nc: 'അദ്ദേഹത്തിന് ശരിക്കുള്ള പാഠങ്ങൾ ഉണ്ടാകാം. ന്യായമായി തൂക്കിനോക്കുകയാണ് വേണ്ടത്.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'പുരോഗതി ശ്രദ്ധിക്കുന്നത്, പ്രത്യേകിച്ച് എഴുതിവെക്കുന്നത്, ലക്ഷ്യത്തിലെത്താൻ സഹായിക്കുന്നു.',
+  p4r2: 'ശരാശരി, പണ കോഴ്സുകൾക്ക് ഒരു ഫലവുമില്ല.',
+  p4r3: 'സന്തുഷ്ടരായ വിദ്യാർത്ഥികളുടെ കത്തുകൾ ഒരു രീതി ഫലിക്കുമെന്ന് തെളിയിക്കുന്നു.',
+  p4r4: 'ഉദ്ദേശ്യങ്ങൾ പ്രവൃത്തിയാകുന്നത് ഏകദേശം പകുതി തവണ മാത്രം.',
+  p4w1: 'ശരി. 138 പഠനങ്ങളുടെ ഒരു അവലോകനം പറയുന്നത്, പുരോഗതി ശ്രദ്ധിക്കുന്നത് സഹായിക്കും, എഴുതിവെച്ചാൽ കൂടുതൽ.',
+  p4w2: 'തെറ്റ്. ശരാശരി കുറച്ചൊക്കെ സഹായിക്കും, പക്ഷേ ആ ഫലം കാലക്രമേണ മങ്ങും.',
+  p4w3: 'തെറ്റ്. സാക്ഷ്യങ്ങൾ അനുഭവകഥകളാണ്: താരതമ്യ ഗ്രൂപ്പില്ല, ഫലം കിട്ടാത്തവർ എഴുതാറില്ല.',
+  p4w4: 'ശരി. പഠനങ്ങളുടെ അവലോകനങ്ങൾ പ്രകാരം ആളുകൾ ഉദ്ദേശ്യം നടപ്പാക്കുന്നത് ഏകദേശം പകുതി തവണയാണ്.',
+});
+const PRACTICE = [
+  { id: 'p-ready', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 1, L('p1y'), [L('p1na'), null, L('p1nc')]) },
+  { id: 'p-cousins', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 1, L('p2y'), [L('p2na'), null, L('p2nc')]) },
+  { id: 'p-uncle', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 1, L('p3y'), [L('p3na'), null, L('p3nc')]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['f'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['t'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'mm-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('mm:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'mm-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (ML ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+mmDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '500 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '500 30px "Noto Serif Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit', '600 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>

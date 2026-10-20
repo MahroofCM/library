@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080c0f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="The Money Thermostat · Secrets of the Millionaire Mind, Chapter 6">
+<meta property="og:description" content="An animated, narrated lesson in English and Malayalam: why money drifts back to the same level, what really causes it, and how to change the setting. With plain science checks.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/ch06/">
+<meta name="twitter:card" content="summary_large_image">
+<title>The Money Thermostat · Secrets of the Millionaire Mind</title>
+<meta name="description" content="Chapter 6 of a YMU study of Secrets of the Millionaire Mind: the money thermostat, reading your results fairly, and noticing your thoughts. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('mm:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('mm:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'പണത്തിന്റെ തെർമോസ്റ്റാറ്റ് · Secrets of the Millionaire Mind';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/mm.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/secrets-millionaire-mind/ch06/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'The Money Thermostat', kicker: 'PART ONE · CHAPTER 6', sub: 'Why money drifts back to the same level, and how to change the setting',
+  credit: 'A YMU study of Secrets of the Millionaire Mind by T. Harv Eker',
+  b_intro: 'Title', b_settings: 'Your settings', b_faisal: 'Faisal’s years', b_luck: 'Luck or setting?', b_q1: 'Quick check',
+  b_thermo: 'The thermostat', b_reset: 'Reset it', b_nasar: 'Nasar', b_business: 'Skills matter', b_invest: 'Save or spend',
+  b_funds: 'Picking winners', b_q2: 'Quick check', b_couple: 'Partners', b_results: 'Read your results', b_aware: 'Awareness',
+  b_recorder: 'The recorder', b_thoughts: 'Investment or cost', b_q3: 'Quick check', b_yourturn: 'Your turn', b_wrap: 'Summary',
+  b_prac: 'Chapter practice', b_fin: 'Finished',
+  sci: 'Science check',
+  successL: 'success', struggleL: 'struggle', steadyL: 'steady', updownL: 'up and down', rangeL: 'a set range',
+  r1L: 'AED 50,000', r2L: 'AED 200,000', r3L: 'AED 500,000', potentialL: 'your full potential?',
+  faisalL: 'Faisal · Deira', usualL: 'about AED 90,000', jumpL: 'AED 200,000', orderL: '200 screens', slumpL: 'slump', yearL: 'year',
+  settingQ: 'his setting?', aedK: 'income, AED',
+  partlyL: 'Partly true', bandL: 'Incomes do tend to stay within a band.', rtmL: 'Regression to the mean',
+  cite1: 'Barnett, van der Pols & Dobson, International Journal of Epidemiology, 2005',
+  luckL: 'luck', luckRow: 'A record year usually has some luck in it.', fallsRow: 'Next year the luck doesn’t repeat, so the number falls back.',
+  outsideRow: 'Outside things move income too: the market, the employer, health.', normalRow: 'A dip after a peak is ordinary, not proof of a hidden setting.',
+  doorL: 'balcony door', rushL: 'hot air', setL: 'SET 24°', kicksL: 'AC kicks in', settingL: 'The setting decides where the room ends up.',
+  augL: 'Dubai · August',
+  fanL: 'fanning harder', doorsL: 'opening and closing doors', resetL: 'reset', set21L: 'SET 21°', t21L: '21°', settlesL: 'settles, and stays',
+  salesL: 'sales', marketingL: 'marketing', propertyL: 'property', sharesL: 'shares', toolsL: 'good tools', innerL: 'inner setting',
+  leakL: 'leaks away', personL: 'grow the person',
+  nasarL: 'Nasar · Sharjah', mentorL: 'mentor', flatL: 'AED 400,000 a year', profitL: 'profit', whyL: 'Why not double it?',
+  raisesL: 'raises his sights', branchL: 'Ajman branch', buildsL: 'a classroom block for an orphanage',
+  bookClaim: 'In the book: blueprint, not skills or timing', overL: 'Overstated',
+  mgmtRow: 'Teaching better management practices worked.', cite2: 'Bloom and colleagues, textile firms in India, Quarterly Journal of Economics, 2013',
+  textileL: 'textile firms · India', beforeL: 'before', afterL: 'after', pctL: '+17% productivity',
+  skillsRow: 'Skills matter.', marketsRow: 'Markets and luck matter.', useRow: 'A bigger mindset helps you use them. It doesn’t replace them.',
+  saveL: 'save', spendL: 'spend', manageL: 'manage well', slipL: 'let it slip', winnersL: 'winners', losersL: 'losers',
+  basheerL: 'Basheer · Kozhikode', dropsL: 'every share drops', oppositeL: 'friends do the opposite',
+  mostlyNot: 'Mostly not', everyoneRow: 'Picking winners is hard for everyone, professionals included.',
+  nineL: 'about 9 in 10 large US funds did worse over 15 years', indexL: 'simple index fund',
+  cite3: 'S&P Dow Jones Indices, SPIVA U.S. Scorecard, year-end 2024: 89.5% of large-cap funds behind the S&P 500 over 15 years',
+  boringRow: 'He may need a boring plan, and fewer tips.',
+  matchL: 'partners match?', partlyL2: 'Partly', eduRow: 'Couples often share education and background, which shapes household income.',
+  cite4: 'Greenwood and colleagues, “Marry Your Like”, NBER, 2014',
+  whereRow: 'That comes from where we meet, study and work.', magnetRow: 'Not from a hidden money magnet.', learnRow: 'Couples can learn new money habits together.',
+  lookL: 'Look at your results.', bankL: 'bank balance', incomeL: 'income', ownL: 'what you own and owe', keepL: 'does it stay, or slip away?',
+  clueL: 'Results are a clue', startedRow: 'They also show where you started.',
+  oneL: 'Poorest fifth of families: about 1 in 11 children reached the top fifth', threeL: 'Richest fifth: about 1 in 3',
+  oppRow: 'That gap is opportunity, not a hidden setting.', cite5: 'Chetty, Hendren, Kline, Saez & Turner, NBER, 2014 · US children born 1971 to 1986',
+  awareL: 'Awareness', thoughtsL: 'thoughts', fearsL: 'fears', habitsL: 'habits', avoidL: 'what you avoid', autoL: 'autopilot',
+  noticeL: 'notice the thought', chooseL: 'choose, here and now', oldL: 'yesterday’s route',
+  recordingL: 'the recording', recorderL: 'You are the recorder.', stopL: 'stop', supportedL: 'Supported',
+  decentL: 'Decentering', cite6: 'Guo, Mindfulness, 2024 · review of 57 studies, 18,515 people',
+  fewerRow: 'Stepping back from thoughts is linked with fewer mental health problems.', modestRow: 'The link is modest, but real.',
+  invL: 'investment', costL: 'cost', t1L: 'I’m hopeless with money.', t2L: 'I can learn this.', opinionsL: 'opinions, handed down',
+  supportL: 'pick beliefs that support you',
+  y1: '“I’ll never catch up.”', y2: '“I can set aside 200 dirhams.”', y3: '“Rich people are just lucky.”', heartL: 'hand on heart',
+  decl1: 'I notice my thoughts, and I keep the ones that help me grow.', decl2: 'My setting can change, and I am changing it.',
+  w1: 'Your money blueprint works like a thermostat: results tend to drift back to its setting.',
+  w2: 'Part of that drift is statistics, luck and circumstance, so read your results fairly.',
+  w3: 'Lasting change means resetting the setting: beliefs, habits and skills together.',
+  w4: 'It starts with noticing your thoughts and choosing the ones that invest in you.',
+  partEnd: 'End of Part One', practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'പണത്തിന്റെ തെർമോസ്റ്റാറ്റ്', kicker: 'ഒന്നാം ഭാഗം · അധ്യായം 6', sub: 'പണം എന്തുകൊണ്ട് ഒരേ നിലയിലേക്ക് തിരിച്ചെത്തുന്നു, ആ സെറ്റിംഗ് എങ്ങനെ മാറ്റാം',
+  credit: 'ടി. ഹാർവ് എക്കറുടെ Secrets of the Millionaire Mind എന്ന പുസ്തകത്തിന്റെ YMU പഠനം',
+  b_intro: 'തലക്കെട്ട്', b_settings: 'നിങ്ങളുടെ സെറ്റിംഗുകൾ', b_faisal: 'ഫൈസലിന്റെ വർഷങ്ങൾ', b_luck: 'ഭാഗ്യമോ സെറ്റിംഗോ?', b_q1: 'ചെറിയ പരിശോധന',
+  b_thermo: 'തെർമോസ്റ്റാറ്റ്', b_reset: 'റീസെറ്റ്', b_nasar: 'നാസർ', b_business: 'കഴിവും പ്രധാനം', b_invest: 'സൂക്ഷിക്കുമോ ചെലവാക്കുമോ',
+  b_funds: 'ജയിക്കുന്ന ഷെയറുകൾ', b_q2: 'ചെറിയ പരിശോധന', b_couple: 'പങ്കാളികൾ', b_results: 'ഫലങ്ങൾ വായിക്കാം', b_aware: 'തിരിച്ചറിവ്',
+  b_recorder: 'റെക്കോർഡർ', b_thoughts: 'നിക്ഷേപമോ ചെലവോ', b_q3: 'ചെറിയ പരിശോധന', b_yourturn: 'നിങ്ങളുടെ ഊഴം', b_wrap: 'ചുരുക്കം',
+  b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  sci: 'ശാസ്ത്രീയ പരിശോധന',
+  successL: 'വിജയം', struggleL: 'കഷ്ടപ്പാട്', steadyL: 'സ്ഥിരം', updownL: 'കയറ്റിറക്കം', rangeL: 'ഒരു നിശ്ചിത പരിധി',
+  r1L: '50,000 ദിർഹം', r2L: '2 ലക്ഷം', r3L: '5 ലക്ഷം', potentialL: 'മുഴുവൻ കഴിവ്?',
+  faisalL: 'ഫൈസൽ · ദേര', usualL: 'ഏകദേശം 90,000 ദിർഹം', jumpL: '2 ലക്ഷം ദിർഹം', orderL: '200 ടിവി', slumpL: 'ഇടിവ്', yearL: 'വർഷം',
+  settingQ: 'അവന്റെ സെറ്റിംഗ്?', aedK: 'വരുമാനം, ദിർഹം',
+  partlyL: 'ഒരു ഭാഗം ശരി', bandL: 'വരുമാനം പലപ്പോഴും ഒരു പരിധിക്കുള്ളിൽ നിൽക്കാറുണ്ട്.', rtmL: 'റിഗ്രഷൻ ടു ദ മീൻ',
+  cite1: 'ബാർനെറ്റ്, വാൻ ഡെർ പോൾസ്, ഡോബ്സൺ, International Journal of Epidemiology, 2005',
+  luckL: 'ഭാഗ്യം', luckRow: 'റെക്കോർഡ് വർഷത്തിൽ സാധാരണ കുറച്ച് ഭാഗ്യവും ഉണ്ടാകും.', fallsRow: 'അടുത്ത വർഷം ആ ഭാഗ്യം ആവർത്തിക്കില്ല, സംഖ്യ താഴും.',
+  outsideRow: 'പുറത്തെ കാര്യങ്ങളും വരുമാനം മാറ്റും: മാർക്കറ്റ്, കമ്പനി, ആരോഗ്യം.', normalRow: 'കുതിപ്പിന് ശേഷമുള്ള ഇടിവ് സാധാരണമാണ്, ഒളിഞ്ഞ സെറ്റിംഗിന്റെ തെളിവല്ല.',
+  doorL: 'ബാൽക്കണി വാതിൽ', rushL: 'ചൂടുകാറ്റ്', setL: 'SET 24°', kicksL: 'എസി പണി തുടങ്ങുന്നു', settingL: 'മുറി എവിടെ നിൽക്കണമെന്ന് സെറ്റിംഗ് തീരുമാനിക്കുന്നു.',
+  augL: 'ദുബായ് · ഓഗസ്റ്റ്',
+  fanL: 'കൂടുതൽ വീശൽ', doorsL: 'വാതിൽ തുറന്നടയ്ക്കൽ', resetL: 'റീസെറ്റ്', set21L: 'SET 21°', t21L: '21°', settlesL: 'അവിടെ നിലയുറപ്പിക്കുന്നു',
+  salesL: 'സെയിൽസ്', marketingL: 'മാർക്കറ്റിംഗ്', propertyL: 'പ്രോപ്പർട്ടി', sharesL: 'ഷെയറുകൾ', toolsL: 'നല്ല ഉപകരണങ്ങൾ', innerL: 'ഉള്ളിലെ സെറ്റിംഗ്',
+  leakL: 'ചോർന്നുപോകുന്നു', personL: 'ആളെ വളർത്തൂ',
+  nasarL: 'നാസർ · ഷാർജ', mentorL: 'മെന്റർ', flatL: 'വർഷം 4 ലക്ഷം ദിർഹം', profitL: 'ലാഭം', whyL: 'എന്തുകൊണ്ട് ഇരട്ടിയാക്കിക്കൂടാ?',
+  raisesL: 'ലക്ഷ്യം ഉയർത്തുന്നു', branchL: 'അജ്മാൻ ബ്രാഞ്ച്', buildsL: 'യതീംഖാനയ്ക്ക് ഒരു ക്ലാസ്മുറി കെട്ടിടം',
+  bookClaim: 'പുസ്തകത്തിൽ: ബ്ലൂപ്രിന്റ് മാത്രം, കഴിവോ സമയമോ അല്ല', overL: 'അതിശയോക്തി',
+  mgmtRow: 'മെച്ചപ്പെട്ട മാനേജ്മെന്റ് രീതികൾ പഠിപ്പിച്ചത് ഫലിച്ചു.', cite2: 'ബ്ലൂമും സഹപ്രവർത്തകരും, ഇന്ത്യയിലെ ടെക്സ്റ്റൈൽ കമ്പനികൾ, Quarterly Journal of Economics, 2013',
+  textileL: 'ടെക്സ്റ്റൈൽ കമ്പനികൾ · ഇന്ത്യ', beforeL: 'മുൻപ്', afterL: 'ശേഷം', pctL: '+17% ഉൽപ്പാദനക്ഷമത',
+  skillsRow: 'കഴിവ് പ്രധാനമാണ്.', marketsRow: 'മാർക്കറ്റും ഭാഗ്യവും പ്രധാനമാണ്.', useRow: 'വലിയ മനോഭാവം അവ ഉപയോഗിക്കാൻ സഹായിക്കും. അവയ്ക്ക് പകരമാവില്ല.',
+  saveL: 'സൂക്ഷിക്കൽ', spendL: 'ചെലവാക്കൽ', manageL: 'നന്നായി കൈകാര്യം', slipL: 'കൈവിട്ടുപോകൽ', winnersL: 'ജയിക്കുന്നവ', losersL: 'തോൽക്കുന്നവ',
+  basheerL: 'ബഷീർ · കോഴിക്കോട്', dropsL: 'ഓരോ ഷെയറും ഇടിയും', oppositeL: 'കൂട്ടുകാർ നേരെ വിപരീതം ചെയ്യും',
+  mostlyNot: 'മിക്കവാറും അല്ല', everyoneRow: 'ജയിക്കുന്ന ഷെയറുകൾ കണ്ടെത്തുന്നത് എല്ലാവർക്കും ബുദ്ധിമുട്ടാണ്, പ്രൊഫഷണലുകൾക്ക് പോലും.',
+  nineL: 'അമേരിക്കയിലെ വലിയ ഫണ്ടുകളിൽ പത്തിൽ ഒമ്പതും 15 വർഷത്തിൽ പിന്നിലായി', indexL: 'ലളിതമായ ഇൻഡക്സ് ഫണ്ട്',
+  cite3: 'S&P Dow Jones Indices, SPIVA U.S. Scorecard, 2024 അവസാനം: 15 വർഷത്തിൽ 89.5% വലിയ ഫണ്ടുകളും S&P 500-ന് പിന്നിൽ',
+  boringRow: 'ഒരു ബോറടിപ്പിക്കുന്ന പ്ലാനും കുറച്ച് ടിപ്പുകളും മതിയാകും.',
+  matchL: 'പങ്കാളികൾ ഒത്തുപോകുമോ?', partlyL2: 'ഒരു ഭാഗം ശരി', eduRow: 'ദമ്പതികൾക്ക് പലപ്പോഴും സമാന വിദ്യാഭ്യാസവും പശ്ചാത്തലവും ഉണ്ടാകും, അത് കുടുംബ വരുമാനത്തെ സ്വാധീനിക്കും.',
+  cite4: 'ഗ്രീൻവുഡും സഹപ്രവർത്തകരും, “Marry Your Like”, NBER, 2014',
+  whereRow: 'അത് വരുന്നത് നമ്മൾ എവിടെ കണ്ടുമുട്ടുന്നു, പഠിക്കുന്നു, ജോലി ചെയ്യുന്നു എന്നതിൽ നിന്നാണ്.', magnetRow: 'ഒളിഞ്ഞിരിക്കുന്ന ഒരു പണ കാന്തത്തിൽ നിന്നല്ല.', learnRow: 'ദമ്പതികൾക്ക് ഒരുമിച്ച് പുതിയ പണശീലങ്ങൾ പഠിക്കാം.',
+  lookL: 'നിങ്ങളുടെ ഫലങ്ങൾ നോക്കൂ.', bankL: 'ബാങ്ക് ബാലൻസ്', incomeL: 'വരുമാനം', ownL: 'സ്വന്തമായതും കടവും', keepL: 'പണം നിൽക്കുന്നോ, ചോരുന്നോ?',
+  clueL: 'ഫലങ്ങൾ ഒരു സൂചനയാണ്', startedRow: 'നിങ്ങൾ എവിടെ നിന്ന് തുടങ്ങി എന്നതും അവയിൽ കാണാം.',
+  oneL: 'ഏറ്റവും പാവപ്പെട്ട അഞ്ചിലൊന്ന്: ഏകദേശം 11-ൽ 1 കുട്ടി മുകളിലെ അഞ്ചിലൊന്നിൽ എത്തി', threeL: 'ഏറ്റവും സമ്പന്നരായ അഞ്ചിലൊന്ന്: ഏകദേശം 3-ൽ 1',
+  oppRow: 'ആ വ്യത്യാസം അവസരങ്ങളുടേതാണ്, ഒളിഞ്ഞ സെറ്റിംഗിന്റേതല്ല.', cite5: 'ചെട്ടി, ഹെൻഡ്രൻ, ക്ലൈൻ, സേസ്, ടർണർ, NBER, 2014 · 1971 മുതൽ 1986 വരെ ജനിച്ച അമേരിക്കൻ കുട്ടികൾ',
+  awareL: 'തിരിച്ചറിവ്', thoughtsL: 'ചിന്തകൾ', fearsL: 'ഭയങ്ങൾ', habitsL: 'ശീലങ്ങൾ', avoidL: 'ഒഴിവാക്കുന്നവ', autoL: 'ഓട്ടോപൈലറ്റ്',
+  noticeL: 'ചിന്തയെ ശ്രദ്ധിക്കൂ', chooseL: 'ഇവിടെ, ഇപ്പോൾ തിരഞ്ഞെടുക്കൂ', oldL: 'ഇന്നലത്തെ വഴി',
+  recordingL: 'റെക്കോർഡിംഗ്', recorderL: 'നിങ്ങളാണ് റെക്കോർഡർ.', stopL: 'സ്റ്റോപ്പ്', supportedL: 'തെളിവുണ്ട്',
+  decentL: 'ഡീസെന്ററിംഗ്', cite6: 'ഗുവോ, Mindfulness, 2024 · 57 പഠനങ്ങൾ, 18,515 പേർ',
+  fewerRow: 'ചിന്തകളിൽ നിന്ന് പിന്നോട്ട് മാറുന്നത് കുറഞ്ഞ മാനസിക പ്രശ്നങ്ങളുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു.', modestRow: 'ബന്ധം മിതമാണ്, പക്ഷേ യഥാർത്ഥമാണ്.',
+  invL: 'നിക്ഷേപം', costL: 'ചെലവ്', t1L: 'എനിക്ക് പണം കൈകാര്യം ചെയ്യാൻ അറിയില്ല.', t2L: 'എനിക്ക് ഇത് പഠിക്കാം.', opinionsL: 'കൈമാറി വന്ന അഭിപ്രായങ്ങൾ',
+  supportL: 'താങ്ങിനിർത്തുന്ന വിശ്വാസങ്ങൾ',
+  y1: '“ഞാൻ ഒരിക്കലും കരകയറില്ല.”', y2: '“എനിക്ക് 200 ദിർഹം മാറ്റിവെക്കാം.”', y3: '“പണക്കാർക്ക് വെറും ഭാഗ്യമാണ്.”', heartL: 'കൈ നെഞ്ചിൽ',
+  decl1: 'ഞാൻ എന്റെ ചിന്തകളെ ശ്രദ്ധിക്കുന്നു, എന്നെ വളർത്തുന്നവയെ മാത്രം കൂടെ നിർത്തുന്നു.', decl2: 'എന്റെ സെറ്റിംഗ് മാറ്റാം, ഞാൻ അത് മാറ്റിക്കൊണ്ടിരിക്കുന്നു.',
+  w1: 'മണി ബ്ലൂപ്രിന്റ് ഒരു തെർമോസ്റ്റാറ്റ് പോലെയാണ്: ഫലങ്ങൾ അതിന്റെ സെറ്റിംഗിലേക്ക് തിരിച്ചുപോകാറുണ്ട്.',
+  w2: 'അതിൽ ഒരു ഭാഗം സ്റ്റാറ്റിസ്റ്റിക്സും ഭാഗ്യവും സാഹചര്യവുമാണ്, അതുകൊണ്ട് ഫലങ്ങളെ ന്യായമായി വായിക്കൂ.',
+  w3: 'സ്ഥിരമായ മാറ്റത്തിന് സെറ്റിംഗ് തന്നെ മാറ്റണം: വിശ്വാസവും ശീലവും കഴിവും ഒരുമിച്ച്.',
+  w4: 'അത് തുടങ്ങുന്നത് ചിന്തകളെ ശ്രദ്ധിച്ച്, നിങ്ങളിൽ നിക്ഷേപിക്കുന്നവ തിരഞ്ഞെടുക്കുന്നതിലാണ്.',
+  partEnd: 'ഒന്നാം ഭാഗം ഇവിടെ അവസാനിക്കുന്നു', practice: 'അധ്യായ പരിശീലനം',
+});
+Object.assign(TRANSLATIONS.ml, { hintMove: ' നീക്കൂ, ', hintChooseOrClick: ' തിരഞ്ഞെടുക്കൂ, അല്ലെങ്കിൽ തൊടൂ', helpChoose: 'ഉത്തരം തിരഞ്ഞെടുക്കൂ' });
+
+const CHAPTER = { number: 6, title: L('title'), minutes: ML ? 11 : 9, language: LANG };
+
+/* ---------- chapter helpers (prefix c6) ---------- */
+const stat = e => { e.setAttribute('data-static', '1'); return e; };
+const C6HOT = MM.lived, C6COOL = MM.heard;
+function c6Floor(p, y = 800) {
+  mk('rect', { x: 0, y, width: 1600, height: 900 - y, fill: MM.floor }, p);
+  path(p, `M0 ${y}H1600`, { stroke: MM.gold, 'stroke-width': 1.5, opacity: .25 });
+}
+// A row inside a science card: a tick, cross or dot and a wrapped line, left-anchored at (x, y). kind: 'ok' | 'no' | 'q'.
+function c6Row(m, card, kind, str, mark, y, { x = 52, maxW, size = 29 } = {}) {
+  const g = G(card, { x, y });
+  const col = kind === 'ok' ? MM.good : kind === 'no' ? MM.bad : MM.gold;
+  if (kind === 'ok') path(g, 'M-14 0L-4 10L14 -12', { stroke: col, 'stroke-width': 4.5 });
+  else if (kind === 'no') path(g, 'M-11 -11L11 11M11 -11L-11 11', { stroke: col, 'stroke-width': 4.5 });
+  else mmDot(g, 0, 0, 7, col);
+  const t = mmPara(g, str, { x: 34, y: 10, size, maxW: maxW || card._w - x - 70, anchor: 'start', weight: 400 });
+  g._h = t._h;
+  mmCue(m, g, mark, 'rise', { dy: 10 });
+  return g;
+}
+const c6Cite = (card, str, y, x = 86) => stat(mmText(card, str, { x, y, size: 20, fill: MM.dim, anchor: 'start', maxW: card._w - x - 30 }));
+// A chip whose left edge is at x.
+function c6ChipL(p, str, color, x, y, o = {}) { const c = mmChip(p, str, color, { ...o, x: 0, y }); put(c, { x: x + c._w / 2 }); return c; }
+function c6Strike(p, c, t, color = MM.bad) {
+  const x = st(c).x, y = st(c).y;
+  const s = path(p, `M${x - c._w / 2 - 6} ${y + 10}L${x + c._w / 2 + 6} ${y - 10}`, { stroke: color, 'stroke-width': 4 }, { d: 0 });
+  draw(s, t, .35);
+  return s;
+}
+// Thermostat dial: 16° to 32° over 270 degrees. ._ptr rotates (r in degrees); ._hub glows.
+const c6Ang = v => -135 + (v - 16) / 16 * 270;
+function c6Dial(p, { x = 0, y = 0, r = 160, v = 24, o = 1 } = {}) {
+  const g = G(p, { x, y, o });
+  mk('circle', { cx: 0, cy: 0, r, fill: '#10171b', stroke: MM.gold, 'stroke-width': 3 }, g);
+  mk('circle', { cx: 0, cy: 0, r: r - 16, fill: 'none', stroke: MM.faint, 'stroke-width': 1.5 }, g);
+  for (let k = 16; k <= 32; k++) {
+    const a = c6Ang(k) * Math.PI / 180, big = k % 4 === 0, r1 = r - 22, r2 = r1 - (big ? 22 : 10);
+    path(g, `M${(Math.sin(a) * r1).toFixed(1)} ${(-Math.cos(a) * r1).toFixed(1)}L${(Math.sin(a) * r2).toFixed(1)} ${(-Math.cos(a) * r2).toFixed(1)}`,
+      { stroke: k <= 22 ? C6COOL : k >= 27 ? C6HOT : MM.gold, 'stroke-width': big ? 3.5 : 2, opacity: big ? 1 : .7 });
+    if (big) stat(T(g, String(k), { x: Math.sin(a) * (r1 - 44), y: -Math.cos(a) * (r1 - 44) + r * .05, size: Math.max(18, r * .12), fill: MM.dim, font: SANS, anchor: 'middle' }));
+  }
+  g._ptr = G(g, { r: c6Ang(v) });
+  path(g._ptr, `M0 ${r * .14}L0 ${-r + 36}`, { stroke: MM.goldHi, 'stroke-width': Math.max(4, r * .035) });
+  g._hub = mk('circle', { cx: 0, cy: 0, r: r * .1, fill: MM.gold }, g);
+  return g;
+}
+// A two-way switch: left label (anchor end), a track with a knob, right label. pos(t) in -1..1 from the caller's clock.
+function c6Switch(p, { x, y, w = 180 }) {
+  const g = G(p, { x, y });
+  g._track = path(g, mmBoxD(w, 54, 27), { fill: '#0d1316', stroke: MM.faint, 'stroke-width': 2.5 });
+  g._knob = G(g);
+  g._knobC = mk('circle', { cx: 0, cy: 0, r: 22, fill: MM.dim }, g._knob);
+  g._w = w;
+  return g;
+}
+const c6Lerp = (a, b, q) => a + (b - a) * q;
+// Small person icon for population rows (about 46 px tall).
+function c6Fig(p, x, y, color) {
+  const g = G(p, { x, y });
+  mk('circle', { cx: 0, cy: -30, r: 10, fill: color }, g);
+  path(g, 'M-14 14V-6Q-14 -16 0 -16Q14 -16 14 -6V14Z', { fill: color });
+  return g;
+}
+// Head in profile facing left, about 460 px tall, centred near (0,0).
+const C6_HEAD = 'M70 230C70 190 76 160 96 140C150 100 168 40 160 -20C150 -120 70 -200 -30 -200C-140 -200 -200 -120 -196 -30C-194 10 -210 30 -222 54C-228 66 -218 74 -206 76C-206 96 -200 104 -196 108C-204 116 -200 128 -190 130C-194 150 -184 170 -150 168C-120 166 -100 170 -96 200V230';
+// Coin at (0,0).
+function c6Coin(p, r = 10) { const c = G(p, { o: 0 }); mk('circle', { cx: 0, cy: 0, r, fill: MM.gold, stroke: MM.goldHi, 'stroke-width': 2 }, c); return c; }
+// Faisal's income bars (AED thousands); chart drawn in stage coordinates.
+const C6BARS = [90, 92, 88, 200, 55, 90], C6BX = i => 830 + i * 110, C6BW = 76, C6BASE = 700, C6K = 1.8;
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    mmDefs();
+    const g = panel(0);
+    put(g, { o: 0 }); tw(g, { o: 1 }, .1, .6);
+    mmGlow(g, 800, 470, 400, 'Gold', .3);
+    const dl = c6Dial(g, { x: 800, y: 500, r: 300, v: 16, o: .22 });
+    mmClock(D, t => put(dl._ptr, { r: c6Ang(16 + 8 * io(mmU(t, m('title'), 1.8))) }));
+    stat(mmText(g, L('kicker'), { x: 800, y: 205, size: 26, fill: MM.gold, weight: 500, ls: ML ? undefined : '6' }));
+    mmSay(m, g, L('title'), 'title', { x: 800, y: 330, size: 92, font: SERIF, weight: 600, maxW: 1380, how: 'rise' });
+    mmSay(m, g, L('sub'), 'sub', { x: 800, y: 700, size: 38, fill: MM.dim, maxW: 1300, font: SERIF, italic: true, how: 'rise' });
+    const cr = stat(mmText(g, L('credit'), { x: 800, y: 790, size: 26, fill: '#6f6a5c', o: 0 }));
+    show(cr, m('sub', .45), .8);
+    tw(g, { o: 0 }, D - .6, .5);
+  }],
+
+  ['settings', 'b_settings', (m, D) => {
+    const p = panel(0);
+    const pn = G(p); put(pn, { o: 0 }); tw(pn, { o: 1 }, .1, .5);
+    // a wall control panel: three rows of controls
+    path(pn, 'M220 150H1380V760H220Z', { fill: '#0e1418', stroke: MM.gold, 'stroke-width': 2.5, 'stroke-opacity': .7 });
+    [[245, 175], [1355, 175], [245, 735], [1355, 735]].forEach(([x, y]) => mk('circle', { cx: x, cy: y, r: 6, fill: MM.goldLo }, pn));
+    mmDot(pn, 800, 190, 7, MM.gold);
+    const s1 = c6Switch(p, { x: 800, y: 290 }), s2 = c6Switch(p, { x: 800, y: 430 });
+    mmSay(m, p, L('successL'), 'success', { x: 670, y: 302, size: 40, fill: MM.good, anchor: 'end', font: SERIF, weight: 600, maxW: 400 });
+    mmSay(m, p, L('struggleL'), 'struggle', { x: 930, y: 302, size: 40, fill: MM.bad, anchor: 'start', font: SERIF, weight: 600, maxW: 400 });
+    mmSay(m, p, L('steadyL'), 'steady', { x: 670, y: 442, size: 40, fill: MM.gold, anchor: 'end', font: SERIF, weight: 600, maxW: 400 });
+    mmSay(m, p, L('updownL'), 'updown', { x: 930, y: 442, size: 40, fill: C6HOT, anchor: 'start', font: SERIF, weight: 600, maxW: 330 });
+    const zz = path(p, 'M1290 450L1310 420L1330 455L1350 410', { stroke: C6HOT, 'stroke-width': 4 }, { d: 0 });
+    mmCue(m, zz, 'updown', 'draw', { off: .2, dur: .5 });
+    // the knobs swing to each side as it is named, then rest in the middle (one clock)
+    const kpos = (t, a, b) => {
+      const ua = io(mmU(t, a, .45)), ub = io(mmU(t, b, .45)), uc = io(mmU(t, b + 1.4, .6));
+      return -ua + 2 * ub - uc;
+    };
+    mmClock(D, t => {
+      [[s1, 'success', 'struggle', MM.good, MM.bad], [s2, 'steady', 'updown', MM.gold, C6HOT]].forEach(([s, a, b, ca, cb]) => {
+        const q = kpos(t, m(a), m(b)), x = q * (s._w / 2 - 28);
+        put(s._knob, { x });
+        s._knobC.setAttribute('fill', q < -.05 ? mix(MM.dim, ca, -q) : q > .05 ? mix(MM.dim, cb, q) : MM.dim);
+      });
+    });
+    // the range slider: a knob that moves to each amount on its word
+    const sl = G(p, { x: 0, y: 610 });
+    const tr = path(sl, 'M380 0H1220', { stroke: MM.faint, 'stroke-width': 10 });
+    const gl = path(sl, 'M380 0H1220', { stroke: MM.gold, 'stroke-width': 10 }, { d: 0 });
+    mmSay(m, p, L('rangeL'), 'range', { x: 380, y: 560, size: 32, fill: MM.ink, anchor: 'start', font: SERIF, italic: true });
+    const RX = { r1: 470, r2: 800, r3: 1110 };
+    for (const k of ['r1', 'r2', 'r3']) {
+      path(sl, `M${RX[k]} -16V16`, { stroke: MM.dim, 'stroke-width': 3 });
+      mmSay(m, sl, L(k + 'L'), k, { x: RX[k], y: 62, size: 28, fill: MM.goldHi, maxW: 260 });
+    }
+    const kn = G(sl, { x: 380 }); mk('circle', { cx: 0, cy: 0, r: 20, fill: MM.goldHi, stroke: '#0b0e10', 'stroke-width': 3 }, kn);
+    mmCue(m, kn, 'range', 'pop');
+    mmClock(D, t => {
+      let x = 380;
+      x = c6Lerp(x, RX.r1, io(mmU(t, m('r1'), .5))); x = c6Lerp(x, RX.r2, io(mmU(t, m('r2'), .5))); x = c6Lerp(x, RX.r3, io(mmU(t, m('r3'), .5)));
+      x = c6Lerp(x, 1220, io(mmU(t, m('potential'), .9)));
+      put(kn, { x });
+      put(gl, { d: (x - 380) / 840 });
+    });
+    gl.setAttribute('data-stagger', 'range');
+    mmSay(m, p, L('potentialL'), 'potential', { x: 1220, y: 545, size: 32, fill: MM.goldHi, anchor: 'end', font: SERIF, weight: 600, off: .3 });
+  }],
+
+  ['faisal', 'b_faisal', (m, D) => {
+    const p = S.fp = panel(0);
+    // the shop: a wall of TVs, one big screen glowing
+    const shop = S.shop = G(p); put(shop, { o: 0 }); tw(shop, { o: 1 }, .1, .5);
+    mk('rect', { x: 40, y: 130, width: 660, height: 690, fill: MM.wall }, shop);
+    c6Floor(shop, 820);
+    path(shop, 'M40 130H700', { stroke: MM.gold, 'stroke-width': 2, opacity: .4 });
+    const scr = [];
+    [[90, 190, 170, 100], [290, 190, 170, 100], [490, 190, 170, 100], [90, 330, 250, 150], [370, 330, 290, 170]].forEach(([x, y, w, h]) => {
+      mk('rect', { x, y, width: w, height: h, rx: 6, fill: '#05080a', stroke: '#3a3830', 'stroke-width': 5 }, shop);
+      scr.push(mk('rect', { x: x + 8, y: y + 8, width: w - 16, height: h - 16, fill: C6COOL, opacity: .25 }, shop));
+    });
+    mmClock(D, t => scr.forEach((s, i) => s.setAttribute('opacity', (.18 + .14 * Math.sin(t * 1.3 + i * 1.7)).toFixed(3))));
+    mk('rect', { x: 60, y: 620, width: 620, height: 30, fill: MM.wood }, shop);
+    const F = mmPerson(shop, { kind: 'm', x: 360, y: 820, s: .82 });
+    mmBreathe(F, D); mmMood(F, 'calm', 0, .01);
+    mmSay(m, shop, L('faisalL'), 'faisal', { x: 360, y: 862, size: 26, fill: MM.dim });
+    // income bars, one clock: three usual years, the jump, the slump, back
+    const CH = S.chart = G(p);
+    path(CH, `M790 ${C6BASE}H1500M790 ${C6BASE}V250`, { stroke: MM.dim, 'stroke-width': 2 });
+    stat(mmText(CH, L('aedK'), { x: 800, y: 235, size: 22, fill: MM.dim, anchor: 'start' }));
+    stat(mmText(CH, L('yearL'), { x: 1500, y: 745, size: 22, fill: MM.dim, anchor: 'end' }));
+    const times = [m('usual'), m('usual', .3), m('usual', .45), m('jump'), m('slump'), m('back')];
+    const bars = S.bars = C6BARS.map((v, i) => {
+      const g = G(CH, { x: C6BX(i), y: C6BASE });
+      const r = mk('rect', { x: 0, y: 0, width: C6BW, height: 0, rx: 4, fill: i === 3 ? MM.goldHi : MM.gold }, g);
+      stat(mmText(g, String(i + 1), { x: C6BW / 2, y: 34, size: 24, fill: MM.dim }));
+      g._r = r; g._h = v * C6K;
+      put(g, { o: 0 });
+      return g;
+    });
+    bars[0].setAttribute('data-mark', 'usual'); bars[1].setAttribute('data-stagger', 'usual'); bars[2].setAttribute('data-stagger', 'usual');
+    bars[3].setAttribute('data-mark', 'jump'); bars[4].setAttribute('data-mark', 'slump'); bars[5].setAttribute('data-mark', 'back');
+    mmClock(D, t => bars.forEach((b, i) => {
+      const u = io(mmU(t, times[i], .55)), h = b._h * u;
+      put(b, { o: u > 0 ? 1 : 0 });
+      b._r.setAttribute('height', h.toFixed(1)); b._r.setAttribute('y', (-h).toFixed(1));
+    }));
+    mmSay(m, CH, L('usualL'), 'usual', { x: C6BX(1) + C6BW / 2, y: C6BASE - 90 * C6K - 22, size: 26, fill: MM.ink, off: .2 });
+    mmSay(m, CH, L('jumpL'), 'jump', { x: C6BX(3) + C6BW / 2, y: C6BASE - 200 * C6K - 20, size: 26, fill: MM.goldHi, off: .3 });
+    const od = c6ChipL(shop, L('orderL'), MM.goldHi, 470, 560, { size: 24 });
+    mmCue(m, od, 'jump', 'pop');
+    mmMood(F, 'smile', m('jump'), .3);
+    mmMood(F, 'sad', m('slump'), .3);
+    mmSay(m, CH, L('slumpL'), 'slump', { x: C6BX(4) + C6BW / 2, y: C6BASE - 55 * C6K - 20, size: 24, fill: MM.bad, off: .3 });
+    mmMood(F, 'calm', m('back'), .3);
+    // the book's reading: something pulls him back to a setting
+    const sy = C6BASE - 90 * C6K;
+    const sl = path(CH, `M790 ${sy}H1500`, { stroke: MM.gold, 'stroke-width': 2.5, 'stroke-dasharray': '10 8' }, { d: 0 });
+    mmCue(m, sl, 'pulls', 'draw', { dur: .6 });
+    mmSay(m, CH, L('settingQ'), 'pulls', { x: 1500, y: sy - 14, size: 26, fill: MM.gold, anchor: 'end', font: SERIF, italic: true });
+    const ar = path(CH, `M${C6BX(3) + C6BW + 8} ${C6BASE - 200 * C6K + 10}Q${C6BX(5) + 30} ${C6BASE - 210 * C6K} ${C6BX(5) + C6BW / 2} ${sy - 46}`, { stroke: MM.goldHi, 'stroke-width': 3 }, { d: 0 });
+    mmCue(m, ar, 'pulls', 'draw', { off: .2, dur: .6 });
+  }],
+
+  ['luck', 'b_luck', (m, D) => {
+    hide(S.shop, .1, .5);
+    tw(S.chart, { x: -680 }, .1, .8, io);
+    const card = S.card = mmSci(S.fp, { x: 900, y: 80, w: 660, h: 760, title: L('sci') });
+    mmCue(m, card, 'sci', 'fade');
+    mmCue(m, c6ChipL(card, L('partlyL'), MM.gold, 52, 125, { size: 28, solid: true }), 'partly', 'pop');
+    c6Row(m, card, 'ok', L('bandL'), 'band', 205);
+    mmSay(m, card, L('rtmL'), 'rtm', { x: 52, y: 320, size: 42, font: SERIF, weight: 600, anchor: 'start', fill: MM.ink, maxW: 580 });
+    const ci = c6Cite(card, L('cite1'), 356, 52); put(ci, { o: 0 }); show(ci, m('rtm', .4), .5);
+    // the record year splits: part usual, part luck
+    const sy = C6BASE - 90 * C6K;
+    const sl = G(S.chart, { x: C6BX(3), y: 0 });
+    mk('rect', { x: 0, y: C6BASE - 200 * C6K, width: C6BW, height: 110 * C6K, rx: 4, fill: '#f2d98a' }, sl);
+    for (let i = 0; i < 6; i++) path(sl, `M0 ${C6BASE - 200 * C6K + 20 + i * 30}L${C6BW} ${C6BASE - 200 * C6K + i * 30}`, { stroke: '#c9a84c', 'stroke-width': 4 });
+    mmText(sl, L('luckL'), { x: C6BW / 2, y: (sy + C6BASE - 200 * C6K) / 2 + 10, size: 26, fill: '#3a2a08', weight: 600, maxW: C6BW - 6 });
+    mmCue(m, sl, 'luck', 'fade');
+    c6Row(m, card, 'ok', L('luckRow'), 'luck', 435);
+    const fa = path(S.chart, `M${C6BX(3) + C6BW + 6} ${C6BASE - 200 * C6K}Q${C6BX(4) + 20} ${C6BASE - 190 * C6K} ${C6BX(4) + C6BW / 2} ${C6BASE - 55 * C6K - 44}`, { stroke: MM.bad, 'stroke-width': 3.5 }, { d: 0 });
+    mmCue(m, fa, 'falls', 'draw', { dur: .6 });
+    c6Row(m, card, 'q', L('fallsRow'), 'falls', 530);
+    c6Row(m, card, 'q', L('outsideRow'), 'outside', 625);
+    c6Row(m, card, 'no', L('normalRow'), 'normal', 720);
+    S.luckEls = [sl, fa];
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    hide(S.card, .1, .4);
+    S.luckEls.forEach(e => hide(e, .1, .4));
+    tw(S.chart, { x: -380, y: -170 }, .1, .7, io);
+  }, { ask: done => {
+    const items = S.bars.map((b, i) => ({ el: b, box: [C6BX(i) - 380 - 8, C6BASE - 170 - b._h - 8, C6BW + 16, b._h + 16], label: L('yearL') + ' ' + (i + 1) }));
+    quiz(BAND, [{ id: 'c-luck', prompt: [L('q1p')], build: pickEls(items, 3, L('q1y'), [L('q1nu'), L('q1nu'), L('q1nu'), null, L('q1ns'), L('q1nb')]) }], done);
+  } }],
+
+  ['thermo', 'b_thermo', (m, D) => {
+    const p = panel(0);
+    const room = G(p); put(room, { o: 0 }); tw(room, { o: 1 }, .1, .5);
+    mk('rect', { x: 0, y: 0, width: 1600, height: 800, fill: MM.wall }, room);
+    c6Floor(room, 800);
+    stat(mmText(room, L('augL'), { x: 60, y: 70, size: 26, fill: MM.dim, anchor: 'start' }));
+    // balcony door: hot outside, a fixed pane and a sliding pane
+    mk('rect', { x: 110, y: 250, width: 320, height: 550, fill: '#3a2414' }, room);
+    mmGlow(room, 300, 360, 170, 'Warm', .9);
+    [[130, 120], [200, 180], [260, 90], [330, 150], [380, 110]].forEach(([x, h]) => mk('rect', { x, y: 800 - h - 140, width: 46, height: h, fill: '#21160d' }, room));
+    path(room, 'M110 660H430', { stroke: '#5a4a32', 'stroke-width': 6 });
+    const slide = G(room);
+    mk('rect', { x: 270, y: 250, width: 160, height: 550, fill: '#1a2a33', opacity: .88, stroke: '#4a5a60', 'stroke-width': 6 }, slide);
+    path(slide, 'M290 300L330 260', { stroke: '#cfe6f5', 'stroke-width': 3, opacity: .25 });
+    mk('rect', { x: 110, y: 250, width: 160, height: 550, fill: '#1a2a33', opacity: .92, stroke: '#4a5a60', 'stroke-width': 6 }, room);
+    path(room, 'M130 300L170 260', { stroke: '#cfe6f5', 'stroke-width': 3, opacity: .25 });
+    path(room, 'M104 244H436V800', { stroke: MM.wood, 'stroke-width': 10 });
+    tw(slide, { x: -150 }, m('door'), .9, io);
+    tw(slide, { x: 0 }, m('close'), .9, io);
+    mmSay(m, p, L('doorL'), 'door', { x: 270, y: 225, size: 28, fill: MM.ink });
+    // AC unit
+    const ac = G(room, { x: 1250, y: 170 });
+    path(ac, mmBoxD(400, 110, 16), { fill: '#d9d4c8', stroke: MM.gold, 'stroke-width': 2, 'stroke-opacity': .5 });
+    for (let i = 0; i < 4; i++) path(ac, `M-170 ${18 + i * 8}H170`, { stroke: '#8f8a80', 'stroke-width': 2 });
+    const led = mmDot(ac, 160, -30, 6, MM.dim);
+    // person by the door
+    const W = mmPerson(p, { kind: 'f', x: 560, y: 800, s: .8 });
+    mmBreathe(W, D); mmMood(W, 'calm', 0, .01);
+    mmArm(W, -1, 50, 30, m('door'), .4); mmArm(W, -1, 0, 0, m('door', 1.1), .4);
+    mmMood(W, 'tense', m('thirty'), .4);
+    mmArm(W, -1, 50, 30, m('close'), .4); mmArm(W, -1, 0, 0, m('close', 1.1), .4);
+    mmMood(W, 'smile', m('back', .3), .4);
+    // the room temperature: one function of beat time drives the readout and the trace
+    const tSet = m('set'), tD = m('door', .4), t30 = m('thirty', .3), tK = m('kicks'), tB = m('back', .3);
+    const temp = t => 24 + 6 * io(mmU(t, tD, t30 - tD)) - 6 * io(mmU(t, tK, tB - tK));
+    const pnl = G(p, { x: 1420, y: 560 });
+    path(pnl, mmBoxD(230, 170, 18), { fill: '#10171b', stroke: MM.gold, 'stroke-width': 2.5 });
+    const num = mmText(pnl, '24°', { x: 0, y: 10, size: 72, fill: MM.ink, weight: 600, font: '"Outfit",sans-serif' });
+    if (ML) num.setAttribute('font-size', 72);
+    mmText(pnl, L('setL'), { x: 0, y: 58, size: 24, fill: MM.gold, weight: 600, font: '"Outfit",sans-serif' });
+    mmCue(m, pnl, 'set', 'pop');
+    const gx0 = 560, gx1 = 1060, gy = v => 470 - (v - 22) * 24;
+    const gr = G(p);
+    mmCue(m, gr, 'set', 'fade');
+    path(gr, `M${gx0} ${gy(22)}H${gx1}M${gx0} ${gy(22)}V${gy(32)}`, { stroke: MM.dim, 'stroke-width': 2 });
+    path(gr, `M${gx0} ${gy(24)}H${gx1}`, { stroke: MM.gold, 'stroke-width': 2, 'stroke-dasharray': '8 8', opacity: .8 });
+    mmText(gr, '24°', { x: gx0 - 12, y: gy(24) + 8, size: 22, fill: MM.gold, anchor: 'end' });
+    mmText(gr, '30°', { x: gx0 - 12, y: gy(30) + 8, size: 22, fill: C6HOT, anchor: 'end', o: 1 });
+    const trace = path(gr, 'M0 0', { stroke: MM.goldHi, 'stroke-width': 4 });
+    let shown = '';
+    mmClock(D, t => {
+      const v = temp(t), s2 = Math.round(v) + '°';
+      if (s2 !== shown) { num.textContent = s2; shown = s2; }
+      num.setAttribute('fill', v > 25 ? mix(MM.ink, C6HOT, Math.min(1, (v - 25) / 4)) : MM.ink);
+      if (t < tSet) return trace.setAttribute('d', 'M0 0');
+      const n = Math.max(2, Math.ceil((t - tSet) / .1)), pts = [];
+      for (let i = 0; i <= n; i++) { const u = tSet + (t - tSet) * i / n; pts.push(`${(gx0 + (u - tSet) / (D - tSet) * (gx1 - gx0)).toFixed(1)} ${gy(temp(u)).toFixed(1)}`); }
+      trace.setAttribute('d', 'M' + pts.join('L'));
+      led.setAttribute('fill', t > tK && t < tB + 1.5 ? C6COOL : MM.dim);
+    });
+    // hot air in through the door, cool air from the AC (one clock)
+    const hot = [0, 1, 2, 3, 4].map(() => path(p, 'M0 0', { stroke: C6HOT, 'stroke-width': 4, opacity: 0 }));
+    const cool = [0, 1, 2, 3].map(() => path(p, 'M0 0', { stroke: C6COOL, 'stroke-width': 4, opacity: 0 }));
+    hot[0].setAttribute('data-mark', 'rush');
+    mmClock(D, t => {
+      const th = m('rush'), on = mmU(t, th, .3) * (1 - mmU(t, m('close'), .6));
+      hot.forEach((a, i) => {
+        const u = ((t - th) * .45 + i / 5) % 1, x = 300 + u * 520, y = 560 + i * 34;
+        a.setAttribute('d', `M${x.toFixed(1)} ${y}q20 -18 40 0t40 0t40 0`);
+        put(a, { o: t < th ? 0 : on * Math.sin(Math.max(0, u) * Math.PI) });
+      });
+      const tk = m('kicks'), on2 = mmU(t, tk, .3) * (1 - mmU(t, tB + 1.2, .8));
+      cool.forEach((a, i) => {
+        const u = ((t - tk) * .5 + i / 4) % 1, y = 250 + u * 200, x = 1090 + i * 70;
+        a.setAttribute('d', `M${x} ${y.toFixed(1)}q14 12 0 24t0 24`);
+        put(a, { o: t < tk ? 0 : on2 * Math.sin(Math.max(0, u) * Math.PI) });
+      });
+    });
+    const rl = mmSay(m, p, L('rushL'), 'rush', { x: 800, y: 520, size: 30, fill: C6HOT, off: .2 }); hide(rl, m('close', .4), .5);
+    mmSay(m, p, L('kicksL'), 'kicks', { x: 1030, y: 182, size: 28, fill: C6COOL, anchor: 'end', maxW: 330 });
+    mmSay(m, p, L('settingL'), 'setting', { x: 640, y: 135, size: 40, fill: MM.goldHi, font: SERIF, weight: 600, maxW: 820 });
+  }],
+
+  ['reset', 'b_reset', (m, D) => {
+    const p = panel(0);
+    const top = G(p);
+    const dl = c6Dial(top, { x: 330, y: 300, r: 175, v: 24 });
+    put(dl, { o: 0 }); tw(dl, { o: 1 }, .1, .5);
+    const rd24 = stat(mmText(top, L('setL'), { x: 330, y: 535, size: 30, fill: MM.gold, weight: 600, font: '"Outfit",sans-serif', o: 0 }));
+    show(rd24, .2, .4); hide(rd24, m('new'), .3);
+    const rd21 = mmSay(m, top, L('set21L'), 'new', { x: 330, y: 535, size: 30, fill: C6COOL, weight: 600, font: '"Outfit",sans-serif', off: .1 });
+    // the wrong fixes, crossed out
+    const c1 = c6ChipL(p, L('fanL'), MM.bad, 700, 200, { size: 30 }); mmCue(m, c1, 'fan', 'pop'); const k1 = c6Strike(p, c1, m('fan', .7));
+    const c2 = c6ChipL(p, L('doorsL'), MM.bad, 700, 300, { size: 30 }); mmCue(m, c2, 'doors', 'pop'); const k2 = c6Strike(p, c2, m('doors', .8));
+    [c1, c2, k1, k2].forEach(e => hide(e, m('reset'), .4));
+    // reset: the knob glows and turns to 21; the room settles there
+    const rc = c6ChipL(top, L('resetL'), MM.gold, 560, 120, { size: 30, solid: true }); mmCue(m, rc, 'reset', 'pop');
+    pulse(dl._hub, m('reset'), 2);
+    tw(dl._ptr, { r: c6Ang(21) }, m('new'), 1, io);
+    const gx0 = 700, gx1 = 1480, gy = v => 430 - (v - 18) * 36;
+    const gr = G(top);
+    mmCue(m, gr, 'reset', 'fade', { off: .3 });
+    path(gr, `M${gx0} ${gy(18.5)}H${gx1}M${gx0} ${gy(18.5)}V${gy(26)}`, { stroke: MM.dim, 'stroke-width': 2 });
+    mmText(gr, '24°', { x: gx0 - 12, y: gy(24) + 8, size: 22, fill: MM.gold, anchor: 'end' });
+    mmSay(m, top, L('t21L'), 'new', { x: gx0 - 12, y: gy(21) + 8, size: 22, fill: C6COOL, anchor: 'end' });
+    const trace = path(gr, 'M0 0', { stroke: MM.goldHi, 'stroke-width': 4 });
+    const t0 = m('reset', .3), tS = m('settles');
+    const temp = t => 24 - 3 * io(mmU(t, tS - .6, 1.6));
+    mmClock(D, t => {
+      if (t < t0) return;
+      const end = Math.min(t, t0 + 7), n = Math.max(2, Math.ceil((end - t0) / .1)), pts = [];
+      for (let i = 0; i <= n; i++) { const u = t0 + (end - t0) * i / n; pts.push(`${(gx0 + (u - t0) / 7 * (gx1 - gx0)).toFixed(1)} ${gy(temp(u)).toFixed(1)}`); }
+      trace.setAttribute('d', 'M' + pts.join('L'));
+    });
+    mmSay(m, top, L('settlesL'), 'settles', { x: gx1, y: gy(21) + 46, size: 28, fill: C6COOL, anchor: 'end', off: .3 });
+    // the book's toolbox: skills are tools, but without a bigger inner setting the money leaks away
+    tw(top, { o: .3 }, m('sales'), .6);
+    const box = G(p, { x: 470, y: 820 });
+    mmCue(m, box, 'sales', 'rise');
+    path(box, 'M-260 -90H260V40H-260Z', { fill: '#3a2f27', stroke: MM.gold, 'stroke-width': 2.5 });
+    path(box, 'M-60 -90V-120H60V-90', { stroke: MM.gold, 'stroke-width': 6 });
+    let tx = 230;
+    ['sales', 'marketing', 'property', 'shares'].forEach(k => {
+      const c = c6ChipL(p, L(k + 'L'), MM.goldHi, tx, 680, { size: 25 });
+      tx += c._w + 12;
+      const y = 680; put(c, { y: y - 70 });
+      c.setAttribute('data-mark', k); put(c, { o: 0 });
+      tw(c, { o: 1 }, m(k), .2); tw(c, { y }, m(k), .45, out);
+    });
+    mmSay(m, p, L('toolsL'), 'tools', { x: 470, y: 600, size: 32, fill: MM.ink, font: SERIF, italic: true });
+    // the inner setting: a jar that leaks until the person grows
+    const jar = G(p, { x: 1180, y: 860 });
+    mmCue(m, jar, 'inner', 'rise');
+    path(jar, 'M-80 -240V-30Q-80 0 -50 0H50Q80 0 80 -30V-240', { stroke: MM.goldHi, 'stroke-width': 4, fill: 'rgba(16,23,27,.7)' });
+    const lvl = mk('rect', { x: -74, y: -6, width: 148, height: 0, fill: MM.gold, opacity: .85 }, jar);
+    const crack = path(jar, 'M80 -60L92 -54L84 -46', { stroke: MM.bad, 'stroke-width': 3 });
+    mmSay(m, p, L('innerL'), 'inner', { x: 1070, y: 650, size: 30, fill: MM.goldHi, font: SERIF, weight: 600, anchor: 'end', maxW: 260 });
+    const drops = [0, 1, 2, 3].map(() => c6Coin(p, 9)), leaks = [0, 1, 2].map(() => c6Coin(p, 8));
+    const tI = m('inner'), tL = m('leak'), tP = m('person');
+    mmClock(D, t => {
+      const grow = io(mmU(t, tP, 1));
+      put(jar, { s: 1 + .25 * grow });
+      const h = 234 * (.22 * io(mmU(t, tI + .4, 1.2)) + .5 * io(mmU(t, tP + .6, 2)));
+      lvl.setAttribute('height', h.toFixed(1)); lvl.setAttribute('y', (-h - 6).toFixed(1));
+      put(crack, { o: 1 - grow });
+      drops.forEach((c, i) => {
+        if (t < tI + .3) return put(c, { o: 0 });
+        const u = ((t - tI - .3) * .6 + i / 4) % 1;
+        put(c, { x: 1180 + (i - 1.5) * 14, y: 520 + u * 260, o: Math.sin(u * Math.PI) * Math.min(1, (t - tI - .3) * 3) });
+      });
+      leaks.forEach((c, i) => {
+        const on = mmU(t, tL, .3) * (1 - mmU(t, tP, .5));
+        const u = ((t - tL) * .7 + i / 3) % 1;
+        put(c, { x: 1180 + 84 * (1 + .25 * grow) + u * 110, y: 860 - 60 + u * u * 70, o: t < tL ? 0 : on * Math.sin(u * Math.PI) });
+      });
+    });
+    leaks[0].setAttribute('data-mark', 'leak');
+    mmSay(m, p, L('leakL'), 'leak', { x: 1320, y: 770, size: 28, fill: MM.bad, anchor: 'start', maxW: 260 });
+    mmSay(m, p, L('personL'), 'person', { x: 1180, y: 520, size: 36, fill: MM.good, font: SERIF, weight: 600, how: 'pop' });
+  }],
+
+  ['nasar', 'b_nasar', (m, D) => {
+    const p = panel(0);
+    const yard = G(p); put(yard, { o: 0 }); tw(yard, { o: 1 }, .1, .5);
+    mk('rect', { x: 0, y: 0, width: 1600, height: 840, fill: 'url(#mmDusk)' }, yard);
+    c6Floor(yard, 840);
+    // stacks of blocks and cement bags behind the two men
+    for (let r = 0; r < 4; r++) for (let c = 0; c < 4 - (r > 1 ? 1 : 0); c++) mk('rect', { x: 40 + c * 52 + (r % 2) * 26, y: 800 - (r + 1) * 36, width: 50, height: 34, fill: '#6b6458', stroke: '#2a2620', 'stroke-width': 2 }, yard);
+    for (let i = 0; i < 3; i++) path(yard, `M${560 + i * 50} 840V780Q${585 + i * 50} 760 ${610 + i * 50} 780V840Z`, { fill: '#d8cfb6', stroke: '#8f845f', 'stroke-width': 2 });
+    const N = mmPerson(p, { kind: 'r', x: 290, y: 840, s: .82 }), Mn = mmPerson(p, { kind: 'u', x: 500, y: 840, s: .78 });
+    mmBreathe(N, D); mmBreathe(Mn, D, .8, .7);
+    mmMood(N, 'calm', 0, .01); mmMood(Mn, 'smile', 0, .01);
+    mmSay(m, p, L('nasarL'), 'nasar', { x: 290, y: 880, size: 26, fill: MM.dim });
+    show(stat(mmText(p, L('mentorL'), { x: 500, y: 880, size: 24, fill: '#6f6a5c', o: 0 })), .3, .5);
+    // the profit line: seven flat years, then a climb
+    const ch = G(p);
+    path(ch, 'M770 720H1500M770 720V300', { stroke: MM.dim, 'stroke-width': 2 });
+    stat(mmText(ch, L('profitL'), { x: 780, y: 285, size: 22, fill: MM.dim, anchor: 'start' }));
+    const X = i => 810 + i * 75, Y = v => 720 - v * .44;
+    for (let i = 0; i < 9; i++) stat(mmText(ch, String(i + 1), { x: X(i), y: 752, size: 22, fill: MM.dim }));
+    const flat = path(ch, `M${X(0)} ${Y(400)}` + [1, 2, 3, 4, 5, 6].map(i => `L${X(i)} ${Y(i % 2 ? 404 : 396)}`).join(''), { stroke: MM.gold, 'stroke-width': 5 }, { d: 0 });
+    mmCue(m, flat, 'flat', 'draw', { dur: 1.4 });
+    mmSay(m, ch, L('flatL'), 'flat', { x: X(3), y: Y(400) + 50, size: 28, fill: MM.goldHi, off: .3 });
+    const fd = [0, 1, 2, 3, 4, 5, 6].map(i => mmDot(ch, X(i), Y(i % 2 ? 404 : 396), 7, MM.gold, 0));
+    mmClock(D, t => fd.forEach((d, i) => put(d, { o: io(mmU(t, m('flat') + i * .2, .2)) })));
+    fd.slice(1).forEach(d => d.setAttribute('data-stagger', 'flat'));
+    fd[0].setAttribute('data-mark', 'flat');
+    // the mentor's question
+    const qb = mmBubble(p, L('whyL'), { x: 640, y: 450, w: 380, size: 30, o: 1, tail: 'left' });
+    mmCue(m, qb, 'why', 'pop');
+    mmTalk(Mn, m('why'), m('why', 1.6), D, 'smile');
+    mmMood(N, 'ask', m('why', .4), .3);
+    hide(qb, m('raises'), .4);
+    // he raises his sights: a target line, a branch, the climb
+    mmMood(N, 'smile', m('raises'), .3);
+    const tg = path(ch, `M${X(0)} ${Y(800)}H1480`, { stroke: MM.good, 'stroke-width': 2.5, 'stroke-dasharray': '10 8' }, { d: 0 });
+    mmCue(m, tg, 'raises', 'draw', { dur: .7 });
+    mmSay(m, ch, L('raisesL'), 'raises', { x: X(0) + 10, y: Y(800) - 16, size: 26, fill: MM.good, anchor: 'start' });
+    const br = G(p, { x: 640, y: 560 });
+    mmCue(m, br, 'branch', 'pop');
+    path(br, 'M-70 60V-10L0 -50L70 -10V60Z', { fill: '#10171b', stroke: MM.gold, 'stroke-width': 3 });
+    path(br, 'M-18 60V20H18V60', { stroke: MM.gold, 'stroke-width': 3 });
+    mk('rect', { x: -56, y: 0, width: 26, height: 20, fill: MM.goldHi, opacity: .6 }, br);
+    mk('rect', { x: 30, y: 0, width: 26, height: 20, fill: MM.goldHi, opacity: .6 }, br);
+    mmSay(m, p, L('branchL'), 'branch', { x: 640, y: 650, size: 26, fill: MM.goldHi, maxW: 220 });
+    const cl = path(ch, `M${X(6)} ${Y(396)}L${X(7)} ${Y(580)}L${X(8)} ${Y(820)}`, { stroke: MM.good, 'stroke-width': 5 }, { d: 0 });
+    mmCue(m, cl, 'climbs', 'draw', { dur: 1.2 });
+    // the growth goes to a classroom block back home
+    const sc = G(p, { x: 1420, y: 200 });
+    mmCue(m, sc, 'builds', 'rise');
+    path(sc, 'M-90 60V-20H90V60Z', { fill: '#e6dcc4', stroke: MM.gold, 'stroke-width': 2 });
+    path(sc, 'M-104 -20L0 -70L104 -20Z', { fill: '#9a3f2c', stroke: MM.gold, 'stroke-width': 2 });
+    [-60, -20, 20, 60].forEach(x => mk('rect', { x: x - 12, y: 0, width: 24, height: 22, fill: '#16242c' }, sc));
+    path(sc, 'M-12 60V34H12V60', { fill: '#5a3d26' });
+    mmSay(m, p, L('buildsL'), 'builds', { x: 1300, y: 215, size: 28, fill: MM.goldHi, anchor: 'end', maxW: 470, off: .2 });
+    const coins = [0, 1, 2, 3].map(() => c6Coin(p, 8));
+    mmClock(D, t => {
+      const tb = m('builds');
+      coins.forEach((c, i) => {
+        if (t < tb + .2) return put(c, { o: 0 });
+        const u = ((t - tb - .2) * .6 + i / 4) % 1;
+        put(c, { x: c6Lerp(X(8), 1420, u), y: c6Lerp(Y(820), 270, u) - Math.sin(u * Math.PI) * 30, o: Math.sin(u * Math.PI) });
+      });
+    });
+  }],
+
+  ['business', 'b_business', (m, D) => {
+    const p = panel(0);
+    const card = mmSci(p, { x: 80, y: 90, w: 780, h: 740, title: L('sci') });
+    mmCue(m, card, 'sci', 'fade');
+    const bc = c6ChipL(card, L('bookClaim'), MM.gold, 52, 135, { size: 26 });
+    mmCue(m, bc, 'not', 'pop');
+    c6Strike(card, bc, m('over', .2));
+    mmCue(m, c6ChipL(card, L('overL'), MM.gold, 52, 220, { size: 28, solid: true }), 'over', 'pop');
+    const r1 = c6Row(m, card, 'ok', L('mgmtRow'), 'mgmt', 310);
+    const ci = c6Cite(card, L('cite2'), 322 + r1._h + 6); put(ci, { o: 0 }); show(ci, m('mgmt', .5), .5);
+    c6Row(m, card, 'ok', L('skillsRow'), 'markets', 490);
+    c6Row(m, card, 'ok', L('marketsRow'), 'mk2', 570);
+    c6Row(m, card, 'q', L('useRow'), 'use', 650);
+    // the experiment: a loom-shed and two productivity bars
+    const fx = G(p, { x: 1200, y: 230 });
+    mmCue(m, fx, 'mgmt', 'fade');
+    path(fx, 'M-150 70V-10L-90 -50V-10L-30 -50V-10L30 -50V-10L90 -50V-10L150 -50V70Z', { fill: '#10171b', stroke: MM.gold, 'stroke-width': 3 });
+    [-100, -40, 20, 80].forEach(x => mk('rect', { x, y: 14, width: 34, height: 30, fill: MM.goldHi, opacity: .5 }, fx));
+    mmText(fx, L('textileL'), { x: 0, y: 120, size: 26, fill: MM.dim, maxW: 420 });
+    const b1 = G(p, { x: 1080, y: 770 }), b2 = G(p, { x: 1320, y: 770 });
+    const r_1 = mk('rect', { x: -70, y: 0, width: 140, height: 0, rx: 6, fill: MM.dim }, b1);
+    const r_2 = mk('rect', { x: -70, y: 0, width: 140, height: 0, rx: 6, fill: MM.good }, b2);
+    mmText(b1, L('beforeL'), { x: 0, y: 40, size: 26, fill: MM.dim });
+    mmText(b2, L('afterL'), { x: 0, y: 40, size: 26, fill: MM.good });
+    b1.setAttribute('data-mark', 'mgmt'); b2.setAttribute('data-mark', 'seventeen');
+    put(b1, { o: 0 }); put(b2, { o: 0 });
+    mmClock(D, t => {
+      const u1 = io(mmU(t, m('mgmt', .3), .6)), u2 = io(mmU(t, m('seventeen'), .8));
+      put(b1, { o: u1 > 0 ? 1 : 0 }); put(b2, { o: u2 > 0 ? 1 : 0 });
+      r_1.setAttribute('height', (260 * u1).toFixed(1)); r_1.setAttribute('y', (-260 * u1).toFixed(1));
+      r_2.setAttribute('height', (304 * u2).toFixed(1)); r_2.setAttribute('y', (-304 * u2).toFixed(1));
+    });
+    mmCue(m, path(p, 'M1000 770H1400', { stroke: MM.dim, 'stroke-width': 2 }), 'mgmt', 'fade', { off: .3 });
+    mmSay(m, p, L('pctL'), 'seventeen', { x: 1320, y: 440, size: 32, fill: MM.good, weight: 600, how: 'pop', off: .4, maxW: 360 });
+  }],
+
+  ['invest', 'b_invest', (m, D) => {
+    const p = panel(0);
+    const gh = G(p); put(gh, { o: 0 }); tw(gh, { o: 1 }, .1, .5);
+    const rows = [['save', 'spend', MM.good, MM.bad, 130], ['manage', 'slip', MM.good, MM.bad, 235], ['winners', 'losers', MM.good, MM.bad, 340]];
+    const sw = rows.map(([a, b, ca, cb, y]) => {
+      const s = c6Switch(gh, { x: 800, y, w: 160 });
+      mmSay(m, p, L(a + 'L'), a, { x: 685, y: y + 12, size: 36, fill: ca, anchor: 'end', font: SERIF, weight: 600, maxW: 420 });
+      mmSay(m, p, L(b + 'L'), b, { x: 915, y: y + 12, size: 36, fill: cb, anchor: 'start', font: SERIF, weight: 600, maxW: 420 });
+      return [s, a, b, ca, cb];
+    });
+    mmClock(D, t => sw.forEach(([s, a, b, ca, cb]) => {
+      const ua = io(mmU(t, m(a), .35)), ub = io(mmU(t, m(b), .35)), uc = io(mmU(t, m(b) + 1.2, .5));
+      const q = -ua + 2 * ub - uc;
+      put(s._knob, { x: q * (s._w / 2 - 28) });
+      s._knobC.setAttribute('fill', q < -.05 ? mix(MM.dim, ca, -q) : q > .05 ? mix(MM.dim, cb, q) : MM.dim);
+    }));
+    c6Floor(p, 860);
+    const B = mmPerson(p, { kind: 'm', x: 260, y: 860, s: .78 });
+    mmCue(m, B.g, 'basheer', 'fade', { dur: .4 });
+    mmBreathe(B, D); mmMood(B, 'smile', 0, .01);
+    mmSay(m, p, L('basheerL'), 'basheer', { x: 260, y: 893, size: 24, fill: MM.dim });
+    mmPhone(B.armR._lo, { x: 0, y: 96, s: .5 }); mmArm(B, 1, 20, 60, 0, .01);
+    // his share chart falls (one clock from "drops")
+    const sc = G(p, { x: 820, y: 640 });
+    mmCue(m, sc, 'basheer', 'fade', { off: .3 });
+    path(sc, mmBoxD(560, 260, 18), { fill: '#10171b', stroke: MM.faint, 'stroke-width': 2 });
+    const ln = path(sc, 'M0 0', { stroke: MM.bad, 'stroke-width': 4 });
+    const pts = [[-240, -70], [-200, -84], [-160, -60], [-120, -66], [-80, -20], [-40, -34], [0, 10], [40, -4], [80, 40], [120, 30], [160, 70], [200, 62], [240, 96]];
+    mmClock(D, t => {
+      const u = mmU(t, m('drops'), 2.2), n = Math.max(1, Math.round(u * (pts.length - 1)));
+      ln.setAttribute('d', u <= 0 ? 'M0 0' : 'M' + pts.slice(0, n + 1).map(q => q.join(' ')).join('L'));
+    });
+    mmCue(m, ln, 'drops', 'fade', { dur: .2 });
+    mmMood(B, 'sad', m('drops', .8), .4);
+    mmSay(m, p, L('dropsL'), 'drops', { x: 820, y: 540, size: 28, fill: MM.bad });
+    // friends who do the opposite
+    const f1 = mmPerson(p, { kind: 'r', x: 1300, y: 860, s: .6 }), f2 = mmPerson(p, { kind: 'f', x: 1450, y: 860, s: .6 });
+    [f1, f2].forEach(f => { mmCue(m, f.g, 'opposite', 'fade', { dur: .4 }); mmMood(f, 'smile', 0, .01); mmBreathe(f, D); });
+    const up = G(p, { x: 1375, y: 560 });
+    path(up, 'M0 50V-40M-18 -22L0 -42L18 -22', { stroke: MM.good, 'stroke-width': 5 });
+    mmCue(m, up, 'opposite', 'pop');
+    mmSay(m, p, L('oppositeL'), 'opposite', { x: 1375, y: 470, size: 26, fill: MM.good, maxW: 380 });
+  }],
+
+  ['funds', 'b_funds', (m, D) => {
+    const p = panel(0);
+    const fl = G(p); put(fl, { o: 0 }); tw(fl, { o: 1 }, .1, .4);
+    c6Floor(fl, 860);
+    const B = mmPerson(fl, { kind: 'm', x: 280, y: 860, s: .85 });
+    mmBreathe(B, D); mmMood(B, 'worried', 0, .01);
+    mmMood(B, 'calm', m('boring', .3), .4);
+    const card = mmSci(p, { x: 580, y: 70, w: 960, h: 800, title: L('sci') });
+    mmCue(m, card, 'sci', 'fade');
+    mmCue(m, c6ChipL(card, L('mostlyNot'), MM.bad, 52, 125, { size: 28, solid: true }), 'no', 'pop');
+    c6Row(m, card, 'ok', L('everyoneRow'), 'everyone', 205);
+    // ten funds against a simple index line
+    const base = 600, H = [120, 96, 138, 84, 112, 72, 132, 104, 178, 92], LINE = 150;
+    const bars = H.map((h, i) => {
+      const g = G(card, { x: 80 + i * 60, y: base });
+      g._r = mk('rect', { x: 0, y: 0, width: 40, height: 0, rx: 4, fill: MM.gold }, g);
+      put(g, { o: 0 });
+      return g;
+    });
+    bars[0].setAttribute('data-mark', 'nine'); bars.slice(1).forEach(b => b.setAttribute('data-stagger', 'nine'));
+    const tI = m('index', .3);
+    mmClock(D, t => bars.forEach((b, i) => {
+      const u = io(mmU(t, m('nine') + i * .12, .5)), h = H[i] * u;
+      put(b, { o: u > 0 ? 1 : 0 });
+      b._r.setAttribute('height', h.toFixed(1)); b._r.setAttribute('y', (-h).toFixed(1));
+      const c = H[i] > LINE ? MM.good : MM.bad;
+      b._r.setAttribute('fill', mix(MM.gold, c, mmU(t, tI, .5)));
+    }));
+    path(card, `M60 ${base}H700`, { stroke: MM.dim, 'stroke-width': 2 });
+    mmSay(m, card, L('nineL'), 'nine', { x: 720, y: 520, size: 26, fill: MM.ink, anchor: 'start', maxW: 210, para: true });
+    const il = path(card, `M60 ${base - LINE}H700`, { stroke: C6COOL, 'stroke-width': 3, 'stroke-dasharray': '10 8' }, { d: 0 });
+    mmCue(m, il, 'index', 'draw', { dur: .6 });
+    mmSay(m, card, L('indexL'), 'index', { x: 720, y: base - LINE - 10, size: 26, fill: C6COOL, anchor: 'start', maxW: 220 });
+    const ci = c6Cite(card, L('cite3'), 650, 52); put(ci, { o: 0 }); show(ci, m('index', .5), .5);
+    c6Row(m, card, 'ok', L('boringRow'), 'boring', 720);
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    const B = mmPerson(p, { kind: 'm', x: 300, y: 860, s: .78 });
+    put(B.g, { o: 0 }); show(B.g, .15, .5); mmMood(B, 'worried', 0, .01); mmBreathe(B, D);
+    const sc = G(p, { x: 300, y: 260, s: .8, o: 0 }); show(sc, .25, .5);
+    path(sc, mmBoxD(560, 260, 18), { fill: '#10171b', stroke: MM.faint, 'stroke-width': 2 });
+    path(sc, 'M-240 -70L-200 -84L-160 -60L-120 -66L-80 -20L-40 -34L0 10L40 -4L80 40L120 30L160 70L200 62L240 96', { stroke: MM.bad, 'stroke-width': 4 });
+  }, { ask: done => quiz({ x: 600, y: 70, w: 940, cls: 'side' }, [{ id: 'c-help', prompt: [L('q2p')],
+    build: choice([[L('q2a')], [L('q2b')], [L('q2c')]], 1, L('q2y'), [L('q2na'), null, L('q2nc')]) }], done) }],
+
+  ['couple', 'b_couple', (m, D) => {
+    const p = panel(0);
+    const fl = G(p); put(fl, { o: 0 }); tw(fl, { o: 1 }, .1, .5);
+    c6Floor(fl, 840);
+    const A = mmPerson(fl, { kind: 'f', x: 220, y: 840, s: .8 }), Bm = mmPerson(fl, { kind: 'm', x: 440, y: 840, s: .8 });
+    mmBreathe(A, D); mmBreathe(Bm, D); mmMood(A, 'calm', 0, .01); mmMood(Bm, 'calm', 0, .01);
+    const d1 = c6Dial(p, { x: 220, y: 300, r: 80, v: 22 }), d2 = c6Dial(p, { x: 440, y: 300, r: 80, v: 22 });
+    [d1, d2].forEach(d => mmCue(m, d, 'match', 'pop'));
+    const lk = path(p, 'M305 300H355', { stroke: MM.goldHi, 'stroke-width': 4 }, { d: 0 });
+    mmCue(m, lk, 'match', 'draw', { off: .3, dur: .4 });
+    mmSay(m, p, L('matchL'), 'match', { x: 330, y: 170, size: 32, fill: MM.goldHi, font: SERIF, italic: true, maxW: 520 });
+    const card = mmSci(p, { x: 640, y: 100, w: 900, h: 660, title: L('sci') });
+    mmCue(m, card, 'sci', 'rise', { dy: 30 });
+    mmCue(m, c6ChipL(card, L('partlyL2'), MM.gold, 52, 125, { size: 28, solid: true }), 'partly', 'pop');
+    const r1 = c6Row(m, card, 'ok', L('eduRow'), 'education', 210);
+    const ci = c6Cite(card, L('cite4'), 222 + r1._h + 6); put(ci, { o: 0 }); show(ci, m('education', .5), .5);
+    c6Row(m, card, 'q', L('whereRow'), 'where', 380);
+    const r3 = c6Row(m, card, 'no', L('magnetRow'), 'magnet', 480);
+    const mg = G(card, { x: 800, y: 480 });
+    path(mg, 'M-30 -40V0A30 30 0 0 0 30 0V-40', { stroke: MM.bad, 'stroke-width': 12 });
+    path(mg, 'M-30 -40V-28M30 -40V-28', { stroke: MM.ink, 'stroke-width': 12 });
+    path(mg, 'M-50 -60L50 30', { stroke: MM.bad, 'stroke-width': 4 });
+    mmCue(m, mg, 'magnet', 'pop');
+    c6Row(m, card, 'ok', L('learnRow'), 'learn', 580);
+    mmMood(A, 'smile', m('learn'), .4); mmMood(Bm, 'smile', m('learn', .2), .4);
+  }],
+
+  ['results', 'b_results', (m, D) => {
+    const p = panel(0);
+    const tl = G(p);
+    const ghost = G(p, { o: 0 }); tw(ghost, { o: 1 }, .1, .5); hide(ghost, m('keep', .5), .4);
+    const CX = [260, 620, 980, 1340];
+    CX.forEach(x => put(path(ghost, mmBoxD(310, 260, 22), { stroke: MM.faint, 'stroke-width': 2, 'stroke-dasharray': '8 8' }), { x, y: 450 }));
+    const lk_ = mmSay(m, p, L('lookL'), 'look', { x: 800, y: 200, size: 52, fill: MM.goldHi, font: SERIF, weight: 600 });
+    const icon = {
+      bank: g => { path(g, 'M-60 -10L0 -50L60 -10Z', { fill: 'none', stroke: MM.gold, 'stroke-width': 4 }); [-40, -14, 14, 40].forEach(x => path(g, `M${x} -4V46`, { stroke: MM.gold, 'stroke-width': 7 })); path(g, 'M-66 54H66', { stroke: MM.gold, 'stroke-width': 5 }); },
+      income: g => { [[-30, 30], [0, 18], [30, 6]].forEach(([x, y]) => mk('ellipse', { cx: x, cy: y, rx: 24, ry: 9, fill: MM.gold, stroke: MM.goldHi, 'stroke-width': 2 }, g)); path(g, 'M50 -50V-6M36 -20L50 -4L64 -20', { stroke: MM.good, 'stroke-width': 5 }); },
+      own: g => { path(g, 'M-50 50V0L0 -40L50 0V50Z', { fill: 'none', stroke: MM.gold, 'stroke-width': 4 }); path(g, 'M-70 -60H70M0 -60V-40', { stroke: MM.dim, 'stroke-width': 3 }); },
+      keep: g => { path(g, 'M-40 -50V30Q-40 50 -20 50H20Q40 50 40 30V-50', { stroke: MM.goldHi, 'stroke-width': 4 }); mk('rect', { x: -36, y: 0, width: 72, height: 46, fill: MM.gold, opacity: .8 }, g); mmDot(g, 54, 34, 6, MM.bad); },
+    };
+    ['bank', 'income', 'own', 'keep'].forEach((k, i) => {
+      const g = G(tl, { x: CX[i], y: 450 });
+      path(g, mmBoxD(310, 260, 22), { fill: '#10171b', stroke: MM.gold, 'stroke-width': 2.4 });
+      const ic = G(g, { y: -30 }); icon[k](ic);
+      mmText(g, L(k + 'L'), { x: 0, y: 95, size: 28, fill: MM.ink, maxW: 280 });
+      mmCue(m, g, k, 'pop');
+    });
+    // science check: results also show where you started
+    tw(tl, { o: .08 }, m('sci'), .5); hide(lk_, m('sci'), .4);
+    const card = mmSci(p, { x: 90, y: 70, w: 1420, h: 790, title: L('sci') });
+    mmCue(m, card, 'sci', 'rise', { dy: 30 });
+    mmCue(m, c6ChipL(card, L('clueL'), MM.gold, 52, 125, { size: 28, solid: true }), 'clue', 'pop');
+    c6Row(m, card, 'q', L('startedRow'), 'started', 205, { maxW: 1200 });
+    mmSay(m, card, L('oneL'), 'one', { x: 52, y: 310, size: 30, fill: MM.ink, anchor: 'start', maxW: 1300 });
+    const f11 = Array.from({ length: 11 }, (_, i) => c6Fig(card, 90 + i * 64, 400, i === 10 ? MM.goldHi : MM.faint));
+    const f3 = [0, 1, 2].map(i => c6Fig(card, 90 + i * 64, 560, i === 2 ? MM.goldHi : MM.faint));
+    mmSay(m, card, L('threeL'), 'three', { x: 52, y: 480, size: 30, fill: MM.ink, anchor: 'start', maxW: 1300 });
+    f11.forEach(f => put(f, { o: 0 })); f3.forEach(f => put(f, { o: 0 }));
+    f11[0].setAttribute('data-mark', 'one'); f11.slice(1).forEach(f => f.setAttribute('data-stagger', 'one'));
+    f3[0].setAttribute('data-mark', 'three'); f3.slice(1).forEach(f => f.setAttribute('data-stagger', 'three'));
+    mmClock(D, t => {
+      f11.forEach((f, i) => put(f, { o: io(mmU(t, m('one', .2) + i * .1, .25)) }));
+      f3.forEach((f, i) => put(f, { o: io(mmU(t, m('three', .2) + i * .15, .25)) }));
+    });
+    c6Row(m, card, 'no', L('oppRow'), 'opportunity', 650, { maxW: 1200 });
+    const ci = c6Cite(card, L('cite5'), 750, 52); put(ci, { o: 0 }); show(ci, m('one', .6), .5);
+  }],
+
+  ['aware', 'b_aware', (m, D) => {
+    const p = panel(0);
+    const hd = G(p, { x: 660, y: 470 });
+    const hp = path(hd, C6_HEAD, { stroke: MM.gold, 'stroke-width': 4, fill: 'rgba(16,23,27,.7)' }, { d: 0 });
+    draw(hp, .1, .9);
+    mmSay(m, p, L('awareL'), 'aware', { x: 660, y: 150, size: 54, fill: MM.goldHi, font: SERIF, weight: 600 });
+    // a magnifier circles the head from "awareness"
+    const mg = G(p, { o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 40, fill: 'rgba(143,184,200,.12)', stroke: MM.sci, 'stroke-width': 4 }, mg);
+    path(mg, 'M28 28L58 58', { stroke: MM.sci, 'stroke-width': 8 });
+    mmCue(m, mg, 'aware', 'fade');
+    [['thoughts', 300], ['fears', 400], ['habits', 500], ['avoid', 600]].forEach(([k, y]) => {
+      const c = c6ChipL(p, L(k + 'L'), MM.sci, 1060, y, { size: 30 });
+      mmCue(m, c, k, 'pop');
+    });
+    // autopilot: a loop of arrows circling the head; it breaks on "noticing"
+    const loop = G(p, { x: 640, y: 470 });
+    mmCue(m, loop, 'auto', 'fade');
+    const arcs = [0, 1, 2].map(() => G(loop));
+    arcs.forEach(a => { path(a, 'M0 -300A300 300 0 0 1 260 -150', { stroke: MM.dim, 'stroke-width': 4 }); path(a, 'M244 -170L262 -148L236 -142', { stroke: MM.dim, 'stroke-width': 4 }); });
+    const autoL = mmSay(m, p, L('autoL'), 'auto', { x: 660, y: 850, size: 34, fill: MM.dim, font: SERIF, italic: true });
+    hide(autoL, m('notice'), .4); hide(loop, m('notice', .3), .6);
+    mmSay(m, p, L('noticeL'), 'notice', { x: 660, y: 850, size: 34, fill: MM.sci, font: SERIF, weight: 600, off: .4 });
+    mmClock(D, t => {
+      const ta = m('aware'), tn = m('notice');
+      const a = (t - ta) * 1.1, frz = t > tn ? (tn - ta) * 1.1 : a;
+      put(mg, { x: 640 + Math.cos(frz) * 330, y: 470 + Math.sin(frz) * 300 });
+      if (t > tn + .4) put(mg, { x: 600 - 160 * io(mmU(t, tn + .4, .6)), y: 380 });
+      arcs.forEach((g, i) => put(g, { r: (t - m('auto')) * 80 + i * 120 }));
+    });
+    // choosing: the old route dims, a new one lights
+    const oldR = path(p, 'M420 520Q260 600 110 700', { stroke: MM.faint, 'stroke-width': 6, 'stroke-dasharray': '12 10' }, { d: 0 });
+    const newR = path(p, 'M420 420Q260 330 110 260', { stroke: MM.good, 'stroke-width': 6 }, { d: 0 });
+    mmCue(m, oldR, 'choose', 'draw', { dur: .4 });
+    mmCue(m, newR, 'choose', 'draw', { off: .3, dur: .7 });
+    mmSay(m, p, L('chooseL'), 'choose', { x: 90, y: 225, size: 30, fill: MM.good, anchor: 'start', weight: 600, maxW: 420, off: .3 });
+    mmSay(m, p, L('oldL'), 'choose', { x: 90, y: 760, size: 24, fill: MM.dim, anchor: 'start', maxW: 380 });
+  }],
+
+  ['recorder', 'b_recorder', (m, D) => {
+    const p = panel(0);
+    const rc = G(p, { x: 420, y: 470 });
+    put(rc, { o: 0 }); tw(rc, { o: 1 }, .1, .5);
+    path(rc, mmBoxD(600, 340, 26), { fill: '#1b2227', stroke: MM.gold, 'stroke-width': 3 });
+    // the cassette with two reels
+    const cas = G(rc, { y: -40 });
+    mmCue(m, cas, 'recording', 'rise', { dy: -30 });
+    path(cas, mmBoxD(380, 200, 14), { fill: '#d9cfb3', stroke: '#8f845f', 'stroke-width': 2 });
+    mk('rect', { x: -150, y: -80, width: 300, height: 44, fill: '#efe6d2' }, cas);
+    path(cas, 'M-140 -58H40', { stroke: '#8f845f', 'stroke-width': 2 });
+    path(cas, mmBoxD(260, 80, 30), { fill: '#16242c' });
+    const reels = [-80, 80].map(x => {
+      const r = G(cas, { x, y: 4 });
+      mk('circle', { cx: 0, cy: 0, r: 32, fill: '#3a2f27', stroke: MM.goldHi, 'stroke-width': 2 }, r);
+      for (let k = 0; k < 3; k++) path(r, `M0 0L${(Math.cos(k * 2.094) * 26).toFixed(1)} ${(Math.sin(k * 2.094) * 26).toFixed(1)}`, { stroke: MM.goldHi, 'stroke-width': 4 });
+      return r;
+    });
+    // buttons: record, play, stop, forward
+    const bt = [-180, -60, 60, 180].map((x, i) => {
+      const g = G(rc, { x, y: 120 });
+      path(g, mmBoxD(90, 46, 8), { fill: '#2a3238', stroke: MM.faint, 'stroke-width': 2 });
+      if (i === 0) mmDot(g, 0, 0, 10, MM.bad);
+      if (i === 1) path(g, 'M-8 -12L12 0L-8 12Z', { fill: MM.ink });
+      if (i === 2) mk('rect', { x: -10, y: -10, width: 20, height: 20, fill: MM.ink }, g);
+      if (i === 3) path(g, 'M-14 -10L0 0L-14 10ZM0 -10L14 0L0 10Z', { fill: MM.ink });
+      return g;
+    });
+    const tS = m('stop');
+    tw(bt[2], { y: 128 }, tS, .15); tw(bt[1], { y: 120 }, tS, .15);
+    put(bt[1], { y: 128 });
+    mmClock(D, t => reels.forEach(r => put(r, { r: Math.min(t, tS) * 140 })));
+    mmSay(m, p, L('recordingL'), 'recording', { x: 420, y: 255, size: 34, fill: MM.goldHi, font: SERIF, italic: true });
+    const glow = mmGlow(p, 420, 470, 380, 'Gold', 0);
+    p.insertBefore(glow, p.firstChild);
+    tw(glow, { o: .7 }, m('recorder'), .6);
+    mmSay(m, p, L('recorderL'), 'recorder', { x: 420, y: 720, size: 42, fill: MM.ink, font: SERIF, weight: 600, maxW: 700 });
+    mmSay(m, p, L('stopL'), 'stop', { x: 480, y: 670, size: 26, fill: MM.ink, how: 'pop' });
+    // science check
+    const card = mmSci(p, { x: 820, y: 110, w: 720, h: 600, title: L('sci') });
+    mmCue(m, card, 'sci', 'rise', { dy: 30 });
+    mmCue(m, c6ChipL(card, L('supportedL'), MM.good, 52, 125, { size: 28, solid: true }), 'real', 'pop');
+    mmSay(m, card, L('decentL'), 'decentering', { x: 52, y: 235, size: 44, font: SERIF, weight: 600, anchor: 'start', fill: MM.ink, maxW: 620 });
+    const ci = c6Cite(card, L('cite6'), 272, 52); put(ci, { o: 0 }); show(ci, m('decentering', .4), .5);
+    c6Row(m, card, 'ok', L('fewerRow'), 'fewer', 360);
+    c6Row(m, card, 'q', L('modestRow'), 'modest', 490);
+    // the link drawn small: a gentle slope
+    const sl = G(card, { x: 120, y: 560 });
+    mmCue(m, sl, 'modest', 'fade', { off: .3 });
+    path(sl, 'M0 0H480M0 0V-1', { stroke: MM.dim, 'stroke-width': 2 });
+    path(sl, 'M10 -6L470 -36', { stroke: MM.good, 'stroke-width': 4 });
+  }],
+
+  ['thoughts', 'b_thoughts', (m, D) => {
+    const p = panel(0);
+    const bk = G(p); put(bk, { o: 0 }); tw(bk, { o: 1 }, .1, .5);
+    path(bk, 'M220 110H1380V560H220Z', { fill: '#e9e0c8', stroke: MM.gold, 'stroke-width': 2 });
+    path(bk, 'M800 110V560', { stroke: '#8f845f', 'stroke-width': 3 });
+    for (let i = 0; i < 6; i++) path(bk, `M240 ${240 + i * 54}H1360`, { stroke: '#b8ad90', 'stroke-width': 1.5 });
+    path(bk, 'M220 200H1380', { stroke: '#9c3b2b', 'stroke-width': 2 });
+    mmSay(m, p, L('invL'), 'invest', { x: 510, y: 175, size: 40, fill: '#2f7a4f', font: SERIF, weight: 700 });
+    mmSay(m, p, L('costL'), 'cost', { x: 1090, y: 175, size: 40, fill: '#b5341f', font: SERIF, weight: 700 });
+    // each thought writes itself into its column (one clock per line, from its word)
+    const wr = (str, x, y, mark, col) => {
+      const e = mmText(p, str, { x, y, size: 34, fill: col, anchor: 'start', font: SERIF, weight: 600, maxW: 500 }); e.textContent = '';
+      const full = str;
+      mmClock(D, t => { const n = Math.round(full.length * mmU(t, m(mark), 1.1)); if (e._n !== n) { e.textContent = full.slice(0, n); e._n = n; } });
+      e.setAttribute('data-mark', mark);
+      return e;
+    };
+    wr(L('t1L'), 830, 282, 't1', '#2a2318');
+    const mn = mmText(p, '−', { x: 1350, y: 336, size: 44, fill: '#b5341f', weight: 700, anchor: 'end' }); mmCue(m, mn, 't1', 'pop', { off: .45 });
+    wr(L('t2L'), 250, 282, 't2', '#2a2318');
+    const pl = mmText(p, '+', { x: 770, y: 336, size: 44, fill: '#2f7a4f', weight: 700, anchor: 'end' }); mmCue(m, pl, 't2', 'pop', { off: .45 });
+    // opinions passed down the generations
+    c6Floor(p, 870);
+    const fam = [['g', 280], ['f', 440], ['k', 590]].map(([k, x]) => { const P = mmPerson(p, { kind: k, x, y: 870, s: .55 }); mmCue(m, P.g, 'opinions', 'fade'); mmBreathe(P, D, .8); return P; });
+    const note = G(p, { o: 0 }); mk('rect', { x: -22, y: -16, width: 44, height: 32, rx: 6, fill: '#d9cfb3', stroke: MM.heard, 'stroke-width': 2 }, note);
+    note.setAttribute('data-mark', 'opinions');
+    mmClock(D, t => {
+      const t0 = m('opinions', .3); if (t < t0) return put(note, { o: 0 });
+      const u = ((t - t0) / 2.4) % 1, x = 280 + u * 310;
+      put(note, { x, y: 640 - Math.abs(Math.sin(u * Math.PI * 2)) * 30, o: Math.min(1, (t - t0) * 3) });
+    });
+    mmSay(m, p, L('opinionsL'), 'opinions', { x: 680, y: 720, size: 32, fill: MM.heard, font: SERIF, italic: true, anchor: 'start', maxW: 420 });
+    const sp = c6ChipL(p, L('supportL'), MM.good, 680, 810, { size: 32, solid: true });
+    mmCue(m, sp, 'support', 'pop');
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    const bk = G(p, { o: 0 }); show(bk, .15, .5);
+    path(bk, 'M60 150H540V700H60Z', { fill: '#e9e0c8', stroke: MM.gold, 'stroke-width': 2 });
+    path(bk, 'M300 150V700', { stroke: '#8f845f', 'stroke-width': 3 });
+    for (let i = 0; i < 8; i++) path(bk, `M76 ${280 + i * 54}H524`, { stroke: '#b8ad90', 'stroke-width': 1.5 });
+    mmText(bk, L('invL'), { x: 180, y: 220, size: 36, fill: '#2f7a4f', font: SERIF, weight: 700, maxW: 220 });
+    mmText(bk, L('costL'), { x: 420, y: 220, size: 36, fill: '#b5341f', font: SERIF, weight: 700, maxW: 220 });
+  }, { ask: done => quiz({ x: 600, y: 70, w: 940, cls: 'side' }, [{ id: 'c-ledger', prompt: [L('q3p')], build: grid([
+    { parts: [L('q3r1')], ans: ['c'], why: L('q3w1') },
+    { parts: [L('q3r2')], ans: ['i'], why: L('q3w2') },
+    { parts: [L('q3r3')], ans: ['c'], why: L('q3w3') },
+  ], [['i', L('invL'), MM.good, '1'], ['c', L('costL'), MM.bad, '2']], { multi: false, text: true }) }], done) }],
+
+  ['yourturn', 'b_yourturn', (m, D) => {
+    const p = panel(0);
+    const nb = G(p, { x: 110, y: 120 });
+    put(nb, { o: 0 }); tw(nb, { o: 1 }, .1, .5);
+    path(nb, 'M0 0H680V560H0Z', { fill: '#e9e0c8', stroke: MM.gold, 'stroke-width': 2 });
+    for (let i = 0; i < 9; i++) path(nb, `M30 ${80 + i * 56}H650`, { stroke: '#b8ad90', 'stroke-width': 1.5 });
+    path(nb, 'M70 0V560', { stroke: '#d08a7a', 'stroke-width': 2 });
+    const full = ['y1', 'y2', 'y3'].map(L);
+    const lines = full.map((s, i) => mmText(nb, '', { x: 84, y: 128 + i * 140, size: 30, fill: '#2a2318', anchor: 'start', font: SERIF, weight: 600 }));
+    mmClock(D, t => lines.forEach((e, i) => { const n = Math.round(full[i].length * mmU(t, m('three') + i * .9, .9)); if (e._n !== n) { e.textContent = full[i].slice(0, n); e._n = n; } }));
+    lines[0].setAttribute('data-mark', 'three'); lines.slice(1).forEach(e => e.setAttribute('data-stagger', 'three'));
+    const tags = [['costL', MM.bad], ['invL', MM.good], ['costL', MM.bad]].map(([k, c], i) => c6ChipL(nb, L(k), c, 100, 184 + i * 140, { size: 24, solid: true }));
+    tags.forEach(c => put(c, { o: 0 }));
+    mmClock(D, t => tags.forEach((c, i) => put(c, { o: io(mmU(t, m('tag') + i * .5, .35)) })));
+    tags[0].setAttribute('data-mark', 'tag'); tags.slice(1).forEach(c => c.setAttribute('data-stagger', 'tag'));
+    // hand on heart, then the declaration
+    const P = mmPerson(p, { kind: 'm', x: 1230, y: 860, s: .82 });
+    mmBreathe(P, D); mmMood(P, 'calm', 0, .01);
+    put(P.g, { o: 0 }); tw(P.g, { o: 1 }, .15, .5);
+    mmArm(P, 1, 30, 110, m('heart'), .6);
+    const hg = G(P.torso, { x: 16, y: -96, o: 0 }); path(hg, MM_HEART, { fill: MM.gold }); put(hg, { s: .6 });
+    mmCue(m, hg, 'heart', 'pop', { off: .3 });
+    mmSay(m, p, L('heartL'), 'heart', { x: 1230, y: 895, size: 26, fill: MM.gold });
+    mmMood(P, 'smile', m('decl2'), .4);
+    mmSay(m, p, L('decl1'), 'decl', { x: 1190, y: 170, size: 40, fill: MM.goldHi, font: SERIF, weight: 600, para: true, maxW: 700 });
+    mmSay(m, p, L('decl2'), 'decl2', { x: 1190, y: 345, size: 44, fill: MM.ink, font: SERIF, weight: 600, para: true, maxW: 700 });
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    const tt = stat(mmText(p, L('b_wrap'), { x: 200, y: 140, size: 54, font: SERIF, weight: 600, fill: MM.gold, anchor: 'start', o: 0 }));
+    show(tt, .2, .6);
+    const cols = [MM.gold, MM.sci, C6COOL, MM.good];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: 0, y: 270 + i * 140 });
+      mk('circle', { cx: 230, cy: -12, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 3 }, g);
+      T(g, String(i + 1), { x: 230, y: -1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = mmPara(g, L(k), { x: 290, y: 0, size: 36, maxW: 1100, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      mmCue(m, g, k, 'rise', { dy: 0 });
+      put(g, { x: -16 }); tw(g, { x: 0 }, m(k), .6, out);
+    });
+    const pe = stat(mmText(p, '· ' + L('partEnd') + ' ·', { x: 800, y: 850, size: 28, fill: MM.goldLo, font: SERIF, italic: true, o: 0 }));
+    show(pe, m('w4', 3.5), .8);
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Faisal’s six years. Tap the year most likely boosted by luck.',
+  q1y: 'Right. Year 4 had one huge hotel order. Luck like that rarely repeats, so the next year falls back. That is regression to the mean.',
+  q1nu: 'That is one of his ordinary years. Look for the year that stands far above the rest.',
+  q1ns: 'That is the dip. It came after the lucky year, as the numbers fell back.',
+  q1nb: 'That is the return to normal, not the lucky year.',
+  q2p: 'Basheer earns well but his share picks keep losing. What would help him most?',
+  q2a: 'Better share tips from a friend', q2b: 'A simple index fund and a regular monthly plan', q2c: 'Trading more often to win it back',
+  q2y: 'Yes. Most professional pickers trail a simple index fund over time. A boring, steady plan beats hot tips.',
+  q2na: 'More tips is more of the same. Even professionals mostly lose to the index.',
+  q2nc: 'Trading more usually adds costs and mistakes. A steady plan works better.',
+  q3p: 'Sort each money thought: investment or cost?',
+  q3r1: '“I’ll never be good with money.”', q3r2: '“I can learn to save a little each month.”', q3r3: '“Money never stays with me, so why try?”',
+  q3w1: 'Cost. It shuts the door before you try.', q3w2: 'Investment. It points you to a small step you can take.', q3w3: 'Cost. It turns an old pattern into a reason to give up.',
+  p1p: 'Sameera, a pharmacist in Abu Dhabi, has earned about the same for six years. By this chapter, which question is most useful to start with?',
+  p1a: 'Which shop gives the best discounts?', p1b: 'What do I believe someone like me should earn, and is that belief helping me?', p1c: 'Who is to blame for my salary?',
+  p1y: 'Yes. Awareness first: notice the setting you carry. Then add skills and a plan.',
+  p1na: 'Saving on shopping helps a little, but it doesn’t touch the setting.', p1nc: 'Blame keeps the setting hidden. Start by noticing your own belief.',
+  p2p: 'In the thermostat picture, what does the open balcony door stand for?',
+  p2a: 'A short-term push, like a windfall or a bad month', p2b: 'Your money blueprint itself', p2c: 'A new habit that lasts',
+  p2y: 'Right. An open door moves the room for a while. The setting decides where it ends up.',
+  p2nb: 'The blueprint is the thermostat setting, not the door.', p2nc: 'A lasting habit is more like resetting the thermostat.',
+  p3p: 'Which change is most likely to last, using this chapter and its science checks?',
+  p3a: 'One lucky bonus year', p3b: 'Noticing money thoughts every day, plus new skills and a steady plan', p3c: 'Reading one book about rich people',
+  p3y: 'Yes. Inner change and outer skills together. Luck fades; habits and skills stay.',
+  p3na: 'A lucky year tends to fall back toward normal.', p3nc: 'Reading is a start. Change comes from practice, again and again.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'A big year followed by a dip proves you have a hidden money set point.',
+  p4r2: 'Over 15 years, most large US funds did worse than a simple index fund.',
+  p4r3: 'Stepping back to watch your thoughts is linked with fewer mental health problems.',
+  p4r4: 'Business results depend only on the owner’s mindset, not skills or markets.',
+  p4w1: 'False. A dip after a peak is what regression to the mean predicts, and outside factors play a part.',
+  p4w2: 'True. In S&P’s 2024 scorecard, about 9 in 10 large-cap funds trailed the S&P 500 over 15 years.',
+  p4w3: 'True. A 2024 review of 57 studies found a modest link between decentering and fewer problems.',
+  p4w4: 'False. In a field experiment, better management practices alone raised productivity about 17%.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'ഫൈസലിന്റെ ആറ് വർഷങ്ങൾ. ഭാഗ്യം ഏറ്റവും കൂടുതൽ സഹായിച്ചിരിക്കാൻ സാധ്യതയുള്ള വർഷം തൊടൂ.',
+  q1y: 'ശരി. നാലാം വർഷം ഒരു വലിയ ഹോട്ടൽ ഓർഡർ വന്നു. അത്തരം ഭാഗ്യം അപൂർവമായേ ആവർത്തിക്കൂ, അതുകൊണ്ട് അടുത്ത വർഷം താഴുന്നു. ഇതാണ് റിഗ്രഷൻ ടു ദ മീൻ.',
+  q1nu: 'അത് അവന്റെ സാധാരണ വർഷങ്ങളിൽ ഒന്നാണ്. ബാക്കിയുള്ളവയേക്കാൾ വളരെ ഉയർന്നു നിൽക്കുന്ന വർഷം നോക്കൂ.',
+  q1ns: 'അത് ഇടിവാണ്. ഭാഗ്യവർഷത്തിന് ശേഷം സംഖ്യ താഴ്ന്നപ്പോൾ വന്നത്.',
+  q1nb: 'അത് സാധാരണ നിലയിലേക്കുള്ള തിരിച്ചുവരവാണ്, ഭാഗ്യവർഷമല്ല.',
+  q2p: 'ബഷീർ നന്നായി സമ്പാദിക്കുന്നു, പക്ഷേ അവൻ എടുക്കുന്ന ഷെയറുകൾ തോറ്റുകൊണ്ടിരിക്കുന്നു. അവനെ ഏറ്റവും സഹായിക്കുന്നത് എന്ത്?',
+  q2a: 'ഒരു കൂട്ടുകാരനിൽ നിന്ന് കൂടുതൽ നല്ല ടിപ്പുകൾ', q2b: 'ഒരു ലളിതമായ ഇൻഡക്സ് ഫണ്ടും സ്ഥിരമായ ഒരു മാസ പ്ലാനും', q2c: 'നഷ്ടം തിരിച്ചുപിടിക്കാൻ കൂടുതൽ ട്രേഡ് ചെയ്യുക',
+  q2y: 'അതെ. മിക്ക പ്രൊഫഷണലുകളും കാലക്രമേണ ഒരു ലളിതമായ ഇൻഡക്സ് ഫണ്ടിന് പിന്നിലാകുന്നു. ബോറടിപ്പിക്കുന്ന സ്ഥിരമായ പ്ലാൻ ടിപ്പുകളെ തോൽപ്പിക്കും.',
+  q2na: 'കൂടുതൽ ടിപ്പുകൾ എന്നാൽ അതേ കാര്യം വീണ്ടും. പ്രൊഫഷണലുകൾ പോലും മിക്കവാറും ഇൻഡക്സിനോട് തോൽക്കുന്നു.',
+  q2nc: 'കൂടുതൽ ട്രേഡിംഗ് സാധാരണ ചെലവും തെറ്റുകളും കൂട്ടും. സ്ഥിരമായ പ്ലാനാണ് നല്ലത്.',
+  q3p: 'ഓരോ പണ ചിന്തയും തരംതിരിക്കൂ: നിക്ഷേപമോ ചെലവോ?',
+  q3r1: '“എനിക്ക് ഒരിക്കലും പണം കൈകാര്യം ചെയ്യാൻ പറ്റില്ല.”', q3r2: '“എല്ലാ മാസവും കുറച്ച് സൂക്ഷിക്കാൻ എനിക്ക് പഠിക്കാം.”', q3r3: '“പണം എന്റെ കയ്യിൽ നിൽക്കില്ല, പിന്നെ എന്തിന് ശ്രമിക്കണം?”',
+  q3w1: 'ചെലവ്. ശ്രമിക്കും മുൻപേ വാതിൽ അടയ്ക്കുന്നു.', q3w2: 'നിക്ഷേപം. ചെയ്യാവുന്ന ഒരു ചെറിയ പടി കാണിച്ചുതരുന്നു.', q3w3: 'ചെലവ്. പഴയ ഒരു രീതിയെ ഉപേക്ഷിക്കാനുള്ള കാരണമാക്കുന്നു.',
+  p1p: 'അബുദാബിയിലെ ഫാർമസിസ്റ്റായ സമീറയ്ക്ക് ആറ് വർഷമായി ഏതാണ്ട് ഒരേ വരുമാനമാണ്. ഈ അധ്യായം അനുസരിച്ച്, തുടങ്ങാൻ ഏറ്റവും നല്ല ചോദ്യം ഏത്?',
+  p1a: 'ഏത് കടയിലാണ് ഏറ്റവും നല്ല ഡിസ്കൗണ്ട്?', p1b: 'എന്നെപ്പോലൊരാൾ എത്ര സമ്പാദിക്കണമെന്നാണ് ഞാൻ വിശ്വസിക്കുന്നത്, ആ വിശ്വാസം എന്നെ സഹായിക്കുന്നുണ്ടോ?', p1c: 'എന്റെ ശമ്പളത്തിന് ആരാണ് കുറ്റക്കാരൻ?',
+  p1y: 'അതെ. ആദ്യം തിരിച്ചറിവ്: ഉള്ളിലെ സെറ്റിംഗ് ശ്രദ്ധിക്കൂ. പിന്നെ കഴിവും പ്ലാനും ചേർക്കൂ.',
+  p1na: 'ഷോപ്പിംഗിൽ ലാഭിക്കുന്നത് കുറച്ച് സഹായിക്കും, പക്ഷേ സെറ്റിംഗിനെ തൊടില്ല.', p1nc: 'കുറ്റപ്പെടുത്തൽ സെറ്റിംഗിനെ ഒളിപ്പിച്ചുവെക്കും. സ്വന്തം വിശ്വാസം ശ്രദ്ധിച്ച് തുടങ്ങൂ.',
+  p2p: 'തെർമോസ്റ്റാറ്റ് ഉദാഹരണത്തിൽ, തുറന്ന ബാൽക്കണി വാതിൽ എന്തിനെയാണ് സൂചിപ്പിക്കുന്നത്?',
+  p2a: 'ഒരു താൽക്കാലിക തള്ളൽ, ഒരു ലോട്ടറി പോലെയോ മോശം മാസം പോലെയോ', p2b: 'മണി ബ്ലൂപ്രിന്റ് തന്നെ', p2c: 'നിലനിൽക്കുന്ന ഒരു പുതിയ ശീലം',
+  p2y: 'ശരി. തുറന്ന വാതിൽ കുറച്ചുനേരം മുറിയെ മാറ്റും. മുറി എവിടെ നിൽക്കണമെന്ന് സെറ്റിംഗ് തീരുമാനിക്കും.',
+  p2nb: 'ബ്ലൂപ്രിന്റ് തെർമോസ്റ്റാറ്റിന്റെ സെറ്റിംഗാണ്, വാതിലല്ല.', p2nc: 'നിലനിൽക്കുന്ന ശീലം തെർമോസ്റ്റാറ്റ് റീസെറ്റ് ചെയ്യുന്നത് പോലെയാണ്.',
+  p3p: 'ഈ അധ്യായവും അതിലെ ശാസ്ത്രീയ പരിശോധനകളും വെച്ച് നോക്കിയാൽ, ഏത് മാറ്റമാണ് നിലനിൽക്കാൻ സാധ്യത കൂടുതൽ?',
+  p3a: 'ഭാഗ്യം കൊണ്ടുവന്ന ഒരു ബോണസ് വർഷം', p3b: 'എല്ലാ ദിവസവും പണ ചിന്തകൾ ശ്രദ്ധിക്കുന്നതും, പുതിയ കഴിവുകളും സ്ഥിരമായ ഒരു പ്ലാനും', p3c: 'പണക്കാരെക്കുറിച്ചുള്ള ഒരു പുസ്തകം വായിക്കുന്നത്',
+  p3y: 'അതെ. ഉള്ളിലെ മാറ്റവും പുറത്തെ കഴിവും ഒരുമിച്ച്. ഭാഗ്യം മാഞ്ഞുപോകും, ശീലവും കഴിവും നിൽക്കും.',
+  p3na: 'ഭാഗ്യവർഷം സാധാരണ നിലയിലേക്ക് താഴാറുണ്ട്.', p3nc: 'വായന ഒരു തുടക്കമാണ്. മാറ്റം വരുന്നത് വീണ്ടും വീണ്ടും ചെയ്യുന്നതിലൂടെയാണ്.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'ഒരു വലിയ വർഷത്തിന് ശേഷമുള്ള ഇടിവ്, ഒളിഞ്ഞിരിക്കുന്ന ഒരു പണ സെറ്റ് പോയിന്റിന്റെ തെളിവാണ്.',
+  p4r2: '15 വർഷത്തിൽ, അമേരിക്കയിലെ മിക്ക വലിയ ഫണ്ടുകളും ഒരു ലളിതമായ ഇൻഡക്സ് ഫണ്ടിനേക്കാൾ പിന്നിലായി.',
+  p4r3: 'ചിന്തകളെ ഒരടി മാറിനിന്ന് നോക്കുന്നത് കുറഞ്ഞ മാനസിക പ്രശ്നങ്ങളുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു.',
+  p4r4: 'ബിസിനസ് ഫലം ഉടമയുടെ മനോഭാവത്തെ മാത്രം ആശ്രയിക്കുന്നു, കഴിവിനെയോ മാർക്കറ്റിനെയോ അല്ല.',
+  p4w1: 'തെറ്റ്. കുതിപ്പിന് ശേഷമുള്ള ഇടിവ് റിഗ്രഷൻ ടു ദ മീൻ പ്രവചിക്കുന്നതാണ്, പുറത്തെ കാര്യങ്ങൾക്കും പങ്കുണ്ട്.',
+  p4w2: 'ശരി. S&P-യുടെ 2024 സ്കോർകാർഡിൽ, 15 വർഷത്തിൽ പത്തിൽ ഒമ്പതോളം വലിയ ഫണ്ടുകളും S&P 500-ന് പിന്നിലായിരുന്നു.',
+  p4w3: 'ശരി. 57 പഠനങ്ങളുടെ 2024-ലെ ഒരു റിവ്യൂ, ഡീസെന്ററിംഗും കുറഞ്ഞ പ്രശ്നങ്ങളും തമ്മിൽ മിതമായ ബന്ധം കണ്ടെത്തി.',
+  p4w4: 'തെറ്റ്. ഒരു പരീക്ഷണത്തിൽ, മെച്ചപ്പെട്ട മാനേജ്മെന്റ് രീതികൾ മാത്രം ഉൽപ്പാദനക്ഷമത ഏകദേശം 17% കൂട്ടി.',
+});
+const PRACTICE = [
+  { id: 'p-plateau', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 1, L('p1y'), [L('p1na'), null, L('p1nc')]) },
+  { id: 'p-door', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 0, L('p2y'), [null, L('p2nb'), L('p2nc')]) },
+  { id: 'p-lasting', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 1, L('p3y'), [L('p3na'), null, L('p3nc')]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['f'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['t'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['t'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['f'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'mm-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('mm:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'mm-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (ML ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+mmDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '500 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '500 30px "Noto Serif Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit', '600 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>

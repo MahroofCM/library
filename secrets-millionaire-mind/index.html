@@ -30,7 +30,7 @@
 <script src="lib/units.js"></script>
 <script src="lib/contents.js"></script>
 <script src="unit-art.js"></script>
-<link rel="expect" href="#ch03" blocking="render">
+<link rel="expect" href="#ch06" blocking="render">
 <style>
 @font-face { font-family: "Cormorant Garamond"; src: url("lib/fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
 @font-face { font-family: "Cormorant Garamond"; src: url("lib/fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
@@ -119,12 +119,18 @@ document.querySelectorAll('.langsw button').forEach(b => {
 });
 const C = (en, ml, me, mm) => [ML ? ml : en, ML ? mm : me];
 Contents.book({
-  start: { unit: 1, chapter: 3 },
+  start: { unit: 1, chapter: 1 },
   units: [
+    [ML ? 'ഉള്ളിലെ കളി' : 'The inner game', [
+      C('The Inner Game', 'ഉള്ളിലെ കളി', 8, 10),
+      C('Roots and Fruits', 'വേരും പഴവും', 8, 10)]],
     [ML ? 'നിങ്ങളുടെ മണി ബ്ലൂപ്രിന്റ്' : 'Your money blueprint', [
-      C('Your Money Blueprint', 'നിങ്ങളുടെ മണി ബ്ലൂപ്രിന്റ്', 9, 11)]],
+      C('Your Money Blueprint', 'നിങ്ങളുടെ മണി ബ്ലൂപ്രിന്റ്', 9, 11),
+      C('What You Saw', 'നിങ്ങൾ കണ്ടത്', 8, 10),
+      C('What You Lived', 'നിങ്ങൾ അനുഭവിച്ചത്', 8, 10),
+      C('The Money Thermostat', 'പണത്തിന്റെ തെർമോസ്റ്റാറ്റ്', 9, 11)]],
   ],
-  hues: ['#c9a84c'],
+  hues: ['#c9a84c', '#d9b86a'],
 });
 </script>
 </body>
