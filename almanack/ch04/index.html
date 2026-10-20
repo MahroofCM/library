@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Own it, then multiply it · The Almanack of Naval Ravikant, Chapter 4">
+<meta property="og:description" content="A 10-minute animated lesson in English and Malayalam: why owning a piece of a business beats a salary, the three kinds of leverage, and the one rule that comes first: avoid ruin.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/ch04/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<title>Own it, then multiply it · The Almanack of Naval Ravikant</title>
+<meta name="description" content="An animated, narrated lesson on equity and leverage from The Almanack of Naval Ravikant: owning versus wages, labour, capital and code, permissionless leverage, selling and building, and avoiding ruin. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'സ്വന്തമാക്കൂ, പിന്നെ പെരുക്കൂ · The Almanack of Naval Ravikant';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/ymu.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/almanack/ch04/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Own it, then multiply it', kicker: 'PART 1 · WEALTH · CHAPTER 4', sub: 'Why a share of a business beats a salary, and three kinds of leverage that multiply your work',
+  credit: 'A study companion to The Almanack of Naval Ravikant, by Eric Jorgenson',
+  b_intro: 'Title', b_doctors: 'Two doctors', b_equity: 'Equity', b_q1: 'Quick check', b_lever: 'Leverage', b_labor: 'People',
+  b_capital: 'Money', b_copies: 'Code and media', b_perm: 'Permission', b_q2: 'Quick check', b_disc: 'Input and output',
+  b_sell: 'Sell and build', b_ladder: 'The ladder', b_q3: 'Quick check', b_check: 'Science check', b_ruin: 'Avoid ruin',
+  b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  thrissur: 'Two classmates, Thrissur', rahim: 'Dr Rahim · salary', stops: 'the pay stops', risk: 'risk: the hospital’s', brand: 'name: the hospital’s',
+  must: 'pays what it must', fathima: 'Dr Fathima · owner', clinicSign: 'FATHIMA CLINIC', name: 'a name brings more patients', three: '3 doctors',
+  munnar: 'on holiday in Munnar', earning: 'still earning',
+  equity: 'Equity: owning a piece of a business', value: 'value over the years', years: 'years', lender: 'the lender', fixed: 'a fixed payment, no more',
+  owner: 'the owner', upside: 'the upside', loses: 'the owner loses first', ways: 'many doors in', buy: 'buy a few shares',
+  options: 'stock options at work', start: 'start your own', almost: 'Almost everyone who gets truly rich owns a piece of something.',
+  leverage: 'Leverage', small: 'a small push', heavy: 'a heavy load', judgment: 'your judgment', three_: 'three kinds',
+  labor: 'people', capital: 'money', copies: 'copies: code and media',
+  oldest: 'People: the oldest lever', kunhi: 'Kunhimoideen, contractor', thirty: '30 workers', quarrel: 'a quarrel over wages',
+  foreman: 'the foreman walks off', stopsSite: 'the whole site stops', leadership: 'it takes real leadership',
+  money: 'Money: a cleaner lever', sameera: 'Sameera, investment fund', abudhabi: 'Abu Dhabi', decision: 'one good decision',
+  one: 'AED 1 million', hundred: 'AED 100 million', effort: 'about the same effort', century: 'Last century’s great fortunes: bankers and investors',
+  democratic: 'The most democratic lever', copy: 'products that cost almost nothing to copy', press: 'printing press', radio: 'radio and TV',
+  internet: 'the internet', shabna: 'Shabna, coder in Kochi', houseboats: 'houseboat bookings, Alappuzha', first: 'copy 1: months of work',
+  next: 'the next 10,000', almostN: 'almost nothing each', taking: 'taking bookings all night',
+  yes: 'needs someone else’s yes', follow: 'workers agree to follow', trust: 'investors trust you', permissionless: 'permissionless',
+  laptop: 'a laptop or a phone', nobody: 'nobody has to approve', old: 'old split: rich and poor', leveraged: 'leveraged', unleveraged: 'unleveraged',
+  cuts: 'Leverage cuts the link between input and output', week: 'one week each', flat: 'a flat in Sharjah', villa: 'a villa on the Palm',
+  support: 'a support job: hours in, pay out', hoursL: 'hours in', payL: 'pay out', tied: 'closely tied',
+  judgmentT: 'judgment matters more than hours', output: 'be judged on output, not input', time: 'own your time',
+  sell: 'learn to sell', build: 'learn to build', laundry: 'a laundry in Sharjah', laundrySign: 'LAUNDRY',
+  builder: 'builder: clean, pressed, on time', seller: 'seller: brings customers', marketing: 'marketing', hiring: 'hiring good people',
+  raising: 'raising money', both: 'do both: very hard to stop',
+  kozhikode: 'a building site in Kozhikode', mason: 'mason', f_mason: 'daily wage · ₹1,000', contractor: 'contractor', f_contr: 'whole house · ₹40 lakh',
+  developer: 'developer', f_dev: 'buys land · ₹2 crore', fund: 'fund', f_fund: 'backs dozens of developers', app: 'property app',
+  f_app: 'company · ₹1,000s of crores', lev: 'leverage', acc: 'accountability', know: 'specific knowledge', upsideL: 'and the upside',
+  example: 'example figures',
+  sci: 'Science check', thousand: '“A thousand times more?”', same: 'same task, programmers', best: 'best', slowest: 'slowest',
+  worst: 'best vs worst, not the average', big: 'a big study, 2012 · 633,263 people · 198 groups', few: 'a few stars, a large share',
+  real: 'Big gaps: real', reaches: 'A 1,000× gap comes from reach: leverage and luck', not: 'not from one person being 1,000× more able',
+  ruin: 'Avoid ruin', legal: 'stay legal', health: 'guard your health', never: 'never bet all your savings', allin: 'all in, once',
+  many: 'many sensible bets', smallL: 'small losses you can survive', play: 'play again', zero: 'zero: game over',
+  w1: 'Wages tie your pay to your hours. Owning a piece of a business, equity, lets you earn while you rest.',
+  w2: 'Leverage multiplies your judgment: people, money, and code and media, the one that needs nobody’s permission.',
+  w3: 'Learn to sell and to build, aim for work judged on output, and climb toward more leverage and accountability.',
+  w4: 'Avoid ruin: stay legal, stay healthy, and never bet everything at once.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'സ്വന്തമാക്കൂ, പിന്നെ പെരുക്കൂ', kicker: 'ഭാഗം 1 · സമ്പത്ത് · അധ്യായം 4', sub: 'ശമ്പളത്തേക്കാൾ ബിസിനസിലെ പങ്ക് മുന്നിലാകുന്നത് എങ്ങനെ, അധ്വാനത്തെ പെരുക്കുന്ന മൂന്ന് തരം ലിവറേജ്',
+  credit: 'എറിക് ജോർഗൻസന്റെ The Almanack of Naval Ravikant എന്ന പുസ്തകത്തിന്റെ പഠനസഹായി',
+  b_intro: 'തലക്കെട്ട്', b_doctors: 'രണ്ട് ഡോക്ടർമാർ', b_equity: 'ഇക്വിറ്റി', b_q1: 'ചെറിയ പരിശോധന', b_lever: 'ലിവറേജ്', b_labor: 'ആളുകൾ',
+  b_capital: 'പണം', b_copies: 'കോഡും മീഡിയയും', b_perm: 'അനുവാദം', b_q2: 'ചെറിയ പരിശോധന', b_disc: 'ഇൻപുട്ടും ഔട്ട്പുട്ടും',
+  b_sell: 'വിൽക്കൂ, നിർമ്മിക്കൂ', b_ladder: 'പടികൾ', b_q3: 'ചെറിയ പരിശോധന', b_check: 'ശാസ്ത്രീയ പരിശോധന', b_ruin: 'സർവനാശം ഒഴിവാക്കൂ',
+  b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  thrissur: 'തൃശ്ശൂരിലെ രണ്ട് സഹപാഠികൾ', rahim: 'ഡോക്ടർ റഹീം · ശമ്പളം', stops: 'ശമ്പളം നിൽക്കും', risk: 'റിസ്ക്: ആശുപത്രിക്ക്', brand: 'പേര്: ആശുപത്രിയുടേത്',
+  must: 'വേണ്ടത്ര മാത്രം കൊടുക്കും', fathima: 'ഡോക്ടർ ഫാത്തിമ · ഉടമ', clinicSign: 'ഫാത്തിമ ക്ലിനിക്', name: 'പേര് കൂടുതൽ രോഗികളെ കൊണ്ടുവരുന്നു', three: '3 ഡോക്ടർമാർ',
+  munnar: 'മൂന്നാറിൽ അവധിയിൽ', earning: 'വരുമാനം തുടരുന്നു',
+  equity: 'ഇക്വിറ്റി: ഒരു ബിസിനസിലെ സ്വന്തം പങ്ക്', value: 'വർഷങ്ങളിലൂടെ മൂല്യം', years: 'വർഷങ്ങൾ', lender: 'വായ്പ കൊടുത്തയാൾ', fixed: 'നിശ്ചിത തുക മാത്രം',
+  owner: 'ഉടമ', upside: 'നേട്ടം', loses: 'നഷ്ടം ആദ്യം ഉടമയ്ക്ക്', ways: 'പല വാതിലുകൾ', buy: 'കുറച്ച് ഓഹരികൾ വാങ്ങുക',
+  options: 'സ്റ്റോക്ക് ഓപ്ഷനുകൾ', start: 'സ്വന്തമായി തുടങ്ങുക', almost: 'ശരിക്കും സമ്പന്നരാകുന്ന മിക്കവരും എന്തിന്റെയെങ്കിലും പങ്ക് സ്വന്തമാക്കിയവരാണ്.',
+  leverage: 'ലിവറേജ്', small: 'ചെറിയൊരു തള്ളൽ', heavy: 'വലിയൊരു ഭാരം', judgment: 'നിങ്ങളുടെ വിവേചനബുദ്ധി', three_: 'മൂന്ന് തരം',
+  labor: 'ആളുകൾ', capital: 'പണം', copies: 'പകർപ്പുകൾ: കോഡ്, മീഡിയ',
+  oldest: 'ആളുകൾ: ഏറ്റവും പഴയ ലിവർ', kunhi: 'കുഞ്ഞിമൊയ്തീൻ, കോൺട്രാക്ടർ', thirty: '30 പണിക്കാർ', quarrel: 'കൂലിയെച്ചൊല്ലി വഴക്ക്',
+  foreman: 'മേസ്തിരി ഇറങ്ങിപ്പോകുന്നു', stopsSite: 'സൈറ്റ് മുഴുവൻ നിൽക്കും', leadership: 'യഥാർത്ഥ നേതൃഗുണം വേണം',
+  money: 'പണം: കുറച്ചുകൂടി വൃത്തിയുള്ള ലിവർ', sameera: 'സമീറ, നിക്ഷേപ ഫണ്ട്', abudhabi: 'അബുദാബി', decision: 'ഒരു നല്ല തീരുമാനം',
+  one: 'AED 10 ലക്ഷം', hundred: 'AED 10 കോടി', effort: 'ഏകദേശം അതേ അധ്വാനം', century: 'കഴിഞ്ഞ നൂറ്റാണ്ടിലെ വലിയ സമ്പത്ത്: ബാങ്കർമാർ, നിക്ഷേപകർ',
+  democratic: 'ഏറ്റവും ജനാധിപത്യപരമായ ലിവർ', copy: 'പകർത്താൻ ഏതാണ്ട് ചെലവില്ലാത്ത ഉൽപ്പന്നങ്ങൾ', press: 'അച്ചടിയന്ത്രം', radio: 'റേഡിയോ, ടിവി',
+  internet: 'ഇന്റർനെറ്റ്', shabna: 'ഷബ്ന, കൊച്ചിയിലെ കോഡർ', houseboats: 'ഹൗസ്ബോട്ട് ബുക്കിങ്, ആലപ്പുഴ', first: 'ആദ്യ പകർപ്പ്: മാസങ്ങൾ',
+  next: 'അടുത്ത 10,000', almostN: 'ഏതാണ്ട് ഒന്നുമില്ല', taking: 'ബുക്കിങ്ങുകൾ, രാത്രി മുഴുവൻ',
+  yes: 'മറ്റൊരാളുടെ സമ്മതം വേണം', follow: 'പിന്തുടരാൻ തയ്യാറാകണം', trust: 'വിശ്വസിച്ച് പണം തരണം', permissionless: 'ആരുടെയും അനുവാദം വേണ്ട',
+  laptop: 'ലാപ്ടോപ്പോ ഫോണോ', nobody: 'ആരും അംഗീകരിക്കേണ്ട', old: 'പഴയ വിഭജനം: പണക്കാർ, പാവപ്പെട്ടവർ', leveraged: 'ലിവറേജ് ഉള്ളവർ', unleveraged: 'ഇല്ലാത്തവർ',
+  cuts: 'ബന്ധം മുറിയുന്നു: ഇടുന്നതും കിട്ടുന്നതും', week: 'ഒരു ആഴ്ച വീതം', flat: 'ഷാർജയിലെ ഫ്ലാറ്റ്', villa: 'പാമിലെ വില്ല',
+  support: 'സപ്പോർട്ട് ജോലി: മണിക്കൂർ കൊടുക്കുന്നു, ശമ്പളം വാങ്ങുന്നു', hoursL: 'മണിക്കൂർ', payL: 'ശമ്പളം', tied: 'ചേർത്തുകെട്ടിയത്',
+  judgmentT: 'മണിക്കൂറിനേക്കാൾ പ്രധാനം വിവേചനബുദ്ധി', output: 'ഔട്ട്പുട്ട് നോക്കി വിലയിരുത്തപ്പെടുക', time: 'സമയം സ്വന്തമാക്കൂ',
+  sell: 'വിൽക്കാൻ പഠിക്കൂ', build: 'നിർമ്മിക്കാൻ പഠിക്കൂ', laundry: 'ഷാർജയിലെ ലോൺഡ്രി', laundrySign: 'ലോൺഡ്രി',
+  builder: 'നിർമ്മിക്കുന്നയാൾ: വൃത്തി, ഇസ്തിരി, കൃത്യസമയം', seller: 'വിൽക്കുന്നയാൾ: കസ്റ്റമർമാർ', marketing: 'മാർക്കറ്റിങ്', hiring: 'ജോലിക്കെടുക്കൽ',
+  raising: 'പണം സമാഹരിക്കൽ', both: 'രണ്ടും ചെയ്താൽ, തടയാൻ പ്രയാസം',
+  kozhikode: 'കോഴിക്കോട്ടെ ഒരു കെട്ടിട സൈറ്റ്', mason: 'കൽപ്പണിക്കാരൻ', f_mason: 'ദിവസക്കൂലി · ₹1,000', contractor: 'കോൺട്രാക്ടർ', f_contr: 'മുഴുവൻ വീട് · ₹40 ലക്ഷം',
+  developer: 'ഡെവലപ്പർ', f_dev: 'സ്ഥലം വാങ്ങുന്നു · ₹2 കോടി', fund: 'ഫണ്ട്', f_fund: 'മറ്റുള്ളവരുടെ പണം', app: 'പ്രോപ്പർട്ടി ആപ്പ്',
+  f_app: 'കമ്പനി · ആയിരക്കണക്കിന് കോടി', lev: 'ലിവറേജ്', acc: 'ഉത്തരവാദിത്തം', know: 'സ്പെസിഫിക് നോളജ്', upsideL: 'നേട്ടവും',
+  example: 'ഉദാഹരണത്തിന് മാത്രം',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', thousand: '“ആയിരം മടങ്ങ് കൂടുതൽ?”', same: 'ഒരേ ജോലി, പ്രോഗ്രാമർമാർ', best: 'മികച്ചവർ', slowest: 'പതുക്കെയുള്ളവർ',
+  worst: 'മികച്ചവരും മോശക്കാരും, ശരാശരിയല്ല', big: 'വലിയ പഠനം, 2012 · 6 ലക്ഷത്തിലേറെ ആളുകൾ', few: 'കുറച്ച് താരങ്ങൾ, വലിയ പങ്ക്',
+  real: 'വലിയ വിടവുകൾ: യഥാർത്ഥം', reaches: 'എത്തുന്ന ദൂരം: ലിവറേജും ഭാഗ്യവും', not: 'ആയിരം മടങ്ങ് കഴിവുകൊണ്ടല്ല',
+  ruin: 'സർവനാശം ഒഴിവാക്കൂ', legal: 'നിയമം പാലിക്കൂ', health: 'ആരോഗ്യം കാക്കൂ', never: 'സമ്പാദ്യം മുഴുവൻ ഒറ്റയടിക്ക് വെക്കരുത്', allin: 'ഒറ്റയടിക്ക് മുഴുവൻ',
+  many: 'ഒരുപാട് ബുദ്ധിപരമായ പന്തയങ്ങൾ', smallL: 'താങ്ങാവുന്ന ചെറിയ നഷ്ടം', play: 'വീണ്ടും കളിക്കാം', zero: 'പൂജ്യം: കളി കഴിഞ്ഞു',
+  w1: 'ശമ്പളം വരുമാനത്തെ മണിക്കൂറുകളുമായി കെട്ടിയിടുന്നു. ബിസിനസിലെ പങ്ക്, അഥവാ ഇക്വിറ്റി, വിശ്രമിക്കുമ്പോഴും സമ്പാദിക്കാൻ സഹായിക്കുന്നു.',
+  w2: 'ലിവറേജ് വിവേചനബുദ്ധിയെ പെരുക്കുന്നു: ആളുകൾ, പണം, പിന്നെ ആരുടെയും അനുവാദം വേണ്ടാത്ത കോഡും മീഡിയയും.',
+  w3: 'വിൽക്കാനും നിർമ്മിക്കാനും പഠിക്കൂ; ഔട്ട്പുട്ട് നോക്കി വിലയിരുത്തുന്ന ജോലി ലക്ഷ്യമിടൂ; കൂടുതൽ ലിവറേജിലേക്കും ഉത്തരവാദിത്തത്തിലേക്കും കയറൂ.',
+  w4: 'സർവനാശം ഒഴിവാക്കൂ: നിയമം പാലിക്കൂ, ആരോഗ്യം കാക്കൂ, എല്ലാം ഒറ്റയടിക്ക് പന്തയം വെക്കരുത്.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 4, title: L('title'), minutes: LANG === 'ml' ? 12 : 10, language: LANG, next: '../index.html#contents' };
+
+/* ---------- meaning colours (style.json look.meaning) and this chapter's lever colours ---------- */
+const WEALTH = EV.gold, MONEY = '#7cc79d', STATUS = '#e2694f', TIME = '#5fb3cf', SCI = '#9c84d8';
+const LABOR = '#e0a35e', CAPITAL = MONEY, COPIES = EV.goldHi, BUILD = '#6fc3b8', SELL = '#e78fa8';
+
+/* ---------- chapter helpers (prefixed a4 to stay clear of engine globals) ---------- */
+// A label that fades in at t (beat clock, always a mark).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+const a4Ground = (p, y = 760, fill = '#0c1114') => {
+  mk('rect', { x: -10, y, width: 1620, height: 900 - y + 20, fill }, p);
+  path(p, `M0 ${y}H1600`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+};
+// Faisal: the man puppet in a navy rider's jacket.
+const a4Faisal = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#2f5f8f', '#21466b');
+// A small person icon (head and shoulders) standing on (x, y).
+function a4Icon(p, x, y, color = EV.dim, s = 1, o = 1) {
+  const g = G(p, { x, y, s, o });
+  mk('circle', { cx: 0, cy: -46, r: 14, fill: color }, g);
+  path(g, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: color });
+  return g;
+}
+// A flat coin seen from the side, for stacks.
+const a4Coin = (p, x, y, col = WEALTH, o = 1) => {
+  const g = G(p, { x, y, o });
+  mk('ellipse', { cx: 0, cy: 0, rx: 26, ry: 9, fill: '#16130d', stroke: col, 'stroke-width': 3 }, g);
+  return g;
+};
+// A banknote centred on (0,0).
+function a4Note(p, x, y, o = 1, s = 1) {
+  const g = G(p, { x, y, o, s });
+  mk('rect', { x: -24, y: -13, width: 48, height: 26, rx: 4, fill: '#173126', stroke: MONEY, 'stroke-width': 2 }, g);
+  mk('circle', { cx: 0, cy: 0, r: 6, fill: 'none', stroke: MONEY, 'stroke-width': 1.5 }, g);
+  return g;
+}
+// A phone, centred on (0,0), with a screen group g._scr.
+function a4Phone(p, { x = 0, y = 0, s = 1, o = 1, w = 150, h = 280 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 22, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 3 }, g);
+  mk('rect', { x: -w / 2 + 10, y: -h / 2 + 26, width: w - 20, height: h - 52, rx: 6, fill: '#142026' }, g);
+  mk('rect', { x: -18, y: -h / 2 + 10, width: 36, height: 6, rx: 3, fill: '#2b3632' }, g);
+  g._scr = G(g);
+  return g;
+}
+// A pill-shaped tag with text, centred on (x, y); revealed with a small pop at t.
+function a4Tag(p, key, x, y, t, { col = EV.gold, size = 30, fill = '#151d21', ink = EV.goldHi, minW = 200, maxW = 700 } = {}) {
+  const g = G(p, { x, y, o: 0 });
+  const w = Math.min(maxW, Math.max(minW, evW(L(key), size * (ML ? .88 : 1)) + 64));
+  mk('rect', { x: -w / 2, y: -size * 1.05, width: w, height: size * 2.1, rx: size * 1.05, fill, stroke: col, 'stroke-width': 2.5 }, g);
+  evText(g, L(key), { x: 0, y: size * .36, size, fill: ink, weight: 600, maxW: w - 40 });
+  put(g, { s: .85 }); tw(g, { o: 1, s: 1 }, t, .45, back);
+  return g;
+}
+// A row: an icon in a ring and a label, sliding in at t.
+function a4Row(p, key, x, y, t, icon, { col = EV.gold, size = 30, maxW = 320 } = {}) {
+  const g = G(p, { x, y, o: 0 });
+  mk('circle', { cx: 0, cy: 0, r: 32, fill: '#10171b', stroke: col, 'stroke-width': 2 }, g);
+  icon(g, col);
+  evText(g, L(key), { x: 52, y: 10, size, anchor: 'start', maxW, fill: EV.ink });
+  put(g, { x: x - 20 }); tw(g, { o: 1, x }, t, .45, out);
+  return g;
+}
+// A plain building block with lit windows, base at (x, y).
+function a4Block(p, { x = 0, y = 760, w = 240, h = 320, o = 1, fill = '#141b1f' } = {}) {
+  const g = G(p, { x, y, o });
+  mk('rect', { x: -w / 2, y: -h, width: w, height: h, fill, stroke: '#2b3632', 'stroke-width': 3 }, g);
+  for (let wy = -h + 30; wy < -40; wy += 46) for (let wx = -w / 2 + 22; wx < w / 2 - 30; wx += 44)
+    mk('rect', { x: wx, y: wy, width: 22, height: 26, fill: ((wx * 7 + wy * 3) % 5 + 5) % 5 < 2 ? '#3a3420' : '#0b1720', stroke: EV.gold, 'stroke-width': 1, 'stroke-opacity': .3 }, g);
+  return g;
+}
+const a4Star = (p, x, y, s = 1, o = 1, fill = EV.goldHi) => { const g = G(p, { x, y, s, o }); path(g, 'M0 -16L5 -5L16 -5L7 3L10 15L0 8L-10 15L-7 3L-16 -5L-5 -5Z', { fill }); return g; };
+// Small line icons drawn around (0,0).
+const IC4 = {
+  people: (g, c) => { [-14, 14].forEach(dx => { mk('circle', { cx: dx, cy: -10, r: 7, fill: c }, g); path(g, `M${dx - 11} 14Q${dx - 11} 0 ${dx} 0Q${dx + 11} 0 ${dx + 11} 14Z`, { fill: c }); }); },
+  coin: (g, c) => { mk('circle', { cx: 0, cy: 0, r: 17, fill: 'none', stroke: c, 'stroke-width': 3 }, g); path(g, 'M0 -9V9M-5 -5H4Q7 -5 7 -2Q7 1 0 1Q-7 1 -7 4Q-7 7 -4 7H5', { stroke: c, 'stroke-width': 2 }); },
+  code: (g, c) => { mk('rect', { x: -20, y: -14, width: 40, height: 28, rx: 4, fill: 'none', stroke: c, 'stroke-width': 2.5 }, g); path(g, 'M-8 -5L-14 0L-8 5M8 -5L14 0L8 5', { stroke: c, 'stroke-width': 2.5 }); },
+  share: (g, c) => { mk('circle', { cx: 0, cy: 0, r: 17, fill: 'none', stroke: c, 'stroke-width': 2.5 }, g); path(g, 'M0 0V-17A17 17 0 0 1 14.7 -8.5Z', { fill: c }); },
+  key: (g, c) => { mk('circle', { cx: -9, cy: 0, r: 8, fill: 'none', stroke: c, 'stroke-width': 3 }, g); path(g, 'M-1 0H18M12 0V7M17 0V6', { stroke: c, 'stroke-width': 3 }); },
+  door: (g, c) => { path(g, 'M-11 18V-16H11V18', { stroke: c, 'stroke-width': 2.5 }); mk('circle', { cx: 6, cy: 2, r: 2.5, fill: c }, g); path(g, 'M-18 18H18', { stroke: c, 'stroke-width': 2.5 }); },
+};
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    evGlow(g, 600, 560, 280, 'Gold', .3);
+    // a lever: a small push on the long arm lifts a block holding a slice (a share)
+    path(g, 'M600 640L556 724H644Z', { fill: '#1b2226', stroke: EV.gold, 'stroke-width': 3 });
+    const pl = G(g, { x: 600, y: 636, r: -9 });
+    mk('rect', { x: -220, y: -8, width: 860, height: 16, rx: 6, fill: EV.goldLo, stroke: EV.gold, 'stroke-width': 2 }, pl);
+    const bl = G(pl, { x: -130, y: -8 });
+    mk('rect', { x: -75, y: -130, width: 150, height: 130, rx: 10, fill: '#1a1710', stroke: WEALTH, 'stroke-width': 3 }, bl);
+    mk('circle', { cx: 0, cy: -65, r: 42, fill: 'none', stroke: EV.goldHi, 'stroke-width': 3 }, bl);
+    const slice = path(bl, 'M0 -65V-107A42 42 0 0 1 36.4 -86Z', { fill: EV.goldHi });
+    put(slice, { o: 0 });
+    const ar = G(pl, { x: 600, y: -24, o: 0 });
+    path(ar, 'M0 -110V-6M-16 -26L0 -4L16 -26', { stroke: EV.goldHi, 'stroke-width': 6 });
+    evText(g, L('kicker'), { x: 800, y: 150, size: 26, fill: EV.gold, weight: 500, ls: '6' });
+    const ti = evText(g, L('title'), { x: 800, y: 250, size: 92, font: SERIF, weight: 600, maxW: 1400, o: 0 });
+    tw(g, { o: 1 }, .15, .9, out);
+    put(ti, { y: 270 }); tw(ti, { y: 250, o: 1 }, m('title'), .7, out);
+    show(slice, m('title'), .5);
+    show(ar, m('title', .2), .4);
+    tw(pl, { r: 7 }, m('title', .3), 1.4, io);
+    const sub = evText(scene, L('sub'), { x: 800, y: 790, size: 36, fill: EV.dim, o: 0, maxW: 1400, font: SERIF, italic: true });
+    put(sub, { y: 810 }); tw(sub, { y: 790, o: 1 }, m('sub'), .7, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 850, size: 24, fill: '#7a7466', o: 0, maxW: 1400 });
+    show(cr, m('sub'), 1);
+    tw(g, { o: 0 }, D - .6, .5); hide(sub, D - .6, .5); hide(cr, D - .6, .5);
+  }],
+
+  ['doctors', 'b_doctors', (m, D) => {
+    const p = panel(0);
+    a4Ground(p, 760);
+    const dv = path(p, 'M800 140V860', { stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '6 10' }, { d: 0 });
+    draw(dv, .3, .6);
+    lab(p, 'thrissur', 800, 92, m('thrissur'), { size: 40, font: SERIF, italic: true, fill: EV.gold, maxW: 1200 });
+    // left: Dr Rahim on a salary, the hospital behind him
+    const hs = G(p, { x: 640, y: 760, o: 0 });
+    mk('rect', { x: -120, y: -330, width: 240, height: 330, fill: '#141b1f', stroke: '#2b3632', 'stroke-width': 3 }, hs);
+    for (let r = 0; r < 4; r++) for (let c = 0; c < 3; c++) mk('rect', { x: -84 + c * 64, y: -250 + r * 56, width: 40, height: 30, fill: '#0b1720', stroke: EV.gold, 'stroke-width': 1, 'stroke-opacity': .3 }, hs);
+    path(hs, 'M-10 -312H10V-300H22V-280H10V-268H-10V-280H-22V-300H-10Z', { fill: '#d9cdb5' });
+    show(hs, m('rahim'), .5);
+    const ra = evPerson(p, { kind: 'm', x: 200, y: 760, s: .7, o: 0 });
+    evRecolor(ra, '#e8ecef', '#b9bfc4'); evBreathe(ra, D);
+    show(ra.g, m('rahim'), .45);
+    lab(p, 'rahim', 200, 812, m('rahim'), { size: 26, weight: 600, maxW: 330 });
+    // the clock and his coin stack: coins come only while the clock runs
+    const CK = [360, 240];
+    const ck = G(p, { x: CK[0], y: CK[1], o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 56, fill: '#10171b', stroke: TIME, 'stroke-width': 4 }, ck);
+    for (let i = 0; i < 12; i++) { const a = i / 12 * Math.PI * 2; path(ck, `M${Math.sin(a) * 44} ${-Math.cos(a) * 44}L${Math.sin(a) * 50} ${-Math.cos(a) * 50}`, { stroke: TIME, 'stroke-width': 3 }); }
+    const hand = G(ck);
+    path(hand, 'M0 4V-40', { stroke: EV.ink, 'stroke-width': 4 });
+    show(ck, m('hour'), .4);
+    const coinsL = [];
+    for (let i = 0; i < 14; i++) coinsL.push(a4Coin(p, 400, 748 - i * 10, WEALTH, 0));
+    const moon = G(p, { x: 470, y: 180, o: 0 });
+    path(moon, 'M10 -24A26 26 0 1 0 10 24A20 20 0 1 1 10 -24Z', { fill: EV.goldHi });
+    show(moon, m('sleeps'), .4);
+    const suit = G(p, { x: 250, y: 190, o: 0 });
+    mk('rect', { x: -30, y: -20, width: 60, height: 44, rx: 6, fill: '#2a2320', stroke: EV.dim, 'stroke-width': 2.5 }, suit);
+    path(suit, 'M-12 -20V-30H12V-20', { stroke: EV.dim, 'stroke-width': 2.5 });
+    show(suit, m('leave'), .4);
+    prog(q => {
+      const t = q * D, t0 = m('hour'), t1 = m('stops');
+      const worked = Math.max(0, Math.min(t, t1) - t0);
+      put(hand, { r: worked * 90 });
+      const n = Math.min(14, Math.floor(worked * 2.2));
+      coinsL.forEach((c, i) => put(c, { o: i < n ? 1 : 0 }));
+    }, 0, D, lin);
+    lab(p, 'stops', CK[0], 345, m('stops'), { size: 30, fill: STATUS, weight: 600, maxW: 380 });
+    a4Tag(p, 'risk', 640, 540, m('risk'), { size: 22, minW: 180, maxW: 228, col: EV.dim, ink: EV.ink });
+    a4Tag(p, 'brand', 640, 610, m('brand'), { size: 22, minW: 180, maxW: 228, col: EV.dim, ink: EV.ink });
+    lab(p, 'must', CK[0], 395, m('must'), { size: 28, fill: EV.dim, italic: true, font: SERIF, maxW: 300 });
+    // right: Dr Fathima opens a clinic; the name brings patients; it earns while she is away
+    const cl = G(p, { x: 1330, y: 760, o: 0 });
+    mk('rect', { x: -150, y: -300, width: 300, height: 300, fill: '#141b1f', stroke: '#2b3632', 'stroke-width': 3 }, cl);
+    mk('rect', { x: -32, y: -110, width: 64, height: 110, fill: '#0e1316', stroke: EV.gold, 'stroke-width': 1.5, 'stroke-opacity': .5 }, cl);
+    const winX = [-90, 0, 90];
+    winX.forEach(x => mk('rect', { x: x - 34, y: -210, width: 68, height: 70, fill: '#0b1720', stroke: EV.gold, 'stroke-width': 1, 'stroke-opacity': .35 }, cl));
+    show(cl, m('fathima'), .5);
+    const sg = G(p, { x: 1330, y: 500, o: 0 });
+    const sgl = evGlow(sg, 0, 0, 170, 'Gold', 0);
+    mk('rect', { x: -140, y: -28, width: 280, height: 54, rx: 6, fill: '#1a1710', stroke: EV.gold, 'stroke-width': 2.5 }, sg);
+    evText(sg, L('clinicSign'), { x: 0, y: 11, size: 28, weight: 700, fill: EV.goldHi, ls: ML ? '0' : '3', maxW: 250 });
+    show(sg, m('clinic'), .4);
+    tw(sgl, { o: 1 }, m('name'), .6);
+    const docs = winX.map(x => a4Icon(p, 1330 + x, 610, '#e8ecef', .8, 0));
+    evSeq(docs.map((d_, i) => [d_, m('three') + i * .12, .3]), D);
+    lab(p, 'three', 1330, 680, m('three'), { size: 22, fill: EV.ink, maxW: 200 });
+    lab(p, 'name', 1330, 425, m('name'), { size: 28, fill: EV.goldHi, italic: true, font: SERIF, maxW: 440 });
+    const fa = evPerson(p, { kind: 'f', x: 960, y: 760, s: .7, o: 0 });
+    evScarf(fa, '#e8dcc8'); evBreathe(fa, D, 1, .8);
+    show(fa.g, m('fathima'), .45);
+    hide(fa.g, m('munnar'), .5);
+    const fl = lab(p, 'fathima', 960, 812, m('fathima'), { size: 26, weight: 600, maxW: 330 });
+    hide(fl, m('munnar'), .4);
+    // patients walk to the door on one clock; more of them once the name spreads
+    const pats = [0, 1, 2, 3, 4, 5].map(() => a4Icon(p, 1620, 760, EV.dim, .75, 0));
+    prog(q => {
+      const t = q * D;
+      pats.forEach((e, i) => {
+        const t0 = i < 3 ? m('clinic') : m('name');
+        if (t < t0) { put(e, { o: 0 }); return; }
+        const u = (((t - t0) * .16 + (i % 3) / 3 + (i > 2 ? .17 : 0)) % 1 + 1) % 1;
+        put(e, { x: 1620 - u * 290, o: Math.min(1, u * 6, (1 - u) * 6) });
+      });
+    }, 0, D, lin);
+    // Munnar: hills and tea rows, with her small figure
+    const mu = G(p, { x: 990, y: 250, o: 0 });
+    mk('rect', { x: -170, y: -90, width: 340, height: 170, rx: 14, fill: '#0f1714', stroke: MONEY, 'stroke-width': 2 }, mu);
+    path(mu, 'M-160 70Q-90 -40 -20 30Q40 -60 160 70Z', { fill: '#173126', stroke: MONEY, 'stroke-width': 2 });
+    path(mu, 'M-110 40Q-60 20 -20 44M-60 58Q0 34 60 58M20 40Q70 16 120 44', { stroke: MONEY, 'stroke-width': 2, opacity: .7 });
+    mk('circle', { cx: 110, cy: -46, r: 18, fill: EV.goldHi, opacity: .8 }, mu);
+    a4Icon(mu, -100, 60, '#2b7c78', .6);
+    show(mu, m('munnar'), .5);
+    lab(p, 'munnar', 990, 362, m('munnar'), { size: 28, fill: MONEY, maxW: 380 });
+    // her coins: the stack keeps growing after she has gone
+    const coinsR = [];
+    for (let i = 0; i < 16; i++) coinsR.push(a4Coin(p, 960, 748 - i * 10, WEALTH, 0));
+    prog(q => { const t = q * D, n = t < m('earning') ? 0 : Math.min(16, 1 + Math.floor((t - m('earning')) * 8)); coinsR.forEach((c, i) => put(c, { o: i < n ? 1 : 0 })); }, 0, D, lin);
+    lab(p, 'earning', 960, 812, m('earning'), { size: 30, fill: EV.goldHi, weight: 600, maxW: 330 });
+  }],
+
+  ['equity', 'b_equity', (m, D) => {
+    const p = panel(0);
+    lab(p, 'equity', 800, 100, m('equity'), { size: 46, font: SERIF, weight: 600, fill: EV.gold, maxW: 1300 });
+    const X0 = 170, Y0 = 680, X1 = 1030, H = 420;
+    const v = u => .27 + .64 * Math.pow(u, 1.7) + .05 * Math.sin(u * 11) * u;
+    const X = u => X0 + u * (X1 - X0), Y = val => Y0 - H * val, F = .22, yF = Y(F);
+    const ax = path(p, `M${X0} ${Y0 - H - 30}V${Y0}H${X1 + 30}`, { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 });
+    draw(ax, .3, .6);
+    lab(p, 'value', X0, Y0 - H - 50, m('value'), { size: 28, fill: EV.dim, anchor: 'start', maxW: 500 });
+    lab(p, 'years', X1, Y0 + 40, m('years'), { size: 24, fill: EV.dim, anchor: 'end', maxW: 200 });
+    const pts = []; for (let i = 0; i <= 60; i++) pts.push([X(i / 60), Y(v(i / 60))]);
+    // the lender's band (fixed), the owner's area (everything above it)
+    const band = put(mk('rect', { x: X0, y: yF, width: X1 - X0, height: Y0 - yF, fill: MONEY, 'fill-opacity': .18 }, p), { o: 0 });
+    show(band, m('lender'), .5);
+    const fl = path(p, `M${X0} ${yF}H${X1}`, { stroke: MONEY, 'stroke-width': 3, 'stroke-dasharray': '10 8' }, { d: 0 });
+    draw(fl, m('fixed'), .8);
+    lab(p, 'lender', X0 + 20, yF + 36, m('lender'), { size: 24, fill: MONEY, weight: 600, anchor: 'start', maxW: 300 });
+    lab(p, 'fixed', X0 + 20, yF + 70, m('fixed'), { size: 24, fill: MONEY, anchor: 'start', maxW: 300 });
+    const area = path(p, 'M' + X0 + ' ' + yF + pts.map(([x, y]) => `L${x.toFixed(1)} ${Math.min(y, yF).toFixed(1)}`).join('') + `L${X1} ${yF}Z`, { fill: WEALTH, 'fill-opacity': .3 });
+    put(area, { o: 0 }); show(area, m('left'), .7);
+    const cv = path(p, 'M' + pts.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join('L'), { stroke: EV.goldHi, 'stroke-width': 5 }, { d: 0 });
+    draw(cv, m('value', .2), 1.6);
+    lab(p, 'owner', X(.74), Y(.4), m('owner'), { size: 30, fill: EV.goldHi, weight: 600, maxW: 240 });
+    const up = G(p, { x: X1 - 10, y: Y(v(1)) - 30, o: 0 });
+    path(up, 'M0 30V-30M-14 -14L0 -32L14 -14', { stroke: EV.goldHi, 'stroke-width': 5 });
+    show(up, m('upside'), .4);
+    lab(p, 'upside', X1 - 40, Y(v(1)) - 70, m('upside'), { size: 30, fill: EV.goldHi, weight: 600, anchor: 'end', maxW: 260 });
+    // if it goes badly: the owner's line falls through the lender's floor
+    const bad = []; for (let i = 24; i <= 60; i++) { const u = i / 60, w = (u - .4) / .6; bad.push([X(u), Y(v(.4) * (1 - w) + .04 * w + .03 * Math.sin(u * 30) * w)]); }
+    const bd = path(p, 'M' + bad.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join('L'), { stroke: STATUS, 'stroke-width': 4, 'stroke-dasharray': '8 8' }, { d: 0 });
+    draw(bd, m('loses'), 1.2);
+    lab(p, 'loses', X(.72), Y0 + 82, m('loses'), { size: 28, fill: STATUS, maxW: 520 });
+    // ways in
+    lab(p, 'ways', 1320, 230, m('ways'), { size: 34, font: SERIF, weight: 600, fill: EV.gold, maxW: 380 });
+    a4Row(p, 'buy', 1150, 330, m('buy'), IC4.share, { col: WEALTH });
+    a4Row(p, 'options', 1150, 450, m('options'), IC4.key, { col: WEALTH });
+    a4Row(p, 'start', 1150, 570, m('start'), IC4.door, { col: WEALTH });
+    const al = evText(p, L('almost'), { x: 800, y: 850, size: 38, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 1400 });
+    show(al, m('almost'), .6);
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    const p = panel(0);
+    a4Ground(p, 560);
+    const fz = a4Faisal(p, { x: 800, y: 560, s: .9 });
+    evBreathe(fz, D); evMood(fz, 'ask', .4);
+    const th = evThought(p, { x: 900, y: 230, w: 300, h: 150, dx: 120, o: 0 });
+    show(th, .4, .4);
+    evText(th._in, '?', { x: 0, y: 18, size: 64, weight: 600, fill: EV.gold });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-upside', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 1, L('q1y'), [L('q1na'), null, L('q1nc')]),
+  }], done) }],
+
+  ['lever', 'b_lever', (m, D) => {
+    const p = panel(0);
+    lab(p, 'leverage', 800, 110, m('leverage'), { size: 60, font: SERIF, weight: 600, fill: EV.gold });
+    const PV = [560, 560];
+    path(p, `M${PV[0]} ${PV[1] + 4}L${PV[0] - 48} ${PV[1] + 96}H${PV[0] + 48}Z`, { fill: '#1b2226', stroke: EV.gold, 'stroke-width': 3 });
+    const pl = G(p, { x: PV[0], y: PV[1], r: -10 });
+    mk('rect', { x: -230, y: -8, width: 940, height: 16, rx: 6, fill: EV.goldLo, stroke: EV.gold, 'stroke-width': 2 }, pl);
+    const bl = G(pl, { x: -140, y: -8 });
+    mk('rect', { x: -90, y: -160, width: 180, height: 160, rx: 10, fill: '#1a1710', stroke: WEALTH, 'stroke-width': 3 }, bl);
+    path(bl, 'M-60 -40H60M-60 -80H60M-60 -120H60', { stroke: EV.goldLo, 'stroke-width': 2 });
+    // the push at the far end of the long arm: an arrow, then a light that stands for judgment
+    const ar = G(pl, { x: 680, y: -20, o: 0 });
+    path(ar, 'M0 -120V-6M-18 -28L0 -4L18 -28', { stroke: EV.goldHi, 'stroke-width': 6 });
+    show(ar, m('small'), .4);
+    tw(pl, { r: 6 }, m('small', .2), 1.6, io);
+    const sl = lab(p, 'small', 1240, 320, m('small'), { size: 32, fill: EV.goldHi, maxW: 360 });
+    lab(p, 'heavy', 420, 300, m('heavy'), { size: 32, fill: EV.ink, maxW: 360 });
+    const bulb = G(p, { x: 1240, y: 250, o: 0 });
+    const bg_ = evGlow(bulb, 0, 0, 90, 'Gold', .8);
+    mk('circle', { cx: 0, cy: 0, r: 30, fill: '#2a2414', stroke: EV.goldHi, 'stroke-width': 3 }, bulb);
+    path(bulb, 'M-12 30V44H12V30M-8 52H8', { stroke: EV.goldHi, 'stroke-width': 3 });
+    void bg_;
+    hide(sl, m('judgment'), .3);
+    show(bulb, m('judgment'), .45);
+    lab(p, 'judgment', 1240, 350, m('judgment'), { size: 34, fill: EV.goldHi, weight: 600, maxW: 400 });
+    // three kinds of lever
+    lab(p, 'three_', 800, 720, m('three'), { size: 28, fill: EV.dim, maxW: 400 });
+    const chip = (key, x, col, icon, t) => {
+      const g = G(p, { x, y: 800, o: 0 });
+      const w = Math.min(420, Math.max(220, evW(L(key), 30 * (ML ? .88 : 1)) + 110));
+      mk('rect', { x: -w / 2, y: -38, width: w, height: 76, rx: 38, fill: '#10171b', stroke: col, 'stroke-width': 2.5 }, g);
+      const ic = G(g, { x: -w / 2 + 44 }); icon(ic, col);
+      evText(g, L(key), { x: 22, y: 10, size: 30, fill: col, weight: 600, maxW: w - 110 });
+      put(g, { y: 824 }); tw(g, { o: 1, y: 800 }, t, .45, out);
+      return g;
+    };
+    chip('labor', 330, LABOR, IC4.people, m('labor'));
+    chip('capital', 800, CAPITAL, IC4.coin, m('capital'));
+    chip('copies', 1270, COPIES, IC4.code, m('copies'));
+  }],
+
+  ['labor', 'b_labor', (m, D) => {
+    const p = panel(0);
+    a4Ground(p, 760);
+    lab(p, 'oldest', 800, 110, m('oldest'), { size: 46, font: SERIF, weight: 600, fill: LABOR, maxW: 1200 });
+    // the site: scaffolding with three working levels
+    const sc = G(p, { o: 0 });
+    show(sc, .3, .5);
+    for (let x = 620; x <= 1460; x += 140) path(sc, `M${x} 300V760`, { stroke: '#4a4438', 'stroke-width': 5 });
+    [420, 590].forEach(y => mk('rect', { x: 600, y, width: 880, height: 12, fill: '#5a4a32' }, sc));
+    path(sc, 'M620 300L760 420M760 300L620 420M1320 590L1460 760M1460 590L1320 760', { stroke: '#3a3528', 'stroke-width': 3 });
+    // Kunhimoideen, in a hard hat
+    const ku = evPerson(p, { kind: 'm', x: 300, y: 760, s: .72, o: 0 });
+    evRecolor(ku, '#7a6a4a', '#5a4d34'); evBreathe(ku, D);
+    path(ku.head, 'M-38 -66Q-38 -106 0 -106Q38 -106 38 -66H46V-57H-46V-66Z', { fill: '#e8b84a', stroke: '#a3812e', 'stroke-width': 2 });
+    show(ku.g, m('kunhi'), .45);
+    lab(p, 'kunhi', 300, 812, m('kunhi'), { size: 26, weight: 600, maxW: 400 });
+    // thirty workers, appearing on one clock, bobbing while they work
+    const W = [];
+    for (let r = 0; r < 3; r++) for (let c = 0; c < 10; c++) W.push({ e: a4Icon(p, 660 + c * 84, [420, 590, 760][r], LABOR, .62, 0), r, c, x: 660 + c * 84, y: [420, 590, 760][r] });
+    const qa = W[4], qb = W[5], fm = W[29];
+    lab(p, 'thirty', 1040, 255, m('thirty'), { size: 30, fill: LABOR, weight: 600, maxW: 300 });
+    prog(q => {
+      const t = q * D, st = t >= m('stops');
+      W.forEach((w, i) => {
+        const o = io(evU(t, m('thirty') + i * .04, .3)) * (st ? .45 : 1);
+        let x = w.x, y = w.y - (t > m('thirty') && !st ? Math.abs(Math.sin(t * 6 + i * .9)) * 7 : 0);
+        if (w === qa || w === qb) { const v = t - m('quarrel'); if (v > 0 && !st) { x += Math.sin(v * 24) * 3 * (w === qa ? 1 : -1); y = w.y; } }
+        if (w === fm) x = w.x + 260 * io(evU(t, m('foreman'), 1.6));
+        put(w.e, { x, y, o: w === fm ? o * (1 - evU(t, m('foreman') + 1, .6)) : o });
+      });
+    }, 0, D, lin);
+    [qa, qb].forEach(w => [...w.e.children].forEach(c => tw(c, { c_fill: STATUS }, m('quarrel'), .3)));
+    const burst = G(p, { x: (qa.x + qb.x) / 2, y: 330, o: 0 });
+    path(burst, 'M0 -30L8 -10L28 -16L14 0L28 16L8 10L0 30L-8 10L-28 16L-14 0L-28 -16L-8 -10Z', { fill: '#2a1410', stroke: STATUS, 'stroke-width': 3 });
+    show(burst, m('quarrel'), .3);
+    hide(burst, m('stops'), .4);
+    lab(p, 'quarrel', 1040, 205, m('quarrel'), { size: 28, fill: STATUS, maxW: 420 });
+    lab(p, 'foreman', 1330, 812, m('foreman'), { size: 26, fill: STATUS, maxW: 400 });
+    lab(p, 'stopsSite', 300, 290, m('stops'), { size: 34, fill: STATUS, weight: 600, maxW: 440 });
+    evMood(ku, 'worried', m('stops'));
+    lab(p, 'leadership', 300, 350, m('leadership'), { size: 30, fill: EV.goldHi, italic: true, font: SERIF, maxW: 440 });
+  }],
+
+  ['capital', 'b_capital', (m, D) => {
+    const p = panel(0);
+    lab(p, 'money', 800, 100, m('money'), { size: 46, font: SERIF, weight: 600, fill: CAPITAL, maxW: 1200 });
+    const sa = evPerson(p, { kind: 'f', x: 200, y: 760, s: .7, o: 0 });
+    evRecolor(sa, '#3d4f6e', '#2c3a52'); evScarf(sa, '#c9a84c'); evBreathe(sa, D);
+    show(sa.g, m('sameera'), .45);
+    lab(p, 'sameera', 200, 812, m('sameera'), { size: 26, weight: 600, maxW: 360 });
+    lab(p, 'abudhabi', 200, 852, m('abudhabi'), { size: 22, fill: EV.dim, maxW: 300 });
+    // one decision card, two backings
+    const dc = G(p, { x: 520, y: 330, o: 0 });
+    mk('rect', { x: -100, y: -64, width: 200, height: 128, rx: 12, fill: '#10171b', stroke: EV.goldHi, 'stroke-width': 3 }, dc);
+    path(dc, 'M-30 2L-8 24L34 -22', { stroke: EV.goldHi, 'stroke-width': 8 });
+    show(dc, m('decision'), .4);
+    lab(p, 'decision', 520, 440, m('decision'), { size: 28, fill: EV.goldHi, maxW: 300 });
+    const lA = path(p, 'M620 320L760 320', { stroke: EV.goldHi, 'stroke-width': 3, opacity: .7 }, { d: 0 });
+    draw(lA, m('one'), .5);
+    const lB = path(p, 'M620 340Q900 420 1110 330', { stroke: EV.goldHi, 'stroke-width': 3, opacity: .7 }, { d: 0 });
+    draw(lB, m('same'), .7);
+    // column A: one million, one square of profit
+    lab(p, 'one', 840, 230, m('one'), { size: 30, fill: CAPITAL, weight: 600, maxW: 300 });
+    const stA = [0, 1, 2, 3, 4].map(i => a4Coin(p, 840, 380 - i * 11, CAPITAL, 0));
+    evSeq(stA.map((c, i) => [c, m('one') + i * .06, .25]), D);
+    const sqA = put(mk('rect', { x: 831, y: 560, width: 18, height: 18, rx: 2, fill: WEALTH }, p), { o: 0 });
+    show(sqA, m('one', .3), .3);
+    const x1 = T(p, '×1', { x: 880, y: 578, size: 34, weight: 600, fill: EV.ink, anchor: 'start', font: SANS, o: 0 });
+    show(x1, m('one', .3), .3);
+    // column B: a hundred million, a hundred squares
+    lab(p, 'hundred', 1250, 230, m('hundred'), { size: 30, fill: CAPITAL, weight: 600, maxW: 340 });
+    const stB = [];
+    for (let s = 0; s < 10; s++) for (let i = 0; i < 5; i++) stB.push(a4Coin(p, 1124 + s * 28, 400 - i * 11 - (s % 2) * 6, CAPITAL, 0));
+    evSeq(stB.map((c, i) => [c, m('hundred') + i * .012, .2]), D);
+    const sqB = [];
+    for (let r = 0; r < 10; r++) for (let c = 0; c < 10; c++) sqB.push(put(mk('rect', { x: 1160 + c * 20, y: 470 + r * 20, width: 18, height: 18, rx: 2, fill: WEALTH }, p), { o: 0 }));
+    evSeq(sqB.map((s, i) => [s, m('hundred') + .3 + i * .012, .2]), D);
+    const x100 = T(p, '×100', { x: 1380, y: 578, size: 40, weight: 600, fill: EV.goldHi, anchor: 'start', font: SANS, o: 0 });
+    show(x100, m('hundred', .3), .3);
+    // the same effort under both
+    [[740, 200], [1150, 200]].forEach(([x, w]) => { const b = put(mk('rect', { x, y: 700, width: w, height: 26, rx: 13, fill: TIME }, p), { o: 0 }); show(b, m('effort'), .4); });
+    lab(p, 'effort', 1045, 770, m('effort'), { size: 28, fill: TIME, maxW: 520 });
+    const ce = evText(p, L('century'), { x: 900, y: 852, size: 30, font: SERIF, italic: true, fill: EV.gold, o: 0, maxW: 1000 });
+    show(ce, m('century'), .5);
+  }],
+
+  ['copies', 'b_copies', (m, D) => {
+    const p = panel(0);
+    lab(p, 'democratic', 800, 110, m('democratic'), { size: 48, font: SERIF, weight: 600, fill: COPIES, maxW: 1300 });
+    lab(p, 'copy', 800, 172, m('copy'), { size: 30, fill: EV.dim, maxW: 1200 });
+    // the history: press, radio and TV, the internet, joined by one line
+    const gh = G(p, { o: 0 }); show(gh, .3, .5);
+    path(gh, 'M330 470H1270', { stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '4 10' });
+    [330, 800, 1270].forEach(x => mk('circle', { cx: x, cy: 470, r: 80, fill: '#0c1114', stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '6 8' }, gh));
+    const ln = path(p, 'M330 470H1270', { stroke: EV.faint, 'stroke-width': 3 }, { d: 0 });
+    prog(q => { const t = q * D; put(ln, { d: .5 * io(evU(t, m('radio'), .8)) + .5 * io(evU(t, m('exploded'), .8)) }); }, 0, D, lin);
+    const st = (x, key, t, draw_) => { const g = G(p, { x, y: 470, o: 0 }); mk('circle', { cx: 0, cy: 0, r: 80, fill: '#10171b', stroke: COPIES, 'stroke-width': 3 }, g); draw_(g); put(g, { s: .8 }); tw(g, { o: 1, s: 1 }, t, .45, back); lab(p, key, x, 600, t, { size: 30, fill: EV.ink, maxW: 360 }); return g; };
+    st(330, 'press', m('press'), g => { mk('rect', { x: -40, y: -30, width: 80, height: 50, rx: 4, fill: 'none', stroke: EV.goldHi, 'stroke-width': 3 }, g); path(g, 'M-30 -42H30M0 -42V-30M-28 32H28', { stroke: EV.goldHi, 'stroke-width': 4 }); path(g, 'M-24 -14H24M-24 0H14', { stroke: EV.dim, 'stroke-width': 3 }); });
+    st(800, 'radio', m('radio'), g => { mk('rect', { x: -44, y: -28, width: 88, height: 60, rx: 8, fill: 'none', stroke: EV.goldHi, 'stroke-width': 3 }, g); path(g, 'M-20 -28L-36 -50M20 -28L36 -50', { stroke: EV.goldHi, 'stroke-width': 3 }); mk('circle', { cx: 22, cy: 2, r: 10, fill: 'none', stroke: EV.dim, 'stroke-width': 3 }, g); path(g, 'M-32 -10H0M-32 4H0M-32 18H0', { stroke: EV.dim, 'stroke-width': 3 }); });
+    st(1270, 'internet', m('exploded'), g => { mk('circle', { cx: 0, cy: 0, r: 44, fill: 'none', stroke: EV.goldHi, 'stroke-width': 3 }, g); path(g, 'M-44 0H44M0 -44V44M-30 -32Q0 -14 30 -32M-30 32Q0 14 30 32', { stroke: EV.goldHi, 'stroke-width': 2.5 }); mk('ellipse', { cx: 0, cy: 0, rx: 18, ry: 44, fill: 'none', stroke: EV.goldHi, 'stroke-width': 2.5 }, g); });
+    // the explosion: copies fly out from the internet, all from one clock
+    const fly = [];
+    for (let i = 0; i < 36; i++) { const a = -Math.PI * .9 + (i / 35) * Math.PI * 1.8, d = 150 + (i * 53) % 140; fly.push({ e: put(mk('rect', { x: -9, y: -12, width: 18, height: 24, rx: 3, fill: '#16343a', stroke: COPIES, 'stroke-width': 1.5 }, p), { x: 1270, y: 470, o: 0 }), a, d }); }
+    prog(q => { const t = q * D - m('exploded'); fly.forEach(({ e, a, d }, i) => { if (t < 0) { put(e, { o: 0 }); return; } const u = ((t * .35 + i / 36) % 1); put(e, { x: 1270 + Math.cos(a) * (95 + d * u), y: 470 + Math.sin(a) * (95 + d * u) * .9, o: .85 * Math.sin(u * Math.PI) }); }); }, 0, D, lin);
+    // Shabna's app: the first copy costs months, every next copy almost nothing
+    const q = panel(m('shabna'));
+    put(q, { o: 0 }); show(q, m('shabna'), .4);
+    a4Ground(q, 760);
+    const night = put(mk('rect', { x: 0, y: 0, width: 1600, height: 760, fill: '#060a1a' }, q), { o: 0 });
+    tw(night, { o: .55 }, m('sleeps'), 1);
+    const moon = G(q, { x: 1460, y: 140, o: 0 });
+    path(moon, 'M10 -30A32 32 0 1 0 10 30A25 25 0 1 1 10 -30Z', { fill: EV.goldHi });
+    show(moon, m('sleeps'), .6);
+    const sh = evPerson(q, { kind: 'f', x: 220, y: 760, s: .72 });
+    evRecolor(sh, '#9a5a2a', '#7a4520'); evBreathe(sh, D);
+    lab(q, 'shabna', 220, 812, m('shabna'), { size: 26, weight: 600, maxW: 380 });
+    const ph = a4Phone(q, { x: 520, y: 450, s: 1 });
+    path(ph._scr, 'M-50 30H50L36 52H-36Z', { fill: '#7a3b26', stroke: EV.gold, 'stroke-width': 2 });
+    path(ph._scr, 'M-36 30Q-36 -6 0 -10Q36 -6 36 30', { fill: '#2a2414', stroke: EV.gold, 'stroke-width': 2 });
+    path(ph._scr, 'M-56 66Q-40 58 -24 66T8 66T40 66T72 66', { stroke: TIME, 'stroke-width': 2 });
+    const bk = G(ph._scr, { y: -70, o: 0 });
+    mk('rect', { x: -44, y: -16, width: 88, height: 32, rx: 16, fill: WEALTH }, bk);
+    path(bk, 'M-12 0L-3 9L14 -8', { stroke: '#120f08', 'stroke-width': 4 });
+    show(bk, m('houseboats'), .4);
+    lab(q, 'houseboats', 520, 640, m('houseboats'), { size: 26, fill: EV.ink, maxW: 420 });
+    const BX = 780, BY = 620;
+    path(q, `M${BX - 20} ${BY}H1500`, { stroke: EV.dim, 'stroke-width': 2 });
+    const b1 = mk('rect', { x: BX, y: BY, width: 44, height: .01, rx: 4, fill: WEALTH }, q);
+    prog(qq => { const t = qq * D, u = io(evU(t, m('first'), .9)); b1.setAttribute('height', .01 + 280 * u); b1.setAttribute('y', BY - 280 * u); }, 0, D, lin);
+    lab(q, 'first', BX - 10, BY - 300, m('first'), { size: 26, fill: EV.goldHi, anchor: 'start', maxW: 420 });
+    const tiny = [];
+    for (let i = 0; i < 70; i++) tiny.push(put(mk('rect', { x: 860 + i * 9, y: BY - 4, width: 6, height: 4, fill: EV.goldHi }, q), { o: 0 }));
+    evSeq(tiny.map((e, i) => [e, m('next') + i * .025, .15]), D);
+    const cnt = T(q, '1', { x: 1175, y: 520, size: 44, weight: 600, fill: EV.ink, anchor: 'middle', font: SANS, o: 0 });
+    show(cnt, m('next'), .3);
+    evCount(cnt, t => t < m('next') ? 1 : 1 + Math.round(9999 * io(evU(t, m('next'), 1.8))), D, evNum);
+    lab(q, 'next', 1175, 580, m('next'), { size: 26, fill: EV.dim, maxW: 400 });
+    lab(q, 'almostN', 1175, 670, m('almost'), { size: 30, fill: EV.goldHi, weight: 600, maxW: 400 });
+    // at night the code keeps working: bookings rise from the phone, robots on the night shift
+    const ticks = [0, 1, 2, 3].map(() => { const g = G(q, { x: 520, y: 290, o: 0 }); mk('circle', { cx: 0, cy: 0, r: 16, fill: WEALTH }, g); path(g, 'M-7 0L-2 6L8 -6', { stroke: '#120f08', 'stroke-width': 3 }); return g; });
+    prog(qq => { const t = qq * D - m('taking'); ticks.forEach((g, i) => { if (t < 0) { put(g, { o: 0 }); return; } const u = ((t * .5 + i / 4) % 1); put(g, { x: 520 + (i % 2 ? 30 : -30) * u, y: 290 - u * 120, o: Math.sin(u * Math.PI) }); }); }, 0, D, lin);
+    lab(q, 'taking', 1000, 220, m('taking'), { size: 30, fill: EV.goldHi, maxW: 520 });
+    const bots = [];
+    for (let i = 0; i < 6; i++) { const g = G(q, { x: 860 + i * 70, y: 740, o: 0 }); mk('rect', { x: -14, y: -40, width: 28, height: 22, rx: 4, fill: '#1b2226', stroke: EV.goldHi, 'stroke-width': 2 }, g); mk('rect', { x: -12, y: -16, width: 24, height: 16, rx: 3, fill: '#1b2226', stroke: EV.goldHi, 'stroke-width': 2 }, g); evDot(g, -5, -29, 2.5, EV.goldHi); evDot(g, 5, -29, 2.5, EV.goldHi); bots.push(g); }
+    prog(qq => { const t = qq * D - m('robots'); bots.forEach((g, i) => put(g, { o: t < 0 ? 0 : io(evU(t, i * .1, .3)), y: 740 - (t > 0 ? Math.abs(Math.sin(t * 5 + i)) * 6 : 0) })); }, 0, D, lin);
+  }],
+
+  ['permission', 'b_perm', (m, D) => {
+    const p = panel(0);
+    const dv = path(p, 'M860 180V780', { stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '6 10' }, { d: 0 });
+    draw(dv, .3, .6);
+    lab(p, 'yes', 450, 130, m('yes'), { size: 40, font: SERIF, weight: 600, fill: STATUS, maxW: 760 });
+    // two gates, each with a barrier that lifts only on someone's yes
+    const gate = (x, col, icon, t) => {
+      const g = G(p, { x, y: 560, o: 0 });
+      path(g, 'M-90 140V-110M90 140V-110', { stroke: '#4a4438', 'stroke-width': 10 });
+      const arm = G(g, { x: -90, y: -40 });
+      mk('rect', { x: 0, y: -8, width: 180, height: 16, rx: 4, fill: STATUS }, arm);
+      path(arm, 'M30 -8L50 8M80 -8L100 8M130 -8L150 8', { stroke: '#f0e0d0', 'stroke-width': 4 });
+      const ic = G(g, { y: -250 }); mk('circle', { cx: 0, cy: 0, r: 34, fill: '#10171b', stroke: col, 'stroke-width': 2.5 }, ic); icon(ic, col);
+      const qm = evText(g, '?', { x: 0, y: 70, size: 56, weight: 600, fill: EV.dim });
+      show(g, m('yes'), .5);
+      tw(arm, { r: -75 }, t, .9, back);
+      hide(qm, t, .3);
+      return g;
+    };
+    gate(250, LABOR, IC4.people, m('follow'));
+    gate(650, CAPITAL, IC4.coin, m('trust'));
+    lab(p, 'follow', 250, 750, m('follow'), { size: 28, fill: LABOR, maxW: 360 });
+    lab(p, 'trust', 650, 750, m('trust'), { size: 28, fill: CAPITAL, maxW: 360 });
+    // the open road: no gate at all
+    lab(p, 'permissionless', 1220, 130, m('permissionless'), { size: 44, font: SERIF, weight: 600, fill: COPIES, maxW: 640 });
+    const rd = G(p, { o: 0 });
+    path(rd, 'M960 760L1190 300H1250L1480 760Z', { fill: '#11171a', stroke: EV.faint, 'stroke-width': 2 });
+    const dash = path(rd, 'M1220 300V760', { stroke: COPIES, 'stroke-width': 5, 'stroke-dasharray': '26 30', opacity: .8 });
+    show(rd, m('permissionless'), .5);
+    prog(q => { const t = q * D; dash.setAttribute('stroke-dashoffset', (-t * 60).toFixed(1)); }, 0, D, lin);
+    const lp = G(p, { x: 1220, y: 640, o: 0 });
+    mk('rect', { x: -70, y: -50, width: 140, height: 90, rx: 6, fill: '#142026', stroke: COPIES, 'stroke-width': 3 }, lp);
+    path(lp, 'M-90 40H90L80 54H-80Z', { fill: '#1b2226', stroke: COPIES, 'stroke-width': 2.5 });
+    path(lp, 'M-30 -20L-44 -6L-30 8M30 -20L44 -6L30 8M8 -26L-8 14', { stroke: COPIES, 'stroke-width': 3 });
+    show(lp, m('laptop'), .45);
+    lab(p, 'laptop', 1220, 800, m('laptop'), { size: 28, fill: EV.ink, maxW: 420 });
+    lab(p, 'nobody', 1220, 220, m('nobody'), { size: 32, fill: COPIES, italic: true, font: SERIF, maxW: 520 });
+    // the new split
+    const ol = lab(p, 'old', 450, 860, m('old'), { size: 30, fill: EV.dim, maxW: 640 });
+    const sk = path(p, 'M150 850H750', { stroke: STATUS, 'stroke-width': 4 }, { d: 0 });
+    draw(sk, m('leveraged'), .5);
+    tw(ol, { o: .5 }, m('leveraged'), .5);
+    lab(p, 'leveraged', 1060, 862, m('leveraged'), { size: 36, fill: EV.goldHi, weight: 600, maxW: 340 });
+    lab(p, 'unleveraged', 1380, 862, m('unleveraged'), { size: 32, fill: EV.dim, maxW: 300 });
+  }],
+
+  ['q2', 'b_q2', () => { panel(0); }, { ask: done => quiz(SCREEN, [{
+    id: 'c-permission', prompt: [L('q2p')], build: grid([
+      { parts: [L('q2r1')], ans: ['y'], why: L('q2w1') },
+      { parts: [L('q2r2')], ans: ['n'], why: L('q2w2') },
+      { parts: [L('q2r3')], ans: ['y'], why: L('q2w3') },
+      { parts: [L('q2r4')], ans: ['n'], why: L('q2w4') },
+    ], [['y', L('q2y'), STATUS, 'Y'], ['n', L('q2n'), WEALTH, 'N']], { multi: false, text: true }),
+  }], done) }],
+
+  ['disconnect', 'b_disc', (m, D) => {
+    const p = panel(0);
+    lab(p, 'cuts', 800, 110, m('cuts'), { size: 42, font: SERIF, weight: 600, fill: EV.gold, maxW: 1400 });
+    // two agents, one week each, very different outputs
+    const rows = [330, 570];
+    const slots = G(p, { o: 0 }); show(slots, .3, .5);
+    rows.forEach(y => { mk('rect', { x: 530, y: y - 20, width: 220, height: 40, rx: 8, fill: 'none', stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '6 6' }, slots); mk('rect', { x: 880, y: y - 70, width: 600, height: 140, rx: 10, fill: 'none', stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '6 6' }, slots); });
+    lab(p, 'week', 640, 225, m('week'), { size: 28, fill: TIME, maxW: 360 });
+    rows.forEach(y => {
+      const b = put(mk('rect', { x: 530, y: y - 20, width: 220, height: 40, rx: 8, fill: TIME }, p), { o: 0 });
+      show(b, m('week'), .4);
+      const a = G(p, { o: 0 }); path(a, `M770 ${y}H840M824 ${y - 12}L842 ${y}L824 ${y + 12}`, { stroke: EV.dim, 'stroke-width': 3 }); show(a, m('week', .2), .4);
+    });
+    const fl = a4Block(p, { x: 230, y: 380, w: 120, h: 130, o: 0 });
+    show(fl, m('flat'), .4);
+    lab(p, 'flat', 230, 430, m('flat'), { size: 26, fill: EV.ink, maxW: 320 });
+    const vi = G(p, { x: 230, y: 620, o: 0 });
+    mk('rect', { x: -90, y: -70, width: 180, height: 70, fill: '#1a1710', stroke: WEALTH, 'stroke-width': 2.5 }, vi);
+    path(vi, 'M-104 -70L0 -120L104 -70Z', { fill: '#2a2414', stroke: WEALTH, 'stroke-width': 2.5 });
+    path(vi, 'M120 0C110 -40 140 -70 128 -110M128 -110C108 -124 94 -114 88 -104M128 -110C148 -126 160 -116 166 -106', { stroke: MONEY, 'stroke-width': 4 });
+    show(vi, m('villa'), .4);
+    lab(p, 'villa', 230, 670, m('villa'), { size: 26, fill: EV.ink, maxW: 320 });
+    const n1 = a4Note(p, 900, 330, 0);
+    show(n1, m('flat'), .4);
+    const t1 = T(p, '×1', { x: 950, y: 342, size: 32, weight: 600, fill: EV.ink, anchor: 'start', font: SANS, o: 0 });
+    show(t1, m('flat'), .4);
+    const notes = [];
+    for (let r = 0; r < 5; r++) for (let c = 0; c < 10; c++) notes.push(a4Note(p, 900 + c * 56, 510 + r * 32, 0));
+    evSeq(notes.map((e, i) => [e, m('villa') + i * .03, .2]), D);
+    const t50 = T(p, '×50', { x: 1490, y: 590, size: 40, weight: 600, fill: EV.goldHi, anchor: 'start', font: SANS, o: 0 });
+    show(t50, m('villa'), .4);
+    // the opposite: a support job, hours and pay tied together
+    const q = panel(m('support'));
+    put(q, { o: 0 }); show(q, m('support'), .4);
+    lab(q, 'support', 800, 110, m('support'), { size: 36, font: SERIF, weight: 600, fill: EV.ink, maxW: 1300 });
+    const hd = G(q, { x: 330, y: 330 });
+    a4Icon(hd, 0, 50, EV.dim, 1.6);
+    path(hd, 'M-30 -30A32 32 0 0 1 30 -30', { stroke: EV.ink, 'stroke-width': 5 });
+    mk('rect', { x: -38, y: -34, width: 12, height: 22, rx: 4, fill: EV.ink }, hd); mk('rect', { x: 26, y: -34, width: 12, height: 22, rx: 4, fill: EV.ink }, hd);
+    const bi = mk('rect', { x: 520, y: 272, width: .01, height: 36, rx: 8, fill: TIME }, q);
+    const bo = mk('rect', { x: 520, y: 340, width: .01, height: 36, rx: 8, fill: MONEY }, q);
+    prog(qq => { const t = qq * D, v = t - m('hours'); const w = t < m('hours') ? .01 : 60 + 520 * ((v * .22) % 1); bi.setAttribute('width', w); bo.setAttribute('width', t < m('pay') ? .01 : w); }, 0, D, lin);
+    lab(q, 'hoursL', 500, 300, m('hours'), { size: 26, fill: TIME, anchor: 'end', maxW: 200 });
+    lab(q, 'payL', 500, 368, m('pay'), { size: 26, fill: MONEY, anchor: 'end', maxW: 200 });
+    const ch = G(q, { x: 540, y: 324, o: 0 });
+    [-1, 1].forEach(s => mk('ellipse', { cx: 0, cy: s * 8, rx: 9, ry: 13, fill: 'none', stroke: STATUS, 'stroke-width': 3 }, ch));
+    show(ch, m('tied'), .3);
+    lab(q, 'tied', 800, 450, m('tied'), { size: 30, fill: STATUS, weight: 600, maxW: 400 });
+    a4Tag(q, 'judgmentT', 800, 580, m('judgment'), { size: 30, minW: 400, maxW: 1100 });
+    a4Tag(q, 'output', 800, 690, m('output'), { size: 30, minW: 400, maxW: 1100 });
+    a4Tag(q, 'time', 800, 800, m('time'), { size: 30, minW: 300, maxW: 1100 });
+  }],
+
+  ['sellbuild', 'b_sell', (m, D) => {
+    const p = panel(0);
+    a4Ground(p, 760);
+    lab(p, 'build', 380, 110, m('build'), { size: 46, font: SERIF, weight: 600, fill: BUILD, maxW: 600 });
+    lab(p, 'sell', 1220, 110, m('sell'), { size: 46, font: SERIF, weight: 600, fill: SELL, maxW: 600 });
+    lab(p, 'laundry', 800, 200, m('laundry'), { size: 30, fill: EV.dim, italic: true, font: SERIF, maxW: 500 });
+    // the shop
+    const sh = G(p, { x: 800, y: 760, o: 0 });
+    mk('rect', { x: -190, y: -340, width: 380, height: 340, fill: '#141b1f', stroke: '#2b3632', 'stroke-width': 3 }, sh);
+    mk('rect', { x: -150, y: -250, width: 300, height: 250, fill: '#0e1316' }, sh);
+    for (let i = 0; i < 4; i++) { mk('circle', { cx: -105 + i * 70, cy: -150, r: 26, fill: '#10171b', stroke: EV.dim, 'stroke-width': 3 }, sh); mk('circle', { cx: -105 + i * 70, cy: -150, r: 12, fill: '#16343a' }, sh); }
+    const sg = G(sh, { y: -296 });
+    mk('rect', { x: -150, y: -26, width: 300, height: 52, rx: 6, fill: '#1a1710', stroke: EV.gold, 'stroke-width': 2.5 }, sg);
+    evText(sg, L('laundrySign'), { x: 0, y: 11, size: 30, weight: 700, fill: EV.goldHi, ls: ML ? '0' : '6', maxW: 260 });
+    show(sh, m('laundry'), .45);
+    // the builder: shirts come back along the rail, on time
+    const bu = evPerson(p, { kind: 'm', x: 360, y: 760, s: .66, o: 0 });
+    evRecolor(bu, '#2d6f68', '#1f524c'); evBreathe(bu, D);
+    show(bu.g, m('builder'), .45);
+    lab(p, 'builder', 360, 812, m('builder'), { size: 26, fill: BUILD, maxW: 440 });
+    const rail = G(p, { o: 0 });
+    path(rail, 'M110 300H610', { stroke: EV.dim, 'stroke-width': 4 });
+    show(rail, m('builder'), .4);
+    const SH = ['#e8ecef', '#5fb3cf', '#e8b84a', '#d98a5a', '#9fd3b0', '#e8ecef'];
+    const shirts = SH.map(c => { const g = G(rail, { x: 110, y: 300 }); path(g, 'M0 0V10M-22 18L-8 10H8L22 18L18 30L12 26V56H-12V26L-18 30Z', { fill: c, stroke: '#0e1316', 'stroke-width': 1.5 }); return g; });
+    prog(q => { const t = q * D - m('builder'); shirts.forEach((g, i) => { const u = (((t > 0 ? t : 0) * .12 + i / 6) % 1); put(g, { x: 130 + u * 460, o: Math.min(1, u * 8, (1 - u) * 8) }); }); }, 0, D, lin);
+    // the seller: a megaphone, customers walking in, and three wider meanings of selling
+    const se = evPerson(p, { kind: 'f', x: 1240, y: 760, s: .66, o: 0 });
+    evRecolor(se, '#a04a6a', '#7a3550'); evBreathe(se, D, 1, .8);
+    const mg = G(se.armR._lo, { x: 0, y: 80 });
+    path(mg, 'M-6 -4L-6 8L-40 26L-40 -22Z', { fill: SELL, stroke: '#5a2a3a', 'stroke-width': 1.5 });
+    show(se.g, m('seller'), .45);
+    evArm(se, 1, -70, -30, m('seller'), .5);
+    lab(p, 'seller', 1240, 812, m('seller'), { size: 26, fill: SELL, maxW: 440 });
+    const cus = [0, 1, 2, 3, 4].map(() => a4Icon(p, 1640, 760, EV.dim, .7, 0));
+    cus.forEach(c => p.insertBefore(c, se.g));
+    prog(q => { const t = q * D - m('seller'); cus.forEach((e, i) => { if (t < 0) { put(e, { o: 0 }); return; } const u = ((t * .14 + i / 5) % 1); put(e, { x: 1620 - u * 640, o: Math.min(1, u * 6, (1 - u) * 6) }); }); }, 0, D, lin);
+    a4Tag(p, 'marketing', 1240, 255, m('marketing'), { size: 24, col: SELL, minW: 200, maxW: 380 });
+    a4Tag(p, 'hiring', 1240, 330, m('hiring'), { size: 24, col: SELL, minW: 200, maxW: 380 });
+    a4Tag(p, 'raising', 1240, 405, m('raising'), { size: 24, col: SELL, minW: 200, maxW: 380 });
+    // both: the two light up together
+    const g1 = evGlow(p, 360, 600, 200, 'Gold', 0), g2 = evGlow(p, 1240, 600, 200, 'Gold', 0);
+    p.insertBefore(g1, p.firstChild.nextSibling); p.insertBefore(g2, p.firstChild.nextSibling);
+    tw(g1, { o: .8 }, m('both'), .6); tw(g2, { o: .8 }, m('both'), .6);
+    evMood(bu, 'smile', m('both')); evMood(se, 'smile', m('both'));
+    lab(p, 'both', 800, 866, m('both'), { size: 34, font: SERIF, italic: true, weight: 600, fill: EV.goldHi, maxW: 620 });
+  }],
+
+  ['ladder', 'b_ladder', (m, D) => {
+    const p = panel(0);
+    lab(p, 'kozhikode', 1000, 110, m('kozhikode'), { size: 36, font: SERIF, italic: true, fill: EV.gold, maxW: 700 });
+    const R = [['mason', 120, 780], ['contractor', 400, 665], ['developer', 680, 550], ['fund', 960, 435], ['app', 1240, 320]];
+    const FIG = { mason: 'f_mason', contractor: 'f_contr', developer: 'f_dev', fund: 'f_fund', app: 'f_app' };
+    const FM = { mason: 'fmason', contractor: 'fcontr', developer: 'fdev', fund: 'ffund', app: 'fapp' };
+    const ICON = {
+      mason: g => { mk('rect', { x: -34, y: -26, width: 40, height: 22, fill: '#7a3b26', stroke: '#a3543a', 'stroke-width': 2 }, g); mk('rect', { x: -12, y: -48, width: 40, height: 22, fill: '#7a3b26', stroke: '#a3543a', 'stroke-width': 2 }, g); path(g, 'M22 -10L44 -30M38 -36L52 -22', { stroke: '#8f9ea4', 'stroke-width': 5 }); },
+      contractor: g => { path(g, 'M-26 -20Q-26 -50 0 -50Q26 -50 26 -20H34V-12H-34V-20Z', { fill: '#e8b84a' }); [-40, 0, 40].forEach(x => a4Icon(g, x + 70, 0, LABOR, .45)); },
+      developer: g => { const b = a4Block(g, { x: 0, y: 0, w: 110, h: 110 }); void b; },
+      fund: g => { [0, 1, 2, 3].forEach(i => a4Coin(g, -20, -8 - i * 11, CAPITAL)); mk('rect', { x: 14, y: -44, width: 54, height: 40, rx: 6, fill: '#2a2320', stroke: WEALTH, 'stroke-width': 2.5 }, g); path(g, 'M30 -44V-52H52V-44', { stroke: WEALTH, 'stroke-width': 2.5 }); },
+      app: g => { const ph = a4Phone(g, { x: 0, y: -56, s: .38 }); a4Block(ph._scr, { x: 0, y: 60, w: 80, h: 110 }); },
+    };
+    const gs = G(p, { o: 0 }); show(gs, .3, .5);
+    R.forEach(([, x, y]) => mk('rect', { x, y, width: 250, height: 860 - y, fill: 'none', stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '6 8' }, gs));
+    R.forEach(([k, x, y], i) => {
+      const g = G(p, { o: 0 });
+      mk('rect', { x, y, width: 250, height: 860 - y, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .5 }, g);
+      path(g, `M${x} ${y}H${x + 250}`, { stroke: EV.goldHi, 'stroke-width': 4 });
+      const ic = G(g, { x: x + 125, y: y - 8 }); ICON[k](ic);
+      evText(g, L(k), { x: x + 125, y: y + 36, size: 28, weight: 600, fill: EV.goldHi, maxW: 220 });
+      put(g, { y: 30 }); tw(g, { o: 1, y: 0 }, m(k), .5, out);
+      const f = evText(p, L(FIG[k]), { x: x + 125, y: y + 72, size: 22, fill: EV.ink, maxW: 228, o: 0 });
+      show(f, m(FM[k]), .4);
+      void i;
+    });
+    const ex = evText(p, L('example'), { x: 1530, y: 884, size: 20, fill: '#7a7466', anchor: 'end', o: 0 });
+    show(ex, m('mason'), .4);
+    // three meters, top left, filling rung by rung
+    [['lev', 150], ['acc', 205], ['know', 260]].forEach(([k, y]) => {
+      lab(p, k, 90, y, m(k), { size: 26, fill: EV.ink, anchor: 'start', maxW: 250 });
+      const segs = [0, 1, 2, 3, 4].map(i => put(mk('rect', { x: 360 + i * 42, y: y - 20, width: 36, height: 22, rx: 4, fill: WEALTH }, p), { o: 0 }));
+      const ol = G(p, { o: 0 });
+      [0, 1, 2, 3, 4].forEach(i => mk('rect', { x: 360 + i * 42, y: y - 20, width: 36, height: 22, rx: 4, fill: 'none', stroke: EV.faint, 'stroke-width': 1.5 }, ol));
+      show(ol, m(k), .3);
+      evSeq(segs.map((s, i) => [s, m(k) + i * .1, .25]), D);
+    });
+    const ua = path(p, 'M250 600L1300 170', { stroke: EV.goldHi, 'stroke-width': 4, 'stroke-dasharray': '12 10' }, { d: 0 });
+    draw(ua, m('upside'), .6);
+    const uh = evHead(p, 1300, 170, -22.3, EV.goldHi, 1.4); put(uh, { o: 0 }); show(uh, m('upside', .3), .3);
+    lab(p, 'upsideL', 700, 330, m('upside'), { size: 32, fill: EV.goldHi, weight: 600, italic: true, font: SERIF, maxW: 300 });
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    a4Ground(p, 560);
+    const dv = evPerson(p, { kind: 'm', x: 800, y: 560, s: .9 });
+    evRecolor(dv, '#4a5560', '#353d45');
+    evBreathe(dv, D); evMood(dv, 'ask', .4);
+    const th = evThought(p, { x: 900, y: 230, w: 300, h: 150, dx: 120, o: 0 });
+    show(th, .4, .4);
+    evText(th._in, '?', { x: 0, y: 18, size: 64, weight: 600, fill: EV.gold });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-developer', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 1, L('q3y'), [L('q3na'), null, L('q3nc')]),
+  }], done) }],
+
+  ['check', 'b_check', (m, D) => {
+    const p = panel(0);
+    // the frame and tag stay for the whole beat
+    const keep = G(scene);
+    hide(keep, D - .45, .4);
+    prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+    const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+    draw(fr, m('sci'), 1);
+    const tag = G(keep, { x: 200, y: 60, o: 0 });
+    const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+    mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+    evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+    show(tag, m('sci'), .4);
+    lab(p, 'thousand', 700, 165, m('thousand'), { size: 42, font: SERIF, italic: true, fill: EV.ink, maxW: 900 });
+    // programmers on the same task: slowest and best, 5 to 25 times
+    const BL = 590;
+    path(p, `M170 ${BL}H650`, { stroke: EV.dim, 'stroke-width': 2 });
+    const bs = put(mk('rect', { x: 250, y: BL - 14, width: 90, height: 14, rx: 3, fill: EV.dim }, p), { o: 0 });
+    show(bs, m('slowest'), .4);
+    lab(p, 'slowest', 295, BL + 32, m('slowest'), { size: 24, fill: EV.dim, maxW: 180 });
+    const bSolid = mk('rect', { x: 470, y: BL, width: 90, height: .01, rx: 3, fill: SCI }, p);
+    const bRange = mk('rect', { x: 470, y: BL, width: 90, height: .01, rx: 3, fill: SCI, opacity: .35 }, p);
+    prog(q => { const t = q * D, u = io(evU(t, m('five'), 1)); bSolid.setAttribute('height', .01 + 70 * u); bSolid.setAttribute('y', BL - 70 * u); bRange.setAttribute('height', .01 + 340 * u); bRange.setAttribute('y', BL - 340 * u); }, 0, D, lin);
+    lab(p, 'best', 515, BL + 32, m('best'), { size: 24, fill: SCI, weight: 600, maxW: 180 });
+    const fv = T(p, '5–25×', { x: 515, y: BL - 352, size: 36, weight: 600, fill: EV.ink, anchor: 'middle', font: SANS, o: 0 });
+    show(fv, m('five'), .4);
+    lab(p, 'same', 410, 655, m('same'), { size: 26, fill: EV.ink, maxW: 460 });
+    lab(p, 'worst', 410, 700, m('worst'), { size: 24, fill: EV.dim, italic: true, font: SERIF, maxW: 460 });
+    // many fields: a few stars produce a large share (a steep histogram)
+    lab(p, 'big', 1160, 270, m('big'), { size: 24, fill: EV.ink, maxW: 600 });
+    path(p, `M880 ${BL}H1450`, { stroke: EV.dim, 'stroke-width': 2 });
+    const hs = [];
+    for (let i = 0; i < 16; i++) { const h = 270 / Math.pow(i + 1, 1.15); hs.push([put(mk('rect', { x: 900 + i * 34, y: BL - h, width: 26, height: h, rx: 3, fill: i < 2 ? SCI : '#4a4458' }, p), { o: 0 }), i]); }
+    evSeq(hs.map(([e, i]) => [e, m('few') + i * .05, .25]), D);
+    lab(p, 'few', 1160, 655, m('few'), { size: 26, fill: SCI, weight: 600, maxW: 560 });
+    const stamp = G(p, { x: 1330, y: 165, o: 0, r: -6 });
+    const sw = Math.max(240, evW(L('real'), 30) + 50);
+    mk('rect', { x: -sw / 2, y: -30, width: sw, height: 60, rx: 8, fill: 'none', stroke: SCI, 'stroke-width': 4 }, stamp);
+    evText(stamp, L('real'), { x: 0, y: 11, size: 30, weight: 700, fill: SCI });
+    put(stamp, { s: 1.5 }); tw(stamp, { o: 1, s: 1 }, m('real'), .4, back);
+    // the fair reading
+    const fc = G(p, { x: 800, y: 772, o: 0 });
+    mk('rect', { x: -640, y: -48, width: 1280, height: 96, rx: 14, fill: '#14121c', stroke: SCI, 'stroke-width': 2 }, fc);
+    show(fc, m('reaches'), .4);
+    lab(fc, 'reaches', 0, -8, m('reaches'), { size: 30, font: SERIF, weight: 600, maxW: 1200 });
+    lab(fc, 'not', 0, 32, m('not'), { size: 26, fill: SCI, maxW: 1200 });
+  }],
+
+  ['ruin', 'b_ruin', (m, D) => {
+    const p = panel(0);
+    lab(p, 'ruin', 800, 100, m('ruin'), { size: 54, font: SERIF, weight: 600, fill: STATUS });
+    const icon = (x, key, t, draw_) => { const g = G(p, { x, y: 230, o: 0 }); mk('circle', { cx: 0, cy: 0, r: 50, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2.5 }, g); draw_(g); put(g, { s: .8 }); tw(g, { o: 1, s: 1 }, t, .45, back); lab(p, key, x, 320, t, { size: 28, fill: EV.ink, maxW: 420 }); };
+    icon(360, 'legal', m('legal'), g => { path(g, 'M0 -30V26M-26 26H26M-30 -18H30M-30 -18L-40 6H-20ZM30 -18L20 6H40Z', { stroke: EV.goldHi, 'stroke-width': 3 }); });
+    icon(800, 'health', m('health'), g => { path(g, 'M-32 10Q-32 -32 0 -32Q32 -32 32 10H40V18H-40V10Z', { fill: '#1b2226', stroke: EV.goldHi, 'stroke-width': 3 }); path(g, 'M6 -8H30', { stroke: TIME, 'stroke-width': 6 }); });
+    icon(1240, 'never', m('never'), g => { [0, 1, 2].forEach(i => a4Coin(g, 0, 14 - i * 12, WEALTH)); path(g, 'M-34 -34L34 34', { stroke: STATUS, 'stroke-width': 5 }); });
+    // two paths of savings over time
+    const X0 = 200, X1 = 1440, Y0 = 800, S0 = 650;
+    path(p, `M${X0} 400V${Y0}`, { stroke: EV.dim, 'stroke-width': 2 });
+    const zl = path(p, `M${X0} ${Y0}H${X1}`, { stroke: STATUS, 'stroke-width': 2, 'stroke-dasharray': '6 8', opacity: .7 });
+    void zl;
+    const all = path(p, `M${X0} ${S0}L420 610L520 580L600 ${Y0}H${X1}`, { stroke: STATUS, 'stroke-width': 5 }, { d: 0 });
+    draw(all, m('never', .2), 2);
+    lab(p, 'allin', 520, 555, m('never', .2), { size: 26, fill: STATUS, weight: 600, maxW: 300 });
+    const pts = []; for (let i = 0; i <= 80; i++) { const u = i / 80; pts.push([X0 + u * (X1 - X0), S0 - 220 * Math.pow(u, 1.2) + 26 * Math.sin(u * 23) * (.5 + u * .5)]); }
+    const gp = path(p, 'M' + pts.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join('L'), { stroke: EV.goldHi, 'stroke-width': 5 }, { d: 0 });
+    draw(gp, m('many'), 2.4);
+    lab(p, 'many', 1300, 390, m('many'), { size: 28, fill: EV.goldHi, weight: 600, maxW: 400 });
+    // small losses: mark the dips
+    const dips = [];
+    for (let i = 2; i < 79; i++) if (pts[i][1] > pts[i - 1][1] && pts[i][1] >= pts[i + 1][1] && pts[i][0] > 640) dips.push(pts[i]);
+    const dm = dips.slice(0, 4).map(([x, y]) => { const g = G(p, { x, y: y + 22, o: 0 }); path(g, 'M0 -6V12M-8 4L0 14L8 4', { stroke: EV.dim, 'stroke-width': 3 }); return g; });
+    evSeq(dm.map((g, i) => [g, m('small') + i * .12, .3]), D);
+    lab(p, 'smallL', 930, 700, m('small'), { size: 28, fill: EV.dim, maxW: 520 });
+    lab(p, 'play', 1180, 630, m('play'), { size: 30, fill: EV.goldHi, italic: true, font: SERIF, maxW: 300 });
+    const zt = lab(p, 'zero', 900, 850, m('zero'), { size: 32, fill: STATUS, weight: 600, maxW: 500 });
+    void zt;
+    pulse(all, m('zero'), 1.04);
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    evText(p, L('b_wrap'), { x: 800, y: 130, size: 52, font: SERIF, weight: 600, fill: EV.gold });
+    const cols = [EV.goldHi, COPIES, SELL, STATUS];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -30, y: 260 + i * 150, o: 0 });
+      mk('circle', { cx: 200, cy: -10, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: 200, y: 1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 260, y: 0, size: 36, maxW: 1150, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Which one gives Faisal a piece of the upside?',
+  q1a: 'A raise of 200 dirhams a month.',
+  q1b: 'Buying a few shares of a listed company every month.',
+  q1c: 'Extra delivery shifts on Fridays.',
+  q1y: 'Yes. A share is a small piece of a business: when the business grows, his piece grows too.',
+  q1na: 'A raise is still pay for hours. It stops when he stops.',
+  q1nc: 'More shifts mean more hours rented out, not ownership.',
+  q2p: 'Does it need someone else’s yes? Sort each one.',
+  q2y: 'Needs a yes', q2n: 'Permissionless',
+  q2r1: 'Hiring a crew of twenty for a new shop',
+  q2r2: 'Recording a cooking series and posting it online',
+  q2r3: 'Raising money from investors for a restaurant',
+  q2r4: 'Writing a small app in the evenings',
+  q2w1: 'Needs a yes: twenty people must agree to work with you.',
+  q2w2: 'Permissionless: a phone and an internet connection are enough.',
+  q2w3: 'Needs a yes: investors must trust you with their money.',
+  q2w4: 'Permissionless: code needs a computer, not anyone’s approval.',
+  q3p: 'The developer can make far more than the contractor. Why, by this chapter?',
+  q3a: 'He works many more hours on site.',
+  q3b: 'He takes on more risk and accountability, uses money and people as leverage, and needs more specific knowledge.',
+  q3c: 'He simply got lucky with the land.',
+  q3y: 'Right. Each rung adds leverage, accountability and specific knowledge, and the upside grows with them.',
+  q3na: 'Hours are the mason’s game. The developer’s extra comes from leverage and risk, not time.',
+  q3nc: 'Luck plays a part, but he also carries the loan, the permits and the risk of a flop.',
+  p1p: 'Dr Rahim wants a path to financial freedom. Which step gives him equity?',
+  p1a: 'Taking more night shifts at the hospital.',
+  p1b: 'Moving to a hospital that pays 10% more.',
+  p1c: 'Becoming a partner in a clinic with two colleagues.',
+  p1y: 'Yes. As a partner he owns part of the clinic, so he shares in its upside.',
+  p1na: 'More shifts rent out more hours; the pay still stops when he stops.',
+  p1nb: 'Better pay is still pay for time, not a piece of the business.',
+  p2p: 'Which lever needs nobody’s permission?',
+  p2a: 'Hiring twenty workers.',
+  p2b: 'A bank loan for a shop.',
+  p2c: 'An online course you record yourself.',
+  p2y: 'Right. Media like a recorded course can be made and copied without anyone’s approval.',
+  p2na: 'Workers must agree to follow you.',
+  p2nb: 'The bank must decide to trust you with its money.',
+  p3p: 'A friend offers Faisal a “sure” scheme that doubles money in a month, if he puts in all his savings. What fits this chapter?',
+  p3a: 'Go all in: the upside is huge.',
+  p3b: 'Skip it, or risk only a small amount he could afford to lose.',
+  p3c: 'Borrow extra so he doubles even more.',
+  p3y: 'Yes. Avoid ruin first: a loss you can survive lets you play again; losing everything ends the game.',
+  p3na: 'All in on one bet risks hitting zero, and zero can’t be undone.',
+  p3nc: 'Borrowing makes the fall deeper if the scheme fails.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'Studies show some programmers are a thousand times better than the average.',
+  p4r2: 'In many fields, a few top performers produce a large share of the results.',
+  p4r3: 'Programmer studies compare the best with the slowest, not with the average.',
+  p4r4: 'A thousandfold gap in results proves one person is a thousand times more able.',
+  p4w1: 'False. Studies of programmers on the same task found best-to-worst gaps of about 5 to 25 times, not 1,000 against the average.',
+  p4w2: 'True. A 2012 study of over 600,000 people found this in most of the 198 groups it looked at.',
+  p4w3: 'True. Best against worst makes the gap look as big as it can be.',
+  p4w4: 'False. Huge gaps come mostly from reach: leverage, plus some luck.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'ഇവയിൽ ഏതാണ് ഫൈസലിന് നേട്ടത്തിൽ ഒരു പങ്ക് നൽകുന്നത്?',
+  q1a: 'മാസം 200 ദിർഹം ശമ്പള വർധന.',
+  q1b: 'എല്ലാ മാസവും ഒരു ലിസ്റ്റഡ് കമ്പനിയുടെ കുറച്ച് ഓഹരികൾ വാങ്ങുന്നത്.',
+  q1c: 'വെള്ളിയാഴ്ചകളിൽ അധിക ഡെലിവറി ഷിഫ്റ്റ്.',
+  q1y: 'അതെ. ഓഹരി ഒരു ബിസിനസിലെ ചെറിയൊരു പങ്കാണ്: ബിസിനസ് വളരുമ്പോൾ അവന്റെ പങ്കും വളരും.',
+  q1na: 'ശമ്പള വർധനയും മണിക്കൂറിനുള്ള കൂലി തന്നെ. അവൻ നിർത്തിയാൽ അതും നിൽക്കും.',
+  q1nc: 'കൂടുതൽ ഷിഫ്റ്റ് എന്നാൽ കൂടുതൽ മണിക്കൂർ വാടകയ്ക്ക് കൊടുക്കൽ, ഉടമസ്ഥതയല്ല.',
+  q2p: 'ഇതിന് മറ്റൊരാളുടെ സമ്മതം വേണോ? ഓരോന്നും തരംതിരിക്കൂ.',
+  q2y: 'സമ്മതം വേണം', q2n: 'അനുവാദം വേണ്ട',
+  q2r1: 'പുതിയ കടയ്ക്കായി ഇരുപത് പേരെ ജോലിക്കെടുക്കൽ',
+  q2r2: 'ഒരു പാചക പരമ്പര റെക്കോർഡ് ചെയ്ത് ഓൺലൈനിൽ ഇടൽ',
+  q2r3: 'ഒരു റെസ്റ്റോറന്റിനായി നിക്ഷേപകരിൽ നിന്ന് പണം സമാഹരിക്കൽ',
+  q2r4: 'വൈകുന്നേരങ്ങളിൽ ഒരു ചെറിയ ആപ്പ് എഴുതൽ',
+  q2w1: 'സമ്മതം വേണം: ഇരുപത് പേർ നിങ്ങളോടൊപ്പം ജോലി ചെയ്യാൻ തയ്യാറാകണം.',
+  q2w2: 'അനുവാദം വേണ്ട: ഒരു ഫോണും ഇന്റർനെറ്റും മതി.',
+  q2w3: 'സമ്മതം വേണം: നിക്ഷേപകർ അവരുടെ പണം നൽകി നിങ്ങളെ വിശ്വസിക്കണം.',
+  q2w4: 'അനുവാദം വേണ്ട: കോഡിന് വേണ്ടത് ഒരു കമ്പ്യൂട്ടറാണ്, ആരുടെയും അംഗീകാരമല്ല.',
+  q3p: 'ഡെവലപ്പർക്ക് കോൺട്രാക്ടറേക്കാൾ എത്രയോ കൂടുതൽ ഉണ്ടാക്കാം. ഈ അധ്യായം അനുസരിച്ച്, എന്തുകൊണ്ട്?',
+  q3a: 'അദ്ദേഹം സൈറ്റിൽ എത്രയോ കൂടുതൽ മണിക്കൂർ ജോലി ചെയ്യുന്നു.',
+  q3b: 'കൂടുതൽ റിസ്കും ഉത്തരവാദിത്തവും ഏറ്റെടുക്കുന്നു, പണവും ആളുകളും ലിവറേജായി ഉപയോഗിക്കുന്നു, കൂടുതൽ സ്പെസിഫിക് നോളജും വേണം.',
+  q3c: 'സ്ഥലത്തിന്റെ കാര്യത്തിൽ വെറും ഭാഗ്യം.',
+  q3y: 'ശരി. ഓരോ പടിയിലും ലിവറേജും ഉത്തരവാദിത്തവും സ്പെസിഫിക് നോളജും കൂടുന്നു, ഒപ്പം നേട്ടവും.',
+  q3na: 'മണിക്കൂറുകൾ കൽപ്പണിക്കാരന്റെ കളിയാണ്. ഡെവലപ്പറുടെ അധിക നേട്ടം ലിവറേജിൽ നിന്നും റിസ്കിൽ നിന്നുമാണ്, സമയത്തിൽ നിന്നല്ല.',
+  q3nc: 'ഭാഗ്യത്തിനും പങ്കുണ്ട്. പക്ഷേ വായ്പയും അനുമതികളും, പരാജയപ്പെട്ടാലുള്ള റിസ്കും ചുമക്കുന്നത് അദ്ദേഹമാണ്.',
+  p1p: 'ഡോക്ടർ റഹീമിന് സാമ്പത്തിക സ്വാതന്ത്ര്യത്തിലേക്ക് ഒരു വഴി വേണം. ഏത് ചുവടാണ് അദ്ദേഹത്തിന് ഇക്വിറ്റി നൽകുന്നത്?',
+  p1a: 'ആശുപത്രിയിൽ കൂടുതൽ നൈറ്റ് ഷിഫ്റ്റുകൾ എടുക്കൽ.',
+  p1b: '10% കൂടുതൽ ശമ്പളം തരുന്ന ആശുപത്രിയിലേക്ക് മാറൽ.',
+  p1c: 'രണ്ട് സഹപ്രവർത്തകരോടൊപ്പം ഒരു ക്ലിനിക്കിൽ പങ്കാളിയാകൽ.',
+  p1y: 'അതെ. പങ്കാളിയെന്ന നിലയിൽ ക്ലിനിക്കിന്റെ ഒരു ഭാഗം അദ്ദേഹത്തിന് സ്വന്തമാണ്, അതിന്റെ നേട്ടത്തിലും പങ്കുണ്ട്.',
+  p1na: 'കൂടുതൽ ഷിഫ്റ്റ് എന്നാൽ കൂടുതൽ മണിക്കൂർ വാടകയ്ക്ക്; അദ്ദേഹം നിർത്തിയാൽ ശമ്പളവും നിൽക്കും.',
+  p1nb: 'കൂടുതൽ ശമ്പളവും സമയത്തിനുള്ള കൂലി തന്നെ, ബിസിനസിലെ പങ്കല്ല.',
+  p2p: 'ഏത് ലിവറിനാണ് ആരുടെയും അനുവാദം വേണ്ടാത്തത്?',
+  p2a: 'ഇരുപത് പണിക്കാരെ ജോലിക്കെടുക്കൽ.',
+  p2b: 'ഒരു കടയ്ക്കായി ബാങ്ക് വായ്പ.',
+  p2c: 'നിങ്ങൾ തന്നെ റെക്കോർഡ് ചെയ്യുന്ന ഒരു ഓൺലൈൻ കോഴ്സ്.',
+  p2y: 'ശരി. റെക്കോർഡ് ചെയ്ത കോഴ്സ് പോലുള്ള മീഡിയ ആരുടെയും അംഗീകാരമില്ലാതെ ഉണ്ടാക്കാം, പകർത്താം.',
+  p2na: 'പണിക്കാർ നിങ്ങളെ പിന്തുടരാൻ തയ്യാറാകണം.',
+  p2nb: 'ബാങ്ക് തങ്ങളുടെ പണം നൽകി നിങ്ങളെ വിശ്വസിക്കാൻ തീരുമാനിക്കണം.',
+  p3p: 'ഒരു മാസം കൊണ്ട് പണം ഇരട്ടിയാക്കുന്ന ഒരു “ഉറപ്പുള്ള” സ്കീം ഒരു കൂട്ടുകാരൻ ഫൈസലിന് മുന്നിൽ വെക്കുന്നു, സമ്പാദ്യം മുഴുവൻ ഇട്ടാൽ. ഈ അധ്യായത്തിന് ചേരുന്നത് ഏത്?',
+  p3a: 'മുഴുവനും ഇടുക: നേട്ടം വലുതാണ്.',
+  p3b: 'ഒഴിവാക്കുക, അല്ലെങ്കിൽ നഷ്ടപ്പെട്ടാലും താങ്ങാവുന്ന ചെറിയൊരു തുക മാത്രം.',
+  p3c: 'കൂടുതൽ ഇരട്ടിക്കാൻ കടം കൂടി വാങ്ങുക.',
+  p3y: 'അതെ. ആദ്യം സർവനാശം ഒഴിവാക്കുക: താങ്ങാവുന്ന നഷ്ടമാണെങ്കിൽ വീണ്ടും കളിക്കാം; എല്ലാം പോയാൽ കളി കഴിഞ്ഞു.',
+  p3na: 'ഒരൊറ്റ പന്തയത്തിൽ എല്ലാം ഇട്ടാൽ പൂജ്യത്തിലെത്താം, പൂജ്യം തിരുത്താനാകില്ല.',
+  p3nc: 'സ്കീം പൊളിഞ്ഞാൽ, കടം വീഴ്ചയെ കൂടുതൽ ആഴമുള്ളതാക്കും.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'ചില പ്രോഗ്രാമർമാർ ശരാശരിയേക്കാൾ ആയിരം മടങ്ങ് മികച്ചവരാണെന്ന് പഠനങ്ങൾ കാണിക്കുന്നു.',
+  p4r2: 'പല മേഖലകളിലും, കുറച്ച് മികച്ചവരാണ് ഫലത്തിന്റെ വലിയൊരു പങ്ക് ഉണ്ടാക്കുന്നത്.',
+  p4r3: 'പ്രോഗ്രാമർ പഠനങ്ങൾ മികച്ചവരെ താരതമ്യം ചെയ്യുന്നത് ഏറ്റവും പതുക്കെയുള്ളവരോടാണ്, ശരാശരിയോടല്ല.',
+  p4r4: 'ഫലത്തിൽ ആയിരം മടങ്ങ് വിടവുണ്ടെങ്കിൽ, ഒരാൾക്ക് ആയിരം മടങ്ങ് കഴിവുണ്ടെന്ന് അത് തെളിയിക്കുന്നു.',
+  p4w1: 'തെറ്റ്. ഒരേ ജോലി ചെയ്ത പ്രോഗ്രാമർമാരിൽ, മികച്ചവരും മോശക്കാരും തമ്മിലുള്ള വിടവ് ഏകദേശം 5 മുതൽ 25 മടങ്ങ് വരെയായിരുന്നു, ശരാശരിയേക്കാൾ 1,000 മടങ്ങല്ല.',
+  p4w2: 'ശരി. 6 ലക്ഷത്തിലേറെ ആളുകളെ നോക്കിയ 2012-ലെ ഒരു പഠനം, 198 ഗ്രൂപ്പുകളിൽ മിക്കതിലും ഇത് കണ്ടെത്തി.',
+  p4w3: 'ശരി. മികച്ചവരെയും മോശക്കാരെയും താരതമ്യം ചെയ്യുമ്പോൾ വിടവ് പരമാവധി വലുതായി തോന്നും.',
+  p4w4: 'തെറ്റ്. വലിയ വിടവുകൾ മിക്കവാറും വരുന്നത് എത്തുന്ന ദൂരത്തിൽ നിന്നാണ്: ലിവറേജും കുറച്ച് ഭാഗ്യവും.',
+});
+const PRACTICE = [
+  { id: 'p-equity', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 2, L('p1y'), [L('p1na'), L('p1nb'), null]) },
+  { id: 'p-permission', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 2, L('p2y'), [L('p2na'), L('p2nb'), null]) },
+  { id: 'p-ruin', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 1, L('p3y'), [L('p3na'), null, L('p3nc')]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['f'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['t'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['t'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['f'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('almanack:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>
