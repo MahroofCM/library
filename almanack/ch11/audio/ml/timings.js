@@ -39,6 +39,7 @@ window.TIMINGS = {
   "dur": 40.992,
   "marks": {
    "how": 1.218,
+   "naval": 2.639,
    "scale": 8.907,
    "two": 9.433,
    "four": 12.143,

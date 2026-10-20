@@ -112,7 +112,7 @@ Object.assign(TXT.ml, {
   castle: 'മണൽക്കൊട്ടാരം', tide: 'തിരമാല കൊണ്ടുപോകും', child: 'കുട്ടി: പൂർണമായും ഇവിടെ', firefly: 'മിന്നാമിനുങ്ങിന്റെ മിന്നൽ',
   job: 'വായിക്കൽ: നിങ്ങളുടെ ചുമതല', wont: 'ലോകം: മിക്കവാറും ഉറച്ചത്', you: 'നിങ്ങൾക്ക് വളയാം',
   pinged: 'ഫോണിലൂടെ ഇടയ്ക്കിടെ ചോദ്യം', people2: '≈ 2,250 ആളുകൾ', wandered: 'മനസ്സ് അലയുന്നു', half: '≈ 47% സമയം',
-  less: 'സന്തോഷം കുറവ്, അലയുമ്പോൾ', little2: 'അത്ഭുതകരമാംവിധം കുറച്ച്', light: 'ചെറിയ ഡംബെൽ', barbell: 'ബാർബെൽ, ഭാരം നിറച്ചത്',
+  less: 'സന്തോഷം കുറവ്', little2: 'അത്ഭുതകരമാംവിധം കുറച്ച്', light: 'ചെറിയ ഡംബെൽ', barbell: 'ബാർബെൽ, ഭാരം നിറച്ചത്',
   trials2: '47 പരീക്ഷണങ്ങൾ', anxiety: 'ഉത്കണ്ഠ ↓', depression: 'വിഷാദം ↓', better: 'വ്യായാമത്തേക്കാൾ മെച്ചമല്ല', real: 'യഥാർഥ സഹായം, കവചമല്ല',
   peace: 'സമാധാനം', accept: 'സ്വീകരിക്കൽ: ഉള്ളതിനെ', rearr: 'ലോകം മാറ്റിയൊരുക്കൽ', control: 'നിയന്ത്രിക്കാനാവാത്തത്: വിട്ടുകളയൂ',
   identity: 'സ്വത്വം: അയച്ചുപിടിക്കൂ', quiet: 'ബഹളം കുറയ്ക്കൂ', politics: 'രാഷ്ട്രീയം ഒഴിവാക്കൂ', unhappy: 'അസന്തുഷ്ടരുടെ കൂട്ട് വേണ്ട',
@@ -317,7 +317,7 @@ const BEATS = [
     const p = panel(0);
     // Naval and the question he once waved away
     const nv = a11Icon(p, 250, 600, EV.dim, 2.4);
-    lab(p, 'naval', 250, 660, m('how'), { size: 28, fill: EV.ink, weight: 600 });
+    lab(p, 'naval', 250, 660, m('naval'), { size: 28, fill: EV.ink, weight: 600 });
     const bb = evBubble(p, L('howQ'), { x: 330, y: 420, w: 400, size: 28 });
     tw(bb, { o: 1, s: 1 }, m('how'), .4, back);
     tw(bb, { o: 0, x: 180 }, m('scale'), .6);
@@ -477,8 +477,8 @@ const BEATS = [
   ['positive', 'b_positive', (m, D) => {
     const p = panel(0);
     lab(p, 'positive', 800, 95, m('positive'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
-    const yy = a11YinYang(p, { x: 800, y: 390, r: 140, o: 0 });
-    put(yy, { s: .4 }); tw(yy, { o: 1, s: 1 }, m('opposite'), .6, back);
+    const yy = a11YinYang(p, { x: 800, y: 390, r: 140, o: .14 });
+    put(yy, { s: .8 }); tw(yy, { o: 1, s: 1 }, m('opposite'), .6, back);
     prog(q => { const t = q * D; put(yy, { r: 40 * Math.max(0, t - m('opposite')) }); }, 0, D, lin);
     lab(p, 'opposite', 800, 600, m('opposite'), { size: 30, fill: EV.ink, maxW: 900 });
     lab(p, 'happy', 420, 360, m('happy'), { size: 48, font: SERIF, weight: 600, fill: EV.goldHi });
@@ -581,8 +581,8 @@ const BEATS = [
     lab(p, 'jobless', OX + 345, 390, m('jobless'), { size: 22, fill: TIME, anchor: 'start', maxW: 150 });
     lab(p, 'disability', OX + 345, 444, m('disability'), { size: 22, fill: STATUS, anchor: 'start', maxW: 150 });
     lab(p, 'lower', 775, 575, m('lower'), { size: 26, fill: EV.ink, maxW: 420 });
-    lab(p, 'strong', 650, 665, m('strong'), { size: 28, italic: true, font: SERIF, fill: EV.dim, maxW: 360 });
-    a11Stamp(p, 'tooS', 930, 662, m('tooS'));
+    lab(p, 'strong', 780, 665, m('strong'), { size: 28, italic: true, font: SERIF, fill: EV.dim, maxW: 380, anchor: 'end' });
+    a11Stamp(p, 'tooS', 950, 662, m('tooS'));
     // thirty-nine trials: a small lift
     lab(p, 'trials', 1290, 225, m('trials'), { size: 28, weight: 600 });
     const sq = [];
@@ -684,7 +684,7 @@ const BEATS = [
     // pinged through the day
     const ph = a11Phone(p, { x: 270, y: 290, s: .62 });
     const rings = [0, 1, 2].map(() => mk('circle', { cx: 270, cy: 290, r: 60, fill: 'none', stroke: SCI, 'stroke-width': 2.5 }, p));
-    prog(q => { const t = q * D; rings.forEach((r, i) => { const v = t - m('pinged') - i * .35; if (v < 0 || v > 3) { put(r, { o: 0 }); return; } const u = (v % 1) ; r.setAttribute('r', 70 + 50 * u); put(r, { o: (1 - u) * .8 }); }); }, 0, D, lin);
+    prog(q => { const t = q * D; rings.forEach((r, i) => { const v = t - m('pinged') - i * .35, u = v < 0 || v > 3 ? 0 : v % 1; r.setAttribute('r', (70 + 50 * u).toFixed(1)); put(r, { o: v < 0 || v > 3 ? 0 : (1 - u) * .8 }); }); }, 0, D, lin);
     void ph;
     lab(p, 'pinged', 300, 445, m('pinged'), { size: 26, fill: EV.ink, maxW: 380 });
     lab(p, 'people2', 300, 490, m('people'), { size: 26, fill: EV.dim });
@@ -741,6 +741,7 @@ const BEATS = [
     // Naval's list, one tile per item
     const items = [['identity', 290, 370], ['quiet', 630, 370], ['politics', 970, 370], ['unhappy', 1310, 370], ['happyP', 460, 480], ['philo', 800, 480], ['meditate', 1140, 480]];
     const mk_ = { happyP: 'happy' };
+    items.forEach(([k, x, y]) => mk('rect', { x: x - 150, y: y - 30, width: 300, height: 56, rx: 28, fill: 'none', stroke: EV.faint, 'stroke-width': 2, 'stroke-dasharray': '8 8' }, p));
     items.forEach(([k, x, y]) => {
       const avoid = k === 'politics' || k === 'unhappy';
       const g = a11Pill(p, k, x, y, { size: 24, color: avoid ? STATUS : WEALTH, ink: EV.ink, minW: 220, maxPill: 320 });

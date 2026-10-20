@@ -34,6 +34,7 @@ window.TIMINGS = {
  "scale": {
   "dur": 33.6,
   "marks": {
+   "naval": 1.921,
    "how": 2.289,
    "scale": 5.961,
    "two": 8.092,
