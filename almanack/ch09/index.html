@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Better decisions, mental models · The Almanack of Naval Ravikant, Chapter 9">
+<meta property="og:description" content="A 9-minute animated lesson in English and Malayalam: why leverage makes every decision bigger, and the few mental models worth keeping: inversion, compounding, owners and agents, falsifiability.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/ch09/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<title>Better decisions, mental models · The Almanack of Naval Ravikant</title>
+<meta name="description" content="An animated, narrated lesson on The Almanack of Naval Ravikant: decisions under leverage, principles over memories, inversion, compound interest, the principal-agent problem, falsifiability, honest feedback, 'if you can't decide, it's no' and running uphill. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'നല്ല തീരുമാനങ്ങൾ, മാനസിക മാതൃകകൾ · The Almanack of Naval Ravikant';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/ymu.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/almanack/ch09/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Better decisions, mental models', kicker: 'PART 1 · WEALTH · CHAPTER 9', sub: 'Why every choice carries more weight now, and the thinking tools worth keeping close',
+  credit: 'A study companion to The Almanack of Naval Ravikant, by Eric Jorgenson',
+  b_intro: 'Title', b_lever: 'Decisions are everything', b_models: 'Models, not memories', b_q1: 'Quick check', b_invert: 'Inversion',
+  b_compound: 'Compound interest', b_agent: 'Owners and agents', b_q2: 'Quick check', b_falsify: 'Can it be proven wrong?',
+  b_check: 'Science check', b_honest: 'Honest, not harsh', b_no: 'Can’t decide? No', b_uphill: 'Run uphill', b_q3: 'Quick check',
+  b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  every: 'decision-making is everything', seventy: '70 / 100', eighty: '80 / 100', hundreds: '“hundreds of times more”? his guess',
+  lev: '× leverage', route: 'Faisal’s route', minutes: 'a few minutes', exporter: 'an exporter, Kochi', staff: '100 staff', ships: 'ships',
+  software: 'software', crores: '₹ crores',
+  predict: 'a prediction machine', happened: '“it happened before, so it will again”', gold: 'gold price', moment: 'one moment',
+  principles: 'principles that hold almost everywhere', models: 'mental models', sayings: 'short sayings', pointer: 'pointer → a lived lesson',
+  without: 'without the lived lesson', poster: 'just a poster',
+  inversion: 'inversion: flip the question', rules: 'rule out what won’t work', cafe: 'Hiba’s café · Thrissur', cafeSign: 'CAFÉ',
+  kills: 'what kills a small café?', rent: 'rent too high', debt: 'borrowing too much', partner: 'a partner she can’t trust',
+  rise: 'odds rise', skipping: 'skip the big mistakes',
+  compound: 'compound interest', ten: '10% a year', v100: 'AED 100', v110: 'AED 110', v121: 'AED 121', v133: 'AED 133',
+  thirty: '30% a year · 30 years', times: '× 2,600', knowledge: 'knowledge', skills: 'skills', trust: 'trust', small: 'small, steady gains, left alone',
+  principal: 'principal = the owner', agent: 'agent = acts for another', care: 'cares: it’s theirs', self: 'looks after themselves',
+  junaid: 'Junaid · 4 bakeries', bakery: 'JUNAID’S', own: 'he runs it himself', salary: 'fixed salary', share: 'a share of the profit',
+  acts: 'acts like an owner', tie: 'tie pay to value → agents become principals',
+  falsify: 'falsifiability', wrong: 'could a result prove it wrong?', oil: 'an oil that “stops hair fall”', believe: '“…if you truly believe.”',
+  enough: '“You didn’t believe enough.”', nothing: 'nothing counts against it', halves: '“hair fall halves in 8 weeks”',
+  tested: 'can be tested · can fail', easiest: 'easiest to fool: you', suits: 'suits you?', higher: 'set a higher bar',
+  sci: 'Science check', claim: '“1 hour a day → the top in 7 years”', asis: 'hard to test', success: 'success = ?', ninetynine: '99 studies',
+  read: 'reading more →', stronger: 'stronger vocabulary, language', pre: 'preschool', uni: 'university', link: 'link ≠ cause',
+  noone: 'no one has tested the 7-year promise', habit: 'a great habit, not a guarantee',
+  honest: 'honesty', fooled: 'lie → you’ve fooled yourself', praise: 'praise: specific, by name', criticize: 'criticism: general, no names',
+  anees: 'Anees · the science fair', habitH: '“late reports”: a habit, no names', work: 'egos work for you',
+  cant: 'can’t decide?', no: '→ no', faisal: 'Faisal', stall: '“A share in my shawarma stall, Ajman?”', pros: 'pros', cons: 'cons', even: '= even',
+  lock: 'locked in for years', tenY: 'business · ~10 yrs', life: 'marriage · for life', city: 'city · 10–20 yrs', yrs: 'years',
+  village: '~150 · a village', options: 'options today', disputed: '150? disputed', sure: 'say yes only when very sure',
+  uphill: 'run uphill', equal: 'two paths, look equal', hurts: 'hurts more now', dodges: 'the brain dodges short-term pain',
+  overrates: 'easy path: overrated', better: 'hard path: better later', long: 'gains pile up in the long run',
+  tv: 'an easy hour of TV', book: 'a book that confuses her', confusion: 'confusion = a sore muscle', growing: 'a mind growing at its edge',
+  w1: 'Leverage makes every decision bigger, so a small edge in judgment becomes a big difference.',
+  w2: 'Think in principles: flip the question to avoid big mistakes, and let compounding work.',
+  w3: 'Tie pay to value to turn agents into owners. Trust claims that could be proven wrong.',
+  w4: 'Can’t decide? Then it’s a no. Two equal paths? Take the harder one.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'നല്ല തീരുമാനങ്ങൾ, മാനസിക മാതൃകകൾ', kicker: 'ഭാഗം 1 · സമ്പത്ത് · അധ്യായം 9',
+  sub: 'ഓരോ തീരുമാനത്തിനും ഇന്ന് ഭാരം കൂടുന്നതും, കൂടെ കരുതേണ്ട ചിന്താ ഉപകരണങ്ങളും',
+  credit: 'The Almanack of Naval Ravikant · എറിക് ജോർഗൻസൻ · പഠനസഹായി',
+  b_intro: 'തലക്കെട്ട്', b_lever: 'തീരുമാനമാണ് എല്ലാം', b_models: 'ഓർമ്മയല്ല, മാതൃകകൾ', b_q1: 'ചെറിയ പരിശോധന', b_invert: 'തലതിരിച്ച ചിന്ത',
+  b_compound: 'കൂട്ടുപലിശ', b_agent: 'ഉടമയും ഏജന്റും', b_q2: 'ചെറിയ പരിശോധന', b_falsify: 'തെറ്റെന്ന് തെളിയിക്കാമോ?',
+  b_check: 'ശാസ്ത്രീയ പരിശോധന', b_honest: 'സത്യസന്ധത, പരുഷതയല്ല', b_no: 'സംശയമോ? വേണ്ട', b_uphill: 'കയറ്റം കയറൂ', b_q3: 'ചെറിയ പരിശോധന',
+  b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  every: 'തീരുമാനമെടുക്കലാണ് എല്ലാം', seventy: '70 / 100', eighty: '80 / 100', hundreds: '“നൂറുകണക്കിന് മടങ്ങ്”? ഒരു ഊഹം',
+  lev: '× ലിവറേജ്', route: 'ഫൈസലിന്റെ റൂട്ട്', minutes: 'ഏതാനും മിനിറ്റ്', exporter: 'കയറ്റുമതിക്കാരൻ, കൊച്ചി', staff: '100 ജീവനക്കാർ', ships: 'കപ്പലുകൾ',
+  software: 'സോഫ്റ്റ്‌വെയർ', crores: '₹ കോടികൾ',
+  predict: 'പ്രവചന യന്ത്രം', happened: '“മുൻപ് സംഭവിച്ചു, ഇനിയും സംഭവിക്കും”', gold: 'സ്വർണവില', moment: 'ഒരൊറ്റ നിമിഷം',
+  principles: 'തത്വങ്ങൾ: മിക്കയിടത്തും ശരി', models: 'മാനസിക മാതൃകകൾ', sayings: 'ചെറിയ വാക്യങ്ങൾ', pointer: 'ചൂണ്ടുപലക → ജീവിച്ചറിഞ്ഞ പാഠം',
+  without: 'അനുഭവമില്ലെങ്കിൽ', poster: 'വെറുമൊരു പോസ്റ്റർ',
+  inversion: 'തലതിരിച്ചുള്ള ചിന്ത', rules: 'വിജയിക്കാത്തവ ഒഴിവാക്കൂ', cafe: 'ഹിബയുടെ കഫേ · തൃശ്ശൂർ', cafeSign: 'CAFÉ',
+  kills: 'കഫേയെ പൂട്ടിക്കുന്നത്?', rent: 'താങ്ങാനാവാത്ത വാടക', debt: 'അമിതമായ കടം', partner: 'വിശ്വസിക്കാനാവാത്ത പങ്കാളി',
+  rise: 'സാധ്യത കൂടും', skipping: 'വലിയ തെറ്റുകൾ ഒഴിവാക്കൂ',
+  compound: 'കൂട്ടുപലിശ', ten: '10% · വർഷം', v100: 'AED 100', v110: 'AED 110', v121: 'AED 121', v133: 'AED 133',
+  thirty: '30% · 30 വ.', times: '× 2,600', knowledge: 'അറിവ്', skills: 'കഴിവുകൾ', trust: 'വിശ്വാസം', small: 'ചെറിയ, സ്ഥിരമായ നേട്ടങ്ങൾ',
+  principal: 'ഉടമ', agent: 'ഏജന്റ്', care: 'ശ്രദ്ധയുണ്ട്: സ്വന്തമാണ്', self: 'സ്വന്തം കാര്യം',
+  junaid: 'ജുനൈദ് · 4 ബേക്കറികൾ', bakery: 'JUNAID’S', own: 'നേരിട്ട് നടത്തുന്നത്', salary: 'നിശ്ചിത ശമ്പളം', share: 'ലാഭത്തിൽ ഒരു പങ്ക്',
+  acts: 'ഉടമയെപ്പോലെ', tie: 'മൂല്യത്തിന് ശമ്പളം → ഏജന്റുമാർ ഉടമകൾ',
+  falsify: 'ഫാൾസിഫയബിലിറ്റി', wrong: 'തെറ്റാണെന്ന് തെളിയിക്കാമോ?', oil: 'എണ്ണ: “മുടികൊഴിച്ചിൽ നിർത്തും”', believe: '“…മനസ്സറിഞ്ഞ് വിശ്വസിച്ചാൽ.”',
+  enough: '“വേണ്ടത്ര വിശ്വസിച്ചില്ല.”', nothing: 'ഒന്നിനും എതിർക്കാനാവില്ല', halves: '“8 ആഴ്ചയിൽ മുടികൊഴിച്ചിൽ പകുതി”',
+  tested: 'പരീക്ഷിക്കാം · തോൽക്കാം', easiest: 'എളുപ്പം പറ്റിക്കാവുന്നത്: നിങ്ങളെ', suits: 'അനുകൂലമാണോ?', higher: 'കടമ്പ ഉയർത്തൂ',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', claim: '“ദിവസം 1 മണിക്കൂർ → 7 വർഷത്തിൽ മുൻനിര”', asis: 'പരീക്ഷിക്കാൻ പ്രയാസം', success: 'വിജയം = ?', ninetynine: '99 പഠനങ്ങൾ',
+  read: 'വായന കൂടുതൽ →', stronger: 'പദസമ്പത്ത്, ഭാഷാശേഷി', pre: 'പ്രീസ്കൂൾ', uni: 'യൂണിവേഴ്സിറ്റി', link: 'ബന്ധം ≠ കാരണം',
+  noone: 'ആരും പരീക്ഷിച്ചിട്ടില്ല: 7 വർഷ വാഗ്ദാനം', habit: 'മികച്ച ശീലം, ഉറപ്പല്ല',
+  honest: 'സത്യസന്ധത', fooled: 'കള്ളം → സ്വയം പറ്റിക്കൽ', praise: 'പ്രശംസ: പേരെടുത്ത്', criticize: 'വിമർശനം: പൊതുവായി',
+  anees: 'അനീസ് · സയൻസ് മേള', habitH: 'ശീലം മാത്രം: “വൈകുന്ന റിപ്പോർട്ട്”', work: 'ഈഗോ അനുകൂലമാകും',
+  cant: 'തീരുമാനിക്കാനാവുന്നില്ലേ?', no: '→ ഇല്ല', faisal: 'ഫൈസൽ', stall: '“അജ്മാനിൽ ഷവർമ കടയിൽ ഒരു പങ്ക്?”', pros: 'ഗുണങ്ങൾ', cons: 'ദോഷങ്ങൾ', even: '= തുല്യം',
+  lock: 'കെട്ടിയിടും, വർഷങ്ങളോളം', tenY: 'ബിസിനസ് · ~10 വ.', life: 'വിവാഹം · ജീവിതം മുഴുവൻ', city: 'നഗരം · 10–20 വ.', yrs: 'വർഷം',
+  village: '~150 · ഒരു ഗ്രാമം', options: 'ഇന്നത്തെ സാധ്യതകൾ', disputed: '150? തർക്കത്തിൽ', sure: 'നല്ല ഉറപ്പുള്ളപ്പോൾ മാത്രം “അതെ”',
+  uphill: 'കയറ്റം കയറൂ', equal: 'തുല്യമെന്ന് തോന്നുന്ന രണ്ട് വഴികൾ', hurts: 'ഇപ്പോൾ കൂടുതൽ വേദന', dodges: 'തലച്ചോർ: ഉടനടി വേദന ഒഴിവാക്കും',
+  overrates: 'എളുപ്പവഴി: അമിത മാർക്ക്', better: 'കഠിനവഴി: പിന്നീട് മെച്ചം', long: 'നേട്ടം കുമിയുന്നത് ദീർഘകാലത്തിൽ',
+  tv: 'ടിവി · എളുപ്പമുള്ള മണിക്കൂർ', book: 'കുഴക്കുന്ന പുസ്തകം', confusion: 'കുഴപ്പം = വേദനിക്കുന്ന പേശി', growing: 'അതിരിൽ വളരുന്ന മനസ്സ്',
+  w1: 'ലിവറേജ് ഓരോ തീരുമാനത്തെയും വലുതാക്കുന്നു; വിവേകത്തിലെ ചെറിയ മുൻതൂക്കം വലിയ വ്യത്യാസമാകും.',
+  w2: 'തത്വങ്ങളിൽ ചിന്തിക്കൂ: ചോദ്യം തിരിച്ചിട്ട് വലിയ തെറ്റുകൾ ഒഴിവാക്കൂ, കൂട്ടുപലിശയെ പ്രവർത്തിക്കാൻ വിടൂ.',
+  w3: 'മൂല്യവുമായി ശമ്പളം ബന്ധിപ്പിച്ച് ഏജന്റുമാരെ ഉടമകളാക്കൂ. തെറ്റെന്ന് തെളിയിക്കാവുന്ന അവകാശവാദങ്ങളെ വിശ്വസിക്കൂ.',
+  w4: 'തീരുമാനിക്കാനാവുന്നില്ലേ? എങ്കിൽ വേണ്ട. രണ്ട് തുല്യ വഴികളോ? കഠിനമായത് തിരഞ്ഞെടുക്കൂ.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 9, title: L('title'), minutes: LANG === 'ml' ? 11 : 9, language: LANG, next: '../index.html#contents' };
+
+/* ---------- meaning colours (style.json look.meaning) ---------- */
+const WEALTH = EV.gold, MONEY = '#7cc79d', STATUS = '#e2694f', TIME = '#5fb3cf', SCI = '#9c84d8';
+
+/* ---------- chapter helpers (prefixed a9 to stay clear of engine globals) ---------- */
+// A label that fades in at t (beat clock, always a mark).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+const a9Ground = (p, y = 760, fill = '#0c1114') => {
+  mk('rect', { x: -10, y, width: 1620, height: 900 - y + 20, fill }, p);
+  path(p, `M0 ${y}H1600`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+};
+const a9Faisal = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#2f5f8f', '#21466b');
+const a9Junaid = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#e8dcc0', '#bfb093');
+const a9Hiba = (p, o) => { const P = evRecolor(evPerson(p, { kind: 'f', ...o }), '#b8862f', '#8f6620'); evScarf(P, '#3a2f4a'); return P; };
+const a9Sana = (p, o) => evRecolor(evPerson(p, { kind: 'f', ...o }), '#c0607e', '#94465f');
+const a9Shafeeq = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#a8553f', '#7f3e2d');
+const a9Man = (p, o, top = '#5a6470', topD = '#434b55') => evRecolor(evPerson(p, { kind: 'm', ...o }), top, topD);
+const a9Coin = (p, x, y, r = 16, color = WEALTH, o = 1) => {
+  const g = G(p, { x, y, o });
+  mk('circle', { cx: 0, cy: 0, r, fill: color }, g);
+  mk('circle', { cx: 0, cy: 0, r: r * .68, fill: 'none', stroke: '#080c0f', 'stroke-width': 2, opacity: .4 }, g);
+  return g;
+};
+function a9Icon(p, x, y, color = EV.dim, s = 1, o = 1) {
+  const g = G(p, { x, y, s, o });
+  g._head = mk('circle', { cx: 0, cy: -46, r: 14, fill: color }, g);
+  g._body = path(g, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: color });
+  return g;
+}
+// A rounded tag with a label, centred on (x, y); Malayalam is measured at full size.
+function a9Pill(p, key, x, y, { color = EV.gold, size = 30, fill = '#151d21', ink = EV.goldHi, minW = 160, o = 0 } = {}) {
+  const g = G(p, { x, y, o });
+  const w = Math.max(minW, evW(L(key), size) + 64);
+  mk('rect', { x: -w / 2, y: -32, width: w, height: 60, rx: 30, fill, stroke: color, 'stroke-width': 2 }, g);
+  evText(g, L(key), { x: 0, y: 8, size, fill: ink, maxW: w - 30 });
+  g._w = w;
+  return g;
+}
+function a9Phone(p, { x = 0, y = 0, s = 1, o = 1, w = 150, h = 280 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 22, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 3 }, g);
+  mk('rect', { x: -w / 2 + 10, y: -h / 2 + 26, width: w - 20, height: h - 52, rx: 6, fill: '#142026' }, g);
+  mk('rect', { x: -18, y: -h / 2 + 10, width: 36, height: 6, rx: 3, fill: '#2b3632' }, g);
+  g._scr = G(g);
+  return g;
+}
+// A small shop front, base at y = 0, with a sign; g._veil dims it.
+function a9Shop(p, sign, { x = 0, y = 0, s = 1, o = 1, awning = '#7a3b26' } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -120, y: -200, width: 240, height: 200, fill: '#1b2226', stroke: '#3a3f3a', 'stroke-width': 3 }, g);
+  path(g, 'M-136 -160H136L120 -130H-120Z', { fill: awning });
+  for (let i = 0; i < 6; i++) path(g, `M${-120 + i * 40} -130L${-100 + i * 40} -160`, { stroke: '#e8dcc8', 'stroke-width': 5, opacity: .5 });
+  mk('rect', { x: -110, y: -200, width: 220, height: 40, fill: '#151d21', stroke: EV.gold, 'stroke-width': 2 }, g);
+  T(g, L(sign), { x: 0, y: -170, size: 24, fill: EV.goldHi, weight: 700, anchor: 'middle', font: '"Outfit",sans-serif' });
+  mk('rect', { x: -96, y: -112, width: 120, height: 80, fill: '#2a2320', stroke: '#4a3a2c', 'stroke-width': 3 }, g);
+  [[-70, -60], [-36, -70], [-4, -58]].forEach(([cx, cy]) => mk('ellipse', { cx, cy, rx: 14, ry: 9, fill: '#c9894a' }, g));
+  mk('rect', { x: 40, y: -110, width: 60, height: 110, fill: '#2a211b', stroke: '#4a3a2c', 'stroke-width': 3 }, g);
+  g._veil = mk('rect', { x: -140, y: -205, width: 280, height: 210, fill: '#080c0f' }, g);
+  put(g._veil, { o: 0 });
+  return g;
+}
+// A tick or a cross, drawn on.
+const a9Tick = (p, x, y, color = MONEY, s = 1) => put(path(p, 'M-14 0L-4 11L16 -12', { stroke: color, 'stroke-width': 5 }, { d: 0 }), { x, y, s });
+const a9Cross = (p, x, y, color = STATUS, s = 1) => put(path(p, 'M-13 -13L13 13M13 -13L-13 13', { stroke: color, 'stroke-width': 5 }, { d: 0 }), { x, y, s });
+const a9Star = (p, x, y, r = 22, color = EV.goldHi) => { const s = G(p, { x, y }); path(s, `M0 ${-r}L${r * .27} ${-r * .27}L${r} 0L${r * .27} ${r * .27}L0 ${r}L${-r * .27} ${r * .27}L${-r} 0L${-r * .27} ${-r * .27}Z`, { fill: color }); put(s, { s: 0 }); return s; };
+// Science-check frame and tag on #scene, kept across panels inside the beat.
+function a9Sci(m, D) {
+  const keep = G(scene);
+  hide(keep, D - .45, .4);
+  prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+  const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+  draw(fr, m('sci'), 1);
+  const tag = G(keep, { x: 200, y: 60, o: 0 });
+  const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+  mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+  evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+  show(tag, m('sci'), .4);
+}
+// A tilted verdict stamp.
+function a9Stamp(p, key, x, y, t, color = SCI) {
+  const g = G(p, { x, y, o: 0, r: -7 });
+  const sw = Math.max(240, evW(L(key), 30) + 50);
+  mk('rect', { x: -sw / 2, y: -30, width: sw, height: 60, rx: 8, fill: 'none', stroke: color, 'stroke-width': 4 }, g);
+  evText(g, L(key), { x: 0, y: 11, size: 30, weight: 700, fill: color, maxW: sw - 30 });
+  put(g, { s: 1.5 }); tw(g, { o: 1, s: 1 }, t, .4, back);
+  return g;
+}
+// A signpost at a fork, base at (0,0); g._a points right, g._b points left (rotate them).
+function a9Sign(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('ellipse', { cx: 0, cy: 4, rx: 90, ry: 14, fill: '#151d21' }, g);
+  path(g, 'M-9 0V-330H9V0Z', { fill: '#4a3a2c', stroke: EV.goldLo, 'stroke-width': 2 });
+  g._a = G(g, { y: -290 });
+  path(g._a, 'M0 -30H210L246 0L210 30H0Z', { fill: '#151d21', stroke: EV.gold, 'stroke-width': 3 });
+  path(g._a, 'M40 0H180', { stroke: EV.goldHi, 'stroke-width': 3, opacity: .5 });
+  g._b = G(g, { y: -200 });
+  path(g._b, 'M0 -30H-210L-246 0L-210 30H0Z', { fill: '#151d21', stroke: TIME, 'stroke-width': 3 });
+  path(g._b, 'M-40 0H-180', { stroke: TIME, 'stroke-width': 3, opacity: .5 });
+  mk('circle', { cx: 0, cy: -336, r: 10, fill: EV.goldHi }, g);
+  return g;
+}
+// A small card, centred on (0,0).
+function a9Card(p, x, y, w, h, { o = 1, edge = EV.gold, fill = '#10171b', dash } = {}) {
+  const g = G(p, { x, y, o });
+  g._bg = mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 12, fill, stroke: edge, 'stroke-width': 2.5, ...(dash ? { 'stroke-dasharray': dash } : {}) }, g);
+  return g;
+}
+// A glass bottle of oil, base at (0,0).
+function a9Oil(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-26 0V-70Q-26 -86 -12 -92V-112H12V-92Q26 -86 26 -70V0Z', { fill: '#3a2f1a', stroke: EV.goldHi, 'stroke-width': 2.5 });
+  mk('rect', { x: -22, y: -60, width: 44, height: 56, rx: 4, fill: '#c98f3a', opacity: .75 }, g);
+  mk('rect', { x: -14, y: -124, width: 28, height: 14, rx: 3, fill: STATUS }, g);
+  mk('rect', { x: -18, y: -48, width: 36, height: 22, rx: 3, fill: '#efe6d2', opacity: .85 }, g);
+  return g;
+}
+// A television on a low stand, centred on (0,0).
+function a9TV(p, { x = 0, y = 0, o = 1 } = {}) {
+  const g = G(p, { x, y, o });
+  mk('rect', { x: -120, y: -75, width: 240, height: 150, rx: 10, fill: '#0f1518', stroke: EV.dim, 'stroke-width': 4 }, g);
+  g._scr = mk('rect', { x: -106, y: -62, width: 212, height: 124, rx: 4, fill: '#1c3440' }, g);
+  path(g, 'M-40 75L-56 104M40 75L56 104', { stroke: EV.dim, 'stroke-width': 4 });
+  return g;
+}
+// An open book, centred on (0,0).
+function a9Book(p, { x = 0, y = 0, o = 1 } = {}) {
+  const g = G(p, { x, y, o });
+  path(g, 'M0 -60Q-60 -80 -130 -64V64Q-60 48 0 68Q60 48 130 64V-64Q60 -80 0 -60Z', { fill: '#e8e4d8', stroke: EV.gold, 'stroke-width': 3 });
+  path(g, 'M0 -60V68', { stroke: '#8f8a7a', 'stroke-width': 2 });
+  let d = '';
+  for (let i = 0; i < 5; i++) { d += `M-110 ${-36 + i * 20}Q-60 ${-46 + i * 20} -16 ${-38 + i * 20}`; d += `M16 ${-38 + i * 20}Q60 ${-46 + i * 20} 110 ${-36 + i * 20}`; }
+  path(g, d, { stroke: '#8f8a7a', 'stroke-width': 2 });
+  return g;
+}
+// A small parcel with tape, centred on (0,0).
+function a9Box(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -60, y: -45, width: 120, height: 90, rx: 4, fill: '#8a6a44', stroke: '#5e4630', 'stroke-width': 2 }, g);
+  path(g, 'M-60 -10H60M-8 -45V45', { stroke: '#d9c49a', 'stroke-width': 7, opacity: .8 });
+  return g;
+}
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    evGlow(g, 800, 500, 280, 'Gold', .35);
+    // a signpost at a fork: its arms swing, then settle on a choice
+    const sg = a9Sign(g, { x: 800, y: 690 });
+    prog(q => { const t = q * D, k = Math.exp(-t * .4); put(sg._a, { r: 14 * k * Math.cos(t * 1.8) }); put(sg._b, { r: -12 * k * Math.cos(t * 1.6 + .6) }); }, 0, D, lin);
+    evText(g, L('kicker'), { x: 800, y: 150, size: 26, fill: EV.gold, weight: 500, ls: ML ? undefined : '6' });
+    const ti = evText(g, L('title'), { x: 800, y: 250, size: 84, font: SERIF, weight: 600, maxW: 1420, o: 0 });
+    tw(g, { o: 1 }, .15, .9, out);
+    put(ti, { y: 270 }); tw(ti, { y: 250, o: 1 }, m('title'), .7, out);
+    const sub = evText(scene, L('sub'), { x: 800, y: 765, size: 34, fill: EV.dim, o: 0, maxW: 1380, font: SERIF, italic: true });
+    put(sub, { y: 785 }); tw(sub, { y: 765, o: 1 }, m('sub'), .7, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 835, size: 24, fill: '#7a7466', o: 0, maxW: 1400 });
+    show(cr, m('sub'), 1);
+    tw(g, { o: 0 }, D - .6, .5); hide(sub, D - .6, .5); hide(cr, D - .6, .5);
+  }],
+
+  ['lever', 'b_lever', (m, D) => {
+    const p = panel(0);
+    lab(p, 'every', 800, 100, m('every'), { size: 44, font: SERIF, weight: 600, fill: EV.gold, maxW: 1300 });
+    // two people's records: ten calls each, seven and eight of them right (empty rings open the beat)
+    const rings = G(p, { o: 0 }), dots = [];
+    show(rings, .3, .4);
+    [[270, 7, 'seventy'], [420, 8, 'eighty']].forEach(([y, n, k]) => {
+      a9Icon(rings, 80, y + 26, EV.dim, .9);
+      for (let i = 0; i < 10; i++) {
+        const x = 150 + i * 46;
+        mk('circle', { cx: x, cy: y, r: 15, fill: 'none', stroke: EV.faint, 'stroke-width': 2 }, rings);
+        if (i < n) { const d = evDot(p, x, y, 15, i === 7 ? EV.goldHi : WEALTH); put(d, { s: 0 }); dots.push([d, m(k) + i * .04, .3, 's']); }
+      }
+      lab(p, k, 357, y + 62, m(k), { size: 28, fill: EV.ink, weight: 600 });
+    });
+    evSeq(dots, D);
+    lab(p, 'hundreds', 357, 580, m('hundreds'), { size: 28, fill: EV.dim, italic: true, font: SERIF, maxW: 600 });
+    // leverage: the same small edge, carried a short way or a long way
+    const thin = path(p, 'M640 400L860 290', { stroke: TIME, 'stroke-width': 3 }, { d: 0 });
+    const thick = path(p, 'M640 440L860 590', { stroke: WEALTH, 'stroke-width': 12 }, { d: 0 });
+    draw(thin, m('lev'), .6); draw(thick, m('lev'), .6);
+    lab(p, 'lev', 760, 445, m('lev'), { size: 34, fill: WEALTH, weight: 700 });
+    const fz = a9Faisal(p, { x: 930, y: 330, s: .32, o: 0 });
+    show(fz.g, m('route'), .4);
+    lab(p, 'route', 1010, 260, m('route'), { size: 30, fill: EV.ink, weight: 600, anchor: 'start' });
+    lab(p, 'minutes', 1010, 310, m('minutes'), { size: 28, fill: TIME, anchor: 'start' });
+    const ex = a9Man(p, { x: 930, y: 700, s: .42, o: 0 });
+    show(ex.g, m('exporter'), .4);
+    lab(p, 'exporter', 930, 752, m('exporter'), { size: 26, fill: EV.ink, weight: 600, maxW: 300 });
+    const crew = [];
+    for (let i = 0; i < 5; i++) crew.push([a9Icon(p, 1020 + i * 45, 600, EV.dim, .6, 0), m('staff') + i * .05, .3]);
+    evSeq(crew, D);
+    lab(p, 'staff', 1110, 640, m('staff'), { size: 24, fill: EV.dim });
+    const sh = evBoat(p, { x: 1320, y: 590, s: .2, o: 0 }); show(sh, m('ships'), .4);
+    lab(p, 'ships', 1320, 640, m('ships'), { size: 24, fill: EV.dim });
+    const ph = a9Phone(p, { x: 1490, y: 572, s: .28, o: 0 }); show(ph, m('software'), .4);
+    lab(p, 'software', 1490, 640, m('software'), { size: 24, fill: EV.dim });
+    const cr = evText(p, L('crores'), { x: 1250, y: 730, size: 52, fill: WEALTH, weight: 700, o: 0 });
+    put(cr, { s: .6 }); tw(cr, { o: 1, s: 1 }, m('crores'), .45, back);
+  }],
+
+  ['models', 'b_models', (m, D) => {
+    const p = panel(0);
+    const br = evBrain(p, { x: 300, y: 290, s: .6, o: 0 });
+    show(br, .3, .5);
+    evFire(br, m('predict'), .6);
+    lab(p, 'predict', 300, 450, m('predict'), { size: 30, fill: EV.goldHi, weight: 600 });
+    // memory-style prediction: last year's jump, extended into next year
+    lab(p, 'happened', 1000, 150, m('happened'), { size: 32, font: SERIF, italic: true, fill: EV.ink, maxW: 800 });
+    const OX = 720, OY = 400;
+    const ax = path(p, `M${OX} ${OY - 200}V${OY}H${OX + 470}`, { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 });
+    draw(ax, m('happened'), .5);
+    const H = [60, 70, 80, 95, 170];
+    const bars = H.map((h, i) => mk('rect', { x: OX + 25 + i * 70, y: OY, width: 50, height: 0, fill: i === 4 ? EV.goldHi : WEALTH }, p));
+    prog(q => { const t = q * D; bars.forEach((b, i) => { const hh = H[i] * io(evU(t, m('gold') + i * .1, .4)); b.setAttribute('height', hh); b.setAttribute('y', OY - hh); }); }, 0, D, lin);
+    lab(p, 'gold', OX + 200, OY + 42, m('gold'), { size: 26, fill: WEALTH });
+    const qb = G(p, { o: 0 });
+    mk('rect', { x: OX + 375, y: OY - 175, width: 50, height: 175, fill: 'none', stroke: STATUS, 'stroke-width': 2.5, 'stroke-dasharray': '7 6' }, qb);
+    evText(qb, '?', { x: OX + 400, y: OY - 190, size: 40, weight: 700, fill: STATUS });
+    show(qb, m('moment'), .4);
+    lab(p, 'moment', OX + 450, OY - 80, m('moment'), { size: 28, fill: STATUS, anchor: 'start', maxW: 260 });
+    // principles: a few compact models
+    lab(p, 'principles', 520, 560, m('principles'), { size: 30, fill: WEALTH, maxW: 820 });
+    const cards = [];
+    const glyph = [
+      'M-30 10A30 30 0 1 1 30 10M30 10L18 0M30 10L40 -2',           // flip
+      'M-36 26Q0 24 14 10Q26 -4 34 -32',                               // curve
+      'M-24 0A12 12 0 1 1 -24 1M-12 0H34M22 0V12M30 0V10',              // key
+      'M0 -30V28M-34 -18H34M-34 -18L-44 4H-24ZM34 -18L24 4H44Z',       // scale
+    ];
+    glyph.forEach((d, i) => { const c = a9Card(p, 220 + i * 200, 650, 170, 100, { o: 0 }); path(c, d, { stroke: EV.goldHi, 'stroke-width': 4 }); cards.push([c, m('models') + i * .08, .35]); });
+    evSeq(cards, D);
+    lab(p, 'models', 520, 760, m('models'), { size: 40, font: SERIF, weight: 600, fill: EV.goldHi });
+    // a saying points to a lesson you lived; without it, it's a poster
+    const say = a9Card(p, 1150, 640, 200, 100, { o: 0 });
+    evText(say, '“  ”', { x: 0, y: 30, size: 72, font: SERIF, fill: EV.goldHi });
+    show(say, m('sayings'), .4);
+    lab(p, 'sayings', 1150, 560, m('sayings'), { size: 28, fill: EV.ink });
+    const mem = G(p, { o: 0 });
+    a9Card(mem, 1450, 640, 150, 110, { edge: WEALTH });
+    path(mem, 'M1390 680L1430 630L1458 660L1478 640L1510 680Z', { fill: WEALTH, opacity: .8 });
+    mk('circle', { cx: 1488, cy: 612, r: 10, fill: EV.goldHi }, mem);
+    const arr = G(p, { o: 0 });
+    path(arr, 'M1256 640H1362', { stroke: EV.goldHi, 'stroke-width': 4 });
+    evHead(arr, 1366, 640, 0, EV.goldHi, 1.1);
+    show(arr, m('pointer'), .3); show(mem, m('pointer'), .4);
+    const pt = lab(p, 'pointer', 1300, 745, m('pointer'), { size: 26, fill: WEALTH, maxW: 520 });
+    tw(mem, { o: .12 }, m('without'), .5); tw(arr, { o: .12 }, m('without'), .5); hide(pt, m('without'), .3);
+    lab(p, 'without', 1300, 745, m('without', .2), { size: 26, fill: EV.dim, maxW: 520 });
+    tw(say._bg, { c_stroke: EV.dim }, m('poster'), .4);
+    lab(p, 'poster', 1300, 800, m('poster'), { size: 32, fill: EV.dim, italic: true, font: SERIF });
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    const p = panel(0);
+    a9Ground(p, 430);
+    const sf = a9Shafeeq(p, { x: 330, y: 430, s: .5 });
+    evBreathe(sf, D); evMood(sf, 'smile', .4);
+    path(p, 'M760 390V120M760 390H1330', { stroke: EV.dim, 'stroke-width': 3 });
+    [50, 60, 70, 140].forEach((h, i) => mk('rect', { x: 800 + i * 95, y: 390 - h, width: 60, height: h, fill: i === 3 ? EV.goldHi : WEALTH }, p));
+    mk('rect', { x: 1180, y: 110, width: 60, height: 280, fill: 'none', stroke: STATUS, 'stroke-width': 2.5, 'stroke-dasharray': '7 6' }, p);
+    evText(p, '?', { x: 1290, y: 200, size: 60, weight: 700, fill: STATUS });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-predict', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 2, L('q1y'), [L('q1na'), L('q1nb'), null]),
+  }], done) }],
+
+  ['invert', 'b_invert', (m, D) => {
+    const p = panel(0);
+    lab(p, 'inversion', 800, 95, m('inversion'), { size: 46, font: SERIF, weight: 600, fill: EV.gold, maxW: 1000 });
+    // a question card flips upside down
+    const fc = G(p, { x: 1420, y: 120, o: 0 });
+    mk('rect', { x: -40, y: -50, width: 80, height: 100, rx: 10, fill: '#151d21', stroke: EV.gold, 'stroke-width': 2.5 }, fc);
+    evText(fc, '?', { x: 0, y: 18, size: 54, weight: 700, fill: EV.goldHi });
+    show(fc, m('inversion'), .3);
+    prog(q => { const t = q * D; put(fc, { r: 180 * io(evU(t, m('inversion') + .2, .8)) }); }, 0, D, lin);
+    lab(p, 'rules', 800, 155, m('rules'), { size: 30, fill: EV.dim, maxW: 900 });
+    a9Ground(p, 780);
+    const cf = a9Shop(p, 'cafeSign', { x: 330, y: 780, s: .95, o: 0, awning: '#2b7c78' });
+    show(cf, m('cafe'), .4);
+    const hb = a9Hiba(p, { x: 600, y: 780, s: .62 });
+    evBreathe(hb, D);
+    lab(p, 'cafe', 420, 840, m('cafe'), { size: 28, weight: 600, maxW: 520 });
+    lab(p, 'kills', 1110, 250, m('kills'), { size: 34, fill: STATUS, weight: 600, maxW: 640 });
+    evMood(hb, 'worried', m('kills'));
+    const risks = [['rent', 350], ['debt', 440], ['partner', 530]].map(([k, y], i) => {
+      const g = a9Pill(p, k, 1110, y, { color: STATUS, ink: EV.ink, size: 28 });
+      put(g, { y: y + 20 }); tw(g, { o: 1, y }, m(k), .4, out);
+      const st = path(p, `M${1110 - g._w / 2 + 14} ${y - 2}H${1110 + g._w / 2 - 14}`, { stroke: STATUS, 'stroke-width': 4 }, { d: 0 });
+      draw(st, m('avoid') + i * .1, .35);
+      tw(g, { o: .45 }, m('avoid') + .3, .4);
+      return g;
+    });
+    void risks;
+    // her odds: a gauge that fills
+    const gg = G(p, { o: 0 });
+    mk('rect', { x: 1410, y: 300, width: 40, height: 320, rx: 8, fill: '#151d21', stroke: EV.faint, 'stroke-width': 2 }, gg);
+    show(gg, m('kills'), .4);
+    const fill = mk('rect', { x: 1414, y: 616, width: 32, height: 0, rx: 6, fill: WEALTH }, p);
+    prog(q => { const t = q * D, h = 60 * evU(t, m('kills'), .5) + 230 * io(evU(t, m('rise'), .9)); fill.setAttribute('height', h); fill.setAttribute('y', 616 - h); }, 0, D, lin);
+    lab(p, 'rise', 1430, 660, m('rise'), { size: 28, fill: WEALTH, weight: 600 });
+    evMood(hb, 'smile', m('rise'));
+    lab(p, 'skipping', 1110, 730, m('skipping'), { size: 38, font: SERIF, italic: true, fill: EV.goldHi, maxW: 760 });
+  }],
+
+  ['compound', 'b_compound', (m, D) => {
+    const p = panel(0);
+    lab(p, 'compound', 800, 95, m('compound'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    // a hundred dirhams at ten percent: each bar's top is growth on growth
+    const BASE = 600, K = 2.2;
+    const base = path(p, `M150 ${BASE}H680`, { stroke: EV.faint, 'stroke-width': 3 });
+    put(base, { o: 0 }); show(base, .3, .4);
+    const V = [[100, 'ten', 'v100'], [110, 'y1', 'v110'], [121, 'y2', 'v121'], [133.1, 'y3', 'v133']];
+    const segs = V.map(([v], i) => [mk('rect', { x: 175 + i * 130, y: BASE, width: 90, height: 0, fill: WEALTH }, p), mk('rect', { x: 175 + i * 130, y: BASE, width: 90, height: 0, fill: EV.goldHi }, p)]);
+    prog(q => { const t = q * D; V.forEach(([v, k], i) => { const u = io(evU(t, m(k), .5)), a = 100 * K * u, b = (v - 100) * K * u;
+      segs[i][0].setAttribute('height', a); segs[i][0].setAttribute('y', BASE - a); segs[i][1].setAttribute('height', b); segs[i][1].setAttribute('y', BASE - a - b); }); }, 0, D, lin);
+    V.forEach(([v, k, key], i) => lab(p, key, 220 + i * 130, BASE - v * K - 16, m(k), { size: 24, fill: i ? EV.goldHi : EV.ink, weight: 600 }));
+    lab(p, 'ten', 415, 660, m('ten'), { size: 30, fill: EV.ink });
+    // thirty percent for thirty years: the curve that leaves the page
+    const OX = 860, OY = 620, W = 600, H = 420, TOP = Math.pow(1.3, 30) - 1;
+    const ax = path(p, `M${OX} ${OY - H - 20}V${OY}H${OX + W + 20}`, { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 });
+    draw(ax, m('thirty'), .5);
+    const cv = path(p, '', { stroke: WEALTH, 'stroke-width': 6 });
+    prog(q => { const t = q * D, u = evU(t, m('thirty') + .3, Math.max(.6, m('times') - m('thirty') - .3));
+      let d = ''; for (let i = 0; i <= 60; i++) { const v = u * i / 60; d += (i ? 'L' : 'M') + (OX + W * v).toFixed(1) + ' ' + (OY - H * (Math.pow(1.3, 30 * v) - 1) / TOP).toFixed(1); }
+      cv.setAttribute('d', u > 0 ? d : ''); }, 0, D, lin);
+    lab(p, 'thirty', 1160, 665, m('thirty'), { size: 28, fill: EV.ink });
+    const tx = evText(p, L('times'), { x: 1440, y: 200, size: 56, fill: WEALTH, weight: 700, anchor: 'end', o: 0 });
+    put(tx, { s: .6 }); tw(tx, { o: 1, s: 1 }, m('times'), .45, back);
+    [['knowledge', 520], ['skills', 800], ['trust', 1080]].forEach(([k, x]) => { const g = a9Pill(p, k, x, 765, { color: WEALTH, ink: EV.ink, size: 28 }); put(g, { y: 785 }); tw(g, { o: 1, y: 765 }, m(k), .4, out); });
+    lab(p, 'small', 800, 860, m('small'), { size: 34, font: SERIF, italic: true, fill: EV.goldHi, maxW: 1300 });
+  }],
+
+  ['agent', 'b_agent', (m, D) => {
+    const p = panel(0);
+    // the owner and the agent (faint shapes open the beat)
+    path(p, 'M800 170V520', { stroke: EV.faint, 'stroke-width': 2 });
+    const ow = a9Icon(p, 420, 390, WEALTH, 2.4, .2), ag = a9Icon(p, 1180, 390, EV.dim, 2.4, .2);
+    tw(ow, { o: 1 }, m('principal'), .4); tw(ag, { o: 1 }, m('agent'), .4);
+    lab(p, 'principal', 420, 140, m('principal'), { size: 36, fill: WEALTH, weight: 600, maxW: 640 });
+    lab(p, 'agent', 1180, 140, m('agent'), { size: 36, fill: EV.ink, weight: 600, maxW: 640 });
+    const cn = a9Coin(p, 520, 330, 22, WEALTH, 0); show(cn, m('care'), .3);
+    lab(p, 'care', 420, 480, m('care'), { size: 30, fill: WEALTH, maxW: 560 });
+    const loop = G(p, { o: 0 });
+    path(loop, 'M1250 250Q1340 280 1260 330', { stroke: STATUS, 'stroke-width': 4 });
+    evHead(loop, 1260, 330, 140, STATUS, 1);
+    a9Coin(loop, 1240, 240, 16, STATUS);
+    show(loop, m('self'), .4);
+    lab(p, 'self', 1180, 480, m('self'), { size: 30, fill: STATUS, maxW: 560 });
+    // Junaid's branches
+    const q = panel(m('junaid'));
+    put(q, { o: 0 }); show(q, m('junaid'), .4);
+    a9Ground(q, 800);
+    const b1 = a9Shop(q, 'bakery', { x: 330, y: 800, s: .8 }), b2 = a9Shop(q, 'bakery', { x: 1130, y: 800, s: .8 });
+    void b1;
+    const jn = a9Junaid(q, { x: 620, y: 800, s: .55 });
+    evBreathe(jn, D);
+    lab(q, 'junaid', 620, 855, m('junaid'), { size: 28, weight: 600, maxW: 440 });
+    const stars1 = [[250, 650], [420, 670], [330, 610]].map(([x, y]) => a9Star(q, x, y, 18));
+    evSeq(stars1.map((s, i) => [s, m('own') + i * .1, .4, 's']), D);
+    lab(q, 'own', 330, 575, m('own'), { size: 28, fill: WEALTH, maxW: 420 });
+    tw(b2._veil, { o: .55 }, m('salary'), .5);
+    tw(b2._veil, { o: 0 }, m('acts'), .6);
+    const mg = evRecolor(evPerson(q, { kind: 'f', x: 1340, y: 800, s: .5 }), '#6f4a7a', '#4f3458');
+    evBreathe(mg, D, 1, .8); evMood(mg, 'tense', m('salary')); evMood(mg, 'smile', m('acts'));
+    lab(q, 'salary', 1130, 575, m('salary'), { size: 28, fill: EV.dim, maxW: 420 });
+    // a share of the profit travels from Junaid to the manager
+    const sc = a9Coin(q, 620, 560, 20, MONEY, 0);
+    prog(qq => { const t = qq * D, u = io(evU(t, m('share'), 1)), a = 1 - u;
+      put(sc, { o: t < m('share') ? 0 : 1 - evU(t, m('share') + 1.1, .3), x: a * a * 620 + 2 * a * u * 980 + u * u * 1330, y: a * a * 560 + 2 * a * u * 380 + u * u * 580 }); }, 0, D, lin);
+    lab(q, 'share', 960, 470, m('share'), { size: 28, fill: MONEY, weight: 600, maxW: 360 });
+    const stars2 = [[1050, 650], [1220, 670], [1130, 610]].map(([x, y]) => a9Star(q, x, y, 18));
+    evSeq(stars2.map((s, i) => [s, m('acts') + i * .1, .4, 's']), D);
+    lab(q, 'acts', 1360, 505, m('acts'), { size: 28, fill: WEALTH, weight: 600, maxW: 340 });
+    lab(q, 'tie', 800, 170, m('tie'), { size: 38, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1300 });
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    a9Ground(p, 430);
+    const hb = a9Hiba(p, { x: 330, y: 430, s: .5 });
+    evBreathe(hb, D); evMood(hb, 'worried', .4);
+    a9Box(p, { x: 900, y: 330, s: 1.2 });
+    // a cracked jar beside the parcel
+    const jar = G(p, { x: 1150, y: 390 });
+    path(jar, 'M-40 0V-90Q-40 -110 -20 -112H20Q40 -110 40 -90V0Z', { fill: '#7a3b26', stroke: EV.ink, 'stroke-width': 3 });
+    mk('rect', { x: -30, y: -128, width: 60, height: 18, rx: 4, fill: '#3a3f3a', stroke: EV.gold, 'stroke-width': 2 }, jar);
+    path(jar, 'M-10 -100L4 -70L-8 -48L8 -20', { stroke: EV.ink, 'stroke-width': 3 });
+    evText(p, '?', { x: 1300, y: 300, size: 60, weight: 700, fill: EV.gold });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-agent', prompt: [L('q2p')],
+    build: choice([[L('q2a')], [L('q2b')], [L('q2c')]], 0, L('q2y'), [null, L('q2nb'), L('q2nc')]),
+  }], done) }],
+
+  ['falsify', 'b_falsify', (m, D) => {
+    const p = panel(0);
+    lab(p, 'falsify', 800, 95, m('falsify'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    lab(p, 'wrong', 800, 150, m('wrong'), { size: 30, fill: EV.dim, maxW: 900 });
+    // the market stall (opens the beat)
+    const sl = a9Man(p, { x: 210, y: 560, s: .5 }, '#4a6a5a', '#33493e');
+    evBreathe(sl, D);
+    mk('rect', { x: 290, y: 500, width: 200, height: 60, rx: 4, fill: '#2a211b', stroke: '#4a3a2c', 'stroke-width': 3 }, p);
+    a9Oil(p, { x: 390, y: 500 });
+    lab(p, 'oil', 330, 610, m('oil'), { size: 26, fill: EV.ink, maxW: 460 });
+    const b1 = evBubble(p, L('believe'), { x: 460, y: 345, w: 380, size: 28 });
+    tw(b1, { o: 1, s: 1 }, m('believe'), .4, back);
+    hide(b1, m('enough'), .3);
+    evMood(sl, 'smile', m('believe'));
+    const b2 = evBubble(p, L('enough'), { x: 460, y: 345, w: 400, size: 28, edge: STATUS, fill: STATUS });
+    tw(b2, { o: 1, s: 1 }, m('enough'), .4, back);
+    // whatever happens, the claim survives: a closed loop
+    const lp = G(p, { x: 330, y: 720, o: 0 });
+    path(lp, 'M-50 0A50 50 0 1 1 0 50', { stroke: STATUS, 'stroke-width': 5 });
+    evHead(lp, 0, 50, 180, STATUS, 1.1);
+    show(lp, m('nothing'), .3);
+    prog(q => { const t = q * D - m('nothing'); put(lp, { r: t > 0 ? t * 60 : 0 }); }, 0, D, lin);
+    lab(p, 'nothing', 405, 732, m('nothing'), { size: 30, fill: STATUS, weight: 600, anchor: 'start', maxW: 380 });
+    path(p, 'M820 230V800', { stroke: EV.faint, 'stroke-width': 2 });
+    // a claim that can fail
+    const hv = a9Pill(p, 'halves', 1170, 320, { color: MONEY, ink: EV.ink, size: 28 });
+    put(hv, { y: 340 }); tw(hv, { o: 1, y: 320 }, m('halves'), .4, out);
+    const X0 = 920, X1 = 1380;
+    const tl = path(p, `M${X0} 440H${X1}` + Array.from({ length: 9 }, (_, i) => `M${(X0 + (X1 - X0) * i / 8).toFixed(1)} 430V450`).join(''), { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 });
+    draw(tl, m('tested'), .6);
+    lab(p, 'tested', 1150, 510, m('tested'), { size: 30, fill: MONEY, weight: 600, maxW: 520 });
+    draw(a9Tick(p, 1430, 438, MONEY, 1.3), m('tested') + .2, .3);
+    draw(a9Cross(p, 1500, 438, STATUS, 1.1), m('tested') + .3, .3);
+    // the easiest person to fool
+    const q = panel(m('easiest'));
+    put(q, { o: 0 }); show(q, m('easiest'), .4);
+    lab(q, 'easiest', 800, 180, m('easiest'), { size: 46, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1300 });
+    mk('ellipse', { cx: 520, cy: 520, rx: 130, ry: 180, fill: '#10171b', stroke: EV.gold, 'stroke-width': 4 }, q);
+    path(q, 'M450 400Q470 380 500 390', { stroke: EV.ink, 'stroke-width': 3, opacity: .3 });
+    const me = a9Icon(q, 520, 640, EV.ink, 3.2);
+    void me;
+    lab(q, 'suits', 1090, 360, m('suits'), { size: 34, fill: EV.ink, weight: 600 });
+    // a high bar on two posts that rises
+    path(q, 'M940 780V420M1240 780V420', { stroke: EV.dim, 'stroke-width': 6 });
+    const bar = path(q, 'M930 0H1250', { stroke: WEALTH, 'stroke-width': 8 });
+    prog(qq => { const t = qq * D; put(bar, { y: 700 - 220 * io(evU(t, m('higher'), .9)) }); }, 0, D, lin);
+    lab(q, 'higher', 1090, 830, m('higher'), { size: 34, fill: WEALTH, weight: 600 });
+  }],
+
+  ['check', 'b_check', (m, D) => {
+    const p = panel(0);
+    a9Sci(m, D);
+    lab(p, 'claim', 740, 175, m('hour'), { size: 40, font: SERIF, italic: true, fill: EV.ink, maxW: 1000 });
+    a9Stamp(p, 'asis', 1310, 240, m('asis'));
+    lab(p, 'success', 1310, 330, m('success'), { size: 34, fill: EV.dim, weight: 600 });
+    // ninety-nine studies
+    const st = [];
+    for (let i = 0; i < 99; i++) { const c = mk('rect', { x: 160 + (i % 11) * 28, y: 360 + Math.floor(i / 11) * 34, width: 20, height: 26, rx: 3, fill: '#1d1830', stroke: SCI, 'stroke-width': 1.5 }, p); put(c, { o: 0 }); st.push([c, m('ninetynine') + i * .006, .25]); }
+    evSeq(st, D);
+    lab(p, 'ninetynine', 300, 700, m('ninetynine'), { size: 32, fill: EV.ink, weight: 600 });
+    // readers and language skills: a cloud that rises, but a link
+    const OX = 640, OY = 620, W = 520, H = 220;
+    const ax = path(p, `M${OX} ${OY - H}V${OY}H${OX + W}`, { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 });
+    draw(ax, m('read'), .5);
+    const pts = G(p, { o: 0 });
+    for (let i = 0; i < 26; i++) { const u = ((i * 37) % 26) / 26, v = Math.min(.95, Math.max(.05, u * .75 + .12 + (((i * 53) % 11) - 5) * .035)); mk('circle', { cx: OX + 20 + u * (W - 40), cy: OY - v * H, r: 7, fill: SCI, opacity: .85 }, pts); }
+    show(pts, m('read'), .4);
+    lab(p, 'read', OX + W / 2, OY + 38, m('read'), { size: 26, fill: EV.ink });
+    const tr = path(p, `M${OX + 20} ${OY - .14 * H}L${OX + W - 20} ${OY - .86 * H}`, { stroke: EV.goldHi, 'stroke-width': 4 }, { d: 0 });
+    draw(tr, m('stronger'), .6);
+    lab(p, 'stronger', OX + W / 2, OY - H - 22, m('stronger'), { size: 26, fill: WEALTH, maxW: 560 });
+    const ag = path(p, `M${OX} 720H${OX + W}`, { stroke: EV.faint, 'stroke-width': 3 }, { d: 0 });
+    draw(ag, m('pre'), .5);
+    lab(p, 'pre', OX, 760, m('pre'), { size: 24, fill: EV.dim, anchor: 'start' });
+    lab(p, 'uni', OX + W, 760, m('uni'), { size: 24, fill: EV.dim, anchor: 'end' });
+    lab(p, 'link', 1370, 470, m('link'), { size: 40, fill: SCI, weight: 700 });
+    const nt = evPara(p, L('noone'), { x: 1370, y: 540, size: 26, maxW: 330, fill: STATUS, o: 0 });
+    show(nt, m('noone'), .45);
+    lab(p, 'habit', 800, 815, m('habit'), { size: 36, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1100 });
+  }],
+
+  ['honest', 'b_honest', (m, D) => {
+    const p = panel(0);
+    lab(p, 'honest', 800, 95, m('honest'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    lab(p, 'fooled', 800, 155, m('fooled'), { size: 30, fill: EV.dim, maxW: 900 });
+    a9Ground(p, 780);
+    const ni = evPerson(p, { kind: 'f', x: 260, y: 780, s: .7 });
+    evBreathe(ni, D);
+    const team = [700, 870, 1040, 1210, 1380].map(x => a9Icon(p, x, 770, EV.dim, 1.3));
+    lab(p, 'praise', 820, 450, m('praise'), { size: 30, fill: MONEY, weight: 600, maxW: 360 });
+    lab(p, 'criticize', 1250, 450, m('criticize'), { size: 30, fill: STATUS, weight: 600, maxW: 380 });
+    const gl = evGlow(p, 870, 700, 120, 'Gold', 0);
+    tw(gl, { o: .8 }, m('anees'), .5);
+    tw(team[1]._head, { c_fill: MONEY }, m('anees'), .4); tw(team[1]._body, { c_fill: MONEY }, m('anees'), .4);
+    evMood(ni, 'smile', m('anees'));
+    lab(p, 'anees', 870, 640, m('anees'), { size: 28, fill: MONEY, maxW: 320 });
+    const br = path(p, 'M995 600V582H1425V600', { stroke: STATUS, 'stroke-width': 3 }, { d: 0 });
+    draw(br, m('habit'), .5);
+    lab(p, 'habitH', 1210, 560, m('habit'), { size: 26, fill: STATUS, maxW: 520 });
+    lab(p, 'work', 800, 850, m('work'), { size: 38, font: SERIF, italic: true, fill: EV.goldHi });
+  }],
+
+  ['no', 'b_no', (m, D) => {
+    const p = panel(0);
+    lab(p, 'cant', 780, 100, m('cant'), { size: 44, font: SERIF, weight: 600, fill: EV.ink, anchor: 'end' });
+    const nn = evText(p, L('no'), { x: 800, y: 100, size: 48, font: SERIF, weight: 700, fill: STATUS, anchor: 'start', o: 0 });
+    put(nn, { s: 1.3 }); tw(nn, { o: 1, s: 1 }, m('no'), .4, back);
+    a9Ground(p, 780);
+    const fz = a9Faisal(p, { x: 200, y: 780, s: .6 }), fr = a9Man(p, { x: 420, y: 780, s: .6 }, '#7a3b4a', '#5a2a36');
+    evBreathe(fz, D); evBreathe(fr, D, 1, .8);
+    lab(p, 'faisal', 200, 835, m('faisal'), { size: 28, weight: 600 });
+    const bb = evBubble(p, L('stall'), { x: 600, y: 500, w: 440, size: 26 });
+    tw(bb, { o: 1, s: 1 }, m('stall'), .4, back);
+    evMood(fz, 'ask', m('pros'));
+    // a balance: pros and cons arrive, the beam settles level
+    const PX = 1130, PY = 330, HL = 220;
+    path(p, `M${PX} ${PY}V780M${PX - 60} 780H${PX + 60}`, { stroke: EV.goldLo, 'stroke-width': 6 });
+    const beam = path(p, '', { stroke: EV.gold, 'stroke-width': 6 });
+    const panL = G(p), panR = G(p);
+    [panL, panR].forEach(g => { path(g, 'M0 -110L-70 0M0 -110L70 0', { stroke: EV.dim, 'stroke-width': 2 }); path(g, 'M-80 0H80L64 18H-64Z', { fill: '#3a3f3a', stroke: EV.gold, 'stroke-width': 2 }); });
+    const tP = [0, 1, 2, 3].map(i => m('pros') + i * .1), tC = [0, 1, 2, 3].map(i => m('cons') + i * .1);
+    const tiles = (g, color) => [0, 1, 2, 3].map(i => { const r = mk('rect', { x: -40, y: -24 - i * 26, width: 80, height: 22, rx: 4, fill: color }, g); put(r, { o: 0 }); return r; });
+    const tl = tiles(panL, MONEY), tr = tiles(panR, STATUS);
+    prog(q => { const t = q * D;
+      const nP = tP.reduce((a, s, i) => { put(tl[i], { o: io(evU(t, s, .25)) }); return a + io(evU(t, s, .25)); }, 0);
+      const nC = tC.reduce((a, s, i) => { put(tr[i], { o: io(evU(t, s, .25)) }); return a + io(evU(t, s, .25)); }, 0);
+      const a = Math.max(-.2, Math.min(.2, (nC - nP) * .06));
+      const dx = Math.cos(a) * HL, dy = Math.sin(a) * HL;
+      beam.setAttribute('d', `M${(PX - dx).toFixed(1)} ${(PY - dy).toFixed(1)}L${(PX + dx).toFixed(1)} ${(PY + dy).toFixed(1)}`);
+      put(panL, { x: PX - dx, y: PY - dy + 110 }); put(panR, { x: PX + dx, y: PY + dy + 110 }); }, 0, D, lin);
+    lab(p, 'pros', PX - HL, 500, m('pros'), { size: 30, fill: MONEY, weight: 600 });
+    lab(p, 'cons', PX + HL, 500, m('cons'), { size: 30, fill: STATUS, weight: 600 });
+    lab(p, 'even', PX, 290, m('even'), { size: 36, fill: WEALTH, weight: 700 });
+    // locked in for years; more options than ever
+    const q = panel(m('lock'));
+    put(q, { o: 0 }); show(q, m('lock'), .4);
+    lab(q, 'lock', 800, 95, m('lock'), { size: 44, font: SERIF, weight: 600, fill: EV.gold });
+    const X0 = 430, PY_ = 25;
+    path(q, `M${X0} 420H${X0 + 40 * PY_}` + [0, 10, 20, 30, 40].map(v => `M${X0 + v * PY_} 412V428`).join(''), { stroke: EV.faint, 'stroke-width': 2 });
+    [0, 10, 20, 30, 40].forEach(v => T(q, String(v), { x: X0 + v * PY_, y: 452, size: 20, fill: EV.dim, anchor: 'middle', font: SANS }));
+    const rows = [['tenY', 'ten', 200, 10, 0], ['life', 'life', 280, 40, 0], ['city', 'city', 360, 10, 10]];
+    const bars = rows.map(([key, mk_, y, a, b]) => {
+      lab(q, key, X0 - 20, y + 10, m(mk_), { size: 28, fill: EV.ink, anchor: 'end', maxW: 380 });
+      return [mk('rect', { x: X0, y: y - 14, width: 0, height: 28, rx: 6, fill: TIME }, q), mk('rect', { x: X0 + a * PY_, y: y - 14, width: 0, height: 28, rx: 6, fill: TIME, opacity: .45 }, q), a, b, mk_];
+    });
+    prog(qq => { const t = qq * D; bars.forEach(([r1, r2, a, b, k]) => { const u = io(evU(t, m(k), .8)); r1.setAttribute('width', a * PY_ * u); r2.setAttribute('width', b * PY_ * io(evU(t, m(k) + .5, .6))); }); }, 0, D, lin);
+    // a village of ~150, and today's options
+    let vd = '';
+    for (let i = 0; i < 150; i++) { const x = 170 + (i % 15) * 14, y = 520 + Math.floor(i / 15) * 14; vd += `M${x - 4} ${y}a4 4 0 1 0 8 0a4 4 0 1 0 -8 0`; }
+    const vil = path(q, vd, { fill: EV.goldHi });
+    put(vil, { o: 0 }); show(vil, m('village'), .4);
+    lab(q, 'village', 268, 700, m('village'), { size: 26, fill: EV.ink, maxW: 360 });
+    let od = '';
+    for (let r = 0; r < 14; r++) for (let c = 0; c < 80; c++) { const x = 560 + c * 12 + (r % 2) * 6, y = 510 + r * 12; od += `M${x - 3} ${y}a3 3 0 1 0 6 0a3 3 0 1 0 -6 0`; }
+    const opt = path(q, od, { fill: TIME });
+    put(opt, { o: 0 }); show(opt, m('options'), .6);
+    lab(q, 'options', 1040, 700, m('options'), { size: 30, fill: TIME, weight: 600 });
+    lab(q, 'disputed', 268, 742, m('disputed'), { size: 24, fill: SCI, weight: 600 });
+    lab(q, 'sure', 800, 830, m('sure'), { size: 38, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1200 });
+  }],
+
+  ['uphill', 'b_uphill', (m, D) => {
+    const p = panel(0);
+    lab(p, 'uphill', 800, 95, m('uphill'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    // two paths from one start: flat and easy, or steep (open the beat faintly)
+    const S = [300, 700];
+    const easy = path(p, `M${S[0]} ${S[1]}Q850 735 1420 740`, { stroke: '#5a574e', 'stroke-width': 6 });
+    const hard = path(p, `M${S[0]} ${S[1]}Q920 620 1420 260`, { stroke: '#5a574e', 'stroke-width': 6 });
+    void easy;
+    const ni = evPerson(p, { kind: 'f', x: 220, y: 720, s: .5 });
+    evBreathe(ni, D);
+    lab(p, 'equal', 300, 790, m('equal'), { size: 28, fill: EV.ink, maxW: 460 });
+    tw(hard, { c_stroke: STATUS }, m('hurts'), .5);
+    lab(p, 'hurts', 600, 540, m('hurts'), { size: 30, fill: STATUS, weight: 600, maxW: 360 });
+    const bs = evBrain(p, { x: 320, y: 330, s: .32, o: 0 }); show(bs, m('dodges'), .4);
+    lab(p, 'dodges', 320, 440, m('dodges'), { size: 26, fill: EV.ink, maxW: 440 });
+    lab(p, 'overrates', 960, 800, m('overrates'), { size: 28, fill: EV.dim, maxW: 520 });
+    tw(hard, { c_stroke: WEALTH }, m('better'), .5);
+    lab(p, 'better', 1380, 215, m('better'), { size: 30, fill: WEALTH, weight: 600, anchor: 'end', maxW: 520 });
+    const chips = [];
+    for (let i = 0; i < 6; i++) { const c = G(p, { x: 1490, y: 280 - i * 16, o: 0 }); mk('ellipse', { cx: 0, cy: 6, rx: 34, ry: 9, fill: '#5e4f26' }, c); mk('ellipse', { cx: 0, cy: 0, rx: 34, ry: 9, fill: WEALTH, stroke: '#080c0f', 'stroke-width': 1.5 }, c); chips.push([c, m('long') + i * .07, .25]); }
+    evSeq(chips, D);
+    lab(p, 'long', 950, 380, m('long'), { size: 26, fill: WEALTH, maxW: 420 });
+    // Nisha's evening
+    const q = panel(m('nisha'));
+    put(q, { o: 0 }); show(q, m('nisha'), .4);
+    const tv = a9TV(q, { x: 430, y: 380 });
+    const bk = a9Book(q, { x: 1170, y: 380 });
+    const gl = evGlow(q, 1170, 380, 200, 'Gold', 0);
+    q.insertBefore(gl, bk);
+    const ni2 = evPerson(q, { kind: 'f', x: 800, y: 640, s: .6 });
+    evBreathe(ni2, D);
+    evMood(ni2, 'worried', m('book')); evMood(ni2, 'smile', m('growing'));
+    prog(qq => { const t = qq * D; put(ni2.head, { r: -8 * io(evU(t, m('tv'), .4)) + 16 * io(evU(t, m('book'), .5)) }); }, 0, D, lin);
+    tw(tv._scr, { c_fill: '#2f5f8f' }, m('tv'), .4);
+    lab(q, 'tv', 430, 520, m('tv'), { size: 28, fill: TIME, maxW: 420 });
+    lab(q, 'book', 1170, 520, m('book'), { size: 28, fill: WEALTH, maxW: 420 });
+    lab(q, 'confusion', 800, 715, m('confusion'), { size: 32, fill: EV.ink, weight: 600, maxW: 900 });
+    tw(gl, { o: .9 }, m('growing'), .8);
+    lab(q, 'growing', 800, 800, m('growing'), { size: 38, font: SERIF, italic: true, fill: EV.goldHi, maxW: 1100 });
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    a9Ground(p, 430);
+    const sn = a9Sana(p, { x: 330, y: 430, s: .5 });
+    evBreathe(sn, D); evMood(sn, 'ask', .4);
+    [[900, 'A', EV.dim], [1220, 'B', WEALTH]].forEach(([x, k, c]) => {
+      const cd = a9Card(p, x, 250, 220, 260, { edge: c });
+      evText(cd, k, { x: 0, y: -60, size: 54, font: SERIF, weight: 600, fill: c });
+      path(cd, 'M-70 0H70M-70 36H70M-70 72H40', { stroke: EV.faint, 'stroke-width': 4 });
+    });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-uphill', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 1, L('q3y'), [L('q3na'), null, L('q3nc')]),
+  }], done) }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    evText(p, L('b_wrap'), { x: 800, y: 130, size: 52, font: SERIF, weight: 600, fill: EV.gold });
+    const cols = [WEALTH, EV.goldHi, MONEY, STATUS];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -30, y: 260 + i * 150, o: 0 });
+      mk('circle', { cx: 200, cy: -10, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: 200, y: 1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 260, y: 0, size: 36, maxW: 1150, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Shafeeq says: “Plots near the new Kozhikode bypass doubled last year, so they’ll double again. I’m buying now.” What is wrong with his thinking?',
+  q1a: 'Nothing. Last year’s price is the best guide to next year’s.',
+  q1b: 'He should wait until a famous investor posts about it.',
+  q1c: 'He is predicting from one past event, not from principles that explain why prices move.',
+  q1y: 'Right. “It happened before, so it will again” leans on one moment. Mental models are principles that hold across many cases.',
+  q1na: 'One year’s jump is a single moment. Prices move for reasons, like supply, demand and interest rates, and those can change.',
+  q1nb: 'That swaps one shortcut for another. Naval wants principles you understand yourself.',
+  q2p: 'Hiba pays a delivery agency a flat monthly fee, and her jars keep arriving broken. Which fix fits the principal–agent idea?',
+  q2a: 'Pay a fee for each jar that arrives whole, and nothing for broken ones.',
+  q2b: 'Send them angry messages every week.',
+  q2c: 'Raise their flat fee so they feel valued.',
+  q2y: 'Right. Tie pay to the exact value created, and the agent starts to care like an owner.',
+  q2nb: 'Anger doesn’t change what they gain or lose from a broken jar.',
+  q2nc: 'A bigger flat fee still pays the same for broken jars. Nothing ties their pay to the result.',
+  q3p: 'Sana has two job offers in Doha that look equal. One means learning financial modelling from scratch, which she dreads. What does “run uphill” suggest?',
+  q3a: 'Take the easier one. Why suffer?',
+  q3b: 'Take the one that hurts more now: it likely pays more later.',
+  q3c: 'Keep adding pros and cons until one side wins.',
+  q3y: 'Right. When options look even, the brain is overrating the comfortable one. The harder path usually carries the long-term gain.',
+  q3na: 'Your brain already tilts toward comfort. If they still look equal, the painful one is probably the better bet.',
+  q3nc: 'More lists rarely settle an even split. Between two equal paths, lean into the harder one.',
+  p1p: 'Before opening a food truck in Muscat, Faisal lists every way it could fail: the wrong spot, a broken freezer, no permit. Then he fixes each one. Which model is he using?',
+  p1a: 'Inversion',
+  p1b: 'Compound interest',
+  p1c: 'The principal–agent problem',
+  p1y: 'Yes. Inversion flips the question: find what would make it fail, and avoid that.',
+  p1nb: 'Compounding is growth building on growth. Faisal is ruling out failures first.',
+  p1nc: 'That model is about owners and the people acting for them. Faisal is flipping the question.',
+  p2p: 'Sana puts away AED 1,000 at 10% a year, compounding. About how much does she have after two years?',
+  p2a: 'AED 1,200',
+  p2b: 'AED 2,000',
+  p2c: 'AED 1,210',
+  p2y: 'Right. 1,000 → 1,100 → 1,210. In year two, she also earns on the first year’s 100.',
+  p2na: 'That adds 100 twice. With compounding, year two also earns on the 100 from year one.',
+  p2nb: 'Doubling at 10% a year takes about seven years, not two.',
+  p3p: 'Which claim could be proven wrong by a test?',
+  p3a: '“This amulet protects anyone whose heart is pure.”',
+  p3b: '“Students who use this app for 20 minutes a day score higher in the March exam than students who don’t.”',
+  p3c: '“Everything happens for a reason.”',
+  p3y: 'Yes. Compare the two groups’ March scores: if the app users don’t score higher, the claim fails.',
+  p3na: 'If harm comes, the heart wasn’t pure enough. Nothing can ever count against it.',
+  p3nc: 'Any event fits it, so no result could ever prove it wrong.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'A review of 99 studies found that people who read more tend to have stronger vocabulary and language skills.',
+  p4r2: 'That link, on its own, proves that reading caused the better skills.',
+  p4r3: 'No study has tested Naval’s promise of reaching the top in seven years with an hour of reading a day.',
+  p4r4: 'It is settled science that our ancestors lived in groups of 150.',
+  p4w1: 'True. From preschool to university, readers had stronger language skills.',
+  p4w2: 'False. A link is not proof of cause: people with strong skills may also enjoy reading more.',
+  p4w3: 'True. As stated, “success” isn’t even defined, so the promise is hard to test.',
+  p4w4: 'False. A 2021 re-check of the method gave a range from about 2 to 520 people. The famous number is disputed.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'ഷഫീഖ് പറയുന്നു: “പുതിയ കോഴിക്കോട് ബൈപ്പാസിനടുത്തെ പ്ലോട്ടുകൾക്ക് കഴിഞ്ഞ വർഷം വില ഇരട്ടിച്ചു, അതുകൊണ്ട് വീണ്ടും ഇരട്ടിക്കും. ഞാൻ ഇപ്പോൾ വാങ്ങുന്നു.” അവന്റെ ചിന്തയിൽ എന്താണ് തെറ്റ്?',
+  q1a: 'ഒന്നുമില്ല. അടുത്ത വർഷത്തെ വിലയ്ക്ക് ഏറ്റവും നല്ല സൂചന കഴിഞ്ഞ വർഷത്തെ വിലയാണ്.',
+  q1b: 'ഒരു പ്രശസ്ത നിക്ഷേപകൻ അതിനെക്കുറിച്ച് പോസ്റ്റ് ഇടുന്നതുവരെ കാത്തിരിക്കണം.',
+  q1c: 'വില മാറുന്നതിന്റെ കാരണം വിശദീകരിക്കുന്ന തത്വങ്ങളിൽ നിന്നല്ല, കഴിഞ്ഞുപോയ ഒരൊറ്റ സംഭവത്തിൽ നിന്നാണ് അവൻ പ്രവചിക്കുന്നത്.',
+  q1y: 'ശരി. “മുൻപ് സംഭവിച്ചു, ഇനിയും സംഭവിക്കും” എന്നത് ഒരൊറ്റ നിമിഷത്തെ ആശ്രയിക്കുന്നു. പല സാഹചര്യങ്ങളിലും ശരിയാകുന്ന തത്വങ്ങളാണ് മാനസിക മാതൃകകൾ.',
+  q1na: 'ഒരു വർഷത്തെ കുതിപ്പ് ഒരൊറ്റ നിമിഷമാണ്. വില മാറുന്നതിന് കാരണങ്ങളുണ്ട്: ആവശ്യം, ലഭ്യത, പലിശനിരക്ക്. അവ മാറാം.',
+  q1nb: 'അത് ഒരു കുറുക്കുവഴിക്ക് പകരം മറ്റൊന്നാണ്. സ്വയം മനസ്സിലാക്കിയ തത്വങ്ങളാണ് നവൽ ആവശ്യപ്പെടുന്നത്.',
+  q2p: 'ഹിബ ഒരു ഡെലിവറി ഏജൻസിക്ക് മാസം ഒരു നിശ്ചിത തുക കൊടുക്കുന്നു, പക്ഷേ ഭരണികൾ പൊട്ടിയാണ് എത്തുന്നത്. ഉടമ–ഏജന്റ് ആശയത്തിന് ചേരുന്ന പരിഹാരം ഏത്?',
+  q2a: 'പൊട്ടാതെ എത്തുന്ന ഓരോ ഭരണിക്കും ഫീസ്, പൊട്ടിയതിന് ഒന്നുമില്ല.',
+  q2b: 'എല്ലാ ആഴ്ചയും ദേഷ്യത്തോടെ മെസേജ് അയയ്ക്കുക.',
+  q2c: 'അവർക്ക് വില തോന്നാൻ നിശ്ചിത തുക കൂട്ടിക്കൊടുക്കുക.',
+  q2y: 'ശരി. ഉണ്ടാക്കുന്ന മൂല്യവുമായി കൂലി ബന്ധിപ്പിച്ചാൽ, ഏജന്റ് ഒരു ഉടമയെപ്പോലെ ശ്രദ്ധിക്കാൻ തുടങ്ങും.',
+  q2nb: 'ദേഷ്യം കൊണ്ട്, പൊട്ടിയ ഭരണിയിൽ നിന്ന് അവർക്ക് കിട്ടുന്നതോ നഷ്ടമാകുന്നതോ മാറുന്നില്ല.',
+  q2nc: 'കൂടിയ നിശ്ചിത തുകയും പൊട്ടിയ ഭരണിക്ക് അതേ കൂലിയാണ്. കൂലിയെ ഫലവുമായി ഒന്നും ബന്ധിപ്പിക്കുന്നില്ല.',
+  q3p: 'സനയ്ക്ക് ദോഹയിൽ തുല്യമെന്ന് തോന്നുന്ന രണ്ട് ജോലി ഓഫറുകൾ. ഒന്നിൽ, അവൾക്ക് പേടിയുള്ള ഫിനാൻഷ്യൽ മോഡലിങ് ആദ്യം മുതൽ പഠിക്കണം. “കയറ്റം കയറൂ” എന്താണ് പറയുന്നത്?',
+  q3a: 'എളുപ്പമുള്ളത് എടുക്കൂ. എന്തിന് കഷ്ടപ്പെടണം?',
+  q3b: 'ഇപ്പോൾ കൂടുതൽ വേദനിക്കുന്നത് എടുക്കൂ: പിന്നീട് അതാകും കൂടുതൽ ഗുണം.',
+  q3c: 'ഒരു വശം ജയിക്കുന്നതുവരെ ഗുണദോഷങ്ങൾ എഴുതിക്കൊണ്ടിരിക്കൂ.',
+  q3y: 'ശരി. രണ്ടും തുല്യമായി തോന്നുമ്പോൾ, സുഖമുള്ളതിന് തലച്ചോർ അമിത മാർക്ക് ഇടുകയാണ്. ദീർഘകാല നേട്ടം സാധാരണ കഠിനവഴിയിലാണ്.',
+  q3na: 'തലച്ചോർ ഇപ്പോൾത്തന്നെ സുഖത്തിലേക്ക് ചായുന്നു. എന്നിട്ടും തുല്യമെന്ന് തോന്നിയാൽ, വേദനയുള്ളതാകും നല്ല തിരഞ്ഞെടുപ്പ്.',
+  q3nc: 'കൂടുതൽ പട്ടികകൾ തുല്യനില അപൂർവമായേ തീർക്കൂ. രണ്ട് തുല്യ വഴികളിൽ, കഠിനമായതിലേക്ക് ചായൂ.',
+  p1p: 'മസ്കത്തിൽ ഒരു ഫുഡ് ട്രക്ക് തുടങ്ങും മുൻപ്, അത് പൊളിയാനുള്ള എല്ലാ വഴികളും ഫൈസൽ എഴുതുന്നു: തെറ്റായ സ്ഥലം, കേടായ ഫ്രീസർ, ലൈസൻസില്ലായ്മ. എന്നിട്ട് ഓരോന്നും പരിഹരിക്കുന്നു. ഏത് മാതൃകയാണ് അവൻ ഉപയോഗിക്കുന്നത്?',
+  p1a: 'തലതിരിച്ചുള്ള ചിന്ത (ഇൻവേർഷൻ)',
+  p1b: 'കൂട്ടുപലിശ',
+  p1c: 'ഉടമ–ഏജന്റ് പ്രശ്നം',
+  p1y: 'അതെ. ഇൻവേർഷൻ ചോദ്യം തിരിച്ചിടുന്നു: എന്താണ് പൊളിക്കുക എന്ന് കണ്ടെത്തി, അത് ഒഴിവാക്കുന്നു.',
+  p1nb: 'വളർച്ചയുടെ മേൽ വളർച്ചയാണ് കൂട്ടുപലിശ. ഫൈസൽ ആദ്യം പരാജയകാരണങ്ങൾ ഒഴിവാക്കുകയാണ്.',
+  p1nc: 'ആ മാതൃക ഉടമകളെയും അവർക്കായി പ്രവർത്തിക്കുന്നവരെയും കുറിച്ചാണ്. ഫൈസൽ ചോദ്യം തിരിച്ചിടുകയാണ്.',
+  p2p: 'സന AED 1,000, വർഷം 10% കൂട്ടുപലിശയിൽ നിക്ഷേപിക്കുന്നു. രണ്ട് വർഷം കഴിഞ്ഞ് ഏകദേശം എത്ര ഉണ്ടാകും?',
+  p2a: 'AED 1,200',
+  p2b: 'AED 2,000',
+  p2c: 'AED 1,210',
+  p2y: 'ശരി. 1,000 → 1,100 → 1,210. രണ്ടാം വർഷം, ആദ്യ വർഷത്തെ 100-നും പലിശ കിട്ടുന്നു.',
+  p2na: 'അത് 100 രണ്ടുതവണ കൂട്ടിയതാണ്. കൂട്ടുപലിശയിൽ, രണ്ടാം വർഷം ആദ്യ വർഷത്തെ 100-നും പലിശ കിട്ടും.',
+  p2nb: 'വർഷം 10%-ൽ ഇരട്ടിക്കാൻ ഏകദേശം ഏഴ് വർഷം വേണം, രണ്ടല്ല.',
+  p3p: 'ഒരു പരീക്ഷണം കൊണ്ട് തെറ്റാണെന്ന് തെളിയിക്കാവുന്ന അവകാശവാദം ഏത്?',
+  p3a: '“മനസ്സ് ശുദ്ധമായ എല്ലാവരെയും ഈ ഏലസ്സ് സംരക്ഷിക്കും.”',
+  p3b: '“ദിവസം 20 മിനിറ്റ് ഈ ആപ്പ് ഉപയോഗിക്കുന്ന വിദ്യാർഥികൾക്ക്, ഉപയോഗിക്കാത്തവരേക്കാൾ മാർച്ച് പരീക്ഷയിൽ മാർക്ക് കൂടും.”',
+  p3c: '“എല്ലാം സംഭവിക്കുന്നത് ഒരു കാരണത്താലാണ്.”',
+  p3y: 'അതെ. രണ്ട് കൂട്ടരുടെയും മാർച്ച് മാർക്ക് താരതമ്യം ചെയ്യൂ: ആപ്പ് ഉപയോഗിച്ചവർക്ക് കൂടുതലില്ലെങ്കിൽ, അവകാശവാദം പൊളിയും.',
+  p3na: 'ദോഷം വന്നാൽ, മനസ്സ് വേണ്ടത്ര ശുദ്ധമായിരുന്നില്ല എന്നാകും. ഒന്നിനും അതിനെ എതിർക്കാനാവില്ല.',
+  p3nc: 'ഏത് സംഭവവും അതിൽ ചേരും, അതുകൊണ്ട് ഒരു ഫലത്തിനും അത് തെറ്റാണെന്ന് തെളിയിക്കാനാവില്ല.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: '99 പഠനങ്ങളുടെ ഒരു അവലോകനത്തിൽ, കൂടുതൽ വായിക്കുന്നവർക്ക് മികച്ച പദസമ്പത്തും ഭാഷാശേഷിയും ഉള്ളതായി കണ്ടു.',
+  p4r2: 'ആ ബന്ധം തനിയെ, വായനയാണ് മികച്ച ശേഷിക്ക് കാരണം എന്ന് തെളിയിക്കുന്നു.',
+  p4r3: 'ദിവസം ഒരു മണിക്കൂർ വായിച്ചാൽ ഏഴ് വർഷത്തിൽ മുൻനിരയിലെത്തും എന്ന നവലിന്റെ വാഗ്ദാനം ഒരു പഠനവും പരീക്ഷിച്ചിട്ടില്ല.',
+  p4r4: 'നമ്മുടെ പൂർവികർ 150 പേരുള്ള കൂട്ടങ്ങളിലാണ് ജീവിച്ചത് എന്നത് ഉറപ്പിച്ച ശാസ്ത്രമാണ്.',
+  p4w1: 'ശരി. പ്രീസ്കൂൾ മുതൽ യൂണിവേഴ്സിറ്റി വരെ, വായിക്കുന്നവർക്ക് ഭാഷാശേഷി കൂടുതലായിരുന്നു.',
+  p4w2: 'തെറ്റ്. ബന്ധം കാരണത്തിന് തെളിവല്ല: ശേഷി കൂടുതലുള്ളവർക്ക് വായന കൂടുതൽ ഇഷ്ടമാകാനും സാധ്യതയുണ്ട്.',
+  p4w3: 'ശരി. പറഞ്ഞ രൂപത്തിൽ “വിജയം” നിർവചിച്ചിട്ടുപോലുമില്ല, അതുകൊണ്ട് പരീക്ഷിക്കാൻ പ്രയാസമാണ്.',
+  p4w4: 'തെറ്റ്. 2021-ലെ ഒരു പുനഃപരിശോധനയിൽ, ഏകദേശം 2 മുതൽ 520 വരെ ആളുകൾ എന്ന പരിധിയാണ് കിട്ടിയത്. പ്രശസ്ത സംഖ്യ തർക്കത്തിലാണ്.',
+});
+const PRACTICE = [
+  { id: 'p-invert', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 0, L('p1y'), [null, L('p1nb'), L('p1nc')]) },
+  { id: 'p-compound', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 2, L('p2y'), [L('p2na'), L('p2nb'), null]) },
+  { id: 'p-falsify', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 1, L('p3y'), [L('p3na'), null, L('p3nc')]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['t'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['f'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('almanack:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>

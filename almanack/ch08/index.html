@@ -1,0 +1,1192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Seeing clearly · The Almanack of Naval Ravikant, Chapter 8">
+<meta property="og:description" content="A 9-minute animated lesson in English and Malayalam: build what you know from the basics, see past your wishes, leave room to think, and question the identity that blocks the view.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/ch08/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<title>Seeing clearly · The Almanack of Naval Ravikant</title>
+<meta name="description" content="An animated, narrated lesson on The Almanack of Naval Ravikant: thinking from the ground up, the ego and wishes that cloud reality, empty time to think, real contrarians, and shedding package identities. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'വ്യക്തമായി കാണുക · The Almanack of Naval Ravikant';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/ymu.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/almanack/ch08/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Seeing clearly', kicker: 'PART 1 · WEALTH · CHAPTER 8', sub: 'How to build what you know from the ground up, and why the person you think you are can hide what’s real',
+  credit: 'A study companion to The Almanack of Naval Ravikant, by Eric Jorgenson',
+  b_intro: 'Title', b_ground: 'From the ground up', b_rederive: 'Rebuild, don’t recite', b_q1: 'Quick check', b_fog: 'Wishes fog the view',
+  b_truth: 'The moment of truth', b_friend: 'Easy for a friend', b_check: 'Science check', b_room: 'Room to think', b_check2: 'Science check',
+  b_q2: 'Quick check', b_contrarian: 'A real contrarian', b_ego: 'Who built your ego?', b_habits: 'Take a habit apart', b_packages: 'Beliefs in a package',
+  b_q3: 'Quick check', b_redesign: 'Redesign yourself', b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  clear: 'clear thinker', ground: 'from the ground up', count: 'counting', arith: 'arithmetic', geo: 'geometry', trig: 'trigonometry',
+  jargon: 'big words', child: 'explain it to a 10-year-old?', nisha: 'Nisha',
+  feynman: 'Richard Feynman', counting: 'counting', edge: 'edge of calculus', ameen: 'Ameen · 40 formulas', riya: 'Riya · 5 basics',
+  rebuild: 'rebuilds the answer', least: 'least proven', insiders: 'insiders', nail: 'nail the basics',
+  real: 'seeing what’s real', picture: 'picture: how it should be', monkey: 'monkey mind', shafeeq: 'Shafeeq',
+  sales: 'sales sliding', rent: 'rent late', great: '“Doing great!”',
+  pain: 'pain', truth: 'the moment of truth', starts: 'progress starts here', ego: 'ego', fewer: 'fewer wishes', clearer: 'clearer view',
+  friend: 'advising a friend', rahul: 'Rahul', faisal: 'Faisal', applyB: '“Apply elsewhere. Move on.”', wish: 'his wish ↯ what’s real',
+  aloud: 'bad news, said out loud', fool: 'hard to fool yourself', feeling: 'a feeling: your guess', facts: 'not the facts',
+  sci: 'Science check', q1s: 'Easier to see a friend’s problem?', yes: 'yes', friendP: 'a friend’s problem', own: 'their own',
+  third: 'third person: “What should Rahul do?”', gap: 'gap gone', explain: 'explain how a zip works', less: 'knew less than they thought',
+  lower: 'rated lower', step: 'step back, and spell it out',
+  room: 'room to think', week: 'your week', think: 'no space to think', empty: 'a day or two, empty', two: 'plan 2', one: 'end up with 1',
+  bored: 'idle, even bored', rushed: 'rarely when rushed',
+  q2s: 'Ideas only when bored?', partly: 'partly', people: '145 people', brk: '12-minute break', easy: 'easy task, mind wanders',
+  ideas: 'more original ideas', hard: 'hard task', rest: 'rest', problems: 'only on problems already worked on', work: 'work it first, then give it room',
+  odd: 'a little odd', contrarian: 'a real contrarian', objects: 'objects to everything', backwards: 'still led by the crowd, backwards',
+  reasons: 'reasons from the ground up', pressure: 'holds under pressure', cynic: 'sneering: easy', copy: 'copying: easy', hopeful: 'hopeful contrarian: rare',
+  shed: 'shed the identity', egoL: 'ego', twenty: '20 years', parents: 'parents', school: 'school', place: 'the place you grew up',
+  happy: 'keep it happy, bend the world', strain: 'strain: who you feel you must be', ease: 'ease: who you already are',
+  habits: 'habits', thatsme: '“That’s just me.”', talks: 'talks over people', youngest: 'youngest of five',
+  serve: 'still helping me?', happier: 'happier?', healthier: 'healthier?', aiming: 'what I’m aiming for?', chooses: 'a habit he chooses on purpose',
+  package: 'beliefs in a package', party: 'party', fan: 'fan club', group: 'group', basics: 'check each from the basics',
+  defending: 'defending untested ideas', neat: 'one neat bundle? be suspicious', explainP: 'explain how a policy works', moderate: 'more moderate',
+  without: 'speak without the label',
+  reshape: 'hard times reshape us', accept: 'accept the world as it is', old: 'break an old identity', anas: 'Anas', tore: 'torn knee',
+  identity: 'footballer: his whole identity', coach: 'coach', apps: 'apps get redesigned', careers: 'careers', teams: 'teams', answer: 'no answer is permanent',
+  w1: 'Build from the basics. If you can explain it simply, you know it.',
+  w2: 'Wishes cloud the view. Step back as if advising a friend, and say bad news out loud.',
+  w3: 'Leave empty time to think, and reason things through yourself, with hope.',
+  w4: 'Your ego and habits were built by accident. Question them, check package beliefs, and redesign when life changes.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'വ്യക്തമായി കാണുക', kicker: 'ഭാഗം 1 · സമ്പത്ത് · അധ്യായം 8',
+  sub: 'അറിവ് അടിത്തറയിൽ നിന്ന് പണിയുന്നത് എങ്ങനെ, ഞാൻ ഇന്നയാളാണ് എന്ന തോന്നൽ സത്യത്തെ മറയ്ക്കുന്നത് എങ്ങനെ',
+  credit: 'The Almanack of Naval Ravikant · എറിക് ജോർഗൻസൻ · പഠനസഹായി',
+  b_intro: 'തലക്കെട്ട്', b_ground: 'അടിത്തറയിൽ നിന്ന്', b_rederive: 'കാണാപ്പാഠമല്ല, പണിതെടുക്കൽ', b_q1: 'ചെറിയ പരിശോധന', b_fog: 'മോഹങ്ങൾ കാഴ്ച മറയ്ക്കുന്നു',
+  b_truth: 'സത്യത്തിന്റെ നിമിഷം', b_friend: 'കൂട്ടുകാരന് എളുപ്പം', b_check: 'ശാസ്ത്രീയ പരിശോധന', b_room: 'ചിന്തിക്കാൻ ഇടം', b_check2: 'ശാസ്ത്രീയ പരിശോധന',
+  b_q2: 'ചെറിയ പരിശോധന', b_contrarian: 'വേറിട്ട് ചിന്തിക്കുന്നവർ', b_ego: 'ഈഗോ പണിതത് ആര്?', b_habits: 'ഒരു ശീലം അഴിച്ചുനോക്കൂ', b_packages: 'പൊതിക്കെട്ട് വിശ്വാസങ്ങൾ',
+  b_q3: 'ചെറിയ പരിശോധന', b_redesign: 'സ്വയം മാറ്റിപ്പണിയൂ', b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  clear: 'വ്യക്തമായി ചിന്തിക്കുന്നയാൾ', ground: 'അടിത്തറയിൽ നിന്ന് മുകളിലേക്ക്', count: 'എണ്ണൽ', arith: 'അങ്കഗണിതം', geo: 'ജ്യാമിതി', trig: 'ത്രികോണമിതി',
+  jargon: 'വലിയ വാക്കുകൾ', child: 'പത്തുവയസ്സുകാരന് പറഞ്ഞുകൊടുക്കാമോ?', nisha: 'നിഷ',
+  feynman: 'റിച്ചാർഡ് ഫെയ്ൻമാൻ', counting: 'എണ്ണൽ', edge: 'കാൽക്കുലസിന്റെ വക്ക്', ameen: 'അമീൻ · 40 ഫോർമുലകൾ', riya: 'റിയ · 5 അടിസ്ഥാനങ്ങൾ',
+  rebuild: 'വീണ്ടും പണിയുന്നു', least: 'ഏറ്റവും കുറച്ച് തെളിയിക്കപ്പെട്ടത്', insiders: 'അകത്തുള്ളവർ', nail: 'അടിസ്ഥാനം ഉറപ്പിക്കൂ',
+  real: 'യാഥാർഥ്യം കാണുക', picture: 'എങ്ങനെ ആകണം', monkey: 'കുരങ്ങൻ മനസ്സ്', shafeeq: 'ഷഫീഖ്',
+  sales: 'വിൽപ്പന താഴോട്ട്', rent: 'വാടക മുടങ്ങി', great: '“ഗംഭീരമായി ഓടുന്നു!”',
+  pain: 'വേദന', truth: 'സത്യത്തിന്റെ നിമിഷം', starts: 'പുരോഗതി ഇവിടെ തുടങ്ങുന്നു', ego: 'ഈഗോ', fewer: 'കുറഞ്ഞ മോഹങ്ങൾ', clearer: 'തെളിഞ്ഞ കാഴ്ച',
+  friend: 'കൂട്ടുകാരനെ ഉപദേശിക്കാൻ', rahul: 'രാഹുൽ', faisal: 'ഫൈസൽ', applyB: '“വേറെ ജോലിക്ക് അപേക്ഷിക്ക്, മുന്നോട്ട് പോ.”', wish: 'ആഗ്രഹം ↯ യാഥാർഥ്യം',
+  aloud: 'ചീത്ത വാർത്ത, ഉറക്കെ', fool: 'സ്വയം പറ്റിക്കാൻ പ്രയാസം', feeling: 'തോന്നൽ: നിങ്ങളുടെ ഊഹം', facts: 'വസ്തുതകളല്ല',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', q1s: 'മറ്റൊരാളുടെ പ്രശ്നം കാണാൻ എളുപ്പമോ?', yes: 'അതെ', friendP: 'കൂട്ടുകാരന്റെ പ്രശ്നം', own: 'സ്വന്തം പ്രശ്നം',
+  third: 'മൂന്നാമതൊരാളെപ്പോലെ: “രാഹുൽ എന്ത് ചെയ്യണം?”', gap: 'വ്യത്യാസം ഇല്ലാതായി', explain: 'സിപ്പ് എങ്ങനെ പ്രവർത്തിക്കുന്നു?', less: 'കുറച്ചേ അറിയൂ',
+  lower: 'കുറഞ്ഞ മാർക്ക്', step: 'ഒരടി മാറിനിന്ന്, പറഞ്ഞുനോക്കൂ',
+  room: 'ഇടം വേണം', week: 'ആഴ്ച', think: 'ചിന്തിക്കാൻ ഇടമില്ല', empty: 'ഒഴിച്ചിട്ട ദിവസങ്ങൾ', two: '2 ദിവസം', one: 'ഒന്ന് കിട്ടും',
+  bored: 'ബോറടിക്കുമ്പോൾ പോലും', rushed: 'തിരക്കിൽ: അപൂർവം',
+  q2s: 'ബോറടിക്കുമ്പോൾ മാത്രമോ ആശയങ്ങൾ?', partly: 'ഭാഗികമായി', people: '145 പേർ', brk: '12 മിനിറ്റ് ഇടവേള', easy: 'എളുപ്പമുള്ള ജോലി, അലയുന്ന മനസ്സ്',
+  ideas: 'ആശയങ്ങൾ കൂടുതൽ', hard: 'കഠിനമായ ജോലി', rest: 'വിശ്രമം', problems: 'നേരത്തേ പണിയെടുത്ത പ്രശ്നങ്ങളിൽ മാത്രം', work: 'ആദ്യം പണിയെടുക്കൂ, പിന്നെ ഇടം കൊടുക്കൂ',
+  odd: 'അൽപ്പം വിചിത്രർ', contrarian: 'വേറിട്ട് ചിന്തിക്കുന്നയാൾ', objects: 'എല്ലാറ്റിനെയും എതിർക്കും', backwards: 'തിരിഞ്ഞുനിന്ന്, ആൾക്കൂട്ടത്തിന് പിന്നാലെ',
+  reasons: 'അടിത്തറയിൽ നിന്ന് സ്വയം ചിന്തിക്കും', pressure: 'സമ്മർദ്ദത്തിലും ഉറച്ച്', cynic: 'പുച്ഛം: എളുപ്പം', copy: 'അനുകരണം: എളുപ്പം', hopeful: 'പ്രതീക്ഷയോടെ വേറിട്ട്: അപൂർവം',
+  shed: 'സ്വത്വം അഴിച്ചുവെക്കൽ', egoL: 'ഈഗോ', twenty: '20 വർഷം', parents: 'മാതാപിതാക്കൾ', school: 'സ്കൂൾ', place: 'വളർന്ന നാട്',
+  happy: 'സന്തോഷിപ്പിക്കാൻ, ലോകത്തെ വളച്ച്', strain: 'പിരിമുറുക്കം: ആകണം എന്ന് കരുതുന്ന ആൾ', ease: 'സ്വസ്ഥത: ഇപ്പോഴുള്ള നിങ്ങൾ',
+  habits: 'ശീലങ്ങൾ', thatsme: '“ഞാൻ ഇങ്ങനെയാണ്.”', talks: 'ഇടയ്ക്ക് കയറി സംസാരിക്കും', youngest: '5 മക്കളിൽ ഇളയവൻ',
+  serve: 'സഹായിക്കുന്നുണ്ടോ?', happier: 'സന്തോഷം?', healthier: 'ആരോഗ്യം?', aiming: 'ലക്ഷ്യത്തിലേക്ക്?', chooses: 'മനഃപൂർവം തിരഞ്ഞെടുത്ത ശീലം',
+  package: 'പൊതിക്കെട്ടായി വരുന്ന വിശ്വാസങ്ങൾ', party: 'പാർട്ടി', fan: 'ഫാൻസ് ക്ലബ്', group: 'കൂട്ടം', basics: 'അടിസ്ഥാനത്തിൽ നിന്ന് ഓരോന്നും',
+  defending: 'ന്യായീകരിക്കുന്നു', neat: 'വൃത്തിയുള്ള ഒരു കെട്ട്? സംശയിക്കൂ', explainP: 'വിശദീകരിക്കാൻ പറഞ്ഞു', moderate: 'മയപ്പെട്ടു',
+  without: 'ലേബൽ ഇല്ലാതെ',
+  reshape: 'മാറ്റിപ്പണിയുന്ന കാലം', accept: 'ലോകത്തെ അതുപോലെ അംഗീകരിക്കാൻ', old: 'പഴയ സ്വത്വം തകരും', anas: 'അനസ്', tore: 'കാൽമുട്ടിന് പരിക്ക്',
+  identity: 'ഫുട്ബോളർ: അവന്റെ മുഴുവൻ സ്വത്വം', coach: 'കോച്ച്', apps: 'ആപ്പുകൾ രൂപം മാറുന്നു', careers: 'കരിയർ', teams: 'ടീമുകൾ', answer: 'ഒരു ഉത്തരവും എന്നേക്കുമല്ല',
+  w1: 'അടിസ്ഥാനത്തിൽ നിന്ന് പണിയൂ. ലളിതമായി വിശദീകരിക്കാൻ പറ്റുമെങ്കിൽ, നിങ്ങൾക്ക് അത് അറിയാം.',
+  w2: 'ആഗ്രഹങ്ങൾ കാഴ്ച മറയ്ക്കും. കൂട്ടുകാരനെ ഉപദേശിക്കുന്നതുപോലെ മാറിനിന്ന് നോക്കൂ, ചീത്ത വാർത്ത ഉറക്കെ പറയൂ.',
+  w3: 'ചിന്തിക്കാൻ ഒഴിഞ്ഞ സമയം വെക്കൂ. പ്രതീക്ഷയോടെ, സ്വയം ആലോചിച്ച് ഉറപ്പിക്കൂ.',
+  w4: 'ഈഗോയും ശീലങ്ങളും യാദൃച്ഛികമായി ഉണ്ടായതാണ്. ചോദ്യം ചെയ്യൂ, പൊതിക്കെട്ട് വിശ്വാസങ്ങൾ പരിശോധിക്കൂ, ജീവിതം മാറുമ്പോൾ മാറ്റിപ്പണിയൂ.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 8, title: L('title'), minutes: LANG === 'ml' ? 11 : 9, language: LANG, next: '../ch09/index.html' };
+
+/* ---------- meaning colours (style.json look.meaning) ---------- */
+const WEALTH = EV.gold, MONEY = '#7cc79d', STATUS = '#e2694f', TIME = '#5fb3cf', SCI = '#9c84d8';
+const FOG = '#b9b3a3';
+
+/* ---------- chapter helpers (prefixed a8 to stay clear of engine globals) ---------- */
+// A label that fades in at t (beat clock, always a mark).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+// The same, wrapped onto more lines when it is too wide (Malayalam runs longer).
+const labP = (p, key, x, y, t, o = {}) => { const e = evPara(p, L(key), { x, y, o: 0, lh: 1.2, ...o }); show(e, t, o.dur || .45); return e; };
+const a8Ground = (p, y = 760, fill = '#0c1114') => {
+  mk('rect', { x: -10, y, width: 1620, height: 900 - y + 20, fill }, p);
+  path(p, `M0 ${y}H1600`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+};
+const a8Faisal = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#2f5f8f', '#21466b');
+const a8Shafeeq = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#8a4a32', '#6a3624');
+const a8Junaid = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#e8dcc0', '#bfb093');
+const a8Rahul = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#5e6b3a', '#47512b');
+const a8Anas = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#2f7a4f', '#225c3b');
+const a8Ameen = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#4a5a72', '#374356');
+const a8Riya = (p, o) => evRecolor(evPerson(p, { kind: 'f', ...o }), '#7a3550', '#5c283c');
+const a8Mariam = (p, o) => { const P = evRecolor(evPerson(p, { kind: 'f', ...o }), '#5a3d6e', '#432e52'); evScarf(P, '#2a2f3a'); return P; };
+function a8Icon(p, x, y, color = EV.dim, s = 1, o = 1) {
+  const g = G(p, { x, y, s, o });
+  mk('circle', { cx: 0, cy: -46, r: 14, fill: color }, g);
+  path(g, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: color });
+  return g;
+}
+// A rounded tag with a label, centred on (x, y).
+function a8Pill(p, key, x, y, { color = EV.gold, size = 30, fill = '#151d21', ink = EV.goldHi, minW = 160, o = 0 } = {}) {
+  const g = G(p, { x, y, o });
+  const w = Math.max(minW, evW(L(key), ML ? size * .88 : size) + 64);
+  mk('rect', { x: -w / 2, y: -32, width: w, height: 60, rx: 30, fill, stroke: color, 'stroke-width': 2 }, g);
+  evText(g, L(key), { x: 0, y: 8, size, fill: ink, maxW: w - 30 });
+  g._w = w;
+  return g;
+}
+const a8Tick = (p, x, y, color = MONEY, s = 1) => put(path(p, 'M-14 0L-4 11L16 -12', { stroke: color, 'stroke-width': 5 }, { d: 0 }), { x, y, s });
+const a8Cross = (p, x, y, color = STATUS, s = 1) => put(path(p, 'M-13 -13L13 13M13 -13L-13 13', { stroke: color, 'stroke-width': 5 }, { d: 0 }), { x, y, s });
+// Science-check frame and tag on #scene, kept across panels inside the beat.
+function a8Sci(m, D) {
+  const keep = G(scene);
+  hide(keep, D - .45, .4);
+  prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+  const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+  draw(fr, m('sci'), 1);
+  const tag = G(keep, { x: 200, y: 60, o: 0 });
+  const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+  mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+  evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+  show(tag, m('sci'), .4);
+}
+// A tilted verdict stamp.
+function a8Stamp(p, key, x, y, t) {
+  const g = G(p, { x, y, o: 0, r: -7 });
+  const sw = Math.max(200, evW(L(key), 30) + 50);
+  mk('rect', { x: -sw / 2, y: -30, width: sw, height: 60, rx: 8, fill: 'none', stroke: SCI, 'stroke-width': 4 }, g);
+  evText(g, L(key), { x: 0, y: 11, size: 30, weight: 700, fill: SCI, maxW: sw - 30 });
+  put(g, { s: 1.5 }); tw(g, { o: 1, s: 1 }, t, .4, back);
+  return g;
+}
+// A building block: a rounded slab, bottom centre at (0,0).
+function a8Block(p, { x = 0, y = 0, w = 300, h = 86, color = WEALTH, o = 1 } = {}) {
+  const g = G(p, { x, y, o });
+  mk('rect', { x: -w / 2, y: -h, width: w, height: h, rx: 8, fill: '#151d21', stroke: color, 'stroke-width': 3 }, g);
+  mk('rect', { x: -w / 2 + 10, y: -h + 10, width: w - 20, height: 10, rx: 4, fill: color, opacity: .35 }, g);
+  return g;
+}
+// A small monkey head, centred on (0,0).
+function a8Monkey(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  [-30, 30].forEach(ex => { mk('circle', { cx: ex, cy: -4, r: 13, fill: '#6b4a2e' }, g); mk('circle', { cx: ex, cy: -4, r: 6, fill: '#c9976b' }, g); });
+  mk('circle', { cx: 0, cy: 0, r: 27, fill: '#6b4a2e' }, g);
+  mk('ellipse', { cx: 0, cy: 7, rx: 18, ry: 15, fill: '#c9976b' }, g);
+  mk('circle', { cx: -8, cy: -6, r: 3.5, fill: '#120c08' }, g); mk('circle', { cx: 8, cy: -6, r: 3.5, fill: '#120c08' }, g);
+  path(g, 'M-7 12Q0 17 7 12', { stroke: '#3a2416', 'stroke-width': 2.5 });
+  return g;
+}
+// A small shop front, base at y = 0; g._door is the door group, g._sh the shutter rect.
+function a8Shop(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -150, y: -260, width: 300, height: 260, fill: '#1b2226', stroke: '#3a3f3a', 'stroke-width': 3 }, g);
+  mk('rect', { x: -140, y: -250, width: 280, height: 46, fill: '#151d21', stroke: EV.gold, 'stroke-width': 2 }, g);
+  // the sign: a phone and a pair of earbuds
+  mk('rect', { x: -14, y: -244, width: 28, height: 36, rx: 5, fill: 'none', stroke: EV.goldHi, 'stroke-width': 3 }, g);
+  mk('circle', { cx: -50, cy: -226, r: 7, fill: EV.goldHi }, g); mk('circle', { cx: 50, cy: -226, r: 7, fill: EV.goldHi }, g);
+  mk('rect', { x: -130, y: -190, width: 150, height: 120, fill: '#14232a', stroke: '#4a3a2c', 'stroke-width': 3 }, g);
+  [[-110, -120], [-80, -130], [-50, -118]].forEach(([cx, cy]) => mk('rect', { x: cx, y: cy, width: 16, height: 28, rx: 3, fill: '#3f6f95' }, g));
+  g._door = G(g, { x: 80, y: 0 });
+  mk('rect', { x: -40, y: -170, width: 80, height: 170, fill: '#2a211b', stroke: '#4a3a2c', 'stroke-width': 3 }, g._door);
+  g._sh = mk('rect', { x: -146, y: -200, width: 292, height: 0, fill: '#4a4f52', stroke: '#2a2f32', 'stroke-width': 2 }, g);
+  return g;
+}
+// A window onto reality: frame from (x0, y0), size w × h. Returns its inner group g._in in frame coordinates.
+function a8Window(p, x0, y0, w, h, o = 1) {
+  const g = G(p, { x: x0, y: y0, o });
+  mk('rect', { x: 0, y: 0, width: w, height: h, rx: 14, fill: '#0d1519', stroke: EV.gold, 'stroke-width': 4 }, g);
+  path(g, `M30 ${h - 40}H${w - 30}M30 40V${h - 40}`, { stroke: EV.faint, 'stroke-width': 2 });
+  g._in = G(g);
+  return g;
+}
+// Fog: drifting blobs over a box, opacity k(t) from the beat clock.
+function a8Fog(p, x0, y0, w, h, D, k) {
+  const blobs = [];
+  for (let i = 0; i < 9; i++) blobs.push(put(mk('ellipse', { cx: 0, cy: 0, rx: 70 + (i % 3) * 20, ry: 46 + (i % 2) * 16, fill: FOG }, p), { o: 0 }));
+  prog(q => { const t = q * D, a = k(t);
+    blobs.forEach((b, i) => { const ph = i * 1.7; put(b, { x: x0 + 110 + (w - 220) * (.5 + .5 * Math.sin(i * 2.1 + t * .18)), y: y0 + h * (.25 + .5 * ((i * .53) % 1)) + Math.sin(t * .6 + ph) * 10, o: .2 * a }); }); }, 0, D, lin);
+  return blobs;
+}
+// A small rounded box with a line chart in it, centred on (0,0). up = rising.
+function a8Chart(p, { x = 0, y = 0, up = true, color = MONEY, o = 1, s = 1 } = {}) {
+  const g = G(p, { x, y, o, s });
+  mk('rect', { x: -60, y: -40, width: 120, height: 80, rx: 10, fill: '#10171b', stroke: color, 'stroke-width': 2.5 }, g);
+  path(g, up ? 'M-44 24L-16 6L6 14L40 -24' : 'M-44 -24L-16 -6L6 -14L40 24', { stroke: color, 'stroke-width': 5 });
+  return g;
+}
+// A phone, centred on (0,0); g._scr is the screen group.
+function a8Phone(p, { x = 0, y = 0, s = 1, o = 1, w = 150, h = 280 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: 22, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 3 }, g);
+  mk('rect', { x: -w / 2 + 10, y: -h / 2 + 26, width: w - 20, height: h - 52, rx: 6, fill: '#142026' }, g);
+  g._scr = G(g);
+  return g;
+}
+// A clock face centred on (0,0); g._hand is the minute hand group (rotate it).
+function a8Clock(p, { x = 0, y = 0, r = 50, color = TIME, o = 1 } = {}) {
+  const g = G(p, { x, y, o });
+  mk('circle', { cx: 0, cy: 0, r, fill: '#0f171b', stroke: color, 'stroke-width': 4 }, g);
+  g._hand = G(g);
+  path(g._hand, `M0 ${r * .12}V${-r * .7}`, { stroke: color, 'stroke-width': 4 });
+  path(g, `M0 0L${r * .38} ${-r * .2}`, { stroke: EV.ink, 'stroke-width': 4 });
+  mk('circle', { cx: 0, cy: 0, r: 5, fill: color }, g);
+  return g;
+}
+// A light bulb, centred on its glass at (0,0); g._glow is its glow.
+function a8Bulb(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  g._glow = evGlow(g, 0, 0, 90, 'Gold', 0);
+  path(g, 'M-26 10Q-40 -6 -40 -24Q-40 -60 0 -60Q40 -60 40 -24Q40 -6 26 10L22 28H-22Z', { fill: '#2b2a22', stroke: EV.goldHi, 'stroke-width': 3 });
+  path(g, 'M-18 36H18M-14 46H14', { stroke: EV.dim, 'stroke-width': 4 });
+  return g;
+}
+// A sack, base at (0,0).
+function a8Bag(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-90 0Q-120 -90 -60 -150L-40 -170H40L60 -150Q120 -90 90 0Z', { fill: '#2a2320', stroke: EV.gold, 'stroke-width': 3 });
+  path(g, 'M-46 -162Q0 -150 46 -162', { stroke: EV.goldHi, 'stroke-width': 5 });
+  return g;
+}
+// A habit block: a small rounded square with a mark inside.
+function a8Habit(p, { x = 0, y = 0, color = TIME, o = 1, s = 1, kind = 0 } = {}) {
+  const g = G(p, { x, y, o, s });
+  mk('rect', { x: -32, y: -32, width: 64, height: 64, rx: 12, fill: '#141c20', stroke: color, 'stroke-width': 3.5 }, g);
+  const d = ['M-14 -6Q0 -20 14 -6Q0 8 -14 -6', 'M-12 12L0 -14L12 12Z', 'M-14 0H14M0 -14V14', 'M-14 10Q-14 -14 0 -14Q14 -14 14 10', 'M-12 -12L12 12M12 -12L-12 12', 'M-14 8L-4 -8L4 4L14 -10'][kind % 6];
+  path(g, d, { stroke: color, 'stroke-width': 3.5 });
+  return g;
+}
+// A parcel box, centred on (0,0); g._lid is the lid group.
+function a8Box(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -130, y: -80, width: 260, height: 160, rx: 6, fill: '#3a2f27', stroke: EV.gold, 'stroke-width': 3 }, g);
+  path(g, 'M0 -80V80', { stroke: STATUS, 'stroke-width': 10 });
+  g._lid = G(g, { x: 0, y: -80 });
+  mk('rect', { x: -140, y: -26, width: 280, height: 30, rx: 5, fill: '#4a3d31', stroke: EV.gold, 'stroke-width': 3 }, g._lid);
+  path(g._lid, 'M0 -26V4M-20 -40Q0 -20 0 -26Q0 -20 20 -40', { stroke: STATUS, 'stroke-width': 8 });
+  return g;
+}
+const a8Flag = (p, x, y) => { const g = G(p, { x, y, o: 0 }); path(g, 'M-30 40V-50', { stroke: EV.dim, 'stroke-width': 5 }); path(g, 'M-30 -50H40L26 -28L40 -6H-30Z', { fill: STATUS }); return g; };
+function a8Ball(p, x, y, r = 34, o = 0) {
+  const g = G(p, { x, y, o });
+  mk('circle', { cx: 0, cy: 0, r, fill: '#e8e2d2', stroke: '#2a2c27', 'stroke-width': 2 }, g);
+  path(g, `M0 ${-r * .42}L${r * .4} ${-r * .13}L${r * .25} ${r * .34}H${-r * .25}L${-r * .4} ${-r * .13}Z`, { fill: '#1c1f22' });
+  return g;
+}
+function a8Megaphone(p, x, y) {
+  const g = G(p, { x, y, o: 0 });
+  path(g, 'M-40 -14H-10L40 -44V44L-10 14H-40Z', { fill: '#a8913f', stroke: EV.goldHi, 'stroke-width': 3 });
+  path(g, 'M54 -24Q66 0 54 24M66 -38Q86 0 66 38', { stroke: EV.goldHi, 'stroke-width': 3 });
+  return g;
+}
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    evGlow(g, 800, 500, 260, 'Gold', .35);
+    // a lens: fog drifts off it and a horizon comes clear
+    const LX = 800, LY = 500, LR = 150;
+    mk('circle', { cx: LX, cy: LY, r: LR, fill: '#0d1519' }, g);
+    const hz = G(g, { o: 0 });
+    path(hz, `M${LX - 130} ${LY + 50}Q${LX - 60} ${LY - 10} ${LX} ${LY + 30}T${LX + 132} ${LY + 20}`, { stroke: WEALTH, 'stroke-width': 4 });
+    mk('circle', { cx: LX + 40, cy: LY - 40, r: 28, fill: EV.goldHi, opacity: .85 }, hz);
+    path(hz, `M${LX - 140} ${LY + 70}H${LX + 140}`, { stroke: EV.goldLo, 'stroke-width': 3 });
+    const fog = [0, 1, 2, 3, 4, 5].map(i => put(mk('ellipse', { cx: 0, cy: 0, rx: 70, ry: 44, fill: FOG }, g), { o: .3 }));
+    prog(q => { const t = q * D, u = io(evU(t, .6, Math.max(1, D - 2.5)));
+      put(hz, { o: .25 + .75 * u });
+      fog.forEach((f, i) => { const a = i / 6 * Math.PI * 2; put(f, { x: LX + Math.cos(a) * (50 + 170 * u), y: LY + Math.sin(a) * (40 + 120 * u), o: .3 * (1 - u) }); }); }, 0, D, lin);
+    mk('circle', { cx: LX, cy: LY, r: LR, fill: 'none', stroke: WEALTH, 'stroke-width': 9 }, g);
+    path(g, `M${LX + 106} ${LY + 106}L${LX + 200} ${LY + 200}`, { stroke: WEALTH, 'stroke-width': 20 });
+    evText(g, L('kicker'), { x: 800, y: 150, size: 26, fill: EV.gold, weight: 500, ls: ML ? undefined : '6' });
+    const ti = evText(g, L('title'), { x: 800, y: 260, size: 88, font: SERIF, weight: 600, maxW: 1420, o: 0 });
+    tw(g, { o: 1 }, .15, .9, out);
+    put(ti, { y: 280 }); tw(ti, { y: 260, o: 1 }, m('title'), .7, out);
+    const sub = evPara(scene, L('sub'), { x: 800, y: 770, size: 32, fill: EV.dim, o: 0, maxW: 1300, font: SERIF, italic: true, lh: 1.25 });
+    put(sub, { y: 790 }); tw(sub, { y: 770, o: 1 }, m('sub'), .7, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 870, size: 22, fill: '#7a7466', o: 0, maxW: 1400 });
+    show(cr, m('sub'), 1);
+    tw(g, { o: 0 }, D - .6, .5); hide(sub, D - .6, .5); hide(cr, D - .6, .5);
+  }],
+
+  ['ground', 'b_ground', (m, D) => {
+    const p = panel(0);
+    a8Ground(p, 760);
+    lab(p, 'clear', 800, 110, m('clear'), { size: 50, font: SERIF, weight: 600, fill: WEALTH, maxW: 1100 });
+    // the tower of knowledge, built bottom first
+    const TX = 400, keys = ['count', 'arith', 'geo', 'trig'], cols = [EV.goldLo, WEALTH, EV.goldHi, TIME];
+    const b0 = a8Block(p, { x: TX, y: 760, color: cols[0], o: 0 });
+    const mid = G(p, { x: 0, y: 0 });      // arithmetic and its label slide out together
+    const b1 = a8Block(mid, { x: TX, y: 674, color: cols[1], o: 0 });
+    const up = G(p, { x: TX, y: 588 });      // the upper part rocks about its base
+    const b2 = a8Block(up, { x: 0, y: 0, color: cols[2], o: 0 });
+    const b3 = a8Block(up, { x: 0, y: -86, color: cols[3], o: 0 });
+    const blocks = [b0, b1, b2, b3];
+    const lb = keys.map((k, i) => i < 2 ? lab(i ? mid : p, k, TX + 175, 760 - 86 * i - 33, m(k), { size: 30, fill: cols[i], anchor: 'start', maxW: 300 })
+      : lab(up, k, 175, -86 * (i - 2) - 33, m(k), { size: 30, fill: cols[i], anchor: 'start', maxW: 300 }));
+    prog(q => { const t = q * D;
+      blocks.forEach((b, i) => { const u = evU(t, m(keys[i]), .45); put(b, { o: io(u), y: (i < 2 ? 760 - 86 * i : -86 * (i - 2)) - 40 * (1 - out(u)) }); });
+      // the arithmetic block slides out; the top drops into the gap and wobbles
+      const s = io(evU(t, m('lower'), .8));
+      put(mid, { x: -250 * s, o: 1 - .55 * s });
+      const w = t - m('wobble');
+      const drop = w < 0 ? 0 : 86 * Math.min(1, out(w / .35));
+      const rock = w < 0 ? 0 : 9 * Math.sin(w * 10) * Math.exp(-w * .9) + (w > 0 ? 6 * Math.min(1, w / .4) : 0);
+      put(up, { y: 588 + drop, r: rock });
+    }, 0, D, lin);
+    lab(p, 'ground', TX, 820, m('ground'), { size: 32, font: SERIF, italic: true, fill: EV.goldHi, maxW: 520 });
+    // big words, then a plain explanation
+    const sp = evRecolor(evPerson(p, { kind: 'm', x: 1180, y: 760, s: .7, o: 0 }), '#4a4f57', '#373b42');
+    evBreathe(sp, D);
+    const jb = G(p, { x: 1220, y: 455, o: 0 });
+    path(jb, 'M-190 -150H190Q210 -150 210 -130V-30Q210 -10 190 -10H-90L-120 20L-112 -10H-190Q-210 -10 -210 -30V-130Q-210 -150 -190 -150Z', { fill: '#151d21', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .7 });
+    let sq = '';
+    for (let r = 0; r < 3; r++) { sq += `M-170 ${-118 + r * 34}`; for (let i = 0; i < 17; i++) sq += `q10 ${i % 2 ? 12 : -12} 20 0`; }
+    path(jb, sq, { stroke: STATUS, 'stroke-width': 3, opacity: .8 });
+    const jl = evText(p, L('jargon'), { x: 1220, y: 270, size: 32, fill: STATUS, weight: 600, o: 0 });
+    prog(q => { const t = q * D, u = evU(t, m('jargon'), .4), v = evU(t, m('child'), .4); put(jb, { o: io(u) * (1 - io(v)), s: .9 + .1 * out(u) }); put(sp.g, { o: io(u) * (1 - io(v)) }); put(jl, { o: io(u) * (1 - io(v)) }); }, 0, D, lin);
+    const ni = evPerson(p, { kind: 'f', x: 1120, y: 760, s: .7, o: 0 });
+    evBreathe(ni, D); show(ni.g, m('child'), .45); evMood(ni, 'smile', m('child'));
+    const kid = a8Ameen(p, { x: 1380, y: 760, s: .42, o: 0 });
+    evBreathe(kid, D, 1, 1.1); show(kid.g, m('child') + .15, .4); evMood(kid, 'smile', m('child') + .3);
+    // Nisha's bubble: a tiny tower, three plain blocks
+    const nb = G(p, { x: 1180, y: 430, o: 0 });
+    path(nb, 'M-120 -150H120Q140 -150 140 -130V-30Q140 -10 120 -10H-40L-70 20L-62 -10H-120Q-140 -10 -140 -30V-130Q-140 -150 -120 -150Z', { fill: '#151d21', stroke: EV.gold, 'stroke-width': 2, 'stroke-opacity': .7 });
+    [0, 1, 2].forEach(i => mk('rect', { x: -40, y: -50 - i * 30, width: 80, height: 26, rx: 5, fill: [EV.goldLo, WEALTH, EV.goldHi][i] }, nb));
+    put(nb, { s: .8 }); tw(nb, { o: 1, s: 1 }, m('child') + .2, .45, back);
+    lab(p, 'child', 1240, 220, m('child'), { size: 34, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 620 });
+  }],
+
+  ['rederive', 'b_rederive', (m, D) => {
+    const p = panel(0);
+    a8Ground(p, 800);
+    // Feynman's unbroken chain, counting to the edge of calculus
+    const fy = G(p, { x: 160, y: 250, o: 0 });
+    a8Icon(fy, 0, 0, EV.ink, 1.5);
+    show(fy, m('feynman'), .4);
+    lab(p, 'feynman', 160, 300, m('feynman'), { size: 26, weight: 600, maxW: 260 });
+    const NX = i => 340 + i * 140, NY = 190, nodes = [], links = [];
+    for (let i = 0; i < 9; i++) {
+      if (i) links.push(path(p, `M${NX(i - 1) + 16} ${NY}H${NX(i) - 16}`, { stroke: EV.gold, 'stroke-width': 4 }, { d: 0 }));
+      nodes.push(evDot(p, NX(i), NY, i === 8 ? 18 : 13, i === 8 ? EV.goldHi : WEALTH, 0));
+    }
+    const span = Math.max(1, m('edge') - m('counting'));
+    evSeq([...nodes.map((n, i) => [n, m('counting') + span * i / 8, .25]), ...links.map((l, i) => [l, m('counting') + span * i / 8 + .05, span / 8, 'd'])], D);
+    lab(p, 'counting', NX(0), 250, m('counting'), { size: 26, fill: EV.ink });
+    lab(p, 'edge', NX(8), 250, m('edge'), { size: 26, fill: EV.goldHi, maxW: 300 });
+    // two students: memorised cards vs a few connected basics
+    const am = a8Ameen(p, { x: 250, y: 800, s: .62, o: 0 });
+    evBreathe(am, D); show(am.g, m('ameen'), .4);
+    lab(p, 'ameen', 250, 852, m('ameen'), { size: 28, weight: 600, maxW: 420 });
+    const cards = [];
+    for (let i = 0; i < 8; i++) {
+      const c = G(p, { x: 470, y: 640, o: 0 });
+      mk('rect', { x: -40, y: -54, width: 80, height: 108, rx: 6, fill: '#e8e4d8', stroke: '#8f8a7a', 'stroke-width': 1.5 }, c);
+      path(c, 'M-26 -30H26M-26 -12H18M-26 6H26', { stroke: '#6b6658', 'stroke-width': 3 });
+      cards.push(c);
+    }
+    prog(q => { const t = q * D, u = io(evU(t, m('ameen') + .2, .6)), f = evU(t, m('cards'), 1);
+      cards.forEach((c, i) => { const a = (i - 3.5) * 9 * u; const fx = f * (i % 2 ? 1 : -1) * (30 + i * 12), fy = f * f * (36 + i * 6);
+        put(c, { o: u * (1 - .7 * f), r: a + f * (i % 2 ? 50 : -40), x: 470 + (i - 3.5) * 12 * u + fx, y: 640 + fy }); }); }, 0, D, lin);
+    evMood(am, 'worried', m('cards'));
+    const ry = a8Riya(p, { x: 1350, y: 800, s: .62, o: 0 });
+    evBreathe(ry, D, 1, .8); show(ry.g, m('riya'), .4);
+    lab(p, 'riya', 1350, 852, m('riya'), { size: 28, weight: 600, maxW: 420 });
+    const net = [[1080, 690], [1160, 620], [1240, 690], [1120, 560], [1220, 560]];
+    const nl = path(p, 'M1080 690L1160 620L1240 690M1160 620L1120 560M1160 620L1220 560M1120 560L1220 560', { stroke: WEALTH, 'stroke-width': 4 }, { d: 0 });
+    const nd = net.map(([x, y]) => evDot(p, x, y, 13, EV.goldHi, 0));
+    evSeq([[nl, m('riya') + .2, .6, 'd'], ...nd.map((d, i) => [d, m('riya') + .1 + i * .08, .3])], D);
+    // the exam twists a question
+    const ex = G(p, { x: 800, y: 470, o: 0 });
+    mk('rect', { x: -80, y: -100, width: 160, height: 200, rx: 8, fill: '#e8e4d8', stroke: '#8f8a7a', 'stroke-width': 2 }, ex);
+    evText(ex, '?', { x: 0, y: 30, size: 96, weight: 700, fill: '#2a2c27', font: SERIF });
+    show(ex, m('twist'), .3);
+    prog(q => { const t = q * D, u = evU(t, m('twist'), .9); put(ex, { r: 18 * Math.sin(u * Math.PI) + 12 * io(u) }); }, 0, D, lin);
+    // Riya rebuilds: a new node reaches the question
+    const rl = path(p, 'M1220 560Q1030 430 885 470', { stroke: EV.goldHi, 'stroke-width': 4, 'stroke-dasharray': '10 8' }, { d: 0 });
+    draw(rl, m('rebuild'), .8);
+    const nn = evDot(p, 885, 470, 15, EV.goldHi, 0);
+    show(nn, m('rebuild') + .3, .4);
+    evMood(ry, 'smile', m('rebuild'));
+    lab(p, 'rebuild', 1150, 470, m('rebuild'), { size: 28, fill: EV.goldHi, anchor: 'start', maxW: 380 });
+    // a pyramid: the basics proven and wide, the fancy top thin and dashed
+    const q = panel(m('least'));
+    put(q, { o: 0 }); show(q, m('least'), .4);
+    const tiers = [[780, 900, 1], [700, 700, .85], [620, 500, .6], [540, 300, .3]];
+    const tg = tiers.map(([y, w, a], i) => {
+      const g = G(q);
+      mk('rect', { x: 800 - w / 2, y: y - 80, width: w, height: 76, rx: 6, fill: i === 3 ? 'none' : '#151d21', stroke: WEALTH, 'stroke-width': 3, 'stroke-opacity': a, 'stroke-dasharray': i === 3 ? '12 9' : 'none' }, g);
+      return g;
+    });
+    void tg;
+    const base = put(mk('rect', { x: 350, y: 700, width: 900, height: 76, rx: 6, fill: WEALTH, opacity: .0 }, q), { o: 0 });
+    lab(q, 'least', 990, 510, m('least'), { size: 30, fill: EV.dim, anchor: 'start', maxW: 520 });
+    const fl = [720, 800, 880].map(x => a8Icon(q, x, 458, '#5a5649', .7, 0));
+    evSeq(fl.map((f, i) => [f, m('insiders') + i * .1, .3]), D);
+    const flags = path(q, 'M735 360V310L775 322L735 334M895 360V310L935 322L895 334', { stroke: STATUS, 'stroke-width': 3 }, { d: 0 });
+    draw(flags, m('insiders') + .2, .4);
+    prog(qq => { const t = qq * D, v = t - m('insiders'); put(flags, { y: v < 0 ? 0 : Math.sin(v * 7) * 4 }); }, 0, D, lin);
+    lab(q, 'insiders', 610, 400, m('insiders'), { size: 30, fill: STATUS, anchor: 'end' });
+    tw(base, { o: .35 }, m('nail'), .6);
+    lab(q, 'nail', 800, 852, m('nail'), { size: 40, font: SERIF, weight: 600, fill: EV.goldHi });
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    const p = panel(0);
+    a8Ground(p, 440);
+    const a = evRecolor(evPerson(p, { kind: 'f', x: 470, y: 440, s: .5 }), '#3d5f8f', '#2c4669'); evBreathe(a, D); evMood(a, 'ask', .4);
+    const b = a8Riya(p, { x: 1130, y: 440, s: .5 }); evBreathe(b, D, 1, .8);
+    // interest earning interest: a staircase of coins that grows faster
+    const hs = [1, 1, 2, 2, 3, 4];
+    hs.forEach((h, i) => { for (let k = 0; k < h; k++) mk('ellipse', { cx: 700 + i * 44, cy: 420 - k * 16, rx: 18, ry: 7, fill: k === h - 1 ? EV.goldHi : WEALTH, stroke: '#080c0f', 'stroke-width': 1.5 }, p); });
+    const th = evThought(p, { x: 520, y: 240, w: 170, h: 90, dx: 40, o: 0 });
+    show(th, .4, .4);
+    evText(th._in, '?', { x: 0, y: 16, size: 44, weight: 600, fill: EV.gold });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-explain', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 1, L('q1y'), [L('q1na'), null, L('q1nc')]),
+  }], done) }],
+
+  ['fog', 'b_fog', (m, D) => {
+    const p = panel(0);
+    a8Ground(p, 780);
+    lab(p, 'real', 800, 90, m('real'), { size: 44, font: SERIF, weight: 600, fill: EV.gold, maxW: 900 });
+    // the window onto what is real
+    const win = a8Window(p, 960, 190, 540, 380, 0);
+    show(win, m('real'), .5);
+    const sl = path(win._in, 'M50 80L160 130L250 120L340 200L420 230L500 310', { stroke: STATUS, 'stroke-width': 6 }, { d: 0 });
+    draw(sl, m('sales'), 1.1);
+    lab(p, 'sales', 1230, 620, m('sales'), { size: 30, fill: STATUS, weight: 600 });
+    // the picture of how it should be, in a gold frame, in front of the view
+    const fr = G(p, { x: 800, y: 330, o: 0 });
+    mk('rect', { x: -150, y: -110, width: 300, height: 220, rx: 6, fill: '#121b1f', stroke: EV.goldHi, 'stroke-width': 10 }, fr);
+    mk('rect', { x: -132, y: -92, width: 264, height: 184, fill: 'none', stroke: EV.goldLo, 'stroke-width': 3 }, fr);
+    const ul = path(fr, 'M-110 60L-40 20L20 34L110 -60', { stroke: MONEY, 'stroke-width': 7 }, { d: 0 });
+    put(fr, { s: .8 }); tw(fr, { o: 1, s: 1 }, m('picture'), .5, back);
+    draw(ul, m('picture') + .3, .8);
+    lab(p, 'picture', 800, 490, m('picture'), { size: 26, fill: MONEY, maxW: 310 });
+    a8Fog(p, 960, 190, 540, 380, D, t => io(evU(t, m('picture'), 1.5))).forEach(b => p.insertBefore(b, fr));
+    // the monkey mind, bouncing on top of the frame
+    const mk_ = a8Monkey(p, { x: 800, y: 190, s: .9, o: 0 });
+    show(mk_, m('monkey'), .3);
+    prog(q => { const t = q * D, v = t - m('monkey'); put(mk_, { y: 190 - (v < 0 ? 0 : Math.abs(Math.sin(v * 5)) * 26), r: v < 0 ? 0 : Math.sin(v * 2.5) * 12 }); }, 0, D, lin);
+    lab(p, 'monkey', 850, 160, m('monkey'), { size: 30, fill: '#c9976b', anchor: 'start', weight: 600, maxW: 300 });
+    // Shafeeq and his shop
+    const sh = a8Shop(p, { x: 560, y: 780, o: 0 });
+    show(sh, m('shafeeq'), .45);
+    const sf = a8Shafeeq(p, { x: 230, y: 780, s: .68, o: 0 });
+    evBreathe(sf, D); show(sf.g, m('shafeeq'), .45);
+    lab(p, 'shafeeq', 230, 835, m('shafeeq'), { size: 30, weight: 600 });
+    const bill = G(p, { x: 640, y: 680, o: 0 });
+    mk('rect', { x: -26, y: -34, width: 52, height: 68, fill: '#e8e4d8', stroke: STATUS, 'stroke-width': 3 }, bill);
+    path(bill, 'M-14 -14H14M-14 0H14M-14 14H6', { stroke: STATUS, 'stroke-width': 3 });
+    put(bill, { r: -12, s: 1.4 }); tw(bill, { o: 1, r: 6, s: 1 }, m('rent'), .35, back);
+    lab(p, 'rent', 520, 440, m('rent'), { size: 30, fill: STATUS, weight: 600 });
+    const gb = evBubble(p, L('great'), { x: 260, y: 470, w: 300, size: 28, fill: MONEY });
+    tw(gb, { o: 1, s: 1 }, m('great'), .4, back);
+    evMood(sf, 'smile', m('great'));
+    const gg = evGlow(p, 800, 330, 200, 'Gold', 0); p.insertBefore(gg, fr);
+    tw(gg, { o: .8 }, m('great'), .5);
+  }],
+
+  ['truth', 'b_truth', (m, D) => {
+    const p = panel(0);
+    a8Ground(p, 780);
+    const sh = a8Shop(p, { x: 560, y: 780 });
+    const sf = a8Shafeeq(p, { x: 230, y: 780, s: .68 });
+    evBreathe(sf, D);
+    const win = a8Window(p, 960, 190, 540, 380);
+    path(win._in, 'M50 80L160 130L250 120L340 200L420 230L500 310', { stroke: STATUS, 'stroke-width': 6 });
+    const fr = G(p, { x: 800, y: 330 });
+    mk('rect', { x: -150, y: -110, width: 300, height: 220, rx: 6, fill: '#121b1f', stroke: EV.goldHi, 'stroke-width': 10 }, fr);
+    path(fr, 'M-110 60L-40 20L20 34L110 -60', { stroke: MONEY, 'stroke-width': 7 });
+    a8Fog(p, 960, 190, 540, 380, D, t => 1 - io(evU(t, m('truth'), 1.6))).forEach(b => p.insertBefore(b, fr));
+    // the shutter comes down
+    prog(q => { const u = io(evU(q * D, m('shutter'), 1.1)); sh._sh.setAttribute('height', 200 * u); }, 0, D, lin);
+    evMood(sf, 'sad', m('pain'));
+    tw(sf.head, { r: 10 }, m('pain'), .6);
+    const pl = lab(p, 'pain', 230, 470, m('pain'), { size: 34, fill: STATUS, weight: 600 });
+    void pl;
+    // the picture falls away, the fog clears: the moment of truth
+    prog(q => { const u = io(evU(q * D, m('truth'), .9)); put(fr, { o: 1 - u, y: 330 + 80 * u, r: -10 * u }); }, 0, D, lin);
+    lab(p, 'truth', 1230, 140, m('truth'), { size: 38, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 620 });
+    const pg = path(win._in, 'M500 310Q515 280 512 236', { stroke: WEALTH, 'stroke-width': 6 }, { d: 0 });
+    const pa = put(path(win, 'M496 240L512 214L528 240', { stroke: WEALTH, 'stroke-width': 5 }), { o: 0 });
+    draw(pg, m('starts'), .6); show(pa, m('starts') + .3, .4);
+    lab(p, 'starts', 1230, 620, m('starts'), { size: 30, fill: WEALTH, weight: 600, maxW: 600 });
+    // the ego stands in front of the view, then shrinks
+    const eg = G(p, { x: 1230, y: 380, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 150, fill: '#3a1f17', stroke: STATUS, 'stroke-width': 5 }, eg);
+    mk('circle', { cx: -40, cy: -20, r: 9, fill: STATUS }, eg); mk('circle', { cx: 40, cy: -20, r: 9, fill: STATUS }, eg);
+    path(eg, 'M-36 40Q0 20 36 40', { stroke: STATUS, 'stroke-width': 6 });
+    const wishes = [[-210, -90], [190, -120], [-180, 110], [210, 90], [0, -190]].map(([x, y]) => { const w = G(eg, { x, y }); mk('circle', { cx: 0, cy: 0, r: 22, fill: '#151d21', stroke: MONEY, 'stroke-width': 3 }, w); path(w, 'M-10 6L-2 -2L4 2L10 -8', { stroke: MONEY, 'stroke-width': 3 }); return w; });
+    prog(q => { const t = q * D, a = io(evU(t, m('ego'), .4)), s = io(evU(t, m('smaller'), 1.2)), cl = io(evU(t, m('clearer'), .6));
+      put(eg, { o: a * (1 - cl), s: 1 - .8 * s });
+      wishes.forEach((w, i) => { const f = evU(t, m('fewer') + i * .12, .3); put(w, { o: f < 1 ? 1 - f : 0, s: 1 + .5 * f }); }); }, 0, D, lin);
+    lab(p, 'ego', 800, 370, m('ego'), { size: 40, fill: STATUS, weight: 600 });
+    lab(p, 'fewer', 800, 430, m('fewer'), { size: 28, fill: MONEY, maxW: 300 });
+    const cg = evGlow(p, 1230, 380, 300, 'Gold', 0); p.insertBefore(cg, win);
+    tw(cg, { o: .9 }, m('clearer'), .6);
+    lab(p, 'clearer', 800, 500, m('clearer'), { size: 36, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 300 });
+  }],
+
+  ['friend', 'b_friend', (m, D) => {
+    const p = panel(0);
+    a8Ground(p, 780);
+    lab(p, 'friend', 800, 90, m('friend'), { size: 42, font: SERIF, weight: 600, fill: EV.gold, maxW: 900 });
+    const ra = a8Rahul(p, { x: 300, y: 780, s: .68, o: 0 });
+    evBreathe(ra, D); show(ra.g, m('rahul'), .4); evMood(ra, 'worried', m('rahul'));
+    lab(p, 'rahul', 300, 835, m('rahul'), { size: 30, weight: 600 });
+    // his wish: the old boss ringing
+    const th = evThought(p, { x: 330, y: 470, w: 240, h: 150, dx: 40, o: 0 });
+    const ph = a8Phone(th._in, { s: .32 });
+    const rings = path(th._in, 'M34 -30Q46 0 34 30M48 -44Q66 0 48 44M-34 -30Q-46 0 -34 30M-48 -44Q-66 0 -48 44', { stroke: MONEY, 'stroke-width': 4 });
+    show(th, m('call'), .4);
+    prog(q => { const t = q * D, v = t - m('call'); put(ph, { r: v < 0 ? 0 : Math.sin(v * 30) * 6 * (Math.floor(v * 1.2) % 2) }); put(rings, { o: v < 0 ? 0 : .3 + .7 * Math.abs(Math.sin(v * 3)) });
+      // the wish flies at what is real and bounces back
+      const u = evU(t, m('wish'), 1.4), hit = Math.sin(Math.PI * Math.min(1, u)) * (u < 1 ? 1 : 0);
+      put(th, { x: 330 + 230 * hit }); }, 0, D, lin);
+    const fz = a8Faisal(p, { x: 1260, y: 780, s: .68, o: 0 });
+    evBreathe(fz, D, 1, .8); show(fz.g, m('faisal'), .4);
+    lab(p, 'faisal', 1260, 835, m('faisal'), { size: 30, weight: 600 });
+    const ab = evBubble(p, L('applyB'), { x: 1220, y: 470, w: 380, size: 27, tail: 'right' });
+    tw(ab, { o: 1, s: 1 }, m('apply'), .4, back);
+    evMood(fz, 'smile', m('apply'));
+    // what is real: a gold wall between them
+    const wall = G(p, { x: 800, y: 780, o: 0 });
+    mk('rect', { x: -26, y: -420, width: 52, height: 420, rx: 6, fill: '#151d21', stroke: EV.gold, 'stroke-width': 3 }, wall);
+    for (let i = 1; i < 7; i++) path(wall, `M-26 ${-60 * i}H26`, { stroke: EV.goldLo, 'stroke-width': 2 });
+    show(wall, m('wish'), .3);
+    lab(p, 'wish', 800, 320, m('wish'), { size: 30, fill: STATUS, weight: 600, maxW: 440 });
+    // panel 2: bad news said out loud
+    const q = panel(m('aloud'));
+    put(q, { o: 0 }); show(q, m('aloud'), .4);
+    lab(q, 'aloud', 800, 130, m('aloud'), { size: 42, font: SERIF, weight: 600, fill: EV.gold, maxW: 1000 });
+    mk('ellipse', { cx: 800, cy: 520, rx: 300, ry: 70, fill: '#2a211b', stroke: EV.goldLo, 'stroke-width': 3 }, q);
+    const seats = [[520, 470, EV.ink], [700, 420, EV.dim], [900, 420, EV.dim], [1080, 470, EV.dim]];
+    seats.forEach(([x, y, c]) => a8Icon(q, x, y, c, 1.1));
+    const nb = G(q, { x: 520, y: 300, o: 0 });
+    mk('rect', { x: -70, y: -50, width: 140, height: 90, rx: 14, fill: '#151d21', stroke: STATUS, 'stroke-width': 2.5 }, nb);
+    path(nb, 'M-46 -26L-14 -6L10 -14L46 22', { stroke: STATUS, 'stroke-width': 5 });
+    path(nb, 'M-20 40L-34 66L0 40', { fill: '#151d21', stroke: STATUS, 'stroke-width': 2.5 });
+    put(nb, { s: .7 }); tw(nb, { o: 1, s: 1 }, m('aloud') + .2, .4, back);
+    prog(qq => { const v = qq * D - m('fool'); put(nb, { s: v < 0 ? 1 : evP(v % 1.6, 1.06) }); }, 0, D, lin);
+    lab(q, 'fool', 800, 650, m('fool'), { size: 32, fill: EV.ink, maxW: 700 });
+    // a feeling is a guess
+    const ht = put(path(q, 'M0 26C-46 -6 -34 -46 0 -22C34 -46 46 -6 0 26Z', { fill: '#e78fa8' }), { x: 380, y: 780, s: 1.1, o: 0 });
+    show(ht, m('feeling'), .4);
+    lab(q, 'feeling', 440, 792, m('feeling'), { size: 30, fill: '#e78fa8', anchor: 'start', maxW: 480 });
+    const fc = lab(q, 'facts', 1140, 792, m('facts'), { size: 30, fill: EV.dim, maxW: 360 });
+    void fc;
+    const st = path(q, `M${1140 - 110} 782H${1140 + 110}`, { stroke: STATUS, 'stroke-width': 4 }, { d: 0 });
+    draw(st, m('facts') + .3, .35);
+  }],
+
+  ['check', 'b_check', (m, D) => {
+    const p = panel(0);
+    a8Sci(m, D);
+    lab(p, 'q1s', 720, 170, m('q'), { size: 42, font: SERIF, italic: true, fill: EV.ink, maxW: 960 });
+    a8Stamp(p, 'yes', 1330, 200, m('yes'));
+    // wiser about a friend's problem than one's own; third person closes the gap
+    path(p, 'M260 620H900', { stroke: EV.faint, 'stroke-width': 2 });
+    const bf = mk('rect', { x: 340, y: 620, width: 130, height: 0, fill: WEALTH }, p);
+    const bo = mk('rect', { x: 640, y: 620, width: 130, height: 0, fill: '#6b5a3a' }, p);
+    prog(q => { const t = q * D, a = io(evU(t, m('friendP'), .7)), b = io(evU(t, m('own'), .7)), c = io(evU(t, m('third') + .4, 1));
+      const hf = 280 * a, ho = 120 * b + 155 * c;
+      bf.setAttribute('height', hf); bf.setAttribute('y', 620 - hf); bo.setAttribute('height', ho); bo.setAttribute('y', 620 - ho);
+      bo.setAttribute('fill', c > .5 ? WEALTH : '#6b5a3a'); }, 0, D, lin);
+    lab(p, 'friendP', 405, 665, m('friendP'), { size: 28, fill: WEALTH, maxW: 300 });
+    lab(p, 'own', 705, 665, m('own'), { size: 28, fill: EV.ink, maxW: 300 });
+    labP(p, 'third', 1210, ML ? 380 : 420, m('third'), { size: 30, fill: EV.ink, maxW: 520 });
+    lab(p, 'gap', 1210, 500, m('gap'), { size: 34, fill: WEALTH, weight: 600 });
+    // panel 2: explaining a zip
+    const q = panel(m('explain'));
+    put(q, { o: 0 }); show(q, m('explain'), .4);
+    const zp = G(q, { x: 420, y: 470 });
+    path(zp, 'M-60 -200V200M60 -200V200', { stroke: EV.dim, 'stroke-width': 6 });
+    let teeth = '';
+    for (let i = 0; i < 14; i++) { const y = -190 + i * 28; teeth += i % 2 ? `M-4 ${y}H26V${y + 14}H-4Z` : `M-26 ${y}H4V${y + 14}H-26Z`; }
+    path(zp, teeth, { fill: EV.goldLo });
+    const sl = G(zp, { y: -40 });
+    mk('rect', { x: -34, y: -24, width: 68, height: 48, rx: 10, fill: '#2b2a22', stroke: EV.goldHi, 'stroke-width': 3 }, sl);
+    path(sl, 'M0 24V70', { stroke: EV.goldHi, 'stroke-width': 6 });
+    prog(qq => { const t = qq * D, u = t - m('explain'); put(sl, { y: -40 + (u < 0 ? 0 : Math.sin(u * 1.4) * 90) }); }, 0, D, lin);
+    lab(q, 'explain', 420, 740, m('explain'), { size: 30, fill: EV.ink, maxW: 520 });
+    // understanding, rated before and after explaining
+    path(q, 'M820 620H1320', { stroke: EV.faint, 'stroke-width': 2 });
+    const r1 = mk('rect', { x: 880, y: 620, width: 120, height: 0, fill: '#6b6658' }, q);
+    const r2 = mk('rect', { x: 1130, y: 620, width: 120, height: 0, fill: SCI }, q);
+    prog(qq => { const t = qq * D, a = io(evU(t, m('explain') + .3, .7)), b = io(evU(t, m('lower'), .8));
+      r1.setAttribute('height', 300 * a); r1.setAttribute('y', 620 - 300 * a); r2.setAttribute('height', 190 * b); r2.setAttribute('y', 620 - 190 * b); }, 0, D, lin);
+    lab(q, 'less', 1070, 250, m('less'), { size: 30, fill: EV.ink, maxW: 560 });
+    const dn = path(q, 'M1190 370V410M1176 396L1190 412L1204 396', { stroke: SCI, 'stroke-width': 4 }, { d: 0 });
+    draw(dn, m('lower') + .3, .4);
+    lab(q, 'lower', 1190, 665, m('lower'), { size: 28, fill: SCI, weight: 600 });
+    lab(q, 'step', 800, 800, m('step'), { size: 38, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1200 });
+  }],
+
+  ['room', 'b_room', (m, D) => {
+    const p = panel(0);
+    lab(p, 'room', 800, 100, m('room'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    // a week of seven days filling with meetings
+    const CX = i => 360 + i * 140, Y0 = 210, H = 380;
+    const days = [], blocks = [];
+    for (let i = 0; i < 7; i++) {
+      days.push(put(mk('rect', { x: CX(i) - 58, y: Y0, width: 116, height: H, rx: 10, fill: '#10171b', stroke: EV.faint, 'stroke-width': 2 }, p), { o: 0 }));
+      for (let k = 0; k < 4; k++) blocks.push({ e: put(mk('rect', { x: CX(i) - 48, y: 0, width: 96, height: 76, rx: 8, fill: TIME, opacity: .75 }, p), { o: 0 }), i, k });
+    }
+    // the seven days stand faintly from the start and light up on 'week'
+    prog(q => { const t = q * D; days.forEach((d, i) => put(d, { o: .3 * io(evU(t, .2, .4)) + .7 * io(evU(t, m('week') + i * .06, .3)) })); }, 0, D, lin);
+    const EMPTY = [1, 4];
+    prog(q => { const t = q * D;
+      blocks.forEach(({ e, i, k }) => {
+        const u = out(evU(t, m('week') + .3 + (i * 4 + k) * .035, .35));
+        const gone = EMPTY.includes(i) ? io(evU(t, m('empty') + k * .05, .5)) : 0;
+        // one of the two empty days fills up again with an errand
+        put(e, { o: u * (1 - gone), y: Y0 + H - 10 - 90 * (k + 1) + 10 - 60 * (1 - u) - 120 * gone });
+      }); }, 0, D, lin);
+    lab(p, 'week', 280, 400, m('week'), { size: 30, fill: TIME, anchor: 'end', maxW: 220 });
+    const errand = put(mk('rect', { x: CX(4) - 48, y: Y0 + H - 90, width: 96, height: 76, rx: 8, fill: STATUS, opacity: .85 }, p), { o: 0 });
+    put(errand, { y: -60 }); tw(errand, { o: 1, y: 0 }, m('one') + .2, .45, out);
+    const th = evThought(p, { x: 1420, y: 610, w: 160, h: 90, dx: 20, o: 0 });
+    show(th, m('think'), .3);
+    const tx = a8Cross(th._in, 0, 0, STATUS, 1.6);
+    draw(tx, m('think') + .3, .3);
+    lab(p, 'think', 1400, 680, m('think'), { size: 26, fill: STATUS, maxW: 300 });
+    EMPTY.forEach(i => { const gl = put(mk('rect', { x: CX(i) - 58, y: Y0, width: 116, height: H, rx: 10, fill: 'none', stroke: WEALTH, 'stroke-width': 4 }, p), { o: 0 }); tw(gl, { o: 1 }, m('empty') + .3, .4); });
+    lab(p, 'empty', 780, 650, m('empty'), { size: 32, fill: WEALTH, weight: 600, maxW: 600 });
+    lab(p, 'two', 560, 730, m('two'), { size: 30, fill: EV.goldHi, maxW: 300 });
+    lab(p, 'one', 920, 730, m('one'), { size: 30, fill: STATUS, maxW: 340 });
+    // panel 2: idle mind lights up; rushed one stays dark
+    const q = panel(m('bored'));
+    put(q, { o: 0 }); show(q, m('bored'), .4);
+    a8Ground(q, 780);
+    const ni = evPerson(q, { kind: 'f', x: 450, y: 780, s: .72 });
+    evBreathe(ni, D, 1.5, .5);
+    tw(ni.head, { r: -8 }, m('bored'), .8);
+    const bu = a8Bulb(q, { x: 560, y: 330, o: 0 });
+    show(bu, m('bored') + .3, .4);
+    tw(bu._glow, { o: 1 }, m('bored') + .3, .8);
+    lab(q, 'bored', 450, 835, m('bored'), { size: 32, fill: WEALTH, weight: 600, maxW: 500 });
+    const fz = a8Faisal(q, { x: 1100, y: 780, s: .72, o: 0 });
+    show(fz.g, m('rushed'), .3);
+    evMood(fz, 'tense', m('rushed'));
+    evWalk(fz, 1000, 1220, m('rushed'), D);
+    const ck = a8Clock(q, { x: 1180, y: 330, r: 60, o: 0 });
+    show(ck, m('rushed'), .3);
+    prog(qq => put(ck._hand, { r: Math.max(0, qq * D - m('rushed')) * 300 }), 0, D, lin);
+    lab(q, 'rushed', 1150, 835, m('rushed'), { size: 32, fill: TIME, weight: 600, maxW: 500 });
+  }],
+
+  ['check2', 'b_check2', (m, D) => {
+    const p = panel(0);
+    a8Sci(m, D);
+    lab(p, 'q2s', 700, 170, m('q'), { size: 42, font: SERIF, italic: true, fill: EV.ink, maxW: 900 });
+    a8Stamp(p, 'partly', 1330, 200, m('partly'));
+    const folk = [];
+    for (let i = 0; i < 14; i++) folk.push([a8Icon(p, 180 + i * 44, 330, i % 4 ? EV.dim : EV.ink, .7, 0), m('people') + i * .04, .3]);
+    evSeq(folk, D);
+    lab(p, 'people', 466, 390, m('people'), { size: 30, fill: EV.ink });
+    const ck = a8Clock(p, { x: 1040, y: 320, r: 46, o: 0 });
+    show(ck, m('break'), .3);
+    const sweep = path(p, 'M1040 274A46 46 0 0 1 1083.7 305.8L1040 320Z', { fill: TIME, opacity: .45 }, { d: 0 });
+    put(sweep, { o: 0 }); tw(sweep, { o: 1 }, m('break') + .2, .4);
+    lab(p, 'brk', 1260, 332, m('break'), { size: 28, fill: TIME, anchor: 'start', maxW: 280 });
+    // improvement after the break (repeated problems): the easy task beats a hard task and rest
+    path(p, 'M300 720H1300', { stroke: EV.faint, 'stroke-width': 2 });
+    const bars = { easy: [1080, 220, WEALTH], hard: [520, 60, '#6b6658'], rest: [800, 70, '#6b6658'] };
+    const els = {};
+    Object.entries(bars).forEach(([k, [x]]) => { els[k] = mk('rect', { x: x - 70, y: 720, width: 140, height: 0, fill: bars[k][2] }, p); });
+    prog(q => { const t = q * D;
+      Object.entries(bars).forEach(([k, [, h]]) => { const u = io(evU(t, m(k === 'easy' ? 'ideas' : k), .7)); els[k].setAttribute('height', h * u); els[k].setAttribute('y', 720 - h * u); }); }, 0, D, lin);
+    labP(p, 'easy', 1080, 765, m('easy'), { size: 26, fill: WEALTH, maxW: 330 });
+    lab(p, 'ideas', 1080, 470, m('ideas'), { size: 28, fill: WEALTH, weight: 600, maxW: 360 });
+    lab(p, 'hard', 520, 765, m('hard'), { size: 26, fill: EV.dim, maxW: 260 });
+    lab(p, 'rest', 800, 765, m('rest'), { size: 26, fill: EV.dim, maxW: 240 });
+    // panel 2: only on problems already worked on
+    const q = panel(m('problems'));
+    put(q, { o: 0 }); show(q, m('problems'), .4);
+    lab(q, 'problems', 800, 260, m('problems'), { size: 34, fill: EV.ink, weight: 600, maxW: 1100 });
+    const pa = G(q, { x: 560, y: 470 });
+    for (let i = 0; i < 3; i++) mk('rect', { x: -70 + i * 8, y: -60 + i * 10, width: 120, height: 90, rx: 4, fill: i % 2 ? '#e8e4d8' : '#d6d0bf', stroke: '#8f8a7a', 'stroke-width': 1.5 }, pa);
+    const ar = path(q, 'M680 520V420M664 436L680 418L696 436', { stroke: WEALTH, 'stroke-width': 5 }, { d: 0 });
+    draw(ar, m('problems') + .3, .5);
+    const pb = G(q, { x: 1040, y: 470 });
+    mk('rect', { x: -60, y: -45, width: 120, height: 90, rx: 4, fill: '#e8e4d8', stroke: '#8f8a7a', 'stroke-width': 1.5 }, pb);
+    path(pb, 'M-16 0H16M0 -16V16', { stroke: '#6b6658', 'stroke-width': 6 });
+    const fl = path(q, 'M1140 470H1200', { stroke: EV.dim, 'stroke-width': 5 }, { d: 0 });
+    draw(fl, m('problems') + .3, .5);
+    lab(q, 'work', 800, 700, m('work'), { size: 38, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1200 });
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    a8Ground(p, 440);
+    const mr = a8Mariam(p, { x: 360, y: 440, s: .5 });
+    evBreathe(mr, D); evMood(mr, 'worried', .4);
+    // a sewing machine on its table
+    const sm = G(p, { x: 760, y: 440 });
+    path(sm, 'M-110 0V-70H110V0M-120 -70H120', { stroke: EV.goldLo, 'stroke-width': 6 });
+    path(sm, 'M-80 -74V-160H70Q90 -160 90 -140V-104H40V-74', { fill: '#2b3632', stroke: EV.gold, 'stroke-width': 3 });
+    mk('circle', { cx: -60, cy: -130, r: 18, fill: 'none', stroke: EV.goldHi, 'stroke-width': 4 }, sm);
+    a8Chart(p, { x: 1180, y: 300, up: false, color: STATUS, s: 1.4 });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-truth', prompt: [L('q2p')],
+    build: choice([[L('q2a')], [L('q2b')], [L('q2c')]], 0, L('q2y'), [null, L('q2nb'), L('q2nc')]),
+  }], done) }],
+
+  ['contrarian', 'b_contrarian', (m, D) => {
+    const p = panel(0);
+    a8Ground(p, 520, '#0a0f12');
+    lab(p, 'odd', 800, 90, m('odd'), { size: 34, fill: EV.dim, italic: true, font: SERIF });
+    lab(p, 'contrarian', 800, 160, m('contrarian'), { size: 46, font: SERIF, weight: 600, fill: EV.gold, maxW: 1000 });
+    // a crowd that turns together; the objector always turns the other way
+    const crowd = [];
+    for (let i = 0; i < 6; i++) {
+      const g = G(p, { x: 190 + i * 80, y: 520, o: 0 });
+      a8Icon(g, 0, 0, EV.dim, 1);
+      g._ar = G(g, { y: -96 }); path(g._ar, 'M-16 0H16M6 -9L16 0L6 9', { stroke: EV.dim, 'stroke-width': 4 });
+      crowd.push(g);
+    }
+    evSeq(crowd.map((g, i) => [g, .3 + i * .05, .3]), D);
+    const ob = G(p, { x: 900, y: 520, o: 0 });
+    a8Icon(ob, 0, 0, STATUS, 1);
+    ob._ar = G(ob, { y: -96, r: 180 }); path(ob._ar, 'M-16 0H16M6 -9L16 0L6 9', { stroke: STATUS, 'stroke-width': 4 });
+    show(ob, m('objects'), .3);
+    // the true contrarian on a block of basics, his own direction
+    const ct = G(p, { x: 1300, y: 470, o: 0 });
+    mk('rect', { x: -60, y: 0, width: 120, height: 50, rx: 6, fill: '#151d21', stroke: WEALTH, 'stroke-width': 3 }, ct);
+    a8Icon(ct, 0, 0, EV.goldHi, 1);
+    ct._ar = G(ct, { y: -96, r: -50 }); path(ct._ar, 'M-16 0H16M6 -9L16 0L6 9', { stroke: EV.goldHi, 'stroke-width': 4 });
+    put(ct, { y: 500 }); tw(ct, { o: 1, y: 470 }, m('reasons'), .45, out);
+    prog(q => { const t = q * D, v = t - m('objects');
+      // every 1.6 s the crowd turns round; the objector mirrors it
+      const flips = v < 0 ? 0 : Math.floor(v / 1.6) + 1, ph = v < 0 ? 0 : io(Math.min(1, (v % 1.6) / .4));
+      const ang = 180 * ((flips - 1) + ph) * (v < 0 ? 0 : 1);
+      const pr = io(evU(t, m('pressure'), .6));
+      crowd.forEach((g, i) => { const toward = Math.atan2(470 - 520, 1300 - (190 + i * 80)) * 180 / Math.PI; put(g._ar, { r: ang * (1 - pr) + toward * pr }); });
+      put(ob._ar, { r: 180 + ang });
+      const push = pr > 0 ? Math.sin((t - m('pressure')) * 12) * 3 * (1 - evU(t, m('pressure') + 1.2, .6)) : 0;
+      put(ct, { r: push }); }, 0, D, lin);
+    lab(p, 'objects', 900, 590, m('objects'), { size: 28, fill: STATUS, weight: 600, maxW: 300 });
+    labP(p, 'backwards', 900, 635, m('backwards'), { size: 25, fill: EV.dim, maxW: 330 });
+    labP(p, 'reasons', 1300, 590, m('reasons'), { size: 28, fill: EV.goldHi, weight: 600, maxW: ML ? 340 : 420 });
+    lab(p, 'pressure', 1300, ML ? 680 : 640, m('pressure'), { size: 26, fill: EV.ink, maxW: 340 });
+    // three tags: two easy, one rare
+    const pill = (k, x, col, ink) => { const g = a8Pill(p, k, x, 780, { color: col, ink, size: 28, minW: 220 }); put(g, { y: 800 }); tw(g, { o: 1, y: 780 }, m(k), .4, out); return g; };
+    pill('cynic', 330, EV.dim, EV.dim);
+    pill('copy', 740, EV.dim, EV.dim);
+    const gl = evGlow(p, 1200, 780, 220, 'Gold', 0);
+    tw(gl, { o: 1 }, m('hopeful'), .6);
+    pill('hopeful', 1200, WEALTH, EV.goldHi);
+  }],
+
+  ['ego', 'b_ego', (m, D) => {
+    const p = panel(0);
+    a8Ground(p, 800);
+    lab(p, 'shed', 800, 90, m('shed'), { size: 46, font: SERIF, weight: 600, fill: EV.gold, maxW: 1000 });
+    // a person, and the ego built round him in layers
+    const pe = evPerson(p, { kind: 'm', x: 420, y: 800, s: .7 });
+    evBreathe(pe, D);
+    const rings = [['parents', 150, 180, '#a8913f'], ['school', 190, 215, TIME], ['place', 230, 250, MONEY]].map(([k, rx, ry, c]) =>
+      [k, put(mk('ellipse', { cx: 0, cy: 0, rx, ry, fill: 'none', stroke: c, 'stroke-width': 5, 'stroke-dasharray': '16 10' }, p), { x: 420, y: 640, o: 0 }), c]);
+    rings.forEach(([k, e]) => { put(e, { s: .8 }); tw(e, { o: 1, s: 1 }, m(k), .5, back); });
+    lab(p, 'egoL', 420, 360, m('ego'), { size: 40, fill: STATUS, weight: 600 });
+    lab(p, 'parents', 700, 470, m('parents'), { size: 28, fill: '#a8913f', anchor: 'start', maxW: 300 });
+    lab(p, 'school', 700, 530, m('school'), { size: 28, fill: TIME, anchor: 'start', maxW: 300 });
+    lab(p, 'place', 700, 590, m('place'), { size: 28, fill: MONEY, anchor: 'start', maxW: 320 });
+    // first twenty years: a dot runs along a timeline
+    const tl = path(p, 'M1000 760H1460', { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 });
+    draw(tl, m('twenty'), .5);
+    const td = evDot(p, 1000, 760, 12, EV.goldHi, 0);
+    prog(q => { const t = q * D, u = evU(t, m('twenty'), Math.max(1, m('place') + .8 - m('twenty'))); put(td, { o: t >= m('twenty') ? 1 : 0, x: 1000 + 460 * io(u) }); }, 0, D, lin);
+    show(evText(p, '0', { x: 1000, y: 805, size: 26, fill: EV.dim, o: 0 }), m('twenty'), .4);
+    lab(p, 'twenty', 1460, 810, m('twenty'), { size: 28, fill: EV.goldHi });
+    // keeping it happy: the world gets squeezed to fit
+    const wo = G(p, { x: 1230, y: 470, o: 0 });
+    const wi = G(wo);
+    mk('circle', { cx: 0, cy: 0, r: 90, fill: '#10202a', stroke: TIME, 'stroke-width': 4 }, wi);
+    path(wi, 'M-70 -20Q-30 -50 0 -20T70 -10M-60 30Q-10 10 20 40T64 30', { stroke: MONEY, 'stroke-width': 4 });
+    show(wo, m('happy'), .4);
+    const arr = path(p, 'M660 700Q930 680 1145 505', { stroke: STATUS, 'stroke-width': 4, 'stroke-dasharray': '10 8' }, { d: 0 });
+    draw(arr, m('happy') + .2, .6);
+    prog(q => { const u = io(evU(q * D, m('happy') + .7, 1)); wi.setAttribute('transform', `scale(${(1 + .25 * u).toFixed(3)} ${(1 - .3 * u).toFixed(3)})`); }, 0, D, lin);
+    lab(p, 'happy', 1300, 625, m('happy'), { size: 28, fill: STATUS, maxW: 380 });
+    // panel 2: strain and ease
+    const q = panel(m('strain'));
+    put(q, { o: 0 }); show(q, m('strain'), .4);
+    a8Ground(q, 760);
+    const ghost = G(q, { x: 480, y: 760 });
+    path(ghost, 'M-60 0V-330Q-60 -400 0 -420Q60 -400 60 -330V0', { stroke: STATUS, 'stroke-width': 3, 'stroke-dasharray': '12 9', opacity: .8 });
+    const a = evPerson(q, { kind: 'm', x: 480, y: 760, s: .72 });
+    evMood(a, 'tense', m('strain'));
+    prog(qq => { const t = qq * D, v = t - m('strain'); put(a.g, { y: 760 - (v < 0 ? 0 : 14 + Math.sin(v * 9) * 3) }); }, 0, D, lin);
+    lab(q, 'strain', 480, 820, m('strain'), { size: 28, fill: STATUS, maxW: 560 });
+    const bgl = evGlow(q, 1120, 600, 220, 'Gold', 0);
+    tw(bgl, { o: .8 }, m('ease'), .6);
+    const b = evPerson(q, { kind: 'm', x: 1120, y: 760, s: .72, o: 0 });
+    evBreathe(b, D, 1.6, .4); show(b.g, m('ease'), .4); evMood(b, 'smile', m('ease'));
+    lab(q, 'ease', 1120, 820, m('ease'), { size: 28, fill: EV.goldHi, maxW: 560 });
+  }],
+
+  ['habits', 'b_habits', (m, D) => {
+    const p = panel(0);
+    a8Ground(p, 780);
+    lab(p, 'habits', 800, 90, m('habits'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    const fz = a8Faisal(p, { x: 300, y: 780, s: .68 });
+    evBreathe(fz, D);
+    // a row of habits, bundled into a sack called "me"
+    const cols = [TIME, MONEY, WEALTH, STATUS, '#e78fa8', TIME];
+    const hb = cols.map((c, i) => a8Habit(p, { x: 820 + i * 100, y: 220, color: c, kind: i, o: 0 }));
+    const bag = a8Bag(p, { x: 620, y: 780, o: 0 });
+    show(bag, m('bundle'), .4);
+    prog(q => { const t = q * D;
+      hb.forEach((h, i) => { const a = io(evU(t, m('habits') + i * .08, .3)), u = io(evU(t, m('bundle') + i * .1, .7));
+        const pop = i === 3 ? io(evU(t, m('talks'), .7)) : 0;
+        const bx = 620 + (i - 2.5) * 22, by = 690 - (i % 2) * 22;
+        put(h, { o: a, s: 1 - .4 * u + .6 * pop, x: 820 + i * 100 + (bx - 820 - i * 100) * u + (1050 - bx) * pop, y: 220 + (by - 220) * u + (430 - by) * pop }); }); }, 0, D, lin);
+    const tb = evBubble(p, L('thatsme'), { x: 330, y: 480, w: 300, size: 28 });
+    tw(tb, { o: 1, s: 1 }, m('thatsme'), .4, back);
+    hide(tb, m('talks'), .3);
+    evMood(fz, 'smile', m('thatsme'));
+    lab(p, 'talks', 1050, 530, m('talks'), { size: 30, fill: STATUS, weight: 600, maxW: 400 });
+    // where it came from: the youngest of five at the dinner table
+    const mem = G(p, { x: 1180, y: 690, o: 0 });
+    mk('rect', { x: -240, y: -110, width: 480, height: 190, rx: 16, fill: '#10171b', stroke: EV.goldLo, 'stroke-width': 2, 'stroke-dasharray': '8 6' }, mem);
+    mk('rect', { x: -170, y: 20, width: 340, height: 18, rx: 4, fill: '#3a2f27' }, mem);
+    [[-140, 1], [-70, 1], [0, 1], [70, 1], [140, .62]].forEach(([x, s], i) => a8Icon(mem, x, 12, i === 4 ? EV.goldHi : EV.dim, s));
+    const wv = path(mem, 'M168 -40Q182 -24 168 -8M182 -54Q204 -24 182 6', { stroke: EV.goldHi, 'stroke-width': 3 });
+    show(mem, m('youngest'), .4);
+    prog(q => { const v = q * D - m('youngest'); put(wv, { o: v < 0 ? 0 : .4 + .6 * Math.abs(Math.sin(v * 5)) }); }, 0, D, lin);
+    lab(p, 'youngest', 1180, 835, m('youngest'), { size: 28, fill: EV.ink, maxW: 460 });
+    // panel 2: four questions to the habit
+    const q = panel(m('asks'));
+    put(q, { o: 0 }); show(q, m('asks'), .4);
+    a8Ground(q, 780);
+    const fz2 = a8Faisal(q, { x: 1340, y: 780, s: .62 });
+    evBreathe(fz2, D); evMood(fz2, 'ask', m('asks'));
+    const old = a8Habit(q, { x: 300, y: 420, color: STATUS, kind: 3, s: 2 });
+    const rows = ['serve', 'happier', 'healthier', 'aiming'];
+    rows.forEach((k, i) => {
+      lab(q, k, 560, 290 + i * 90, m(k), { size: 32, fill: EV.ink, anchor: 'start', maxW: 520 });
+      const x = a8Cross(q, 520, 280 + i * 90, STATUS, 1.1);
+      draw(x, m(k) + .3, .3);
+    });
+    // a chosen habit replaces it
+    prog(qq => { const u = io(evU(qq * D, m('chooses'), .6)); put(old, { o: 1 - u, y: 420 + 60 * u }); }, 0, D, lin);
+    const nw = a8Habit(q, { x: 300, y: 420, color: WEALTH, kind: 2, s: 2, o: 0 });
+    put(nw, { s: 1.4 }); tw(nw, { o: 1, s: 2 }, m('chooses') + .3, .5, back);
+    const ng = evGlow(q, 300, 420, 140, 'Gold', 0); q.insertBefore(ng, nw);
+    tw(ng, { o: .9 }, m('chooses') + .3, .5);
+    evMood(fz2, 'smile', m('chooses'));
+    lab(q, 'chooses', 560, 690, m('chooses'), { size: 34, font: SERIF, weight: 600, fill: EV.goldHi, anchor: 'start', maxW: 640 });
+  }],
+
+  ['packages', 'b_packages', (m, D) => {
+    const p = panel(0);
+    lab(p, 'package', 800, 90, m('package'), { size: 44, font: SERIF, weight: 600, fill: EV.gold, maxW: 1000 });
+    const bx = a8Box(p, { x: 800, y: 300, o: 0 });
+    put(bx, { y: 260 }); tw(bx, { o: 1, y: 300 }, .3, .6, out);
+    prog(q => { const v = q * D - m('package'); put(bx, { s: v < 0 ? 1 : evP(v, 1.08) }); }, 0, D, lin);
+    prog(q => { const u = io(evU(q * D, m('party') - .2, .5)); put(bx._lid, { y: -80 - 24 * u, r: 16 * u, x: 160 * u }); }, 0, D, lin);
+    // the bundle's contents fly out, each with a name
+    const items = [['party', a8Flag(p, 0, 0), 460], ['fan', a8Ball(p, 0, 0, 36, 0), 800], ['group', a8Megaphone(p, 0, 0), 1140]];
+    prog(q => { const t = q * D;
+      items.forEach(([k, e, x]) => { const u = evU(t, m(k), .6); put(e, { o: u > 0 ? 1 : 0, x: 800 + (x - 800) * io(u), y: 300 + 260 * io(u) - 140 * Math.sin(Math.PI * u), r: k === 'fan' ? 360 * u : 0 }); }); }, 0, D, lin);
+    items.forEach(([k, , x]) => lab(p, k, x, 650, m(k), { size: 30, fill: EV.ink, maxW: 280 }));
+    // check each one from the basics: a magnifier passes over
+    const bl = path(p, 'M340 690H1260', { stroke: WEALTH, 'stroke-width': 6 }, { d: 0 });
+    draw(bl, m('basics'), .6);
+    const mg = G(p, { x: 380, y: 520, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 46, fill: 'none', stroke: EV.goldHi, 'stroke-width': 6 }, mg);
+    path(mg, 'M32 32L70 70', { stroke: EV.goldHi, 'stroke-width': 10 });
+    prog(q => { const t = q * D, u = evU(t, m('basics'), 2.6); put(mg, { o: u > 0 && u < 1 ? 1 : u >= 1 ? 1 - Math.min(1, (t - m('basics') - 2.6) / .3) : 0, x: 380 + 780 * io(u) }); }, 0, D, lin);
+    lab(p, 'basics', 800, 740, m('basics'), { size: 32, fill: WEALTH, weight: 600, maxW: 700 });
+    const nv = G(p, { x: 1420, y: 520, o: 0 });
+    a8Icon(nv, 0, 60, EV.ink, 1.3);
+    path(nv, 'M-70 -40H-20V10Q-20 40 -45 54Q-70 40 -70 10Z', { fill: '#2b2a22', stroke: STATUS, 'stroke-width': 3 });
+    show(nv, m('defending'), .4);
+    lab(p, 'defending', 1390, 650, m('defending'), { size: 26, fill: STATUS, maxW: 300 });
+    // panel 2: one neat bundle, explaining moderates, drop the label
+    const q = panel(m('neat'));
+    put(q, { o: 0 }); show(q, m('neat'), .4);
+    for (let i = 0; i < 6; i++) a8Habit(q, { x: 550 + i * 100, y: 220, color: STATUS, kind: 1 });
+    path(q, 'M490 220H1110', { stroke: EV.goldHi, 'stroke-width': 4, opacity: .7 });
+    mk('rect', { x: 480, y: 170, width: 640, height: 100, rx: 18, fill: 'none', stroke: EV.goldHi, 'stroke-width': 3 }, q);
+    lab(q, 'neat', 800, 330, m('neat'), { size: 32, fill: EV.ink, weight: 600, maxW: 900 });
+    // a view slider: extreme to moderate
+    path(q, 'M420 520H1180', { stroke: EV.faint, 'stroke-width': 8 });
+    mk('circle', { cx: 800, cy: 520, r: 8, fill: EV.dim }, q);
+    const kn = G(q, { x: 430, y: 520, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: 26, fill: STATUS }, kn);
+    show(kn, m('explainP'), .3);
+    prog(qq => { const u = io(evU(qq * D, m('moderate'), 1.2)); put(kn, { x: 430 + 320 * u }); kn.firstChild.setAttribute('fill', u > .5 ? WEALTH : STATUS); }, 0, D, lin);
+    lab(q, 'explainP', 800, 450, m('explainP'), { size: 30, fill: EV.ink, maxW: 800 });
+    lab(q, 'moderate', 760, 600, m('moderate'), { size: 32, fill: WEALTH, weight: 600 });
+    // speak without the label
+    const tg = G(q, { x: 520, y: 760, o: 0 });
+    path(tg, 'M-70 -34H50L80 0L50 34H-70Z', { fill: '#151d21', stroke: EV.goldLo, 'stroke-width': 3 });
+    mk('circle', { cx: -46, cy: 0, r: 8, fill: '#080c0f', stroke: EV.goldLo, 'stroke-width': 2 }, tg);
+    show(tg, m('without'), .3);
+    const tx = a8Cross(q, 525, 760, STATUS, 2.4);
+    draw(tx, m('without') + .3, .3);
+    lab(q, 'without', 880, 772, m('without'), { size: 38, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 620 });
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    a8Ground(p, 440);
+    const jn = a8Junaid(p, { x: 380, y: 440, s: .5 });
+    evBreathe(jn, D); evMood(jn, 'ask', .4);
+    a8Box(p, { x: 800, y: 340, s: .8 });
+    for (let i = 0; i < 4; i++) a8Habit(p, { x: 1060 + i * 80, y: 340, color: STATUS, kind: 1, s: .8 });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-package', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 1, L('q3y'), [L('q3na'), null, L('q3nc')]),
+  }], done) }],
+
+  ['redesign', 'b_redesign', (m, D) => {
+    const p = panel(0);
+    a8Ground(p, 780, '#0b1410');
+    lab(p, 'reshape', 800, 90, m('reshape'), { size: 44, font: SERIF, weight: 600, fill: EV.gold, maxW: 1000 });
+    lab(p, 'accept', 470, 160, m('accept'), { size: 28, fill: EV.ink, maxW: 600 });
+    lab(p, 'old', 1130, 160, m('old'), { size: 28, fill: STATUS, maxW: 600 });
+    // the sevens ground: goal at the right
+    path(p, 'M1440 780V560H1560V780', { stroke: EV.ink, 'stroke-width': 6, opacity: .7 });
+    const an = a8Anas(p, { x: 480, y: 780, s: .72, o: 0 });
+    evBreathe(an, D); show(an.g, m('anas'), .4);
+    lab(p, 'anas', 480, 835, m('anas'), { size: 30, weight: 600 });
+    const ball = a8Ball(p, 560, 760, 18, 0);
+    show(ball, m('anas'), .3);
+    evArm(an, 1, -20, -10, m('anas') + .3);
+    prog(q => { const t = q * D, u = evU(t, m('anas') + .6, 1.1); put(ball, { x: 560 + 930 * io(u), y: 760 - 160 * Math.sin(Math.PI * u), r: 720 * u }); put(an.legR, { r: u > 0 && u < .2 ? -30 : 0 }); }, 0, D, lin);
+    // the injury
+    const star = G(p, { x: 500, y: 690, o: 0 });
+    path(star, 'M0 -26L7 -8L26 -8L11 4L17 24L0 12L-17 24L-11 4L-26 -8L-7 -8Z', { fill: STATUS });
+    prog(q => { const v = q * D - m('tore'); put(star, { o: v < 0 ? 0 : Math.max(0, 1 - v / 1.6), s: v < 0 ? 1 : 1 + .4 * Math.sin(v * 8) }); }, 0, D, lin);
+    evMood(an, 'hurt', m('tore'));
+    tw(an.g, { r: 6, y: 790 }, m('tore'), .5);
+    lab(p, 'tore', 650, 640, m('tore'), { size: 30, fill: STATUS, weight: 600, anchor: 'start' });
+    // footballer: the old identity cracks; a new one, coach
+    const idp = a8Pill(p, 'identity', 480, 420, { color: STATUS, ink: EV.ink, size: 28 });
+    put(idp, { y: 440 }); tw(idp, { o: 1, y: 420 }, m('identity'), .45, out);
+    const crack = path(p, 'M420 392L445 414L432 430L462 448', { stroke: STATUS, 'stroke-width': 4 }, { d: 0 });
+    draw(crack, m('coach'), .15);
+    hide(idp, m('coach') + .1, .2); hide(crack, m('coach') + .1, .2);
+    const cp = a8Pill(p, 'coach', 480, 420, { color: WEALTH, ink: EV.goldHi, size: 32 });
+    put(cp, { s: .8 }); tw(cp, { o: 1, s: 1 }, m('coach') + .3, .45, back);
+    evMood(an, 'smile', m('coach') + .2);
+    tw(an.g, { r: 0, y: 780 }, m('coach'), .6);
+    const kids = [850, 950, 1050].map(x => a8Icon(p, x, 780, EV.goldHi, .8, 0));
+    evSeq(kids.map((k, i) => [k, m('coach') + .3 + i * .1, .3]), D);
+    // panel 2: redesigns everywhere
+    const q = panel(m('apps'));
+    put(q, { o: 0 }); show(q, m('apps'), .4);
+    const ph = a8Phone(q, { x: 420, y: 430, w: 220, h: 380 });
+    const ic = mk('rect', { x: -50, y: -50, width: 100, height: 100, rx: 8, fill: TIME }, ph._scr);
+    prog(qq => { const v = qq * D - m('apps'); const k = v < 0 ? 0 : Math.floor(v / 1.2) % 3; ic.setAttribute('rx', [8, 30, 50][k]); ic.setAttribute('fill', [TIME, MONEY, WEALTH][k]); }, 0, D, lin);
+    lab(q, 'apps', 420, 690, m('apps'), { size: 30, fill: EV.ink, maxW: 420 });
+    const bc = G(q, { x: 880, y: 430, o: 0 });
+    mk('rect', { x: -90, y: -50, width: 180, height: 120, rx: 12, fill: '#3a2f27', stroke: EV.gold, 'stroke-width': 3 }, bc);
+    path(bc, 'M-34 -50V-76H34V-50M-90 0H90', { stroke: EV.gold, 'stroke-width': 3 });
+    show(bc, m('careers'), .4);
+    prog(qq => { const v = qq * D - m('careers'); put(bc, { r: v < 0 ? 0 : Math.sin(v * 1.6) * 6 }); }, 0, D, lin);
+    lab(q, 'careers', 880, 690, m('careers'), { size: 30, fill: EV.ink });
+    const tm = [1200, 1290, 1380].map((x, i) => a8Icon(q, x, 470, [TIME, MONEY, EV.goldHi][i], 1.1, 0));
+    evSeq(tm.map((k, i) => [k, m('teams') + i * .1, .3]), D);
+    prog(qq => { const v = qq * D - m('teams'); tm.forEach((k, i) => put(k, { x: v < 0 ? [1200, 1290, 1380][i] : [1200, 1290, 1380][(i + Math.floor(v / 1.3)) % 3] })); }, 0, D, lin);
+    lab(q, 'teams', 1290, 690, m('teams'), { size: 30, fill: EV.ink });
+    lab(q, 'answer', 800, 820, m('answer'), { size: 40, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1200 });
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    evText(p, L('b_wrap'), { x: 800, y: 130, size: 52, font: SERIF, weight: 600, fill: EV.gold });
+    const cols = [WEALTH, MONEY, TIME, EV.goldHi];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -30, y: 260 + i * 150, o: 0 });
+      mk('circle', { cx: 200, cy: -10, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: 200, y: 1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 260, y: 0, size: 34, maxW: 1150, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Two trainees at a bank in Kochi both say they understand compound interest. Which one shows she really does?',
+  q1a: 'Anju, who can recite the formula word for word.',
+  q1b: 'Divya, who works it out for her nephew with a ₹1,000 example: interest that earns its own interest.',
+  q1c: 'Sneha, who uses the most financial terms in the meeting.',
+  q1y: 'Right. Divya rebuilds the idea from the basics and can explain it to a child. That is understanding, not memory.',
+  q1na: 'Reciting is memory. Change the question a little and a memorised formula often stops fitting.',
+  q1nc: 'Big words can hide gaps. The test is whether she can explain it simply.',
+  q2p: 'Mariam’s tailoring shop in Malappuram has lost money for six months. She keeps telling herself it is just a slow season. Which step helps her see clearly?',
+  q2a: 'Share the real numbers with her husband and her two tailors, and ask what they see.',
+  q2b: 'Wait for a better month before looking at the accounts.',
+  q2c: 'Work longer hours with no days off, so there is no time to worry.',
+  q2y: 'Yes. Saying the bad news out loud makes it hard to hide from herself, and others can see her situation more clearly than she can.',
+  q2nb: 'Waiting is the wish talking. Putting off the truth only delays the day it arrives.',
+  q2nc: 'A packed week leaves no room to think. Clear judgment needs some empty time.',
+  q3p: 'Junaid notices that his views match his party’s line on every single issue, even ones he has never studied. What does the chapter suggest?',
+  q3a: 'Good: it shows loyalty.',
+  q3b: 'Be suspicious, and work through each issue from the basics.',
+  q3c: 'Switch to the opposite party’s views on everything.',
+  q3y: 'Right. Beliefs that arrive as a neat package deserve a fresh look, one at a time.',
+  q3na: 'Loyalty is not the same as thinking. If every view lines up, he probably took them as a set.',
+  q3nc: 'Flipping everything is objecting by reflex: still following a crowd, just backwards.',
+  p1p: 'What does it mean to build knowledge from the ground up?',
+  p1a: 'Learn the advanced ideas first, so you sound like an insider.',
+  p1b: 'Know the basics so well that you can rebuild harder ideas from them when you need to.',
+  p1c: 'Memorise as many formulas as possible.',
+  p1y: 'Yes. Like Riya, you can work out what you need instead of hoping a memorised card fits.',
+  p1na: 'Advanced ideas are often the least proven part, and without the basics they wobble.',
+  p1nc: 'That is what Ameen did. When the question twisted, his formulas didn’t fit.',
+  p2p: 'Faisal can’t decide whether to quit his job and start a cloud kitchen in Ajman. Which trick from the chapter helps him see it clearly?',
+  p2a: 'Ask, “What should Faisal do?”, as if advising a friend.',
+  p2b: 'Decide on the night he feels most excited.',
+  p2c: 'Talk it over only with people who agree with him.',
+  p2y: 'Right. Thinking in the third person narrows the gap between how wisely we judge other people’s problems and our own.',
+  p2nb: 'A feeling tells you about your guess at the facts, not the facts.',
+  p2nc: 'That protects the wish. To see clearly, he needs the views that might say no.',
+  p3p: 'Who is a contrarian in Naval’s sense?',
+  p3a: 'Ravi, who disagrees with whatever the group says.',
+  p3b: 'Hiba, who works each question out for herself, sometimes agreeing with the crowd and sometimes not.',
+  p3c: 'Shafeeq, who sneers at every new idea.',
+  p3y: 'Yes. A contrarian reasons from the ground up and holds steady under pressure, whichever way that points.',
+  p3na: 'Always objecting is still being led by the crowd, just backwards.',
+  p3nc: 'Sneering is easy. The rare kind is the hopeful contrarian.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'People tend to reason more wisely about a friend’s problem than about their own.',
+  p4r2: 'Trying to explain how a zip works usually makes people rate their understanding higher.',
+  p4r3: 'In Baird’s study, a 12-minute break of plain rest led to the most original ideas.',
+  p4r4: 'In that study, the break helped on problems people had already worked on, not on new ones.',
+  p4w1: 'True. Grossmann and Kross found this, and thinking about your own problem in the third person closed the gap.',
+  p4w2: 'False. Explaining showed people how little they knew, and their ratings went down.',
+  p4w3: 'False. An easy task that let the mind wander beat both a hard task and plain rest.',
+  p4w4: 'True. New problems showed no gain. Work on a problem first, then give it room.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'കൊച്ചിയിലെ ഒരു ബാങ്കിലെ രണ്ട് ട്രെയിനികൾ, കൂട്ടുപലിശ മനസ്സിലായി എന്ന് പറയുന്നു. ശരിക്കും മനസ്സിലായത് ആർക്ക്?',
+  q1a: 'ഫോർമുല വാക്കിന് വാക്ക് ചൊല്ലാൻ പറ്റുന്ന അഞ്ജു.',
+  q1b: '₹1,000 വെച്ചുള്ള ഒരു ഉദാഹരണത്തിലൂടെ, പലിശയ്ക്ക് പലിശ കിട്ടുന്നത് മരുമകന് പറഞ്ഞുകൊടുക്കുന്ന ദിവ്യ.',
+  q1c: 'മീറ്റിങ്ങിൽ ഏറ്റവും കൂടുതൽ സാമ്പത്തിക പദങ്ങൾ ഉപയോഗിക്കുന്ന സ്നേഹ.',
+  q1y: 'ശരി. ദിവ്യ ആശയം അടിസ്ഥാനത്തിൽ നിന്ന് വീണ്ടും പണിയുന്നു, ഒരു കുട്ടിക്ക് പറഞ്ഞുകൊടുക്കാനും പറ്റും. അതാണ് മനസ്സിലാകൽ, ഓർമ്മയല്ല.',
+  q1na: 'ചൊല്ലുന്നത് ഓർമ്മ മാത്രം. ചോദ്യം അൽപ്പം മാറിയാൽ, കാണാപ്പാഠമാക്കിയ ഫോർമുല പലപ്പോഴും ചേരില്ല.',
+  q1nc: 'വലിയ വാക്കുകൾക്ക് പിന്നിൽ വിടവുകൾ ഒളിക്കാം. ലളിതമായി പറയാൻ പറ്റുമോ എന്നതാണ് പരീക്ഷ.',
+  q2p: 'മലപ്പുറത്തെ മറിയത്തിന്റെ തയ്യൽക്കട ആറ് മാസമായി നഷ്ടത്തിലാണ്. ഇത് വെറും മോശം സീസൺ ആണെന്ന് അവർ സ്വയം പറഞ്ഞുകൊണ്ടിരിക്കുന്നു. വ്യക്തമായി കാണാൻ സഹായിക്കുന്നത് ഏത്?',
+  q2a: 'ശരിയായ കണക്കുകൾ ഭർത്താവിനോടും രണ്ട് തയ്യൽക്കാരോടും പങ്കുവെച്ച്, അവർ എന്ത് കാണുന്നു എന്ന് ചോദിക്കുക.',
+  q2b: 'കണക്ക് നോക്കും മുൻപ് ഒരു നല്ല മാസത്തിനായി കാത്തിരിക്കുക.',
+  q2c: 'വിഷമിക്കാൻ സമയം കിട്ടാത്ത വിധം, അവധിയില്ലാതെ കൂടുതൽ മണിക്കൂർ പണിയെടുക്കുക.',
+  q2y: 'അതെ. ചീത്ത വാർത്ത ഉറക്കെ പറഞ്ഞാൽ, സ്വയം ഒളിക്കാൻ പ്രയാസമാകും. മറ്റുള്ളവർക്ക് അവരുടെ അവസ്ഥ അവരേക്കാൾ വ്യക്തമായി കാണാനും പറ്റും.',
+  q2nb: 'കാത്തിരിപ്പ് ആഗ്രഹത്തിന്റെ ശബ്ദമാണ്. സത്യം നീട്ടിവെച്ചാൽ, അത് എത്തുന്ന ദിവസം വൈകുന്നു എന്ന് മാത്രം.',
+  q2nc: 'നിറഞ്ഞ ആഴ്ചയിൽ ചിന്തിക്കാൻ ഇടമില്ല. വ്യക്തമായ വിവേകത്തിന് കുറച്ച് ഒഴിഞ്ഞ സമയം വേണം.',
+  q3p: 'തനിക്ക് ഒട്ടും പഠിക്കാത്ത വിഷയങ്ങളിൽ പോലും, എല്ലാ കാര്യത്തിലും തന്റെ പാർട്ടിയുടെ നിലപാട് തന്നെയാണ് തന്റേതും എന്ന് ജുനൈദ് ശ്രദ്ധിക്കുന്നു. അധ്യായം എന്ത് പറയുന്നു?',
+  q3a: 'നല്ലത്: അത് കൂറ് കാണിക്കുന്നു.',
+  q3b: 'സംശയിക്കുക, ഓരോ വിഷയവും അടിസ്ഥാനത്തിൽ നിന്ന് ആലോചിച്ച് നോക്കുക.',
+  q3c: 'എല്ലാ കാര്യത്തിലും എതിർ പാർട്ടിയുടെ നിലപാടിലേക്ക് മാറുക.',
+  q3y: 'ശരി. ഒരു വൃത്തിയുള്ള പൊതിക്കെട്ടായി വരുന്ന വിശ്വാസങ്ങൾ, ഓരോന്നായി വീണ്ടും നോക്കണം.',
+  q3na: 'കൂറും ചിന്തയും ഒന്നല്ല. എല്ലാ അഭിപ്രായവും ഒത്തുവരുന്നുണ്ടെങ്കിൽ, അവൻ അത് ഒരു സെറ്റായി എടുത്തതാകാം.',
+  q3nc: 'എല്ലാം മറിച്ചിടുന്നത് ശീലം കൊണ്ടുള്ള എതിർപ്പാണ്: ഇപ്പോഴും ഒരു ആൾക്കൂട്ടത്തിന് പിന്നാലെ, തിരിഞ്ഞുനിന്ന് എന്ന് മാത്രം.',
+  p1p: 'അറിവ് അടിത്തറയിൽ നിന്ന് പണിയുക എന്നാൽ എന്താണ്?',
+  p1a: 'അകത്തുള്ളയാളായി തോന്നാൻ, ആദ്യം മുന്തിയ ആശയങ്ങൾ പഠിക്കുക.',
+  p1b: 'വേണ്ടപ്പോൾ കടുപ്പമുള്ള ആശയങ്ങൾ വീണ്ടും പണിയാൻ പറ്റുംവിധം അടിസ്ഥാനങ്ങൾ നന്നായി അറിയുക.',
+  p1c: 'പറ്റുന്നത്ര ഫോർമുലകൾ കാണാപ്പാഠമാക്കുക.',
+  p1y: 'അതെ. റിയയെപ്പോലെ, കാണാപ്പാഠമാക്കിയത് ചേരുമെന്ന് പ്രതീക്ഷിക്കുന്നതിന് പകരം, വേണ്ടത് സ്വയം കണ്ടെത്താം.',
+  p1na: 'മുന്തിയ ആശയങ്ങളാണ് പലപ്പോഴും ഏറ്റവും കുറച്ച് തെളിയിക്കപ്പെട്ടത്. അടിസ്ഥാനമില്ലെങ്കിൽ അവ ആടിയുലയും.',
+  p1nc: 'അമീൻ ചെയ്തത് അതാണ്. ചോദ്യം മാറിയപ്പോൾ, അവന്റെ ഫോർമുലകൾ ചേർന്നില്ല.',
+  p2p: 'ജോലി വിട്ട് അജ്മാനിൽ ഒരു ക്ലൗഡ് കിച്ചൻ തുടങ്ങണോ എന്ന് ഫൈസലിന് തീരുമാനിക്കാനാവുന്നില്ല. വ്യക്തമായി കാണാൻ അധ്യായത്തിലെ ഏത് വഴി സഹായിക്കും?',
+  p2a: 'ഒരു കൂട്ടുകാരനെ ഉപദേശിക്കുന്നതുപോലെ, “ഫൈസൽ എന്ത് ചെയ്യണം?” എന്ന് ചോദിക്കുക.',
+  p2b: 'ഏറ്റവും ആവേശം തോന്നുന്ന രാത്രിയിൽ തീരുമാനിക്കുക.',
+  p2c: 'തന്നോട് യോജിക്കുന്നവരോട് മാത്രം ചർച്ച ചെയ്യുക.',
+  p2y: 'ശരി. മൂന്നാമതൊരാളെപ്പോലെ ചിന്തിക്കുമ്പോൾ, മറ്റുള്ളവരുടെ പ്രശ്നത്തിലും സ്വന്തം പ്രശ്നത്തിലുമുള്ള വിവേകത്തിന്റെ വ്യത്യാസം കുറയുന്നു.',
+  p2nb: 'ഒരു തോന്നൽ പറയുന്നത് വസ്തുതകളെക്കുറിച്ചുള്ള നിങ്ങളുടെ ഊഹത്തെക്കുറിച്ചാണ്, വസ്തുതകളെക്കുറിച്ചല്ല.',
+  p2nc: 'അത് ആഗ്രഹത്തെ സംരക്ഷിക്കുന്നു. വ്യക്തമായി കാണാൻ, ഇല്ല എന്ന് പറഞ്ഞേക്കാവുന്ന അഭിപ്രായങ്ങൾ വേണം.',
+  p3p: 'നവൽ പറയുന്ന അർഥത്തിൽ, വേറിട്ട് ചിന്തിക്കുന്നയാൾ ആര്?',
+  p3a: 'കൂട്ടം എന്ത് പറഞ്ഞാലും എതിർക്കുന്ന രവി.',
+  p3b: 'ഓരോ ചോദ്യവും സ്വയം ആലോചിച്ച് ഉറപ്പിക്കുന്ന ഹിബ; ചിലപ്പോൾ കൂട്ടത്തോട് യോജിക്കും, ചിലപ്പോൾ ഇല്ല.',
+  p3c: 'എല്ലാ പുതിയ ആശയത്തെയും പുച്ഛിക്കുന്ന ഷഫീഖ്.',
+  p3y: 'അതെ. വേറിട്ട് ചിന്തിക്കുന്നയാൾ അടിത്തറയിൽ നിന്ന് ആലോചിക്കുന്നു, ഏത് വശത്തേക്കായാലും സമ്മർദ്ദത്തിൽ ഉറച്ചുനിൽക്കുന്നു.',
+  p3na: 'എപ്പോഴും എതിർക്കുന്നതും ആൾക്കൂട്ടത്തിന് പിന്നാലെ പോകലാണ്, തിരിഞ്ഞുനിന്ന് എന്ന് മാത്രം.',
+  p3nc: 'പുച്ഛിക്കാൻ എളുപ്പമാണ്. അപൂർവം, പ്രതീക്ഷയോടെ വേറിട്ട് ചിന്തിക്കുന്നവരാണ്.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'സ്വന്തം പ്രശ്നത്തേക്കാൾ, ഒരു കൂട്ടുകാരന്റെ പ്രശ്നത്തെക്കുറിച്ചാണ് ആളുകൾ പൊതുവേ കൂടുതൽ വിവേകത്തോടെ ചിന്തിക്കുന്നത്.',
+  p4r2: 'ഒരു സിപ്പ് എങ്ങനെ പ്രവർത്തിക്കുന്നു എന്ന് വിശദീകരിക്കാൻ ശ്രമിക്കുമ്പോൾ, ആളുകൾ സാധാരണ സ്വന്തം അറിവിന് കൂടുതൽ മാർക്കിടുന്നു.',
+  p4r3: 'ബെയർഡിന്റെ പഠനത്തിൽ, 12 മിനിറ്റ് വെറുതെ വിശ്രമിച്ചവർക്കാണ് ഏറ്റവും പുതുമയുള്ള ആശയങ്ങൾ കിട്ടിയത്.',
+  p4r4: 'ആ പഠനത്തിൽ, ഇടവേള സഹായിച്ചത് നേരത്തേ പണിയെടുത്ത പ്രശ്നങ്ങളിലാണ്, പുതിയവയിലല്ല.',
+  p4w1: 'ശരി. ഗ്രോസ്മാനും ക്രോസും ഇത് കണ്ടെത്തി. സ്വന്തം പ്രശ്നം മൂന്നാമതൊരാളുടേത് പോലെ ആലോചിച്ചപ്പോൾ ആ വ്യത്യാസം ഇല്ലാതായി.',
+  p4w2: 'തെറ്റ്. വിശദീകരിച്ചപ്പോൾ തങ്ങൾക്ക് എത്ര കുറച്ചേ അറിയൂ എന്ന് ആളുകൾ കണ്ടു, മാർക്ക് കുറഞ്ഞു.',
+  p4w3: 'തെറ്റ്. മനസ്സിനെ അലയാൻ വിടുന്ന എളുപ്പമുള്ള ജോലിയാണ്, കഠിനമായ ജോലിയെയും വെറും വിശ്രമത്തെയും മറികടന്നത്.',
+  p4w4: 'ശരി. പുതിയ പ്രശ്നങ്ങളിൽ നേട്ടം കണ്ടില്ല. ആദ്യം പ്രശ്നത്തിൽ പണിയെടുക്കൂ, പിന്നെ അതിന് ഇടം കൊടുക്കൂ.',
+});
+const PRACTICE = [
+  { id: 'p-basics', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 1, L('p1y'), [L('p1na'), null, L('p1nc')]) },
+  { id: 'p-distance', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 0, L('p2y'), [null, L('p2nb'), L('p2nc')]) },
+  { id: 'p-contrarian', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 1, L('p3y'), [L('p3na'), null, L('p3nc')]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['f'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['t'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('almanack:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>

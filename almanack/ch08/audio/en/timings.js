@@ -308,7 +308,7 @@ window.TIMINGS = {
    "week": 2.816,
    "think": 6.539,
    "empty": 9.632,
-   "two": 10.829,
+   "two": 10.421,
    "one": 12.829,
    "bored": 17.211,
    "rushed": 18.921
@@ -345,10 +345,10 @@ window.TIMINGS = {
    "people": 7.855,
    "break": 10.618,
    "easy": 12.803,
-   "ideas": 16.487,
+   "ideas": 15.645,
    "hard": 18.474,
    "rest": 20.368,
-   "problems": 22.289,
+   "problems": 21.816,
    "work": 24.632
   },
   "cues": [

@@ -81,6 +81,7 @@ window.TIMINGS = {
    "predict": 2.342,
    "happened": 6.592,
    "gold": 9.737,
+   "moment": 13.105,
    "principles": 15.066,
    "models": 18.0,
    "sayings": 20.697,
@@ -391,7 +392,7 @@ window.TIMINGS = {
    "sci": 0.118,
    "hour": 4.132,
    "top": 8.526,
-   "asis": 12.171,
+   "asis": 13.118,
    "success": 14.145,
    "ninetynine": 18.526,
    "read": 20.684,
@@ -441,6 +442,48 @@ window.TIMINGS = {
    ]
   ]
  },
+ "honest": {
+  "dur": 30.144,
+  "marks": {
+   "honest": 1.947,
+   "fooled": 4.895,
+   "praise": 14.382,
+   "criticize": 15.789,
+   "anees": 19.618,
+   "habit": 25.289,
+   "work": 27.447
+  },
+  "cues": [
+   [
+    0.105,
+    "Naval ties clear thinking to honesty."
+   ],
+   [
+    2.947,
+    "Lie to someone, and you've already fooled yourself a little; believe it long enough, and you lose touch with what's real."
+   ],
+   [
+    10.355,
+    "Honest doesn't mean harsh."
+   ],
+   [
+    12.132,
+    "He borrows a rule from Warren Buffett: praise specifically, criticize generally."
+   ],
+   [
+    17.395,
+    "At Nisha's staff meeting, she thanks Anees by name for the science fair he organised."
+   ],
+   [
+    22.724,
+    "But on late reports, she talks only about the habit, and names no one."
+   ],
+   [
+    27.447,
+    "Egos then work for you, not against you."
+   ]
+  ]
+ },
  "no": {
   "dur": 34.32,
   "marks": {
@@ -458,7 +501,7 @@ window.TIMINGS = {
    "options": 23.618,
    "village": 26.224,
    "disputed": 29.605,
-   "sure": 33.237
+   "sure": 32.158
   },
   "cues": [
    [
@@ -517,7 +560,8 @@ window.TIMINGS = {
    "overrates": 11.092,
    "better": 16.039,
    "long": 19.039,
-   "tv": 23.487,
+   "nisha": 21.408,
+   "tv": 22.697,
    "book": 24.645,
    "confusion": 26.487,
    "growing": 29.421
@@ -572,7 +616,7 @@ window.TIMINGS = {
   ]
  },
  "wrap": {
-  "dur": 23.808,
+  "dur": 23.592,
   "marks": {
    "w1": 1.026,
    "w2": 7.474,
@@ -602,14 +646,14 @@ window.TIMINGS = {
    ],
    [
     19.882,
-    "The answer is no."
+    "Then it's a no."
    ],
    [
-    21.158,
+    20.934,
     "Two equal paths?"
    ],
    [
-    22.566,
+    22.342,
     "Take the harder one."
    ]
   ]
