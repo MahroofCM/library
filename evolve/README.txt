@@ -2,7 +2,7 @@ EVOLVE YOUR BRAIN · animated study book (12 chapters, English + Malayalam)
 A static website. No server code, no database, no build step.
 
 1. SET YOUR WEB ADDRESS (for WhatsApp link previews)
-   Open these files in any text editor and replace every  mahroofcm.github.io/ymulinks/evolve  with your address
+   Open these files in any text editor and replace every  library.theyoungmakers.com/evolve  with your address
    (without https://), for example  evolve.youngmakeruniverse.com :
      index.html  and  ch01/index.html ... ch12/index.html
    Most editors can do this across a folder with "Find in files / Replace all".
