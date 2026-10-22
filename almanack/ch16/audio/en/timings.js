@@ -23,59 +23,59 @@ window.TIMINGS = {
   ]
  },
  "yourself": {
-  "dur": 26.568,
+  "dur": 26.328,
   "marks": {
    "hiba": 0.118,
-   "must": 4.145,
-   "m1": 5.158,
-   "m2": 7.368,
-   "m3": 10.184,
-   "none": 14.355,
-   "want": 16.197,
-   "others": 18.395,
-   "voice": 20.684,
-   "design": 23.816,
-   "be": 25.421
+   "must": 3.908,
+   "m1": 4.921,
+   "m2": 7.132,
+   "m3": 9.947,
+   "none": 14.118,
+   "want": 15.961,
+   "others": 18.158,
+   "voice": 20.382,
+   "design": 23.579,
+   "be": 25.184
   },
   "cues": [
    [
     0.118,
-    "Hiba is in her last year of college in Sharjah."
+    "Hiba is a final-year student in Sharjah."
    ],
    [
-    3.039,
+    2.803,
     "Her notebook is full of musts."
    ],
    [
-    5.158,
+    4.921,
     "Study medicine, like her cousin."
    ],
    [
-    7.368,
+    7.132,
     "Post every day, like the influencers."
    ],
    [
-    10.184,
+    9.947,
     "Do an MBA, because her uncle says so."
    ],
    [
-    13.092,
+    12.855,
     "Naval's answer: you don't have to do any of it."
    ],
    [
-    16.197,
+    15.961,
     "Do what you really want."
    ],
    [
-    17.618,
+    17.382,
     "Stop chasing other people's ways, and you start to hear a quiet voice inside."
    ],
    [
-    22.434,
+    22.197,
     "For Hiba, it keeps saying design."
    ],
    [
-    24.697,
+    24.461,
     "That's when you get to be yourself."
    ]
   ]
@@ -83,19 +83,23 @@ window.TIMINGS = {
  "unique": {
   "dur": 35.4,
   "marks": {
+   "naval": 0.105,
+   "mentor": 0.513,
    "never": 2.197,
-   "opposite": 6.592,
-   "beat": 10.487,
-   "eight": 13.684,
-   "seventy": 17.947,
-   "life": 21.079,
+   "opposite": 6.408,
+   "fierce": 7.842,
+   "beat": 9.921,
+   "each": 12.066,
+   "mixes": 14.842,
+   "children": 19.171,
+   "life": 20.184,
    "twins": 22.566,
    "listen": 25.697,
    "copy": 27.421,
    "people": 28.632,
    "needs": 30.882,
-   "original": 33.013,
-   "obsessed": 34.342
+   "original": 32.671,
+   "obsessed": 33.987
   },
   "cues": [
    [
@@ -158,13 +162,13 @@ window.TIMINGS = {
    "body": 7.434,
    "mind": 8.461,
    "spirit": 9.447,
-   "family": 11.263,
-   "wellbeing": 12.592,
+   "family": 11.105,
+   "wellbeing": 12.447,
    "world": 14.395,
    "kareem": 16.829,
    "scare": 20.158,
    "sharp": 22.421,
-   "contrast": 25.25
+   "contrast": 23.816
   },
   "cues": [
    [
@@ -206,22 +210,28 @@ window.TIMINGS = {
   ]
  },
  "mismatch": {
-  "dur": 42.192,
+  "dur": 39.576,
   "marks": {
-   "evolved": 3.026,
+   "modern": 0.737,
+   "evolved": 2.658,
    "food": 4.066,
    "treadmill": 6.171,
+   "play": 7.066,
    "screens": 7.803,
+   "senses": 10.487,
    "shoes": 11.526,
    "warm": 12.645,
-   "clean": 14.526,
-   "alone": 17.737,
+   "clean": 14.013,
+   "alone": 17.447,
    "tharavadu": 18.776,
-   "clinical": 28.25,
+   "aunts": 21.118,
+   "lonely": 23.882,
+   "gloom": 26.605,
    "privacy": 30.211,
-   "phone": 31.474,
-   "scarce": 35.776,
-   "yes": 39.132
+   "scarce": 31.789,
+   "genes": 35.618,
+   "yes": 36.447,
+   "yes2": 37.789
   },
   "cues": [
    [
@@ -265,33 +275,30 @@ window.TIMINGS = {
     "The price is privacy."
    ],
    [
-    31.263,
-    "Then the phone: a like, an angry comment, all day."
-   ],
-   [
-    35.0,
-    "We evolved for scarcity, but live in plenty, with genes that say yes to sugar, yes to one more scroll."
+    31.25,
+    "Our bodies evolved for scarcity; now we're surrounded by plenty, with genes that say yes to sugar, yes to one more scroll."
    ]
   ]
  },
  "check": {
-  "dur": 40.848,
+  "dur": 39.456,
   "marks": {
    "sci": 0.118,
-   "claims": 1.553,
-   "cold": 2.75,
-   "three": 5.197,
-   "sick": 9.776,
-   "ill": 13.171,
-   "hygiene": 15.118,
-   "amish": 17.487,
-   "six": 20.789,
-   "microbes": 25.395,
-   "wash": 28.25,
-   "shoes2": 29.671,
-   "speculative": 32.684,
-   "verdict": 34.539,
-   "heart": 37.829
+   "cold": 1.263,
+   "adults": 4.579,
+   "sick": 8.289,
+   "ill": 11.684,
+   "hygiene": 13.632,
+   "none": 16.0,
+   "amish": 16.75,
+   "asthma": 18.066,
+   "hutt": 20.211,
+   "microbes": 23.908,
+   "wash": 26.579,
+   "shoes2": 28.184,
+   "speculative": 31.276,
+   "verdict": 33.158,
+   "heart": 35.684
   },
   "cues": [
    [
@@ -300,59 +307,56 @@ window.TIMINGS = {
    ],
    [
     1.263,
-    "Do these claims hold up?"
-   ],
-   [
-    2.75,
     "Cold showers: in a Dutch trial of about three thousand adults, ending showers with a burst of cold for a month cut sick-leave days by twenty-nine percent."
    ],
    [
-    12.605,
+    11.118,
     "But people were ill just as many days."
    ],
    [
-    15.118,
+    13.632,
     "Clean homes: in one study, none of thirty Amish farm children had asthma, against six of thirty Hutterite children, whose farms use machines."
    ],
    [
-    25.092,
+    23.605,
     "So it's farm microbes that matter, not dirt."
    ],
    [
-    28.066,
+    26.579,
     "Keep washing your hands."
    ],
    [
-    29.671,
-    "Shoes: a review called the link to injuries speculative."
+    28.184,
+    "Shoes: a review found the case for going barefoot speculative."
    ],
    [
-    33.816,
+    32.434,
     "Verdict: a grain of truth, oversold."
    ],
    [
-    36.947,
+    35.566,
     "And cold water can strain the heart, so ask a doctor first."
    ]
   ]
  },
  "diet": {
-  "dur": 39.744,
+  "dur": 38.568,
   "marks": {
-   "politics": 2.868,
-   "paleo": 6.658,
-   "veg": 8.421,
-   "meat": 9.605,
-   "berries": 10.395,
-   "fat": 15.632,
-   "sugar": 18.105,
-   "together": 19.908,
-   "binge": 24.421,
-   "payasam": 25.737,
-   "kunafa": 27.605,
-   "rare": 32.645,
-   "coconut": 33.539,
-   "fatfree": 38.697
+   "politics": 2.855,
+   "paleo": 6.803,
+   "veg": 8.566,
+   "meat": 9.434,
+   "berries": 10.539,
+   "vegsci": 11.553,
+   "fat": 14.447,
+   "sugar": 16.921,
+   "together": 18.724,
+   "binge": 23.237,
+   "payasam": 24.553,
+   "kunafa": 26.421,
+   "rare": 31.461,
+   "coconut": 32.355,
+   "mango": 36.171
   },
   "cues": [
    [
@@ -361,46 +365,42 @@ window.TIMINGS = {
    ],
    [
     1.132,
-    "Naval admits nutrition is like politics: everybody thinks they're an expert."
+    "Naval admits nutrition is like politics: everyone is sure they know best."
    ],
    [
-    5.961,
+    6.105,
     "His hunch is a paleo-style plate, mostly vegetables, a little meat, some berries."
    ],
    [
-    11.408,
+    11.553,
     "The vegetables part, most scientists back."
    ],
    [
-    14.276,
-    "Then his main idea."
-   ],
-   [
-    15.632,
+    14.447,
     "Fat, he says, fills you up."
    ],
    [
-    18.105,
+    16.921,
     "Sugar makes you hungry."
    ],
    [
-    19.566,
+    18.382,
     "Put them together, and the sugar's hunger wins while the fat brings the calories, so you binge."
    ],
    [
-    25.421,
+    24.237,
     "Think of payasam, or a tray of kunafa: sugar and fat in every bite."
    ],
    [
-    31.158,
+    29.974,
     "In nature, that pair is rare."
    ],
    [
-    33.461,
+    32.276,
     "A coconut is one of the few."
    ],
    [
-    35.408,
+    34.224,
     "Naval names mangoes too, but a mango is almost fat-free."
    ]
   ]
@@ -408,7 +408,9 @@ window.TIMINGS = {
  "rules": {
   "dur": 24.192,
   "marks": {
+   "rules": 0.421,
    "quality": 1.895,
+   "qq": 4.118,
    "subtract": 6.776,
    "processed": 12.303,
    "fasting": 16.737,
@@ -438,23 +440,26 @@ window.TIMINGS = {
   ]
  },
  "check2": {
-  "dur": 47.928,
+  "dur": 45.48,
   "marks": {
    "sci": 0.118,
    "combo": 1.276,
-   "two": 4.158,
+   "adults": 4.671,
    "supported": 7.579,
-   "fills": 8.711,
-   "keto": 15.342,
-   "seven": 16.671,
-   "not": 20.776,
-   "processed": 21.882,
-   "five": 25.053,
-   "yes": 27.447,
-   "fasting": 28.474,
-   "quit": 35.434,
-   "verdict": 37.461,
-   "doctor": 46.25
+   "fills": 8.539,
+   "keto": 12.763,
+   "calories": 14.882,
+   "lowfat": 16.539,
+   "not": 18.329,
+   "processed": 19.434,
+   "calories2": 23.355,
+   "yes": 25.0,
+   "fasting": 26.026,
+   "lost": 29.934,
+   "quit": 32.987,
+   "verdict": 35.013,
+   "magic": 38.026,
+   "doctor": 40.289
   },
   "cues": [
    [
@@ -475,42 +480,38 @@ window.TIMINGS = {
    ],
    [
     9.711,
-    "In a hospital trial, twenty adults ate freely, two weeks on each diet."
+    "In a hospital trial where people ate freely, on keto, they ate about seven hundred calories a day more than on a low-fat plant diet."
    ],
    [
-    15.197,
-    "On keto, they ate about seven hundred calories a day more than on a low-fat plant diet."
-   ],
-   [
-    20.776,
+    18.329,
     "Not supported."
    ],
    [
-    21.882,
+    19.434,
     "Processed food: in a similar trial, people ate five hundred calories a day more."
    ],
    [
-    27.447,
+    25.0,
     "Supported."
    ],
    [
-    28.382,
+    25.934,
     "And fasting?"
    ],
    [
-    29.408,
+    26.961,
     "In a year-long trial, fasting every other day lost no more weight than daily calorie cutting, and more people quit."
    ],
    [
-    36.776,
+    34.329,
     "Verdict: cut processed food and sugar-fat combos."
    ],
    [
-    40.474,
+    38.026,
     "Keto and fasting aren't magic."
    ],
    [
-    42.737,
+    40.289,
     "If you take medicine, are pregnant, or have diabetes, talk to your doctor first."
    ]
   ]
@@ -530,26 +531,25 @@ window.TIMINGS = {
   ]
  },
  "workout": {
-  "dur": 39.6,
+  "dur": 35.112,
   "marks": {
    "morning": 2.882,
    "notime": 6.184,
    "priority": 8.539,
-   "faisal": 13.211,
-   "skips": 16.053,
-   "wait": 18.737,
-   "hard": 20.474,
-   "easy": 23.079,
-   "matters": 25.118,
-   "yoga": 27.276,
-   "football": 27.921,
-   "weights": 29.316,
-   "enjoy": 31.474,
-   "walking": 33.632,
-   "sun": 35.197,
-   "shorter": 36.013,
-   "talk": 37.237,
-   "slides": 38.368
+   "faisal": 10.145,
+   "skips": 12.987,
+   "wait": 15.0,
+   "hard": 17.355,
+   "easy": 19.895,
+   "matters": 21.974,
+   "yoga": 24.211,
+   "football": 24.855,
+   "weights": 26.25,
+   "enjoy": 27.882,
+   "walking": 30.553,
+   "sun": 32.092,
+   "shorter": 32.882,
+   "slides": 33.868
   },
   "cues": [
    [
@@ -569,56 +569,54 @@ window.TIMINGS = {
     "Naval hears: it isn't my priority."
    ],
    [
-    10.105,
-    "Make health number one, and the excuse is gone."
-   ],
-   [
-    13.211,
+    10.145,
     "Faisal tries it in Dubai."
    ],
    [
-    14.868,
+    11.803,
     "Before his shift, he skips rope by the parking lot."
    ],
    [
-    18.066,
+    15.0,
     "The world can wait thirty minutes."
    ],
    [
-    20.421,
+    17.355,
     "A hard workout, Naval finds, makes the rest of the day feel easy."
    ],
    [
-    25.039,
+    21.974,
     "The kind matters less than you'd think: yoga, football on the beach, weights."
    ],
    [
-    30.382,
+    27.316,
     "The best is the one you enjoy enough to do daily."
    ],
    [
-    33.289,
-    "He likes walking meetings too: sunlight, shorter talks, more back and forth, no slides."
+    30.224,
+    "He likes walking meetings too: sunlight, shorter talks, no slides."
    ]
   ]
  },
  "check3": {
-  "dur": 42.456,
+  "dur": 39.504,
   "marks": {
    "sci": 0.118,
-   "every": 1.711,
-   "adults": 3.474,
-   "weekend": 6.763,
-   "thirty": 11.526,
-   "regular": 16.987,
-   "daily": 18.947,
-   "week": 21.592,
-   "people": 25.539,
-   "ideas": 28.053,
-   "worse": 31.395,
-   "verdict": 34.289,
-   "brain": 37.329,
-   "doctor": 41.171
+   "every": 1.263,
+   "adults": 5.079,
+   "weekend": 5.882,
+   "lower": 11.526,
+   "inactive": 12.697,
+   "regular": 14.382,
+   "daily": 16.342,
+   "week": 18.0,
+   "walk": 19.816,
+   "people": 23.855,
+   "ideas": 25.092,
+   "worse": 28.434,
+   "verdict": 31.329,
+   "brain": 34.368,
+   "doctor": 36.776
   },
   "cues": [
    [
@@ -631,34 +629,34 @@ window.TIMINGS = {
    ],
    [
     2.658,
-    "In surveys of sixty-three thousand adults in England and Scotland, weekend warriors, who exercised in one or two sessions a week, were about thirty percent less likely to die in the years that followed than inactive people, close to regular exercisers."
+    "In British surveys of sixty-three thousand adults, weekend warriors, who exercised in one or two sessions a week, had about a thirty percent lower death rate than inactive people, close to regular exercisers."
    ],
    [
-    18.737,
+    16.132,
     "So daily helps the habit, but the body counts the week."
    ],
    [
-    22.421,
-    "Walking meetings?"
+    19.816,
+    "And walking?"
    ],
    [
-    23.724,
+    20.763,
     "In four Stanford experiments with a hundred and seventy-six people, most had more creative ideas while walking, but did slightly worse on one-answer problems."
    ],
    [
-    33.618,
+    30.658,
     "Verdict: move most days; any amount beats none."
    ],
    [
-    37.329,
+    34.368,
     "Walk to brainstorm, sit to solve."
    ],
    [
-    39.737,
+    36.776,
     "New to exercise?"
    ],
    [
-    41.171,
+    38.211,
     "Check with a doctor."
    ]
   ]
@@ -680,13 +678,16 @@ window.TIMINGS = {
  "hard": {
   "dur": 21.648,
   "marks": {
+   "trainer": 0.461,
    "easyR": 2.829,
+   "hardW": 4.118,
+   "laterW": 4.618,
    "hardR": 5.434,
-   "well": 11.579,
+   "well": 11.434,
    "save": 13.171,
    "values": 15.132,
    "relations": 16.211,
-   "gain": 19.342
+   "gain": 17.539
   },
   "cues": [
    [

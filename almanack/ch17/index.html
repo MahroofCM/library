@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Meditation and mental strength · The Almanack of Naval Ravikant, Chapter 17">
+<meta property="og:description" content="A 9-minute animated lesson in English and Malayalam: the breath as a door, the cold-shower lesson, choiceless awareness, the mental inbox and debug mode, with science checks on breathing, cold, meditation dose and meditation's side effects.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/ch17/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<title>Meditation and mental strength · The Almanack of Naval Ravikant</title>
+<meta name="description" content="An animated, narrated lesson on The Almanack of Naval Ravikant: why meditation starts with the breath, what a cold shower teaches about avoidance, meditation as a fast for the mind, choiceless awareness, the hour-long sit and the mental inbox, the monkey mind and debug mode, and the many forms of meditation. Science checks on slow breathing, the Wim Hof method, cold showers, how much meditation is enough and its unwanted effects. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'ധ്യാനവും മനക്കരുത്തും · The Almanack of Naval Ravikant';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/ymu.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/almanack/ch17/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Meditation and mental strength', kicker: 'PART 2 · HAPPINESS · CHAPTER 17',
+  sub: 'Watching your own mind, and the quiet strength that grows from it',
+  credit: 'A study companion to The Almanack of Naval Ravikant, by Eric Jorgenson',
+  b_intro: 'Title', b_breath: 'The breath, a door', b_cold: 'The cold-shower lesson', b_check: 'Science check', b_q1: 'Quick check',
+  b_fasting: 'A fast for the mind', b_choiceless: 'Choiceless awareness', b_q2: 'Quick check', b_inbox: 'The mental inbox',
+  b_check2: 'Science check', b_monkey: 'The monkey and debug mode', b_q3: 'Quick check', b_forms: 'Many forms',
+  b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  breath: 'the breath', auto: 'autopilot', heart: 'heart', gut: 'gut', choose: 'you choose', both: 'both',
+  door: 'a door into the automatic side', slow: 'slow, relaxed breaths', safe: '“you’re safe”', watch: 'watching for danger',
+  immune: 'healing · the immune system', guess: 'his guess · we’ll test it',
+  wim: 'Wim Hof', ice: 'the Iceman', noice: 'no part of ice baths', shower: 'cold showers',
+  sharjah: 'Sharjah · January', tiptoe: 'tiptoeing: a whole minute', voice: '“This will be freezing.”', walk: 'walks straight in',
+  suffer: 'suffering: in the tiptoeing', cold: 'simply cold', body: 'the body: cold', mind: 'the mind: suffering',
+  sci: 'Science check', holds: 'slow breathing holds up', people: '111 people', five: '5 minutes a day · a month',
+  mood: 'mood: up, more than with mindfulness', breathL: 'breathing', mindL: 'mindfulness',
+  wim2: 'the Wim Hof method', trained: '12 trained men · a bacterial toxin', fewer: 'fewer flu-like symptoms',
+  oxygen: 'the oxygen story: wrong', blows: 'fast breathing blows off CO₂', drops: 'in the hold, oxygen drops',
+  trial: 'Dutch trial · ≈ 3,000 workers', sick: 'sick days off: fewer', ill: 'fell ill: just as often',
+  water: 'no forceful breathing in water or while driving', heart2: 'heart trouble? ask a doctor first',
+  fast: 'intermittent fasting · for the mind', sugar: 'sugar → a heavy body', pings: 'pings · feeds · voices → a heavy mind',
+  alone: 'time alone, undistracted', self: 'looking at yourself', journal: 'a journal', sit: 'sitting still',
+  everyone: 'everyone claims to do it', few: 'very few actually do',
+  aware: 'choiceless awareness', mamzar: 'Al Mamzar beach · evening', nojudge: 'notice everything · don’t judge, decide or fix',
+  jog: 'He’s so unfit.', under: 'look under it', fear: 'Am I getting unfit myself?', ninety: '9 in 10: fears',
+  wants: 'the rest: wants', guess2: 'a guess · never measured', fades: 'the fear fades', peace: 'peaceful', grateful: 'grateful',
+  whole: 'each a whole life of their own',
+  closed: 'eyes closed', hour: '1 hour', noeffort: 'no effort at all', boat: 'a fishing boat · Kochi',
+  barnacles: 'barnacles', shame: 'an old shame', fearB: 'a fear', hurt: 'a hurt from school',
+  inbox: 'an inbox of unanswered mail', surface: 'they surface, one at a time', watchB: 'just watch',
+  distance: 'with an adult’s distance', empty: 'inbox: empty', sixty: '60 days · every morning',
+  full: 'a full hour?', beginners: 'beginners', thirteen: '13 minutes a day', w4: '4 weeks', w8: '8 weeks',
+  moodB: 'mood', attention: 'attention', anxiety: 'anxiety', trials: '200 trials', longer: 'longer programmes: not clearly better',
+  coming: 'old pain coming up?', studies: '83 studies', eightin: '≈ 8 in 100: an unwanted effect', anxious: 'anxiety or low mood, mostly',
+  regular: '1,200 regular meditators', quarter: '1 in 4: a really unpleasant experience', retreat: 'retreats', yes: '29%', no: '20%',
+  verdict: 'short and steady works', memories: 'painful memories or panic that stay? pause,', counsellor: 'and talk to a doctor or counsellor',
+  remote: 'a remote control?', shows: 'it shows you how wild it is', monkey: 'the monkey', seen: 'seen it?',
+  apart: 'step apart', calms: 'that gap calms you', naming: 'naming a feeling', amygdala: 'quieted the amygdala, the brain’s alarm',
+  debug: 'debug mode', brushing: 'brushing', rehearsing: 'rehearsing tomorrow’s row', catch: 'caught it',
+  need: 'Do I need to solve this now?', back: 'back to the brush', base: 'base layer', awareness: 'awareness · calm',
+  needit: 'wake the monkey when you need it', focus: 'full focus',
+  muscle: 'the mind: a muscle', haphazard: 'trained by accident', curious: 'curious', grieving: 'grieving fully',
+  forms: 'many forms', hiking: 'hiking', hikingD: 'on foot', prayer: 'prayer', prayerD: 'in gratitude',
+  showerF: 'a shower', showerD: 'by accident', journalF: 'journaling', journalD: 'on paper', sitting: 'sitting quietly', sittingD: 'the direct route',
+  studiesJ: '146 studies', little: 'a little, but real', bed: 'meditate in bed: go deep, or fall asleep', own: 'only for its own sake',
+  w1: 'Breath is the one automatic system you can steer. Slow it down, and your body hears that it’s safe.',
+  w2: 'Most suffering is in the tiptoeing. Step in: the body feels cold, but the mind needn’t suffer.',
+  w3: 'Meditate by watching, not fighting. A few steady minutes a day count; if old pain comes up, go gently.',
+  w4w: 'The mind can be trained. Catch it running off, ask if this needs solving now, and come back.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'ധ്യാനവും മനക്കരുത്തും', kicker: 'ഭാഗം 2 · സന്തോഷം · അധ്യായം 17',
+  sub: 'സ്വന്തം മനസ്സിനെ നോക്കിക്കാണൽ, അതിൽ നിന്ന് വളരുന്ന ശാന്തമായ കരുത്തും',
+  credit: 'The Almanack of Naval Ravikant · എറിക് ജോർഗൻസൻ · പഠനസഹായി',
+  b_intro: 'തലക്കെട്ട്', b_breath: 'ശ്വാസം, ഒരു വാതിൽ', b_cold: 'തണുത്ത കുളിയുടെ പാഠം', b_check: 'ശാസ്ത്രീയ പരിശോധന', b_q1: 'ചെറിയ പരിശോധന',
+  b_fasting: 'മനസ്സിന് ഒരു ഉപവാസം', b_choiceless: 'തിരഞ്ഞെടുപ്പില്ലാത്ത ശ്രദ്ധ', b_q2: 'ചെറിയ പരിശോധന', b_inbox: 'മനസ്സിലെ ഇൻബോക്സ്',
+  b_check2: 'ശാസ്ത്രീയ പരിശോധന', b_monkey: 'കുരങ്ങനും ഡീബഗ് മോഡും', b_q3: 'ചെറിയ പരിശോധന', b_forms: 'പല രൂപങ്ങൾ',
+  b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  breath: 'ശ്വാസം', auto: 'തനിയെ പ്രവർത്തിക്കുന്നവ', heart: 'ഹൃദയം', gut: 'വയർ · ദഹനം', choose: 'തിരഞ്ഞെടുക്കുന്നവ', both: 'രണ്ടും',
+  door: 'വാതിൽ: തനിയെ നടക്കുന്ന ഭാഗത്തേക്ക്', slow: 'പതുക്കെ, അയഞ്ഞ ശ്വാസം', safe: '“സുരക്ഷിതമാണ്”', watch: 'അപകടം നോക്കിയിരിക്കൽ',
+  immune: 'സുഖപ്പെടൽ · പ്രതിരോധശേഷി', guess: 'ഊഹം',
+  wim: 'വിം ഹോഫ്', ice: 'ഐസ്മാൻ', noice: 'ഐസ് ബാത്ത്: വേണ്ട', shower: 'തണുത്ത വെള്ളത്തിലെ കുളി',
+  sharjah: 'ഷാർജ · ജനുവരി', tiptoe: 'പതുക്കെപ്പതുക്കെ: ഒരു മിനിറ്റ്', voice: '“ഇത് ഭയങ്കര തണുപ്പായിരിക്കും.”', walk: 'നേരെ കയറുന്നു',
+  suffer: 'ദുരിതം: ആ മടിച്ചുനിൽപ്പിൽ', cold: 'വെറും തണുപ്പ്', body: 'ശരീരം: തണുപ്പ്', mind: 'മനസ്സ്: ദുരിതം',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', holds: 'പതുക്കെയുള്ള ശ്വസനം: ശരി', people: '111 ആളുകൾ', five: 'അഞ്ച് മിനിറ്റ് · ദിവസവും · ഒരു മാസം',
+  mood: 'മൂഡ്: മെച്ചം, മൈൻഡ്ഫുൾനെസിനെക്കാൾ', breathL: 'ശ്വസനം', mindL: 'മൈൻഡ്ഫുൾനെസ്',
+  wim2: 'വിം ഹോഫ് രീതി', trained: 'പരിശീലനം കിട്ടിയ 12 പേർ · ബാക്ടീരിയൽ വിഷാംശം', fewer: 'പനി പോലുള്ള ലക്ഷണങ്ങൾ: കുറവ്',
+  oxygen: 'ഓക്സിജൻ കഥ: തെറ്റ്', blows: 'കാർബൺ ഡൈ ഓക്സൈഡ് (CO₂) പുറത്തേക്ക്', drops: 'കുറയുന്നു: പിടിച്ചുനിർത്തുമ്പോൾ ഓക്സിജൻ',
+  trial: 'പരീക്ഷണം · ≈ 3,000 ജോലിക്കാർ', sick: 'അസുഖ അവധി: കുറവ്', ill: 'അസുഖം: ഒരുപോലെ',
+  water: 'വെള്ളത്തിലോ വണ്ടി ഓടിക്കുമ്പോഴോ ശക്തിയായ ശ്വസനം അരുത്', heart2: 'ഹൃദ്രോഗം? ആദ്യം ഡോക്ടറോട്',
+  fast: 'ഇടവിട്ട ഉപവാസം · മനസ്സിന്', sugar: 'പഞ്ചസാര → ഭാരമുള്ള ശരീരം', pings: 'നോട്ടിഫിക്കേഷൻ · ഫീഡ് · ബഹളം → ഭാരമുള്ള മനസ്സ്',
+  alone: 'ഒറ്റയ്ക്കുള്ള സമയം, ശ്രദ്ധ ചിതറാതെ', self: 'സത്യസന്ധമായി സ്വയം നോക്കൽ', journal: 'ഡയറി എഴുത്ത്', sit: 'അനങ്ങാതെ ഇരിക്കൽ',
+  everyone: 'എല്ലാവരും ചെയ്യുന്നുണ്ടെന്ന് പറയും', few: 'ശരിക്കും ചെയ്യുന്നവർ വളരെ കുറവ്',
+  aware: 'തിരഞ്ഞെടുപ്പില്ലാത്ത ശ്രദ്ധ', mamzar: 'അൽ മംസർ ബീച്ച് · വൈകുന്നേരം', nojudge: 'എല്ലാം ശ്രദ്ധിക്കുക · വിധിക്കരുത്, തീരുമാനിക്കരുത്, ശരിയാക്കരുത്',
+  jog: 'ഇയാൾക്ക് ഒട്ടും ഫിറ്റ്നസ് ഇല്ല.', under: 'അടിയിലേക്ക് നോക്കൂ', fear: 'ഞാനും ഫിറ്റല്ലാതാവുകയാണോ?', ninety: 'പത്തിൽ 9: ഭയം',
+  wants: 'ആഗ്രഹങ്ങൾ: ബാക്കി', guess2: 'ഊഹം · ആരും അളന്നിട്ടില്ല', fades: 'മങ്ങുന്നു: ആ ഭയം', peace: 'സമാധാനം', grateful: 'നന്ദി',
+  whole: 'മുഴുവൻ ജീവിതം: ഓരോരുത്തർക്കും',
+  closed: 'കണ്ണടച്ച്', hour: '1 മണിക്കൂർ', noeffort: 'ഒരു ശ്രമവും വേണ്ട', boat: 'മീൻപിടിത്ത വള്ളം · കൊച്ചി',
+  barnacles: 'കക്കകൾ', shame: 'പഴയ നാണക്കേട്', fearB: 'ഒരു ഭയം', hurt: 'സ്കൂളിലെ മുറിവ്',
+  inbox: 'ഇൻബോക്സ്: മറുപടിയില്ലാത്ത മെയിലുകൾ', surface: 'പൊങ്ങിവരും, ഓരോന്നായി', watchB: 'വെറുതെ നോക്കൂ',
+  distance: 'അകലത്തോടെ, ഒരു മുതിർന്നയാളായി', empty: 'ഇൻബോക്സ്: കാലി', sixty: 'അറുപത് ദിവസം · എല്ലാ രാവിലെയും',
+  full: 'മുഴുവൻ മണിക്കൂർ വേണോ?', beginners: 'തുടക്കക്കാർ', thirteen: 'പതിമൂന്ന് മിനിറ്റ് · ദിവസവും', w4: '4 ആഴ്ച', w8: '8 ആഴ്ച',
+  moodB: 'മൂഡ്', attention: 'ശ്രദ്ധ', anxiety: 'ഉത്കണ്ഠ', trials: '200 പരീക്ഷണങ്ങൾ', longer: 'നീണ്ട പ്രോഗ്രാമുകൾ: വ്യക്തമായി മെച്ചമല്ല',
+  coming: 'പഴയ വേദന പൊങ്ങിവരുന്നതോ?', studies: '83 പഠനങ്ങൾ', eightin: 'നൂറിൽ ≈ 8: വേണ്ടാത്ത ഒരു ഫലം', anxious: 'ഉത്കണ്ഠ, മനസ്സിടിവ്: മിക്കപ്പോഴും',
+  regular: '1,200 സ്ഥിരം ധ്യാനികൾ', quarter: 'നാലിൽ ഒരാൾ: വളരെ അസുഖകരമായ അനുഭവം', retreat: 'റിട്രീറ്റ്', yes: '29%', no: '20%',
+  verdict: 'കുറച്ച്, സ്ഥിരമായി: ഫലിക്കും', memories: 'വേദനിപ്പിക്കുന്ന ഓർമകൾ, പാനിക്, മാറാതെ നിന്നാൽ: നിർത്തൂ,', counsellor: 'ഡോക്ടറോടോ കൗൺസലറോടോ സംസാരിക്കൂ',
+  remote: 'റിമോട്ട് കൺട്രോൾ?', shows: 'കാണിച്ചുതരുന്നു: മനസ്സ് എത്ര കാടനാണെന്ന്', monkey: 'കുരങ്ങൻ', seen: 'കണ്ടോ?',
+  apart: 'അകന്നുമാറൂ', calms: 'ശാന്തമാക്കും: ആ അകലം', naming: 'പേരിടൽ: ഒരു വികാരത്തിന്', amygdala: 'അമിഗ്ഡല ശാന്തമായി: തലച്ചോറിലെ അലാറം',
+  debug: 'ഡീബഗ് മോഡ്', brushing: 'പല്ല് തേക്കൽ', rehearsing: 'റിഹേഴ്സൽ: നാളത്തെ തർക്കം', catch: 'പിടികൂടി',
+  need: 'ഇത് ഇപ്പോൾ പരിഹരിക്കണോ?', back: 'തിരിച്ച് ബ്രഷിലേക്ക്', base: 'അടിത്തട്ട്', awareness: 'ബോധം · ശാന്തം',
+  needit: 'കുരങ്ങനെ ഉണർത്തൂ: ആവശ്യമുള്ളപ്പോൾ', focus: 'മുഴുവൻ ശ്രദ്ധ',
+  muscle: 'പേശി പോലെ: മനസ്സ്', haphazard: 'അലക്ഷ്യമായ പരിശീലനം', curious: 'ജിജ്ഞാസ', grieving: 'ദുഃഖിക്കൽ, മനസ്സ് നിറഞ്ഞ്',
+  forms: 'പല രൂപങ്ങൾ', hiking: 'മലകയറ്റം', hikingD: 'നടന്നുള്ള ധ്യാനം', prayer: 'പ്രാർഥന', prayerD: 'നന്ദിയിൽ',
+  showerF: 'കുളി', showerD: 'അറിയാതെ', journalF: 'ഡയറി എഴുത്ത്', journalD: 'കടലാസിൽ', sitting: 'ശാന്തമായി ഇരിക്കൽ', sittingD: 'നേരിട്ടുള്ള വഴി',
+  studiesJ: '146 പഠനങ്ങൾ', little: 'അൽപം, പക്ഷേ ശരിക്കും', bed: 'ധ്യാനിക്കൂ, കിടക്കയിൽ: ആഴത്തിലേക്ക്, അല്ലെങ്കിൽ ഉറക്കത്തിലേക്ക്', own: 'അതിനുവേണ്ടിത്തന്നെ ചെയ്യുമ്പോൾ മാത്രം',
+  w1: 'നമുക്ക് നിയന്ത്രിക്കാവുന്ന, തനിയെ നടക്കുന്ന ഒരേയൊരു സംവിധാനമാണ് ശ്വാസം. അത് പതുക്കെയാക്കൂ; സുരക്ഷിതമാണെന്ന് ശരീരം കേൾക്കും.',
+  w2: 'ദുരിതത്തിന്റെ ഏറിയ പങ്കും മടിച്ചുനിൽപ്പിലാണ്. നേരെ കയറൂ: ശരീരം തണുപ്പ് അറിയും; മനസ്സ് ദുരിതപ്പെടേണ്ടതില്ല.',
+  w3: 'പൊരുതിയല്ല, നോക്കിക്കണ്ടാണ് ധ്യാനം. സ്ഥിരമായ കുറച്ച് മിനിറ്റുകൾക്കും വിലയുണ്ട്; പഴയ വേദന വന്നാൽ സൗമ്യമായി പോകൂ.',
+  w4w: 'മനസ്സിനെ പരിശീലിപ്പിക്കാം. ഓടിപ്പോകുമ്പോൾ പിടികൂടൂ, ഇപ്പോൾ പരിഹരിക്കണോ എന്ന് ചോദിക്കൂ, തിരിച്ചുവരൂ.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 17, title: L('title'), minutes: LANG === 'ml' ? 11 : 9, language: LANG, next: '../index.html#contents' };
+
+/* ---------- meaning colours (style.json look.meaning) + chapter colours ---------- */
+const WEALTH = EV.gold, MONEY = '#7cc79d', STATUS = '#e2694f', TIME = '#5fb3cf', SCI = '#9c84d8';
+const BREATH = '#8ec9c0', COLD = TIME, FEAR = '#6f8fd6', WANT = '#e78fa8', MONK = '#f0a35e', CALM = EV.goldHi;
+
+/* ---------- chapter helpers (prefixed a17 to stay clear of engine globals) ---------- */
+// A label that fades in at t (beat clock, always a mark).
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+const a17Ground = (p, y = 760, fill = '#0c1114') => {
+  mk('rect', { x: -10, y, width: 1620, height: 900 - y + 20, fill }, p);
+  path(p, `M0 ${y}H1600`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+};
+const a17Faisal = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#2f5f8f', '#21466b');
+const a17Man = (p, o, top = '#5a6470', topD = '#434b55') => evRecolor(evPerson(p, { kind: 'm', ...o }), top, topD);
+const a17Woman = (p, o, top, topD, scarf) => { const P = evRecolor(evPerson(p, { kind: 'f', ...o }), top, topD); if (scarf) evScarf(P, scarf); return P; };
+function a17Icon(p, x, y, color = EV.dim, s = 1, o = 1) {
+  const g = G(p, { x, y, s, o });
+  mk('circle', { cx: 0, cy: -46, r: 14, fill: color }, g);
+  path(g, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: color });
+  return g;
+}
+// A rounded tag with a label, centred on (x, y); Malayalam is measured at full size; maxPill caps the width.
+function a17Pill(p, key, x, y, { color = EV.gold, size = 30, fill = '#151d21', ink = EV.goldHi, minW = 160, o = 0, maxPill = 1400 } = {}) {
+  const g = G(p, { x, y, o });
+  const w = Math.min(maxPill, Math.max(minW, evW(L(key), size) + 64));
+  mk('rect', { x: -w / 2, y: -32, width: w, height: 60, rx: 30, fill, stroke: color, 'stroke-width': 2 }, g);
+  evText(g, L(key), { x: 0, y: 8, size, fill: ink, maxW: w - 34 });
+  g._w = w;
+  return g;
+}
+// Science-check frame and tag on #scene, kept across panels inside the beat.
+function a17Sci(m, D) {
+  const keep = G(scene);
+  hide(keep, D - .45, .4);
+  prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+  const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+  draw(fr, m('sci'), 1);
+  const tag = G(keep, { x: 200, y: 60, o: 0 });
+  const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+  mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+  evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+  show(tag, m('sci'), .4);
+}
+// A tilted verdict stamp.
+function a17Stamp(p, key, x, y, t, color = SCI) {
+  const g = G(p, { x, y, o: 0, r: -4 });
+  const sw = Math.max(240, evW(L(key), 30) + 50);
+  mk('rect', { x: -sw / 2, y: -30, width: sw, height: 60, rx: 8, fill: 'none', stroke: color, 'stroke-width': 4 }, g);
+  evText(g, L(key), { x: 0, y: 11, size: 30, weight: 700, fill: color, maxW: sw - 30 });
+  put(g, { s: 1.5 }); tw(g, { o: 1, s: 1 }, t, .4, back);
+  return g;
+}
+// A cross drawn over (x, y), size r.
+function a17Cross(p, x, y, r, t, color = STATUS) {
+  const c = path(p, `M${x - r} ${y - r}L${x + r} ${y + r}M${x + r} ${y - r}L${x - r} ${y + r}`, { stroke: color, 'stroke-width': 6 }, { d: 0 });
+  draw(c, t, .35);
+  return c;
+}
+// A seated meditator silhouette, base at (0,0).
+function a17Seated(p, { x = 0, y = 0, s = 1, o = 1, color = EV.goldHi } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('ellipse', { cx: 0, cy: -14, rx: 62, ry: 16, fill: color, opacity: .85 }, g);
+  path(g, 'M-34 -24Q-36 -80 0 -88Q36 -80 34 -24Z', { fill: color });
+  mk('circle', { cx: 0, cy: -108, r: 20, fill: color }, g);
+  return g;
+}
+// A heart, centred on (0,0).
+const HEARTD = 'M0 30C-40 2 -52 -26 -28 -38C-12 -46 -2 -36 0 -28C2 -36 12 -46 28 -38C52 -26 40 2 0 30Z';
+// A shower head on a wall pipe; water falls from (x, y) down to floor (lines from one clock).
+function a17Shower(p, x, y, floor, D, t0) {
+  const g = G(p);
+  path(g, `M${x + 110} ${y - 90}V${y - 40}H${x}`, { stroke: '#8f9ea4', 'stroke-width': 8 });
+  path(g, `M${x - 50} ${y}Q${x} ${y - 46} ${x + 50} ${y}Z`, { fill: '#8f9ea4' });
+  const lines = [-36, -18, 0, 18, 36].map(dx => path(g, `M${x + dx} ${y + 8}L${x + dx * 2.2} ${floor}`, { stroke: COLD, 'stroke-width': 3, 'stroke-dasharray': '18 22', opacity: 0 }));
+  prog(q => { const t = q * D, on = evU(t, t0, .4); lines.forEach((l, i) => put(l, { o: .75 * on, 'a_stroke-dashoffset': -(t * 260 + i * 9) })); }, 0, D, lin);
+  return g;
+}
+// An open notebook, centred on (0,0).
+function a17Notebook(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-110 -70Q-55 -84 0 -66Q55 -84 110 -70V70Q55 56 0 74Q-55 56 -110 70Z', { fill: '#e8e0cc', stroke: EV.goldLo, 'stroke-width': 2 });
+  path(g, 'M0 -66V74', { stroke: '#b9ae94', 'stroke-width': 2 });
+  path(g, 'M-92 -38H-28M-92 -12H-40M-92 14H-26M18 -38H88M18 -12H70M18 14H84', { stroke: '#5a4f3a', 'stroke-width': 3 });
+  return g;
+}
+// A mirror (oval in a frame), centred on (0,0).
+function a17Mirror(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('ellipse', { cx: 0, cy: 0, rx: 70, ry: 95, fill: '#1b2a33', stroke: EV.gold, 'stroke-width': 4 }, g);
+  path(g, 'M-34 -50L-6 -78M-40 -20L10 -70', { stroke: EV.ink, 'stroke-width': 3, opacity: .35 });
+  return g;
+}
+// A monkey hanging by one arm from (0,0); g swings about the grip.
+function a17Monkey(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M0 0Q-6 50 -4 92', { stroke: '#5a3f2a', 'stroke-width': 12 });
+  path(g, 'M8 150Q60 160 70 120Q78 96 96 104', { stroke: '#5a3f2a', 'stroke-width': 7 });
+  mk('ellipse', { cx: 0, cy: 150, rx: 34, ry: 46, fill: '#5a3f2a' }, g);
+  path(g, 'M-20 190L-34 236M20 190L36 230', { stroke: '#5a3f2a', 'stroke-width': 11 });
+  path(g, 'M22 130Q56 150 50 184', { stroke: '#5a3f2a', 'stroke-width': 10 });
+  [-30, 30].forEach(cx => mk('circle', { cx, cy: 96, r: 11, fill: '#b08a62' }, g));
+  mk('circle', { cx: 0, cy: 92, r: 28, fill: '#5a3f2a' }, g);
+  mk('ellipse', { cx: 0, cy: 100, rx: 19, ry: 16, fill: '#b08a62' }, g);
+  [-7, 7].forEach(cx => mk('circle', { cx, cy: 90, r: 3, fill: '#1a120d' }, g));
+  mk('ellipse', { cx: 0, cy: 108, rx: 7, ry: 5, fill: '#1a120d' }, g);
+  return g;
+}
+// A small brain-scan head (side view) with an amygdala dot, centred on (0,0).
+function a17Head(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  path(g, 'M-60 70Q-80 -10 -50 -60Q-10 -100 40 -80Q80 -60 74 -10Q70 20 80 34Q86 44 70 46L66 70Z', { fill: '#11181c', stroke: SCI, 'stroke-width': 3 });
+  g._dot = mk('circle', { cx: 6, cy: 6, r: 14, fill: STATUS }, g);
+  return g;
+}
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    tw(g, { o: 1 }, .1, .6, out);
+    // dawn over a still lake; a meditator on the jetty; the breath ripples out
+    const sun = G(g, { x: 800, y: 650 });
+    mk('circle', { cx: 0, cy: 0, r: 420, fill: 'url(#evGlowWarm)' }, sun);
+    mk('rect', { x: -10, y: 650, width: 1620, height: 270, fill: '#0a1112' }, g);
+    path(g, 'M0 650H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .3 });
+    let d = ''; for (let i = 0; i < 6; i++) d += `M${300 + i * 37} ${(680 + i * i * 6).toFixed(0)}H${1300 - i * 37}`;
+    path(g, d, { stroke: '#e8a95a', 'stroke-width': 2, opacity: .18 });
+    mk('rect', { x: 640, y: 646, width: 320, height: 14, fill: '#2a211b' }, g);
+    [670, 930].forEach(px => mk('rect', { x: px, y: 660, width: 10, height: 70, fill: '#2a211b' }, g));
+    a17Seated(g, { x: 800, y: 646, s: .75, color: '#1a1f20' });
+    const rings = [0, 1, 2].map(() => mk('ellipse', { cx: 800, cy: 700, rx: 10, ry: 3, fill: 'none', stroke: BREATH, 'stroke-width': 2 }, g));
+    prog(q => { const t = q * D; rings.forEach((r, i) => { const u = ((t / 4 + i / 3) % 1); r.setAttribute('rx', (60 + 520 * u).toFixed(1)); r.setAttribute('ry', (8 + 60 * u).toFixed(1)); put(r, { o: .5 * (1 - u) * evU(t, .3, 1) }); }); }, 0, D, lin);
+    const kk = evText(g, L('kicker'), { x: 800, y: 140, size: 26, fill: EV.gold, weight: 500, ls: '6', o: 0 });
+    show(kk, m('chap'), .5);
+    draw(path(g, 'M620 172H980', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .6 }, { d: 0 }), m('chap'), .8);
+    const ti = evText(g, L('title'), { x: 800, y: 290, size: 96, font: SERIF, weight: 600, maxW: 1420, o: 0 });
+    put(ti, { y: 310 }); tw(ti, { y: 290, o: 1 }, m('title'), .7, out);
+    const sub = evPara(g, L('sub'), { x: 800, y: 375, size: 32, fill: EV.ink, o: 0, maxW: 1300, font: SERIF, italic: true });
+    put(sub, { y: 390 }); tw(sub, { y: 375, o: .85 }, m('sub'), .7, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 480, size: 24, fill: '#8a8270', o: 0, maxW: 1400 });
+    show(cr, m('sub'), 1);
+    tw(g, { o: 0 }, D - .6, .5); hide(cr, D - .6, .5);
+  }],
+
+  ['breath', 'b_breath', (m, D) => {
+    const p = panel(0);
+    lab(p, 'breath', 800, 105, m('breath'), { size: 48, font: SERIF, weight: 600, fill: EV.gold });
+    const B = evBody(p, { x: 800, y: 590, s: 1.1 });
+    // lungs breathe all beat; after "slow" the rhythm slows down (one clock, phase integrated)
+    const lungs = [-1, 1].map(k => { const l = mk('ellipse', { cx: 0, cy: 0, rx: 22, ry: 42, fill: BREATH, opacity: .55 }, B); put(l, { x: k * 30, y: -92 }); return l; });
+    const TS = m('slow');
+    prog(q => { const t = q * D, ph = 2 * Math.PI * (.45 * Math.min(t, TS) + .18 * Math.max(0, t - TS));
+      const k = 1 + .16 * Math.sin(ph); lungs.forEach(l => put(l, { s: k })); }, 0, D, lin);
+    // left: autopilot
+    lab(p, 'auto', 320, 215, m('auto'), { size: 34, weight: 600, fill: EV.dim });
+    const hr = G(p, { x: 320, y: 300, o: 0 }); path(hr, HEARTD, { fill: EV.love }); show(hr, m('heart'), .4);
+    prog(q => { const t = q * D, v = (t * 1.2) % 1; put(hr, { s: .9 + .18 * Math.exp(-v * 9) }); }, 0, D, lin);
+    lab(p, 'heart', 320, 370, m('heart'), { size: 28, fill: EV.ink });
+    const gt = path(p, 'M280 440q20 -24 40 0t40 0q-20 24 -40 0t-40 0', { stroke: '#d9a066', 'stroke-width': 7 }, { d: 0 });
+    draw(gt, m('gut'), .6);
+    lab(p, 'gut', 320, 505, m('gut'), { size: 28, fill: EV.ink });
+    // right: you choose (a hand that lifts)
+    lab(p, 'choose', 1280, 215, m('choose'), { size: 34, weight: 600, fill: EV.dim });
+    const hand = G(p, { x: 1280, y: 330, o: 0 });
+    path(hand, 'M-14 50V-10Q-14 -22 -4 -22V-40Q-4 -52 6 -52Q16 -52 16 -40V-10L26 -16Q36 -20 38 -8L20 50Z', { fill: EV.skinM, stroke: EV.gold, 'stroke-width': 2 });
+    show(hand, m('choose'), .4);
+    prog(q => { const t = q * D; put(hand, { y: 330 - 30 * io(evU(t, m('choose') + .4, .6)) }); }, 0, D, lin);
+    // both: arrows from each column into the lungs
+    const bp = a17Pill(p, 'both', 800, 215, { color: BREATH, size: 32, ink: BREATH, minW: 160 }); show(bp, m('both'), .4);
+    const a1 = path(p, 'M420 300Q600 330 740 470', { stroke: EV.dim, 'stroke-width': 3, 'stroke-dasharray': '8 8' }, { d: 0 });
+    const a2 = path(p, 'M1180 300Q1000 330 860 470', { stroke: EV.dim, 'stroke-width': 3, 'stroke-dasharray': '8 8' }, { d: 0 });
+    draw(a1, m('both'), .6); draw(a2, m('both'), .6);
+    // a door from the breath into the automatic side
+    const dr = G(p, { x: 320, y: 620, o: 0 });
+    mk('rect', { x: -40, y: -60, width: 80, height: 110, rx: 4, fill: '#1b2226', stroke: BREATH, 'stroke-width': 3 }, dr);
+    const leaf = mk('rect', { x: -40, y: -60, width: 80, height: 110, rx: 4, fill: BREATH, opacity: .35 }, dr);
+    mk('circle', { cx: 24, cy: 0, r: 5, fill: EV.gold }, dr);
+    show(dr, m('door'), .4);
+    prog(q => { const t = q * D; put(leaf, { o: .35 * (1 - evU(t, m('door') + .4, .6)) }); }, 0, D, lin);
+    lab(p, 'door', 320, 715, m('door'), { size: 24, fill: BREATH, maxW: 470 });
+    lab(p, 'slow', 1280, 440, m('slow'), { size: 28, fill: BREATH, maxW: 470 });
+    const sp = a17Pill(p, 'safe', 1280, 515, { color: BREATH, size: 30, ink: EV.ink, minW: 220 }); show(sp, m('safe'), .4);
+    // watching for danger: an eye that dims; the energy flows to the body
+    const eye = G(p, { x: 320, y: 790, o: 0 });
+    path(eye, 'M-40 0Q0 -30 40 0Q0 30 -40 0Z', { stroke: STATUS, 'stroke-width': 3, fill: '#1b1311' }); mk('circle', { cx: 0, cy: 0, r: 9, fill: STATUS }, eye);
+    prog(q => { const t = q * D; put(eye, { o: evU(t, m('watch'), .3) * (1 - .6 * evU(t, m('immune'), .8)) }); }, 0, D, lin);
+    lab(p, 'watch', 320, 845, m('watch'), { size: 24, fill: STATUS });
+    const fp = path(p, 'M800 360C800 420 790 470 760 540S700 640 720 760', { stroke: 'none' });
+    evFlow(fp, 7, EV.goldHi, m('immune'), D - m('immune'), { r: 6, speed: .3 });
+    const fp2 = path(p, 'M800 360C800 420 810 470 840 540S900 640 880 760', { stroke: 'none' });
+    evFlow(fp2, 7, EV.goldHi, m('immune'), D - m('immune'), { r: 6, speed: .3 });
+    tw(B._glow, { o: .8 }, m('immune'), .8);
+    lab(p, 'immune', 1280, 640, m('immune'), { size: 26, fill: EV.goldHi, maxW: 470 });
+    const gp = a17Pill(p, 'guess', 1280, 730, { color: SCI, size: 26, ink: SCI, minW: 240, maxPill: 520 }); show(gp, m('guess'), .4);
+  }],
+
+  ['cold', 'b_cold', (m, D) => {
+    const p = panel(0);
+    // Wim Hof in an ice hole
+    lab(p, 'wim', 420, 130, m('wim'), { size: 44, font: SERIF, weight: 600, fill: EV.gold });
+    lab(p, 'ice', 420, 185, m('ice'), { size: 30, fill: COLD, italic: true, font: SERIF });
+    mk('rect', { x: 120, y: 520, width: 600, height: 160, rx: 12, fill: '#cfe3ea', opacity: .9 }, p);
+    mk('ellipse', { cx: 420, cy: 540, rx: 150, ry: 30, fill: '#14303c' }, p);
+    a17Icon(p, 420, 590, '#94603f', 1.6);
+    mk('rect', { x: 230, y: 560, width: 380, height: 120, fill: '#cfe3ea' }, p);
+    [[180, 470], [640, 480], [560, 455]].forEach(([x, y]) => mk('rect', { x, y, width: 50, height: 42, rx: 6, fill: '#e6f2f6', stroke: COLD, 'stroke-width': 2 }, p));
+    // Naval: ice baths, no; cold showers, yes
+    a17Icon(p, 1150, 440, EV.goldHi, 1.6);
+    const cube = G(p, { x: 1000, y: 300, o: 0 }); mk('rect', { x: -36, y: -36, width: 72, height: 72, rx: 10, fill: '#e6f2f6', stroke: COLD, 'stroke-width': 3 }, cube);
+    show(cube, m('noice'), .3);
+    a17Cross(p, 1000, 300, 44, m('noice') + .2);
+    lab(p, 'noice', 1000, 380, m('noice'), { size: 26, fill: STATUS, maxW: 360 });
+    const sh = G(p, { x: 1320, y: 280, o: 0 });
+    path(sh, 'M-40 0Q0 -40 40 0Z', { fill: '#8f9ea4' }); path(sh, 'M-24 14L-34 70M0 14V74M24 14L34 70', { stroke: COLD, 'stroke-width': 4, 'stroke-dasharray': '10 8' });
+    show(sh, m('shower'), .4);
+    lab(p, 'shower', 1320, 380, m('shower'), { size: 26, fill: COLD, maxW: 380 });
+    // Faisal's bathroom in Sharjah
+    const q = panel(m('sharjah'));
+    put(q, { o: 0 }); show(q, m('sharjah'), .4);
+    mk('rect', { x: 100, y: 120, width: 640, height: 640, fill: '#121a1e', stroke: '#26302d', 'stroke-width': 2 }, q);
+    let tl = ''; for (let i = 1; i < 8; i++) tl += `M100 ${120 + i * 80}H740M${100 + i * 80} 120V760`;
+    path(q, tl, { stroke: '#1d272b', 'stroke-width': 2 });
+    a17Ground(q, 760);
+    a17Shower(q, 560, 250, 760, D, m('sharjah'));
+    lab(q, 'sharjah', 420, 820, m('sharjah'), { size: 26, weight: 600 });
+    const fz = a17Faisal(q, { x: 290, y: 760, s: .62 });
+    evBreathe(fz, D);
+    evMood(fz, 'tense', m('tiptoe'));
+    evArm(fz, 1, -75, -10, m('tiptoe'), .4);
+    prog(qq => { const t = qq * D; if (t < m('walk')) put(fz.torso, { r: 6 * evU(t, m('tiptoe'), .4) * (1 + .3 * Math.sin(t * 9) * evU(t, m('tiptoe'), .4)) }); }, 0, D, lin);
+    lab(q, 'tiptoe', 420, 165, m('tiptoe'), { size: 28, fill: STATUS, weight: 600, maxW: 600 });
+    const vb = evBubble(q, L('voice'), { x: 260, y: 380, w: 360, size: 26, edge: COLD, tail: 'left' });
+    tw(vb, { o: 1, s: 1 }, m('voice'), .35, back); hide(vb, m('walk') + .6, .4);
+    // he walks straight in
+    evArm(fz, 1, 0, 0, m('walk'), .3);
+    prog(qq => { const t = qq * D; if (t >= m('walk')) put(fz.torso, { r: 0 }); }, 0, D, lin);
+    evWalk(fz, 290, 560, m('walk'), m('walk') + 1);
+    evMood(fz, 'calm', m('cold'));
+    lab(q, 'walk', 420, 212, m('walk'), { size: 26, fill: EV.goldHi, weight: 600 });
+    // suffering over time: tiptoeing vs walking in
+    const X0 = 880, X1 = 1480, Y0 = 600;
+    path(q, `M${X0} ${Y0}H${X1}M${X0} ${Y0}V300`, { stroke: EV.dim, 'stroke-width': 2 });
+    const tip = path(q, `M${X0} ${Y0}C${X0 + 20} 380 ${X0 + 40} 360 ${X0 + 80} 360H1300C1330 360 1340 540 1360 540H${X1}`, { stroke: STATUS, 'stroke-width': 5 }, { d: 0 });
+    draw(tip, m('tiptoe'), 2.5);
+    const area = path(q, `M${X0} ${Y0}C${X0 + 20} 380 ${X0 + 40} 360 ${X0 + 80} 360H1300C1330 360 1340 540 1360 540V${Y0}Z`, { fill: STATUS, opacity: 0 });
+    prog(qq => { const t = qq * D; put(area, { o: .22 * evU(t, m('suffer'), .5) }); }, 0, D, lin);
+    const inn = path(q, `M${X0} ${Y0}C${X0 + 10} 470 ${X0 + 30} 440 ${X0 + 50} 470C${X0 + 70} 520 ${X0 + 90} 540 ${X0 + 120} 540H${X1}`, { stroke: EV.goldHi, 'stroke-width': 5 }, { d: 0 });
+    draw(inn, m('walk'), 1.2);
+    lab(q, 'suffer', 1100, 335, m('suffer'), { size: 26, fill: STATUS, weight: 600, maxW: 560 });
+    lab(q, 'cold', 1400, 515, m('cold'), { size: 26, fill: COLD, weight: 600, maxW: 170 });
+    lab(q, 'body', 1180, 680, m('body'), { size: 32, fill: COLD, weight: 600 });
+    lab(q, 'mind', 1180, 735, m('mind'), { size: 32, fill: STATUS, weight: 600 });
+  }],
+
+  ['check', 'b_check', (m, D) => {
+    const p = panel(0);
+    a17Sci(m, D);
+    lab(p, 'holds', 800, 140, m('holds'), { size: 40, font: SERIF, italic: true, fill: EV.ink, maxW: 1200 });
+    path(p, 'M800 200V700', { stroke: EV.faint, 'stroke-width': 1.5 });
+    // left: 111 people, 5 minutes a day
+    lab(p, 'people', 440, 235, m('people'), { size: 30, weight: 600 });
+    const dots = [];
+    for (let i = 0; i < 111; i++) { const c = mk('circle', { cx: 266 + (i % 28) * 12.8, cy: 262 + Math.floor(i / 28) * 13, r: 4.5, fill: SCI }, p); put(c, { o: 0 }); dots.push([c, m('people') + i * .008, .2]); }
+    evSeq(dots, D);
+    lab(p, 'five', 440, 352, m('five'), { size: 26, fill: BREATH, maxW: 620 });
+    const BY = 560;
+    path(p, `M300 ${BY}H580`, { stroke: EV.dim, 'stroke-width': 2 });
+    [[360, 120, BREATH, 'breathL'], [520, 75, EV.dim, 'mindL']].forEach(([x, h, c, k]) => {
+      const r = mk('rect', { x: x - 45, y: BY, width: 90, height: 0, rx: 4, fill: c }, p);
+      prog(q => { const t = q * D, hh = h * io(evU(t, m('mood'), .7)); r.setAttribute('y', BY - hh); r.setAttribute('height', hh); }, 0, D, lin);
+      lab(p, k, x, BY + 32, m(k === 'breathL' ? 'breathed' : 'mindf'), { size: 20, fill: c });
+    });
+    lab(p, 'mood', 440, 640, m('mood'), { size: 26, fill: EV.goldHi, weight: 600, maxW: 640 });
+    // right: the Wim Hof lab study
+    lab(p, 'wim2', 1160, 235, m('wim2'), { size: 30, weight: 600, maxW: 640 });
+    const men = [];
+    for (let i = 0; i < 12; i++) { const ic = a17Icon(p, 1000 + (i % 6) * 64, 310 + Math.floor(i / 6) * 50, SCI, .6, 0); men.push([ic, m('trained') + i * .05, .2]); }
+    evSeq(men, D);
+    lab(p, 'trained', 1160, 400, m('trained'), { size: 22, fill: EV.ink, maxW: 640 });
+    lab(p, 'fewer', 1160, 445, m('fewer'), { size: 26, fill: EV.goldHi, weight: 600, maxW: 640 });
+    lab(p, 'oxygen', 1160, 520, m('oxygen'), { size: 28, fill: STATUS, weight: 600, maxW: 640 });
+    lab(p, 'blows', 1160, 570, m('blows'), { size: 24, fill: EV.ink, maxW: 640 });
+    lab(p, 'drops', 1160, 615, m('drops'), { size: 24, fill: EV.ink, maxW: 640 });
+    // second panel: the Dutch cold-shower trial and the safety rule
+    const q = panel(m('trial'));
+    put(q, { o: 0 }); show(q, m('trial'), .4);
+    lab(q, 'trial', 800, 150, m('trial'), { size: 34, weight: 600, maxW: 1200 });
+    const cells = [];
+    for (let i = 0; i < 300; i++) { const c = mk('rect', { x: 320 + (i % 50) * 19.4, y: 190 + Math.floor(i / 50) * 16, width: 13, height: 11, rx: 2, fill: COLD }, q); put(c, { o: 0 }); cells.push([c, m('trial') + i * .004, .2]); }
+    evSeq(cells, D);
+    const BX = 520;
+    const bar = (y, w0, w1, k, c) => {
+      const a = mk('rect', { x: BX, y, width: 0, height: 26, rx: 4, fill: EV.dim }, q), b = mk('rect', { x: BX, y: y + 32, width: 0, height: 26, rx: 4, fill: c }, q);
+      prog(qq => { const t = qq * D, u = io(evU(t, m(k), .7)); a.setAttribute('width', w0 * u); b.setAttribute('width', w1 * u); }, 0, D, lin);
+      lab(q, k, BX - 30, y + 38, m(k), { size: 26, fill: c, weight: 600, anchor: 'end', maxW: 420 });
+    };
+    bar(330, 520, 370, 'sick', MONEY);
+    bar(440, 520, 520, 'ill', EV.ink);
+    const wp = a17Pill(q, 'water', 800, 620, { color: STATUS, size: 28, ink: EV.ink, minW: 400, maxPill: 1300 }); show(wp, m('water'), .4);
+    const hp = a17Pill(q, 'heart2', 800, 710, { color: STATUS, size: 28, ink: EV.ink, minW: 360, maxPill: 1100 }); show(hp, m('heart2'), .4);
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    const p = panel(0);
+    a17Ground(p, 430);
+    const ni = evPerson(p, { kind: 'f', x: 330, y: 430, s: .5 });
+    evBreathe(ni, D); evMood(ni, 'worried', .4);
+    // a phone she keeps not calling from, and a week of crossed-off days
+    const ph = G(p, { x: 560, y: 260 });
+    mk('rect', { x: -40, y: -70, width: 80, height: 140, rx: 12, fill: '#0f1518', stroke: EV.gold, 'stroke-width': 3 }, ph);
+    mk('rect', { x: -32, y: -56, width: 64, height: 112, rx: 4, fill: '#1d3440' }, ph);
+    for (let i = 0; i < 7; i++) { const x = 760 + i * 92; mk('rect', { x, y: 200, width: 76, height: 76, rx: 8, fill: '#151d21', stroke: EV.dim, 'stroke-width': 2 }, p);
+      path(p, `M${x + 14} 214L${x + 62} 262M${x + 62} 214L${x + 14} 262`, { stroke: STATUS, 'stroke-width': 4, opacity: .8 }); }
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-stepin', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 1, L('q1y'), [L('q1na'), null, L('q1nc')]),
+  }], done) }],
+
+  ['fasting', 'b_fasting', (m, D) => {
+    const p = panel(0);
+    lab(p, 'fast', 800, 110, m('fast'), { size: 40, font: SERIF, weight: 600, fill: EV.gold, maxW: 1300 });
+    // left: sugar drops into a body that sinks; right: pings pile into a head
+    const B = evBody(p, { x: 420, y: 560, s: .85 });
+    const cubes = [];
+    for (let i = 0; i < 6; i++) { const c = mk('rect', { x: -14, y: -14, width: 28, height: 28, rx: 4, fill: '#f3ecdc' }, p); put(c, { o: 0 }); cubes.push(c); }
+    prog(q => { const t = q * D, u = evU(t, m('sugar'), 2);
+      cubes.forEach((c, i) => { const v = evU(u, i / 8, .35); put(c, { x: 380 + (i % 3) * 40, y: 180 + 300 * v * v + Math.floor(i / 3) * 34 * v + 26 * io(u), o: v > 0 ? 1 : 0 }); });
+      put(B, { y: 560 + 26 * io(u) }); }, 0, D, lin);
+    lab(p, 'sugar', 420, 835, m('sugar'), { size: 28, fill: EV.ink, maxW: 560 });
+    const hd = G(p, { x: 1180, y: 480 });
+    mk('circle', { cx: 0, cy: 0, r: 120, fill: '#11181c', stroke: EV.gold, 'stroke-width': 3 }, hd);
+    const pings = [];
+    for (let i = 0; i < 9; i++) { const g = G(p, { o: 0 }); mk('rect', { x: -40, y: -16, width: 80, height: 32, rx: 12, fill: '#2a1712', stroke: STATUS, 'stroke-width': 2 }, g); mk('circle', { cx: -24, cy: 0, r: 6, fill: STATUS }, g); pings.push(g); }
+    prog(q => { const t = q * D, u = evU(t, m('pings'), 2.2), gone = evU(t, m('alone'), .6);
+      pings.forEach((g, i) => { const v = io(evU(u, i / 12, .3)); const tx = 1180 + ((i % 3) - 1) * 70, ty = 420 + Math.floor(i / 3) * 56;
+        put(g, { x: 1450 + (tx - 1450) * v, y: 230 + (ty - 230) * v, o: v > 0 ? 1 - gone : 0 }); });
+      put(hd, { y: 480 + 26 * io(u) * (1 - gone) }); }, 0, D, lin);
+    lab(p, 'pings', 1180, 835, m('pings'), { size: 26, fill: EV.ink, maxW: 640 });
+    // second panel: time alone, three ways; and a crowd that says it meditates
+    const q = panel(m('alone'));
+    put(q, { o: 0 }); show(q, m('alone'), .4);
+    lab(q, 'alone', 800, 200, m('alone'), { size: 38, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1300 });
+    const mi = a17Mirror(q, { x: 400, y: 380, s: .9, o: 0 }); show(mi, m('self'), .4);
+    lab(q, 'self', 400, 500, m('self'), { size: 26, fill: EV.ink, maxW: 400 });
+    const nb = a17Notebook(q, { x: 800, y: 380, s: .9, o: 0 }); show(nb, m('journal'), .4);
+    lab(q, 'journal', 800, 500, m('journal'), { size: 26, fill: EV.ink, maxW: 400 });
+    const st = a17Seated(q, { x: 1200, y: 440, s: .9, o: 0 }); show(st, m('sit'), .4);
+    lab(q, 'sit', 1200, 500, m('sit'), { size: 26, fill: EV.ink, maxW: 400 });
+    const crowd = [];
+    for (let i = 0; i < 12; i++) crowd.push(a17Icon(q, 360 + i * 80, 700, EV.dim, .9, 0));
+    prog(qq => { const t = qq * D, u = evU(t, m('few'), .5); crowd.forEach((c, i) => put(c, { o: io(evU(t, m('everyone') + i * .05, .25)) * (i === 7 ? 1 : 1 - .75 * u) })); }, 0, D, lin);
+    const gold = a17Icon(q, 360 + 7 * 80, 700, EV.goldHi, .9, 0); show(gold, m('few'), .4);
+    lab(q, 'everyone', 800, 590, m('everyone'), { size: 26, fill: EV.dim });
+    lab(q, 'few', 800, 770, m('few'), { size: 28, fill: EV.goldHi, weight: 600 });
+  }],
+
+  ['choiceless', 'b_choiceless', (m, D) => {
+    const p = panel(0);
+    // Al Mamzar at evening: a low sun over the sea, the sand
+    const sun = G(p, { x: 1300, y: 520 }); mk('circle', { cx: 0, cy: 0, r: 260, fill: 'url(#evGlowWarm)' }, sun); mk('circle', { cx: 0, cy: 0, r: 40, fill: '#f0b25e' }, sun);
+    mk('rect', { x: -10, y: 520, width: 1620, height: 90, fill: '#0f2630' }, p);
+    path(p, 'M0 560H1600M0 590H1600', { stroke: '#2b5566', 'stroke-width': 2, opacity: .6 });
+    mk('rect', { x: -10, y: 610, width: 1620, height: 300, fill: '#2a2318' }, p);
+    path(p, 'M0 610H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .3 });
+    lab(p, 'aware', 800, 100, m('aware'), { size: 44, font: SERIF, weight: 600, fill: EV.gold });
+    lab(p, 'mamzar', 800, 150, m('mamzar'), { size: 26, fill: EV.dim });
+    const nj = a17Pill(p, 'nojudge', 800, 215, { color: EV.gold, size: 26, minW: 400, maxPill: 1360 }); show(nj, m('nojudge'), .4);
+    const fz = a17Faisal(p, { x: 260, y: 830, s: .55 });
+    evBreathe(fz, D);
+    evWalk(fz, 260, 620, m('mamzar'), m('peace'), 60);
+    // the jogger runs past from the right
+    const jg = a17Man(p, { x: 1700, y: 845, s: .5 }, '#6b4a7a', '#4f3660');
+    evWalk(jg, 1650, -150, m('jog') - 2, m('jog') + 2.5, 34);
+    evMood(jg, 'tense', 0);
+    // the judgment, and the fear under it
+    const jb = evBubble(p, L('jog'), { x: 520, y: 440, w: 330, size: 26, edge: STATUS, tail: 'left' });
+    lab(p, 'under', 1000, 300, m('under'), { size: 24, fill: EV.dim, italic: true, font: SERIF });
+    const fb = evBubble(p, L('fear'), { x: 560, y: 560, w: 400, size: 26, edge: FEAR, fill: FEAR, tail: 'left' });
+    prog(q => { const t = q * D, x = 260 + 360 * Math.min(1, Math.max(0, (t - m('mamzar')) / (m('peace') - m('mamzar'))));
+      const fade = 1 - evU(t, m('fades'), .6);
+      put(jb, { x: x + 250, o: Math.min(evU(t, m('jog'), .3), fade) * (1 - .5 * evU(t, m('fear'), .4)), s: .9 + .1 * evU(t, m('jog'), .3) });
+      put(fb, { x: x + 270, o: Math.min(evU(t, m('fear'), .3), fade), s: .9 + .1 * evU(t, m('fear'), .3) }); }, 0, D, lin);
+    evMood(fz, 'tense', m('jog'));
+    evMood(fz, 'worried', m('fear'));
+    // Naval's 9 in 10 (his guess)
+    const dots = [];
+    for (let i = 0; i < 10; i++) { const c = mk('circle', { cx: 1040 + i * 44, cy: 360, r: 15, fill: i < 9 ? FEAR : WANT }, p); put(c, { o: 0 }); dots.push([c, (i < 9 ? m('ninety') : m('wants')) + (i % 9) * .05, .2]); }
+    evSeq(dots, D);
+    lab(p, 'ninety', 1180, 410, m('ninety'), { size: 26, fill: FEAR, weight: 600 });
+    lab(p, 'wants', 1450, 410, m('wants'), { size: 22, fill: WANT });
+    const gs = a17Pill(p, 'guess2', 1240, 470, { color: SCI, size: 22, ink: SCI, minW: 260, maxPill: 560 }); show(gs, m('guess'), .4);
+    lab(p, 'fades', 640, 300, m('fades'), { size: 28, fill: EV.ink });
+    // peace, gratitude; small glows over strangers on the beach
+    evMood(fz, 'calm', m('peace'));
+    const hg = evGlow(p, 620, 640, 130, 'Gold', 0); p.insertBefore(hg, fz.g); tw(hg, { o: .7 }, m('peace'), .7);
+    lab(p, 'peace', 400, 690, m('peace'), { size: 30, fill: EV.goldHi, weight: 600 });
+    lab(p, 'grateful', 400, 735, m('grateful'), { size: 30, fill: EV.goldHi, weight: 600 });
+    [[900, 760], [1040, 790], [1200, 750], [1360, 800]].forEach(([x, y], i) => {
+      const s = a17Icon(p, x, y, '#6a6458', .8, 0); show(s, m('grateful') + i * .1, .3);
+      const g2 = evGlow(p, x, y - 30, 50, 'Gold', 0); tw(g2, { o: .8 }, m('whole') + i * .12, .4); });
+    lab(p, 'whole', 1130, 860, m('whole'), { size: 24, fill: EV.ink, maxW: 600 });
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    mk('rect', { x: -10, y: 300, width: 1620, height: 80, fill: '#0f2630' }, p);
+    mk('rect', { x: -10, y: 380, width: 1620, height: 60, fill: '#2a2318' }, p);
+    const fz = a17Faisal(p, { x: 330, y: 430, s: .5 });
+    evBreathe(fz, D); evMood(fz, 'tense', .4);
+    // a man taking selfie after selfie, flashes from one clock
+    const mn = a17Man(p, { x: 1050, y: 430, s: .5 }, '#7a6a3a', '#5a4e2a');
+    evBreathe(mn, D, 1, 1.2);
+    evArm(mn, 1, -150, -10, .2, .01);
+    const fl = mk('circle', { cx: 1110, cy: 150, r: 26, fill: '#fff3cf', opacity: 0 }, p);
+    prog(q => { const t = q * D; put(fl, { o: Math.pow(Math.max(0, Math.sin(t * 2.2)), 18) }); }, 0, D, lin);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-notice', prompt: [L('q2p')],
+    build: choice([[L('q2a')], [L('q2b')], [L('q2c')]], 0, L('q2y'), [null, L('q2nb'), L('q2nc')]),
+  }], done) }],
+
+  ['inbox', 'b_inbox', (m, D) => {
+    const p = panel(0);
+    a17Ground(p, 760);
+    // the sit: eyes closed, an hour, no effort
+    const st = a17Seated(p, { x: 330, y: 760, s: 1.3 });
+    void st;
+    const ring = mk('circle', { cx: 330, cy: 420, r: 90, fill: 'none', stroke: TIME, 'stroke-width': 10, opacity: 0, transform: 'rotate(-90 330 420)', 'stroke-dasharray': '565.5', 'stroke-dashoffset': '565.5' }, p);
+    prog(q => { const t = q * D; put(ring, { o: evU(t, m('hour'), .3), 'a_stroke-dashoffset': 565.5 * (1 - io(evU(t, m('hour'), 2.5))) }); }, 0, D, lin);
+    lab(p, 'hour', 330, 432, m('hour'), { size: 34, fill: TIME, weight: 600, maxW: 150 });
+    lab(p, 'closed', 330, 270, m('closed'), { size: 28, fill: EV.ink });
+    const ne = a17Pill(p, 'noeffort', 330, 830, { color: EV.gold, size: 26, minW: 260, maxPill: 560 }); show(ne, m('noeffort'), .4);
+    // a fishing boat in Kochi with barnacles on its hull
+    lab(p, 'boat', 1100, 150, m('boat'), { size: 30, fill: EV.ink, weight: 600 });
+    mk('rect', { x: 640, y: 470, width: 960, height: 290, fill: '#0c1a20' }, p);
+    path(p, 'M640 470H1600', { stroke: '#2b5566', 'stroke-width': 3 });
+    const bt = evBoat(p, { x: 1100, y: 440, s: 1.7, o: 0 }); show(bt, m('boat'), .5);
+    const bar = [];
+    for (let i = 0; i < 18; i++) { const bx = 880 + i * 25 + (i % 3) * 4, by = 488 + Math.abs(i - 9) * -2 + (i % 2) * 8; const c = mk('circle', { cx: bx, cy: by, r: 6 + (i % 3) * 2, fill: '#a99a7c', stroke: '#5a4f3a', 'stroke-width': 2 }, p); put(c, { o: 0 }); bar.push([c, m('barnacles') + i * .06, .2]); }
+    evSeq(bar, D);
+    lab(p, 'barnacles', 1100, 280, m('barnacles'), { size: 26, fill: '#a99a7c' });
+    [['shame', 860], ['fearB', 1100], ['hurt', 1340]].forEach(([k, x], i) => {
+      const mk_ = ['shame', 'fear', 'hurt'][i];
+      const ln = path(p, `M${x} 515V585`, { stroke: '#a99a7c', 'stroke-width': 2, 'stroke-dasharray': '4 5' }, { d: 0 }); draw(ln, m(mk_), .3);
+      const pl = a17Pill(p, k, x, 625, { color: '#a99a7c', size: 24, ink: EV.ink, minW: 160, maxPill: 280 }); show(pl, m(mk_), .4); });
+    // second panel: the inbox
+    const q = panel(m('inbox'));
+    put(q, { o: 0 }); show(q, m('inbox'), .4);
+    lab(q, 'inbox', 560, 120, m('inbox'), { size: 32, weight: 600, fill: EV.gold, maxW: 900 });
+    mk('rect', { x: 180, y: 160, width: 760, height: 580, rx: 16, fill: '#10171b', stroke: EV.gold, 'stroke-width': 2.5 }, q);
+    path(q, 'M180 220H940', { stroke: EV.faint, 'stroke-width': 2 });
+    const cnt = T(q, '9', { x: 900, y: 202, size: 30, fill: STATUS, anchor: 'end', font: SANS, weight: 700 });
+    const N = 9, rows = [];
+    for (let i = 0; i < N; i++) { const g = G(q, { x: 0, y: 0 }); mk('rect', { x: 210, y: 236 + i * 54, width: 700, height: 44, rx: 8, fill: '#151d21' }, g);
+      mk('circle', { cx: 236, cy: 258 + i * 54, r: 8, fill: STATUS }, g); path(g, `M262 252H${520 + (i * 53) % 260}M262 266H${420 + (i * 37) % 200}`, { stroke: EV.dim, 'stroke-width': 4 }); rows.push(g); }
+    const T0 = m('surface'), T1 = m('empty');
+    prog(qq => { const t = qq * D; let left = N;
+      rows.forEach((g, i) => { const ti = T0 + (T1 - T0) * (N - 1 - i + .5) / N, u = evU(t, ti, .5); if (u > 0) left--; put(g, { o: 1 - u, x: 40 * u }); });
+      cnt.textContent = String(t < T0 ? N : left); cnt.setAttribute('fill', left === 0 && t >= T0 ? MONEY : STATUS); }, 0, D, lin);
+    lab(q, 'surface', 560, 790, m('surface'), { size: 28, fill: EV.ink, maxW: 760 });
+    const s2 = a17Seated(q, { x: 1260, y: 520, s: 1, o: 0 }); show(s2, m('watch'), .4);
+    const dl = path(q, 'M1080 380V600', { stroke: EV.goldHi, 'stroke-width': 2, 'stroke-dasharray': '8 8' }, { d: 0 }); draw(dl, m('distance'), .6);
+    lab(q, 'watchB', 1260, 580, m('watch'), { size: 28, fill: EV.goldHi, weight: 600 });
+    lab(q, 'distance', 1260, 625, m('distance'), { size: 24, fill: EV.ink, maxW: 460 });
+    lab(q, 'empty', 1260, 300, m('empty'), { size: 34, fill: MONEY, weight: 600, maxW: 460 });
+    const cal = [];
+    for (let i = 0; i < 60; i++) { const c = mk('rect', { x: 1085 + (i % 15) * 24, y: 700 + Math.floor(i / 15) * 24, width: 18, height: 18, rx: 3, fill: TIME }, q); put(c, { o: 0 }); cal.push([c, m('sixty') + i * .02, .15]); }
+    evSeq(cal, D);
+    lab(q, 'sixty', 1260, 820, m('sixty'), { size: 24, fill: TIME, maxW: 460 });
+  }],
+
+  ['check2', 'b_check2', (m, D) => {
+    const p = panel(0);
+    a17Sci(m, D);
+    lab(p, 'full', 800, 140, m('full'), { size: 44, font: SERIF, italic: true, fill: EV.ink });
+    // beginners, 13 minutes a day; bars at 4 and 8 weeks
+    const bg = [];
+    for (let i = 0; i < 42; i++) { const ic = mk('circle', { cx: 300 + (i % 14) * 24, cy: 220 + Math.floor(i / 14) * 24, r: 8, fill: SCI }, p); put(ic, { o: 0 }); bg.push([ic, m('beginners') + i * .02, .2]); }
+    evSeq(bg, D);
+    lab(p, 'beginners', 300 + 13 * 12, 315, m('beginners'), { size: 26, weight: 600 });
+    lab(p, 'thirteen', 300 + 13 * 12, 355, m('thirteen'), { size: 26, fill: TIME });
+    const BY = 600;
+    path(p, `M240 ${BY}H780`, { stroke: EV.dim, 'stroke-width': 2 });
+    [['moodB', 320, 'mood', 1], ['attention', 500, 'attention', 1], ['anxiety', 680, 'anxiety', -1]].forEach(([k, x, mk_, dir]) => {
+      const a = mk('rect', { x: x - 44, y: BY, width: 38, height: 0, rx: 3, fill: EV.faint }, p);
+      const b = mk('rect', { x: x + 6, y: BY, width: 38, height: 0, rx: 3, fill: dir > 0 ? MONEY : TIME }, p);
+      prog(q => { const t = q * D, u = io(evU(t, m('eight'), .6)), h0 = 90 * u, h1 = (90 + dir * 55 * io(evU(t, m(mk_), .6))) * u;
+        a.setAttribute('y', BY - h0); a.setAttribute('height', h0); b.setAttribute('y', BY - h1); b.setAttribute('height', h1); }, 0, D, lin);
+      lab(p, k, x, BY + 34, m(mk_), { size: 22, fill: EV.ink });
+    });
+    lab(p, 'w4', 380, 440, m('eight'), { size: 20, fill: EV.dim });
+    lab(p, 'w8', 560, 440, m('eight'), { size: 20, fill: MONEY });
+    mk('rect', { x: 340, y: 426, width: 16, height: 16, fill: EV.faint }, p);
+    lab(p, 'trials', 1130, 260, m('trials'), { size: 30, weight: 600 });
+    const tr = [];
+    for (let i = 0; i < 200; i++) { const c = mk('rect', { x: 950 + (i % 25) * 15, y: 290 + Math.floor(i / 25) * 15, width: 10, height: 10, rx: 2, fill: SCI }, p); put(c, { o: 0 }); tr.push([c, m('trials') + i * .006, .2]); }
+    evSeq(tr, D);
+    lab(p, 'longer', 1130, 450, m('longer'), { size: 26, fill: EV.goldHi, weight: 600, maxW: 680 });
+    // second panel: old pain coming up
+    const q = panel(m('coming'));
+    put(q, { o: 0 }); show(q, m('coming'), .4);
+    lab(q, 'coming', 800, 140, m('coming'), { size: 40, font: SERIF, italic: true, fill: EV.ink });
+    path(q, 'M800 190V560', { stroke: EV.faint, 'stroke-width': 1.5 });
+    lab(q, 'studies', 440, 225, m('studies'), { size: 28, weight: 600 });
+    const hd = [];
+    for (let i = 0; i < 100; i++) { const c = mk('circle', { cx: 332 + (i % 10) * 24, cy: 260 + Math.floor(i / 10) * 21, r: 8, fill: i < 8 ? STATUS : '#3a3550' }, q); put(c, { o: 0 }); hd.push([c, (i < 8 ? m('eightin') : m('studies')) + (i % 50) * .01, .2]); }
+    evSeq(hd, D);
+    lab(q, 'eightin', 440, 500, m('eightin'), { size: 24, fill: STATUS, weight: 600, maxW: 640 });
+    lab(q, 'anxious', 440, 540, m('anxious'), { size: 22, fill: EV.ink, maxW: 640 });
+    lab(q, 'regular', 1160, 225, m('regular'), { size: 28, weight: 600, maxW: 640 });
+    [0, 1, 2, 3].forEach(i => { const ic = a17Icon(q, 1040 + i * 80, 330, i === 3 ? STATUS : '#3a3550', 1, 0); show(ic, m('quarter') + i * .08, .3); });
+    lab(q, 'quarter', 1160, 375, m('quarter'), { size: 22, fill: STATUS, weight: 600, maxW: 660 });
+    const RB = 520;
+    [[1080, 87, STATUS, 'yes'], [1240, 59, '#3a3550', 'no']].forEach(([x, h, c, k]) => {
+      const r = mk('rect', { x: x - 40, y: RB, width: 80, height: 0, rx: 4, fill: c }, q);
+      prog(qq => { const t = qq * D, hh = h * io(evU(t, m('retreat'), .6)); r.setAttribute('y', RB - hh); r.setAttribute('height', hh); }, 0, D, lin);
+      lab(q, k, x, RB + 26, m('retreat'), { size: 20, fill: EV.dim });
+    });
+    draw(path(q, `M1010 ${RB}H1310`, { stroke: EV.dim, 'stroke-width': 2 }, { d: 0 }), m('retreat'), .4);
+    lab(q, 'retreat', 1400, RB - 20, m('retreat'), { size: 22, fill: EV.ink, anchor: 'start' });
+    a17Stamp(q, 'verdict', 800, 640, m('verdict'));
+    lab(q, 'memories', 800, 730, m('memories'), { size: 26, fill: EV.ink, maxW: 1300 });
+    lab(q, 'counsellor', 800, 775, m('counsellor'), { size: 28, fill: EV.goldHi, weight: 600, maxW: 1300 });
+  }],
+
+  ['monkey', 'b_monkey', (m, D) => {
+    const p = panel(0);
+    // a remote control, crossed out
+    const rm = G(p, { x: 1400, y: 200, o: 0 });
+    mk('rect', { x: -26, y: -60, width: 52, height: 120, rx: 10, fill: '#1b2226', stroke: EV.dim, 'stroke-width': 2 }, rm);
+    [-30, -8, 14, 36].forEach(y => mk('circle', { cx: 0, cy: y, r: 7, fill: EV.dim }, rm));
+    show(rm, m('remote'), .4);
+    a17Cross(p, 1400, 200, 50, m('remote') + .3);
+    lab(p, 'remote', 1400, 300, m('remote'), { size: 24, fill: EV.dim });
+    lab(p, 'shows', 640, 100, m('shows'), { size: 32, font: SERIF, weight: 600, fill: EV.gold, maxW: 1000 });
+    // the room with the monkey swinging from the lamp, things falling
+    mk('rect', { x: 160, y: 150, width: 960, height: 560, rx: 8, fill: '#10171b', stroke: '#26302d', 'stroke-width': 3 }, p);
+    path(p, 'M640 150V200', { stroke: EV.dim, 'stroke-width': 3 });
+    const mo = a17Monkey(p, { x: 640, y: 200, s: 1.2, o: 0 }); show(mo, m('monkey'), .3);
+    const sw = t => 38 * Math.sin(t * 2.6) * (1 - .8 * evU(t, m('calms'), 1.5));
+    prog(q => { const t = q * D; put(mo, { r: sw(t) }); }, 0, D, lin);
+    const vase = G(p, { x: 360, y: 640 }); mk('rect', { x: -60, y: 0, width: 120, height: 70, fill: '#2a211b' }, vase);
+    const vs = G(vase, { x: 0, y: 0 }); path(vs, 'M-18 0Q-26 -40 -10 -60H10Q26 -40 18 0Z', { fill: '#3b6a78' });
+    prog(q => { const t = q * D, u = io(evU(t, m('monkey') + .6, .7)); put(vs, { r: -90 * u, x: -30 * u, y: 40 * u * u }); }, 0, D, lin);
+    const bk = G(p, { x: 920, y: 600 }); [0, 1, 2].forEach(i => mk('rect', { x: -40 + i * 28, y: -70, width: 24, height: 70, fill: ['#6a3b3b', '#3b5a6a', '#6a5a3b'][i] }, bk));
+    prog(q => { const t = q * D, u = io(evU(t, m('monkey') + 1.1, .6)); put(bk, { r: 70 * u, y: 600 + 30 * u }); }, 0, D, lin);
+    lab(p, 'monkey', 640, 760, m('monkey'), { size: 30, fill: MONK, weight: 600 });
+    // the watcher outside the room steps apart
+    const wt = a17Seated(p, { x: 1360, y: 700, s: 1, o: 0 }); show(wt, m('seen'), .4);
+    lab(p, 'seen', 1360, 430, m('seen'), { size: 28, fill: EV.ink });
+    prog(q => { const t = q * D; put(wt, { x: 1360 + 80 * io(evU(t, m('apart'), 1)) }); }, 0, D, lin);
+    const gap = path(p, 'M1180 460V720', { stroke: EV.goldHi, 'stroke-width': 3, 'stroke-dasharray': '10 10' }, { d: 0 }); draw(gap, m('apart'), .6);
+    lab(p, 'apart', 1400, 760, m('apart'), { size: 26, fill: EV.goldHi });
+    lab(p, 'calms', 1400, 805, m('calms'), { size: 26, fill: EV.goldHi, weight: 600, maxW: 380 });
+    // inline violet note: naming a feeling quiets the amygdala
+    const nt = G(p, { o: 0 }); mk('rect', { x: 200, y: 780, width: 920, height: 92, rx: 14, fill: '#151225', stroke: SCI, 'stroke-width': 2 }, nt); show(nt, m('naming'), .4);
+    const hh = a17Head(p, { x: 270, y: 826, s: .45, o: 0 }); show(hh, m('naming'), .4);
+    prog(q => { const t = q * D; put(hh._dot, { o: 1 - .75 * evU(t, m('amygdala'), .8) }); }, 0, D, lin);
+    lab(p, 'naming', 680, 815, m('naming'), { size: 24, fill: SCI, weight: 600, maxW: 760 });
+    lab(p, 'amygdala', 680, 853, m('amygdala'), { size: 22, fill: EV.ink, maxW: 760 });
+    // second panel: debug mode at the mirror
+    const q = panel(m('debug'));
+    put(q, { o: 0 }); show(q, m('debug'), .4);
+    lab(q, 'debug', 800, 100, m('debug'), { size: 44, font: SERIF, weight: 600, fill: EV.gold });
+    a17Ground(q, 780);
+    a17Mirror(q, { x: 470, y: 330, s: 1 });
+    const fz = a17Faisal(q, { x: 300, y: 780, s: .62 });
+    evBreathe(fz, D);
+    fz.torso.appendChild(fz.armR);   // the brushing arm in front of the face
+    tw(fz.armR, { r: 60 }, m('brushing'), .4);
+    const brush = G(fz.armR._lo, { x: 0, y: 78, o: 0 }); path(brush, 'M0 0L0 40', { stroke: '#e8e0cc', 'stroke-width': 7 }); path(brush, 'M0 40L8 50', { stroke: TIME, 'stroke-width': 9 });
+    show(brush, m('brushing'), .3);
+    prog(qq => { const t = qq * D, on = t < m('rehearsing') || t > m('back'), u = evU(t, m('brushing'), .4); put(fz.armR._lo, { r: 137 * io(u) + (on && u === 1 ? 8 * Math.sin(t * 14) : 0) }); }, 0, D, lin);
+    lab(q, 'brushing', 300, 830, m('brushing'), { size: 24, fill: EV.ink });
+    evMood(fz, 'tense', m('rehearsing'));
+    // the terminal: the brain's instructions going by
+    const term = G(q, { x: 820, y: 200 });
+    mk('rect', { x: 0, y: 0, width: 700, height: 300, rx: 12, fill: '#0a0f12', stroke: EV.goldLo, 'stroke-width': 2 }, term);
+    [MONK, EV.gold, MONEY].forEach((c, i) => mk('circle', { cx: 26 + i * 22, cy: 22, r: 7, fill: c }, term));
+    const ln = (y, s, c, t) => { const e = T(term, s, { x: 26, y, size: 26, fill: c, font: '"Courier New",monospace', o: 0 }); show(e, t, .3); return e; };
+    ln(80, '> brush_teeth()', EV.ink, m('brushing'));
+    const l2 = ln(125, '> rehearse_row(manager)', STATUS, m('rehearsing'));
+    const l3 = ln(170, '> rehearse_row(manager)  …', STATUS, m('rehearsing') + .3);
+    const pz = ln(220, '‖ pause', EV.goldHi, m('catch'));
+    void pz;
+    tw(l2, { o: .35 }, m('catch'), .3); tw(l3, { o: .35 }, m('catch'), .3);
+    ln(265, '> brush_teeth()', MONEY, m('back'));
+    lab(q, 'rehearsing', 1170, 545, m('rehearsing'), { size: 24, fill: STATUS, maxW: 680 });
+    lab(q, 'catch', 1170, 585, m('catch'), { size: 24, fill: EV.goldHi });
+    const nb = evBubble(q, L('need'), { x: 600, y: 600, w: 440, size: 28, edge: EV.gold, fill: EV.goldHi, tail: 'left' });
+    tw(nb, { o: 1, s: 1 }, m('need'), .35, back);
+    evMood(fz, 'calm', m('back'));
+    lab(q, 'back', 1170, 625, m('back'), { size: 24, fill: MONEY, weight: 600 });
+    // third panel: the layers
+    const T3 = Math.min(m('base'), m('awareness'));
+    const r = panel(T3);
+    put(r, { o: 0 }); show(r, T3, .4);
+    const slab = G(r, { x: 800, y: 640, o: 0 }); mk('rect', { x: -420, y: -60, width: 840, height: 120, rx: 14, fill: '#1a1a12', stroke: CALM, 'stroke-width': 3 }, slab); show(slab, T3, .4);
+    evGlow(slab, 0, 0, 260, 'Gold', .4);
+    lab(r, 'base', 800, 620, m('base'), { size: 30, fill: EV.dim });
+    lab(r, 'awareness', 800, 665, m('awareness'), { size: 34, fill: CALM, weight: 600 });
+    [-280, 0, 280].forEach((dx, i) => { const a = G(r, { x: 800 + dx, y: 470, o: 0 }); mk('rect', { x: -110, y: -50, width: 220, height: 100, rx: 12, fill: '#141b1f', stroke: EV.dim, 'stroke-width': 2 }, a);
+      path(a, 'M-70 -10H70M-70 16H40', { stroke: EV.dim, 'stroke-width': 5 }); show(a, T3 + .1 * i, .4); });
+    const mk2 = a17Monkey(r, { x: 1300, y: 300, s: .7, o: 0 });
+    prog(qq => { const t = qq * D, u = evU(t, m('needit'), .5); put(mk2, { o: u * (1 - .3 * evU(t, m('focus') + 1.2, .6)), r: 20 * Math.sin(t * 3) * u }); }, 0, D, lin);
+    lab(r, 'needit', 1060, 250, m('needit'), { size: 28, fill: MONK, maxW: 620 });
+    const fo = evGlow(r, 1300, 400, 170, 'Gold', 0); r.insertBefore(fo, mk2); tw(fo, { o: .9 }, m('focus'), .6);
+    lab(r, 'focus', 1300, 210, m('focus'), { size: 30, fill: EV.goldHi, weight: 600 });
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    a17Ground(p, 430);
+    const hb = a17Woman(p, { x: 330, y: 430, s: .5 }, '#6b4a7a', '#4f3660', '#2a2f3a');
+    evBreathe(hb, D); evMood(hb, 'tense', .4);
+    a17Mirror(p, { x: 520, y: 220, s: .8 });
+    // her rehearsed argument, line after line, in a thought cloud
+    const th = evThought(p, { x: 1000, y: 380, w: 520, h: 230, o: 1, edge: STATUS });
+    [0, 1, 2, 3].forEach(i => path(th._in, `M-170 ${-60 + i * 40}H${100 - (i % 2) * 60}`, { stroke: STATUS, 'stroke-width': 6, opacity: .7 }));
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-debug', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 2, L('q3y'), [L('q3na'), L('q3nb'), null]),
+  }], done) }],
+
+  ['forms', 'b_forms', (m, D) => {
+    const p = panel(0);
+    // the mind as a muscle: a head lifting a dumbbell
+    const hd = G(p, { x: 380, y: 420 });
+    mk('circle', { cx: 0, cy: 0, r: 120, fill: '#11181c', stroke: EV.gold, 'stroke-width': 3 }, hd);
+    const db = G(hd, { x: 0, y: 10 }); path(db, 'M-50 0H50', { stroke: EV.dim, 'stroke-width': 9 }); [-1, 1].forEach(k => mk('rect', { x: k > 0 ? 40 : -60, y: -26, width: 20, height: 52, rx: 4, fill: '#3a3f3a', stroke: EV.gold, 'stroke-width': 2 }, db));
+    prog(q => { const t = q * D; put(db, { y: 10 - 40 * Math.max(0, Math.sin((t - m('muscle')) * 2.4)) * evU(t, m('muscle'), .3) }); }, 0, D, lin);
+    lab(p, 'muscle', 380, 600, m('muscle'), { size: 34, font: SERIF, weight: 600, fill: EV.gold });
+    const sc = path(p, 'M760 300q30 -40 60 0t60 0t60 0t60 0', { stroke: STATUS, 'stroke-width': 4 }, { d: 0 }); draw(sc, m('haphazard'), .8);
+    lab(p, 'haphazard', 850, 360, m('haphazard'), { size: 28, fill: STATUS });
+    const c1 = a17Pill(p, 'curious', 900, 470, { color: TIME, size: 30, ink: TIME, minW: 220 }); show(c1, m('curious'), .4);
+    const c2 = a17Pill(p, 'grieving', 900, 560, { color: FEAR, size: 30, ink: EV.ink, minW: 260, maxPill: 600 }); show(c2, m('grieving'), .4);
+    const dial = G(p, { x: 1300, y: 500 });
+    mk('circle', { cx: 0, cy: 0, r: 110, fill: '#10171b', stroke: EV.gold, 'stroke-width': 3 }, dial);
+    const nd = G(dial); path(nd, 'M0 0V-90', { stroke: EV.goldHi, 'stroke-width': 6 }); mk('circle', { cx: 0, cy: 0, r: 10, fill: EV.gold }, dial);
+    prog(q => { const t = q * D; put(nd, { r: -60 + 120 * io(evU(t, m('curious'), .6)) - 200 * io(evU(t, m('grieving'), .6)) + 140 * io(evU(t, m('grieving'), .6)) }); }, 0, D, lin);
+    // second panel: five forms
+    const q = panel(m('forms'));
+    put(q, { o: 0 }); show(q, m('forms'), .4);
+    lab(q, 'forms', 800, 120, m('forms'), { size: 46, font: SERIF, weight: 600, fill: EV.gold });
+    const icon = (k, g) => {
+      if (k === 'hiking') { path(g, 'M-80 50L-30 -20L0 10L40 -50L90 50Z', { fill: '#1d2a24', stroke: MONEY, 'stroke-width': 3 }); path(g, 'M-60 50Q-20 20 10 30T70 0', { stroke: EV.goldHi, 'stroke-width': 3, 'stroke-dasharray': '6 6' }); }
+      if (k === 'prayer') { mk('rect', { x: -70, y: -30, width: 140, height: 80, rx: 6, fill: '#3a2a3a', stroke: EV.gold, 'stroke-width': 2 }, g); path(g, 'M-40 -30Q0 -70 40 -30', { stroke: EV.gold, 'stroke-width': 3 }); }
+      if (k === 'showerF') { path(g, 'M-40 -40Q0 -76 40 -40Z', { fill: '#8f9ea4' }); path(g, 'M-24 -30L-34 40M0 -30V44M24 -30L34 40', { stroke: COLD, 'stroke-width': 4, 'stroke-dasharray': '10 8' }); }
+      if (k === 'journalF') a17Notebook(g, { s: .6 });
+      if (k === 'sitting') a17Seated(g, { y: 50, s: .75 });
+    };
+    const cards = [['hiking', 'hikingD', 'hiking'], ['prayer', 'prayerD', 'prayer'], ['showerF', 'showerD', 'shower'], ['journalF', 'journalD', 'journal'], ['sitting', 'sittingD', 'sitting']];
+    cards.forEach(([k, kd, mk_], i) => {
+      const x = 240 + i * 280;
+      const g = G(q, { x, y: 400, o: 0 });
+      mk('rect', { x: -125, y: -150, width: 250, height: 300, rx: 16, fill: '#10171b', stroke: EV.goldLo, 'stroke-width': 2 }, g);
+      const ig = G(g, { y: -50 }); icon(k, ig);
+      put(g, { y: 420 }); tw(g, { o: 1, y: 400 }, m(mk_), .45, out);
+      lab(q, k, x, 490, m(mk_), { size: 26, fill: EV.goldHi, weight: 600, maxW: 230 });
+      lab(q, kd, x, 530, m(mk_ + 'D'), { size: 22, fill: EV.ink, maxW: 230 });
+    });
+    const jn = G(q, { o: 0 }); mk('rect', { x: 950, y: 575, width: 260, height: 86, rx: 12, fill: '#151225', stroke: SCI, 'stroke-width': 2 }, jn); show(jn, m('studies'), .4);
+    lab(q, 'studiesJ', 1080, 608, m('studies'), { size: 22, fill: SCI, weight: 600, maxW: 240 });
+    lab(q, 'little', 1080, 643, m('little'), { size: 20, fill: EV.ink, maxW: 240 });
+    const bd = G(q, { x: 240, y: 730, o: 0 });
+    mk('rect', { x: -90, y: -10, width: 180, height: 40, rx: 8, fill: '#2b3a4a' }, bd); mk('rect', { x: -90, y: -34, width: 50, height: 28, rx: 8, fill: '#e8e0cc' }, bd);
+    path(bd, 'M-90 30V50M90 30V50', { stroke: '#2b3a4a', 'stroke-width': 8 });
+    const mn = G(bd, { x: 70, y: -80 }); mk('circle', { cx: 0, cy: 0, r: 22, fill: '#e8dcb5' }, mn); mk('circle', { cx: 10, cy: -6, r: 19, fill: EV.bg }, mn);
+    show(bd, m('bed'), .4);
+    lab(q, 'bed', 380, 740, m('bed'), { size: 26, fill: EV.ink, anchor: 'start', maxW: 1100 });
+    lab(q, 'own', 800, 840, m('own'), { size: 34, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1300 });
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    evText(p, L('b_wrap'), { x: 800, y: 130, size: 52, font: SERIF, weight: 600, fill: EV.gold });
+    const cols = [BREATH, COLD, EV.goldHi, MONK];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -30, y: 260 + i * 150, o: 0 });
+      mk('circle', { cx: 200, cy: -10, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: 200, y: 1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k === 'w4' ? 'w4w' : k), { x: 260, y: 0, size: 36, maxW: 1150, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Nisha has decided to turn down a job her father arranged for her in Kozhikode. She has to tell him, and she has put off the call for a week, dreading it every day. What would the cold-shower lesson say?',
+  q1a: 'Wait until she feels completely ready, however long it takes.',
+  q1b: 'Step straight in: call him today. Most of the pain is in the dread, not in the call.',
+  q1c: 'Send a long message instead, so she never has to feel it.',
+  q1y: 'Right. The tiptoeing is where most of the suffering lives. The call will be hard, but brief.',
+  q1na: 'Waiting is the tiptoeing: a week of dread already, and it grows. The lesson is to walk straight in.',
+  q1nc: 'Dodging the feeling is still avoidance. Step in, feel it, and it passes.',
+  q2p: 'On his walk at Al Mamzar, Faisal sees a man taking twenty selfies and thinks, “What a show-off.” What does choiceless awareness ask of him?',
+  q2a: 'Notice the judgment, look for the fear under it, and let it pass, without judging himself either.',
+  q2b: 'Scold himself for judging, until the thought goes away.',
+  q2c: 'Stop walking in public places, so he won’t judge anyone.',
+  q2y: 'Right. Notice, don’t fight. Seen clearly, the judgment and the fear under it fade.',
+  q2nb: 'Scolding is just another judgment. The practice is to notice and accept, not to fight.',
+  q2nc: 'Hiding doesn’t train the mind. The practice happens out in the world, among people.',
+  q3p: 'Brushing her teeth in Doha, Hiba notices she is rehearsing tomorrow’s argument with her landlord, line by line. What would Naval’s debug mode suggest?',
+  q3a: 'Keep rehearsing: prepare an answer for everything he might say.',
+  q3b: 'Get angry at herself for being so distracted.',
+  q3c: 'Notice she’s running into the future, ask “Do I need to solve this now?”, and come back to brushing.',
+  q3y: 'Right. Catch it, ask, come back. She can give the landlord her full focus tomorrow.',
+  q3na: 'That is the monkey running the show. It doesn’t need solving now; she can focus on it when the time comes.',
+  q3nb: 'Anger at herself is the monkey again. Just notice, ask, and come back.',
+  p1p: 'Naval compares meditation to intermittent fasting. What is the mind fasting from?',
+  p1a: 'Food', p1b: 'Distractions: pings, feeds and other voices', p1c: 'Sleep',
+  p1y: 'Right. Time alone, undistracted, lets a heavy mind get light.',
+  p1na: 'The fast is for the mind, not the stomach: it skips distractions.',
+  p1nc: 'Sleep isn’t the problem. The mind fasts from pings, feeds and voices.',
+  p2p: 'What does “choiceless awareness” mean?',
+  p2a: 'Noticing each moment without judging, deciding or fixing', p2b: 'Choosing to think only pleasant thoughts', p2c: 'Forcing the mind to go completely blank',
+  p2y: 'Right. You notice and accept, and judgments, with the fears under them, fade on their own.',
+  p2nb: 'Picking pleasant thoughts is still choosing. This practice drops the choosing.',
+  p2nc: 'Forcing is a fight. Choiceless awareness just notices.',
+  p3p: 'In Naval’s “inbox” picture, how do the old unresolved things get cleared?',
+  p3a: 'By digging into each one hard, every day',
+  p3b: 'By sitting still, not resisting, and watching them come up with an adult’s distance',
+  p3c: 'By staying busy, so they never come up',
+  p3y: 'Right. Watching, not fixing. And if something painful comes up and stays, a doctor or counsellor can help.',
+  p3na: 'Naval’s method takes no effort: you watch them rise and settle.',
+  p3nc: 'Busyness keeps the inbox full. Stillness lets things surface.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'In a trial, beginners who meditated 13 minutes a day had better mood and attention after 8 weeks.',
+  p4r2: 'Wim Hof-style fast breathing fills the blood with extra oxygen.',
+  p4r3: 'Meditation never has unpleasant side effects.',
+  p4r4: 'In a Dutch trial, people who ended showers with cold water took fewer sick days, but fell ill just as often.',
+  p4w1: 'True. Not after four weeks, but after eight, mood and attention improved and anxiety fell.',
+  p4w2: 'False. It blows off carbon dioxide, and during the breath-hold oxygen drops. Never practise it in water.',
+  p4w3: 'False. Across 83 studies, about 8 in 100 meditators had an unwanted effect, most often anxiety or low mood.',
+  p4w4: 'True. About 3,000 workers: fewer days off sick, the same number of illnesses.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'അച്ഛൻ കോഴിക്കോട്ട് ശരിയാക്കിയ ഒരു ജോലി വേണ്ടെന്ന് നിഷ തീരുമാനിച്ചു. അത് അച്ഛനോട് പറയണം; ഒരാഴ്ചയായി ആ ഫോൺ കോൾ അവൾ മാറ്റിവയ്ക്കുന്നു, ദിവസവും പേടിച്ച്. തണുത്ത കുളിയുടെ പാഠം എന്ത് പറയും?',
+  q1a: 'എത്ര നാൾ എടുത്താലും, പൂർണമായി തയ്യാറാണെന്ന് തോന്നുംവരെ കാത്തിരിക്കുക.',
+  q1b: 'നേരെ കയറുക: ഇന്നുതന്നെ വിളിക്കുക. വേദനയുടെ ഏറിയ പങ്കും പേടിയിലാണ്, കോളിലല്ല.',
+  q1c: 'ഒന്നും അനുഭവിക്കേണ്ടിവരാതിരിക്കാൻ, പകരം ഒരു നീണ്ട മെസേജ് അയയ്ക്കുക.',
+  q1y: 'ശരി. ദുരിതത്തിന്റെ ഏറിയ പങ്കും ആ മടിച്ചുനിൽപ്പിലാണ്. കോൾ കഠിനമായിരിക്കും, പക്ഷേ ചുരുങ്ങിയ നേരം മാത്രം.',
+  q1na: 'കാത്തിരിപ്പാണ് ആ മടിച്ചുനിൽപ്പ്: ഇതിനകം ഒരാഴ്ചത്തെ പേടി, അത് വളരുകയും ചെയ്യും. നേരെ കയറുക എന്നതാണ് പാഠം.',
+  q1nc: 'വികാരത്തിൽ നിന്ന് ഒഴിഞ്ഞുമാറലും ഒഴിവാക്കൽ തന്നെ. നേരെ കയറൂ, അനുഭവിക്കൂ; അത് കടന്നുപോകും.',
+  q2p: 'അൽ മംസറിലെ നടത്തത്തിനിടെ ഒരാൾ ഇരുപത് സെൽഫി എടുക്കുന്നത് ഫൈസൽ കാണുന്നു; “എന്തൊരു ഷോ” എന്ന് ചിന്തിക്കുന്നു. തിരഞ്ഞെടുപ്പില്ലാത്ത ശ്രദ്ധ അവനോട് എന്ത് ആവശ്യപ്പെടുന്നു?',
+  q2a: 'ആ വിധി ശ്രദ്ധിക്കുക, അതിനടിയിലെ ഭയം നോക്കുക, അത് കടന്നുപോകട്ടെ; സ്വയം വിധിക്കാതെയും.',
+  q2b: 'ചിന്ത പോകുംവരെ, വിധിച്ചതിന് സ്വയം ശകാരിക്കുക.',
+  q2c: 'ആരെയും വിധിക്കാതിരിക്കാൻ, ആളുള്ള സ്ഥലങ്ങളിൽ നടക്കുന്നത് നിർത്തുക.',
+  q2y: 'ശരി. ശ്രദ്ധിക്കൂ, പൊരുതരുത്. വ്യക്തമായി കണ്ടാൽ ആ വിധിയും അതിനടിയിലെ ഭയവും മങ്ങും.',
+  q2nb: 'ശകാരവും മറ്റൊരു വിധി തന്നെ. ശ്രദ്ധിച്ച് സ്വീകരിക്കലാണ് പരിശീലനം, പൊരുതലല്ല.',
+  q2nc: 'ഒളിച്ചിരുന്നാൽ മനസ്സ് പരിശീലിക്കില്ല. ഈ പരിശീലനം നടക്കുന്നത് ആളുകൾക്കിടയിൽ, ലോകത്തിലാണ്.',
+  q3p: 'ദോഹയിൽ പല്ല് തേക്കുന്നതിനിടെ, നാളെ വീട്ടുടമയുമായുള്ള തർക്കം വരിവരിയായി താൻ റിഹേഴ്സ് ചെയ്യുകയാണെന്ന് ഹിബ ശ്രദ്ധിക്കുന്നു. നവലിന്റെ ഡീബഗ് മോഡ് എന്ത് നിർദേശിക്കും?',
+  q3a: 'റിഹേഴ്സൽ തുടരുക: അയാൾ പറഞ്ഞേക്കാവുന്ന എല്ലാറ്റിനും ഉത്തരം ഒരുക്കുക.',
+  q3b: 'ഇത്ര ശ്രദ്ധ ചിതറിയതിന് സ്വയം ദേഷ്യപ്പെടുക.',
+  q3c: 'ഭാവിയിലേക്ക് ഓടുകയാണെന്ന് ശ്രദ്ധിക്കുക, “ഇത് ഇപ്പോൾ പരിഹരിക്കണോ?” എന്ന് ചോദിക്കുക, പല്ല് തേക്കലിലേക്ക് തിരിച്ചുവരിക.',
+  q3y: 'ശരി. പിടികൂടൂ, ചോദിക്കൂ, തിരിച്ചുവരൂ. നാളെ വീട്ടുടമയ്ക്ക് അവൾക്ക് മുഴുവൻ ശ്രദ്ധയും കൊടുക്കാം.',
+  q3na: 'അത് കുരങ്ങൻ ഭരിക്കുന്നതാണ്. ഇപ്പോൾ പരിഹരിക്കേണ്ടതില്ല; സമയം വരുമ്പോൾ അതിൽ ശ്രദ്ധിക്കാം.',
+  q3nb: 'സ്വയം ദേഷ്യപ്പെടുന്നതും കുരങ്ങൻ തന്നെ. വെറുതെ ശ്രദ്ധിക്കൂ, ചോദിക്കൂ, തിരിച്ചുവരൂ.',
+  p1p: 'നവൽ ധ്യാനത്തെ ഇടവിട്ട ഉപവാസത്തോട് ഉപമിക്കുന്നു. മനസ്സ് എന്തിൽ നിന്നാണ് ഉപവസിക്കുന്നത്?',
+  p1a: 'ഭക്ഷണം', p1b: 'ശ്രദ്ധ ചിതറിക്കുന്നവ: നോട്ടിഫിക്കേഷൻ, ഫീഡ്, മറ്റുള്ളവരുടെ ബഹളം', p1c: 'ഉറക്കം',
+  p1y: 'ശരി. ശ്രദ്ധ ചിതറാതെ ഒറ്റയ്ക്കുള്ള സമയം ഭാരമുള്ള മനസ്സിനെ ലഘുവാക്കും.',
+  p1na: 'ഈ ഉപവാസം വയറിനല്ല, മനസ്സിനാണ്: ശ്രദ്ധ ചിതറിക്കുന്നവ ഒഴിവാക്കൽ.',
+  p1nc: 'ഉറക്കമല്ല പ്രശ്നം. നോട്ടിഫിക്കേഷനും ഫീഡും ബഹളവുമാണ് മനസ്സ് ഒഴിവാക്കുന്നത്.',
+  p2p: '“തിരഞ്ഞെടുപ്പില്ലാത്ത ശ്രദ്ധ” എന്നതിന്റെ അർഥം എന്ത്?',
+  p2a: 'ഓരോ നിമിഷവും വിധിക്കാതെ, തീരുമാനിക്കാതെ, ശരിയാക്കാതെ ശ്രദ്ധിക്കൽ', p2b: 'നല്ല ചിന്തകൾ മാത്രം ചിന്തിക്കാൻ തിരഞ്ഞെടുക്കൽ', p2c: 'മനസ്സിനെ നിർബന്ധിച്ച് പൂർണമായി ശൂന്യമാക്കൽ',
+  p2y: 'ശരി. ശ്രദ്ധിച്ച് സ്വീകരിക്കുമ്പോൾ, വിധികളും അവയ്ക്കടിയിലെ ഭയങ്ങളും തനിയെ മങ്ങും.',
+  p2nb: 'നല്ല ചിന്തകൾ തിരഞ്ഞെടുക്കലും ഒരു തിരഞ്ഞെടുപ്പാണ്. ഈ പരിശീലനം തിരഞ്ഞെടുപ്പ് തന്നെ ഉപേക്ഷിക്കുന്നു.',
+  p2nc: 'നിർബന്ധിക്കൽ ഒരു പൊരുതലാണ്. ഈ ശ്രദ്ധ വെറുതെ നോക്കുന്നു.',
+  p3p: 'നവലിന്റെ “ഇൻബോക്സ്” ചിത്രത്തിൽ, പഴയ തീരാത്ത കാര്യങ്ങൾ എങ്ങനെയാണ് ഒഴിയുന്നത്?',
+  p3a: 'ഓരോന്നിലും ദിവസവും ശക്തിയായി കുഴിച്ചുനോക്കി',
+  p3b: 'അനങ്ങാതെ ഇരുന്ന്, എതിർക്കാതെ, ഒരു മുതിർന്നയാളുടെ അകലത്തോടെ അവ പൊങ്ങിവരുന്നത് നോക്കി',
+  p3c: 'അവ ഒരിക്കലും പൊങ്ങിവരാതിരിക്കാൻ തിരക്കിലായി',
+  p3y: 'ശരി. നോക്കൽ, ശരിയാക്കലല്ല. വേദനിപ്പിക്കുന്നത് എന്തെങ്കിലും വന്ന് മാറാതെ നിന്നാൽ, ഡോക്ടർക്കോ കൗൺസലർക്കോ സഹായിക്കാനാകും.',
+  p3na: 'നവലിന്റെ രീതിക്ക് ഒരു ശ്രമവും വേണ്ട: അവ പൊങ്ങിവന്ന് അടങ്ങുന്നത് നോക്കിയാൽ മതി.',
+  p3nc: 'തിരക്ക് ഇൻബോക്സ് നിറച്ചുതന്നെ വയ്ക്കും. നിശ്ചലതയിലാണ് അവ പൊങ്ങിവരുന്നത്.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'ഒരു പരീക്ഷണത്തിൽ, ദിവസവും 13 മിനിറ്റ് ധ്യാനിച്ച തുടക്കക്കാർക്ക് 8 ആഴ്ച കഴിഞ്ഞപ്പോൾ മൂഡും ശ്രദ്ധയും മെച്ചപ്പെട്ടു.',
+  p4r2: 'വിം ഹോഫ് രീതിയിലുള്ള വേഗത്തിലുള്ള ശ്വസനം രക്തത്തിൽ കൂടുതൽ ഓക്സിജൻ നിറയ്ക്കും.',
+  p4r3: 'ധ്യാനത്തിന് ഒരിക്കലും അസുഖകരമായ പാർശ്വഫലങ്ങൾ ഉണ്ടാകില്ല.',
+  p4r4: 'ഒരു ഡച്ച് പരീക്ഷണത്തിൽ, കുളി തണുത്ത വെള്ളത്തിൽ അവസാനിപ്പിച്ചവർ അസുഖ അവധി കുറച്ചേ എടുത്തുള്ളൂ; പക്ഷേ അസുഖം വന്നത് ഒരുപോലെ.',
+  p4w1: 'ശരി. നാല് ആഴ്ചയിൽ മാറ്റം കണ്ടില്ല; എട്ട് ആഴ്ച കഴിഞ്ഞപ്പോൾ മൂഡും ശ്രദ്ധയും മെച്ചപ്പെട്ടു, ഉത്കണ്ഠ കുറഞ്ഞു.',
+  p4w2: 'തെറ്റ്. അത് കാർബൺ ഡൈ ഓക്സൈഡിനെ പുറന്തള്ളുന്നു; ശ്വാസം പിടിച്ചുനിർത്തുമ്പോൾ ഓക്സിജൻ കുറയുന്നു. ഒരിക്കലും വെള്ളത്തിൽ ചെയ്യരുത്.',
+  p4w3: 'തെറ്റ്. 83 പഠനങ്ങളിൽ, ധ്യാനിക്കുന്നവരിൽ നൂറിൽ ഏകദേശം 8 പേർക്ക് വേണ്ടാത്ത ഒരു ഫലമുണ്ടായി; മിക്കപ്പോഴും ഉത്കണ്ഠയോ മനസ്സിടിവോ.',
+  p4w4: 'ശരി. ഏകദേശം 3,000 ജോലിക്കാർ: അസുഖ അവധി കുറവ്, അസുഖങ്ങളുടെ എണ്ണം ഒരുപോലെ.',
+});
+const PRACTICE = [
+  { id: 'p-fast', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 1, L('p1y'), [L('p1na'), null, L('p1nc')]) },
+  { id: 'p-choiceless', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')]], 0, L('p2y'), [null, L('p2nb'), L('p2nc')]) },
+  { id: 'p-inbox', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 1, L('p3y'), [L('p3na'), null, L('p3nc')]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['f'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['t'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('almanack:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>

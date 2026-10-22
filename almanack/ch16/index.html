@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="Be yourself, care for yourself · The Almanack of Naval Ravikant, Chapter 16">
+<meta property="og:description" content="A 9-minute animated lesson in English and Malayalam: why nobody beats you at being you, health as the first priority, sugar and fat, processed food, daily exercise, and what the science says about cold showers, keto, fasting and weekend warriors.">
+<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/almanack/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/almanack/ch16/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080c0f">
+<title>Be yourself, care for yourself · The Almanack of Naval Ravikant</title>
+<meta name="description" content="An animated, narrated lesson on The Almanack of Naval Ravikant: listening to your own voice instead of copying others; why no two people are alike; health first; how modern life differs from how we evolved; sugar, fat and processed food; daily exercise and walking meetings; hard choices now, an easier life later. Science checks on cold showers, the hygiene hypothesis, barefoot running, fat and carbohydrate reward, keto, ultra-processed food, fasting, weekend warriors and walking. English and Malayalam.">
+<script>
+// Language before the engine loads: ?lang= wins, then the reader's last choice, then English.
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('almanack:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('almanack:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+  if (l === 'ml') document.title = 'നിങ്ങളാകൂ, നിങ്ങളെ പരിപാലിക്കൂ · The Almanack of Naval Ravikant';
+})();
+</script>
+<link rel="stylesheet" href="../lib/engine.css">
+<link rel="expect" href="#bar" blocking="render">
+</head>
+<body>
+<script src="../lib/engine.js"></script>
+<script>document.write('<script src="audio/' + document.documentElement.lang + '/timings.js"><\/script>');</script>
+<script src="../lib/ymu.js"></script>
+<script>
+'use strict';
+
+/* ---------- words on screen (narration lives in content/almanack/ch16/narration.*.json) ---------- */
+Object.assign(TXT.en, {
+  title: 'Be yourself, care for yourself', kicker: 'PART 2 · HAPPINESS · CHAPTER 16', unit: 'Unit 4 · Saving yourself',
+  sub: 'Why copying others never works, and how to look after the one body you’ve got',
+  credit: 'A study companion to The Almanack of Naval Ravikant, by Eric Jorgenson',
+  b_intro: 'Title', b_yourself: 'Your own voice', b_unique: 'Nobody beats you at being you', b_q1: 'Quick check',
+  b_priority: 'Health first', b_mismatch: 'How we evolved, how we live', b_check: 'Science check', b_diet: 'Sugar and fat',
+  b_rules: 'Short food rules', b_check2: 'Science check', b_q2: 'Quick check', b_workout: 'A daily workout', b_check3: 'Science check',
+  b_q3: 'Quick check', b_hard: 'Hard choices, easier life', b_wrap: 'Summary', b_prac: 'Chapter practice', b_fin: 'Finished',
+  // yourself
+  hiba: 'Hiba · Sharjah', must: 'musts', m1: 'study medicine · like her cousin', m2: 'post every day · like the influencers',
+  m3: 'do an MBA · her uncle says so', none: 'you don’t have to', want: 'do what you really want', others: 'other people’s ways',
+  voice: 'a quiet voice inside', design: 'design', be: 'be yourself',
+  // unique
+  naval: 'Naval', mentor: 'greatest mentor', never: 'never met', opposite: 'the opposite', fierce: 'be yourself, fiercely',
+  beat: 'nobody beats you at being you', mixes: '≈ 8 million mixes · from each parent', children: '≈ 70 trillion different children',
+  life: '+ a lifetime of experience', twins: 'identical twins → different people', listen: 'listen and learn ✓', copy: 'copy ✗',
+  people: 'people · work · art', needs: 'needs you most', original: 'something original', obsessed: 'a little obsessed',
+  // priority
+  care: 'caring for yourself', health: 'his own health', body: '1 · the body', mind: '2 · the mind', spirit: '3 · the spirit',
+  family: '4 · his family’s health', wellbeing: '5 · their well-being', world: '6 · everything else', kareem: 'Kareem · Thrissur',
+  scare: 'chest-pain scare', sharp: 'sharper than ever', contrast: 'a health problem turns up the contrast',
+  // mismatch
+  evolved: 'how we evolved', modern: 'modern life',
+  foodL: 'wild food', food: 'foods our ancestors never ate', play: 'play', treadmill: 'treadmills',
+  senses: 'all five senses', screens: 'screens: the eyes only', shoesL: 'bare feet', shoes: 'shoes all day',
+  warmL: 'a little cold', warm: 'never feeling cold', cleanL: 'microbes', clean: 'homes so clean',
+  aloneL: 'a tribe', alone: 'living alone',
+  tharavadu: 'tharavadu · Malappuram', aunts: 'aunts, cousins: in your business', lonely: 'hard to feel lonely',
+  gloom: 'everyday gloom · not clinical depression', privacy: 'the price: privacy',
+  scarce: 'evolved for scarcity · surrounded by plenty', genes: 'genes', yes: 'yes to sugar', yes2: 'yes to one more scroll',
+  // check
+  sci: 'Science check', cold: 'cold showers', adults: '≈ 3,000 adults · a month', sick: 'sick-leave days −29%', ill: 'days ill: no change',
+  hygiene: 'clean homes → allergies?', amish: 'Amish farm children', asthma: 'asthma', hutt: 'Hutterite · machine farms',
+  microbes: 'farm microbes, not dirt', wash: 'keep washing your hands', shoes2: 'shoes → foot & back trouble?',
+  speculative: 'going barefoot: “speculative”', verdict: 'a grain of truth, oversold', heart: 'cold water can strain the heart: ask a doctor first',
+  // diet
+  politics: 'nutrition ≈ politics', paleo: 'a paleo-style plate', veg: 'vegetables', meat: 'a little meat', berries: 'berries',
+  vegsci: 'vegetables: most scientists agree', fat: 'fat → full', sugar: 'sugar → hungry', together: 'together',
+  binge: 'binge', payasam: 'payasam', kunafa: 'kunafa', rare: 'in nature: rare', coconut: 'coconut: sugar + fat',
+  mango: 'mango: almost fat-free',
+  // rules
+  rules: 'short rules', quality: 'what you eat > how much', qq: 'quality → quantity', subtract: 'before adding a pill, take something away',
+  processed: 'the more processed, the less you eat', fasting: 'fasting > small portions', bodyB: 'body overrules brain',
+  // check2
+  combo: 'sugar + fat', adults2: '≈ 200 adults paid more for the mix', supported: 'supported', fills: 'fat fills you up?',
+  keto: 'keto', calories: '+700 calories a day', lowfat: 'low-fat plant diet', not: 'not supported', processed2: 'processed food',
+  calories2: '+500 calories a day', fasting2: 'fasting easier?', lost: 'lost no more weight', quit: 'more people quit',
+  verdict2: 'cut processed food & sugar-fat combos', magic: 'keto, fasting: not magic',
+  doctor: 'medicine, pregnancy, diabetes? talk to your doctor first',
+  // workout
+  morning: 'a morning workout, every day', notime: '“I don’t have time.”', priority: '“It isn’t my priority.”',
+  faisal: 'Faisal · Dubai, before his shift', skips: 'skips rope', wait: 'the world can wait 30 minutes',
+  hard: 'hard workout', easy: '→ easy day', matters: 'the kind matters less', yoga: 'yoga', football: 'football', weights: 'weights',
+  enjoy: 'the one you enjoy, daily', walking: 'walking meetings', sun: 'sunlight', shorter: 'shorter talks', slides: 'no slides',
+  // check3
+  every: 'every day?', adults3: '63,000 adults · Britain', inactive: 'inactive', weekend: 'weekend warriors · 1–2 sessions a week',
+  lower: '≈ 30% lower death rate', regular: 'regular exercisers', daily: 'daily → the habit', week: 'the body counts the week',
+  walk: 'walking', people3: '176 people · 4 experiments', sitting: 'sitting', walkingB: 'walking', ideas: 'more creative ideas',
+  worse: 'one-answer problems: slightly worse', verdict3: 'move most days; any amount beats none',
+  brain: 'walk to brainstorm, sit to solve', doctor3: 'new to exercise? check with a doctor',
+  // hard
+  trainer: 'his trainer’s saying', today: 'today', later: 'later', howHard: 'how hard',
+  easyR: 'easy road today → hard life later', hardR: 'hard road today → easier life later', well: 'years from now: well',
+  save: 'saving for a rainy day', values: 'your values', relations: 'relationships', gain: 'a small sacrifice now → a long, easy stretch later',
+  // wrap
+  w1: 'Nobody beats you at being you. Learn from others, but don’t copy; find the work that needs you.',
+  w2: 'Health comes first: body, mind and spirit, then family, then the world.',
+  w3: 'Cut processed food and sugar-fat combos. Keto, fasting and cold water aren’t magic; ask a doctor first.',
+  w4: 'Move most days, in a way you enjoy. Hard choices now, an easier life later.',
+  practice: 'Chapter practice',
+});
+Object.assign(TXT.ml, {
+  title: 'നിങ്ങളാകൂ, നിങ്ങളെ പരിപാലിക്കൂ', kicker: 'ഭാഗം 2 · സന്തോഷം · അധ്യായം 16', unit: 'യൂണിറ്റ് 4 · സ്വയം രക്ഷിക്കൽ',
+  sub: 'മറ്റുള്ളവരെ പകർത്തിയാൽ ഫലിക്കാത്തതെന്ത്, ഒരേയൊരു ശരീരം എങ്ങനെ നോക്കാം',
+  credit: 'The Almanack of Naval Ravikant · എറിക് ജോർഗൻസൻ · പഠനസഹായി',
+  b_intro: 'തലക്കെട്ട്', b_yourself: 'സ്വന്തം ശബ്ദം', b_unique: 'നിങ്ങളാകുന്നതിൽ നിങ്ങളാണ് മുന്നിൽ', b_q1: 'ചെറിയ പരിശോധന',
+  b_priority: 'ആരോഗ്യം ആദ്യം', b_mismatch: 'പരിണമിച്ചതും ജീവിക്കുന്നതും', b_check: 'ശാസ്ത്രീയ പരിശോധന', b_diet: 'പഞ്ചസാരയും കൊഴുപ്പും',
+  b_rules: 'ഭക്ഷണത്തിന് ചെറിയ നിയമങ്ങൾ', b_check2: 'ശാസ്ത്രീയ പരിശോധന', b_q2: 'ചെറിയ പരിശോധന', b_workout: 'ദിവസവും വ്യായാമം', b_check3: 'ശാസ്ത്രീയ പരിശോധന',
+  b_q3: 'ചെറിയ പരിശോധന', b_hard: 'ഇന്ന് കഠിനം, നാളെ എളുപ്പം', b_wrap: 'ചുരുക്കം', b_prac: 'അധ്യായ പരിശീലനം', b_fin: 'പൂർത്തിയായി',
+  hiba: 'ഹിബ · ഷാർജ', must: 'ചെയ്യേണ്ടവ', m1: 'മെഡിസിൻ · കസിനെപ്പോലെ', m2: 'ദിവസവും പോസ്റ്റ് · ഇൻഫ്ലുവൻസർമാരെപ്പോലെ',
+  m3: 'എംബിഎ · മാമ പറഞ്ഞു', none: 'ഇതൊന്നും നിർബന്ധമല്ല', want: 'ശരിക്കും ആഗ്രഹിക്കുന്നത് ചെയ്യൂ', others: 'മറ്റുള്ളവരുടെ വഴികൾ',
+  voice: 'നേർത്ത ശബ്ദം · ഉള്ളിൽ', design: 'ഡിസൈൻ', be: 'നിങ്ങളായിത്തന്നെ',
+  naval: 'നവൽ', mentor: 'ഏറ്റവും വലിയ ഗുരു', never: 'ഒരിക്കലും കണ്ടിട്ടില്ല', opposite: 'നേരെ മറിച്ച്', fierce: 'നിങ്ങളായിരിക്കൂ, തീവ്രതയോടെ',
+  beat: 'നിങ്ങളാകുന്നതിൽ നിങ്ങളെ ആരും തോൽപ്പിക്കില്ല', mixes: '≈ 80 ലക്ഷം കൂട്ടുകൾ · ഓരോ രക്ഷിതാവിൽ നിന്നും', children: '≈ 70 ലക്ഷം കോടി വ്യത്യസ്ത മക്കൾ',
+  life: '+ ഒരു ആയുസ്സിന്റെ അനുഭവങ്ങൾ', twins: 'ഒരേപോലുള്ള ഇരട്ടകൾ → വ്യത്യസ്ത മനുഷ്യർ', listen: 'കേൾക്കൂ, പഠിക്കൂ ✓', copy: 'പകർത്തരുത് ✗',
+  people: 'ആളുകൾ · ജോലി · കല', needs: 'ഏറ്റവും ആവശ്യം നിങ്ങളെ', original: 'സ്വന്തമായ ഒന്ന്', obsessed: 'അൽപം ഭ്രാന്തമായ അഭിനിവേശം',
+  care: 'നിങ്ങളെ പരിപാലിക്കൽ', health: 'സ്വന്തം ആരോഗ്യം', body: '1 · ശരീരം', mind: '2 · മനസ്സ്', spirit: '3 · ആത്മാവ്',
+  family: '4 · കുടുംബത്തിന്റെ ആരോഗ്യം', wellbeing: '5 · അവരുടെ ക്ഷേമം', world: '6 · ലോകത്തിലെ മറ്റെല്ലാം', kareem: 'കരീം · തൃശൂർ',
+  scare: 'നെഞ്ചുവേദന, ഒരു പേടി', sharp: 'മുമ്പെങ്ങുമില്ലാത്ത തെളിച്ചം', contrast: 'ആരോഗ്യപ്രശ്നം → കോൺട്രാസ്റ്റ് കൂടുന്നു',
+  evolved: 'നാം പരിണമിച്ച രീതി', modern: 'ആധുനിക ജീവിതം',
+  foodL: 'കാട്ടുഭക്ഷണം', food: 'പൂർവികർ കഴിക്കാത്ത ഭക്ഷണം', play: 'കളി', treadmill: 'ട്രെഡ്മിൽ',
+  senses: 'അഞ്ച് ഇന്ദ്രിയങ്ങളും', screens: 'സ്ക്രീൻ: കണ്ണിന് മാത്രം', shoesL: 'നഗ്നപാദം', shoes: 'ദിവസം മുഴുവൻ ഷൂസ്',
+  warmL: 'അൽപം തണുപ്പ്', warm: 'ഒരിക്കലും തണുപ്പില്ല', cleanL: 'സൂക്ഷ്മജീവികൾ', clean: 'വൃത്തി കൂടിയ വീടുകൾ',
+  aloneL: 'ഗോത്രം', alone: 'ഒറ്റയ്ക്കുള്ള ജീവിതം',
+  tharavadu: 'മലപ്പുറം · തറവാട്', aunts: 'അമ്മായിമാർ, കസിൻമാർ: എപ്പോഴും ഇടപെടൽ', lonely: 'ഒറ്റപ്പെടൽ തോന്നാൻ പ്രയാസം',
+  gloom: 'ദൈനംദിന മടുപ്പ് · വിഷാദരോഗമല്ല', privacy: 'വില: സ്വകാര്യത',
+  scarce: 'ദൗർലഭ്യത്തിനായി പരിണമിച്ചു · ജീവിതം സമൃദ്ധിയിൽ', genes: 'ജീനുകൾ', yes: 'പഞ്ചസാരയ്ക്ക് യെസ്', yes2: 'ഒരു സ്ക്രോളിന് കൂടി യെസ്',
+  sci: 'ശാസ്ത്രീയ പരിശോധന', cold: 'തണുത്ത കുളി', adults: '≈ 3,000 മുതിർന്നവർ · ഒരു മാസം', sick: 'രോഗാവധി −29%', ill: 'അസുഖ ദിവസങ്ങൾ: മാറ്റമില്ല',
+  hygiene: 'വൃത്തിയുള്ള വീട് → അലർജി?', amish: 'ആമിഷ് കർഷകക്കുട്ടികൾ', asthma: 'ആസ്ത്മ', hutt: 'ഹട്ടറൈറ്റ് · യന്ത്രക്കൃഷി',
+  microbes: 'കൃഷിയിടത്തിലെ സൂക്ഷ്മജീവികൾ, അഴുക്കല്ല', wash: 'കൈ കഴുകൽ തുടരുക', shoes2: 'ഷൂസ് → കാൽ, നടുവ് പ്രശ്നം?',
+  speculative: 'ഊഹം മാത്രം: ചെരിപ്പില്ലാ നടത്തത്തിന്റെ ഗുണം', verdict: 'സത്യത്തിന്റെ ഒരു തരി, പെരുപ്പിച്ചത്', heart: 'തണുത്ത വെള്ളം ഹൃദയത്തിന് ആയാസം: ആദ്യം ഡോക്ടറോട്',
+  politics: 'പോഷകാഹാരം ≈ രാഷ്ട്രീയം', paleo: 'പാലിയോ പ്ലേറ്റ്', veg: 'പച്ചക്കറികൾ', meat: 'അൽപം ഇറച്ചി', berries: 'ബെറികൾ',
+  vegsci: 'പച്ചക്കറി: മിക്ക ശാസ്ത്രജ്ഞരും യോജിക്കും', fat: 'കൊഴുപ്പ് → വയർ നിറയും', sugar: 'പഞ്ചസാര → വിശപ്പ്', together: 'ഒരുമിച്ച്',
+  binge: 'വാരിവലിച്ച് തീറ്റ', payasam: 'പായസം', kunafa: 'കുനാഫ', rare: 'പ്രകൃതിയിൽ: അപൂർവം', coconut: 'തേങ്ങ: പഞ്ചസാര + കൊഴുപ്പ്',
+  mango: 'മാങ്ങ: കൊഴുപ്പ് തീരെ കുറവ്',
+  rules: 'ചെറിയ നിയമങ്ങൾ', quality: 'എന്ത് കഴിക്കുന്നു > എത്ര', qq: 'ഗുണം → അളവ്', subtract: 'ഗുളിക കൂട്ടുംമുമ്പ്, എന്തെങ്കിലും ഒഴിവാക്കൂ',
+  processed: 'ഭക്ഷണം: കൂടുതൽ സംസ്കരിച്ചത് → കുറച്ച്', fasting: 'ഉപവാസം > ചെറിയ അളവ്', bodyB: 'ശരീരം > തലച്ചോർ',
+  combo: 'പഞ്ചസാര + കൊഴുപ്പ്', adults2: '≈ 200 മുതിർന്നവർ: മിശ്രിതത്തിന് കൂടുതൽ പണം', supported: 'തെളിവുണ്ട്', fills: 'കൊഴുപ്പ് വയർ നിറയ്ക്കുമോ?',
+  keto: 'കീറ്റോ', calories: '+700 കലോറി / ദിവസം', lowfat: 'കൊഴുപ്പ് കുറഞ്ഞ സസ്യാഹാരം', not: 'തെളിവില്ല', processed2: 'സംസ്കരിച്ച ഭക്ഷണം',
+  calories2: '+500 കലോറി / ദിവസം', fasting2: 'ഉപവാസം എളുപ്പമോ?', lost: 'കൂടുതൽ ഭാരം കുറഞ്ഞില്ല', quit: 'പാതിവഴിയിൽ നിർത്തിയവർ കൂടുതൽ',
+  verdict2: 'സംസ്കരിച്ചതും പഞ്ചസാര-കൊഴുപ്പ് ജോടിയും കുറയ്ക്കൂ', magic: 'കീറ്റോ, ഉപവാസം: മാജിക്കല്ല',
+  doctor: 'മരുന്ന്, ഗർഭം, പ്രമേഹം? ആദ്യം ഡോക്ടറോട്',
+  morning: 'രാവിലത്തെ വ്യായാമം, ദിവസവും', notime: '“എനിക്ക് സമയമില്ല.”', priority: '“അത് എന്റെ മുൻഗണനയല്ല.”',
+  faisal: 'ഫൈസൽ · ദുബായ്, ഷിഫ്റ്റിന് മുമ്പ്', skips: 'കയർ ചാട്ടം', wait: 'ലോകം 30 മിനിറ്റ് കാത്തിരിക്കും',
+  hard: 'കഠിന വ്യായാമം', easy: '→ എളുപ്പമുള്ള ദിവസം', matters: 'ഏത് തരം: അത്ര പ്രധാനമല്ല', yoga: 'യോഗ', football: 'ഫുട്ബോൾ', weights: 'വെയ്റ്റ്സ്',
+  enjoy: 'ദിവസവും ചെയ്യാൻ ഇഷ്ടമുള്ളത്', walking: 'നടന്നുള്ള മീറ്റിങ്', sun: 'വെയിൽ', shorter: 'ചുരുങ്ങിയ സംസാരം', slides: 'സ്ലൈഡുകളില്ല',
+  every: 'എല്ലാ ദിവസവും?', adults3: '63,000 മുതിർന്നവർ · ബ്രിട്ടൻ', inactive: 'അലസർ', weekend: 'വീക്കെൻഡ് വാരിയേഴ്സ് · ആഴ്ചയിൽ 1–2 തവണ',
+  lower: '≈ 30% കുറവ് മരണനിരക്ക്', regular: 'പതിവായി ചെയ്യുന്നവർ', daily: 'ദിവസവും → ശീലം', week: 'ശരീരം എണ്ണുന്നത് ആഴ്ച',
+  walk: 'നടത്തം', people3: '4 പരീക്ഷണങ്ങൾ · 176 പേർ', sitting: 'ഇരുന്ന്', walkingB: 'നടന്ന്', ideas: 'കൂടുതൽ ക്രിയേറ്റീവ് ആശയങ്ങൾ',
+  worse: 'പിന്നിൽ: ഒറ്റ ഉത്തരമുള്ള പ്രശ്നങ്ങൾ', verdict3: 'മിക്ക ദിവസവും ചലിക്കൂ; എന്തും ഒന്നുമില്ലാത്തതിനെക്കാൾ നല്ലത്',
+  brain: 'ആശയത്തിന് നടക്കൂ, ഉത്തരത്തിന് ഇരിക്കൂ', doctor3: 'വ്യായാമം പുതിയതാണോ? ഡോക്ടറോട് ചോദിക്കൂ',
+  trainer: 'ട്രെയിനറുടെ ചൊല്ല്', today: 'ഇന്ന്', later: 'നാളെ', howHard: 'കഠിനം',
+  easyR: 'ഇന്ന് എളുപ്പവഴി → നാളെ കഠിനജീവിതം', hardR: 'ഇന്ന് കഠിനവഴി → നാളെ എളുപ്പജീവിതം', well: 'ആരോഗ്യത്തോടെ, വർഷങ്ങൾക്കു ശേഷം',
+  save: 'മഴക്കാലത്തേക്ക് സമ്പാദ്യം', values: 'മൂല്യങ്ങൾ', relations: 'ബന്ധങ്ങൾ', gain: 'ഇന്ന് ചെറിയ ത്യാഗം → നാളെ എളുപ്പമുള്ള നീണ്ട കാലം',
+  w1: 'നിങ്ങളാകുന്നതിൽ നിങ്ങളെ ആരും തോൽപ്പിക്കില്ല. മറ്റുള്ളവരിൽ നിന്ന് പഠിക്കൂ, പകർത്തരുത്; നിങ്ങളെ ആവശ്യമുള്ള ജോലി കണ്ടെത്തൂ.',
+  w2: 'ആരോഗ്യം ആദ്യം: ശരീരം, മനസ്സ്, ആത്മാവ്; പിന്നെ കുടുംബം, പിന്നെ ലോകം.',
+  w3: 'സംസ്കരിച്ച ഭക്ഷണവും പഞ്ചസാര-കൊഴുപ്പ് ജോടിയും കുറയ്ക്കൂ. കീറ്റോയും ഉപവാസവും തണുത്ത വെള്ളവും മാജിക്കല്ല; ആദ്യം ഡോക്ടറോട് ചോദിക്കൂ.',
+  w4: 'ഇഷ്ടമുള്ള രീതിയിൽ, മിക്ക ദിവസവും ചലിക്കൂ. ഇന്നത്തെ കഠിന തീരുമാനങ്ങൾ, നാളെ എളുപ്പമുള്ള ജീവിതം.',
+  practice: 'അധ്യായ പരിശീലനം',
+});
+
+const CHAPTER = { number: 16, title: L('title'), minutes: LANG === 'ml' ? 11 : 9, language: LANG, next: '../ch17/index.html' };
+
+/* ---------- meaning colours (style.json look.meaning) + chapter colours ---------- */
+const WEALTH = EV.gold, MONEY = '#7cc79d', STATUS = '#e2694f', TIME = '#5fb3cf', SCI = '#9c84d8';
+const HEALTH = EV.gold, FAMILY = EV.love, VEG = '#8fbf6a', MEAT = '#b46a55', BERRY = '#8a5fb0', SUGAR = '#f0a35e';
+
+/* ---------- chapter helpers (prefixed a16 to stay clear of engine globals) ---------- */
+const lab = (p, key, x, y, t, o = {}) => { const e = evText(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+const para = (p, key, x, y, t, o = {}) => { const e = evPara(p, L(key), { x, y, o: 0, ...o }); show(e, t, o.dur || .45); return e; };
+const a16Ground = (p, y = 760, fill = '#0c1114') => {
+  mk('rect', { x: -10, y, width: 1620, height: 900 - y + 20, fill }, p);
+  path(p, `M0 ${y}H1600`, { stroke: EV.gold, 'stroke-width': 1.5, opacity: .25 });
+};
+const a16Faisal = (p, o) => evRecolor(evPerson(p, { kind: 'm', ...o }), '#2f5f8f', '#21466b');
+const a16Man = (p, o, top = '#5a6470', topD = '#434b55') => evRecolor(evPerson(p, { kind: 'm', ...o }), top, topD);
+const a16Woman = (p, o, top, topD, scarf) => { const P = evRecolor(evPerson(p, { kind: 'f', ...o }), top, topD); if (scarf) evScarf(P, scarf); return P; };
+const a16Hiba = (p, o) => a16Woman(p, o, '#6b4a7a', '#4f3660', '#2a2f3a');
+function a16Icon(p, x, y, color = EV.dim, s = 1, o = 1) {
+  const g = G(p, { x, y, s, o });
+  mk('circle', { cx: 0, cy: -46, r: 14, fill: color }, g);
+  path(g, 'M-22 0Q-22 -30 0 -30Q22 -30 22 0Z', { fill: color });
+  return g;
+}
+// A rounded tag; Malayalam is measured at the size it is drawn (evText shrinks ML by .88), so the box always fits.
+function a16Pill(p, key, x, y, { color = EV.gold, size = 30, fill = '#151d21', ink = EV.goldHi, minW = 160, o = 0, maxPill = 1400 } = {}) {
+  const g = G(p, { x, y, o });
+  const w = Math.min(maxPill, Math.max(minW, evW(L(key), size * (ML ? .88 : 1)) + 64));
+  mk('rect', { x: -w / 2, y: -32, width: w, height: 60, rx: 30, fill, stroke: color, 'stroke-width': 2 }, g);
+  evText(g, L(key), { x: 0, y: 8, size, fill: ink, maxW: w - 34 });
+  g._w = w;
+  return g;
+}
+function a16Sci(m, D) {
+  const keep = G(scene);
+  hide(keep, D - .45, .4);
+  prog(q => { if (q === 1) keep.style.display = 'none'; }, D, 0, lin);
+  const fr = path(keep, 'M60 60H1540V840H60Z', { stroke: SCI, 'stroke-width': 2.5, opacity: .7 }, { d: 0 });
+  draw(fr, m('sci'), 1);
+  const tag = G(keep, { x: 200, y: 60, o: 0 });
+  const tw_ = Math.max(220, evW(L('sci'), 28) + 50);
+  mk('rect', { x: -tw_ / 2, y: -26, width: tw_, height: 52, rx: 26, fill: SCI }, tag);
+  evText(tag, L('sci'), { x: 0, y: 10, size: 28, weight: 600, fill: '#120f1a' });
+  show(tag, m('sci'), .4);
+}
+function a16Stamp(p, key, x, y, t, color = SCI) {
+  const g = G(p, { x, y, o: 0, r: -4 });
+  const sw = Math.min(1300, Math.max(240, evW(L(key), 30 * (ML ? .88 : 1), SANS, 700) + 56));
+  mk('rect', { x: -sw / 2, y: -30, width: sw, height: 60, rx: 8, fill: 'none', stroke: color, 'stroke-width': 4 }, g);
+  evText(g, L(key), { x: 0, y: 11, size: 30, weight: 700, fill: color, maxW: sw - 30 });
+  put(g, { s: 1.5 }); tw(g, { o: 1, s: 1 }, t, .4, back);
+  return g;
+}
+function a16Palm(p, x, y, s = 1, c = '#17241e') {
+  const g = G(p, { x, y, s });
+  path(g, 'M0 0C-14 -90 12 -170 -8 -250', { stroke: c, 'stroke-width': 12 });
+  [[-120, -210], [-90, -290], [10, -320], [100, -280], [130, -205], [-40, -320]].forEach(([fx, fy]) =>
+    path(g, `M-8 -250Q${(fx * .5 - 4).toFixed(0)} ${(fy - 40).toFixed(0)} ${fx} ${fy + 40}`, { stroke: c, 'stroke-width': 7 }));
+  return g;
+}
+// A strike line across a row, drawn from x0 to x1 at y.
+const a16Strike = (p, x0, x1, y) => path(p, `M${x0} ${y}L${x1} ${y - 6}`, { stroke: STATUS, 'stroke-width': 4 }, { d: 0 });
+// A row of n dots from (x0, y); the first `bad` are rust.
+function a16Dots(p, n, x0, y, bad, base = EV.goldHi) {
+  return Array.from({ length: n }, (_, i) => { const c = mk('circle', { cx: x0 + i * 13, cy: y, r: 5, fill: i < bad ? STATUS : base }, p); put(c, { o: 0 }); return c; });
+}
+// A horizontal bar that grows on one clock.
+function a16Bar(p, x, y, w, h, fill, t0, D, d = .7) {
+  const r = mk('rect', { x, y, width: 0, height: h, rx: 4, fill }, p);
+  prog(q => { r.setAttribute('width', (w * io(evU(q * D, t0, d))).toFixed(1)); }, 0, D, lin);
+  return r;
+}
+// A tharavadu: a Kerala house with a tiled, sloping roof; base at (0,0).
+function a16House(p, { x = 0, y = 0, s = 1, o = 1 } = {}) {
+  const g = G(p, { x, y, s, o });
+  mk('rect', { x: -230, y: -190, width: 460, height: 190, fill: '#2a221a', stroke: '#6b5537', 'stroke-width': 2 }, g);
+  path(g, 'M-290 -180L0 -330L290 -180Z', { fill: '#7a3b2a', stroke: '#a85a3c', 'stroke-width': 2 });
+  path(g, 'M-250 -200L0 -320L250 -200', { stroke: '#5a2a1e', 'stroke-width': 3 });
+  [-190, -95, 95, 190].forEach(px => mk('rect', { x: px - 8, y: -180, width: 16, height: 180, fill: '#d9c9a6' }, g));
+  mk('rect', { x: -40, y: -130, width: 80, height: 130, fill: '#140f0b', stroke: '#6b5537', 'stroke-width': 2 }, g);
+  return g;
+}
+// A bowl of payasam, centred on (0,0).
+function a16Bowl(p, x, y, o = 0) {
+  const g = G(p, { x, y, o });
+  mk('ellipse', { cx: 0, cy: -10, rx: 90, ry: 20, fill: '#e8d6a8' }, g);
+  path(g, 'M-90 -10Q-80 60 0 64Q80 60 90 -10Z', { fill: '#7a5a34', stroke: EV.goldHi, 'stroke-width': 2 });
+  [[-40, -14], [10, -8], [44, -16]].forEach(([cx, cy]) => mk('ellipse', { cx, cy, rx: 9, ry: 5, fill: '#b98a3c' }, g));
+  return g;
+}
+// A tray of kunafa, centred on (0,0).
+function a16Kunafa(p, x, y, o = 0) {
+  const g = G(p, { x, y, o });
+  mk('ellipse', { cx: 0, cy: 10, rx: 120, ry: 34, fill: '#3a3f44', stroke: '#8f9ea4', 'stroke-width': 2 }, g);
+  mk('ellipse', { cx: 0, cy: 0, rx: 100, ry: 26, fill: '#d9772e' }, g);
+  let d = ''; for (let i = -80; i <= 80; i += 14) d += `M${i} ${-14 + Math.abs(i) * .08}l8 6`;
+  path(g, d, { stroke: '#a64f1c', 'stroke-width': 3 });
+  [[-30, -4], [20, 4], [55, -6]].forEach(([cx, cy]) => mk('circle', { cx, cy, r: 4, fill: '#7cc79d' }, g));
+  return g;
+}
+function a16Coconut(p, x, y, o = 0) {
+  const g = G(p, { x, y, o });
+  mk('circle', { cx: 0, cy: 0, r: 62, fill: '#5a3d22', stroke: '#8a6440', 'stroke-width': 3 }, g);
+  mk('circle', { cx: 0, cy: 0, r: 46, fill: '#f2ead6' }, g);
+  [[-12, -16], [12, -16], [0, 6]].forEach(([cx, cy]) => mk('circle', { cx, cy, r: 5, fill: '#5a3d22' }, g));
+  return g;
+}
+function a16Mango(p, x, y, o = 0) {
+  const g = G(p, { x, y, o });
+  path(g, 'M0 -60C50 -60 66 -10 54 26C40 64 -20 70 -46 36C-70 4 -46 -60 0 -60Z', { fill: '#f0b43c', stroke: '#c9862a', 'stroke-width': 3 });
+  path(g, 'M2 -60Q10 -82 30 -86Q20 -64 2 -60Z', { fill: '#5a8f3c' });
+  return g;
+}
+function a16Ball(p, x, y, o = 0) {
+  const g = G(p, { x, y, o });
+  mk('circle', { cx: 0, cy: 0, r: 56, fill: '#e9e3d4', stroke: '#333', 'stroke-width': 2 }, g);
+  path(g, 'M0 -18L17 -6L11 15H-11L-17 -6Z', { fill: '#222' });
+  path(g, 'M0 -18V-56M17 -6L52 -18M11 15L32 46M-11 15L-32 46M-17 -6L-52 -18', { stroke: '#222', 'stroke-width': 2 });
+  return g;
+}
+function a16Dumbbell(p, x, y, o = 0) {
+  const g = G(p, { x, y, o });
+  mk('rect', { x: -70, y: -6, width: 140, height: 12, rx: 4, fill: '#8f9ea4' }, g);
+  [-70, 70].forEach(cx => { mk('rect', { x: cx - 18, y: -44, width: 36, height: 88, rx: 8, fill: '#2b3438', stroke: EV.gold, 'stroke-width': 2 }, g); });
+  return g;
+}
+// A jigsaw board with one missing slot at col 1, row 1 (of 3 x 2); returns { g, slot: [x, y] } with pieces 120 wide.
+function a16Board(p, x, y) {
+  const g = G(p, { x, y });
+  for (let r = 0; r < 2; r++) for (let c = 0; c < 3; c++) {
+    if (r === 1 && c === 1) { mk('rect', { x: c * 130 - 195, y: r * 130 - 130, width: 120, height: 120, rx: 10, fill: 'none', stroke: EV.dim, 'stroke-width': 2, 'stroke-dasharray': '8 6' }, g); continue; }
+    mk('rect', { x: c * 130 - 195, y: r * 130 - 130, width: 120, height: 120, rx: 10, fill: '#1b262b', stroke: '#2d3a40', 'stroke-width': 2 }, g);
+  }
+  return g;
+}
+
+/* ---------- beats ---------- */
+const BEATS = [
+  ['intro', 'b_intro', (m, D) => {
+    evDefs();
+    const g = G(scene, { o: 0 });
+    tw(g, { o: 1 }, .1, .6, out);
+    // dawn over the sea at Kozhikode beach: the sun rises, a figure stretches on the sand
+    const sun = G(g, { x: 800, y: 660 });
+    evGlow(sun, 0, 0, 320, 'Warm', .7); mk('circle', { cx: 0, cy: 0, r: 52, fill: '#f0c26e' }, sun);
+    prog(q => { const t = q * D; put(sun, { y: 660 - 90 * io(evU(t, 0, D)) }); }, 0, D, lin);
+    mk('rect', { x: -10, y: 620, width: 1620, height: 140, fill: '#0b161b' }, g);
+    let d = ''; for (let i = 0; i < 7; i++) d += `M${560 - i * 30} ${634 + i * 17}H${1040 + i * 30}`;
+    path(g, d, { stroke: '#e8a95a', 'stroke-width': 2, opacity: .35 });
+    mk('rect', { x: -10, y: 760, width: 1620, height: 160, fill: '#15130e' }, g);
+    path(g, 'M0 760H1600', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .3 });
+    a16Palm(g, 150, 764, 1.15); a16Palm(g, 300, 764, .8); a16Palm(g, 1480, 764, 1.2);
+    const fg = evPerson(g, { kind: 'm', x: 1180, y: 764, s: .42 });
+    evRecolor(fg, '#3d6b5a', '#2c4f42');
+    prog(q => { const t = q * D, k = .5 - .5 * Math.cos(t * 1.1); put(fg.armL, { r: 150 * k }); put(fg.armR, { r: -150 * k }); }, 0, D, lin);
+    const kk = evText(g, L('kicker'), { x: 800, y: 130, size: 26, fill: EV.gold, weight: 500, ls: '6', o: 0 });
+    show(kk, m('chap'), .5);
+    draw(path(g, 'M620 160H980', { stroke: EV.gold, 'stroke-width': 1.5, opacity: .6 }, { d: 0 }), m('chap'), .8);
+    const up = a16Pill(g, 'unit', 800, 215, { color: WEALTH, size: 26, minW: 300 });
+    put(up, { s: .8 }); tw(up, { o: 1, s: 1 }, m('unit'), .45, back);
+    const ti = evText(g, L('title'), { x: 800, y: 330, size: 92, font: SERIF, weight: 600, maxW: 1420, o: 0 });
+    put(ti, { y: 350 }); tw(ti, { y: 330, o: 1 }, m('title'), .7, out);
+    const sub = evPara(g, L('sub'), { x: 800, y: 405, size: 32, fill: EV.ink, o: 0, maxW: 1300, font: SERIF, italic: true });
+    put(sub, { y: 420 }); tw(sub, { y: 405, o: .85 }, m('sub'), .7, out);
+    const cr = evText(scene, L('credit'), { x: 800, y: 500, size: 24, fill: '#8a8270', o: 0, maxW: 1400 });
+    show(cr, m('sub'), 1);
+    tw(g, { o: 0 }, D - .6, .5); hide(cr, D - .6, .5);
+  }],
+
+  ['yourself', 'b_yourself', (m, D) => {
+    const p = panel(0);
+    a16Ground(p, 800);
+    const hb = a16Hiba(p, { x: 330, y: 800, s: .62 });
+    evBreathe(hb, D);
+    lab(p, 'hiba', 330, 852, m('hiba'), { size: 28, weight: 600 });
+    evMood(hb, 'tense', m('must'));
+    // her notebook of musts
+    const nb = G(p, { x: 1000, y: 0, o: 0 });
+    mk('rect', { x: -360, y: 150, width: 720, height: 380, rx: 14, fill: '#151d21', stroke: EV.goldLo, 'stroke-width': 2 }, nb);
+    [0, 1, 2, 3, 4, 5].forEach(i => mk('circle', { cx: -360, cy: 190 + i * 60, r: 8, fill: '#2a3236', stroke: EV.dim, 'stroke-width': 2 }, nb));
+    show(nb, m('must'), .4);
+    lab(nb, 'must', 0, 215, m('must'), { size: 38, font: SERIF, weight: 600, fill: STATUS });
+    const rows = [['m1', 290], ['m2', 370], ['m3', 450]];
+    rows.forEach(([k, y]) => lab(nb, k, -320, y, m(k), { size: 28, anchor: 'start', fill: EV.ink, maxW: 640 }));
+    const st = rows.map(([, y]) => a16Strike(nb, -330, 330, y - 8));
+    prog(q => { const t = q * D; st.forEach((s, i) => put(s, { d: io(evU(t, m('none') + i * .2, .35)) })); }, 0, D, lin);
+    lab(p, 'none', 1000, 600, m('none'), { size: 36, font: SERIF, weight: 600, fill: EV.gold });
+    lab(p, 'want', 1000, 660, m('want'), { size: 32, fill: EV.goldHi, weight: 600 });
+    evMood(hb, 'calm', m('none'));
+    // others' ways fade; a quiet voice inside
+    const ot = a16Pill(p, 'others', 1000, 100, { color: STATUS, size: 26, ink: EV.ink, minW: 260 });
+    show(ot, m('others'), .4);
+    tw(nb, { o: .25 }, m('others'), .5);
+    hide(ot, m('voice'), .5);
+    const gl = evGlow(p, 330, 520, 150, 'Gold', 0);
+    p.insertBefore(gl, hb.g);
+    tw(gl, { o: .85 }, m('voice'), .7);
+    lab(p, 'voice', 330, 330, m('voice'), { size: 30, font: SERIF, italic: true, fill: EV.goldHi, maxW: 520 });
+    // a sketchbook: design
+    const sk = G(p, { x: 640, y: 560, o: 0, r: -6 });
+    mk('rect', { x: -90, y: -70, width: 180, height: 140, rx: 8, fill: '#e8e0cc', stroke: EV.goldHi, 'stroke-width': 2 }, sk);
+    const sl = path(sk, 'M-60 30Q-30 -40 0 10T60 -30M-50 44H50', { stroke: '#6b4a7a', 'stroke-width': 4 }, { d: 0 });
+    show(sk, m('design'), .4); draw(sl, m('design') + .2, .9);
+    lab(p, 'design', 640, 670, m('design'), { size: 34, font: SERIF, weight: 600, fill: EV.gold });
+    evMood(hb, 'smile', m('design'));
+    const bp = a16Pill(p, 'be', 1000, 740, { color: WEALTH, size: 34, minW: 280 });
+    put(bp, { s: .7 }); tw(bp, { o: 1, s: 1 }, m('be'), .45, back);
+  }],
+
+  ['unique', 'b_unique', (m, D) => {
+    const p = panel(0);
+    // Naval and the mentor he never met
+    const nv = a16Icon(p, 450, 560, EV.goldHi, 2.2, 0); show(nv, m('naval'), .4);
+    lab(p, 'naval', 450, 630, m('naval'), { size: 30, weight: 600 });
+    const mt = a16Icon(p, 1150, 560, EV.dim, 2.2, 0); show(mt, m('mentor'), .4);
+    lab(p, 'mentor', 1150, 630, m('mentor'), { size: 28, fill: EV.dim });
+    const gap = path(p, 'M560 500H1040', { stroke: EV.dim, 'stroke-width': 2, 'stroke-dasharray': '10 10' }, { d: 0 });
+    draw(gap, m('never'), .7);
+    lab(p, 'never', 800, 480, m('never'), { size: 28, fill: EV.dim, italic: true, font: SERIF });
+    const toM = path(p, 'M560 420Q800 330 1030 420', { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 });
+    draw(toM, m('mentor') + .2, .7);
+    const back_ = path(p, 'M1040 400Q800 250 570 400M594 380L568 402L600 408', { stroke: EV.goldHi, 'stroke-width': 4 }, { d: 0 });
+    draw(back_, m('opposite'), .8);
+    lab(p, 'opposite', 800, 300, m('opposite'), { size: 26, fill: EV.ink });
+    const ng = evGlow(p, 450, 500, 180, 'Gold', 0); p.insertBefore(ng, nv);
+    tw(ng, { o: .8 }, m('fierce'), .6);
+    lab(p, 'fierce', 800, 220, m('fierce'), { size: 48, font: SERIF, weight: 600, fill: EV.gold, maxW: 1200 });
+    lab(p, 'beat', 800, 760, m('beat'), { size: 38, font: SERIF, italic: true, weight: 600, fill: EV.goldHi, maxW: 1300 });
+    // the combinatorics of DNA
+    const q = panel(m('each'));
+    put(q, { o: 0 }); show(q, m('each'), .4);
+    const pa = a16Icon(q, 230, 330, '#d7c08a', 1.6), pb = a16Icon(q, 230, 560, '#a8b8c8', 1.6);
+    void pa; void pb;
+    const dna = evDNA(q, { x: 800, y: 130, w: 900, amp: 26, turns: 5, color: SCI });
+    void dna;
+    const c1 = T(q, '0', { x: 800, y: 320, size: 72, fill: EV.goldHi, anchor: 'middle', font: SANS, weight: 600, o: 0 });
+    show(c1, m('each'), .3);
+    evCount(c1, t => evNum(8388608 * io(evU(t, m('each'), 1.6))), D);
+    lab(q, 'mixes', 800, 380, m('mixes'), { size: 28, fill: EV.ink, maxW: 720 });
+    const c2 = T(q, '0', { x: 800, y: 540, size: 60, fill: SCI, anchor: 'middle', font: SANS, weight: 600, o: 0 });
+    show(c2, m('children'), .3);
+    evCount(c2, t => evNum(70368744177664 * Math.pow(io(evU(t, m('children'), 1.6)), 3)), D);
+    lab(q, 'children', 800, 600, m('children'), { size: 28, fill: EV.ink, maxW: 720 });
+    const ar = path(q, 'M300 330Q420 340 470 320M300 560Q420 560 470 520', { stroke: EV.dim, 'stroke-width': 2 }, { d: 0 });
+    draw(ar, m('mixes'), .6);
+    lab(q, 'life', 800, 720, m('life'), { size: 30, fill: EV.goldHi, weight: 600 });
+    const t1 = a16Icon(q, 1310, 480, SCI, 1.5, 0), t2 = a16Icon(q, 1390, 480, SCI, 1.5, 0);
+    [t1, t2].forEach(e => show(e, m('twins'), .4));
+    prog(qq => { const t = qq * D, k = io(evU(t, m('twins') + .3, 1.4)); put(t1, { x: 1310 - 50 * k }); put(t2, { x: 1390 + 50 * k }); }, 0, D, lin);
+    tw(t2.lastChild, { c_fill: '#d7c08a' }, m('twins') + .4, 1);
+    lab(q, 'twins', 1350, 560, m('twins'), { size: 24, fill: EV.ink, maxW: 380 });
+    // listen, don't copy; the piece that fits
+    const r = panel(m('listen'));
+    put(r, { o: 0 }); show(r, m('listen'), .4);
+    const l1 = a16Pill(r, 'listen', 400, 230, { color: WEALTH, size: 30, minW: 300 }); show(l1, m('listen'), .4);
+    const l2 = a16Pill(r, 'copy', 400, 330, { color: STATUS, size: 30, ink: STATUS, minW: 300 }); show(l2, m('copy'), .4);
+    a16Board(r, 1100, 450);
+    lab(r, 'people', 1100, 260, m('people'), { size: 30, fill: EV.ink, weight: 600 });
+    const pc = G(r, { x: 1480, y: 760, o: 0 });
+    mk('rect', { x: -60, y: -60, width: 120, height: 120, rx: 10, fill: EV.gold, stroke: EV.goldHi, 'stroke-width': 3 }, pc);
+    a16Icon(pc, 0, 40, '#1b262b', 1.1);
+    show(pc, m('needs'), .3);
+    prog(qq => { const t = qq * D, k = io(evU(t, m('needs'), 1)); put(pc, { x: 1480 + (1100 - 1480) * k, y: 760 + (510 - 760) * k }); }, 0, D, lin);
+    lab(r, 'needs', 1100, 680, m('needs'), { size: 34, font: SERIF, weight: 600, fill: EV.goldHi });
+    lab(r, 'original', 400, 520, m('original'), { size: 34, font: SERIF, weight: 600, fill: EV.gold });
+    lab(r, 'obsessed', 400, 590, m('obsessed'), { size: 30, fill: SUGAR, italic: true, font: SERIF });
+  }],
+
+  ['q1', 'b_q1', (m, D) => {
+    const p = panel(0);
+    a16Ground(p, 430);
+    const ry = a16Woman(p, { x: 330, y: 430, s: .5 }, '#3f6b5a', '#2c4f42', '#2a2f3a');
+    evBreathe(ry, D); evMood(ry, 'worried', .4);
+    // a copied checklist, ticked off from someone else's path
+    const cl = G(p, { x: 900, y: 0 });
+    mk('rect', { x: -150, y: 90, width: 300, height: 300, rx: 12, fill: '#e8e0cc', stroke: EV.goldLo, 'stroke-width': 2 }, cl);
+    [150, 230, 310].forEach(y => { path(cl, `M-110 ${y}l14 14l26 -30`, { stroke: MONEY, 'stroke-width': 5 }); path(cl, `M-40 ${y + 2}H110`, { stroke: '#5a4f3a', 'stroke-width': 4 }); });
+    a16Icon(p, 1250, 330, EV.dim, 1.8);
+    path(p, 'M1080 240H1190', { stroke: EV.dim, 'stroke-width': 3, 'stroke-dasharray': '10 8' });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-copy', prompt: [L('q1p')],
+    build: choice([[L('q1a')], [L('q1b')], [L('q1c')]], 1, L('q1y'), [L('q1na'), null, L('q1nc')]),
+  }], done) }],
+
+  ['priority', 'b_priority', (m, D) => {
+    const p = panel(0);
+    lab(p, 'care', 520, 110, m('care'), { size: 44, font: SERIF, weight: 600, fill: EV.gold });
+    const stk = G(p);
+    const rows = [['body', HEALTH], ['mind', HEALTH], ['spirit', HEALTH], ['family', FAMILY], ['wellbeing', FAMILY], ['world', EV.dim]];
+    rows.forEach(([k, c], i) => {
+      const y = 190 + i * 84;
+      const b = G(stk, { x: -40, y, o: 0 });
+      mk('rect', { x: 240, y: 0, width: 560, height: 66, rx: 10, fill: '#121a1e', stroke: c, 'stroke-width': i < 3 ? 3 : 2 }, b);
+      evText(b, L(k), { x: 270, y: 44, size: 28, anchor: 'start', fill: i < 3 ? EV.goldHi : EV.ink, maxW: 510 });
+      tw(b, { o: 1, x: 0 }, m(k), .45, out);
+    });
+    const br = path(p, 'M820 194H844V430H820', { stroke: HEALTH, 'stroke-width': 3 }, { d: 0 });
+    draw(br, m('health'), .6);
+    lab(p, 'health', 864, 322, m('health'), { size: 30, anchor: 'start', fill: EV.gold, weight: 600, maxW: 300 });
+    // Kareem, a shopkeeper in Thrissur, after a chest-pain scare
+    a16Ground(p, 800);
+    const sh = G(p, { x: 1330, y: 800 });
+    path(sh, 'M-200 -330H200L170 -280H-170Z', { fill: '#7a3b2a', stroke: '#a85a3c', 'stroke-width': 2 });
+    mk('rect', { x: -170, y: -280, width: 340, height: 280, fill: '#1a1612', stroke: '#6b5537', 'stroke-width': 2 }, sh);
+    put(sh, { o: 0 }); show(sh, m('kareem'), .4);
+    const kr = a16Man(p, { x: 1330, y: 800, s: .55 }, '#d9d2c0', '#aaa18c');
+    put(kr.g, { o: 0 }); show(kr.g, m('kareem'), .4);
+    evBreathe(kr, D);
+    lab(p, 'kareem', 1330, 852, m('kareem'), { size: 26, weight: 600 });
+    tw(stk, { o: .35 }, m('kareem'), .5);
+    const pulse = path(p, 'M1090 230H1220L1240 190L1265 290L1290 150L1310 230H1560', { stroke: STATUS, 'stroke-width': 4 }, { d: 0 });
+    draw(pulse, m('scare'), .8);
+    lab(p, 'scare', 1330, 130, m('scare'), { size: 28, fill: STATUS, weight: 600 });
+    evMood(kr, 'worried', m('scare'));
+    tw(stk, { o: 1 }, m('sharp'), .5);
+    const sg = evGlow(p, 520, 300, 260, 'Gold', 0); p.insertBefore(sg, stk);
+    tw(sg, { o: .7 }, m('sharp'), .6);
+    lab(p, 'sharp', 1330, 330, m('sharp'), { size: 30, font: SERIF, italic: true, fill: EV.goldHi });
+    evMood(kr, 'calm', m('sharp'));
+    para(p, 'contrast', 520, 735, m('contrast'), { size: 30, maxW: 700, fill: EV.ink, font: SERIF, italic: true });
+  }],
+
+  ['mismatch', 'b_mismatch', (m, D) => {
+    const p = panel(0);
+    lab(p, 'evolved', 470, 120, m('evolved'), { size: 38, font: SERIF, weight: 600, fill: EV.gold });
+    lab(p, 'modern', 1130, 120, m('modern'), { size: 38, font: SERIF, weight: 600, fill: STATUS });
+    path(p, 'M800 90V720', { stroke: EV.faint, 'stroke-width': 1.5 });
+    const rows = [['foodL', 'food', 'food'], ['play', 'treadmill', 'play'], ['senses', 'screens', 'senses'], ['shoesL', 'shoes', 'shoes'],
+      ['warmL', 'warm', 'warm'], ['cleanL', 'clean', 'clean'], ['aloneL', 'alone', 'alone']];
+    rows.forEach(([lk, rk, lm], i) => {
+      const y = 205 + i * 76;
+      lab(p, lk, 470, y, m(lm), { size: 28, fill: '#d7c08a', maxW: 560 });
+      lab(p, rk, 1130, y, m(rk), { size: 28, fill: EV.ink, maxW: 560 });
+      const a = path(p, `M760 ${y - 10}H840M826 ${y - 18}L842 ${y - 10}L826 ${y - 2}`, { stroke: EV.dim, 'stroke-width': 2 });
+      put(a, { o: 0 }); show(a, m(rk), .3);
+    });
+    // a tharavadu in Malappuram; then genes that say yes
+    const q = panel(m('tharavadu'));
+    put(q, { o: 0 }); show(q, m('tharavadu'), .4);
+    a16Ground(q, 640);
+    a16House(q, { x: 480, y: 640 });
+    lab(q, 'tharavadu', 480, 690, m('tharavadu'), { size: 28, weight: 600 });
+    const fam = [[230, '#e78fa8', 1.2], [320, '#d7c08a', .9], [400, '#a8b8c8', 1.3], [560, '#c4b08a', 1.2], [640, '#7cc79d', .9], [720, '#e78fa8', 1.1]];
+    const ics = fam.map(([x, c, s]) => a16Icon(q, x, 636, c, s, 0));
+    evSeq(ics.map((e, i) => [e, m('aunts') + i * .08, .3]), D);
+    lab(q, 'aunts', 480, 745, m('aunts'), { size: 26, fill: EV.ink, maxW: 700 });
+    lab(q, 'lonely', 480, 800, m('lonely'), { size: 30, fill: EV.goldHi, weight: 600, maxW: 700 });
+    lab(q, 'gloom', 480, 850, m('gloom'), { size: 22, fill: EV.dim, maxW: 700 });
+    const pv = a16Pill(q, 'privacy', 480, 230, { color: STATUS, size: 28, ink: EV.ink, minW: 260 });
+    show(pv, m('privacy'), .4);
+    evDNA(q, { x: 1180, y: 340, w: 560, amp: 30, turns: 4, color: SCI });
+    lab(q, 'genes', 1180, 280, m('genes'), { size: 30, fill: SCI, weight: 600 });
+    para(q, 'scarce', 1180, 450, m('scarce'), { size: 28, maxW: 620, fill: EV.ink });
+    [['yes', 1090, 610], ['yes2', 1250, 700]].forEach(([k, x, y]) => {
+      const g = a16Pill(q, k, x, y, { color: SUGAR, size: 28, ink: EV.goldHi, minW: 240 });
+      put(g, { s: .6 }); tw(g, { o: 1, s: 1 }, m(k), .4, back);
+    });
+  }],
+
+  ['check', 'b_check', (m, D) => {
+    const p = panel(0);
+    a16Sci(m, D);
+    // cold showers
+    lab(p, 'cold', 330, 175, m('cold'), { size: 34, weight: 600, fill: TIME });
+    lab(p, 'adults', 330, 222, m('adults'), { size: 24, fill: EV.dim, maxW: 380 });
+    mk('rect', { x: 620, y: 150, width: 380, height: 22, rx: 4, fill: EV.faint }, p);
+    a16Bar(p, 620, 176, 270, 22, SCI, m('sick'), D);
+    lab(p, 'sick', 1040, 182, m('sick'), { size: 26, anchor: 'start', fill: EV.ink, maxW: 460 });
+    mk('rect', { x: 620, y: 238, width: 380, height: 22, rx: 4, fill: EV.faint }, p);
+    a16Bar(p, 620, 264, 380, 22, SCI, m('ill'), D);
+    lab(p, 'ill', 1040, 270, m('ill'), { size: 26, anchor: 'start', fill: EV.dim, maxW: 460 });
+    path(p, 'M120 320H1480', { stroke: EV.faint, 'stroke-width': 1 });
+    // clean homes: Amish vs Hutterite children
+    lab(p, 'hygiene', 330, 380, m('hygiene'), { size: 32, weight: 600, fill: EV.ink, maxW: 400 });
+    const am = a16Dots(p, 30, 620, 380, 0);
+    evSeq(am.map((c, i) => [c, m('none') + i * .015, .2]), D);
+    lab(p, 'amish', 1040, 388, m('amish'), { size: 24, anchor: 'start', fill: EV.goldHi, maxW: 460 });
+    const hu = a16Dots(p, 30, 620, 440, 6);
+    evSeq(hu.map((c, i) => [c, m('hutt') + i * .015, .2]), D);
+    lab(p, 'hutt', 1040, 448, m('hutt'), { size: 24, anchor: 'start', fill: EV.ink, maxW: 460 });
+    const lg = G(p, { x: 260, y: 432, o: 0 }); mk('circle', { cx: 0, cy: 0, r: 7, fill: STATUS }, lg); show(lg, m('asthma'), .3);
+    lab(p, 'asthma', 280, 441, m('asthma'), { size: 24, anchor: 'start', fill: STATUS });
+    lab(p, 'microbes', 800, 520, m('microbes'), { size: 30, fill: EV.goldHi, weight: 600, maxW: 1100 });
+    lab(p, 'wash', 800, 565, m('wash'), { size: 24, fill: EV.dim });
+    path(p, 'M120 600H1480', { stroke: EV.faint, 'stroke-width': 1 });
+    // shoes
+    lab(p, 'shoes2', 330, 650, m('shoes2'), { size: 28, weight: 600, fill: EV.ink, maxW: 420 });
+    lab(p, 'speculative', 620, 650, m('speculative'), { size: 26, anchor: 'start', fill: EV.ink, maxW: 860 });
+    a16Stamp(p, 'verdict', 800, 730, m('verdict'));
+    lab(p, 'heart', 800, 805, m('heart'), { size: 26, fill: SUGAR, maxW: 1300 });
+  }],
+
+  ['diet', 'b_diet', (m, D) => {
+    const p = panel(0);
+    lab(p, 'politics', 800, 100, m('politics'), { size: 32, fill: EV.dim, italic: true, font: SERIF });
+    lab(p, 'paleo', 800, 165, m('paleo'), { size: 40, font: SERIF, weight: 600, fill: EV.gold });
+    // a plate: mostly vegetables, a little meat, some berries
+    const CX = 800, CY = 450, R = 210;
+    const plate = G(p, { x: CX, y: CY, o: 0 });
+    mk('circle', { cx: 0, cy: 0, r: R + 26, fill: '#e8e0cc' }, plate);
+    mk('circle', { cx: 0, cy: 0, r: R, fill: '#d4cbb4' }, plate);
+    show(plate, .3, .5);
+    const arc = (a0, a1, c) => { const r0 = R - 6, p0 = [Math.sin(a0) * r0, -Math.cos(a0) * r0], p1 = [Math.sin(a1) * r0, -Math.cos(a1) * r0];
+      return path(plate, `M0 0L${p0[0].toFixed(1)} ${p0[1].toFixed(1)}A${r0} ${r0} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${p1[0].toFixed(1)} ${p1[1].toFixed(1)}Z`, { fill: c, stroke: '#d4cbb4', 'stroke-width': 4 }); };
+    const sV = arc(Math.PI * .55, Math.PI * 1.95, VEG), sM = arc(0, Math.PI * .3, MEAT), sB = arc(Math.PI * .3, Math.PI * .55, BERRY);
+    [[sV, 'veg'], [sM, 'meat'], [sB, 'berries']].forEach(([s, k]) => { put(s, { o: 0 }); show(s, m(k), .4); });
+    lab(p, 'veg', 520, 520, m('veg'), { size: 30, anchor: 'end', fill: VEG, weight: 600 });
+    lab(p, 'meat', 1050, 300, m('meat'), { size: 28, anchor: 'start', fill: '#d98a72', weight: 600 });
+    lab(p, 'berries', 1050, 520, m('berries'), { size: 28, anchor: 'start', fill: '#b48ad8', weight: 600 });
+    lab(p, 'vegsci', 800, 780, m('vegsci'), { size: 30, fill: EV.goldHi, weight: 600, maxW: 1200 });
+    // sugar + fat
+    const q = panel(m('fat'));
+    put(q, { o: 0 }); show(q, m('fat'), .4);
+    const pf = a16Pill(q, 'fat', 330, 180, { color: WEALTH, size: 30, minW: 260 }); show(pf, m('fat'), .4);
+    const ps = a16Pill(q, 'sugar', 330, 300, { color: SUGAR, size: 30, ink: EV.ink, minW: 260 }); show(ps, m('sugar'), .4);
+    const jn = path(q, 'M500 180Q560 180 600 230M500 300Q560 300 600 250M600 240H640', { stroke: EV.dim, 'stroke-width': 3 }, { d: 0 });
+    draw(jn, m('together'), .6);
+    lab(q, 'together', 740, 222, m('together'), { size: 30, fill: EV.ink, weight: 600 });
+    lab(q, 'binge', 740, 290, m('binge'), { size: 44, font: SERIF, weight: 700, fill: STATUS });
+    const bw = a16Bowl(q, 1060, 230); show(bw, m('payasam'), .4);
+    lab(q, 'payasam', 1060, 340, m('payasam'), { size: 28, fill: EV.goldHi });
+    const kn = a16Kunafa(q, 1360, 230); show(kn, m('kunafa'), .4);
+    lab(q, 'kunafa', 1360, 340, m('kunafa'), { size: 28, fill: EV.goldHi });
+    path(q, 'M200 430H1400', { stroke: EV.faint, 'stroke-width': 1 });
+    lab(q, 'rare', 800, 500, m('rare'), { size: 36, font: SERIF, italic: true, fill: EV.ink });
+    const cc = a16Coconut(q, 560, 640); show(cc, m('coconut'), .4);
+    lab(q, 'coconut', 560, 750, m('coconut'), { size: 28, fill: EV.goldHi, weight: 600 });
+    const mg = a16Mango(q, 1040, 640); show(mg, m('mango'), .4);
+    lab(q, 'mango', 1040, 750, m('mango'), { size: 28, fill: EV.ink });
+  }],
+
+  ['rules', 'b_rules', (m, D) => {
+    const p = panel(0);
+    lab(p, 'rules', 800, 100, m('rules'), { size: 44, font: SERIF, weight: 600, fill: EV.gold });
+    const cards = [['quality', 470, 260], ['subtract', 1130, 260], ['processed', 470, 480], ['fasting', 1130, 480]];
+    cards.forEach(([k, x, y], i) => {
+      const g = G(p, { x, y: y + 20, o: 0 });
+      mk('rect', { x: -300, y: -80, width: 600, height: 160, rx: 14, fill: '#121a1e', stroke: i === 3 ? TIME : EV.goldLo, 'stroke-width': 2 }, g);
+      evPara(g, L(k), { x: 0, y: k === 'quality' ? -18 : -4, size: 30, maxW: 540, fill: EV.goldHi, weight: 500 });
+      tw(g, { o: 1, y }, m(k), .45, out);
+    });
+    lab(p, 'qq', 470, 300, m('qq'), { size: 24, fill: EV.dim });
+    // once food is in front of you
+    const pl = G(p, { x: 640, y: 710, o: 0 });
+    mk('ellipse', { cx: 0, cy: 0, rx: 90, ry: 24, fill: '#e8e0cc' }, pl);
+    [[-30, -10, '#d9772e'], [10, -14, VEG], [40, -8, MEAT]].forEach(([cx, cy, c]) => mk('circle', { cx, cy, r: 18, fill: c }, pl));
+    show(pl, m('body'), .4);
+    const bb = a16Pill(p, 'bodyB', 960, 700, { color: STATUS, size: 30, ink: EV.ink, minW: 300 });
+    show(bb, m('body'), .4);
+  }],
+
+  ['check2', 'b_check2', (m, D) => {
+    const p = panel(0);
+    a16Sci(m, D);
+    const tag = (k, x, y, ok, key = k) => { const g = a16Pill(p, key, x, y, { color: ok ? MONEY : STATUS, size: 26, ink: ok ? MONEY : STATUS, minW: 200, maxPill: 300 }); put(g, { s: .7 }); tw(g, { o: 1, s: 1 }, m(k), .4, back); };
+    // 1 sugar + fat
+    lab(p, 'combo', 330, 175, m('combo'), { size: 32, weight: 600, fill: SUGAR });
+    lab(p, 'adults2', 840, 175, m('adults'), { size: 26, fill: EV.ink, maxW: 640 });
+    tag('supported', 1390, 165, true);
+    path(p, 'M120 230H1480', { stroke: EV.faint, 'stroke-width': 1 });
+    // 2 fat fills you up? keto vs low-fat
+    lab(p, 'fills', 330, 320, m('fills'), { size: 32, weight: 600, fill: EV.ink, maxW: 400 });
+    lab(p, 'keto', 640, 292, m('keto'), { size: 22, anchor: 'end', fill: EV.ink });
+    a16Bar(p, 660, 272, 320, 26, STATUS, m('keto'), D);
+    lab(p, 'lowfat', 905, 348, m('lowfat'), { size: 22, anchor: 'start', fill: VEG, maxW: 330 });
+    a16Bar(p, 660, 326, 230, 26, VEG, m('lowfat'), D);
+    lab(p, 'calories', 1000, 294, m('calories'), { size: 26, anchor: 'start', fill: STATUS, weight: 600, maxW: 270 });
+    tag('not', 1390, 320, false);
+    path(p, 'M120 380H1480', { stroke: EV.faint, 'stroke-width': 1 });
+    // 3 processed food
+    lab(p, 'processed2', 330, 445, m('processed'), { size: 32, weight: 600, fill: EV.ink, maxW: 400 });
+    lab(p, 'calories2', 840, 445, m('calories2'), { size: 28, fill: STATUS, weight: 600 });
+    tag('yes', 1390, 435, true, 'supported');
+    path(p, 'M120 490H1480', { stroke: EV.faint, 'stroke-width': 1 });
+    // 4 fasting
+    lab(p, 'fasting2', 330, 560, m('fasting'), { size: 32, weight: 600, fill: TIME, maxW: 400 });
+    lab(p, 'lost', 840, 545, m('lost'), { size: 26, fill: EV.ink, maxW: 640 });
+    lab(p, 'quit', 840, 590, m('quit'), { size: 26, fill: STATUS, maxW: 640 });
+    a16Stamp(p, 'verdict2', 800, 680, m('verdict'));
+    lab(p, 'magic', 800, 752, m('magic'), { size: 30, font: SERIF, weight: 600, fill: EV.goldHi });
+    lab(p, 'doctor', 800, 805, m('doctor'), { size: 24, fill: SUGAR, maxW: 1300 });
+  }],
+
+  ['q2', 'b_q2', (m, D) => {
+    const p = panel(0);
+    a16Ground(p, 430);
+    const fz = a16Faisal(p, { x: 330, y: 430, s: .5 });
+    evBreathe(fz, D); evMood(fz, 'tense', .4);
+    // a cafeteria table: kunafa and sweet tea; a clock at four
+    mk('rect', { x: 700, y: 300, width: 600, height: 20, rx: 6, fill: '#3a2f22' }, p);
+    path(p, 'M760 320V430M1240 320V430', { stroke: '#3a2f22', 'stroke-width': 10 });
+    a16Kunafa(p, 880, 280, 1);
+    const cup = G(p, { x: 1140, y: 270 });
+    path(cup, 'M-30 -30H30L24 28H-24Z', { fill: '#e8e0cc' }); path(cup, 'M30 -16Q50 -10 28 10', { stroke: '#e8e0cc', 'stroke-width': 5 });
+    const ck = G(p, { x: 1000, y: 130 });
+    mk('circle', { cx: 0, cy: 0, r: 60, fill: '#10171b', stroke: TIME, 'stroke-width': 3 }, ck);
+    path(ck, 'M0 0V-44M0 0L36 20', { stroke: EV.goldHi, 'stroke-width': 4 });
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-first', prompt: [L('q2p')],
+    build: choice([[L('q2a')], [L('q2b')], [L('q2c')]], 1, L('q2y'), [L('q2na'), null, L('q2nc')]),
+  }], done) }],
+
+  ['workout', 'b_workout', (m, D) => {
+    const p = panel(0);
+    // early morning beside a Dubai building's parking lot
+    const sky = G(p);
+    evGlow(sky, 1300, 780, 400, 'Warm', .4);
+    a16Ground(p, 780);
+    path(p, 'M120 790H1500', { stroke: EV.dim, 'stroke-width': 3, 'stroke-dasharray': '6 60', opacity: .4 });
+    lab(p, 'morning', 800, 100, m('morning'), { size: 40, font: SERIF, weight: 600, fill: EV.gold });
+    const nt = evBubble(p, L('notime'), { x: 1080, y: 300, w: 440, size: 30, edge: STATUS });
+    tw(nt, { o: 1, s: 1 }, m('notime'), .4, back);
+    const pr = evBubble(p, L('priority'), { x: 1080, y: 450, w: 460, size: 30, edge: EV.gold, fill: EV.goldHi });
+    tw(pr, { o: 1, s: 1 }, m('priority'), .4, back);
+    tw(nt, { o: .35 }, m('priority'), .4);
+    const fz = a16Faisal(p, { x: 450, y: 780, s: .6 });
+    put(fz.g, { o: 0 }); show(fz.g, m('faisal'), .4);
+    lab(p, 'faisal', 450, 835, m('faisal'), { size: 26, weight: 600, maxW: 560 });
+    // the rope: one clock drives the swing and the hop
+    const rg = G(p, { x: 450, y: 780, s: .6, o: 0 });
+    const rope = path(rg, 'M-50 -150Q0 20 50 -150', { stroke: EV.goldHi, 'stroke-width': 4 });
+    show(rg, m('skips'), .3);
+    prog(q => { const t = q * D, on = t >= m('skips'), ph = on ? (t - m('skips')) * 7 : Math.PI;
+      const Y = -200 + 240 * Math.cos(ph);
+      rope.setAttribute('d', `M-50 -150Q0 ${(Y * 1.4 + 60).toFixed(1)} 50 -150`);
+      const hop = on ? 22 * Math.max(0, Math.cos(ph)) : 0;
+      put(fz.g, { y: 780 - hop * .6 }); put(rg, { y: 780 - hop * .6 }); }, 0, D, lin);
+    evArm(fz, -1, 18, -20, m('skips'), .3); evArm(fz, 1, -18, 20, m('skips'), .3);
+    evMood(fz, 'smile', m('wait'));
+    lab(p, 'skips', 640, 560, m('skips'), { size: 26, fill: EV.ink, anchor: 'start' });
+    const wt = a16Pill(p, 'wait', 1080, 590, { color: TIME, size: 28, ink: EV.ink, minW: 300 }); show(wt, m('wait'), .4);
+    const hw = a16Pill(p, 'hard', 950, 690, { color: STATUS, size: 28, ink: EV.ink, minW: 240 }); show(hw, m('hard'), .4);
+    lab(p, 'easy', 1110, 700, m('easy'), { size: 30, fill: EV.goldHi, weight: 600, anchor: 'start' });
+    // any kind, the one you enjoy; walking meetings
+    const q = panel(m('matters'));
+    put(q, { o: 0 }); show(q, m('matters'), .4);
+    a16Ground(q, 820);
+    lab(q, 'matters', 800, 100, m('matters'), { size: 40, font: SERIF, weight: 600, fill: EV.gold });
+    const yg = G(q, { x: 400, y: 330, o: 0 });
+    const yp = evPerson(yg, { kind: 'f', x: 0, y: 90, s: .32 });
+    evArm(yp, -1, 160, 0, 0, .01); evArm(yp, 1, -160, 0, 0, .01);
+    show(yg, m('yoga'), .4);
+    lab(q, 'yoga', 400, 470, m('yoga'), { size: 28, fill: EV.goldHi });
+    const fb = a16Ball(q, 800, 330); show(fb, m('football'), .4);
+    lab(q, 'football', 800, 470, m('football'), { size: 28, fill: EV.goldHi });
+    const db = a16Dumbbell(q, 1200, 330); show(db, m('weights'), .4);
+    lab(q, 'weights', 1200, 470, m('weights'), { size: 28, fill: EV.goldHi });
+    lab(q, 'enjoy', 800, 540, m('enjoy'), { size: 32, font: SERIF, italic: true, weight: 600, fill: EV.goldHi });
+    const n1 = evPerson(q, { kind: 'f', x: 160, y: 820, s: .45 }), n2 = a16Man(q, { x: 260, y: 820, s: .45 }, '#4a5868', '#36414d');
+    put(n1.g, { o: 0 }); put(n2.g, { o: 0 }); show(n1.g, m('walking'), .3); show(n2.g, m('walking'), .3);
+    evWalk(n1, 160, 560, m('walking'), D, 50); evWalk(n2, 260, 660, m('walking'), D, 50);
+    lab(q, 'walking', 1150, 600, m('walking'), { size: 32, weight: 600, fill: EV.ink });
+    [['sun', 660], ['shorter', 730], ['slides', 800]].forEach(([k, y]) => { const g = a16Pill(q, k, 1150, y, { color: WEALTH, size: 26, minW: 240 }); show(g, m(k), .4); });
+  }],
+
+  ['check3', 'b_check3', (m, D) => {
+    const p = panel(0);
+    a16Sci(m, D);
+    lab(p, 'every', 800, 140, m('every'), { size: 42, font: SERIF, italic: true, fill: EV.ink });
+    path(p, 'M800 190V600', { stroke: EV.faint, 'stroke-width': 1.5 });
+    // left: weekend warriors (death rate relative to inactive)
+    lab(p, 'adults3', 450, 215, m('adults'), { size: 26, fill: EV.dim });
+    const BX = 160, BW = 520;
+    [['inactive', 1, EV.dim, 290], ['weekend', .7, SCI, 380], ['regular', .65, EV.gold, 470]].forEach(([k, v, c, y]) => {
+      lab(p, k, BX, y - 12, m(k), { size: 22, anchor: 'start', fill: EV.ink, maxW: 600 });
+      a16Bar(p, BX, y, BW * v, 26, c, m(k), D);
+    });
+    lab(p, 'lower', 450, 535, m('lower'), { size: 26, fill: SCI, weight: 600 });
+    lab(p, 'daily', 450, 585, m('daily'), { size: 24, fill: EV.ink });
+    lab(p, 'week', 450, 625, m('week'), { size: 26, fill: EV.goldHi, weight: 600 });
+    // right: walking and creative ideas
+    lab(p, 'walk', 1160, 215, m('walk'), { size: 30, weight: 600, fill: EV.goldHi });
+    lab(p, 'people3', 1160, 258, m('people'), { size: 24, fill: EV.dim });
+    const BY = 470;
+    path(p, `M980 ${BY}H1340`, { stroke: EV.dim, 'stroke-width': 2 });
+    const vb = (x, h, c, k) => { const r = mk('rect', { x: x - 45, y: BY, width: 90, height: 0, rx: 4, fill: c }, p);
+      prog(q => { const t = q * D, hh = h * io(evU(t, m('ideas'), .7)); r.setAttribute('y', BY - hh); r.setAttribute('height', hh); }, 0, D, lin);
+      lab(p, k, x, BY + 30, m('walk'), { size: 20, fill: EV.dim }); };
+    vb(1080, 90, EV.faint, 'sitting'); vb(1240, 160, SCI, 'walkingB');
+    lab(p, 'ideas', 1160, 540, m('ideas'), { size: 26, fill: EV.goldHi, weight: 600 });
+    lab(p, 'worse', 1160, 585, m('worse'), { size: 22, fill: STATUS, maxW: 620 });
+    a16Stamp(p, 'verdict3', 800, 690, m('verdict'));
+    lab(p, 'brain', 800, 765, m('brain'), { size: 30, font: SERIF, weight: 600, fill: EV.goldHi });
+    lab(p, 'doctor3', 800, 812, m('doctor'), { size: 24, fill: SUGAR });
+  }],
+
+  ['q3', 'b_q3', (m, D) => {
+    const p = panel(0);
+    a16Ground(p, 430);
+    const ni = evPerson(p, { kind: 'f', x: 330, y: 430, s: .5 });
+    evBreathe(ni, D); evMood(ni, 'tense', .4);
+    // a pile of exercise books to mark, and a clock
+    for (let i = 0; i < 6; i++) mk('rect', { x: 800 - (i % 2) * 6, y: 410 - i * 26, width: 220, height: 24, rx: 3, fill: ['#2b4a5a', '#5a4a3a', '#46603f'][i % 3], stroke: EV.goldHi, 'stroke-width': 1 }, p);
+    const ck = G(p, { x: 1250, y: 230 });
+    mk('circle', { cx: 0, cy: 0, r: 70, fill: '#10171b', stroke: TIME, 'stroke-width': 3 }, ck);
+    const hd = G(ck); path(hd, 'M0 6V-54', { stroke: EV.goldHi, 'stroke-width': 4 });
+    prog(q => { put(hd, { r: 360 * q * D / 6 }); }, 0, D, lin);
+  }, { ask: done => quiz(BAND, [{
+    id: 'c-notime', prompt: [L('q3p')],
+    build: choice([[L('q3a')], [L('q3b')], [L('q3c')]], 1, L('q3y'), [L('q3na'), null, L('q3nc')]),
+  }], done) }],
+
+  ['hard', 'b_hard', (m, D) => {
+    const p = panel(0);
+    lab(p, 'trainer', 800, 90, m('trainer'), { size: 30, fill: EV.dim, italic: true, font: SERIF });
+    // two roads over the years: how hard life feels
+    const X0 = 200, X1 = 1080, Y0 = 600, Y1 = 180;
+    const ax = path(p, `M${X0} ${Y1}V${Y0}H${X1}`, { stroke: EV.dim, 'stroke-width': 2 }, { d: 0 });
+    draw(ax, m('easyR'), .6);
+    lab(p, 'howHard', X0 - 16, Y1 + 10, m('hardW'), { size: 22, fill: EV.dim, anchor: 'end' });
+    lab(p, 'today', X0 + 30, Y0 + 36, m('easyR'), { size: 22, fill: EV.dim });
+    lab(p, 'later', X1 - 30, Y0 + 36, m('laterW'), { size: 22, fill: EV.dim });
+    const er = path(p, `M${X0} 560C500 560 700 520 ${X1} 220`, { stroke: STATUS, 'stroke-width': 5 }, { d: 0 });
+    draw(er, m('easyR'), 1.2);
+    lab(p, 'easyR', 1110, 230, m('easyR'), { size: 26, anchor: 'start', fill: STATUS, weight: 600, maxW: 420 });
+    const hr = path(p, `M${X0} 240C460 260 640 560 ${X1} 560`, { stroke: EV.gold, 'stroke-width': 5 }, { d: 0 });
+    draw(hr, m('hardR'), 1.2);
+    lab(p, 'hardR', 1130, 560, m('hardR'), { size: 26, anchor: 'start', fill: EV.goldHi, weight: 600, maxW: 420 });
+    const wl = a16Icon(p, X1, 548, EV.goldHi, 1, 0);
+    const wg = evGlow(p, X1, 520, 90, 'Gold', 0);
+    show(wl, m('well'), .4); tw(wg, { o: .9 }, m('well'), .5);
+    lab(p, 'well', 1130, 620, m('well'), { size: 26, anchor: 'start', fill: EV.ink, maxW: 360 });
+    [['save', 360], ['values', 800], ['relations', 1240]].forEach(([k, x]) => { const g = a16Pill(p, k, x, 720, { color: WEALTH, size: 28, minW: 240 }); put(g, { y: 740 }); tw(g, { o: 1, y: 720 }, m(k), .4, out); });
+    lab(p, 'gain', 800, 820, m('gain'), { size: 32, font: SERIF, weight: 600, fill: EV.goldHi, maxW: 1300 });
+  }],
+
+  ['wrap', 'b_wrap', (m) => {
+    const p = panel(0);
+    evText(p, L('b_wrap'), { x: 800, y: 130, size: 52, font: SERIF, weight: 600, fill: EV.gold });
+    const cols = [EV.goldHi, HEALTH, SCI, TIME];
+    ['w1', 'w2', 'w3', 'w4'].forEach((k, i) => {
+      const g = G(p, { x: -30, y: 260 + i * 150, o: 0 });
+      mk('circle', { cx: 200, cy: -10, r: 30, fill: 'none', stroke: cols[i], 'stroke-width': 2.5 }, g);
+      T(g, String(i + 1), { x: 200, y: 1, size: 30, fill: cols[i], weight: 600, anchor: 'middle', font: SANS });
+      const tx = evPara(g, L(k), { x: 260, y: 0, size: 36, maxW: 1150, anchor: 'start', weight: 400 });
+      put(tx, { y: tx._n > 1 ? -20 : 0 });
+      tw(g, { o: 1, x: 0 }, m(k), .6, out);
+    });
+  }],
+
+  ['final1', 'b_prac', () => { panel(0); }, { ask: done => quiz(SCREEN, PRACTICE, done, L('practice')) }],
+  ['finish', 'b_fin', () => { panel(0); }, { ask: finishCard }],
+].map(([id, title, run, extra]) => ({ id, title: L(title), run, lead: false, ...extra }));
+
+/* ---------- questions (used inside ask closures) ---------- */
+Object.assign(TXT.en, {
+  q1p: 'Hiba’s classmate Riya is choosing her career by copying the top student in their year: the same course, the same internships, the same city. Riya has never asked herself what she enjoys. What would Naval tell her?',
+  q1a: 'Good plan: copy the most successful person as exactly as she can.',
+  q1b: 'Learn from her, but listen to what Riya herself is drawn to, and look for the work that needs that.',
+  q1c: 'Ignore everyone’s advice completely.',
+  q1y: 'Right. Listen and learn, but don’t copy. Nobody beats Riya at being Riya.',
+  q1na: 'Copying makes her a second-best version of someone else. Nobody beats you at being you.',
+  q1nc: 'Naval says to listen and absorb from others; just don’t imitate them.',
+  q2p: 'Faisal eats lunch at a Dubai cafeteria, then a slice of kunafa with sweet tea, and he’s hungry again by four. He also takes medicine for diabetes. Which first step fits the chapter and the evidence?',
+  q2a: 'Switch to a bacon-heavy keto diet, so the fat keeps him full.',
+  q2b: 'Drop the kunafa-and-sweet-tea habit, cut processed snacks, and check any big diet change with his doctor.',
+  q2c: 'Start fasting every other day this week, on his own.',
+  q2y: 'Right. Sugar plus fat drives overeating, processed food adds calories, and with diabetes medicine his doctor should hear about big changes.',
+  q2na: 'In the hospital trial, people ate about 700 calories a day more on keto, and a big switch on diabetes medicine needs his doctor.',
+  q2nc: 'Fasting wasn’t easier in the year-long trial, and on diabetes medicine it can be risky without his doctor.',
+  q3p: 'Nisha says she can’t exercise: classes, marking and family leave her no time. What would Naval say?',
+  q3a: 'Fair enough. She should wait for the summer holidays.',
+  q3b: '“No time” means “not a priority”. If health comes first, she can pick something she enjoys, even a short walk, and do it most days.',
+  q3c: 'Only a full hour at the gym counts, so there’s no point.',
+  q3y: 'Right. Make health the priority and the time appears. Any kind she enjoys counts, and any amount beats none.',
+  q3na: 'Naval hears “no time” as “not a priority”. Waiting months gives up the habit.',
+  q3nc: 'The kind matters less than doing it. Even one or two sessions a week beat none.',
+  p1p: 'What does Naval say about the people you admire?',
+  p1a: 'Copy them as closely as you can.',
+  p1b: 'Listen and learn from them, but don’t copy: nobody beats you at being you.',
+  p1c: 'Avoid them, so they can’t influence you.',
+  p1y: 'Yes. Learn from them, then find the work that needs you most.',
+  p1na: 'You’ll never be as good at being them as they are. Learn, but don’t imitate.',
+  p1nc: 'Naval says to listen and absorb. Just don’t try to become them.',
+  p2p: 'In Naval’s order of priorities, what comes first?',
+  p2a: 'His work', p2b: 'His family’s well-being', p2c: 'His own physical health', p2d: 'His happiness',
+  p2y: 'Yes. Body first, then mind and spirit, then his family, then the world.',
+  p2na: 'Work comes after his health and his family’s.',
+  p2nb: 'His family’s well-being is fifth, after his own and his family’s health.',
+  p2nd: 'He puts his own health above even his happiness.',
+  p3p: 'Rafeek in Kochi feels tired and plans to buy three supplements for energy. What would “subtract before you add” suggest?',
+  p3a: 'First take something away, like the late-night sweets and fizzy drinks, before adding pills.',
+  p3b: 'Eat half of every meal, whatever it is.',
+  p3c: 'Stop his blood-pressure tablets to make room for the supplements.',
+  p3y: 'Yes. Remove what harms first; and if he takes medicines, check new supplements with his doctor.',
+  p3na: 'Naval puts what you eat before how much. Halving junk is still junk.',
+  p3nc: 'Never stop prescribed medicine on your own. Talk to your doctor.',
+  p4p: 'Science check: mark each statement true or false.',
+  p4r1: 'In a Dutch trial, ending showers with cold water cut sick-leave days, but not the number of days people were ill.',
+  p4r2: 'When people ate as much as they liked, a keto diet left them eating fewer calories than a low-fat plant diet.',
+  p4r3: 'In a year-long trial, fasting every other day beat daily calorie cutting for weight loss.',
+  p4r4: 'Weekend warriors, who exercised in one or two sessions a week, had a lower death rate than inactive people.',
+  p4w1: 'True. Sick leave fell by 29%, but illness days didn’t change.',
+  p4w2: 'False. They ate about 700 calories a day more on keto.',
+  p4w3: 'False. Weight loss was about the same, and more people quit fasting.',
+  p4w4: 'True. About 30% lower, close to people who exercised regularly.',
+});
+Object.assign(TXT.ml, {
+  q1p: 'ഹിബയുടെ സഹപാഠി റിയ, ക്ലാസിലെ ഒന്നാം റാങ്കുകാരിയെ പകർത്തി കരിയർ തിരഞ്ഞെടുക്കുന്നു: അതേ കോഴ്സ്, അതേ ഇന്റേൺഷിപ്പുകൾ, അതേ നഗരം. തനിക്ക് എന്താണ് ഇഷ്ടമെന്ന് റിയ ഒരിക്കലും സ്വയം ചോദിച്ചിട്ടില്ല. നവൽ എന്ത് പറയും?',
+  q1a: 'നല്ല പ്ലാൻ: ഏറ്റവും വിജയിച്ചയാളെ പറ്റുന്നത്ര കൃത്യമായി പകർത്തുക.',
+  q1b: 'അവളിൽ നിന്ന് പഠിക്കുക; പക്ഷേ തനിക്ക് എന്തിലാണ് താൽപര്യമെന്ന് കേൾക്കുക, അത് ആവശ്യമുള്ള ജോലി തിരയുക.',
+  q1c: 'എല്ലാവരുടെയും ഉപദേശം പൂർണമായി അവഗണിക്കുക.',
+  q1y: 'ശരി. കേൾക്കൂ, പഠിക്കൂ, പകർത്തരുത്. റിയയാകുന്നതിൽ റിയയെ ആരും തോൽപ്പിക്കില്ല.',
+  q1na: 'പകർത്തിയാൽ അവൾ മറ്റൊരാളുടെ രണ്ടാംതരം പതിപ്പാകും. നിങ്ങളാകുന്നതിൽ നിങ്ങളെ ആരും തോൽപ്പിക്കില്ല.',
+  q1nc: 'മറ്റുള്ളവരെ കേൾക്കാനും പഠിക്കാനുമാണ് നവൽ പറയുന്നത്; അനുകരിക്കരുത് എന്ന് മാത്രം.',
+  q2p: 'ദുബായിലെ ഒരു കഫ്റ്റീരിയയിൽ ഊണ് കഴിഞ്ഞ് ഫൈസൽ ഒരു കഷണം കുനാഫയും മധുരച്ചായയും കഴിക്കും; നാലുമണിയോടെ വീണ്ടും വിശക്കും. പ്രമേഹത്തിന് മരുന്നും കഴിക്കുന്നുണ്ട്. അധ്യായത്തിനും തെളിവുകൾക്കും ചേരുന്ന ആദ്യപടി ഏത്?',
+  q2a: 'ബേക്കൺ നിറഞ്ഞ കീറ്റോ ഡയറ്റിലേക്ക് മാറുക; കൊഴുപ്പ് വയർ നിറച്ചുവയ്ക്കും.',
+  q2b: 'കുനാഫ-മധുരച്ചായ ശീലം നിർത്തുക, സംസ്കരിച്ച പലഹാരങ്ങൾ കുറയ്ക്കുക; വലിയ ഡയറ്റ് മാറ്റങ്ങൾ ഡോക്ടറോട് ചോദിച്ച് മാത്രം.',
+  q2c: 'ഈ ആഴ്ച മുതൽ ഒന്നിടവിട്ട ദിവസങ്ങളിൽ സ്വന്തം ഇഷ്ടത്തിന് ഉപവസിക്കുക.',
+  q2y: 'ശരി. പഞ്ചസാര-കൊഴുപ്പ് ജോടി അമിതമായി തീറ്റിക്കും, സംസ്കരിച്ച ഭക്ഷണം കലോറി കൂട്ടും; പ്രമേഹമരുന്ന് കഴിക്കുന്നതിനാൽ വലിയ മാറ്റങ്ങൾ ഡോക്ടർ അറിയണം.',
+  q2na: 'ആശുപത്രി പരീക്ഷണത്തിൽ കീറ്റോയിൽ ആളുകൾ ദിവസം 700 കലോറിയോളം കൂടുതൽ കഴിച്ചു; പ്രമേഹമരുന്നിനിടെ വലിയ മാറ്റത്തിന് ഡോക്ടർ വേണം.',
+  q2nc: 'ഒരു വർഷത്തെ പരീക്ഷണത്തിൽ ഉപവാസം എളുപ്പമായില്ല; പ്രമേഹമരുന്ന് കഴിക്കുമ്പോൾ ഡോക്ടറില്ലാതെ അത് അപകടവുമാകാം.',
+  q3p: 'ക്ലാസും പേപ്പർ നോക്കലും കുടുംബവും കാരണം വ്യായാമത്തിന് സമയമില്ലെന്ന് നിഷ പറയുന്നു. നവൽ എന്ത് പറയും?',
+  q3a: 'ന്യായം തന്നെ. വേനലവധി വരെ കാത്തിരിക്കട്ടെ.',
+  q3b: '“സമയമില്ല” എന്നാൽ “മുൻഗണനയല്ല”. ആരോഗ്യം ആദ്യമെങ്കിൽ, ഇഷ്ടമുള്ളത് (ഒരു ചെറിയ നടത്തമായാലും) മിക്ക ദിവസവും ചെയ്യാം.',
+  q3c: 'ജിമ്മിൽ ഒരു മണിക്കൂർ മുഴുവൻ ചെയ്താലേ കണക്കിലുള്ളൂ; അതുകൊണ്ട് കാര്യമില്ല.',
+  q3y: 'ശരി. ആരോഗ്യം മുൻഗണനയാക്കിയാൽ സമയം ഉണ്ടാകും. ഇഷ്ടമുള്ള ഏത് തരവും കണക്കിലുണ്ട്; എത്ര കുറച്ചായാലും ഒന്നുമില്ലാത്തതിനെക്കാൾ നല്ലത്.',
+  q3na: '“സമയമില്ല” എന്നത് നവൽ കേൾക്കുന്നത് “മുൻഗണനയല്ല” എന്നാണ്. മാസങ്ങൾ കാത്തിരുന്നാൽ ശീലം പോകും.',
+  q3nc: 'ഏത് തരം എന്നതിനെക്കാൾ ചെയ്യുന്നതാണ് പ്രധാനം. ആഴ്ചയിൽ ഒന്നോ രണ്ടോ തവണ പോലും ഒന്നുമില്ലാത്തതിനെക്കാൾ നല്ലത്.',
+  p1p: 'നിങ്ങൾ ആരാധിക്കുന്നവരെക്കുറിച്ച് നവൽ എന്ത് പറയുന്നു?',
+  p1a: 'അവരെ പറ്റുന്നത്ര അടുത്ത് പകർത്തുക.',
+  p1b: 'അവരെ കേൾക്കൂ, പഠിക്കൂ, പക്ഷേ പകർത്തരുത്: നിങ്ങളാകുന്നതിൽ നിങ്ങളെ ആരും തോൽപ്പിക്കില്ല.',
+  p1c: 'അവർ സ്വാധീനിക്കാതിരിക്കാൻ അവരെ ഒഴിവാക്കുക.',
+  p1y: 'അതെ. അവരിൽ നിന്ന് പഠിക്കൂ; പിന്നെ നിങ്ങളെ ഏറ്റവും ആവശ്യമുള്ള ജോലി കണ്ടെത്തൂ.',
+  p1na: 'അവരാകുന്നതിൽ അവരോളം നിങ്ങൾ ഒരിക്കലും നന്നാവില്ല. പഠിക്കൂ, അനുകരിക്കരുത്.',
+  p1nc: 'കേൾക്കാനും ഉൾക്കൊള്ളാനുമാണ് നവൽ പറയുന്നത്. അവരായിത്തീരാൻ ശ്രമിക്കരുത് എന്ന് മാത്രം.',
+  p2p: 'നവലിന്റെ മുൻഗണനാക്രമത്തിൽ ഒന്നാമത് എന്താണ്?',
+  p2a: 'അദ്ദേഹത്തിന്റെ ജോലി', p2b: 'കുടുംബത്തിന്റെ ക്ഷേമം', p2c: 'സ്വന്തം ശാരീരികാരോഗ്യം', p2d: 'അദ്ദേഹത്തിന്റെ സന്തോഷം',
+  p2y: 'അതെ. ആദ്യം ശരീരം, പിന്നെ മനസ്സും ആത്മാവും, പിന്നെ കുടുംബം, പിന്നെ ലോകം.',
+  p2na: 'സ്വന്തം ആരോഗ്യത്തിനും കുടുംബത്തിന്റേതിനും ശേഷമാണ് ജോലി.',
+  p2nb: 'കുടുംബത്തിന്റെ ക്ഷേമം അഞ്ചാമതാണ്; സ്വന്തം ആരോഗ്യത്തിനും കുടുംബത്തിന്റെ ആരോഗ്യത്തിനും ശേഷം.',
+  p2nd: 'സന്തോഷത്തിനും മുകളിലാണ് അദ്ദേഹം സ്വന്തം ആരോഗ്യം വയ്ക്കുന്നത്.',
+  p3p: 'കൊച്ചിയിലെ റഫീഖിന് ക്ഷീണമുണ്ട്; ഊർജത്തിന് മൂന്ന് സപ്ലിമെന്റുകൾ വാങ്ങാൻ പ്ലാൻ ചെയ്യുന്നു. “കൂട്ടുംമുമ്പ് കുറയ്ക്കൂ” എന്നതിന്റെ നിർദേശം എന്ത്?',
+  p3a: 'ഗുളികകൾ കൂട്ടുംമുമ്പ്, രാത്രിയിലെ മധുരവും സോഫ്റ്റ് ഡ്രിങ്കും പോലെ എന്തെങ്കിലും ഒഴിവാക്കുക.',
+  p3b: 'എന്ത് കഴിച്ചാലും ഓരോ ഊണും പകുതിയാക്കുക.',
+  p3c: 'സപ്ലിമെന്റുകൾക്ക് ഇടം കിട്ടാൻ ബിപിയുടെ ഗുളിക നിർത്തുക.',
+  p3y: 'അതെ. ദോഷമുള്ളത് ആദ്യം ഒഴിവാക്കൂ; മരുന്ന് കഴിക്കുന്നുണ്ടെങ്കിൽ പുതിയ സപ്ലിമെന്റുകൾ ഡോക്ടറോട് ചോദിച്ച് മാത്രം.',
+  p3na: 'എത്ര കഴിക്കുന്നു എന്നതിനു മുമ്പ് എന്ത് കഴിക്കുന്നു എന്നതാണ് നവലിന്. ജങ്ക് പകുതിയാക്കിയാലും ജങ്ക് തന്നെ.',
+  p3nc: 'ഡോക്ടർ തന്ന മരുന്ന് ഒരിക്കലും സ്വയം നിർത്തരുത്. ഡോക്ടറോട് സംസാരിക്കൂ.',
+  p4p: 'ശാസ്ത്രീയ പരിശോധന: ഓരോ വാക്യവും ശരിയോ തെറ്റോ എന്ന് അടയാളപ്പെടുത്തൂ.',
+  p4r1: 'നെതർലൻഡ്സിലെ പരീക്ഷണത്തിൽ, കുളിയുടെ അവസാനം തണുത്ത വെള്ളം രോഗാവധി കുറച്ചു; പക്ഷേ അസുഖമുള്ള ദിവസങ്ങൾ കുറച്ചില്ല.',
+  p4r2: 'ഇഷ്ടംപോലെ കഴിക്കാമായിരുന്നപ്പോൾ, കീറ്റോയിൽ ആളുകൾ കൊഴുപ്പ് കുറഞ്ഞ സസ്യാഹാരത്തെക്കാൾ കുറച്ച് കലോറി കഴിച്ചു.',
+  p4r3: 'ഒരു വർഷത്തെ പരീക്ഷണത്തിൽ, ഭാരം കുറയ്ക്കാൻ ഒന്നിടവിട്ട ദിവസങ്ങളിലെ ഉപവാസം ദിവസേനയുള്ള കലോറി കുറയ്ക്കലിനെ തോൽപ്പിച്ചു.',
+  p4r4: 'ആഴ്ചയിൽ ഒന്നോ രണ്ടോ തവണ വ്യായാമം ചെയ്ത വീക്കെൻഡ് വാരിയേഴ്സിന്, അലസരെക്കാൾ മരണനിരക്ക് കുറവായിരുന്നു.',
+  p4w1: 'ശരി. രോഗാവധി 29% കുറഞ്ഞു; അസുഖ ദിവസങ്ങൾ മാറിയില്ല.',
+  p4w2: 'തെറ്റ്. കീറ്റോയിൽ ദിവസം 700 കലോറിയോളം കൂടുതലാണ് അവർ കഴിച്ചത്.',
+  p4w3: 'തെറ്റ്. ഭാരക്കുറവ് ഏതാണ്ട് ഒരുപോലെ; ഉപവാസം പാതിവഴിയിൽ നിർത്തിയവർ കൂടുതലും.',
+  p4w4: 'ശരി. ഏകദേശം 30% കുറവ്; പതിവായി ചെയ്യുന്നവരോട് ഏറെ അടുത്ത്.',
+});
+const PRACTICE = [
+  { id: 'p-copy', prompt: [L('p1p')], build: choice([[L('p1a')], [L('p1b')], [L('p1c')]], 1, L('p1y'), [L('p1na'), null, L('p1nc')]) },
+  { id: 'p-first', prompt: [L('p2p')], build: choice([[L('p2a')], [L('p2b')], [L('p2c')], [L('p2d')]], 2, L('p2y'), [L('p2na'), L('p2nb'), null, L('p2nd')]) },
+  { id: 'p-subtract', prompt: [L('p3p')], build: choice([[L('p3a')], [L('p3b')], [L('p3c')]], 0, L('p3y'), [null, L('p3na'), L('p3nc')]) },
+  { id: 'p-science', prompt: [L('p4p')], build: grid([
+    { parts: [L('p4r1')], ans: ['t'], why: L('p4w1') },
+    { parts: [L('p4r2')], ans: ['f'], why: L('p4w2') },
+    { parts: [L('p4r3')], ans: ['f'], why: L('p4w3') },
+    { parts: [L('p4r4')], ans: ['t'], why: L('p4w4') },
+  ], TF, { multi: false, text: true }) },
+];
+
+/* ---------- language switch and the portrait nudge ---------- */
+(function () {
+  const sw = document.createElement('div');
+  sw.className = 'ev-lang'; sw.setAttribute('role', 'group'); sw.setAttribute('aria-label', 'Language');
+  [['en', 'English', ''], ['ml', 'മലയാളം', 'ml']].forEach(([code, label, cls]) => {
+    const b = document.createElement('button');
+    b.textContent = label; if (cls) b.className = cls;
+    b.setAttribute('aria-pressed', String(LANG === code));
+    b.onclick = () => {
+      if (code === LANG) return;
+      try { localStorage.setItem('almanack:lang', code); } catch (e) {}
+      const u = new URL(location.href); u.searchParams.set('lang', code); u.searchParams.delete('beat'); u.searchParams.delete('t');
+      location.href = u.toString();
+    };
+    sw.append(b);
+  });
+  document.getElementById('frame').append(sw);
+  const r = document.createElement('div');
+  r.className = 'ev-rotate';
+  r.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M3 8a9 9 0 0 1 3-4M21 16a9 9 0 0 1-3 4"/></svg>'
+    + (LANG === 'ml' ? 'മികച്ച കാഴ്ചയ്ക്ക് ഫോൺ തിരിക്കൂ' : 'Turn your phone sideways for the best view');
+  document.body.append(r);
+})();
+
+evDefs();
+// Start once the fonts are in, so text measured for wrapping matches what is drawn (never wait more than 2.5 s).
+const FONTS = ML ? ['400 30px "Noto Sans Malayalam"', '600 30px "Noto Sans Malayalam"', '600 30px "Noto Serif Malayalam"', '500 30px Outfit']
+  : ['400 30px Outfit', '500 30px Outfit', '600 30px Outfit', '600 30px "Cormorant Garamond"', 'italic 500 30px "Cormorant Garamond"'];
+Promise.race([Promise.all(FONTS.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 2500))]).then(boot, boot);
+</script>
+</body>
+</html>
