@@ -2,8 +2,8 @@ SECRETS OF THE MILLIONAIRE MIND · YMU animated study book (English + Malayalam)
 Six chapters (the introduction and Part One of the book). A static website: no server code, no database, no build step.
 
 LINKS TO SEND
-  Whole book:     https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/
-  One chapter:    https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/ch01/ ... /ch06/
+  Whole book:     https://library.theyoungmakers.com/secrets-millionaire-mind/
+  One chapter:    https://library.theyoungmakers.com/secrets-millionaire-mind/ch01/ ... /ch06/
   In Malayalam:   add ?lang=ml   e.g. .../ch03/?lang=ml      In English: ?lang=en
   The reader's language choice is remembered on their phone.
 

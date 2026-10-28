@@ -407,7 +407,7 @@ window.TIMINGS = {
   ]
  },
  "seminar": {
-  "dur": 23.448,
+  "dur": 23.472,
   "marks": {
    "alq": 0.996,
    "nisha": 3.603,
@@ -415,7 +415,7 @@ window.TIMINGS = {
    "same": 7.486,
    "six": 15.405,
    "doubled": 17.761,
-   "much": 20.932
+   "much": 20.958
   },
   "cues": [
    [
@@ -424,7 +424,7 @@ window.TIMINGS = {
    ],
    [
     3.603,
-    "\u0d28\u0d3f\u0d37\u0d2f\u0d41\u0d02 \u0d2b\u0d48\u0d38\u0d32\u0d41\u0d02 \u0d05\u0d1f\u0d41\u0d24\u0d4d\u0d24\u0d1f\u0d41\u0d24\u0d4d\u0d24\u0d4d \u0d07\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d41."
+    "\u0d28\u0d3f\u0d37\u0d2f\u0d41\u0d02 \u0d37\u0d3e\u0d2b\u0d3f\u0d2f\u0d41\u0d02 \u0d05\u0d1f\u0d41\u0d24\u0d4d\u0d24\u0d1f\u0d41\u0d24\u0d4d\u0d24\u0d4d \u0d07\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d41."
    ],
    [
     6.696,
@@ -439,11 +439,11 @@ window.TIMINGS = {
     "\u0d06\u0d31\u0d4d \u0d2e\u0d3e\u0d38\u0d02 \u0d15\u0d34\u0d3f\u0d1e\u0d4d\u0d1e\u0d4d, \u0d28\u0d3f\u0d37\u0d2f\u0d41\u0d1f\u0d46 \u0d15\u0d4d\u0d32\u0d2f\u0d28\u0d4d\u0d31\u0d41\u0d15\u0d7e \u0d07\u0d30\u0d1f\u0d4d\u0d1f\u0d3f\u0d2f\u0d3e\u0d2f\u0d3f."
    ],
    [
-    19.353,
-    "\u0d2b\u0d48\u0d38\u0d32\u0d4b?"
+    19.354,
+    "\u0d37\u0d3e\u0d2b\u0d3f\u0d2f\u0d4b?"
    ],
    [
-    20.932,
+    20.958,
     "\u0d15\u0d3e\u0d30\u0d4d\u0d2f\u0d2e\u0d3e\u0d2f \u0d2e\u0d3e\u0d31\u0d4d\u0d31\u0d2e\u0d4a\u0d28\u0d4d\u0d28\u0d41\u0d2e\u0d3f\u0d32\u0d4d\u0d32."
    ]
   ]

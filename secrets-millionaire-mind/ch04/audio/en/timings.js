@@ -629,7 +629,7 @@ window.TIMINGS = {
   ]
  },
  "q3": {
-  "dur": 3.024,
+  "dur": 3.096,
   "marks": {},
   "cues": [
    [
@@ -638,7 +638,7 @@ window.TIMINGS = {
    ],
    [
     1.118,
-    "Why does Faisal still feel empty?"
+    "Why does Irfan still feel empty?"
    ]
   ]
  },

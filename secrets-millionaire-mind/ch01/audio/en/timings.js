@@ -399,7 +399,7 @@ window.TIMINGS = {
   "marks": {
    "alq": 1.316,
    "nisha": 3.382,
-   "faisal": 3.882,
+   "faisal": 3.855,
    "same": 6.882,
    "six": 12.671,
    "doubled": 14.868,
@@ -412,7 +412,7 @@ window.TIMINGS = {
    ],
    [
     3.382,
-    "Nisha and Faisal sit side by side."
+    "Nisha and Shafi sit side by side."
    ],
    [
     5.882,
@@ -428,7 +428,7 @@ window.TIMINGS = {
    ],
    [
     15.711,
-    "And Faisal?"
+    "And Shafi?"
    ],
    [
     16.697,

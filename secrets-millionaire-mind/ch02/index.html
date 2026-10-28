@@ -8,10 +8,10 @@
 <meta property="og:site_name" content="The Young Maker Universe">
 <meta property="og:title" content="Roots and Fruits · Secrets of the Millionaire Mind, Chapter 2">
 <meta property="og:description" content="An animated, narrated lesson in English and Malayalam: the inner rules of money, why roots create fruits, and how to make a declaration. With plain science checks.">
-<meta property="og:image" content="https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/og-image.png">
+<meta property="og:image" content="https://library.theyoungmakers.com/secrets-millionaire-mind/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://mahroofcm.github.io/ymulinks/secrets-millionaire-mind/ch02/">
+<meta property="og:url" content="https://library.theyoungmakers.com/secrets-millionaire-mind/ch02/">
 <meta name="twitter:card" content="summary_large_image">
 <title>Roots and Fruits · Secrets of the Millionaire Mind</title>
 <meta name="description" content="Chapter 2 of a YMU study of Secrets of the Millionaire Mind: outer and inner rules of money, roots and fruits, the four worlds, and declarations. English and Malayalam.">
@@ -549,8 +549,8 @@ const BEATS = [
     path(mon, mmBoxD(340, 230, 12), { fill: '#0b1418', stroke: '#3a3830', 'stroke-width': 10 });
     mon._ring = put(path(mon, mmBoxD(370, 260, 18), { stroke: MM.gold, 'stroke-width': 4 }), { o: 0 });
     path(mon, 'M-130 -80H130V60H-130Z', { fill: C2.paper, opacity: .9 });
-    const wrongM = stat(mmText(mon, 'Fathmia & Rashid', { x: 0, y: -2, size: 30, fill: '#2a2318', font: '"Cormorant Garamond",serif', weight: 600 }));
-    const rightM = stat(mmText(mon, 'Fathima & Rashid', { x: 0, y: -2, size: 30, fill: '#1f6b3a', font: '"Cormorant Garamond",serif', weight: 600, o: 0 }));
+    const wrongM = stat(mmText(mon, 'Amenea & Rashid', { x: 0, y: -2, size: 30, fill: '#2a2318', font: '"Cormorant Garamond",serif', weight: 600 }));
+    const rightM = stat(mmText(mon, 'Ameena & Rashid', { x: 0, y: -2, size: 30, fill: '#1f6b3a', font: '"Cormorant Garamond",serif', weight: 600, o: 0 }));
     if (ML) { wrongM.setAttribute('font-size', 30); rightM.setAttribute('font-size', 30); }
     // printer
     const pr = G(sc, { x: 760, y: 640 });
@@ -564,7 +564,7 @@ const BEATS = [
       path(g, 'M-190 -125H190V125H-190Z', { fill: C2.paper, stroke: MM.gold, 'stroke-width': 3 });
       path(g, 'M-172 -107H172V107H-172Z', { stroke: MM.gold, 'stroke-width': 1.2 });
       stat(T(g, '❀  Nikah  ❀', { x: 0, y: -50, size: 24, fill: '#8a6a2c', anchor: 'middle', font: '"Cormorant Garamond",serif' }));
-      g._name = stat(T(g, ok ? 'Fathima & Rashid' : 'Fathmia & Rashid', { x: 0, y: 14, size: 40, fill: '#2a2318', anchor: 'middle', font: '"Cormorant Garamond",serif', weight: 600 }));
+      g._name = stat(T(g, ok ? 'Ameena & Rashid' : 'Amenea & Rashid', { x: 0, y: 14, size: 40, fill: '#2a2318', anchor: 'middle', font: '"Cormorant Garamond",serif', weight: 600 }));
       stat(T(g, 'Sharjah · 12 December', { x: 0, y: 66, size: 22, fill: '#6a5a3c', anchor: 'middle', font: '"Cormorant Garamond",serif' }));
       if (!ok) { g._ring = put(mk('ellipse', { cx: -66, cy: 2, rx: 66, ry: 30, fill: 'none', stroke: MM.bad, 'stroke-width': 4 }, g), { o: 0 }); }
       else { g._tick = G(g, { x: 150, y: -86, o: 0 }); mk('circle', { cx: 0, cy: 0, r: 24, fill: MM.good }, g._tick); path(g._tick, 'M-10 0L-3 8L11 -8', { stroke: '#0b0e10', 'stroke-width': 4 }); }
