@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YMU Library</title>
+<meta name="description" content="Animated study books from The Young Maker Universe. Big ideas from great books as short narrated lessons, in English and Malayalam.">
+<meta name="theme-color" content="#080c0f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Young Maker Universe">
+<meta property="og:title" content="YMU Library · animated study books">
+<meta property="og:description" content="Big ideas from great books as short animated lessons. Listen in English or Malayalam.">
+<meta property="og:image" content="https://library.theyoungmakers.com/assets/og-library.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://library.theyoungmakers.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect x='1' y='1' width='32' height='32' rx='9' fill='%23080c0f' stroke='%23c9a84c' stroke-width='1.5'/%3E%3Cpath d='M10 24V10l7 8 7-8v14' fill='none' stroke='%23c9a84c' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>
+(function () {
+  var q = new URLSearchParams(location.search).get('lang'), l = q;
+  try { l = l || localStorage.getItem('ymu:lang'); } catch (e) {}
+  l = l === 'ml' ? 'ml' : 'en';
+  try { localStorage.setItem('ymu:lang', l); } catch (e) {}
+  document.documentElement.lang = l;
+})();
+</script>
+<style>
+@font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("assets/fonts/outfit-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("assets/fonts/outfit-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("assets/fonts/outfit-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Noto Sans Malayalam"; src: url("assets/fonts/noto-sans-malayalam-malayalam-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Noto Sans Malayalam"; src: url("assets/fonts/noto-sans-malayalam-malayalam-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Noto Serif Malayalam"; src: url("assets/fonts/noto-serif-malayalam-malayalam-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+
+/* Layout: one centred column; hero (title + live stats), continue card, a responsive shelf of generative covers. */
+:root {
+  --ground: #080c0f; --panel: #10171b; --panel-2: #0b1013; --line: #1f211d; --line-2: #2c2b25;
+  --ink: #efe6d2; --soft: #b9b1a0; --dim: #9d9686; --faint: #6f6a5e;
+  --gold: #c9a84c; --gold-hi: #e8cf86; --ember: #e2694f;
+  --display: "Cormorant Garamond", "Noto Serif Malayalam", Georgia, serif;
+  --ui: "Outfit", "Noto Sans Malayalam", system-ui, sans-serif;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  color-scheme: dark;
+}
+:root:lang(ml) { --ui: "Noto Sans Malayalam", "Outfit", system-ui, sans-serif; --display: "Noto Serif Malayalam", "Cormorant Garamond", serif; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--ground); color: var(--ink); }
+body { font: 400 16px/1.5 var(--ui); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 8px; }
+.wrap { min-height: 100vh; background: radial-gradient(70% 50% at 50% 0%, rgba(201,168,76,.10), rgba(8,12,15,0) 70%), var(--ground);
+  padding: 0 max(16px, env(safe-area-inset-right, 0px)) 72px max(16px, env(safe-area-inset-left, 0px)); }
+.col { max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px; }
+
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: max(24px, env(safe-area-inset-top, 0px)); }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand small { display: block; font-size: 11px; letter-spacing: .22em; color: var(--gold); font-weight: 600; font-family: "Outfit", sans-serif; }
+.brand b { display: block; font: 600 22px/1.1 "Cormorant Garamond", serif; }
+.lang { display: inline-flex; gap: 2px; padding: 4px; border-radius: 999px; border: 1px solid var(--line-2); background: rgba(16,22,25,.8); }
+.lang button { border: 0; border-radius: 999px; padding: 8px 18px; min-height: 40px; background: transparent; color: var(--dim); font: 500 15px "Outfit", sans-serif; cursor: pointer;
+  transition: background-color .2s var(--ease), color .2s, transform .14s var(--ease); }
+.lang button.ml { font-family: "Noto Sans Malayalam", sans-serif; }
+.lang button[aria-pressed="true"] { background: var(--gold); color: #120f06; font-weight: 600; }
+.lang button:active { transform: scale(.96); }
+
+.hero { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 40px; align-items: end; }
+.kicker { font-size: 13px; letter-spacing: .2em; color: var(--gold); font-weight: 600; text-transform: uppercase; }
+:root:lang(ml) .kicker { letter-spacing: 0; }
+h1 { margin: 14px 0 18px; font: 600 clamp(46px, 7vw, 88px)/1 var(--display); letter-spacing: -.01em; text-wrap: balance; }
+:root:lang(ml) h1 { font-size: clamp(38px, 5.6vw, 70px); line-height: 1.15; }
+h1 i { color: var(--gold); font-weight: 500; }
+.lede { margin: 0; max-width: 34em; font-size: 18px; line-height: 1.6; color: var(--soft); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 600px; justify-self: end; width: 100%; }
+.stat { min-width: 0; padding: 18px 20px; border-radius: 16px; border: 1px solid #23251f; background: rgba(16,22,25,.7); }
+.stat b { display: block; font: 600 40px/1.1 "Cormorant Garamond", serif; font-variant-numeric: lining-nums tabular-nums; }
+.stat span { font-size: 13px; color: var(--dim); }
+
+.cont { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 20px 24px; border-radius: 20px; text-decoration: none;
+  border: 1px solid rgba(201,168,76,.35); background: linear-gradient(90deg, rgba(201,168,76,.10), rgba(201,168,76,0) 70%);
+  transition: border-color .3s var(--ease), transform .3s var(--ease); }
+.cont:hover { border-color: rgba(201,168,76,.7); transform: translateY(-2px); }
+.cont .mid { flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.cont .lbl { font-size: 12px; letter-spacing: .18em; color: var(--gold); font-weight: 600; }
+:root:lang(ml) .cont .lbl { letter-spacing: 0; font-size: 13px; }
+.cont .ttl { font-variant-numeric: lining-nums; }
+.cont .ttl { font: 600 26px/1.15 var(--display); }
+.bar { height: 4px; border-radius: 4px; background: #23251f; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--gold); width: 0; transition: width 1.2s var(--ease) .2s; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; min-height: 44px; border-radius: 999px; background: var(--gold); color: #120f06; font-weight: 600; }
+
+.shelf-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 14px; }
+h2 { margin: 0; font: 600 34px/1.1 var(--display); }
+.shelf-head span { font-size: 14px; color: var(--dim); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 28px; margin-top: 24px; }
+
+.card { display: flex; flex-direction: column; border-radius: 18px; overflow: hidden; background: var(--panel); border: 1px solid #23251f; text-decoration: none;
+  opacity: 0; transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease); }
+.card.in { animation: rise .7s var(--ease) forwards; animation-delay: var(--d, 0s); }
+@keyframes rise { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: 0 0; } }
+.card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px rgba(0,0,0,.55); border-color: rgba(201,168,76,.45); }
+.cover { position: relative; aspect-ratio: 4 / 5; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; background: var(--panel-2); overflow: hidden; }
+.cover::before { content: ""; position: absolute; inset: 0; background: radial-gradient(80% 70% at 50% 38%, var(--tint), rgba(8,12,15,0) 70%); transition: opacity .5s var(--ease); opacity: .85; }
+.card:hover .cover::before { opacity: 1; }
+.cover > * { position: relative; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 8px; min-height: 24px; }
+.tag { font-size: 11px; letter-spacing: .2em; color: var(--accent); font-weight: 600; text-transform: uppercase; }
+:root:lang(ml) .tag { letter-spacing: 0; font-size: 12px; }
+.badge { font-size: 11px; font-weight: 600; letter-spacing: .08em; padding: 5px 10px; border-radius: 999px; background: var(--gold); color: #120f06; white-space: nowrap; }
+.badge.soft { background: transparent; border: 1px solid #3a3830; color: var(--soft); font-weight: 500; letter-spacing: 0; }
+.art { width: 78%; align-self: center; overflow: visible; }
+.art path { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.card.in .art path { animation: draw 1.8s var(--ease) forwards; animation-delay: var(--d, 0s); }
+.art circle { fill: var(--ember); opacity: 0; }
+.card.in .art circle { animation: dotIn .5s var(--ease) forwards, glow 2.8s ease-in-out infinite; animation-delay: calc(var(--d, 0s) + 1.2s), calc(var(--d, 0s) + 1.7s); }
+.card:hover .art path { stroke-width: 2; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes dotIn { to { opacity: 1; } }
+@keyframes glow { 0%, 100% { opacity: .6; } 50% { opacity: 1; } }
+.cover h3 { margin: 0; font: 600 30px/1.05 "Cormorant Garamond", serif; text-wrap: balance; }
+.cover .by { font-size: 14px; color: var(--dim); margin-top: 6px; }
+.meta { padding: 18px 22px 20px; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid #1d201c; flex: 1; }
+.meta p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--soft); flex: 1; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; font-size: 12px; color: var(--dim); }
+.chips span { padding: 4px 10px; border-radius: 999px; background: #161d21; }
+.mini { height: 3px; border-radius: 3px; background: #1d201c; overflow: hidden; }
+.mini i { display: block; height: 100%; background: var(--gold); width: 0; transition: width 1.2s var(--ease) .4s; }
+
+.empty { padding: 48px 24px; text-align: center; color: var(--dim); border: 1px dashed var(--line-2); border-radius: 18px; }
+footer { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; color: var(--faint); }
+
+@media (max-width: 520px) { .stat { padding: 14px; } .stat b { font-size: 32px; } }
+@media (prefers-reduced-motion: reduce) {
+  .card, .card.in { opacity: 1; animation: none; transition: none; }
+  .card:hover { transform: none; }
+  .card.in .art path, .art path { animation: none; stroke-dashoffset: 0; }
+  .art circle, .card.in .art circle { animation: none; opacity: 1; }
+  .bar i, .mini i { transition: none; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="col">
+  <header>
+    <a class="brand" href="./" aria-label="YMU Library home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="9" fill="none" stroke="#c9a84c" stroke-width="1.5"/><path d="M10 24V10l7 8 7-8v14" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span><small>THE YOUNG MAKER UNIVERSE</small><b>Library</b></span>
+    </a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-l="en">English</button><button type="button" class="ml" data-l="ml">മലയാളം</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="kicker" data-t="kicker"></div>
+      <h1><span data-t="h1a"></span> <i data-t="h1b"></i></h1>
+      <p class="lede" data-t="lede"></p>
+    </div>
+    <div class="stats" aria-live="polite">
+      <div class="stat"><b id="sBooks">0</b><span data-t="sBooks"></span></div>
+      <div class="stat"><b id="sLessons">0</b><span data-t="sLessons"></span></div>
+      <div class="stat"><b>2</b><span data-t="sLangs"></span></div>
+    </div>
+  </section>
+
+  <a class="cont" id="cont" hidden>
+    <svg width="64" height="40" viewBox="0 0 64 40" aria-hidden="true"><path d="M32 20C26 8 8 8 8 20s18 12 24 0 18-12 24 0-18 12-24 0Z" fill="none" stroke="#c9a84c" stroke-width="1.8"/></svg>
+    <span class="mid"><span class="lbl" data-t="contLbl"></span><span class="ttl" id="contTtl"></span><span class="bar"><i id="contBar"></i></span></span>
+    <span class="btn"><span data-t="contBtn"></span> <span aria-hidden="true">→</span></span>
+  </a>
+
+  <section aria-labelledby="shelfTitle">
+    <div class="shelf-head"><h2 id="shelfTitle" data-t="shelf"></h2><span data-t="shelfNote"></span></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <footer><span data-t="foot"></span><span>library.theyoungmakers.com</span></footer>
+</div>
+</div>
+
+<script>
+'use strict';
+const ML = document.documentElement.lang === 'ml';
+const T = ML ? {
+  kicker: 'ആനിമേറ്റഡ് പഠന പുസ്തകങ്ങൾ', h1a: 'ചിന്തിക്കുന്നവർക്ക് ഒരു', h1b: 'ലൈബ്രറി',
+  lede: 'മികച്ച പുസ്തകങ്ങളിലെ വലിയ ആശയങ്ങൾ, ചെറിയ ആനിമേറ്റഡ് പാഠങ്ങളായി. ഇംഗ്ലീഷിലോ മലയാളത്തിലോ, നിങ്ങളുടെ ഫോണിൽ, നിങ്ങളുടെ വേഗത്തിൽ.',
+  sBooks: 'പുസ്തകങ്ങൾ', sLessons: 'പാഠങ്ങൾ', sLangs: 'ഭാഷകൾ', contLbl: 'വായന തുടരുക', contBtn: 'തുടരുക', chapter: 'അധ്യായം',
+  shelf: 'ഷെൽഫ്', shelfNote: 'പുതിയ പുസ്തകങ്ങൾ ഇവിടെ തനിയെ എത്തും', isNew: 'പുതിയത്', building: 'അധ്യായങ്ങൾ വരുന്നു',
+  lessons: n => n + ' പാഠങ്ങൾ', of: (a, b) => a + ' / ' + b + ' പാഠങ്ങൾ', done: 'പൂർത്തിയായി',
+  empty: 'പുസ്തകങ്ങൾ ലോഡ് ചെയ്യാനായില്ല. പേജ് വീണ്ടും തുറന്നു നോക്കൂ.', foot: 'ദി യംഗ് മേക്കർ യൂണിവേഴ്സ് · സ്വതന്ത്ര പഠന സഹായികൾ'
+} : {
+  kicker: 'Animated study books', h1a: 'A library for the', h1b: 'curious mind',
+  lede: 'Big ideas from great books, told as short animated lessons. Listen in English or Malayalam, at your pace, on your phone.',
+  sBooks: 'books', sLessons: 'lessons', sLangs: 'languages', contLbl: 'CONTINUE READING', contBtn: 'Continue', chapter: 'Chapter',
+  shelf: 'The shelf', shelfNote: 'New books appear here on their own', isNew: 'NEW', building: 'Chapters arriving',
+  lessons: n => n + ' lessons', of: (a, b) => a + ' of ' + b + ' lessons', done: 'Finished',
+  empty: 'The shelf could not load. Please refresh the page.', foot: 'The Young Maker Universe · independent study companions'
+};
+document.querySelectorAll('[data-t]').forEach(e => { const v = T[e.dataset.t]; if (typeof v === 'string') e.textContent = v; });
+document.querySelectorAll('.lang button').forEach(b => {
+  b.setAttribute('aria-pressed', String((b.dataset.l === 'ml') === ML));
+  b.addEventListener('click', () => {
+    try { localStorage.setItem('ymu:lang', b.dataset.l); } catch (e) {}
+    const u = new URL(location.href); u.searchParams.set('lang', b.dataset.l); location.href = u.toString();
+  });
+});
+
+// Cover art: one line drawing per book, from book.json "motif" or picked from the slug.
+const MOTIFS = {
+  loop:    { d: 'M100 70C86 40 40 40 40 70s46 30 60 0 46-30 60 0-46 30-60 0Z', dot: [160, 70] },
+  compass: { d: 'M30 122L100 18L170 122M56 84H144M100 18V122', dot: [100, 18] },
+  stairs:  { d: 'M24 122H64V94H104V66H144V38H180M180 38V26', dot: [180, 26] },
+  sun:     { d: 'M66 70a34 34 0 1 0 68 0a34 34 0 1 0 -68 0M100 14V26M100 114V126M44 70H56M144 70H156M60 30L68 38M132 102L140 110M60 110L68 102M132 38L140 30', dot: [100, 70] },
+  wave:    { d: 'M20 80C40 50 60 50 80 80S120 110 140 80 170 50 182 66M20 104C40 74 60 74 80 104S120 134 140 104', dot: [182, 66] },
+  spiral:  { d: 'M100 70m0-6a6 6 0 1 1 -6 6a14 14 0 1 0 14 -14a24 24 0 1 1 -24 24a36 36 0 1 0 36 -36a50 50 0 1 1 -50 50', dot: [100, 64] },
+  tree:    { d: 'M100 128V60M100 92L70 66M100 80L132 54M70 66L54 46M70 66L76 40M132 54L150 38M132 54L128 28M100 60L100 30', dot: [100, 30] },
+  lamp:    { d: 'M70 110H130M84 110C84 86 64 80 64 58a36 36 0 1 1 72 0c0 22-20 28-20 52M86 122H114', dot: [100, 52] }
+};
+const KEYS = Object.keys(MOTIFS);
+const ACCENTS = ['#c9a84c', '#5fb3cf', '#7cc79d', '#e8c46a', '#9c84d8', '#e2694f'];
+const hash = s => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+const tint = hex => { const n = parseInt(hex.slice(1), 16); return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},.16)`; };
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+function progressOf(b) {
+  if (!b.href.endsWith('/')) return null;
+  try {
+    const p = JSON.parse(localStorage.getItem('animebook:progress:/' + b.href) || 'null');
+    if (!p) return null;
+    const done = Array.isArray(p.done) ? p.done.filter(n => Number.isInteger(n)).length : 0;
+    return { done, last: Number.isInteger(p.last) ? p.last : null };
+  } catch (e) { return null; }
+}
+
+const isNewBook = b => b.published && (Date.now() - Date.parse(b.published)) < 21 * 864e5;
+const withLang = href => href + (href.includes('?') ? '&' : '?') + 'lang=' + (ML ? 'ml' : 'en');
+
+function card(b, i) {
+  const h = hash(b.slug);
+  const m = MOTIFS[b.motif] || MOTIFS[KEYS[h % KEYS.length]];
+  const accent = /^#[0-9a-f]{6}$/i.test(b.accent || '') ? b.accent : ACCENTS[h % ACCENTS.length];
+  const pr = progressOf(b);
+  const total = b.total || b.lessons || 0;
+  const pct = pr && total ? Math.min(100, Math.round(pr.done / total * 100)) : 0;
+  const building = b.status === 'building';
+  const badge = building ? `<span class="badge soft">${esc(T.building)}</span>` : isNewBook(b) ? `<span class="badge">${esc(T.isNew)}</span>` : '';
+  const tag = (ML && b.tag_ml) || b.tag || '';
+  const blurb = (ML && b.blurb_ml) || b.blurb || '';
+  const count = building && b.total ? T.of(b.lessons, b.total) : T.lessons(b.lessons || '—');
+  const a = document.createElement('a');
+  a.className = 'card'; a.href = withLang(b.href);
+  a.style.setProperty('--accent', accent); a.style.setProperty('--tint', tint(accent)); a.style.setProperty('--d', (i * 0.09).toFixed(2) + 's');
+  a.setAttribute('aria-label', b.title + (b.author ? ', ' + b.author : ''));
+  a.innerHTML = `<div class="cover"><div class="top"><span class="tag">${esc(tag)}</span>${badge}</div>
+    <svg class="art" viewBox="0 0 200 140" aria-hidden="true"><path pathLength="1" d="${m.d}"/><circle r="4" cx="${m.dot[0]}" cy="${m.dot[1]}"/></svg>
+    <div><h3>${esc(b.title)}</h3>${b.author ? `<div class="by">${esc(b.author)}</div>` : ''}</div></div>
+    <div class="meta"><p>${esc(blurb)}</p><div class="chips"><span>${esc(count)}</span><span>${b.languages && b.languages.includes('ml') ? 'EN · മലയാളം' : 'EN'}</span>${pct >= 100 ? `<span>${esc(T.done)}</span>` : ''}</div>
+    <div class="mini"><i data-w="${pct}"></i></div></div>`;
+  return a;
+}
+
+function countUp(el, to) {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || to < 2) { el.textContent = to; return; }
+  const t0 = performance.now(), dur = 900;
+  const step = now => { const k = Math.min(1, (now - t0) / dur); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+
+function render(books) {
+  const grid = document.getElementById('grid');
+  grid.textContent = '';
+  if (!books.length) { grid.innerHTML = `<div class="empty">${esc(T.empty)}</div>`; return; }
+  books.forEach((b, i) => grid.appendChild(card(b, i)));
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in'); e.target.querySelectorAll('[data-w]').forEach(x => x.style.width = x.dataset.w + '%'); io.unobserve(e.target);
+  }), { rootMargin: '0px 0px -8% 0px' }) : null;
+  grid.querySelectorAll('.card').forEach((c, i) => {
+    if (io) io.observe(c); else { c.classList.add('in'); c.querySelectorAll('[data-w]').forEach(x => x.style.width = x.dataset.w + '%'); }
+  });
+  countUp(document.getElementById('sBooks'), books.length);
+  countUp(document.getElementById('sLessons'), books.reduce((s, b) => s + (b.lessons || 0), 0));
+
+  // Continue reading: the first book with a last-opened chapter that isn't finished.
+  for (const b of books) {
+    const pr = progressOf(b), total = b.total || b.lessons;
+    if (!pr || !pr.last || (total && pr.done >= total)) continue;
+    const c = document.getElementById('cont');
+    c.href = withLang(b.href + 'ch' + String(pr.last).padStart(2, '0') + '/index.html');
+    document.getElementById('contTtl').textContent = b.title + ' · ' + T.chapter + ' ' + pr.last;
+    c.hidden = false;
+    requestAnimationFrame(() => { document.getElementById('contBar').style.width = (total ? Math.round(pr.done / total * 100) : 0) + '%'; });
+    break;
+  }
+}
+
+// Books: library.json (rebuilt on every publish), plus any folder the repo has that the list doesn't yet.
+async function discover(known) {
+  try {
+    const r = await fetch('https://api.github.com/repos/MahroofCM/library/contents/', { headers: { Accept: 'application/vnd.github+json' } });
+    if (!r.ok) return [];
+    const items = await r.json(), out = [];
+    for (const it of items) {
+      const slug = it.type === 'dir' ? it.name : it.name.replace(/\.html$/, '');
+      if (known.has(slug) || it.name.startsWith('.') || ['assets', 'scripts'].includes(it.name)) continue;
+      if (it.type === 'file' && (!it.name.endsWith('.html') || ['index.html', '404.html'].includes(it.name) || it.name.startsWith('old_'))) continue;
+      const href = it.type === 'dir' ? it.name + '/' : it.name;
+      try {
+        const page = await fetch(it.type === 'dir' ? href + 'index.html' : href);
+        if (!page.ok) continue;
+        const doc = new DOMParser().parseFromString(await page.text(), 'text/html');
+        const g = n => doc.querySelector(`meta[property="${n}"],meta[name="${n}"]`)?.content || '';
+        let extra = {};
+        try { const j = await fetch(it.type === 'dir' ? href + 'book.json' : slug + '.book.json'); if (j.ok) extra = await j.json(); } catch (e) {}
+        if (extra.status === 'hidden') continue;
+        out.push({ slug, href, title: (g('og:title') || doc.title || slug).split(/\s+[·|–-]\s+/)[0], blurb: g('description'),
+          lessons: 0, languages: ['en', 'ml'], published: new Date().toISOString(), ...extra });
+      } catch (e) {}
+    }
+    return out;
+  } catch (e) { return []; }
+}
+
+(async () => {
+  let books = [];
+  try { const r = await fetch('library.json', { cache: 'no-cache' }); if (r.ok) books = (await r.json()).books || []; } catch (e) {}
+  books = books.filter(b => b.status !== 'hidden');
+  render(books);
+  const extra = await discover(new Set(books.map(b => b.slug)));
+  if (extra.length) render(books.concat(extra));
+})();
+</script>
+</body>
+</html>

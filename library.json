@@ -1,0 +1,93 @@
+{
+ "generated": "2026-10-28T19:16:11+00:00",
+ "books": [
+  {
+   "slug": "evolve",
+   "href": "evolve/",
+   "title": "Evolve Your Brain",
+   "author": "Joe Dispenza",
+   "tag": "Mind & body",
+   "tag_ml": "മനസ്സും ശരീരവും",
+   "blurb": "How a thought becomes chemistry, and how to rewire the habit of being yourself.",
+   "blurb_ml": "ഒരു ചിന്ത എങ്ങനെ രസതന്ത്രമാകുന്നു, നമ്മുടെ ശീലങ്ങളെ എങ്ങനെ മാറ്റിയെഴുതാം.",
+   "motif": "loop",
+   "accent": "#c9a84c",
+   "lessons": 12,
+   "total": 12,
+   "status": "complete",
+   "languages": [
+    "en",
+    "ml"
+   ],
+   "published": "2026-10-15T21:31:11+04:00",
+   "updated": "2026-10-20T22:41:38+04:00",
+   "order": 1
+  },
+  {
+   "slug": "almanack",
+   "href": "almanack/",
+   "title": "The Almanack of Naval Ravikant",
+   "author": "Eric Jorgenson",
+   "tag": "Wealth & happiness",
+   "tag_ml": "സമ്പത്തും സന്തോഷവും",
+   "blurb": "Building wealth without needing luck, sharpening judgment, and practising happiness.",
+   "blurb_ml": "ഭാഗ്യത്തെ ആശ്രയിക്കാതെ സമ്പത്ത് നേടാനും, വിവേകം വളർത്താനും, സന്തോഷം ശീലിക്കാനും.",
+   "motif": "compass",
+   "accent": "#5fb3cf",
+   "lessons": 17,
+   "total": 18,
+   "status": "building",
+   "languages": [
+    "en",
+    "ml"
+   ],
+   "published": "2026-10-20T06:12:04+04:00",
+   "updated": "2026-10-22T12:11:08+04:00",
+   "order": 2
+  },
+  {
+   "slug": "secrets-millionaire-mind",
+   "href": "secrets-millionaire-mind/",
+   "title": "Secrets of the Millionaire Mind",
+   "author": "T. Harv Eker",
+   "tag": "Money mindset",
+   "tag_ml": "പണവും മനോഭാവവും",
+   "blurb": "Where your money beliefs came from, and how to write new ones.",
+   "blurb_ml": "പണത്തെക്കുറിച്ചുള്ള നമ്മുടെ വിശ്വാസങ്ങൾ എവിടെ നിന്നു വന്നു, അവ എങ്ങനെ പുതുക്കിയെഴുതാം.",
+   "motif": "stairs",
+   "accent": "#7cc79d",
+   "lessons": 6,
+   "total": 0,
+   "status": "building",
+   "languages": [
+    "en",
+    "ml"
+   ],
+   "published": "2026-10-20T00:07:28+04:00",
+   "updated": "2026-10-20T08:33:37+04:00",
+   "order": 3
+  },
+  {
+   "slug": "SGR-Interactive-Book",
+   "href": "SGR-Interactive-Book.html",
+   "title": "The Science of Getting Rich",
+   "author": "Wallace D. Wattles",
+   "tag": "Classic",
+   "tag_ml": "ക്ലാസിക്",
+   "blurb": "The 1910 classic on thinking in a certain way, as narrated lessons with quick checks.",
+   "blurb_ml": "1910-ലെ ക്ലാസിക് പുസ്തകം, ശബ്ദവിവരണമുള്ള പാഠങ്ങളായി.",
+   "motif": "sun",
+   "accent": "#e8c46a",
+   "lessons": 17,
+   "total": 0,
+   "status": "complete",
+   "languages": [
+    "en",
+    "ml"
+   ],
+   "published": "2026-10-15T11:55:49+04:00",
+   "updated": "2026-10-15T11:55:49+04:00",
+   "order": 4
+  }
+ ]
+}
