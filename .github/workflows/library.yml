@@ -1,0 +1,31 @@
+name: Update library list
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: library-json
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Build library.json
+        run: python3 scripts/build_library.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- library.json; then echo "No change"; exit 0; fi
+          git config user.name "library-bot"
+          git config user.email "library-bot@users.noreply.github.com"
+          git add library.json
+          git commit -m "Update library.json [skip ci]"
+          git push
