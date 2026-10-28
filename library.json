@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T19:19:52+00:00",
+ "generated": "2026-10-28T19:31:16+00:00",
  "books": [
   {
    "slug": "evolve",
@@ -46,28 +46,6 @@
    "order": 2
   },
   {
-   "slug": "secrets-millionaire-mind",
-   "href": "secrets-millionaire-mind/",
-   "title": "Secrets of the Millionaire Mind",
-   "author": "T. Harv Eker",
-   "tag": "Money mindset",
-   "tag_ml": "പണവും മനോഭാവവും",
-   "blurb": "Where your money beliefs came from, and how to write new ones.",
-   "blurb_ml": "പണത്തെക്കുറിച്ചുള്ള നമ്മുടെ വിശ്വാസങ്ങൾ എവിടെ നിന്നു വന്നു, അവ എങ്ങനെ പുതുക്കിയെഴുതാം.",
-   "motif": "stairs",
-   "accent": "#7cc79d",
-   "lessons": 6,
-   "total": 0,
-   "status": "building",
-   "languages": [
-    "en",
-    "ml"
-   ],
-   "published": "2026-10-20T00:07:28+04:00",
-   "updated": "2026-10-28T23:17:34+04:00",
-   "order": 3
-  },
-  {
    "slug": "SGR-Interactive-Book",
    "href": "SGR-Interactive-Book.html",
    "title": "The Science of Getting Rich",
@@ -88,6 +66,28 @@
    "published": "2026-10-14T22:54:00+04:00",
    "updated": "2026-10-15T11:55:49+04:00",
    "order": 4
+  },
+  {
+   "slug": "secrets-millionaire-mind",
+   "href": "secrets-millionaire-mind/",
+   "title": "Secrets of the Millionaire Mind",
+   "author": "",
+   "tag": "",
+   "tag_ml": "",
+   "blurb": "Animated, narrated lessons on the ideas in T. Harv Eker's Secrets of the Millionaire Mind, in English and Malayalam, with stories from Kerala and the Gulf and plain science checks.",
+   "blurb_ml": "",
+   "motif": "",
+   "accent": "",
+   "lessons": 6,
+   "total": 0,
+   "status": "complete",
+   "languages": [
+    "en",
+    "ml"
+   ],
+   "published": "2026-10-20T00:07:28+04:00",
+   "updated": "2026-10-28T23:29:13+04:00",
+   "order": 999
   }
  ]
 }
