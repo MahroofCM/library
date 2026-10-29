@@ -81,20 +81,33 @@ def book_entry(slug, href, page_path, override_path, folder=None):
 
 
 LINK_TAG = '<script src="{rel}assets/library-link.js" defer></script>'
+WAKE_TAG = '<script src="{rel}assets/wake-lock.js"></script>'
 
 
-def add_library_link(page_path, rel):
-    """Give a book's home page the 'back to the library' link, once."""
+def add_tag(page_path, rel, name, tag):
+    """Add a shared library script to a page's <head>, once."""
     try:
         text = open(page_path, encoding="utf-8").read()
     except OSError:
         return
-    if "library-link.js" in text or "</head>" not in text:
+    if name in text or "</head>" not in text:
         return
-    text = text.replace("</head>", LINK_TAG.format(rel=rel) + "\n</head>", 1)
+    text = text.replace("</head>", tag.format(rel=rel) + "\n</head>", 1)
     with open(page_path, "w", encoding="utf-8") as f:
         f.write(text)
-    print(f"library link added: {os.path.relpath(page_path, ROOT)}", file=sys.stderr)
+    print(f"{name} added: {os.path.relpath(page_path, ROOT)}", file=sys.stderr)
+
+
+def add_library_link(page_path, rel):
+    """Book home: 'back to the library' link. Every page of the book: keep the screen on while a lesson plays."""
+    add_tag(page_path, rel, "library-link.js", LINK_TAG)
+    add_tag(page_path, rel, "wake-lock.js", WAKE_TAG)
+    folder = os.path.dirname(page_path)
+    if os.path.basename(page_path) == "index.html" and folder != ROOT:
+        for sub in sorted(os.listdir(folder)):
+            ch = os.path.join(folder, sub, "index.html")
+            if os.path.isfile(ch):
+                add_tag(ch, rel + "../", "wake-lock.js", WAKE_TAG)
 
 
 def main():
