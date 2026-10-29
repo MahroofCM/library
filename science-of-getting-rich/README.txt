@@ -30,4 +30,4 @@ NOTES
 - Fonts are self-hosted (SIL Open Font License, lib/fonts/OFL.txt).
 - _headers and netlify.toml set caching on Netlify/Cloudflare; other hosts ignore them safely.
 - Independent study of "The Science of Getting Rich" by Wallace D. Wattles (1910, public domain). All narration, examples and pictures are original.
-- Narration: English, Kokoro (am_michael, speed 0.94); Malayalam, Microsoft ml-IN-MidhunNeural (rate -5%).
+- Narration: English, Kokoro (am_michael, speed 0.94); Malayalam, Microsoft ml-IN-SobhanaNeural (normal pace), from a spoken-style Kerala Malayalam script.
