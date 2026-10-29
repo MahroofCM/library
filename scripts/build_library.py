@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Build library.json for the YMU Library home page.
 
-A book is any top-level folder with an index.html, or any top-level .html file (not index.html, 404.html or old_*).
+A book is any top-level folder with an index.html, or any top-level .html file (not index.html, 404.html, old_*,
+or a redirect page left at a book's old address: one with <meta http-equiv="refresh">).
 Details come from the book's own page (title, description, og:image), its chNN folders (lesson count) and git
 history (first published, last updated). An optional book.json in the folder (or <name>.book.json next to a single
 .html book) overrides or adds fields:
@@ -110,6 +111,15 @@ def add_library_link(page_path, rel):
                 add_tag(ch, rel + "../", "wake-lock.js", WAKE_TAG)
 
 
+def is_redirect(path):
+    """A page that only forwards old links to a book's new address."""
+    try:
+        head = open(path, encoding="utf-8", errors="ignore").read(4000)
+    except OSError:
+        return False
+    return bool(re.search(r'<meta[^>]+http-equiv="refresh"', head, re.I))
+
+
 def main():
     books = []
     for name in sorted(os.listdir(ROOT)):
@@ -118,7 +128,7 @@ def main():
             continue
         if os.path.isdir(p) and os.path.isfile(os.path.join(p, "index.html")):
             e = book_entry(name, name + "/", os.path.join(p, "index.html"), os.path.join(p, "book.json"), folder=p)
-        elif name.endswith(".html") and name not in SKIP_FILES and not name.startswith("old_"):
+        elif name.endswith(".html") and name not in SKIP_FILES and not name.startswith("old_") and not is_redirect(p):
             stem = name[:-5]
             e = book_entry(stem, name, p, os.path.join(ROOT, stem + ".book.json"))
         else:
