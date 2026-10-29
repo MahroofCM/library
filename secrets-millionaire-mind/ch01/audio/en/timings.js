@@ -21,7 +21,7 @@ window.TIMINGS = {
   ]
  },
  "doubt": {
-  "dur": 24.816,
+  "dur": 23.232,
   "marks": {
    "dont": 3.789,
    "test": 6.355,
@@ -29,10 +29,9 @@ window.TIMINGS = {
    "track": 10.605,
    "keep": 11.895,
    "drop": 13.053,
-   "sci": 14.395,
-   "supported": 16.276,
-   "monitor": 18.816,
-   "written": 22.303
+   "sci": 14.382,
+   "monitor": 17.25,
+   "written": 20.737
   },
   "cues": [
    [
@@ -64,21 +63,17 @@ window.TIMINGS = {
     "Keep what works, and drop what doesn't."
    ],
    [
-    14.395,
-    "Science check."
+    14.382,
+    "What research says."
    ],
    [
-    15.539,
-    "This habit is well supported."
-   ],
-   [
-    17.474,
+    15.908,
     "Studies find that people who track their progress are more likely to reach their goals, even more so when they write it down."
    ]
   ]
  },
  "gap": {
-  "dur": 35.808,
+  "dur": 35.664,
   "marks": {
    "want": 4.329,
    "achieve": 5.592,
@@ -87,12 +82,11 @@ window.TIMINGS = {
    "course": 9.776,
    "burst": 12.145,
    "normal": 14.211,
-   "sci": 15.145,
-   "partly": 16.303,
-   "intend": 20.711,
-   "help": 25.618,
-   "fade": 27.855,
-   "months": 34.592
+   "sci": 15.132,
+   "intend": 20.421,
+   "help": 25.408,
+   "fade": 27.184,
+   "months": 34.461
   },
   "cues": [
    [
@@ -116,35 +110,31 @@ window.TIMINGS = {
     "A short burst of energy, and back to normal."
    ],
    [
-    15.145,
-    "Science check."
+    15.132,
+    "What research says."
    ],
    [
-    16.303,
-    "Partly true."
+    16.645,
+    "Wanting and doing are two different steps."
    ],
    [
-    17.316,
-    "Wanting and doing really are different."
+    19.513,
+    "In studies, intentions turned into action only about half the time."
    ],
    [
-    19.803,
-    "In studies, intentions turn into action only about half the time."
-   ],
-   [
-    24.237,
+    24.026,
     "And money courses?"
    ],
    [
-    25.618,
-    "On average they do help, a little."
+    25.408,
+    "On average they helped a little."
    ],
    [
-    27.855,
-    "But the effect tends to fade."
+    27.184,
+    "The effect tended to fade over time."
    ],
    [
-    29.763,
+    29.632,
     "In one large review, even long programmes showed little effect after about twenty months."
    ]
   ]
@@ -277,68 +267,59 @@ window.TIMINGS = {
   ]
  },
  "copy": {
-  "dur": 35.952,
+  "dur": 34.968,
   "marks": {
-   "sci": 0.118,
-   "halfr": 1.276,
-   "surv": 8.184,
-   "crowd": 10.224,
-   "few": 13.118,
-   "rest": 15.829,
-   "nobody": 18.605,
-   "both": 21.316,
-   "think": 22.671,
-   "money2": 23.632,
-   "full": 24.5,
-   "farm": 30.132
+   "sci": 0.105,
+   "surv": 7.224,
+   "crowd": 9.263,
+   "few": 12.158,
+   "rest": 14.868,
+   "nobody": 17.645,
+   "both": 20.355,
+   "think": 21.711,
+   "money2": 22.671,
+   "full": 23.539,
+   "farm": 29.171
   },
   "cues": [
    [
-    0.118,
-    "Science check."
+    0.105,
+    "What research says."
    ],
    [
-    1.276,
-    "Half right."
+    1.618,
+    "When we learn from people who did well, researchers point to two things to keep in mind."
    ],
    [
-    2.171,
-    "Learning from people who do well makes sense."
-   ],
-   [
-    5.013,
-    "But copying how they think has two traps."
-   ],
-   [
-    7.645,
+    6.684,
     "First, survivorship bias."
    ],
    [
-    9.855,
+    8.895,
     "Picture a crowd of people with the same bold mindset."
    ],
    [
-    13.118,
+    12.158,
     "A few make it, and get asked for advice."
    ],
    [
-    15.829,
+    14.868,
     "The rest thought the same way, but failed, and nobody asks them."
    ],
    [
-    19.961,
+    19.0,
     "Second, cause can run both ways."
    ],
    [
-    22.539,
+    21.579,
     "Your thinking can shape your money."
    ],
    [
-    24.382,
+    23.421,
     "But money worries can also cloud your thinking."
    ],
    [
-    26.961,
+    26.0,
     "In one study, sugarcane farmers in India scored better on thinking tests just after harvest, when money came in, than just before it."
    ]
   ]
@@ -498,23 +479,19 @@ window.TIMINGS = {
   ]
  },
  "law": {
-  "dur": 29.232,
+  "dur": 34.2,
   "marks": {
    "nothing": 5.382,
    "law": 9.092,
-   "sci": 9.882,
-   "notshown": 11.026,
-   "storyx": 13.776,
-   "letters": 14.829,
-   "anec": 16.763,
-   "compare": 18.355,
-   "didnt": 19.855,
-   "outerm": 22.263,
-   "c1": 24.013,
-   "c2": 24.763,
-   "c3": 25.579,
-   "c4": 26.145,
-   "both": 27.737
+   "sci": 9.868,
+   "nottested": 11.382,
+   "selfc": 14.0,
+   "links": 24.618,
+   "outerm": 27.513,
+   "c1": 31.066,
+   "c2": 31.868,
+   "c3": 32.724,
+   "c4": 33.434
   },
   "cues": [
    [
@@ -530,36 +507,28 @@ window.TIMINGS = {
     "It even calls this a law."
    ],
    [
-    9.882,
-    "Science check."
+    9.868,
+    "What research says."
    ],
    [
-    11.026,
-    "Not shown."
+    11.382,
+    "Researchers have not tested this as a law."
    ],
    [
-    12.013,
-    "The proof offered is the author's own story, and letters from happy students."
+    14.0,
+    "What they have studied: in New Zealand, a thousand children were followed to age thirty-two."
    ],
    [
-    16.763,
-    "Those are anecdotes."
+    19.684,
+    "Those with more self-control as children had better health and finances as adults."
    ],
    [
-    18.211,
-    "There's no comparison group, and people it didn't help rarely write in."
+    24.618,
+    "Studies like this show links, not causes."
    ],
    [
-    22.263,
-    "The outer game matters too."
-   ],
-   [
-    24.013,
-    "Skills, savings, health, and luck."
-   ],
-   [
-    26.908,
-    "It's fairer to say both games count."
+    27.513,
+    "Economists also study outer factors that shape wealth, like skills, savings, health, and luck."
    ]
   ]
  },
@@ -726,12 +695,12 @@ window.TIMINGS = {
   ]
  },
  "wrap": {
-  "dur": 21.744,
+  "dur": 20.856,
   "marks": {
    "w1": 1.105,
    "w2": 6.289,
    "w3": 11.592,
-   "w4": 16.579
+   "w4": 15.697
   },
   "cues": [
    [
@@ -752,18 +721,14 @@ window.TIMINGS = {
    ],
    [
     11.592,
-    "Skills are the tools, and your mind is the toolbox."
+    "Skills are the tools, and your mind is the toolbox that holds them."
    ],
    [
-    15.276,
-    "Both games count."
-   ],
-   [
-    16.579,
+    15.697,
     "Much of the work is unlearning."
    ],
    [
-    18.605,
+    17.724,
     "Let go of old ways to make room for new ones."
    ]
   ]

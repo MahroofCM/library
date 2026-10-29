@@ -191,50 +191,44 @@ window.TIMINGS = {
   ]
  },
  "lottery": {
-  "dur": 26.376,
+  "dur": 25.824,
   "marks": {
-   "sci": 0.118,
-   "return": 4.145,
-   "mixed": 6.605,
-   "fl": 7.697,
-   "later": 14.592,
-   "sw": 16.645,
-   "sweden": 20.105,
-   "eighty": 22.303,
-   "nosource": 25.25
+   "sci": 0.105,
+   "return": 1.618,
+   "fl": 7.0,
+   "later": 13.895,
+   "sw": 15.947,
+   "sweden": 19.408,
+   "limits": 20.566
   },
   "cues": [
    [
-    0.118,
-    "Science check."
+    0.105,
+    "What research says."
    ],
    [
-    1.276,
-    "The book says research shows most lottery winners return to where they started."
+    1.618,
+    "What happens to lottery winners, years after the win?"
    ],
    [
-    5.895,
-    "The evidence is mixed."
+    5.197,
+    "Researchers have followed them."
    ],
    [
-    7.592,
+    6.895,
     "In Florida, people who won mid-size prizes avoided bankruptcy at first."
    ],
    [
-    12.605,
+    11.908,
     "But three to five years on, they were more likely to go bankrupt."
    ],
    [
-    16.513,
+    15.816,
     "In Sweden, more than ten years on, big winners were still better off."
    ],
    [
-    21.25,
-    "And the book's claim that eighty percent will never be financially free?"
-   ],
-   [
-    24.947,
-    "It gives no source."
+    20.566,
+    "The studies differ in prize size and country, so they don't add up to one simple answer."
    ]
   ]
  },
@@ -518,51 +512,59 @@ window.TIMINGS = {
   ]
  },
  "reflect": {
-  "dur": 27.96,
+  "dur": 41.328,
   "marks": {
-   "sci": 0.118,
-   "simply": 3.276,
-   "half": 6.474,
-   "matter": 8.829,
-   "health": 10.276,
-   "family": 11.079,
-   "crisis": 12.355,
-   "city": 14.711,
-   "three": 21.132,
-   "weather": 27.145
+   "sci": 0.105,
+   "simply": 2.645,
+   "matter": 11.487,
+   "health": 21.053,
+   "family": 21.829,
+   "crisis": 23.079,
+   "city": 25.447,
+   "three": 31.882,
+   "links": 35.197,
+   "weather": 40.513
   },
   "cues": [
    [
-    0.118,
-    "Science check."
+    0.105,
+    "What research says."
    ],
    [
-    1.263,
-    "The book says your outer world is simply a reflection of your inner world."
+    1.618,
+    "The book teaches that your outer world is a reflection of your inner world."
    ],
    [
-    6.092,
-    "That's only half right."
+    6.211,
+    "Researchers in New Zealand followed a thousand children to age thirty-two."
    ],
    [
-    7.526,
-    "Your thinking and habits matter."
+    10.855,
+    "Those with more self-control as children had fewer money problems as adults, even after allowing for IQ and family background."
    ],
    [
-    9.658,
-    "But so do your health, your family's means, a flood or a lost job, and even the city you grow up in."
+    19.066,
+    "Outside things play a part too."
    ],
    [
-    16.263,
+    20.921,
+    "Your health, your family's means, a flood or a lost job, and even the city you grow up in."
+   ],
+   [
+    27.013,
     "One large American study found that a poor child's chance of reaching the top was about three times higher in some cities than in others."
    ],
    [
-    24.434,
+    35.197,
+    "These studies show links, not causes."
+   ],
+   [
+    37.868,
     "So tend your roots."
    ],
    [
-    25.816,
-    "Just don't blame yourself for the weather."
+    39.25,
+    "And don't blame yourself for the weather."
    ]
   ]
  },
@@ -663,50 +665,50 @@ window.TIMINGS = {
   ]
  },
  "declsci": {
-  "dur": 26.904,
+  "dur": 29.136,
   "marks": {
-   "sci": 0.118,
-   "vibrates": 3.342,
-   "noev": 6.105,
-   "partly": 9.211,
-   "low": 12.105,
-   "worse": 13.526,
-   "lovable": 15.132,
-   "when": 18.092,
-   "hundred": 23.0,
-   "act": 25.961
+   "sci": 0.105,
+   "vibrates": 3.697,
+   "noev": 6.303,
+   "tested": 8.224,
+   "low": 14.342,
+   "worse": 15.763,
+   "lovable": 17.368,
+   "when": 20.329,
+   "hundred": 25.237,
+   "act": 28.197
   },
   "cues": [
    [
-    0.118,
-    "Science check."
+    0.105,
+    "What research says."
    ],
    [
-    1.276,
+    1.632,
     "The book says a spoken declaration vibrates through the cells of your body."
    ],
    [
-    5.961,
-    "There's no evidence for that."
+    6.303,
+    "Researchers haven't measured that."
    ],
    [
-    7.553,
-    "But its doubt about affirmations has some support."
+    8.224,
+    "What they have tested is how people feel after repeating positive lines."
    ],
    [
-    10.329,
+    12.566,
     "In a Canadian study, people with low self-esteem felt worse after repeating, I am a lovable person."
    ],
    [
-    16.803,
+    19.039,
     "And plans that spell out when, where and how you'll act helped people reach their goals, across nearly a hundred studies."
    ],
    [
-    24.355,
+    26.592,
     "So say your intention."
    ],
    [
-    25.868,
+    28.105,
     "Then act on it."
    ]
   ]

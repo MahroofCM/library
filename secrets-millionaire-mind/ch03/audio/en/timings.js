@@ -21,21 +21,19 @@ window.TIMINGS = {
   ]
  },
  "predict": {
-  "dur": 36.888,
+  "dur": 34.824,
   "marks": {
    "five": 6.395,
    "predict": 10.197,
-   "sci": 14.566,
-   "part": 15.724,
-   "habits": 18.632,
-   "but": 23.763,
-   "h1": 27.816,
-   "h2": 28.434,
-   "h3": 29.447,
-   "h4": 30.395,
-   "h5": 31.842,
-   "clue": 34.882,
-   "ball": 35.829
+   "sci": 14.553,
+   "habits": 17.75,
+   "but": 24.118,
+   "h1": 26.895,
+   "h2": 27.461,
+   "h3": 28.461,
+   "h4": 29.434,
+   "h5": 30.868,
+   "clue": 33.382
   },
   "cues": [
    [
@@ -55,32 +53,24 @@ window.TIMINGS = {
     "The author of this book says much the same."
    ],
    [
-    14.566,
-    "Science check."
+    14.553,
+    "What research says."
    ],
    [
-    15.724,
-    "Part of this holds up."
+    16.066,
+    "Studies of families have found that money habits learned at home tend to follow us into adult life."
    ],
    [
-    17.066,
-    "Studies of families find that money habits learned at home tend to follow us into adult life."
+    22.224,
+    "Researchers also find that adult income depends on many things together."
    ],
    [
-    23.092,
-    "But predicting a whole life from five minutes?"
+    26.895,
+    "Health, education, family wealth, the economy, and plain luck."
    ],
    [
-    25.895,
-    "No."
-   ],
-   [
-    26.605,
-    "Income also depends on health, education, family wealth, the economy, and plain luck."
-   ],
-   [
-    32.618,
-    "So treat what you say about money as a strong clue, not a crystal ball."
+    31.645,
+    "So the way you talk about money is a clue worth exploring."
    ]
   ]
  },
@@ -390,18 +380,17 @@ window.TIMINGS = {
   ]
  },
  "jingle": {
-  "dur": 25.92,
+  "dur": 26.688,
   "marks": {
    "ad": 4.895,
    "shout": 8.934,
    "nobody": 11.224,
    "again": 13.539,
-   "sci": 14.961,
-   "supported": 16.671,
-   "truth": 19.118,
-   "repeat": 21.816,
-   "truer": 22.961,
-   "know": 24.882
+   "sci": 14.947,
+   "truth": 17.934,
+   "repeat": 22.513,
+   "truer": 23.645,
+   "know": 25.632
   },
   "cues": [
    [
@@ -429,20 +418,16 @@ window.TIMINGS = {
     "He just heard it, again and again."
    ],
    [
-    14.961,
-    "Science check."
+    14.947,
+    "What research says."
    ],
    [
-    16.105,
-    "This part is well supported."
+    16.474,
+    "Psychologists call this the illusory truth effect."
    ],
    [
-    17.842,
-    "Psychologists call it the illusory truth effect."
-   ],
-   [
-    21.0,
-    "The more often we hear something, the truer it feels, even when we know better."
+    19.882,
+    "Study after study has found that the more often we hear something, the truer it feels, even when we know better."
    ]
   ]
  },
@@ -509,7 +494,7 @@ window.TIMINGS = {
   ]
  },
  "scale": {
-  "dur": 31.2,
+  "dur": 29.568,
   "marks": {
    "logic": 2.711,
    "security": 4.711,
@@ -517,12 +502,10 @@ window.TIMINGS = {
    "emotion": 8.487,
    "loved": 9.816,
    "wins": 14.237,
-   "sci": 16.895,
-   "half": 18.053,
-   "shape": 20.487,
-   "always": 24.408,
-   "together": 28.737,
-   "trained": 30.263
+   "sci": 16.882,
+   "shape": 20.0,
+   "together": 26.908,
+   "trained": 28.645
   },
   "cues": [
    [
@@ -550,29 +533,21 @@ window.TIMINGS = {
     "The book says that when these two clash, emotion almost always wins."
    ],
    [
-    16.895,
-    "Science check."
+    16.882,
+    "What research says."
    ],
    [
-    18.053,
-    "Half right."
+    18.408,
+    "Studies show that emotions shape our choices strongly, and in predictable ways."
    ],
    [
-    18.947,
-    "Research shows emotions shape our choices strongly, and in predictable ways."
-   ],
-   [
-    24.289,
-    "But almost always is more than the evidence shows."
-   ],
-   [
-    27.5,
-    "Feeling and thinking work together, and both can be trained."
+    23.882,
+    "Researchers also find that feeling and thinking work together, and that both can be trained."
    ]
   ]
  },
  "bridge": {
-  "dur": 27.12,
+  "dur": 32.784,
   "marks": {
    "fight": 1.737,
    "link": 3.868,
@@ -580,11 +555,12 @@ window.TIMINGS = {
    "fund": 8.197,
    "generous": 12.013,
    "same": 15.132,
-   "sci": 16.592,
-   "fast": 20.105,
-   "stories": 21.566,
-   "studies": 23.039,
-   "time": 25.382
+   "sci": 16.579,
+   "follow": 19.289,
+   "time": 24.461,
+   "auto": 25.658,
+   "range": 28.289,
+   "r254": 30.263
   },
   "cues": [
    [
@@ -608,20 +584,20 @@ window.TIMINGS = {
     "Money and her blessing finally point the same way."
    ],
    [
-    16.592,
-    "Science check."
+    16.579,
+    "What research says."
    ],
    [
-    17.737,
-    "In the book, stories like this end in a quick fortune."
+    18.092,
+    "Researchers in London followed people as they built one new daily habit."
    ],
    [
-    21.276,
-    "Those are success stories, not studies."
+    22.961,
+    "On average, it took about sixty-six days to feel automatic."
    ],
    [
-    24.013,
-    "Real change usually takes time and practice."
+    27.382,
+    "For some it took eighteen days, and for others an estimated two hundred and fifty-four."
    ]
   ]
  },
@@ -708,7 +684,7 @@ window.TIMINGS = {
   ]
  },
  "yourturn": {
-  "dur": 29.904,
+  "dur": 35.352,
   "marks": {
    "write": 2.355,
    "shows": 6.829,
@@ -716,10 +692,12 @@ window.TIMINGS = {
    "heart": 14.066,
    "decl": 16.171,
    "decl2": 18.592,
-   "sci": 20.092,
-   "bank": 22.382,
-   "catch": 24.645,
-   "acting": 27.105
+   "sci": 20.079,
+   "bank": 22.355,
+   "plan": 25.724,
+   "ifthen": 27.737,
+   "n94": 31.224,
+   "helped": 33.342
   },
   "cues": [
    [
@@ -755,16 +733,24 @@ window.TIMINGS = {
     "Today I write my own."
    ],
    [
-    20.092,
-    "Science check."
+    20.079,
+    "What research says."
    ],
    [
-    21.237,
-    "Saying it won't move your bank balance by itself."
+    21.592,
+    "Researchers have not yet measured declarations on their own."
    ],
    [
-    24.145,
-    "What helps is catching the old thought in the moment, and acting differently, again and again."
+    25.342,
+    "What they have tested is if-then plans."
+   ],
+   [
+    27.737,
+    "If the old thought comes, then I act differently."
+   ],
+   [
+    30.803,
+    "Across ninety-four studies, plans like these helped people reach their goals."
    ]
   ]
  },

@@ -106,19 +106,18 @@ window.TIMINGS = {
   ]
  },
  "copy": {
-  "dur": 30.168,
+  "dur": 29.424,
   "marks": {
    "count": 4.276,
    "dubai": 9.605,
    "same": 11.829,
    "told": 12.947,
    "watched": 14.132,
-   "sci": 15.053,
-   "sup": 16.211,
-   "model": 18.513,
-   "parents": 25.75,
-   "work": 27.039,
-   "lessons": 28.776
+   "sci": 15.039,
+   "model": 17.763,
+   "parents": 25.0,
+   "work": 26.289,
+   "lessons": 28.026
   },
   "cues": [
    [
@@ -142,19 +141,15 @@ window.TIMINGS = {
     "He watched."
    ],
    [
-    15.053,
-    "Science check."
+    15.039,
+    "What research says."
    ],
    [
-    16.211,
-    "Well supported."
-   ],
-   [
-    17.342,
+    16.592,
     "Family research names parents' example as one of the main ways children learn about money."
    ],
    [
-    22.737,
+    21.987,
     "In one study of first-year university students, parents mattered more than jobs and school money lessons combined."
    ]
   ]
@@ -290,7 +285,7 @@ window.TIMINGS = {
   ]
  },
  "abu": {
-  "dur": 37.344,
+  "dur": 41.376,
   "marks": {
    "abu": 0.618,
    "degrees": 3.553,
@@ -301,12 +296,10 @@ window.TIMINGS = {
    "seventies": 15.789,
    "again": 20.566,
    "father": 23.184,
-   "sci": 25.211,
-   "fortune": 28.605,
-   "story": 30.039,
-   "study": 31.0,
-   "real": 32.737,
-   "knowledge": 33.566
+   "sci": 25.197,
+   "home": 29.263,
+   "classes": 33.0,
+   "faded": 39.855
   },
   "cues": [
    [
@@ -346,36 +339,28 @@ window.TIMINGS = {
     "Abu had been running his father's file all along."
    ],
    [
-    25.211,
-    "Science check."
+    25.197,
+    "What research says."
    ],
    [
-    26.355,
-    "In the book, stories like this end in sudden wealth."
+    26.75,
+    "Family studies find that money habits learned at home often carry into adult life."
    ],
    [
-    29.816,
-    "That's a story, not a study."
-   ],
-   [
-    31.868,
-    "But the insight is real."
-   ],
-   [
-    33.566,
-    "Knowledge works better when an old file isn't pulling the other way."
+    32.224,
+    "And a review of two hundred and one studies found that money classes on their own changed later money behaviour only a little, and the effect faded over time."
    ]
   ]
  },
  "hard": {
-  "dur": 21.72,
+  "dur": 21.888,
   "marks": {
    "hardT": 0.105,
    "spend": 2.776,
    "hoard": 8.105,
    "rainy": 10.368,
-   "brings": 14.868,
-   "joyful": 17.289
+   "brings": 15.039,
+   "joyful": 17.461
   },
   "cues": [
    [
@@ -396,61 +381,48 @@ window.TIMINGS = {
    ],
    [
     11.434,
-    "The book goes further."
+    "The book adds one more idea."
    ],
    [
-    13.053,
+    13.224,
     "It says saving for a rainy day brings rainy days, so save for a joyful day instead."
    ],
    [
-    18.974,
+    19.145,
     "Both habits grew from the same hard times."
    ]
   ]
  },
  "rainy": {
-  "dur": 21.336,
+  "dur": 23.04,
   "marks": {
-   "sci": 0.118,
-   "not": 1.263,
-   "reason": 3.382,
-   "three": 9.461,
-   "emergency": 13.039,
-   "less": 14.553,
-   "joyful": 18.145
+   "sci": 0.105,
+   "reason": 3.553,
+   "three": 9.289,
+   "emergency": 12.895,
+   "less": 14.395,
+   "kids": 22.197
   },
   "cues": [
    [
-    0.118,
-    "Science check."
+    0.105,
+    "What research says."
    ],
    [
-    1.263,
-    "Not shown."
+    1.618,
+    "Researchers have not tested whether the reason you save for changes what happens to you."
    ],
    [
-    2.237,
-    "No study finds that the reason you save brings the event."
+    6.395,
+    "What they have measured: people who don't save are nearly three times as likely to struggle with bills."
    ],
    [
-    5.934,
-    "The evidence points the other way."
+    12.342,
+    "People with an emergency fund report less money stress."
    ],
    [
-    7.908,
-    "People who don't save are nearly three times as likely to struggle with bills."
-   ],
-   [
-    12.355,
-    "And people with an emergency fund report less money stress."
-   ],
-   [
-    15.974,
-    "So keep that fund."
-   ],
-   [
-    17.303,
-    "If naming it for a joyful goal helps you save, that's fine too."
+    15.868,
+    "And in a study in rural India, workers saved more when their savings envelope carried a photo of their children."
    ]
   ]
  },
@@ -584,46 +556,41 @@ window.TIMINGS = {
   ]
  },
  "why": {
-  "dur": 24.504,
+  "dur": 23.64,
   "marks": {
-   "sci": 0.118,
-   "partly": 1.276,
-   "samples": 3.447,
-   "centre": 8.118,
-   "lower": 9.434,
-   "modest": 12.368,
-   "warm": 18.197,
-   "purpose": 22.5,
-   "giving": 23.224,
-   "joy": 23.75
+   "sci": 0.105,
+   "samples": 2.579,
+   "centre": 7.25,
+   "lower": 8.566,
+   "modest": 11.5,
+   "warm": 17.329,
+   "purpose": 21.632,
+   "giving": 22.355,
+   "joy": 22.882
   },
   "cues": [
    [
-    0.118,
-    "Science check."
+    0.105,
+    "What research says."
    ],
    [
-    1.276,
-    "Partly supported."
-   ],
-   [
-    2.487,
+    1.618,
     "A review pooling two hundred and fifty-nine samples found that people who put money and possessions at the centre of life report lower well-being, on average."
    ],
    [
-    11.803,
+    10.934,
     "The link is modest, and it doesn't prove cause."
    ],
    [
-    14.987,
+    14.118,
     "And teenagers who rank money highest more often had less warm care growing up."
    ],
    [
-    19.816,
+    18.947,
     "The book's fix is to grow new roots."
    ],
    [
-    22.5,
+    21.632,
     "Purpose, giving, and joy."
    ]
   ]
@@ -732,7 +699,7 @@ window.TIMINGS = {
   ]
  },
  "wrap": {
-  "dur": 22.896,
+  "dur": 24.312,
   "marks": {
    "w1": 1.118,
    "w2": 5.592,
@@ -766,7 +733,7 @@ window.TIMINGS = {
    ],
    [
     20.395,
-    "And a rainy-day fund is still wise."
+    "And research links an emergency fund to less money stress."
    ]
   ]
  },

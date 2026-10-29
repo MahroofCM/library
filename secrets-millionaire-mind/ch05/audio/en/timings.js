@@ -209,45 +209,34 @@ window.TIMINGS = {
   ]
  },
  "scars": {
-  "dur": 23.424,
+  "dur": 25.608,
   "marks": {
-   "sci": 0.118,
-   "partly": 1.276,
-   "early": 3.434,
-   "risk": 11.934,
-   "sentence": 16.105,
-   "book": 17.803,
-   "stories": 21.421,
-   "studies": 22.434
+   "sci": 0.105,
+   "early": 2.645,
+   "risk": 11.211,
+   "later": 15.921,
+   "patterns": 20.816
   },
   "cues": [
    [
-    0.118,
-    "Science check."
+    0.105,
+    "What research says."
    ],
    [
-    1.276,
-    "Partly true."
+    1.632,
+    "Studies have found that hard times lived early can shape money choices decades later."
    ],
    [
-    2.303,
-    "Studies do find that hard times lived early can shape money choices decades later."
+    6.974,
+    "People who grew up through bad years for the stock market, for example, took less financial risk, even decades on."
    ],
    [
-    7.737,
-    "People who grew up through bad years for the stock market, for example, took less financial risk for the rest of their lives."
+    14.395,
+    "The same researchers found that later experiences count too, and the most recent ones count the most."
    ],
    [
-    15.053,
-    "But one moment is not a life sentence."
-   ],
-   [
-    17.697,
-    "And in the book, people change almost overnight."
-   ],
-   [
-    21.105,
-    "Those are stories, not studies."
+    20.487,
+    "These are patterns across many families, not a forecast for any one person."
    ]
   ]
  },
@@ -415,17 +404,15 @@ window.TIMINGS = {
   ]
  },
  "blueprints": {
-  "dur": 29.016,
+  "dur": 28.224,
   "marks": {
    "blueprints": 4.316,
-   "sci": 5.513,
-   "number": 7.868,
-   "over": 10.158,
-   "commit": 13.553,
-   "cheat": 14.737,
-   "argu": 15.395,
-   "fights": 18.737,
-   "better": 25.474
+   "sci": 5.5,
+   "commit": 11.0,
+   "cheat": 12.263,
+   "argu": 12.934,
+   "money": 15.539,
+   "better": 23.513
   },
   "cues": [
    [
@@ -441,28 +428,24 @@ window.TIMINGS = {
     "They're fighting about two blueprints."
    ],
    [
-    5.513,
-    "Science check."
+    5.5,
+    "What research says."
    ],
    [
-    6.671,
-    "The book calls money the number one cause of breakups."
+    7.013,
+    "In one study, divorced people were asked why their marriages ended."
    ],
    [
-    9.974,
-    "That's overstated."
+    11.0,
+    "Lack of commitment, cheating and constant arguing were named most often."
    ],
    [
-    11.25,
-    "When divorced people list their reasons, lack of commitment, cheating and constant arguing come up more often."
+    15.539,
+    "Money problems were named by about one in three."
    ],
    [
-    17.789,
-    "Still, money fights are a serious warning sign."
-   ],
-   [
-    21.026,
-    "In one large American study, arguing about money predicted divorce more strongly than the other disagreements it looked at."
+    18.382,
+    "In a larger American study of more than four thousand couples, arguing about money predicted divorce more strongly than the other disagreements it looked at."
    ]
   ]
  },
@@ -586,7 +569,7 @@ window.TIMINGS = {
   ]
  },
  "rules": {
-  "dur": 35.472,
+  "dur": 33.696,
   "marks": {
    "team": 3.868,
    "r1": 7.513,
@@ -594,11 +577,10 @@ window.TIMINGS = {
    "r3": 11.724,
    "post": 14.842,
    "gently": 18.013,
-   "sci": 22.763,
-   "supported": 24.539,
-   "goals": 27.211,
-   "alone": 30.25,
-   "links": 32.671
+   "sci": 22.75,
+   "goals": 25.447,
+   "alone": 28.487,
+   "links": 31.395
   },
   "cues": [
    [
@@ -630,20 +612,16 @@ window.TIMINGS = {
     "And when things heat up, gently, very gently, point to what you agreed when you were both calm."
    ],
    [
-    22.763,
-    "Science check."
+    22.75,
+    "What research says."
    ],
    [
-    23.908,
-    "This one is fairly well supported."
-   ],
-   [
-    26.039,
+    24.276,
     "Couples who share money goals tend to be happier together, and big spending without asking tends to hurt."
    ],
    [
-    32.368,
-    "These are links, though, not proof of cause."
+    30.618,
+    "These studies show links, not proof of cause."
    ]
   ]
  },

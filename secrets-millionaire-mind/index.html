@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Secrets of the Millionaire Mind · YMU study book</title>
-<meta name="description" content="Animated, narrated lessons on the ideas in T. Harv Eker's Secrets of the Millionaire Mind, in English and Malayalam, with stories from Kerala and the Gulf and plain science checks.">
+<meta name="description" content="Animated, narrated lessons on the ideas in T. Harv Eker's Secrets of the Millionaire Mind, in English and Malayalam, with stories from Kerala and the Gulf and notes on what research has found.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Young Maker Universe">
 <meta property="og:title" content="Secrets of the Millionaire Mind · animated study book">
-<meta property="og:description" content="Short animated lessons in English and Malayalam on where your money beliefs came from and how to rewrite them. Stories from Kerala and the Gulf, with plain science checks.">
+<meta property="og:description" content="Short animated lessons in English and Malayalam on where your money beliefs came from and how to rewrite them. Stories from Kerala and the Gulf, with what research has found.">
 <meta property="og:image" content="https://library.theyoungmakers.com/secrets-millionaire-mind/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -88,14 +88,14 @@
   <svg class="mascot draw" id="guide" width="0" height="0" hidden></svg>
   <p class="kicker" id="kick">The Young Maker Universe · an animated study book</p>
   <h1 id="ttl">Secrets of the <i>Millionaire</i> Mind</h1>
-  <p class="lede" id="lede">Short animated lessons on the money blueprint you carry from childhood, and how to rewrite it. Stories from Kerala and the Gulf, plain science checks, narrated in English and Malayalam.</p>
+  <p class="lede" id="lede">Short animated lessons on the money blueprint you carry from childhood, and how to rewrite it. Stories from Kerala and the Gulf, what research has found, narrated in English and Malayalam.</p>
   <div class="acts">
     <a class="btn go" href="#contents" data-t="open">Open the book<svg viewBox="0 0 16 16"><path d="M6 2.5 11.5 8 6 13.5 4.6 12.1 8.7 8 4.6 3.9z"/></svg></a>
     <a class="btn quiet" id="resume" hidden></a>
   </div>
   <div class="langsw" role="group" aria-label="Language"><button data-l="en">English</button><button class="ml" data-l="ml">മലയാളം</button></div>
   <p class="meta" id="meta"></p>
-  <p class="credit" id="credit">An independent YMU study of <i>Secrets of the Millionaire Mind: Mastering the Inner Game of Wealth</i> by T. Harv Eker (2005). Explanations, stories and pictures are original; where the book claims more than the evidence shows, a science check says so.</p>
+  <p class="credit" id="credit">An independent YMU study of <i>Secrets of the Millionaire Mind: Mastering the Inner Game of Wealth</i> by T. Harv Eker (2005). Explanations, stories and pictures are original. Each chapter adds what research has found on these ideas.</p>
 </section>
 
 <main id="contents">
@@ -111,8 +111,8 @@ const ML = document.documentElement.lang === 'ml';
 if (ML) {
   document.title = 'Secrets of the Millionaire Mind · മലയാളം';
   document.getElementById('kick').textContent = 'ദി യംഗ് മേക്കർ യൂണിവേഴ്സ് · ആനിമേറ്റഡ് പഠന പുസ്തകം';
-  document.getElementById('lede').textContent = 'കുട്ടിക്കാലം മുതൽ നാം കൊണ്ടുനടക്കുന്ന മണി ബ്ലൂപ്രിന്റിനെക്കുറിച്ചും, അത് എങ്ങനെ മാറ്റിയെഴുതാം എന്നതിനെക്കുറിച്ചുമുള്ള ചെറിയ ആനിമേറ്റഡ് പാഠങ്ങൾ. കേരളത്തിലെയും ഗൾഫിലെയും കഥകൾ, ലളിതമായ ശാസ്ത്രീയ പരിശോധനകൾ, ഇംഗ്ലീഷിലും മലയാളത്തിലും.';
-  document.getElementById('credit').textContent = 'ടി. ഹാർവ് എക്കറുടെ Secrets of the Millionaire Mind (2005) എന്ന പുസ്തകത്തിന്റെ സ്വതന്ത്ര YMU പഠനം. വിശദീകരണങ്ങളും കഥകളും ചിത്രങ്ങളും മൗലികമാണ്; തെളിവുകൾ പറയുന്നതിനപ്പുറം പുസ്തകം അവകാശപ്പെടുന്നിടത്ത് ശാസ്ത്രീയ പരിശോധന അത് പറയുന്നു.';
+  document.getElementById('lede').textContent = 'കുട്ടിക്കാലം മുതൽ നാം കൊണ്ടുനടക്കുന്ന മണി ബ്ലൂപ്രിന്റിനെക്കുറിച്ചും, അത് എങ്ങനെ മാറ്റിയെഴുതാം എന്നതിനെക്കുറിച്ചുമുള്ള ചെറിയ ആനിമേറ്റഡ് പാഠങ്ങൾ. കേരളത്തിലെയും ഗൾഫിലെയും കഥകൾ, ഗവേഷണം കണ്ടെത്തിയത്, ഇംഗ്ലീഷിലും മലയാളത്തിലും.';
+  document.getElementById('credit').textContent = 'ടി. ഹാർവ് എക്കറുടെ Secrets of the Millionaire Mind (2005) എന്ന പുസ്തകത്തിന്റെ സ്വതന്ത്ര YMU പഠനം. വിശദീകരണങ്ങളും കഥകളും ചിത്രങ്ങളും മൗലികമാണ്. ഓരോ അധ്യായത്തിലും ഈ ആശയങ്ങളെക്കുറിച്ച് ഗവേഷണം കണ്ടെത്തിയതും ചേർത്തിരിക്കുന്നു.';
 }
 document.querySelectorAll('.langsw button').forEach(b => {
   b.setAttribute('aria-pressed', String((b.dataset.l === 'ml') === ML));

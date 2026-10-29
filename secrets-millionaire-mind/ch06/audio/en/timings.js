@@ -122,61 +122,52 @@ window.TIMINGS = {
   ]
  },
  "luck": {
-  "dur": 29.976,
+  "dur": 30.576,
   "marks": {
-   "sci": 0.118,
-   "partly": 1.276,
-   "band": 3.224,
-   "rtm": 9.355,
-   "luck": 12.697,
-   "falls": 19.276,
-   "outside": 21.066,
-   "normal": 27.158
+   "sci": 0.105,
+   "band": 1.618,
+   "rtm": 7.526,
+   "luck": 10.882,
+   "falls": 14.618,
+   "outside": 20.303,
+   "normal": 24.829
   },
   "cues": [
    [
-    0.118,
-    "Science check."
+    0.105,
+    "What research says."
    ],
    [
-    1.276,
-    "Partly true."
+    1.618,
+    "Incomes often stay within a band from year to year."
    ],
    [
-    2.289,
-    "Incomes do tend to stay within a band."
+    4.961,
+    "Statisticians also describe a pattern called regression to the mean."
    ],
    [
-    4.724,
-    "But a peak followed by a dip has a plainer explanation."
-   ],
-   [
-    8.197,
-    "Statisticians call it regression to the mean."
-   ],
-   [
-    10.987,
+    9.171,
     "A record year usually has some luck baked in."
    ],
    [
-    13.908,
+    12.092,
     "One big order, one busy season."
    ],
    [
-    16.434,
-    "The next year that luck doesn't repeat, so the number falls back toward normal."
+    14.618,
+    "When that luck doesn't repeat, the next number tends to fall back toward the usual level."
    ],
    [
-    21.066,
+    20.303,
     "Outside things move income too."
    ],
    [
-    23.118,
+    22.355,
     "The market, the employer, health."
    ],
    [
-    25.553,
-    "A dip after a peak is ordinary, not proof of a hidden setting."
+    24.829,
+    "From test scores to sales, a dip after a peak is a common pattern in many kinds of numbers."
    ]
   ]
  },
@@ -356,49 +347,39 @@ window.TIMINGS = {
   ]
  },
  "business": {
-  "dur": 25.56,
+  "dur": 23.928,
   "marks": {
-   "sci": 0.118,
-   "not": 5.553,
-   "over": 8.211,
-   "mgmt": 13.645,
-   "seventeen": 16.645,
-   "markets": 18.987,
-   "mk2": 20.184,
-   "use": 21.974
+   "sci": 0.105,
+   "mgmt": 9.474,
+   "seventeen": 12.474,
+   "markets": 14.829,
+   "mk2": 17.066,
+   "use": 19.737
   },
   "cues": [
    [
-    0.118,
-    "Science check."
+    0.105,
+    "What research says."
    ],
    [
-    1.263,
-    "The book claims a business does exactly as well as its owner's blueprint, not because of skills or timing."
+    1.618,
+    "Researchers have tested whether business skills make a difference."
    ],
    [
-    7.934,
-    "That is overstated."
-   ],
-   [
-    9.342,
+    5.171,
     "In a well known experiment with textile firms in India, teaching better management practices raised productivity by about seventeen percent within a year."
    ],
    [
-    18.987,
-    "Skills matter."
+    14.829,
+    "The skills made a measurable difference."
    ],
    [
-    20.184,
-    "Markets and luck matter."
+    17.066,
+    "Markets and luck also move results."
    ],
    [
-    21.974,
-    "A bigger mindset helps you use them."
-   ],
-   [
-    24.158,
-    "It doesn't replace them."
+    19.737,
+    "The study measured management practices, not the owners' beliefs."
    ]
   ]
  },
@@ -439,43 +420,30 @@ window.TIMINGS = {
   ]
  },
  "funds": {
-  "dur": 25.44,
+  "dur": 22.512,
   "marks": {
-   "sci": 0.118,
-   "no": 3.921,
-   "everyone": 6.553,
-   "nine": 13.316,
-   "index": 16.868,
-   "boring": 23.053
+   "sci": 0.105,
+   "everyone": 3.461,
+   "nine": 10.224,
+   "index": 13.776,
+   "boring": 17.25
   },
   "cues": [
    [
-    0.118,
-    "Science check."
+    0.105,
+    "What research says."
    ],
    [
-    1.263,
-    "Is picking losers a blueprint problem?"
-   ],
-   [
-    3.605,
-    "Mostly not."
-   ],
-   [
-    4.724,
+    1.632,
     "Picking winning shares is hard for everyone, professionals included."
    ],
    [
-    8.987,
+    5.895,
     "S and P's long running scorecard found that over fifteen years, about nine in ten large American funds did worse than a simple index fund, one that just holds the whole market."
    ],
    [
-    20.342,
-    "Basheer may not need a new blueprint."
-   ],
-   [
-    22.526,
-    "He may need a boring plan, and fewer tips."
+    17.25,
+    "So for most savers, a boring, steady plan has done better than chasing tips."
    ]
   ]
  },
@@ -494,15 +462,13 @@ window.TIMINGS = {
   ]
  },
  "couple": {
-  "dur": 18.984,
+  "dur": 19.632,
   "marks": {
    "match": 1.868,
-   "sci": 3.908,
-   "partly": 5.066,
-   "education": 7.105,
-   "where": 11.724,
-   "magnet": 15.237,
-   "learn": 16.868
+   "sci": 3.895,
+   "education": 6.684,
+   "where": 12.447,
+   "limit": 15.132
   },
   "cues": [
    [
@@ -510,41 +476,36 @@ window.TIMINGS = {
     "The book adds that partners tend to match each other's money setting."
    ],
    [
-    3.908,
-    "Science check."
+    3.895,
+    "What research says."
    ],
    [
-    5.066,
-    "Partly."
-   ],
-   [
-    5.829,
+    5.408,
     "Couples often share education and background, and that shapes household income."
    ],
    [
-    11.053,
-    "But it comes from where we meet, study and work, not from a hidden money magnet."
+    10.618,
+    "Researchers trace much of this to where people meet, study and work."
    ],
    [
-    16.211,
-    "And couples can learn new money habits together."
+    15.132,
+    "These studies measured education and income, not beliefs about money."
    ]
   ]
  },
  "results": {
-  "dur": 30.144,
+  "dur": 30.288,
   "marks": {
    "look": 3.0,
    "bank": 4.632,
    "income": 6.013,
    "own": 7.145,
    "keep": 9.434,
-   "sci": 11.763,
-   "clue": 13.539,
-   "started": 15.421,
-   "one": 20.882,
-   "three": 25.829,
-   "opportunity": 27.816
+   "sci": 11.75,
+   "started": 13.263,
+   "one": 20.474,
+   "three": 25.421,
+   "opportunity": 29.171
   },
   "cues": [
    [
@@ -572,24 +533,24 @@ window.TIMINGS = {
     "Whether money stays with you, or slips away."
    ],
    [
-    11.763,
-    "Science check."
+    11.75,
+    "What research says."
    ],
    [
-    12.908,
-    "Results are a clue, but they also show where you started."
+    13.263,
+    "Results also reflect where people started."
    ],
    [
-    16.329,
+    15.921,
     "In a large American study, a child from the poorest fifth of families had about a one in eleven chance of reaching the top fifth."
    ],
    [
-    24.197,
+    23.789,
     "From the richest fifth, about one in three."
    ],
    [
-    27.0,
-    "That gap is opportunity, not a hidden setting."
+    26.579,
+    "Researchers use gaps like this to measure opportunity."
    ]
   ]
  },
@@ -629,16 +590,15 @@ window.TIMINGS = {
   ]
  },
  "recorder": {
-  "dur": 26.64,
+  "dur": 24.888,
   "marks": {
    "recording": 3.658,
    "recorder": 7.737,
    "stop": 9.592,
-   "sci": 12.0,
-   "real": 13.947,
-   "decentering": 17.671,
-   "fewer": 22.276,
-   "modest": 24.934
+   "sci": 11.987,
+   "decentering": 16.066,
+   "fewer": 20.671,
+   "modest": 22.868
   },
   "cues": [
    [
@@ -658,24 +618,20 @@ window.TIMINGS = {
     "You are the recorder, the one who can press stop, and record something new."
    ],
    [
-    12.0,
-    "Science check."
+    11.987,
+    "What research says."
    ],
    [
-    13.145,
-    "This idea has real support."
-   ],
-   [
-    15.118,
+    13.513,
     "Psychologists call stepping back from a thought decentering."
    ],
    [
-    18.868,
+    17.263,
     "A 2024 review of fifty-seven studies linked it with fewer mental health problems."
    ],
    [
-    24.474,
-    "The link is modest, but real."
+    22.868,
+    "The link was modest in size."
    ]
   ]
  },
