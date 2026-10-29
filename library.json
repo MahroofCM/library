@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T02:12:32+00:00",
+ "generated": "2026-10-29T05:15:10+00:00",
  "books": [
   {
    "slug": "evolve",
@@ -74,7 +74,7 @@
    "author": "",
    "tag": "",
    "tag_ml": "",
-   "blurb": "Animated, narrated lessons on the ideas in T. Harv Eker's Secrets of the Millionaire Mind, in English and Malayalam, with stories from Kerala and the Gulf and plain science checks.",
+   "blurb": "Animated, narrated lessons on the ideas in T. Harv Eker's Secrets of the Millionaire Mind, in English and Malayalam, with stories from Kerala and the Gulf and notes on what research has found.",
    "blurb_ml": "",
    "motif": "",
    "accent": "",
@@ -86,7 +86,7 @@
     "ml"
    ],
    "published": "2026-10-20T00:07:28+04:00",
-   "updated": "2026-10-29T06:12:11+04:00",
+   "updated": "2026-10-29T09:14:39+04:00",
    "order": 999
   }
  ]
