@@ -80,6 +80,23 @@ def book_entry(slug, href, page_path, override_path, folder=None):
     }
 
 
+LINK_TAG = '<script src="{rel}assets/library-link.js" defer></script>'
+
+
+def add_library_link(page_path, rel):
+    """Give a book's home page the 'back to the library' link, once."""
+    try:
+        text = open(page_path, encoding="utf-8").read()
+    except OSError:
+        return
+    if "library-link.js" in text or "</head>" not in text:
+        return
+    text = text.replace("</head>", LINK_TAG.format(rel=rel) + "\n</head>", 1)
+    with open(page_path, "w", encoding="utf-8") as f:
+        f.write(text)
+    print(f"library link added: {os.path.relpath(page_path, ROOT)}", file=sys.stderr)
+
+
 def main():
     books = []
     for name in sorted(os.listdir(ROOT)):
@@ -95,6 +112,7 @@ def main():
             continue
         if e:
             books.append(e)
+            add_library_link(os.path.join(p, "index.html") if os.path.isdir(p) else p, "../" if os.path.isdir(p) else "")
     books.sort(key=lambda b: (b["order"], b["published"] or "9999"))
     out = {"generated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "books": books}
     with open(os.path.join(ROOT, "library.json"), "w", encoding="utf-8") as f:
